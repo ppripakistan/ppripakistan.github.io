@@ -1,4 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://YOUR-DOMAIN.example/</loc></url>
+<!-- Replace example.org with the final PPRI domain and add production URLs. -->
+<url><loc>https://example.org/</loc></url>
+<url><loc>https://example.org/research/index.html</loc></url>
+<url><loc>https://example.org/provinces/index.html</loc></url>
+<url><loc>https://example.org/data/index.html</loc></url>
+<url><loc>https://example.org/articles/index.html</loc></url>
 </urlset>

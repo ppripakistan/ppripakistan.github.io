@@ -7,9 +7,14 @@
   }
   .hero,
   .page-hero,
+  .paper-header,
   .section {
     padding: 25px 0;
     background: #fff;
+    color: #000;
+  }
+  .hero p,
+  .paper-header p {
     color: #000;
   }
 }

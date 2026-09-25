@@ -16,4 +16,13 @@ document.addEventListener("DOMContentLoaded", () => {
   document
     .querySelectorAll("[data-current-year]")
     .forEach((e) => (e.textContent = new Date().getFullYear()));
+  const i = document.querySelector("[data-publication-search]"),
+    c = [...document.querySelectorAll("[data-publication-card]")];
+  if (i && c.length)
+    i.addEventListener("input", () => {
+      const q = i.value.toLowerCase().trim();
+      c.forEach(
+        (x) => (x.hidden = !!q && !x.textContent.toLowerCase().includes(q)),
+      );
+    });
 });

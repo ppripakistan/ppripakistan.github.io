@@ -4,10 +4,11 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>Articles & Analysis | PPRI</title>
-    <meta
-      name="description"
-      content="PPRI articles and analysis on federalism, provincial reform and governance."
-    />
+    <meta name="description" content="PPRI articles and analysis." />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Articles & Analysis | PPRI" />
+    <meta property="og:description" content="PPRI articles and analysis." />
+    <meta name="twitter:card" content="summary" />
     <link rel="stylesheet" href="/assets/css/style.css" />
     <link rel="stylesheet" href="/assets/css/responsive.css" />
   </head>
@@ -37,7 +38,8 @@
         >
           <a href="/index.html">Home</a
           ><a href="/research/index.html">Research</a
-          ><a href="/provinces/index.html">Provinces</a><a href="#">Data</a
+          ><a href="/provinces/index.html">Provinces</a
+          ><a href="/data/index.html">Data</a
           ><a href="/articles/index.html" aria-current="page">Articles</a
           ><a href="/about.html">About</a>
         </nav>
@@ -56,38 +58,41 @@
       </section>
       <section class="section">
         <div class="container">
+          <div class="search-box">
+            <input
+              data-publication-search
+              type="search"
+              placeholder="Search articles and analysis…"
+              aria-label="Search articles"
+            />
+          </div>
           <div class="grid grid-3">
-            <a class="card card-link" href="#"
+            <a class="card card-link" data-publication-card href="#"
               ><span class="card-meta">Explainer</span>
               <h3>Why administrative boundaries matter</h3>
               <p>The institutional questions behind territorial reform.</p></a
-            >
-            <a class="card card-link" href="#"
+            ><a class="card card-link" data-publication-card href="#"
               ><span class="card-meta">Analysis</span>
               <h3>Federalism and the distribution of power</h3>
               <p>
                 Understanding federal, provincial and local institutions.
               </p></a
-            >
-            <a class="card card-link" href="#"
+            ><a class="card card-link" data-publication-card href="#"
               ><span class="card-meta">Governance</span>
               <h3>Provinces and local governments</h3>
               <p>
                 Why changing one level does not automatically decentralize
                 power.
               </p></a
-            >
-            <a class="card card-link" href="#"
+            ><a class="card card-link" data-publication-card href="#"
               ><span class="card-meta">Constitution</span>
               <h3>How provincial boundaries can change</h3>
               <p>An introduction to the constitutional process.</p></a
-            >
-            <a class="card card-link" href="#"
+            ><a class="card card-link" data-publication-card href="#"
               ><span class="card-meta">Fiscal policy</span>
               <h3>Who pays for a new province?</h3>
               <p>Revenue, transfers, expenditure and institutional costs.</p></a
-            >
-            <a class="card card-link" href="#"
+            ><a class="card card-link" data-publication-card href="#"
               ><span class="card-meta">Methods</span>
               <h3>How to evaluate a reform proposal</h3>
               <p>Comparing benefits, costs, risks and alternatives.</p></a
@@ -109,17 +114,22 @@
         <div>
           <h3>Research</h3>
           <ul class="footer-links">
-            <li><a href="/research/policy-papers.html">Policy Papers</a></li>
-            <li><a href="/research/reports.html">Reports</a></li>
-            <li><a href="/research/briefs.html">Policy Briefs</a></li>
-          </ul>
+            <li>
+              <a href="/research/policy-papers/index.html">Policy Papers</a>
+            </li>
+            <li><a href="/research/reports/index.html">Reports</a></li>
+            <li><a href="/research/briefs/index.html">Policy Briefs</a></li>
+            <li>
+              <a href="/research/working-papers/index.html">Working Papers</a>
+            </li>
         </div>
         <div>
           <h3>Explore</h3>
           <ul class="footer-links">
             <li><a href="/provinces/index.html">Provincial Reform</a></li>
+            <li><a href="/data/index.html">Data & Maps</a></li>
             <li><a href="/articles/index.html">Articles</a></li>
-            <li><a href="/about.html">About PPRI</a></li>
+            <li><a href="/about.html">About</a></li>
           </ul>
         </div>
         <div>
@@ -128,6 +138,7 @@
             <li><a href="#">X / Twitter</a></li>
             <li><a href="#">LinkedIn</a></li>
             <li><a href="#">YouTube</a></li>
+            <li><a href="/contact.html">Contact</a></li>
           </ul>
         </div>
       </div>
@@ -142,6 +153,6 @@
       </div>
     </footer>
     <script src="/assets/js/main.js" defer></script>
-    <script src="/assets/js/accessibility.js" defer></script>
+
   </body>
 </html>

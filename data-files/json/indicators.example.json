@@ -1,0 +1,18 @@
+{
+  "dataset": "PPRI illustrative indicator schema",
+  "status": "placeholder",
+  "source": null,
+  "reference_period": null,
+  "indicators": [
+    {
+      "name": "population",
+      "unit": "persons",
+      "value": null
+    },
+    {
+      "name": "population_density",
+      "unit": "persons_per_km2",
+      "value": null
+    }
+  ]
+}
