@@ -1,25 +1,14 @@
-# PPRI Pakistan — Phase 2
+# PPRI Pakistan — Phase 3
 
-Expanded static institutional website for the Pakistan Provincial Reform Institute.
+Advanced research + data layer for the Pakistan Provincial Reform Institute.
 
-## Added
+Added: source-first Pakistan data centre, Census 2023 provincial baseline, comparison table/chart, CSV/JSON datasets, district explorer architecture, maps architecture, model-neutral reform scenarios, methodology and source registry.
 
-- Expanded research/publication architecture
-- Policy Paper, Policy Brief and Working Paper templates
-- Provincial reform research sections
-- Data & Maps centre
-- Public consultation + methodology pages
-- Researcher/contributor directory
-- Searchable static publication/article cards
-- Improved responsive institutional design
-- Publication table of contents
-- SEO/Open Graph foundation
-- robots.txt and sitemap.xml template
-- JSON/CSV data schemas
-- PDF/document directories
-- 404, privacy and terms pages
+The site remains fully static: no database or backend.
 
-## Important
+Primary source: Pakistan Bureau of Statistics — 7th Population and Housing Census 2023.
+Official: https://www.pbs.gov.pk/census/ and https://www.pbs.gov.pk/result-excel/
 
-The site remains fully static: no database and no backend.
-Placeholders are deliberately marked where verified data, final PDFs, maps, sources, official contacts and reviewed research must be added.
+Hypothetical provincial boundaries are not presented as official boundaries.
+
+Logo: place the user's final logo in assets/images/brand/ and replace the placeholder header mark when supplied.

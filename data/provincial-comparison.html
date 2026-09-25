@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Provincial Comparison | PPRI</title>
+    <link rel="stylesheet" href="/assets/css/style.css" />
+  </head>
+  <body>
+    <main>
+      <section class="page-hero">
+        <div class="container">
+          <span class="eyebrow">Evidence Centre</span>
+          <h1>Provincial comparison</h1>
+          <p>Population baseline using Pakistan's 2023 Census.</p>
+        </div>
+      </section>
+      <section class="section">
+        <div class="container">
+          <div class="table-wrap">
+            <table class="data-table" id="t">
+              <thead>
+                <tr>
+                  <th>Province</th>
+                  <th>Population 2023</th>
+                  <th>Code</th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+          </div>
+          <div class="card mt-3">
+            <canvas id="c" style="width: 100%; height: 320px"></canvas>
+            <p class="muted">
+              Source: Pakistan Bureau of Statistics, 7th Population & Housing
+              Census 2023.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="/assets/js/modules/data.js"></script>
+    <script>
+      fetch("/data/provinces/provinces-2023.json")
+        .then((r) => r.json())
+        .then((d) => {
+          PPRI.table("#t", d.records, ["name", "population_2023", "code"]);
+          PPRI.bar(
+            "c",
+            d.records.map((x) => x.name),
+            d.records.map((x) => x.population_2023 / 1000000),
+          );
+        });
+    </script>
+  </body>
+</html>
