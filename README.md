@@ -1,21 +1,11 @@
-# PPRI Pakistan — Static Website Template
+# PPRI Pakistan — Phase 1
 
-Pakistan Provincial Reform Institute (PPRI).
+Core PPRI visual system and five working pages.
 
-This is a plain static HTML/CSS/JavaScript website structure intended for GitHub Pages or another static host.
+- index.html — homepage
+- about.html — institutional overview
+- research/index.html — research hub
+- provinces/index.html — provincial reform hub
+- articles/index.html — articles hub
 
-## Main sections
-- Research
-- Provinces
-- Data
-- Articles
-- News & Updates
-- Consultation
-- Resources
-- Media
-- Institution
-
-## `.nojekyll`
-This empty file tells GitHub Pages not to run Jekyll processing for this repository. It is useful when the site is being served as a plain static HTML/CSS/JS site.
-
-Replace the placeholder pages, URLs, content, images, documents, and sitemap domain before publishing.
+Built with static HTML, CSS and vanilla JavaScript. No database or backend.

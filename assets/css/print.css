@@ -1,1 +1,15 @@
-<!-- PPRI placeholder: assets/css/print.css. Replace with final content. -->
+@media print {
+  .site-header,
+  .site-footer,
+  .menu-toggle,
+  .actions {
+    display: none !important;
+  }
+  .hero,
+  .page-hero,
+  .section {
+    padding: 25px 0;
+    background: #fff;
+    color: #000;
+  }
+}

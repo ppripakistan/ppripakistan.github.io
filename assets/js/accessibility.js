@@ -1,1 +1,1 @@
-<!-- PPRI placeholder: assets/js/accessibility.js. Replace with final content. -->
+document.documentElement.classList.add("js-ready");
