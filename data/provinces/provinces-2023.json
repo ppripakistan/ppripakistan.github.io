@@ -1,1 +1,44 @@
-{"dataset":"PPRI Provincial Population Baseline","reference_period":"2023","unit":"persons","source":"Pakistan Bureau of Statistics — 7th Population and Housing Census 2023","source_url":"https://www.pbs.gov.pk/census/","records":[{"name":"Punjab","code":"PB","population_2023":127688922},{"name":"Sindh","code":"SD","population_2023":55696147},{"name":"Khyber Pakhtunkhwa","code":"KP","population_2023":40856408},{"name":"Balochistan","code":"BA","population_2023":14894402}]}
+{
+  "dataset": "Pakistan population baseline \u2014 Census 2023",
+  "reference_period": "2023",
+  "unit": "persons",
+  "source": "Pakistan Bureau of Statistics, 7th Population and Housing Census 2023",
+  "source_url": "https://www.pbs.gov.pk/census/",
+  "records": [
+    {
+      "name": "Punjab",
+      "code": "PB",
+      "population_2023": 127688922,
+      "share_percent": 52.87,
+      "source_id": "PBS-CENSUS-2023"
+    },
+    {
+      "name": "Sindh",
+      "code": "SD",
+      "population_2023": 55696147,
+      "share_percent": 23.06,
+      "source_id": "PBS-CENSUS-2023"
+    },
+    {
+      "name": "Khyber Pakhtunkhwa",
+      "code": "KP",
+      "population_2023": 40856408,
+      "share_percent": 16.92,
+      "source_id": "PBS-CENSUS-2023"
+    },
+    {
+      "name": "Balochistan",
+      "code": "BA",
+      "population_2023": 14894402,
+      "share_percent": 6.17,
+      "source_id": "PBS-CENSUS-2023"
+    },
+    {
+      "name": "Islamabad Capital Territory",
+      "code": "ICT",
+      "population_2023": 2362363,
+      "share_percent": 0.98,
+      "source_id": "PBS-CENSUS-2023"
+    }
+  ]
+}

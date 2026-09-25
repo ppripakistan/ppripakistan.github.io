@@ -1,14 +1,33 @@
-# PPRI Pakistan — Phase 3
+# PPRI Pakistan — Phase 4 Production Website
 
-Advanced research + data layer for the Pakistan Provincial Reform Institute.
+Pakistan Provincial Reform Institute (PPRI)
 
-Added: source-first Pakistan data centre, Census 2023 provincial baseline, comparison table/chart, CSV/JSON datasets, district explorer architecture, maps architecture, model-neutral reform scenarios, methodology and source registry.
+Production website for https://ppripakistan.github.io/
 
-The site remains fully static: no database or backend.
+## Included
 
-Primary source: Pakistan Bureau of Statistics — 7th Population and Housing Census 2023.
-Official: https://www.pbs.gov.pk/census/ and https://www.pbs.gov.pk/result-excel/
+- User-provided PPRI logo integrated into header, footer and favicon.
+- Production navigation and responsive institutional design.
+- Bold but evidence-focused homepage.
+- Full substantive Policy Paper 001 and downloadable PDF.
+- Constitutional, administrative, fiscal and local-government research pages.
+- Census 2023 population baseline with CSV/JSON downloads.
+- Provincial comparison chart/table.
+- Public consultation and survey methodology.
+- Source registry using primary Pakistani institutions.
+- Search index and client-side search.
+- Maps/scenario architecture with official-vs-analytical distinction.
+- SEO metadata, canonical site identity, sitemap, robots and social metadata.
+- GitHub Pages deployment workflow.
+- Static only: no backend and no database.
 
-Hypothetical provincial boundaries are not presented as official boundaries.
+## Primary sources
 
-Logo: place the user's final logo in assets/images/brand/ and replace the placeholder header mark when supplied.
+- Pakistan Bureau of Statistics — https://www.pbs.gov.pk/census/
+- Pakistan Code — https://pakistancode.gov.pk/
+- Ministry of Finance — https://www.finance.gov.pk/nfc_cons.html
+- Election Commission of Pakistan — https://www.ecp.gov.pk/
+
+## Editorial rule
+
+PPRI separates documented facts, calculations, analysis and policy options. Hypothetical territorial scenarios are never presented as official boundaries.

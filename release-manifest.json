@@ -1,0 +1,12 @@
+{
+  "release": "PPRI Phase 4 \u2014 Production Research Institute",
+  "organization": "Pakistan Provincial Reform Institute",
+  "homepage": "https://ppripakistan.github.io/",
+  "x": "https://x.com/PPRI_Pakistan",
+  "language": "English",
+  "hosting": "GitHub Pages",
+  "backend": false,
+  "database": false,
+  "major_publication": "PPRI-PP-001",
+  "logo": "assets/images/brand/ppri-logo.jpg"
+}

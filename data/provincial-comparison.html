@@ -1,56 +1,192 @@
 <!doctype html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Provincial Comparison | PPRI</title>
+    <title>Provincial Population Comparison | PPRI</title>
+    <meta
+      name="description"
+      content="Pakistan provincial and ICT population baseline from Census 2023."
+    />
+    <link rel="canonical" href="https://ppripakistan.github.io/" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="Provincial Population Comparison | PPRI"
+    />
+    <meta
+      property="og:description"
+      content="Pakistan provincial and ICT population baseline from Census 2023."
+    />
+    <meta
+      property="og:image"
+      content="https://ppripakistan.github.io/assets/images/brand/ppri-logo.jpg"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@PPRI_Pakistan" />
+    <link rel="icon" href="/assets/images/brand/ppri-favicon.png" />
     <link rel="stylesheet" href="/assets/css/style.css" />
+    <link rel="stylesheet" href="/assets/css/responsive.css" />
   </head>
   <body>
-    <main>
-      <section class="page-hero">
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <header class="site-header">
+      <div class="container navbar">
+        <a class="brand" href="/index.html"
+          ><img
+            src="/assets/images/brand/ppri-logo-header.jpg"
+            alt="PPRI logo"
+          /><span class="brand-text"
+            ><strong>PPRI</strong
+            ><span>Pakistan Provincial Reform Institute</span></span
+          ></a
+        ><button
+          class="menu-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="site-navigation"
+        >
+          Menu
+        </button>
+        <nav
+          id="site-navigation"
+          class="nav-links"
+          aria-label="Primary navigation"
+        >
+          <a href="/index.html">Home</a
+          ><a href="/research/index.html">Research</a
+          ><a href="/provinces/index.html">Reform</a
+          ><a href="/data/centre.html" aria-current="page">Data</a
+          ><a href="/publications/index.html">Publications</a
+          ><a href="/consultation/index.html">Engage</a
+          ><a href="/about.html">About</a
+          ><a class="nav-search" href="/search.html">Search</a>
+        </nav>
+      </div>
+    </header>
+    <main id="main-content">
+      <section class="data-hero">
         <div class="container">
           <span class="eyebrow">Evidence Centre</span>
-          <h1>Provincial comparison</h1>
-          <p>Population baseline using Pakistan's 2023 Census.</p>
+          <h1>Population baseline — Census 2023</h1>
+          <p>
+            Official population totals published by the Pakistan Bureau of
+            Statistics provide the demographic baseline for PPRI's provincial
+            research.
+          </p>
         </div>
       </section>
       <section class="section">
         <div class="container">
-          <div class="table-wrap">
-            <table class="data-table" id="t">
+          <div class="chart-card">
+            <canvas
+              id="popChart"
+              aria-label="Pakistan population by province"
+            ></canvas>
+            <div class="source-note">
+              Source:
+              <a href="https://www.pbs.gov.pk/census/"
+                >Pakistan Bureau of Statistics — Census 2023</a
+              >.
+            </div>
+          </div>
+          <div class="table-wrap mt-3">
+            <table class="data-table" id="provinceTable">
               <thead>
                 <tr>
-                  <th>Province</th>
-                  <th>Population 2023</th>
-                  <th>Code</th>
+                  <th>Unit</th>
+                  <th>Population</th>
+                  <th>Share</th>
+                  <th>Source</th>
                 </tr>
               </thead>
               <tbody></tbody>
             </table>
           </div>
-          <div class="card mt-3">
-            <canvas id="c" style="width: 100%; height: 320px"></canvas>
-            <p class="muted">
-              Source: Pakistan Bureau of Statistics, 7th Population & Housing
-              Census 2023.
-            </p>
+          <div class="callout">
+            <strong>Interpretation:</strong> population scale is one relevant
+            variable, not a standalone measure of administrative performance or
+            a justification for territorial change.
           </div>
         </div>
       </section>
+      <script src="/assets/js/modules/data.js"></script>
+      <script>
+        fetch("/data/provinces/provinces-2023.json")
+          .then((r) => r.json())
+          .then((d) => {
+            PPRI.populateTable("#provinceTable", d.records);
+            PPRI.barChart(
+              "popChart",
+              d.records.map((x) => x.name),
+              d.records.map((x) => x.population_2023),
+              "Population by unit, Census 2023",
+            );
+          });
+      </script>
     </main>
-    <script src="/assets/js/modules/data.js"></script>
-    <script>
-      fetch("/data/provinces/provinces-2023.json")
-        .then((r) => r.json())
-        .then((d) => {
-          PPRI.table("#t", d.records, ["name", "population_2023", "code"]);
-          PPRI.bar(
-            "c",
-            d.records.map((x) => x.name),
-            d.records.map((x) => x.population_2023 / 1000000),
-          );
-        });
-    </script>
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div>
+          <img
+            src="/assets/images/brand/ppri-logo-header.jpg"
+            alt="PPRI — Pakistan Provincial Reform Institute"
+            class="footer-logo"
+          />
+          <p>Pakistan Provincial Reform Institute</p>
+          <p>
+            Policy research on provincial reform, federalism, decentralization
+            and institutional design in Pakistan.
+          </p>
+        </div>
+        <div>
+          <h3>Research</h3>
+          <ul class="footer-links">
+            <li>
+              <a href="/research/policy-papers/index.html">Policy Papers</a>
+            </li>
+            <li><a href="/research/reports/index.html">Reports</a></li>
+            <li><a href="/research/briefs/index.html">Policy Briefs</a></li>
+            <li>
+              <a href="/research/working-papers/index.html">Working Papers</a>
+            </li>
+            <li><a href="/articles/index.html">Articles & Analysis</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Explore</h3>
+          <ul class="footer-links">
+            <li><a href="/provinces/index.html">Provincial Reform</a></li>
+            <li><a href="/data/centre.html">Data Centre</a></li>
+            <li><a href="/maps/index.html">Maps</a></li>
+            <li><a href="/methodology/index.html">Methodology</a></li>
+            <li><a href="/sources/index.html">Sources</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Connect</h3>
+          <ul class="footer-links">
+            <li>
+              <a href="https://x.com/PPRI_Pakistan" rel="me"
+                >X / @PPRI_Pakistan</a
+              >
+            </li>
+            <li><a href="/consultation/index.html">Public Consultation</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        <span
+          >© <span data-current-year></span> Pakistan Provincial Reform
+          Institute</span
+        ><span
+          ><a href="/privacy.html">Privacy</a> ·
+          <a href="/terms.html">Terms</a> ·
+          <a href="/sitemap.xml">Sitemap</a></span
+        >
+      </div>
+    </footer>
+    <script src="/assets/js/main.js" defer></script>
   </body>
 </html>

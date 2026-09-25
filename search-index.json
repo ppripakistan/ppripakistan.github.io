@@ -1,0 +1,115 @@
+[
+  {
+    "title": "The Provincial Reorganization of Pakistan",
+    "type": "Policy Paper",
+    "description": "PPRI flagship paper on constitutional, administrative, fiscal, demographic and local-government considerations.",
+    "url": "/research/policy-papers/provincial-reorganization-of-pakistan.html",
+    "tags": [
+      "provinces",
+      "constitutional",
+      "fiscal",
+      "local government"
+    ]
+  },
+  {
+    "title": "Constitutional Framework",
+    "type": "Research topic",
+    "description": "Articles 1, 140A, 160 and 239 and what they mean for territorial and institutional reform.",
+    "url": "/provinces/constitutional-framework.html",
+    "tags": [
+      "constitution",
+      "article 239",
+      "article 140A",
+      "NFC"
+    ]
+  },
+  {
+    "title": "Administrative Model",
+    "type": "Research topic",
+    "description": "Institutional setup, personnel, courts, security, service delivery and transition planning.",
+    "url": "/provinces/administrative-model.html",
+    "tags": [
+      "administration",
+      "civil service",
+      "transition"
+    ]
+  },
+  {
+    "title": "Fiscal Framework",
+    "type": "Research topic",
+    "description": "NFC, revenue, transfers, expenditure, assets, liabilities and transition costs.",
+    "url": "/provinces/fiscal-framework.html",
+    "tags": [
+      "finance",
+      "NFC",
+      "revenue",
+      "expenditure"
+    ]
+  },
+  {
+    "title": "Local Government",
+    "type": "Research topic",
+    "description": "Article 140A and the relationship between provincial restructuring and local devolution.",
+    "url": "/provinces/local-government.html",
+    "tags": [
+      "local government",
+      "decentralization",
+      "140A"
+    ]
+  },
+  {
+    "title": "Provincial Data Centre",
+    "type": "Data",
+    "description": "Source-first demographic and territorial evidence for provincial reform research.",
+    "url": "/data/centre.html",
+    "tags": [
+      "data",
+      "census",
+      "population",
+      "districts"
+    ]
+  },
+  {
+    "title": "Provincial Comparison",
+    "type": "Data",
+    "description": "Census 2023 population comparison for Pakistan provinces and ICT.",
+    "url": "/data/provincial-comparison.html",
+    "tags": [
+      "population",
+      "census 2023",
+      "comparison"
+    ]
+  },
+  {
+    "title": "Administrative Scale & Representation",
+    "type": "Policy Brief",
+    "description": "Five tests for evaluating administrative scale and political access.",
+    "url": "/research/briefs/administrative-scale.html",
+    "tags": [
+      "representation",
+      "administrative scale"
+    ]
+  },
+  {
+    "title": "Provinces & Local Government",
+    "type": "Working Paper",
+    "description": "Comparative framework for territorial restructuring and local-government devolution.",
+    "url": "/research/working-papers/provinces-local-government.html",
+    "tags": [
+      "local government",
+      "provinces",
+      "devolution"
+    ]
+  },
+  {
+    "title": "Public Consultation",
+    "type": "Engage",
+    "description": "PPRI questionnaire and methodology for public views on governance reform.",
+    "url": "/consultation/index.html",
+    "tags": [
+      "survey",
+      "consultation",
+      "public opinion"
+    ]
+  }
+]

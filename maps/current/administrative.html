@@ -1,34 +1,160 @@
 <!doctype html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>Current Administrative Map | PPRI</title>
+    <meta
+      name="description"
+      content="Method specification for PPRI current administrative boundary mapping."
+    />
+    <link rel="canonical" href="https://ppripakistan.github.io/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Current Administrative Map | PPRI" />
+    <meta
+      property="og:description"
+      content="Method specification for PPRI current administrative boundary mapping."
+    />
+    <meta
+      property="og:image"
+      content="https://ppripakistan.github.io/assets/images/brand/ppri-logo.jpg"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@PPRI_Pakistan" />
+    <link rel="icon" href="/assets/images/brand/ppri-favicon.png" />
     <link rel="stylesheet" href="/assets/css/style.css" />
+    <link rel="stylesheet" href="/assets/css/responsive.css" />
   </head>
   <body>
-    <main>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <header class="site-header">
+      <div class="container navbar">
+        <a class="brand" href="/index.html"
+          ><img
+            src="/assets/images/brand/ppri-logo-header.jpg"
+            alt="PPRI logo"
+          /><span class="brand-text"
+            ><strong>PPRI</strong
+            ><span>Pakistan Provincial Reform Institute</span></span
+          ></a
+        ><button
+          class="menu-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="site-navigation"
+        >
+          Menu
+        </button>
+        <nav
+          id="site-navigation"
+          class="nav-links"
+          aria-label="Primary navigation"
+        >
+          <a href="/index.html">Home</a
+          ><a href="/research/index.html">Research</a
+          ><a href="/provinces/index.html">Reform</a
+          ><a href="/data/centre.html" aria-current="page">Data</a
+          ><a href="/publications/index.html">Publications</a
+          ><a href="/consultation/index.html">Engage</a
+          ><a href="/about.html">About</a
+          ><a class="nav-search" href="/search.html">Search</a>
+        </nav>
+      </div>
+    </header>
+    <main id="main-content">
       <section class="page-hero">
         <div class="container">
-          <span class="eyebrow">Geography</span>
-          <h1>Current Administrative Map</h1>
-          <p>Production specification for a verified boundary layer.</p>
+          <span class="eyebrow">Official baseline</span>
+          <h1>Current administrative geography</h1>
+          <p>
+            A documented map layer should be the baseline for every territorial
+            scenario.
+          </p>
         </div>
       </section>
       <section class="section">
-        <div class="container content">
-          <div class="callout">
-            <strong>Boundary provenance:</strong> PBS publishes Census 2023
-            administrative-unit and GIS information. A production GeoJSON layer
-            should record exact source, release date and licensing.
-          </div>
-          <h2>Display rules</h2>
+        <div class="container prose-wide">
+          <h2>Source rule</h2>
+          <p>
+            Use a dated official or appropriately licensed administrative
+            boundary dataset. Record the release date, geographic level,
+            projection and licensing terms.
+          </p>
+          <h2>Display rule</h2>
           <p>
             Official/current boundaries must be visually distinguished from
-            hypothetical research scenarios.
+            proposed or analytical boundaries.
+          </p>
+          <h2>Research rule</h2>
+          <p>
+            Every scenario must identify which districts or administrative units
+            it includes and must preserve a link to the baseline geography.
           </p>
         </div>
       </section>
     </main>
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div>
+          <img
+            src="/assets/images/brand/ppri-logo-header.jpg"
+            alt="PPRI — Pakistan Provincial Reform Institute"
+            class="footer-logo"
+          />
+          <p>Pakistan Provincial Reform Institute</p>
+          <p>
+            Policy research on provincial reform, federalism, decentralization
+            and institutional design in Pakistan.
+          </p>
+        </div>
+        <div>
+          <h3>Research</h3>
+          <ul class="footer-links">
+            <li>
+              <a href="/research/policy-papers/index.html">Policy Papers</a>
+            </li>
+            <li><a href="/research/reports/index.html">Reports</a></li>
+            <li><a href="/research/briefs/index.html">Policy Briefs</a></li>
+            <li>
+              <a href="/research/working-papers/index.html">Working Papers</a>
+            </li>
+            <li><a href="/articles/index.html">Articles & Analysis</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Explore</h3>
+          <ul class="footer-links">
+            <li><a href="/provinces/index.html">Provincial Reform</a></li>
+            <li><a href="/data/centre.html">Data Centre</a></li>
+            <li><a href="/maps/index.html">Maps</a></li>
+            <li><a href="/methodology/index.html">Methodology</a></li>
+            <li><a href="/sources/index.html">Sources</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Connect</h3>
+          <ul class="footer-links">
+            <li>
+              <a href="https://x.com/PPRI_Pakistan" rel="me"
+                >X / @PPRI_Pakistan</a
+              >
+            </li>
+            <li><a href="/consultation/index.html">Public Consultation</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        <span
+          >© <span data-current-year></span> Pakistan Provincial Reform
+          Institute</span
+        ><span
+          ><a href="/privacy.html">Privacy</a> ·
+          <a href="/terms.html">Terms</a> ·
+          <a href="/sitemap.xml">Sitemap</a></span
+        >
+      </div>
+    </footer>
+    <script src="/assets/js/main.js" defer></script>
   </body>
 </html>
