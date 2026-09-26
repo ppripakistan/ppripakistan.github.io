@@ -3,20 +3,20 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>PPRI Media Centre | PPRI</title>
+    <title>PPRI Data Notes | PPRI</title>
     <meta
       name="description"
-      content="Media resources, institutional background and publication information for journalists and researchers."
+      content="Definitions and quality controls for PPRI population, administrative, fiscal and governance datasets."
     />
     <link
       rel="canonical"
-      href="https://ppripakistan.github.io/media/index.html"
+      href="https://ppripakistan.github.io/data/data-notes.html"
     />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="PPRI Media Centre | PPRI" />
+    <meta property="og:title" content="PPRI Data Notes | PPRI" />
     <meta
       property="og:description"
-      content="Media resources, institutional background and publication information for journalists and researchers."
+      content="Definitions and quality controls for PPRI population, administrative, fiscal and governance datasets."
     />
     <meta
       property="og:image"
@@ -67,74 +67,66 @@
     <main id="main-content">
       <section class="page-hero">
         <div class="container">
-          <span class="eyebrow">MEDIA CENTRE</span>
-          <h1>PPRI Media Centre</h1>
+          <span class="eyebrow">DATA CENTRE</span>
+          <h1>Data Notes & Definitions</h1>
           <p>
-            A concise resource for journalists, researchers, students and
-            organizations looking for PPRI research and institutional
-            information.
+            A common data language prevents the same number from being used to
+            support incompatible claims.
           </p>
         </div>
       </section>
       <section class="section">
         <div class="container prose-wide">
-          <h2>About PPRI</h2>
+          <h2>Population</h2>
           <p>
-            The Pakistan Provincial Reform Institute is a research platform
-            focused on provincial reform, federalism, decentralization, public
-            administration and institutional design in Pakistan.
+            PPRI's baseline demographic work uses Pakistan Bureau of Statistics
+            Census 2023 material. PBS publishes national, provincial and
+            district tables and detailed results in downloadable formats. Users
+            should always check the census reference period before comparing it
+            with newer estimates.
           </p>
-          <h2>What PPRI researches</h2>
-          <div class="grid grid-3">
-            <div class="card">
-              <h3>Provincial reform</h3>
-              <p>
-                Questions around territorial organization, administrative scale
-                and representation.
-              </p>
-            </div>
-            <div class="card">
-              <h3>Federalism</h3>
-              <p>
-                Constitutional roles, intergovernmental relations and fiscal
-                arrangements.
-              </p>
-            </div>
-            <div class="card">
-              <h3>Local government</h3>
-              <p>
-                Political, administrative and financial devolution below the
-                provincial level.
-              </p>
-            </div>
-          </div>
-          <h2>Useful resources</h2>
-          <ul>
-            <li>
-              <a
-                href="/research/policy-papers/provincial-reorganization-of-pakistan.html"
-                >Flagship policy paper</a
-              >
-            </li>
-            <li><a href="/research/agenda.html">Research agenda</a></li>
-            <li><a href="/data/centre.html">Data Centre</a></li>
-            <li><a href="/sources/index.html">Source registry</a></li>
-            <li>
-              <a href="/transparency.html"
-                >Transparency and research integrity</a
-              >
-            </li>
-          </ul>
-          <h2>Contact</h2>
+          <h2>Administrative geography</h2>
           <p>
-            For publication questions, research collaboration, media inquiries
-            or corrections, use the
-            <a href="/contact.html">PPRI contact page</a>. Public updates are
-            also posted through
-            <a href="https://x.com/PPRI_Pakistan" target="_blank" rel="noopener"
-              >@PPRI_Pakistan</a
+            District and provincial boundaries can change over time. Every
+            dataset should identify the administrative vintage used. A district
+            comparison is only meaningful when the units are comparable or the
+            transformation is explicitly documented.
+          </p>
+          <h2>Fiscal data</h2>
+          <p>
+            Fiscal indicators should distinguish federal transfers, provincial
+            own-source receipts, grants, expenditure and other categories rather
+            than combining them into a single measure of “wealth.” Definitions
+            should follow the source institution.
+          </p>
+          <h2>Governance indicators</h2>
+          <p>
+            Governance measures require special caution because service outcomes
+            can reflect funding, geography, population density, institutional
+            design and many other factors. PPRI will avoid treating a single
+            indicator as a complete measure of institutional performance.
+          </p>
+          <h2>Reproducibility</h2>
+          <ul>
+            <li>Store the original source URL.</li>
+            <li>Record publication and reference dates.</li>
+            <li>Preserve downloaded datasets where licensing permits.</li>
+            <li>Document transformations and calculations.</li>
+            <li>Use machine-readable CSV/JSON for derived public datasets.</li>
+          </ul>
+          <div class="callout">
+            <strong>Current baseline:</strong> PBS's 2023 Census provides
+            detailed national, provincial and district demographic tables. See
+            the official Census portal for the latest published tables.
+          </div>
+          <p>
+            <a
+              class="btn btn-primary"
+              href="https://www.pbs.gov.pk/census/"
+              target="_blank"
+              rel="noopener"
+              >Open PBS Census portal</a
             >
-            on X.
           </p>
         </div>
       </section>

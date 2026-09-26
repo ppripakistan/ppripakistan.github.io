@@ -4,112 +4,114 @@
     "type": "Policy Paper",
     "description": "PPRI flagship paper on constitutional, administrative, fiscal, demographic and local-government considerations.",
     "url": "/research/policy-papers/provincial-reorganization-of-pakistan.html",
-    "tags": [
-      "provinces",
-      "constitutional",
-      "fiscal",
-      "local government"
-    ]
+    "tags": ["provinces", "constitutional", "fiscal", "local government"]
   },
   {
     "title": "Constitutional Framework",
     "type": "Research topic",
     "description": "Articles 1, 140A, 160 and 239 and what they mean for territorial and institutional reform.",
     "url": "/provinces/constitutional-framework.html",
-    "tags": [
-      "constitution",
-      "article 239",
-      "article 140A",
-      "NFC"
-    ]
+    "tags": ["constitution", "article 239", "article 140A", "NFC"]
   },
   {
     "title": "Administrative Model",
     "type": "Research topic",
     "description": "Institutional setup, personnel, courts, security, service delivery and transition planning.",
     "url": "/provinces/administrative-model.html",
-    "tags": [
-      "administration",
-      "civil service",
-      "transition"
-    ]
+    "tags": ["administration", "civil service", "transition"]
   },
   {
     "title": "Fiscal Framework",
     "type": "Research topic",
     "description": "NFC, revenue, transfers, expenditure, assets, liabilities and transition costs.",
     "url": "/provinces/fiscal-framework.html",
-    "tags": [
-      "finance",
-      "NFC",
-      "revenue",
-      "expenditure"
-    ]
+    "tags": ["finance", "NFC", "revenue", "expenditure"]
   },
   {
     "title": "Local Government",
     "type": "Research topic",
     "description": "Article 140A and the relationship between provincial restructuring and local devolution.",
     "url": "/provinces/local-government.html",
-    "tags": [
-      "local government",
-      "decentralization",
-      "140A"
-    ]
+    "tags": ["local government", "decentralization", "140A"]
   },
   {
     "title": "Provincial Data Centre",
     "type": "Data",
     "description": "Source-first demographic and territorial evidence for provincial reform research.",
     "url": "/data/centre.html",
-    "tags": [
-      "data",
-      "census",
-      "population",
-      "districts"
-    ]
+    "tags": ["data", "census", "population", "districts"]
   },
   {
     "title": "Provincial Comparison",
     "type": "Data",
     "description": "Census 2023 population comparison for Pakistan provinces and ICT.",
     "url": "/data/provincial-comparison.html",
-    "tags": [
-      "population",
-      "census 2023",
-      "comparison"
-    ]
+    "tags": ["population", "census 2023", "comparison"]
   },
   {
     "title": "Administrative Scale & Representation",
     "type": "Policy Brief",
     "description": "Five tests for evaluating administrative scale and political access.",
     "url": "/research/briefs/administrative-scale.html",
-    "tags": [
-      "representation",
-      "administrative scale"
-    ]
+    "tags": ["representation", "administrative scale"]
   },
   {
     "title": "Provinces & Local Government",
     "type": "Working Paper",
     "description": "Comparative framework for territorial restructuring and local-government devolution.",
     "url": "/research/working-papers/provinces-local-government.html",
-    "tags": [
-      "local government",
-      "provinces",
-      "devolution"
-    ]
+    "tags": ["local government", "provinces", "devolution"]
   },
   {
     "title": "Public Consultation",
     "type": "Engage",
     "description": "PPRI questionnaire and methodology for public views on governance reform.",
     "url": "/consultation/index.html",
-    "tags": [
-      "survey",
-      "consultation",
-      "public opinion"
-    ]
+    "tags": ["survey", "consultation", "public opinion"]
+  },
+  {
+    "title": "Research Agenda 2026–2027",
+    "url": "/research/agenda.html",
+    "text": "PPRI research programme constitutional demographic administrative fiscal local government public preferences"
+  },
+  {
+    "title": "Research Standards",
+    "url": "/methodology/research-standards.html",
+    "text": "source hierarchy evidence calculations scenarios surveys corrections methodology"
+  },
+  {
+    "title": "Transparency & Research Integrity",
+    "url": "/transparency.html",
+    "text": "independence funding disclosure conflicts corrections publication review"
+  },
+  {
+    "title": "Comparative Subnational Governance",
+    "url": "/research/comparative-governance.html",
+    "text": "international comparison provinces states regions local government fiscal constitutional transition"
+  },
+  {
+    "title": "Constitutional & Legal Library",
+    "url": "/research/legal-library.html",
+    "text": "Article 1 Article 140A Article 160 Article 239 Constitution provinces local government NFC amendment"
+  },
+  {
+    "title": "Data Notes & Definitions",
+    "url": "/data/data-notes.html",
+    "text": "population administrative geography fiscal governance reproducibility Census 2023"
+  },
+  {
+    "title": "PPRI Research Archive",
+    "url": "/archive/index.html",
+    "text": "archive publication record versions milestones"
+  },
+  {
+    "title": "PPRI Media Centre",
+    "url": "/media/index.html",
+    "text": "media resources journalists research publications contact"
+  },
+  {
+    "title": "Frequently Asked Questions",
+    "url": "/research/faq.html",
+    "text": "new provinces local government PPRI FAQ evidence methodology"
   }
 ]

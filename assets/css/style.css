@@ -746,3 +746,32 @@ img {
     display: none;
   }
 }
+
+/* Phase 5 institutional components */
+.card h3 {
+  letter-spacing: -0.02em;
+}
+.section-soft .card {
+  background: #fff;
+}
+.prose-wide .grid {
+  margin: 26px 0;
+}
+.prose-wide a:not(.btn) {
+  color: var(--accent2);
+  font-weight: 700;
+}
+.prose-wide ul {
+  padding-left: 22px;
+}
+.prose-wide li::marker {
+  color: var(--accent);
+}
+.archive-label {
+  display: inline-block;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+  font-weight: 800;
+}
