@@ -6,7 +6,7 @@
     <title>Current Administrative Map | PPRI</title>
     <meta
       name="description"
-      content="Method specification for PPRI current administrative boundary mapping."
+      content="Interactive current administrative geography for Pakistan with province and district boundary layers."
     />
     <link rel="canonical" href="https://ppripakistan.github.io/" />
     <meta property="og:type" content="website" />
@@ -24,6 +24,18 @@
     <link rel="icon" href="/assets/images/brand/ppri-favicon.png" />
     <link rel="stylesheet" href="/assets/css/style.css" />
     <link rel="stylesheet" href="/assets/css/responsive.css" />
+    <link rel="stylesheet" href="/assets/css/phase6.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    />
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
   </head>
   <body>
     <a class="skip-link" href="#main-content">Skip to content</a>
@@ -64,32 +76,90 @@
     <main id="main-content">
       <section class="page-hero">
         <div class="container">
-          <span class="eyebrow">Official baseline</span>
-          <h1>Current administrative geography</h1>
+          <span class="eyebrow">PPRI Geography</span>
+          <h1>Pakistan's current administrative geography.</h1>
           <p>
-            A documented map layer should be the baseline for every territorial
-            scenario.
+            Explore the national boundary, current provincial boundaries and
+            district boundaries. The map automatically fits to Pakistan rather
+            than displaying an isolated map tile.
           </p>
         </div>
       </section>
       <section class="section">
-        <div class="container prose-wide">
-          <h2>Source rule</h2>
-          <p>
-            Use a dated official or appropriately licensed administrative
-            boundary dataset. Record the release date, geographic level,
-            projection and licensing terms.
+        <div class="container">
+          <div class="p6-map-toolbar">
+            <div>
+              <strong>Reference map</strong>
+              <p class="p6-note">
+                Current geographic reference layer. This is not a proposed
+                reform map.
+              </p>
+            </div>
+            <div class="p6-map-toggles" aria-label="Map layer controls">
+              <label
+                ><input id="p6ShowProvinces" type="checkbox" checked />
+                Provinces</label
+              >
+              <label
+                ><input id="p6ShowDistricts" type="checkbox" checked />
+                Districts</label
+              >
+            </div>
+          </div>
+          <div
+            id="p6CurrentMap"
+            class="p6-map"
+            role="application"
+            aria-label="Interactive map of Pakistan current administrative boundaries"
+          ></div>
+          <p id="p6MapStatus" class="p6-note" role="status">
+            Loading Pakistan's geographic boundary...
           </p>
-          <h2>Display rule</h2>
-          <p>
-            Official/current boundaries must be visually distinguished from
-            proposed or analytical boundaries.
-          </p>
-          <h2>Research rule</h2>
-          <p>
-            Every scenario must identify which districts or administrative units
-            it includes and must preserve a link to the baseline geography.
-          </p>
+          <div class="p6-source-grid">
+            <div class="p6-source">
+              <small>GEOGRAPHY SOURCE</small>
+              <h3>Pakistan administrative boundary reference</h3>
+              <p>
+                The interactive layer uses the open Pakistan GeoJSON
+                administrative hierarchy from PakData/GISData. It provides ADM0,
+                ADM1, ADM2 and ADM3 layers and documents its source as
+                GADM-derived.
+              </p>
+              <a
+                href="https://github.com/PakData/GISData"
+                target="_blank"
+                rel="noopener"
+                >View GIS source and provenance →</a
+              >
+            </div>
+            <div class="p6-source">
+              <small>OFFICIAL REFERENCE</small>
+              <h3>PBS Geography / GIS</h3>
+              <p>
+                Pakistan Bureau of Statistics maintains the official Census GIS
+                and administrative-area framework. PPRI treats the interactive
+                open layer as a visualization source and PBS as the
+                institutional reference.
+              </p>
+              <a
+                href="https://www.pbs.gov.pk/gis/"
+                target="_blank"
+                rel="noopener"
+                >Open PBS GIS →</a
+              >
+            </div>
+          </div>
+          <div class="p6-callout">
+            <strong
+              >Why the map may differ from a current administrative
+              notification:</strong
+            >
+            administrative boundaries can change through creation or
+            reconstitution of units. The PBS GIS section notes that
+            administrative-unit boundaries are updated and frozen for Census
+            operations; this site therefore identifies the map source and date
+            rather than presenting a generic basemap as an official boundary.
+          </div>
         </div>
       </section>
     </main>
@@ -156,5 +226,11 @@
       </div>
     </footer>
     <script src="/assets/js/main.js" defer></script>
+    <!-- <script src="/assets/js/modules/phase6-maps.js" defer></script> -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@turf/turf@7.2.0/turf.min.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="/assets/js/modules/phase6-maps.js?v=6.22" defer></script>
   </body>
 </html>

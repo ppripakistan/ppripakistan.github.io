@@ -1,9 +1,14 @@
 {
-  "title": "Provincial population baseline — Census 2023",
-  "publisher": "Pakistan Provincial Reform Institute",
-  "underlying_source": "Pakistan Bureau of Statistics",
-  "reference_period": "2023",
-  "unit": "persons",
-  "url": "https://www.pbs.gov.pk/result-excel/",
-  "note": "PPRI presentation layer; PBS remains the authoritative source."
+  "dataset_id": "PPRI-POP-2023-PROV",
+  "version": "1.1",
+  "reference_year": 2023,
+  "source": "Pakistan Bureau of Statistics",
+  "source_url": "https://www.pbs.gov.pk/sites/default/files/population/2023/tables/table_1_national.pdf",
+  "notes": [
+    "Population, area, density, urban proportion and 2017\u20132023 annual growth are from PBS Census 2023 Table 1.",
+    "Administrative counts are from the PBS National Census Report 2023 Table 1.1.",
+    "Population share is calculated by PPRI from the PBS 2023 national total of 241,499,431.",
+    "Historical comparisons can be affected by boundary changes and census methodology."
+  ],
+  "last_checked": "2026-09-26"
 }

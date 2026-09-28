@@ -1,44 +1,73 @@
 {
-  "dataset": "Pakistan population baseline \u2014 Census 2023",
+  "dataset": "Pakistan provincial/ICT baseline \u2014 Census 2023",
   "reference_period": "2023",
-  "unit": "persons",
-  "source": "Pakistan Bureau of Statistics, 7th Population and Housing Census 2023",
+  "source": "Pakistan Bureau of Statistics, 7th Population and Housing Census 2023, Table 1 and National Census Report 2023",
   "source_url": "https://www.pbs.gov.pk/census/",
   "records": [
     {
       "name": "Punjab",
       "code": "PB",
       "population_2023": 127688922,
-      "share_percent": 52.87,
-      "source_id": "PBS-CENSUS-2023"
+      "area_sq_km": 205345,
+      "density_per_sq_km": 621.83,
+      "urban_proportion_pct": 40.71,
+      "annual_growth_2017_2023_pct": 2.53,
+      "population_2017": 109989655,
+      "divisions": 9,
+      "districts": 36,
+      "share_percent": 52.87
     },
     {
       "name": "Sindh",
       "code": "SD",
       "population_2023": 55696147,
-      "share_percent": 23.06,
-      "source_id": "PBS-CENSUS-2023"
+      "area_sq_km": 140914,
+      "density_per_sq_km": 395.25,
+      "urban_proportion_pct": 53.97,
+      "annual_growth_2017_2023_pct": 2.57,
+      "population_2017": 47854510,
+      "divisions": 6,
+      "districts": 30,
+      "share_percent": 23.06
     },
     {
       "name": "Khyber Pakhtunkhwa",
       "code": "KP",
-      "population_2023": 40856408,
-      "share_percent": 16.92,
-      "source_id": "PBS-CENSUS-2023"
+      "population_2023": 40856097,
+      "area_sq_km": 101741,
+      "density_per_sq_km": 401.57,
+      "urban_proportion_pct": 15.01,
+      "annual_growth_2017_2023_pct": 2.38,
+      "population_2017": 35501964,
+      "divisions": 7,
+      "districts": 35,
+      "share_percent": 16.92
     },
     {
       "name": "Balochistan",
       "code": "BA",
       "population_2023": 14894402,
-      "share_percent": 6.17,
-      "source_id": "PBS-CENSUS-2023"
+      "area_sq_km": 347190,
+      "density_per_sq_km": 42.9,
+      "urban_proportion_pct": 30.96,
+      "annual_growth_2017_2023_pct": 3.2,
+      "population_2017": 12335129,
+      "divisions": 8,
+      "districts": 34,
+      "share_percent": 6.17
     },
     {
       "name": "Islamabad Capital Territory",
       "code": "ICT",
-      "population_2023": 2362363,
-      "share_percent": 0.98,
-      "source_id": "PBS-CENSUS-2023"
+      "population_2023": 2363863,
+      "area_sq_km": 906,
+      "density_per_sq_km": 2609.12,
+      "urban_proportion_pct": 46.91,
+      "annual_growth_2017_2023_pct": 2.8,
+      "population_2017": 2003368,
+      "divisions": 0,
+      "districts": 1,
+      "share_percent": 0.98
     }
   ]
 }

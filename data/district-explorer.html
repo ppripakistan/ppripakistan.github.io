@@ -6,7 +6,7 @@
     <title>District Explorer | PPRI</title>
     <meta
       name="description"
-      content="PPRI district-level research architecture for demographic and governance analysis."
+      content="PPRI district-level research framework using official Pakistan Bureau of Statistics Census 2023 tables."
     />
     <link rel="canonical" href="https://ppripakistan.github.io/" />
     <meta property="og:type" content="website" />
@@ -24,6 +24,7 @@
     <link rel="icon" href="/assets/images/brand/ppri-favicon.png" />
     <link rel="stylesheet" href="/assets/css/style.css" />
     <link rel="stylesheet" href="/assets/css/responsive.css" />
+    <link rel="stylesheet" href="/assets/css/phase6.css" />
   </head>
   <body>
     <a class="skip-link" href="#main-content">Skip to content</a>
@@ -64,43 +65,89 @@
     <main id="main-content">
       <section class="page-hero">
         <div class="container">
-          <span class="eyebrow">District research</span>
-          <h1>From provinces down to districts.</h1>
+          <span class="eyebrow">PPRI Data Observatory</span>
+          <h1>District explorer.</h1>
           <p>
-            District-level evidence is essential for testing whether territorial
-            reforms actually change access, scale and service-delivery
-            conditions.
+            The district level is where population, geography and administrative
+            scale become more concrete. Phase 6 connects visitors to the
+            official PBS district tables while the Observatory expands its
+            machine-readable district dataset.
           </p>
         </div>
       </section>
       <section class="section">
         <div class="container">
+          <div class="phase6-dashboard">
+            <div class="p6-stat">
+              <strong>136</strong
+              ><span
+                >Districts in the PBS National Census Report 2023 administrative
+                table</span
+              >
+            </div>
+            <div class="p6-stat">
+              <strong>591</strong
+              ><span
+                >Tehsils/talukas in the national administrative baseline</span
+              >
+            </div>
+            <div class="p6-stat">
+              <strong>2023</strong><span>Current Census reference year</span>
+            </div>
+            <div class="p6-stat">
+              <strong>Official</strong
+              ><span>PBS district tables available in Excel/PDF</span>
+            </div>
+          </div>
+          <div class="p6-callout">
+            <strong>Why not fill this page with guessed values?</strong> PBS
+            publishes district-wise Table 1 files for each province. PPRI's
+            machine-readable district layer will be populated from those source
+            tables and versioned, rather than reproducing unverified numbers.
+          </div>
+          <div class="grid grid-2">
+            <div class="card">
+              <span class="card-meta">Primary source</span>
+              <h2>PBS detailed results</h2>
+              <p>
+                Access the official province-wise and district-wise Census 2023
+                tables for population, density, urban proportion and growth.
+              </p>
+              <a
+                class="btn btn-primary mt-2"
+                href="https://www.pbs.gov.pk/result-excel/"
+                >Open PBS result tables</a
+              >
+            </div>
+            <div class="card">
+              <span class="card-meta">GIS</span>
+              <h2>Administrative geography</h2>
+              <p>
+                PBS provides Census 2023 GIS and administrative-unit resources
+                for boundaries, districts and census areas.
+              </p>
+              <a class="btn btn-ghost mt-2" href="https://www.pbs.gov.pk/gis/"
+                >Open PBS GIS resources</a
+              >
+            </div>
+          </div>
+          <h2 class="mt-4">What the completed explorer will show</h2>
           <div class="grid grid-3">
             <div class="card">
               <h3>Demography</h3>
-              <p>
-                Population, density, growth, age, sex and urban/rural structure.
-              </p>
-            </div>
-            <div class="card">
-              <h3>Social indicators</h3>
-              <p>
-                Education, health and household indicators where consistent
-                official data exist.
-              </p>
+              <p>Population, density, urban proportion and growth.</p>
             </div>
             <div class="card">
               <h3>Administration</h3>
+              <p>Province, division, district and tehsil relationships.</p>
+            </div>
+            <div class="card">
+              <h3>Context</h3>
               <p>
-                District, division and tehsil hierarchy, institutions and
-                service networks.
+                Relevant fiscal, socioeconomic and service-delivery indicators
+                as authoritative datasets are added.
               </p>
             </div>
-          </div>
-          <div class="callout mt-3">
-            PBS publishes province-wise and district-wise Census 2023 tables,
-            including population, density, urban proportion and demographic
-            characteristics.
           </div>
         </div>
       </section>
@@ -168,5 +215,6 @@
       </div>
     </footer>
     <script src="/assets/js/main.js" defer></script>
+    <script src="/assets/js/modules/phase6-observatory.js" defer></script>
   </body>
 </html>

@@ -1,0 +1,308 @@
+{
+  "scenario_id": "PPRI-SCN-001",
+  "title": "Illustrative Administrative Reorganization — First-Pass Model",
+  "status": "illustrative",
+  "note": "First-pass district/division-based model for interactive exploration. It is not an official boundary proposal. Users can reassign districts in the browser.",
+  "source_basis": [
+    "PBS Census 2023 administrative hierarchy",
+    "Existing province/division/district boundaries used as building blocks"
+  ],
+  "units": [
+    {
+      "id": "ICT",
+      "name": "Islamabad",
+      "type": "federal-territory",
+      "rules": [
+        {
+          "level": "province",
+          "province": "Islamabad"
+        }
+      ]
+    },
+    {
+      "id": "GB",
+      "name": "Gilgit-Baltistan",
+      "type": "federal-territory",
+      "rules": [
+        {
+          "level": "province",
+          "province": "Gilgit-Baltistan"
+        }
+      ]
+    },
+    {
+      "id": "AJK",
+      "name": "Azad Kashmir",
+      "type": "federal-territory",
+      "rules": [
+        {
+          "level": "province",
+          "province": "Azad Jammu & Kashmir"
+        }
+      ]
+    },
+    {
+      "id": "KHI",
+      "name": "Karachi",
+      "type": "federal-overlay",
+      "rules": [
+        {
+          "level": "district-prefix",
+          "prefix": "Karachi"
+        },
+        {
+          "level": "division",
+          "province": "Sindh",
+          "divisions": ["Karachi"]
+        },
+        {
+          "level": "district",
+          "districts": ["Malir", "Keamari", "Korangi"]
+        }
+      ],
+      "counting": "overlay-only",
+      "note": "Displayed as a constitutional/federal overlay; not added to population totals separately when the underlying province layer is used."
+    },
+    {
+      "id": "GWD",
+      "name": "Gwadar",
+      "type": "federal-overlay",
+      "rules": [
+        {
+          "level": "district",
+          "district": "Gwadar"
+        }
+      ],
+      "counting": "overlay-only",
+      "note": "Displayed as a constitutional/federal overlay; not added to population totals separately when the underlying province layer is used."
+    },
+    {
+      "id": "P-WEST",
+      "name": "West Punjab",
+      "type": "province",
+      "rules": [
+        {
+          "level": "division",
+          "province": "Punjab",
+          "divisions": [
+            "Lahore",
+            "Gujranwala",
+            "Gujrat",
+            "Faisalabad",
+            "Sargodha"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "P-SOUTH",
+      "name": "South Punjab",
+      "type": "province",
+      "rules": [
+        {
+          "level": "division",
+          "province": "Punjab",
+          "divisions": [
+            "Sahiwal",
+            "Multan",
+            "Dera Ghazi Khan"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "P-BAHAWALPUR",
+      "name": "Bahawalpur",
+      "type": "province",
+      "rules": [
+        {
+          "level": "division",
+          "province": "Punjab",
+          "divisions": [
+            "Bahawalpur"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "P-POTOHAR",
+      "name": "Potohar",
+      "type": "province",
+      "rules": [
+        {
+          "level": "division",
+          "province": "Punjab",
+          "divisions": [
+            "Rawalpindi"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S-URBAN",
+      "name": "Urban Sindh",
+      "type": "province",
+      "rules": [
+        {
+          "level": "district-prefix",
+          "prefix": "Karachi"
+        },
+        {
+          "level": "division",
+          "province": "Sindh",
+          "divisions": ["Karachi"]
+        },
+        {
+          "level": "district",
+          "districts": ["Malir", "Keamari", "Korangi"]
+        }
+      ],
+      "note": "Primary provincial layer for Karachi Division; the separate Karachi federal overlay sits on top of this area and is not counted twice."
+    },
+    {
+      "id": "S-RURAL",
+      "name": "Rural Sindh",
+      "type": "province",
+      "rules": [
+        {
+          "level": "division",
+          "province": "Sindh",
+          "divisions": [
+            "Hyderabad",
+            "Mirpur Khas",
+            "Shaheed Benazirabad"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S-MEHRAN",
+      "name": "Mehran",
+      "type": "province",
+      "rules": [
+        {
+          "level": "division",
+          "province": "Sindh",
+          "divisions": [
+            "Larkana",
+            "Sukkur"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "B-BALOCH",
+      "name": "Balochistan",
+      "type": "province",
+      "rules": [
+        {
+          "level": "division",
+          "province": "Balochistan",
+          "divisions": [
+            "Kalat",
+            "Loralai",
+            "Nasirabad",
+            "Quetta",
+            "Rakhshan",
+            "Sibi",
+            "Zhob"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "B-MAKRAN",
+      "name": "Makran",
+      "type": "province",
+      "rules": [
+        {
+          "level": "division",
+          "province": "Balochistan",
+          "divisions": [
+            "Makran",
+            "Mekran"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "K-KHYBER",
+      "name": "Khyber",
+      "type": "province",
+      "rules": [
+        {
+          "level": "division",
+          "province": "Khyber Pakhtunkhwa",
+          "divisions": [
+            "Peshawar",
+            "Mardan",
+            "Malakand"
+          ]
+        },
+        {
+          "level": "district",
+          "districts": ["Bajaur", "Mohmand", "Khyber"]
+        }
+      ]
+    },
+    {
+      "id": "K-SOUTH",
+      "name": "South KPK",
+      "type": "province",
+      "rules": [
+        {
+          "level": "division",
+          "province": "Khyber Pakhtunkhwa",
+          "divisions": [
+            "Kohat",
+            "Bannu",
+            "Dera Ismail Khan"
+          ]
+        },
+        {
+          "level": "district",
+          "districts": [
+            "Kurram", "Orakzai",
+            "North Waziristan", "N. Waziristan",
+            "South Waziristan", "S. Waziristan",
+            "Adam Khel", "Bhittani", "Largha Shirani"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "K-HAZARA",
+      "name": "Hazara",
+      "type": "province",
+      "rules": [
+        {
+          "level": "division",
+          "province": "Khyber Pakhtunkhwa",
+          "divisions": [
+            "Hazara"
+          ],
+          "excludeDistricts": [
+            "Lower Kohistan",
+            "Upper Kohistan",
+            "Kolai Palas"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "K-KOHISTAN",
+      "name": "Kohistan",
+      "type": "province",
+      "rules": [
+        {
+          "level": "district",
+          "districts": [
+            "Lower Kohistan",
+            "Upper Kohistan",
+            "Kolai Palas"
+          ]
+        }
+      ]
+    }
+  ]
+}

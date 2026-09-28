@@ -3,17 +3,22 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Scenario Maps | PPRI</title>
+    <title>
+      Scenario Lab — Illustrative Administrative Reorganization | PPRI
+    </title>
     <meta
       name="description"
-      content="Framework for PPRI analytical territorial scenarios."
+      content="Interactive PPRI scenario lab for exploring a first-pass district-based model of possible administrative reorganization in Pakistan."
     />
-    <link rel="canonical" href="https://ppripakistan.github.io/" />
+    <link
+      rel="canonical"
+      href="https://ppripakistan.github.io/maps/scenarios/"
+    />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Scenario Maps | PPRI" />
+    <meta property="og:title" content="Scenario Lab | PPRI" />
     <meta
       property="og:description"
-      content="Framework for PPRI analytical territorial scenarios."
+      content="Explore, edit and compare a clearly labelled illustrative administrative scenario."
     />
     <meta
       property="og:image"
@@ -24,6 +29,12 @@
     <link rel="icon" href="/assets/images/brand/ppri-favicon.png" />
     <link rel="stylesheet" href="/assets/css/style.css" />
     <link rel="stylesheet" href="/assets/css/responsive.css" />
+    <link rel="stylesheet" href="/assets/css/phase6.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      crossorigin=""
+    />
   </head>
   <body>
     <a class="skip-link" href="#main-content">Skip to content</a>
@@ -53,7 +64,7 @@
           <a href="/index.html">Home</a
           ><a href="/research/index.html">Research</a
           ><a href="/provinces/index.html">Reform</a
-          ><a href="/data/centre.html" aria-current="page">Data</a
+          ><a href="/data/centre.html">Data</a
           ><a href="/publications/index.html">Publications</a
           ><a href="/consultation/index.html">Engage</a
           ><a href="/about.html">About</a
@@ -64,33 +75,266 @@
     <main id="main-content">
       <section class="page-hero">
         <div class="container">
-          <span class="eyebrow">Research scenarios</span>
-          <h1>Territorial models without pretending they are law.</h1>
+          <span class="eyebrow">Scenario Lab · PPRI-SCN-001</span>
+          <h1>Redraw the map. Test the assumptions.</h1>
           <p>
-            Scenario mapping allows competing ideas to be studied using the same
-            demographic, geographic and fiscal framework.
+            Explore a first-pass, district-based administrative scenario using
+            existing geographic units as building blocks. Every boundary below
+            is illustrative and editable; it is not an enacted map or a claim
+            about current government policy.
           </p>
+        </div>
+      </section>
+      <section class="section">
+        <div class="container">
+          <div id="p6ScenarioCoverage" class="p6-coverage" aria-live="polite">
+            <strong>Checking scenario coverage…</strong>
+            <span>Loading source geography.</span>
+          </div>
+          <div class="p6-scenario-warning">
+            <strong>Important distinction:</strong> this tool separates a
+            <em>primary territorial layer</em> from requested
+            <em>federal overlays</em>. Karachi and Gwadar are shown as overlays
+            so the requested federal-territory concept can be explored without
+            silently counting the same land twice.
+          </div>
+          <div class="p6-scenario-layout">
+            <aside class="p6-scenario-panel" aria-label="Scenario controls">
+              <div class="p6-panel-section p6-scenario-intro">
+                <span class="card-meta">Scenario Lab</span>
+                <h2>Explore, edit &amp; compare</h2>
+                <p class="p6-note">
+                  Start with the documented PPRI illustrative model, inspect the
+                  current structure, or experiment with your own district
+                  assignments.
+                </p>
+                <div
+                  class="p6-quick-actions"
+                  role="group"
+                  aria-label="Scenario starting points"
+                >
+                  <button
+                    class="p6-quick-card active"
+                    type="button"
+                    data-p6-view="ppri"
+                  >
+                    <strong>PPRI-01</strong><span>Illustrative model</span>
+                  </button>
+                  <button
+                    class="p6-quick-card"
+                    type="button"
+                    data-p6-view="current"
+                  >
+                    <strong>Current</strong><span>Show existing provinces</span>
+                  </button>
+                  <button
+                    class="p6-quick-card"
+                    type="button"
+                    data-p6-view="custom"
+                  >
+                    <strong>My scenario</strong><span>Start experimenting</span>
+                  </button>
+                </div>
+              </div>
+              <div class="p6-panel-section">
+                <label class="p6-field"
+                  ><span>Assign selected district to</span
+                  ><select
+                    id="p6ScenarioUnit"
+                    aria-label="Target scenario unit"
+                  ></select
+                ></label>
+                <label class="p6-check"
+                  ><input id="p6ScenarioEdit" type="checkbox" />
+                  <span
+                    ><strong>Edit mode</strong
+                    ><small
+                      >Click a district on the map or list to move it to the
+                      selected unit.</small
+                    ></span
+                  ></label
+                >
+                <div class="p6-action-row">
+                  <button
+                    class="button button-primary"
+                    id="p6ScenarioSave"
+                    type="button"
+                  >
+                    Save draft
+                  </button>
+                  <button class="button" id="p6ScenarioReset" type="button">
+                    Reset
+                  </button>
+                </div>
+                <div class="p6-action-row">
+                  <button
+                    class="button"
+                    id="p6ScenarioUndo"
+                    type="button"
+                    disabled
+                  >
+                    Undo
+                  </button>
+                  <button
+                    class="button"
+                    id="p6ScenarioRedo"
+                    type="button"
+                    disabled
+                  >
+                    Redo
+                  </button>
+                </div>
+                <div class="p6-action-row">
+                  <button class="button" id="p6ScenarioShare" type="button">
+                    Copy share link
+                  </button>
+                  <button class="button" id="p6ScenarioExport" type="button">
+                    Export JSON
+                  </button>
+                </div>
+              </div>
+              <div class="p6-panel-section">
+                <label class="p6-field"
+                  ><span>Find a district</span
+                  ><input
+                    id="p6DistrictSearch"
+                    type="search"
+                    placeholder="e.g. Bahawalpur, Karachi, Swat"
+                /></label>
+                <p id="p6SelectedDistrict" class="p6-selected">
+                  No district selected.
+                </p>
+                <div
+                  id="p6ScenarioDistrictList"
+                  class="p6-district-list"
+                  aria-label="District assignment list"
+                ></div>
+              </div>
+            </aside>
+            <div class="p6-scenario-main">
+              <div class="p6-map-toolbar">
+                <div>
+                  <strong>Interactive scenario map</strong>
+                  <p id="p6ScenarioStatus" class="p6-note" role="status">
+                    Loading geographic layers...
+                  </p>
+                </div>
+                <div class="p6-map-toggles">
+                  <label
+                    ><input
+                      id="p6ShowScenarioBoundaries"
+                      type="checkbox"
+                      checked
+                    />
+                    Scenario boundaries</label
+                  >
+                  <label
+                    ><input id="p6ShowCurrentBoundaries" type="checkbox" />
+                    Current provinces</label
+                  >
+                  <label
+                    ><input
+                      id="p6ShowDistrictBoundaries"
+                      type="checkbox"
+                      checked
+                    />
+                    District boundaries</label
+                  >
+                  <label
+                    ><input id="p6ShowFederalOverlays" type="checkbox" />
+                    Federal overlays</label
+                  >
+                </div>
+              </div>
+              <div
+                id="p6ScenarioMap"
+                class="p6-map p6-scenario-map"
+                role="application"
+                aria-label="Interactive Pakistan scenario map"
+              ></div>
+              <div class="p6-map-help">
+                <span
+                  ><strong>View mode:</strong> inspect regions and zoom.</span
+                ><span
+                  ><strong>Edit mode:</strong> select a target unit, then click
+                  districts to reassign them.</span
+                ><span
+                  ><strong>Tip:</strong> click a colored unit to focus it, or
+                  use the search to find a district.</span
+                >
+                <span
+                  ><strong>Safe to experiment:</strong> changes stay in this
+                  browser until you export or share them.</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section section-soft">
+        <div class="container">
+          <div class="section-heading">
+            <span class="eyebrow">Scenario composition</span>
+            <h2>What is included in the first-pass model?</h2>
+            <p>
+              The primary layer uses district/division building blocks.
+              Federal-territory concepts are visualized separately where they
+              overlap the primary layer.
+            </p>
+          </div>
+          <div id="p6ScenarioStats"></div>
+          <div class="p6-change-strip" id="p6ScenarioChange" aria-live="polite">
+            <strong>What changed?</strong
+            ><span
+              >Move a district in Edit mode to see the live change here.</span
+            >
+          </div>
+          <div class="p6-scenario-method">
+            <div>
+              <h3>Primary territorial layer</h3>
+              <p>
+                West Punjab · South Punjab · Bahawalpur · Potohar · Urban Sindh
+                · Rural Sindh · Mehran · Balochistan · Makran · Khyber · South
+                KPK · Hazara · Kohistan.
+              </p>
+            </div>
+            <div>
+              <h3>Federal overlays</h3>
+              <p>
+                Islamabad · Gilgit-Baltistan · Azad Kashmir · Karachi · Gwadar.
+                These are treated as overlays in this scenario so the model can
+                test a federal-status concept without double-counting geography.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
       <section class="section">
         <div class="container">
           <div class="grid grid-3">
             <div class="card">
-              <h3>Scenario identity</h3>
-              <p>Unique ID, title, date, author, assumptions and status.</p>
-            </div>
-            <div class="card">
-              <h3>Included units</h3>
+              <h3>Why district-based?</h3>
               <p>
-                Explicit district/administrative-unit list, not a vague shaded
-                area.
+                It makes every proposed boundary traceable to existing
+                administrative units instead of drawing arbitrary polygons.
+                Later versions can move from a first-pass model to formally
+                reviewed district assignments.
               </p>
             </div>
             <div class="card">
-              <h3>Evidence</h3>
+              <h3>What the tool does not claim</h3>
               <p>
-                Population, geography, fiscal and service indicators linked to
-                the scenario.
+                It does not establish constitutional validity, fiscal viability,
+                public support, legal status or an official PPRI position. Those
+                require separate research.
+              </p>
+            </div>
+            <div class="card">
+              <h3>Next analytical layer</h3>
+              <p>
+                Population, area, fiscal exposure, service access,
+                infrastructure, water systems, representation and transition
+                costs can be added once district-level datasets are verified.
               </p>
             </div>
           </div>
@@ -122,7 +366,7 @@
             <li>
               <a href="/research/working-papers/index.html">Working Papers</a>
             </li>
-            <li><a href="/articles/index.html">Articles & Analysis</a></li>
+            <li><a href="/articles/index.html">Articles &amp; Analysis</a></li>
           </ul>
         </div>
         <div>
@@ -160,5 +404,14 @@
       </div>
     </footer>
     <script src="/assets/js/main.js" defer></script>
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      crossorigin=""
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@turf/turf@7.2.0/turf.min.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="/assets/js/modules/phase6-maps.js?v=6.20" defer></script>
   </body>
 </html>

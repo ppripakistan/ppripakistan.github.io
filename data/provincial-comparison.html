@@ -3,10 +3,10 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Provincial Population Comparison | PPRI</title>
+    <title>Provincial Comparison | PPRI</title>
     <meta
       name="description"
-      content="Pakistan provincial and ICT population baseline from Census 2023."
+      content="Interactive comparison of Pakistan province and ICT indicators from Census 2023."
     />
     <link rel="canonical" href="https://ppripakistan.github.io/" />
     <meta property="og:type" content="website" />
@@ -27,6 +27,7 @@
     <link rel="icon" href="/assets/images/brand/ppri-favicon.png" />
     <link rel="stylesheet" href="/assets/css/style.css" />
     <link rel="stylesheet" href="/assets/css/responsive.css" />
+    <link rel="stylesheet" href="/assets/css/phase6.css" />
   </head>
   <body>
     <a class="skip-link" href="#main-content">Skip to content</a>
@@ -65,65 +66,59 @@
       </div>
     </header>
     <main id="main-content">
-      <section class="data-hero">
+      <section class="page-hero">
         <div class="container">
-          <span class="eyebrow">Evidence Centre</span>
-          <h1>Population baseline — Census 2023</h1>
+          <span class="eyebrow">PPRI Data Observatory</span>
+          <h1>Compare administrative units.</h1>
           <p>
-            Official population totals published by the Pakistan Bureau of
-            Statistics provide the demographic baseline for PPRI's provincial
-            research.
+            Use the same indicator across two units. The tool is descriptive; it
+            does not produce a political ranking or recommendation.
           </p>
         </div>
       </section>
       <section class="section">
         <div class="container">
-          <div class="chart-card">
-            <canvas
-              id="popChart"
-              aria-label="Pakistan population by province"
-            ></canvas>
-            <div class="source-note">
-              Source:
-              <a href="https://www.pbs.gov.pk/census/"
-                >Pakistan Bureau of Statistics — Census 2023</a
-              >.
-            </div>
+          <div class="p6-controls">
+            <label>Unit A<select id="p6CompareA"></select></label
+            ><label>Unit B<select id="p6CompareB"></select></label
+            ><label
+              >Indicator<select id="p6Metric">
+                <option value="population_2023">Population</option>
+                <option value="area_sq_km">Area</option>
+                <option value="density_per_sq_km">Density</option>
+                <option value="urban_proportion_pct">Urban proportion</option>
+                <option value="annual_growth_2017_2023_pct">
+                  2017–2023 annual growth
+                </option>
+                <option value="districts">District count</option>
+              </select></label
+            >
           </div>
-          <div class="table-wrap mt-3">
-            <table class="data-table" id="provinceTable">
-              <thead>
-                <tr>
-                  <th>Unit</th>
-                  <th>Population</th>
-                  <th>Share</th>
-                  <th>Source</th>
-                </tr>
-              </thead>
-              <tbody></tbody>
-            </table>
+          <div id="p6ComparisonOutput"></div>
+          <div class="p6-callout">
+            <strong>How to read this:</strong> differences in population,
+            density or urbanization describe structural conditions. They do not
+            by themselves establish whether a province should be divided,
+            retained or reorganized.
           </div>
-          <div class="callout">
-            <strong>Interpretation:</strong> population scale is one relevant
-            variable, not a standalone measure of administrative performance or
-            a justification for territorial change.
-          </div>
+          <h2>Indicator definitions</h2>
+          <ul>
+            <li><strong>Density:</strong> population per square kilometre.</li>
+            <li>
+              <strong>Urban proportion:</strong> share of the population
+              classified as urban in the Census 2023 framework.
+            </li>
+            <li>
+              <strong>Annual growth:</strong> average annual population growth
+              between 2017 and 2023 as reported by PBS.
+            </li>
+          </ul>
+          <p class="p6-note">
+            Source: Pakistan Bureau of Statistics Census 2023 Table 1 and
+            National Census Report 2023.
+          </p>
         </div>
       </section>
-      <script src="/assets/js/modules/data.js"></script>
-      <script>
-        fetch("/data/provinces/provinces-2023.json")
-          .then((r) => r.json())
-          .then((d) => {
-            PPRI.populateTable("#provinceTable", d.records);
-            PPRI.barChart(
-              "popChart",
-              d.records.map((x) => x.name),
-              d.records.map((x) => x.population_2023),
-              "Population by unit, Census 2023",
-            );
-          });
-      </script>
     </main>
     <footer class="site-footer">
       <div class="container footer-grid">
@@ -188,5 +183,6 @@
       </div>
     </footer>
     <script src="/assets/js/main.js" defer></script>
+    <script src="/assets/js/modules/phase6-observatory.js" defer></script>
   </body>
 </html>

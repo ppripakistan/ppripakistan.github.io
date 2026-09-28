@@ -1,37 +1,74 @@
 [
   {
     "id": "PBS-CENSUS-2023",
-    "publisher": "Pakistan Bureau of Statistics",
-    "title": "7th Population and Housing Census 2023",
-    "type": "official",
-    "url": "https://www.pbs.gov.pk/census/"
+    "type": "Government",
+    "organization": "Pakistan Bureau of Statistics",
+    "title": "7th Population and Housing Census 2023 \u2014 Table 1",
+    "year": 2023,
+    "url": "https://www.pbs.gov.pk/sites/default/files/population/2023/tables/table_1_national.pdf",
+    "relevance": "Population, area, density, urban proportion and annual growth baseline."
+  },
+  {
+    "id": "PBS-ADMIN-2023",
+    "type": "Government",
+    "organization": "Pakistan Bureau of Statistics",
+    "title": "National Census Report 2023 \u2014 Administrative Units",
+    "year": 2023,
+    "url": "https://www.pbs.gov.pk/sites/default/files/population/2023/reports/National%20Census%20Report-2023.pdf",
+    "relevance": "Administrative hierarchy and province/division/district counts."
   },
   {
     "id": "PBS-RESULT-EXCEL",
-    "publisher": "Pakistan Bureau of Statistics",
-    "title": "7th Population and Housing Census \u2014 Detailed Results (Excel)",
-    "type": "official",
-    "url": "https://www.pbs.gov.pk/result-excel/"
+    "type": "Government",
+    "organization": "Pakistan Bureau of Statistics",
+    "title": "7th Population & Housing Census \u2014 Detailed Results (Excel)",
+    "year": 2023,
+    "url": "https://www.pbs.gov.pk/result-excel/",
+    "relevance": "District-level and detailed census tables for future Observatory expansion."
   },
   {
-    "id": "PAKISTAN-CODE-CONSTITUTION",
-    "publisher": "Pakistan Code",
-    "title": "Constitution of the Islamic Republic of Pakistan",
-    "type": "official",
-    "url": "https://pakistancode.gov.pk/"
+    "id": "PBS-GIS-2023",
+    "type": "Government",
+    "organization": "Pakistan Bureau of Statistics",
+    "title": "GIS \u2014 Census 2023 administrative materials",
+    "year": 2023,
+    "url": "https://www.pbs.gov.pk/gis/",
+    "relevance": "Administrative districts, delimitation and census-area resources."
   },
   {
-    "id": "MOF-NFC",
-    "publisher": "Ministry of Finance, Government of Pakistan",
-    "title": "National Finance Commission \u2014 Constitutional Provision",
-    "type": "official",
-    "url": "https://www.finance.gov.pk/nfc_cons.html"
+    "id": "PIDE-NFC-2026",
+    "type": "Think tank",
+    "organization": "Pakistan Institute of Development Economics",
+    "title": "A Critical Path to Fiscal Federalism: Policy Imperatives for the NFC Award Remake",
+    "year": 2026,
+    "url": "https://pide.org.pk/research/a-critical-path-to-fiscal-federalism-policy-imperatives-for-the-nfc-award-remake/",
+    "relevance": "Fiscal federalism, transfers, own-source revenue and service-delivery incentives."
   },
   {
-    "id": "ECP-LG",
-    "publisher": "Election Commission of Pakistan",
-    "title": "Local Government Elections / constitutional material",
-    "type": "official",
-    "url": "https://www.ecp.gov.pk/"
+    "id": "PIDE-NFC-2025",
+    "type": "Think tank",
+    "organization": "Pakistan Institute of Development Economics",
+    "title": "NFC at a Crossroads: Revisiting Fiscal Federalism in Pakistan",
+    "year": 2025,
+    "url": "https://pide.org.pk/research/nfc-at-a-crossroads-revisiting-fiscal-federalism-in-pakistan/",
+    "relevance": "NFC and unfinished devolution to local governments."
+  },
+  {
+    "id": "IPS-NEW-UNITS-2026",
+    "type": "Think tank",
+    "organization": "Institute of Policy Studies",
+    "title": "New Administrative Units in Pakistan: An Economic and Financial Context of the Debate",
+    "year": 2026,
+    "url": "https://www.ips.org.pk/new-administrative-units-in-pakistan-an-economic-and-financial-context-of-the-debate-2/",
+    "relevance": "Resource transfers, governance costs, tax administration, borrowing and sequencing."
+  },
+  {
+    "id": "IPS-BEYOND-PROVINCES-2026",
+    "type": "Think tank",
+    "organization": "Institute of Policy Studies",
+    "title": "Beyond New Provinces: Rethinking Pakistan\u2019s Governance Crisis",
+    "year": 2026,
+    "url": "https://www.ips.org.pk/beyond-new-provinces-rethinking-pakistans-governance-crisis-urdu-version/",
+    "relevance": "Places provincial restructuring in the wider context of local government and institutional reform."
   }
 ]
