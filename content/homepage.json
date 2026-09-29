@@ -1,0 +1,25 @@
+{
+  "featured": {
+    "type": "Policy Paper",
+    "id": "PPRI-PP-001",
+    "date": "September 2026",
+    "title": "The Provincial Reorganization of Pakistan",
+    "summary": "A research framework examining constitutional, administrative, fiscal, demographic and local-government questions around provincial reorganization.",
+    "url": "/research/policy-papers/provincial-reorganization-of-pakistan.html",
+    "download": "/documents/policy-papers/PPRI-PP-001.pdf"
+  },
+  "latest": [
+    {
+      "type": "Policy Brief",
+      "title": "Administrative Scale & Representation",
+      "summary": "A framework for studying scale, geographic access and representation without assuming that smaller or larger units are automatically preferable.",
+      "url": "/research/briefs/administrative-scale.html"
+    },
+    {
+      "type": "Working Paper",
+      "title": "Provinces & Local Government",
+      "summary": "A comparative framework for examining territorial restructuring alongside constitutional local-government devolution.",
+      "url": "/research/working-papers/provinces-local-government.html"
+    }
+  ]
+}
