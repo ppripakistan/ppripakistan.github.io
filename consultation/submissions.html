@@ -58,10 +58,11 @@
         <div class="container">
           <div class="ppri-submit-shell">
             <section class="ppri-submit-card">
-              <h2>Prepare an idea submission</h2>
+              <div class="ppri-submit-kicker"><span></span> No account required</div>
+              <h2>Send an idea to the PPRI research desk.</h2>
               <p class="ppri-submit-note">
-                The website is currently a static GitHub Pages site, so there is no secure server-side submission endpoint connected yet.
-                This form creates a structured draft that you can copy or save. It does not send anything automatically.
+                Fill in the form and PPRI will prepare a Gmail message addressed to <strong>ppripakistan@gmail.com</strong>.
+                Your Gmail account stays in control: review the message and press Send yourself. PPRI does not ask you to create an account here.
               </p>
 
               <form data-idea-form>
@@ -71,8 +72,8 @@
                     <input id="idea-name" name="name" type="text" autocomplete="name" />
                   </div>
                   <div class="ppri-field">
-                    <label for="idea-email">Email (optional)</label>
-                    <input id="idea-email" name="email" type="email" autocomplete="email" />
+                    <label for="idea-email">Your email</label>
+                    <input id="idea-email" name="email" type="email" autocomplete="email" required placeholder="you@example.com" />
                   </div>
                   <div class="ppri-field">
                     <label for="idea-category">Category</label>
@@ -110,14 +111,14 @@
                 </label>
 
                 <div class="ppri-form-actions">
-                  <button class="btn btn-primary" type="submit">Create submission draft</button>
+                  <button class="btn btn-primary" type="submit">Open Gmail &amp; prepare submission <span aria-hidden="true">↗</span></button>
                   <button class="btn btn-ghost" type="button" data-copy-submission>Copy draft</button>
                   <button class="btn btn-ghost" type="button" data-clear-submission>Clear</button>
                 </div>
               </form>
 
               <div class="ppri-submit-status" data-submission-status>
-                Nothing has been submitted. This page only prepares a structured draft until an official submission channel is connected.
+                Nothing has been sent yet. The Gmail button prepares a message; you decide whether to send it.
               </div>
               <div class="ppri-submit-preview" data-submission-preview aria-label="Prepared submission draft"></div>
             </section>

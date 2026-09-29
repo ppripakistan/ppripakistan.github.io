@@ -22,6 +22,98 @@ document.addEventListener("DOMContentLoaded", () => {
     nodes.forEach((node) => observer.observe(node));
   };
 
+
+  const setupHeroMessages = () => {
+    const shell = document.querySelector("[data-hero-message]");
+    const lineOne = document.querySelector("[data-hero-line-one]");
+    const lineTwo = document.querySelector("[data-hero-line-two]");
+    if (!shell || !lineOne || !lineTwo) return;
+
+    const messages = [
+      ["Study the structure.", "Test the alternatives."],
+      ["Rethink the map.", "Understand the consequences."],
+      ["Explore new provinces.", "Examine what changes."],
+      ["Evidence first.", "Scenarios second."],
+      ["Bring government closer.", "Examine institutional design."],
+    ];
+
+    let index = 0;
+    let timer = null;
+    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+
+    const show = (nextIndex) => {
+      index = nextIndex % messages.length;
+      const [first, second] = messages[index];
+      shell.classList.remove("is-changing");
+      void shell.offsetWidth;
+      lineOne.textContent = first;
+      lineTwo.textContent = second;
+      if (!reduceMotion.matches) shell.classList.add("is-changing");
+    };
+
+    const start = () => {
+      if (reduceMotion.matches || timer) return;
+      timer = window.setInterval(() => show(index + 1), 6200);
+    };
+    const stop = () => {
+      if (!timer) return;
+      window.clearInterval(timer);
+      timer = null;
+    };
+
+    shell.addEventListener("mouseenter", stop);
+    shell.addEventListener("mouseleave", start);
+    shell.addEventListener("focusin", stop);
+    shell.addEventListener("focusout", start);
+    show(0);
+    start();
+  };
+
+  const setupHeroNetwork = () => {
+    const network = document.querySelector("[data-hero-network]");
+    const nodes = [...document.querySelectorAll(".hero-network-node")];
+    if (!network || !nodes.length) return;
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
+    let frame = null;
+    network.addEventListener("pointermove", (event) => {
+      const rect = network.getBoundingClientRect();
+      const x = event.clientX - rect.left;
+      const y = event.clientY - rect.top;
+      if (frame) cancelAnimationFrame(frame);
+      frame = requestAnimationFrame(() => {
+        nodes.forEach((node) => {
+          const nx = (parseFloat(node.style.getPropertyValue("--x")) / 100) * rect.width;
+          const ny = (parseFloat(node.style.getPropertyValue("--y")) / 100) * rect.height;
+          const distance = Math.hypot(x - nx, y - ny);
+          node.classList.toggle("is-near", distance < 92);
+        });
+      });
+    });
+
+    network.addEventListener("pointerleave", () => {
+      nodes.forEach((node) => node.classList.remove("is-near"));
+    });
+  };
+
+  const setupPageProgress = () => {
+    const bar = document.querySelector("[data-page-progress] span");
+    if (!bar) return;
+    let frame = null;
+    const update = () => {
+      if (frame) return;
+      frame = requestAnimationFrame(() => {
+        const scrollable = document.documentElement.scrollHeight - window.innerHeight;
+        const progress = scrollable > 0 ? Math.min(1, Math.max(0, window.scrollY / scrollable)) : 0;
+        bar.style.width = `${progress * 100}%`;
+        frame = null;
+      });
+    };
+    window.addEventListener("scroll", update, { passive: true });
+    window.addEventListener("resize", update);
+    update();
+  };
+
   const setupScenarioPreview = () => {
     const frame = document.getElementById("homeMapPreview");
     const buttons = [...document.querySelectorAll("[data-preview-mode]")];
@@ -192,6 +284,9 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
   setRevealObserver();
+  setupHeroMessages();
+  setupHeroNetwork();
+  setupPageProgress();
   setupScenarioPreview();
   setupQuestionWorkbench();
   setupHomepageFeed();

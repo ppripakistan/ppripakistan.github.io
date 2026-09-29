@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const clearButton = document.querySelector("[data-clear-submission]");
   if (!form || !preview || !status) return;
 
+  const submissionAddress = "ppripakistan@gmail.com";
   let lastDraft = "";
 
   const buildDraft = () => {
@@ -37,22 +38,43 @@ document.addEventListener("DOMContentLoaded", () => {
     ].join("\n");
   };
 
+  const openGmail = (draft) => {
+    const data = new FormData(form);
+    const title = String(data.get("title") || "PPRI research idea").trim();
+    const subject = `PPRI Research Idea — ${title}`;
+    const gmailUrl = new URL("https://mail.google.com/mail/");
+    gmailUrl.searchParams.set("view", "cm");
+    gmailUrl.searchParams.set("fs", "1");
+    gmailUrl.searchParams.set("to", submissionAddress);
+    gmailUrl.searchParams.set("su", subject);
+    gmailUrl.searchParams.set("body", draft);
+
+    const popup = window.open(gmailUrl.toString(), "_blank", "noopener,noreferrer");
+    if (popup) {
+      status.textContent = `Gmail was opened with your submission addressed to ${submissionAddress}. Review it and press Send when you are ready.`;
+    } else {
+      status.innerHTML = `Your browser blocked the Gmail window. <a href="${gmailUrl.toString()}" target="_blank" rel="noopener">Open Gmail manually</a> and review the prepared submission.`;
+    }
+  };
+
   form.addEventListener("submit", (event) => {
     event.preventDefault();
     if (!form.reportValidity()) return;
     lastDraft = buildDraft();
     preview.textContent = lastDraft;
     preview.classList.add("is-visible");
-    status.textContent = "Your submission draft is ready. Copy it for your records or save it locally. An official online submission endpoint is not connected to this static site yet.";
-    status.setAttribute("role", "status");
-    copyButton?.focus();
+    openGmail(lastDraft);
   });
 
   copyButton?.addEventListener("click", async () => {
-    if (!lastDraft) return;
+    if (!lastDraft) {
+      lastDraft = buildDraft();
+      preview.textContent = lastDraft;
+      preview.classList.add("is-visible");
+    }
     try {
       await navigator.clipboard.writeText(lastDraft);
-      status.textContent = "Submission draft copied to your clipboard.";
+      status.textContent = "Submission copied to your clipboard.";
     } catch {
       status.textContent = "Clipboard access is unavailable in this browser. Select the draft below and copy it manually.";
     }
@@ -63,6 +85,6 @@ document.addEventListener("DOMContentLoaded", () => {
     lastDraft = "";
     preview.textContent = "";
     preview.classList.remove("is-visible");
-    status.textContent = "Nothing has been submitted. This page only prepares a structured draft until an official submission channel is connected.";
+    status.textContent = "Nothing has been sent. Fill the form and use the Gmail button when you are ready.";
   });
 });
