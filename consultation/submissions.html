@@ -1,1 +1,196 @@
-<!-- PPRI placeholder: consultation/submissions.html. Replace with final content. -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Submit an Idea | PPRI Public Consultation</title>
+    <meta
+      name="description"
+      content="Prepare a structured public idea or question for the Pakistan Provincial Reform Institute consultation record."
+    />
+    <link rel="canonical" href="https://ppripakistan.github.io/consultation/submissions.html" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Submit an Idea | PPRI" />
+    <meta property="og:description" content="Prepare a structured public idea or question for PPRI's consultation record." />
+    <meta property="og:image" content="https://ppripakistan.github.io/assets/images/brand/ppri-logo.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@PPRI_Pakistan" />
+    <link rel="icon" href="/assets/images/brand/ppri-favicon.png" />
+    <link rel="stylesheet" href="/assets/css/style.css" />
+    <link rel="stylesheet" href="/assets/css/responsive.css" />
+    <link rel="stylesheet" href="/assets/css/consultation.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <header class="site-header">
+      <div class="container navbar">
+        <a class="brand" href="/index.html">
+          <img src="/assets/images/brand/ppri-logo-header.jpg" alt="PPRI logo" />
+          <span class="brand-text"><strong>PPRI</strong><span>Pakistan Provincial Reform Institute</span></span>
+        </a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-navigation">Menu</button>
+        <nav id="site-navigation" class="nav-links" aria-label="Primary navigation">
+          <a href="/index.html">Home</a>
+          <a href="/research/index.html">Research</a>
+          <a href="/provinces/index.html">Reform</a>
+          <a href="/data/centre.html">Data</a>
+          <a href="/publications/index.html">Publications</a>
+          <a href="/consultation/index.html" aria-current="page">Engage</a>
+          <a href="/about.html">About</a>
+          <a class="nav-search" href="/search.html">Search</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <section class="page-hero">
+        <div class="container">
+          <span class="eyebrow">Public participation</span>
+          <h1>Put an idea into the research record.</h1>
+          <p>
+            Share a question, observation, reservation or reform idea that you think PPRI should examine.
+            Keep the distinction clear: submitting an idea does not mean that PPRI endorses it.
+          </p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="ppri-submit-shell">
+            <section class="ppri-submit-card">
+              <h2>Prepare an idea submission</h2>
+              <p class="ppri-submit-note">
+                The website is currently a static GitHub Pages site, so there is no secure server-side submission endpoint connected yet.
+                This form creates a structured draft that you can copy or save. It does not send anything automatically.
+              </p>
+
+              <form data-idea-form>
+                <div class="ppri-form-grid">
+                  <div class="ppri-field">
+                    <label for="idea-name">Name</label>
+                    <input id="idea-name" name="name" type="text" autocomplete="name" />
+                  </div>
+                  <div class="ppri-field">
+                    <label for="idea-email">Email (optional)</label>
+                    <input id="idea-email" name="email" type="email" autocomplete="email" />
+                  </div>
+                  <div class="ppri-field">
+                    <label for="idea-category">Category</label>
+                    <select id="idea-category" name="category">
+                      <option>New provinces</option>
+                      <option>Local government</option>
+                      <option>Fiscal reform</option>
+                      <option>Administrative design</option>
+                      <option>Constitutional reform</option>
+                      <option>Data / evidence</option>
+                      <option>Other reform idea</option>
+                    </select>
+                  </div>
+                  <div class="ppri-field">
+                    <label for="idea-location">Location / area (optional)</label>
+                    <input id="idea-location" name="location" type="text" placeholder="City, district, province or region" />
+                  </div>
+                  <div class="ppri-field ppri-field-full">
+                    <label for="idea-title">Working title</label>
+                    <input id="idea-title" name="title" type="text" required placeholder="What should PPRI investigate?" />
+                  </div>
+                  <div class="ppri-field ppri-field-full">
+                    <label for="idea-body">Idea or research question</label>
+                    <textarea id="idea-body" name="idea" required placeholder="Describe the issue, question, proposal, reservation or observation you think deserves research."></textarea>
+                  </div>
+                  <div class="ppri-field ppri-field-full">
+                    <label for="idea-evidence">Evidence or references (optional)</label>
+                    <textarea id="idea-evidence" name="evidence" placeholder="Add links, documents, figures, laws, datasets or other sources that could help researchers examine the idea."></textarea>
+                  </div>
+                </div>
+
+                <label class="ppri-check">
+                  <input type="checkbox" required />
+                  <span>I understand that preparing or sharing an idea does not mean PPRI accepts, adopts or endorses the idea.</span>
+                </label>
+
+                <div class="ppri-form-actions">
+                  <button class="btn btn-primary" type="submit">Create submission draft</button>
+                  <button class="btn btn-ghost" type="button" data-copy-submission>Copy draft</button>
+                  <button class="btn btn-ghost" type="button" data-clear-submission>Clear</button>
+                </div>
+              </form>
+
+              <div class="ppri-submit-status" data-submission-status>
+                Nothing has been submitted. This page only prepares a structured draft until an official submission channel is connected.
+              </div>
+              <div class="ppri-submit-preview" data-submission-preview aria-label="Prepared submission draft"></div>
+            </section>
+
+            <aside class="ppri-submit-aside">
+              <h2>What makes an idea useful?</h2>
+              <ul class="ppri-submit-list">
+                <li>A specific question rather than a general slogan.</li>
+                <li>A clear place, institution or policy area where relevant.</li>
+                <li>Sources or evidence where you have them.</li>
+                <li>A reservation or alternative explanation is welcome.</li>
+              </ul>
+              <div class="mini-callout" style="margin-top:18px">
+                <strong>How PPRI treats submissions</strong>
+                <p>
+                  Ideas can inform future research questions, explainers, data investigations or consultation material.
+                  They remain distinct from PPRI's own evidence-based findings.
+                </p>
+              </div>
+              <div class="mini-callout">
+                <strong>Continue exploring</strong>
+                <p>
+                  <a href="/consultation/survey.html">Take the survey →</a><br />
+                  <a href="/consultation/index.html">Read current consultation →</a>
+                </p>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div>
+          <img src="/assets/images/brand/ppri-logo-header.jpg" alt="PPRI — Pakistan Provincial Reform Institute" class="footer-logo" />
+          <p>Pakistan Provincial Reform Institute</p>
+          <p>Policy research on provincial reform, federalism, decentralization and institutional design in Pakistan.</p>
+        </div>
+        <div>
+          <h3>Research</h3>
+          <ul class="footer-links">
+            <li><a href="/research/policy-papers/index.html">Policy Papers</a></li>
+            <li><a href="/research/reports/index.html">Reports</a></li>
+            <li><a href="/research/briefs/index.html">Policy Briefs</a></li>
+            <li><a href="/research/working-papers/index.html">Working Papers</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Explore</h3>
+          <ul class="footer-links">
+            <li><a href="/provinces/index.html">Provincial Reform</a></li>
+            <li><a href="/data/centre.html">Data Centre</a></li>
+            <li><a href="/maps/index.html">Maps</a></li>
+            <li><a href="/methodology/index.html">Methodology</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Connect</h3>
+          <ul class="footer-links">
+            <li><a href="https://x.com/PPRI_Pakistan" rel="me">X / @PPRI_Pakistan</a></li>
+            <li><a href="/consultation/index.html">Public Consultation</a></li>
+            <li><a href="/consultation/submissions.html" aria-current="page">Submit an idea</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        <span>© <span data-current-year></span> Pakistan Provincial Reform Institute</span>
+        <span><a href="/privacy.html">Privacy</a> · <a href="/terms.html">Terms</a> · <a href="/sitemap.xml">Sitemap</a></span>
+      </div>
+    </footer>
+    <script src="/assets/js/main.js" defer></script>
+    <script src="/assets/js/consultation.js" defer></script>
+  </body>
+</html>

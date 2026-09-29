@@ -1,0 +1,66 @@
+.ppri-submit-shell {
+  display: grid;
+  grid-template-columns: minmax(0, 1.08fr) minmax(280px, .92fr);
+  gap: 18px;
+  align-items: start;
+}
+.ppri-submit-card,
+.ppri-submit-aside {
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: #fff;
+  padding: 26px;
+}
+.ppri-submit-card h2,
+.ppri-submit-aside h2 { margin-top: 0; }
+.ppri-submit-note {
+  padding: 13px 15px;
+  margin: 0 0 20px;
+  border-left: 3px solid var(--accent);
+  background: #faf7f1;
+  color: var(--muted);
+  font-size: .84rem;
+}
+.ppri-form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.ppri-field { display: grid; gap: 6px; }
+.ppri-field-full { grid-column: 1 / -1; }
+.ppri-field label,
+.ppri-field > span { color: var(--ink); font-size: .78rem; font-weight: 800; }
+.ppri-field input,
+.ppri-field select,
+.ppri-field textarea {
+  width: 100%;
+  padding: 11px 12px;
+  border: 1px solid var(--line);
+  border-radius: 7px;
+  background: #fff;
+  color: var(--ink);
+  font: inherit;
+  font-size: .88rem;
+}
+.ppri-field textarea { min-height: 160px; resize: vertical; }
+.ppri-check { display: flex; gap: 9px; align-items: flex-start; margin-top: 14px; color: var(--muted); font-size: .78rem; }
+.ppri-check input { margin-top: 3px; }
+.ppri-form-actions { display:flex; flex-wrap:wrap; gap:10px; margin-top:20px; }
+.ppri-submit-status { margin-top:16px; padding:13px 15px; border:1px solid var(--line); border-radius:8px; background:#f7faf8; color:#52635b; font-size:.8rem; line-height:1.55; }
+.ppri-submit-preview {
+  display:none;
+  margin-top:18px;
+  padding:16px;
+  border-radius:8px;
+  background:#0b2b22;
+  color:#e5efe9;
+  white-space:pre-wrap;
+  font-family:ui-monospace,SFMono-Regular,Consolas,monospace;
+  font-size:.75rem;
+  line-height:1.6;
+}
+.ppri-submit-preview.is-visible { display:block; }
+.ppri-submit-list { margin:0; padding-left:18px; color:var(--muted); }
+.ppri-submit-list li + li { margin-top:8px; }
+.ppri-submit-aside .mini-callout { padding:14px; border-radius:9px; background:#f5f8f6; border:1px solid #e2ebe6; }
+.ppri-submit-aside .mini-callout + .mini-callout { margin-top:10px; }
+@media (max-width:800px) {
+  .ppri-submit-shell,.ppri-form-grid { grid-template-columns:1fr; }
+  .ppri-field-full { grid-column:auto; }
+}

@@ -30,6 +30,26 @@
     <link rel="stylesheet" href="/assets/css/style.css" />
     <link rel="stylesheet" href="/assets/css/responsive.css" />
     <link rel="stylesheet" href="/assets/css/phase6.css" />
+    <script>document.documentElement.classList.toggle("map-embed", new URLSearchParams(window.location.search).has("embed"));</script>
+    <style id="ppri-map-embed-style">
+      html.map-embed, html.map-embed body { height: 100%; overflow: hidden; }
+      html.map-embed body { margin: 0; background: #e7efeb; }
+      html.map-embed .site-header,
+      html.map-embed .site-footer,
+      html.map-embed .page-hero { display: none !important; }
+      html.map-embed #main-content { height: 100vh; }
+      html.map-embed #main-content > section { display: none; }
+      html.map-embed #main-content > section:nth-of-type(2) { display: block !important; padding: 0; }
+      html.map-embed #main-content > section:nth-of-type(2) .container { width: 100%; max-width: none; }
+      html.map-embed #p6ScenarioCoverage,
+      html.map-embed .p6-scenario-warning,
+      html.map-embed .p6-scenario-panel,
+      html.map-embed #main-content > section:nth-of-type(2) .p6-map-toolbar,
+      html.map-embed .p6-map-help { display: none !important; }
+      html.map-embed .p6-scenario-layout,
+      html.map-embed .p6-scenario-main { display: block; }
+      html.map-embed #p6ScenarioMap { height: 100vh; min-height: 420px; border: 0; border-radius: 0; }
+    </style>
     <link
       rel="stylesheet"
       href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
