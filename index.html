@@ -37,6 +37,8 @@
     <link rel="stylesheet" href="/assets/css/responsive.css" />
     <link rel="stylesheet" href="/assets/css/phase6.css" />
     <link rel="stylesheet" href="/assets/css/homepage.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="" />
+    <link rel="stylesheet" href="/assets/css/hero-map.css" />
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -81,117 +83,121 @@
           <a href="/publications/index.html">Publications</a>
           <a href="/consultation/index.html">Engage</a>
           <a href="/about.html">About</a>
-          <a class="nav-search" href="/search.html">Search</a>
+          <a class="nav-search" href="/search.html" title="Search PPRI (Press ⌘K or Ctrl+K)">Search <kbd aria-hidden="true">⌘K</kbd></a>
         </nav>
       </div>
     </header>
 
     <main id="main-content">
-      <section class="home-hero" aria-labelledby="home-title">
+      <section class="home-hero hero-map-section" id="section-hero" aria-labelledby="home-title">
         <div class="home-hero-gridlines" aria-hidden="true"></div>
-        <div class="home-hero-network" data-hero-network aria-hidden="true">
-          <svg class="home-pakistan-outline" viewBox="0 0 700 600" role="presentation">
-            <path d="M562 35 580 41 604 47 611 61 638 69 649 81 651 96 639 104 624 103 613 111 620 123 645 129 651 141 639 149 621 150 607 158 591 170 582 188 565 201 555 220 536 229 525 247 507 256 501 276 485 289 474 307 461 323 447 341 426 349 410 363 391 374 372 384 355 393 338 403 318 403 305 414 291 427 277 440 261 452 244 460 226 465 208 474 191 482 174 489 155 492 138 488 123 482 108 471 98 459 108 446 121 438 133 431 128 420 112 411 96 397 82 382 99 372 121 364 144 358 168 352 191 346 214 338 233 329 251 317 267 306 282 293 295 279 308 264 320 250 332 237 345 224 356 210 365 195 374 181 385 167 395 152 407 139 420 125 432 113 445 100 456 88 468 78 481 67 495 56 512 50 530 45Z"/>
-          </svg>
-          <span class="hero-network-label hero-network-label-north">Representation</span>
-          <span class="hero-network-label hero-network-label-west">Access</span>
-          <span class="hero-network-label hero-network-label-centre">Governance</span>
-          <span class="hero-network-label hero-network-label-south">Local government</span>
-          <span class="hero-network-node" data-node="0" style="--x:43%;--y:16%"></span>
-          <span class="hero-network-node" data-node="1" style="--x:31%;--y:34%"></span>
-          <span class="hero-network-node" data-node="2" style="--x:49%;--y:43%"></span>
-          <span class="hero-network-node" data-node="3" style="--x:62%;--y:51%"></span>
-          <span class="hero-network-node" data-node="4" style="--x:48%;--y:63%"></span>
-          <span class="hero-network-node" data-node="5" style="--x:31%;--y:76%"></span>
-          <span class="hero-network-node" data-node="6" style="--x:57%;--y:80%"></span>
-          <span class="hero-network-node" data-node="7" style="--x:40%;--y:92%"></span>
-          <span class="hero-network-link link-1"></span>
-          <span class="hero-network-link link-2"></span>
-          <span class="hero-network-link link-3"></span>
-          <span class="hero-network-link link-4"></span>
-        </div>
 
-        <div class="container home-hero-inner">
-          <div class="home-hero-copy" data-reveal>
-            <div class="home-kicker">
-              <span class="pulse-mark" aria-hidden="true"></span>
-              Pakistan Provincial Reform Institute · Research platform
-            </div>
-            <div class="home-hero-message" data-hero-message>
-              <h1 id="home-title">
-                <span data-hero-line-one>Study the structure.</span>
-                <span data-hero-line-two>Test the alternatives.</span>
-              </h1>
-            </div>
-            <p class="home-hero-lead">
-              PPRI examines how governance, representation, public resources and
-              administrative institutions are organized across Pakistan — from the
-              federation to provinces and local government.
-            </p>
-            <div class="home-actions">
-              <a class="btn btn-home-primary" href="/maps/scenarios/index.html">
-                Explore the Scenario Lab <span aria-hidden="true">→</span>
-              </a>
-              <a class="btn btn-home-outline" href="/research/policy-papers/provincial-reorganization-of-pakistan.html">
-                Read the flagship paper
-              </a>
-            </div>
-            <div class="home-hero-pulse" aria-live="polite">
-              <span class="home-hero-pulse-dot" aria-hidden="true"></span>
-              <strong>Research pulse</strong>
-              <span>Scenario modelling active · public research programme developing</span>
-            </div>
-            <div class="home-hero-note">
-              <span>Evidence-led research</span>
-              <span>Illustrative scenarios are labelled</span>
-              <span>Sources identified throughout</span>
-            </div>
+        <!-- Left-side radial scrim keeps copy 100% legible over map -->
+        <div id="hero-scrim" aria-hidden="true"></div>
+
+        <!-- Authentic Pakistan Map — Leaflet.js real vector borders (right column) -->
+        <div id="hero-map-container" class="hero-leaflet-map" aria-hidden="true"></div>
+
+        <!-- Hero copy — left side, always above scrim (z-index 4) -->
+        <div class="hero-map-copy">
+          <div class="home-kicker">
+            <span class="pulse-mark" aria-hidden="true"></span>
+            Pakistan Provincial Reform Institute · Research platform
           </div>
-
-          <aside class="home-research-desk" data-reveal aria-label="Current PPRI work">
-            <div class="desk-status">
-              <span>On the research desk</span>
-              <span class="desk-live"><i aria-hidden="true"></i> Active work</span>
-            </div>
-            <div class="desk-pulse-line" aria-hidden="true"><span></span></div>
-            <a class="desk-item desk-item-featured" href="/maps/scenarios/index.html">
-              <span class="desk-num">01</span>
-              <span class="desk-copy">
-                <strong>PPRI-01 Scenario Lab</strong>
-                <small>Explore a first-pass administrative model and move from viewing to experimentation.</small>
-              </span>
-              <span class="desk-arrow" aria-hidden="true">↗</span>
+          <div class="home-hero-message" data-hero-message>
+            <h1 id="home-title">
+              <span data-hero-line-one>Study the structure.</span>
+              <span data-hero-line-two>Test the alternatives.</span>
+            </h1>
+          </div>
+          <p class="home-hero-lead">
+            PPRI examines how governance, representation, public resources and
+            administrative institutions are organized across Pakistan — from the
+            federation to provinces and local government.
+          </p>
+          <div class="home-actions">
+            <a class="btn btn-home-primary" href="/maps/scenarios/index.html">
+              Explore the Scenario Lab <span aria-hidden="true">→</span>
             </a>
-            <a class="desk-item" href="/data/centre.html">
-              <span class="desk-num">02</span>
-              <span class="desk-copy">
-                <strong>Data Observatory</strong>
-                <small>Population, geography, scale and source-linked evidence for the research programme.</small>
-              </span>
-              <span class="desk-arrow" aria-hidden="true">↗</span>
+            <a class="btn btn-home-outline" href="/research/policy-papers/provincial-reorganization-of-pakistan.html">
+              Read the flagship paper
             </a>
-            <a class="desk-item" href="/research/policy-papers/provincial-reorganization-of-pakistan.html">
-              <span class="desk-num">03</span>
-              <span class="desk-copy">
-                <strong>Flagship policy paper</strong>
-                <small>Constitutional, administrative, fiscal, demographic and local-government questions.</small>
-              </span>
-              <span class="desk-arrow" aria-hidden="true">↗</span>
-            </a>
-            <div class="desk-foot">
-              <span>PPRI / Research Desk</span>
-              <span>2026</span>
-            </div>
-          </aside>
+          </div>
+          <div class="home-hero-note">
+            <span>Evidence-led research</span>
+            <span>Illustrative scenarios are labelled</span>
+            <span>Sources identified throughout</span>
+          </div>
         </div>
 
-        <div class="container hero-scroll-cue" aria-hidden="true">
+        <!-- Research Desk HUD — #hudWrapper provides buffer zone to prevent jitter -->
+        <div id="hudWrapper">
+          <div class="hud-dock" id="hudDock" role="complementary"
+               aria-label="Research desk" aria-expanded="false">
+
+            <!-- Minimized sleek horizontal pill tab -->
+            <div class="hud-pill-trigger" id="hudTrigger" aria-label="Open Research Desk">
+              <span class="hud-pill-text">Research Desk</span>
+              <span class="hud-pill-arrow" aria-hidden="true">←</span>
+            </div>
+
+            <!-- Close button (visible when expanded) -->
+            <button class="hud-close" id="hudClose" aria-label="Collapse research desk">&#215;</button>
+
+            <!-- Expanded card content (Modern Light Theme) -->
+            <div class="hud-card">
+              <div class="hud-card-header">
+                <span class="hud-card-title">On the research desk</span>
+                <span class="hud-live-badge"><i aria-hidden="true"></i> Active work</span>
+              </div>
+              <a class="hud-item" href="/maps/scenarios/index.html">
+                <span class="hud-item-num">01</span>
+                <span class="hud-item-copy">
+                  <strong>PPRI-01 Scenario Lab</strong>
+                  <small>Explore a first-pass administrative model and move from viewing to experimentation.</small>
+                </span>
+                <span class="hud-item-arrow">&#8599;</span>
+              </a>
+              <a class="hud-item" href="/data/centre.html">
+                <span class="hud-item-num">02</span>
+                <span class="hud-item-copy">
+                  <strong>Data Observatory</strong>
+                  <small>Population, geography, scale and source-linked evidence for the research programme.</small>
+                </span>
+                <span class="hud-item-arrow">&#8599;</span>
+              </a>
+              <a class="hud-item" href="/research/policy-papers/provincial-reorganization-of-pakistan.html">
+                <span class="hud-item-num">03</span>
+                <span class="hud-item-copy">
+                  <strong>Flagship policy paper</strong>
+                  <small>Constitutional, administrative, fiscal, demographic and local-government questions.</small>
+                </span>
+                <span class="hud-item-arrow">&#8599;</span>
+              </a>
+              <div class="hud-foot">
+                <span>PPRI / Research Desk</span>
+                <span>2026</span>
+              </div>
+            </div><!-- /.hud-card -->
+
+          </div><!-- /.hud-dock -->
+        </div><!-- /#hudWrapper -->
+
+        <!-- Cursor-following tooltip (populated by hero-map.js) -->
+        <div id="pak-tooltip" role="tooltip" aria-live="polite">
+          <span class="tt-name"></span>
+          <span class="tt-province"></span>
+          <div class="tt-meta"></div>
+        </div>
+
+        <!-- Scroll cue — bouncing double-chevron -->
+        <div class="hero-map-scroll-cue" aria-hidden="true">
           <span>Scroll into the research</span>
           <i></i>
         </div>
       </section>
 
-      <section class="home-section home-latest-section" aria-labelledby="latest-title">
+      <section class="home-section home-latest-section" id="section-latest" aria-labelledby="latest-title">
         <div class="container">
           <div class="home-section-head" data-reveal>
             <div>
@@ -246,7 +252,7 @@
         </div>
       </section>
 
-      <section class="home-section home-scenario-section" aria-labelledby="scenario-title">
+      <section class="home-section home-scenario-section" id="section-scenario" aria-labelledby="scenario-title">
         <div class="container">
           <div class="scenario-intro" data-reveal>
             <div>
@@ -321,7 +327,7 @@
         </div>
       </section>
 
-      <section class="home-section home-question-section" aria-labelledby="questions-title">
+      <section class="home-section home-question-section" id="section-questions" aria-labelledby="questions-title">
         <div class="container">
           <div class="home-section-head" data-reveal>
             <div>
@@ -372,7 +378,7 @@
         </div>
       </section>
 
-      <section class="home-section home-research-section" aria-labelledby="research-title">
+      <section class="home-section home-research-section" id="section-research" aria-labelledby="research-title">
         <div class="container">
           <div class="home-section-head" data-reveal>
             <div>
@@ -431,7 +437,7 @@
         </div>
       </section>
 
-      <section class="home-section home-platform-section" aria-labelledby="platform-title">
+      <section class="home-section home-platform-section" id="section-platform" aria-labelledby="platform-title">
         <div class="container">
           <div class="platform-shell" data-reveal>
             <div class="platform-intro">
@@ -449,7 +455,7 @@
         </div>
       </section>
 
-      <section class="home-section home-evidence-section" aria-labelledby="evidence-title">
+      <section class="home-section home-evidence-section" id="section-evidence" aria-labelledby="evidence-title">
         <div class="container">
           <div class="home-section-head" data-reveal>
             <div>
@@ -476,7 +482,7 @@
         </div>
       </section>
 
-      <section class="home-section home-participation-section" aria-labelledby="participation-title">
+      <section class="home-section home-participation-section" id="section-participation" aria-labelledby="participation-title">
         <div class="container">
           <div class="participation" data-reveal>
             <div class="participation-copy">
@@ -558,7 +564,10 @@
       </div>
     </footer>
 
+    <nav class="scroll-depth-nav" id="scrollDepthNav" aria-label="Page sections" aria-hidden="true"></nav>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
     <script src="/assets/js/main.js" defer></script>
+    <script src="/assets/js/hero-map.js" defer></script>
     <script src="/assets/js/homepage.js" defer></script>
   </body>
 </html>

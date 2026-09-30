@@ -117,7 +117,32 @@ function buildEnhancedNavigation(nav) {
 
     if (groupIsCurrent) wrapper.classList.add("is-current");
 
+    let closeTimer = null;
+    wrapper.addEventListener("mouseenter", () => {
+      if (window.innerWidth > 900) {
+        if (closeTimer) { clearTimeout(closeTimer); closeTimer = null; }
+        document.querySelectorAll(".nav-group.is-open").forEach((other) => {
+          if (other !== wrapper) {
+            other.classList.remove("is-open");
+            other.querySelector(".nav-trigger")?.setAttribute("aria-expanded", "false");
+          }
+        });
+        wrapper.classList.add("is-open");
+        trigger.setAttribute("aria-expanded", "true");
+      }
+    });
+
+    wrapper.addEventListener("mouseleave", () => {
+      if (window.innerWidth > 900) {
+        closeTimer = setTimeout(() => {
+          wrapper.classList.remove("is-open");
+          trigger.setAttribute("aria-expanded", "false");
+        }, 220);
+      }
+    });
+
     trigger.addEventListener("click", () => {
+      if (closeTimer) { clearTimeout(closeTimer); closeTimer = null; }
       const willOpen = !wrapper.classList.contains("is-open");
       document.querySelectorAll(".nav-group.is-open").forEach((other) => {
         other.classList.remove("is-open");
@@ -129,6 +154,7 @@ function buildEnhancedNavigation(nav) {
 
     menu.querySelectorAll("a").forEach((item) => {
       item.addEventListener("click", () => {
+        if (closeTimer) { clearTimeout(closeTimer); closeTimer = null; }
         wrapper.classList.remove("is-open");
         trigger.setAttribute("aria-expanded", "false");
         nav.classList.remove("is-open");

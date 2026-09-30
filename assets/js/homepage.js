@@ -69,31 +69,147 @@ document.addEventListener("DOMContentLoaded", () => {
     start();
   };
 
-  const setupHeroNetwork = () => {
-    const network = document.querySelector("[data-hero-network]");
-    const nodes = [...document.querySelectorAll(".hero-network-node")];
-    if (!network || !nodes.length) return;
-    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+  const setupPakistanCanvas = () => {
+    const mapBg = document.querySelector("[data-pak-map]");
+    if (!mapBg) return;
 
-    let frame = null;
-    network.addEventListener("pointermove", (event) => {
-      const rect = network.getBoundingClientRect();
-      const x = event.clientX - rect.left;
-      const y = event.clientY - rect.top;
-      if (frame) cancelAnimationFrame(frame);
-      frame = requestAnimationFrame(() => {
-        nodes.forEach((node) => {
-          const nx = (parseFloat(node.style.getPropertyValue("--x")) / 100) * rect.width;
-          const ny = (parseFloat(node.style.getPropertyValue("--y")) / 100) * rect.height;
-          const distance = Math.hypot(x - nx, y - ny);
-          node.classList.toggle("is-near", distance < 92);
+    const pakSvg = mapBg.querySelector(".pak-map-svg");
+    if (!pakSvg) return;
+
+    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+
+    // Calibrate the border-draw animation using actual path length
+    const outline = pakSvg.querySelector(".pak-outline");
+    if (outline) {
+      try {
+        const len = Math.ceil(outline.getTotalLength()) + 20;
+        outline.style.strokeDasharray = len;
+        outline.style.strokeDashoffset = len;
+      } catch (_) { /* SVG not in DOM yet — CSS fallback value of 2600 applies */ }
+    }
+
+    if (reduceMotion.matches) {
+      pakSvg.classList.add("is-animated");
+      return;
+    }
+
+    // Start animation sequence when the research desk enters the viewport
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (!entry.isIntersecting) return;
+        pakSvg.classList.add("is-animated");
+        observer.unobserve(entry.target);
+      },
+      { threshold: 0.25 }
+    );
+    observer.observe(mapBg);
+
+    // Province hover interactions
+    const zones = [...mapBg.querySelectorAll(".prov-zone")];
+    const fills = [...mapBg.querySelectorAll("[data-prov-fill]")];
+    const badges = [...mapBg.querySelectorAll("[data-badge]")];
+
+    zones.forEach((zone) => {
+      zone.addEventListener("mouseenter", () => {
+        const prov = zone.dataset.prov;
+        fills.forEach((f) => {
+          f.classList.toggle("pf-highlight", f.dataset.provFill === prov);
+          f.classList.toggle("pf-dim", f.dataset.provFill !== prov);
         });
+        badges.forEach((badge) => badge.classList.toggle("is-active", badge.dataset.badge === prov));
+      });
+      zone.addEventListener("mouseleave", () => {
+        fills.forEach((f) => { f.classList.remove("pf-highlight", "pf-dim"); });
+        badges.forEach((badge) => badge.classList.remove("is-active"));
+      });
+      // Mobile tap
+      zone.addEventListener("focus", () => {
+        const prov = zone.dataset.prov;
+        badges.forEach((badge) => badge.classList.toggle("is-active", badge.dataset.badge === prov));
+      });
+      zone.addEventListener("blur", () => {
+        badges.forEach((badge) => badge.classList.remove("is-active"));
       });
     });
+  };
 
-    network.addEventListener("pointerleave", () => {
-      nodes.forEach((node) => node.classList.remove("is-near"));
+  const setupScrollDepthNav = () => {
+    const nav = document.getElementById("scrollDepthNav");
+    if (!nav) return;
+
+    const sectionData = [
+      { id: "section-hero",          label: "Hero" },
+      { id: "section-latest",        label: "Latest Work" },
+      { id: "section-scenario",      label: "Scenario Lab" },
+      { id: "section-questions",     label: "Questions" },
+      { id: "section-research",      label: "Research" },
+      { id: "section-platform",      label: "Platform" },
+      { id: "section-evidence",      label: "Evidence" },
+      { id: "section-participation", label: "Participation" },
+    ];
+
+    const sections = sectionData
+      .map((s) => ({ el: document.getElementById(s.id), label: s.label }))
+      .filter((s) => s.el);
+
+    if (sections.length < 2) return;
+
+    // Build dots
+    const dots = sections.map(({ el, label }) => {
+      const btn = document.createElement("button");
+      btn.className = "sdnav-dot";
+      btn.setAttribute("data-label", label);
+      btn.setAttribute("aria-label", `Jump to ${label}`);
+      btn.addEventListener("click", () => el.scrollIntoView({ behavior: "smooth" }));
+      nav.appendChild(btn);
+      return btn;
     });
+
+    // Update nav visibility: Hidden on hero, appears when user scrolls below hero
+    const hero = document.getElementById("section-hero");
+    const updateNavVisibility = () => {
+      if (!hero) {
+        nav.classList.add("is-visible");
+        return;
+      }
+      const heroRect = hero.getBoundingClientRect();
+      const isBelowHero = heroRect.bottom <= window.innerHeight * 0.35;
+      nav.classList.toggle("is-visible", isBelowHero);
+    };
+    window.addEventListener("scroll", updateNavVisibility, { passive: true });
+    window.addEventListener("resize", updateNavVisibility, { passive: true });
+    updateNavVisibility();
+
+    // Track active section
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          const idx = sections.findIndex((s) => s.el === entry.target);
+          if (idx === -1) return;
+          dots.forEach((dot, i) => dot.classList.toggle("is-active", i === idx));
+        });
+      },
+      { threshold: 0.45, rootMargin: "-10% 0px -10% 0px" }
+    );
+
+    sections.forEach((s) => observer.observe(s.el));
+  };
+
+  const setupScrollCueFade = () => {
+    const cue = document.querySelector(".hero-map-scroll-cue, .hero-scroll-cue");
+    if (!cue) return;
+    const hero = document.getElementById("section-hero");
+    if (!hero) return;
+    window.addEventListener(
+      "scroll",
+      () => {
+        const heroBottom = hero.getBoundingClientRect().bottom;
+        const fade = Math.max(0, Math.min(1, (heroBottom - window.innerHeight * 0.15) / (window.innerHeight * 0.85)));
+        cue.style.opacity = fade;
+      },
+      { passive: true }
+    );
   };
 
   const setupPageProgress = () => {
@@ -283,11 +399,23 @@ document.addEventListener("DOMContentLoaded", () => {
       });
   };
 
+  const setupSearchShortcut = () => {
+    window.addEventListener("keydown", (e) => {
+      if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === "k") {
+        e.preventDefault();
+        window.location.href = "/search.html";
+      }
+    });
+  };
+
   setRevealObserver();
   setupHeroMessages();
-  setupHeroNetwork();
+  setupPakistanCanvas();
   setupPageProgress();
   setupScenarioPreview();
   setupQuestionWorkbench();
   setupHomepageFeed();
+  setupScrollDepthNav();
+  setupScrollCueFade();
+  setupSearchShortcut();
 });

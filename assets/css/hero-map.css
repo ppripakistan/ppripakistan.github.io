@@ -1,0 +1,672 @@
+/* ============================================================
+   PPRI — Interactive Map Hero  |  hero-map.css  v4
+   Authentic Pakistan borders (Leaflet.js) · 16-unit dissolve ·
+   Light-ivory Research Desk card · Sleek pill trigger ·
+   Fixed-height rotating heading (zero layout shift)
+   ============================================================ */
+
+/* ─── CSS Custom Properties ─────────────────────────────────── */
+.hero-map-section {
+  --hero-bg:          #0e2d22;
+  --hero-bg-mid:      #163a2c;
+  --hero-bg-light:    #1c4a38;
+  --hero-accent:      #a8e06a;   /* Soft sage-lime */
+  --hero-accent-glow: rgba(168,224,106,.55);
+  --hero-text:        #e8f5ec;
+  --hero-text-muted:  rgba(210,238,220,.62);
+  --hero-border:      rgba(168,224,106,.22);
+}
+
+/* ── Section wrapper ─────────────────────────────────────────── */
+.hero-map-section {
+  position: relative;
+  overflow: hidden;
+  min-height: calc(100vh - 84px);
+  height: calc(100vh - 84px);
+  max-height: calc(100vh - 84px);
+  color: var(--hero-text);
+  background:
+    radial-gradient(ellipse at 18% 60%, rgba(30,76,56,.65), transparent 55%),
+    linear-gradient(135deg, var(--hero-bg) 0%, var(--hero-bg-mid) 55%, var(--hero-bg-light) 100%);
+  display: flex;
+  align-items: stretch;
+}
+
+/* ── Decorative grid lines ───────────────────────────────────── */
+.hero-map-section .home-hero-gridlines {
+  position: absolute;
+  inset: -20%;
+  opacity: .05;
+  background-image:
+    linear-gradient(rgba(255,255,255,.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.05) 1px, transparent 1px);
+  background-size: 52px 52px;
+  transform: perspective(850px) rotateX(62deg) translateY(36%);
+  transform-origin: center bottom;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* ── Authentic Pakistan Map Container (Right 56%) ────────────── */
+#hero-map-container {
+  position: absolute;
+  left: 44%;
+  top: 0;
+  width: 56%;
+  height: 100%;
+  z-index: 0;
+  background: transparent !important;
+  transition: opacity 480ms ease;
+  pointer-events: all;
+  /* Soft gradient mask on left edge so it fades into left copy */
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    rgba(0,0,0,.25) 8%,
+    rgba(0,0,0,.85) 20%,
+    #000 38%,
+    #000 84%,
+    rgba(0,0,0,.65) 95%,
+    transparent 100%
+  );
+  mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    rgba(0,0,0,.25) 8%,
+    rgba(0,0,0,.85) 20%,
+    #000 38%,
+    #000 84%,
+    rgba(0,0,0,.65) 95%,
+    transparent 100%
+  );
+}
+.hero-map-section.hud-open #hero-map-container {
+  opacity: 0.28;
+}
+
+/* Leaflet map resets: seamless integration with section */
+#hero-map-container .leaflet-container {
+  background: transparent !important;
+  cursor: default;
+  font-family: inherit;
+}
+#hero-map-container .leaflet-control-container {
+  display: none !important;
+}
+
+/* ── Authentic Vector Layer Styles ───────────────────────────── */
+
+/* 1. Current 4 Constitutional Provinces (Wireframe layer) */
+.hero-prov-path {
+  stroke: rgba(168,224,106, 0.45);
+  stroke-width: 1.8px;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+  fill: rgba(168,224,106, 0.04);
+  transition: stroke 600ms ease, opacity 800ms ease, stroke-width 400ms ease;
+  pointer-events: none;
+}
+.hero-prov-path.is-dimmed {
+  opacity: 0.18 !important;
+  stroke: rgba(168,224,106, 0.18) !important;
+  fill: transparent !important;
+}
+
+/* 2. 16 Scenario Units (Dissolved layer) */
+.hero-unit-path {
+  stroke: var(--hero-accent);
+  stroke-width: 1.5px;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+  fill: rgba(168,224,106, 0.06);
+  opacity: 0;
+  cursor: pointer;
+  pointer-events: all;
+  transition:
+    opacity 800ms ease,
+    stroke 280ms ease,
+    stroke-width 280ms ease,
+    fill 280ms ease,
+    filter 280ms ease;
+}
+.hero-unit-path.is-active {
+  opacity: 1;
+}
+.hero-unit-path.is-hovered {
+  stroke: #c8ff54 !important;
+  stroke-width: 2.8px !important;
+  fill: rgba(200,255,84, 0.16) !important;
+  filter: drop-shadow(0 0 10px rgba(168,224,106, 0.75));
+  opacity: 1 !important;
+}
+.hero-unit-path.is-dimmed {
+  opacity: 0.22 !important;
+  stroke: rgba(168,224,106, 0.14) !important;
+  fill: transparent !important;
+}
+
+/* ── Hero copy (left 52% — never overlaps map) ───────────────── */
+.hero-map-copy {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 52%;
+  max-width: 720px;
+  z-index: 4;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 38px 3vw 46px 5vw;
+  pointer-events: all;
+  background: linear-gradient(
+    to right,
+    var(--hero-bg) 0%,
+    var(--hero-bg) 78%,
+    rgba(14,45,34,.0) 100%
+  );
+}
+
+/* Kicker */
+.hero-map-copy .home-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: .68rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: .12em;
+  color: rgba(168,224,106,.82);
+  margin-bottom: 16px;
+}
+
+/* ── FIXED-HEIGHT 3-LINE ROTATING HEADING CONTAINER (Zero Layout Shift) ─ */
+.hero-map-copy .home-hero-message {
+  height: 185px;
+  min-height: 185px;
+  max-height: 185px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-bottom: 14px;
+  overflow: hidden;
+}
+
+.hero-map-copy h1 {
+  font-size: clamp(2.05rem, 3.4vw, 3.15rem);
+  font-weight: 900;
+  line-height: 1.15;
+  letter-spacing: -.048em;
+  margin: 0;
+  max-width: 580px;
+}
+.hero-map-copy h1 span {
+  display: block;
+  color: #d8f0df;
+}
+.hero-map-copy h1 span + span {
+  color: var(--hero-accent);
+}
+
+/* Lead copy */
+.hero-map-copy .home-hero-lead {
+  max-width: 520px;
+  margin: 0 0 22px;
+  color: rgba(200,232,215,.74);
+  font-size: 1rem;
+  line-height: 1.68;
+}
+
+/* CTAs */
+.hero-map-copy .home-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 11px;
+  margin-bottom: 20px;
+}
+
+/* Footer note */
+.hero-map-copy .home-hero-note {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 18px;
+  font-size: .65rem;
+  color: rgba(185,220,200,.4);
+  text-transform: uppercase;
+  letter-spacing: .08em;
+}
+.hero-map-copy .home-hero-note span:not(:last-child)::after {
+  content: '·';
+  margin-left: 18px;
+}
+
+/* Pulse mark */
+.pulse-mark {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--hero-accent);
+  display: inline-block;
+  animation: ppri-pulse 2.2s ease-in-out infinite;
+}
+@keyframes ppri-pulse {
+  0%, 100% { transform: scale(.86); box-shadow: 0 0 0 0 var(--hero-accent-glow); }
+  50%       { transform: scale(1.1);  box-shadow: 0 0 0 7px transparent; }
+}
+
+/* ─────────────────────────────────────────────────────────────
+   RESEARCH DESK HUD — SLEEK PILL TRIGGER & LIGHT-IVORY CARD
+   ───────────────────────────────────────────────────────────── */
+
+/* Invisible buffer/catch zone */
+#hudWrapper {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  z-index: 10;
+  padding: 30px 0 30px 60px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  pointer-events: all;
+}
+
+/* Dock container */
+.hud-dock {
+  position: relative;
+  width: auto;
+  border-radius: 24px 0 0 24px;
+  background: transparent;
+  transition:
+    width         460ms cubic-bezier(.4,0,.2,1),
+    border-radius 460ms cubic-bezier(.4,0,.2,1),
+    box-shadow    460ms ease;
+  overflow: visible;
+}
+
+/* Minimized: sleek horizontal pill tab anchored on right edge */
+.hud-pill-trigger {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 18px 10px 20px;
+  background: rgba(14, 45, 34, 0.92);
+  border: 1.5px solid rgba(168, 224, 106, 0.45);
+  border-right: none;
+  border-radius: 24px 0 0 24px;
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  box-shadow: -4px 6px 24px rgba(0,0,0,0.32);
+  cursor: pointer;
+  transition: background 220ms ease, border-color 220ms ease, transform 220ms ease, opacity 220ms ease;
+  user-select: none;
+  opacity: 1;
+}
+.hud-dock:hover:not(.is-expanded) .hud-pill-trigger {
+  background: rgba(20, 60, 46, 0.98);
+  border-color: rgba(168, 224, 106, 0.7);
+  transform: translateX(-4px);
+}
+.hud-dock.is-expanded .hud-pill-trigger {
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+}
+
+/* Pill text: high-contrast, easily visible */
+.hud-pill-text {
+  font-size: 0.85rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  color: #f0faf3;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+/* Arrow: clean crisp chevron, NO GLOW CIRCLE */
+.hud-pill-arrow {
+  font-size: 1.15rem;
+  line-height: 1;
+  color: var(--hero-accent);
+  transition: transform 260ms ease;
+}
+.hud-dock:hover:not(.is-expanded) .hud-pill-arrow {
+  transform: translateX(-3px);
+}
+
+/* ── Expanded Card: Modern Light-Ivory Frosted Card ─────────── */
+.hud-dock.is-expanded {
+  width: min(390px, 88vw);
+  border-radius: 18px 0 0 18px;
+  background: rgba(248, 252, 249, 0.97); /* Light ivory off-white */
+  border: 1px solid rgba(14, 45, 34, 0.14);
+  border-right: none;
+  backdrop-filter: blur(28px);
+  -webkit-backdrop-filter: blur(28px);
+  box-shadow: -10px 18px 60px rgba(0,0,0,0.35);
+  cursor: default;
+}
+
+.hud-card {
+  display: none;
+  opacity: 0;
+  transform: translateX(12px);
+  transition: opacity 260ms ease 120ms, transform 260ms ease 120ms;
+  padding: 26px 24px;
+  flex-direction: column;
+}
+.hud-dock.is-expanded .hud-card {
+  display: flex;
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.hud-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 1.5px solid rgba(14, 45, 34, 0.08);
+}
+.hud-card-title {
+  font-size: 0.68rem;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #0e2d22; /* Dark emerald */
+}
+.hud-live-badge {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.6rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #1e5c3c;
+  background: rgba(168, 224, 106, 0.22);
+  padding: 3px 8px;
+  border-radius: 12px;
+}
+.hud-live-badge i {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #1e5c3c;
+  display: block;
+}
+
+/* Items in light card */
+.hud-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 13px;
+  padding: 12px 10px;
+  border-bottom: 1px solid rgba(14, 45, 34, 0.06);
+  text-decoration: none;
+  color: #0e2d22;
+  border-radius: 10px;
+  transition: background 180ms ease;
+}
+.hud-item:last-of-type { border-bottom: none; }
+.hud-item:hover {
+  background: rgba(168, 224, 106, 0.18);
+}
+.hud-item-num {
+  font-size: 0.65rem;
+  font-weight: 900;
+  color: #1b5e3f;
+  min-width: 22px;
+  padding-top: 2px;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.06em;
+  flex-shrink: 0;
+}
+.hud-item-copy strong {
+  display: block;
+  font-size: 0.88rem;
+  font-weight: 800;
+  margin-bottom: 2px;
+  color: #0e2d22; /* Dark emerald */
+}
+.hud-item-copy small {
+  font-size: 0.74rem;
+  color: #3b5a4d; /* Muted dark emerald/slate */
+  line-height: 1.5;
+}
+.hud-item-arrow {
+  margin-left: auto;
+  color: #1b5e3f;
+  font-size: 1rem;
+  padding-top: 2px;
+  flex-shrink: 0;
+  transition: transform 180ms ease;
+}
+.hud-item:hover .hud-item-arrow {
+  transform: translate(2px, -2px);
+}
+.hud-foot {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 14px;
+  font-size: 0.62rem;
+  color: #557567;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  border-top: 1px solid rgba(14, 45, 34, 0.06);
+}
+
+/* Close button in light theme */
+.hud-close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: rgba(14, 45, 34, 0.07);
+  border: 1px solid rgba(14, 45, 34, 0.12);
+  color: #0e2d22;
+  font-size: 1.2rem;
+  line-height: 1;
+  cursor: pointer;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 12;
+  transition: background 180ms ease, color 180ms ease;
+}
+.hud-dock.is-expanded .hud-close {
+  display: flex;
+}
+.hud-close:hover {
+  background: rgba(14, 45, 34, 0.15);
+  color: #000;
+}
+
+/* ── Cursor-following Tooltip ────────────────────────────────── */
+#pak-tooltip {
+  position: fixed;
+  z-index: 9999;
+  pointer-events: none;
+  padding: 12px 16px;
+  background: rgba(8,24,16,.97);
+  border: 1px solid rgba(168,224,106,.32);
+  border-radius: 12px;
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  opacity: 0;
+  transform: translateY(6px) scale(.97);
+  transition: opacity 160ms ease, transform 160ms ease;
+  min-width: 175px;
+  max-width: 248px;
+  box-shadow:
+    0 10px 34px rgba(0,0,0,.48),
+    0 0 18px rgba(168,224,106,.08);
+  will-change: transform, opacity;
+}
+#pak-tooltip.is-visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+.tt-name {
+  font-size: .85rem;
+  font-weight: 900;
+  color: var(--hero-accent);
+  display: block;
+  margin-bottom: 3px;
+}
+.tt-province {
+  font-size: .64rem;
+  color: rgba(185,215,200,.52);
+  display: block;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: .09em;
+  border-bottom: 1px solid rgba(168,224,106,.12);
+  padding-bottom: 6px;
+}
+.tt-meta {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px 12px;
+}
+.tt-meta-item {
+  font-size: .65rem;
+  color: rgba(205,232,218,.62);
+  line-height: 1.4;
+}
+.tt-meta-item strong {
+  display: block;
+  font-size: .73rem;
+  color: #daf0e4;
+  font-weight: 800;
+}
+
+/* ── Scroll Cue — CENTER BOTTOM OF HERO ───────────────────────── */
+.hero-map-scroll-cue {
+  position: absolute;
+  bottom: 28px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 7px;
+  color: rgba(200,232,215,.45);
+  font-size: .62rem;
+  text-transform: uppercase;
+  letter-spacing: .14em;
+  transition: opacity 350ms ease;
+  white-space: nowrap;
+  pointer-events: none;
+}
+.hero-map-scroll-cue i {
+  position: relative;
+  display: block;
+  width: 24px;
+  height: 20px;
+  animation: scroll-bounce 2.1s ease-in-out infinite;
+}
+.hero-map-scroll-cue i::before,
+.hero-map-scroll-cue i::after {
+  content: '';
+  position: absolute;
+  left: 4px;
+  width: 14px;
+  height: 14px;
+  border-right: 2.5px solid;
+  border-bottom: 2.5px solid;
+  transform: rotate(45deg);
+}
+.hero-map-scroll-cue i::before { top: 0;  border-color: rgba(168,224,106,.28); }
+.hero-map-scroll-cue i::after  { top: 6px; border-color: rgba(168,224,106,.76); }
+@keyframes scroll-bounce {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(8px); }
+}
+
+/* ── Responsive ──────────────────────────────────────────────── */
+@media (max-width: 1100px) {
+  .hero-map-copy { width: 56%; }
+  #hero-map-container { left: 44%; width: 56%; }
+}
+@media (max-width: 900px) {
+  .hero-map-section {
+    min-height: auto;
+    height: auto;
+    max-height: none;
+  }
+  .hero-map-copy {
+    width: 100%;
+    max-width: 100%;
+    padding: 80px 5vw 220px;
+    justify-content: flex-start;
+    background: linear-gradient(
+      to bottom,
+      var(--hero-bg) 0%,
+      var(--hero-bg) 60%,
+      rgba(14,45,34,.0) 100%
+    );
+  }
+  .hero-map-copy .home-hero-message {
+    height: 160px;
+    min-height: 160px;
+    max-height: 160px;
+  }
+  #hero-map-container {
+    left: 0;
+    width: 100%;
+    top: 38%;
+    height: 62%;
+    -webkit-mask-image: linear-gradient(
+      to bottom,
+      transparent 0%,
+      rgba(0,0,0,.4) 15%,
+      #000 40%,
+      #000 85%,
+      transparent 100%
+    );
+    mask-image: linear-gradient(
+      to bottom,
+      transparent 0%,
+      rgba(0,0,0,.4) 15%,
+      #000 40%,
+      #000 85%,
+      transparent 100%
+    );
+  }
+  #hudWrapper {
+    top: auto;
+    bottom: 72px;
+    transform: none;
+    padding: 16px 0 16px 40px;
+  }
+  .hud-dock.is-expanded {
+    width: calc(100vw - 20px);
+    border-radius: 16px;
+  }
+  .hud-pill-trigger {
+    padding: 8px 14px 8px 16px;
+  }
+  .hero-map-scroll-cue { left: 50%; }
+}
+@media (max-width: 600px) {
+  .hero-map-copy h1 { font-size: clamp(1.85rem, 8.5vw, 2.75rem); }
+  .hero-map-copy .home-hero-lead { font-size: .93rem; }
+}
+
+/* ── Reduced motion ──────────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  .hero-prov-path,
+  .hero-unit-path,
+  .hud-dock,
+  #pak-tooltip,
+  .hero-map-scroll-cue i,
+  .pulse-mark { animation: none !important; transition: none !important; }
+}
