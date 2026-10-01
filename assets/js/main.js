@@ -209,7 +209,32 @@ document.addEventListener("DOMContentLoaded", () => {
       menuButton.setAttribute("aria-expanded", String(isOpen));
     });
     buildEnhancedNavigation(nav);
+
+    // Close mobile drawer on outside click or escape
+    document.addEventListener("click", (event) => {
+      if (nav.classList.contains("is-open") && !nav.contains(event.target) && !menuButton.contains(event.target)) {
+        nav.classList.remove("is-open");
+        menuButton.setAttribute("aria-expanded", "false");
+      }
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape" && nav.classList.contains("is-open")) {
+        nav.classList.remove("is-open");
+        menuButton.setAttribute("aria-expanded", "false");
+      }
+    });
   }
+
+  // Defensive table containment: ensure every data table is wrapped in a touch-scrollable container
+  document.querySelectorAll("table").forEach((table) => {
+    if (!table.closest(".table-wrap")) {
+      const wrap = document.createElement("div");
+      wrap.className = "table-wrap";
+      table.parentNode.insertBefore(wrap, table);
+      wrap.appendChild(table);
+    }
+  });
 
   document.querySelectorAll("[data-current-year]").forEach((element) => {
     element.textContent = new Date().getFullYear();
@@ -226,3 +251,4 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+
