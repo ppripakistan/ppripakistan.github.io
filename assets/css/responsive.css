@@ -21,12 +21,23 @@ body {
 }
 
 img:not(.leaflet-tile),
-svg,
+svg:not(.leaflet-zoom-animated):not([class*="leaflet"]),
 video,
-canvas,
+canvas:not(.leaflet-pane canvas),
 iframe {
   max-width: 100%;
   height: auto;
+}
+
+/* Strictly protect Leaflet map vector layers, panes, and geographic masks */
+.leaflet-container svg,
+.leaflet-pane svg,
+.leaflet-zoom-animated,
+.leaflet-overlay-pane svg {
+  max-width: none !important;
+  max-height: none !important;
+  height: initial !important;
+  width: initial !important;
 }
 
 /* Text Wrapping & Overflow Defenses */
@@ -339,13 +350,6 @@ code {
   form[action*="search.html"] .btn,
   form[action*="search.html"] button {
     width: 100%;
-  }
-
-  /* Touch-Action on Map Displays */
-  .p6-map,
-  .p6-scenario-map,
-  #hero-pakistan-map {
-    touch-action: pan-x pan-y;
   }
 }
 
