@@ -49,18 +49,97 @@
     <main id="main-content">
       <section class="page-hero">
         <div class="container">
-          <span class="eyebrow">404</span>
-          <h1>Page not found</h1>
+          <span class="hub-badge" style="background: rgba(220, 38, 38, 0.12); color: #b91c1c;">404 — Page Not Found</span>
+          <h1>We Couldn't Find That Resource</h1>
           <p>
-            The requested page does not exist in this version of the PPRI
-            website.
+            The link you followed may be outdated, or the publication may have been relocated within our new research taxonomy. Use the search bar below or jump directly to our core repositories.
           </p>
         </div>
       </section>
+
       <section class="section">
-        <div class="container content">
-          <h2>Return home</h2>
-          <p>Use the main navigation or return to the homepage.</p>
+        <div class="container">
+          <!-- Search Recovery Form -->
+          <div style="max-width: 650px; margin: -20px auto 40px; background: #fff; border: 1px solid var(--line); border-radius: var(--radius); padding: 18px 24px; box-shadow: var(--shadow);">
+            <form action="/search.html" method="get" style="display: flex; gap: 10px;">
+              <input type="search" name="q" placeholder="Search policy papers, datasets, legal provisions..." style="flex-grow: 1; padding: 12px 16px; border: 1px solid var(--line); border-radius: var(--radius); font-size: 0.95rem;" required>
+              <button type="submit" class="btn btn-primary" style="padding: 12px 22px; cursor: pointer;">Search</button>
+            </form>
+          </div>
+
+          <!-- Quick Destination Cards -->
+          <div class="hub-section-title">
+            <h2>Frequently Accessed Portals</h2>
+            <span class="section-meta">Direct paths to our primary analytical tools</span>
+          </div>
+
+          <div class="card-feature-grid">
+            <a class="hub-card" href="/maps/scenarios/index.html">
+              <span class="hub-card-tag interactive">Simulation Lab</span>
+              <h3>Interactive Scenario Lab <span>&rarr;</span></h3>
+              <p>Simulate subnational reconfigurations across Pakistan's 134 districts and compute population balances.</p>
+              <div class="hub-card-footer">Launch Scenario Lab</div>
+            </a>
+
+            <a class="hub-card" href="/data/centre.html">
+              <span class="hub-card-tag interactive">Evidence Centre</span>
+              <h3>Data Observatory <span>&rarr;</span></h3>
+              <p>Explore Census 2023 indicators, demographic comparisons, and provincial fiscal distribution charts.</p>
+              <div class="hub-card-footer">Open Observatory</div>
+            </a>
+
+            <a class="hub-card" href="/research/policy-papers/provincial-reorganization-of-pakistan.html">
+              <span class="hub-card-tag highlight">Flagship Treatise</span>
+              <h3>Provincial Reorganization <span>&rarr;</span></h3>
+              <p>Read our foundational long-form policy paper on the constitutional, fiscal, and administrative questions.</p>
+              <div class="hub-card-footer">Read Flagship Paper</div>
+            </a>
+
+            <a class="hub-card" href="/consultation/survey.html">
+              <span class="hub-card-tag">Public Input</span>
+              <h3>Consultation Questionnaire <span>&rarr;</span></h3>
+              <p>Contribute your perspective to PPRI's nationwide consultation on subnational and municipal devolution.</p>
+              <div class="hub-card-footer">Take the Survey</div>
+            </a>
+          </div>
+
+          <!-- Sitemap Shortcuts -->
+          <div class="hub-section-title">
+            <h2>Category Sitemap</h2>
+            <span class="section-meta">Top-level directory navigation</span>
+          </div>
+
+          <div class="grid grid-3">
+            <div class="card">
+              <h3>Research & Publications</h3>
+              <ul style="margin: 8px 0 0; padding-left: 18px; font-size: 0.88rem; line-height: 1.7;">
+                <li><a href="/research/policy-papers/index.html">Policy Papers</a></li>
+                <li><a href="/research/reports/index.html">Research Reports</a></li>
+                <li><a href="/research/briefs/index.html">Policy Briefs</a></li>
+                <li><a href="/articles/index.html">Articles & Analysis</a></li>
+              </ul>
+            </div>
+
+            <div class="card">
+              <h3>Provincial Reform & Law</h3>
+              <ul style="margin: 8px 0 0; padding-left: 18px; font-size: 0.88rem; line-height: 1.7;">
+                <li><a href="/provinces/index.html">Reform Hub</a></li>
+                <li><a href="/provinces/why-provinces.html">Reform Rationales</a></li>
+                <li><a href="/resources/constitution.html">Constitution Reader</a></li>
+                <li><a href="/resources/legislation.html">Local Government Acts</a></li>
+              </ul>
+            </div>
+
+            <div class="card">
+              <h3>Institute & Contact</h3>
+              <ul style="margin: 8px 0 0; padding-left: 18px; font-size: 0.88rem; line-height: 1.7;">
+                <li><a href="/about.html">About PPRI</a></li>
+                <li><a href="/mission.html">Charter & Mandate</a></li>
+                <li><a href="/researchers/index.html">Faculty Directory</a></li>
+                <li><a href="/contact.html">Inquiries & Contact Desk</a></li>
+              </ul>
+            </div>
+          </div>
         </div>
       </section>
     </main>

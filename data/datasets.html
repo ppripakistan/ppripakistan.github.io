@@ -1,41 +1,200 @@
 <!doctype html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>PPRI Datasets | PPRI</title>
+    <title>Open Datasets &amp; Machine-Readable Data | PPRI</title>
+    <meta
+      name="description"
+      content="Download open-access datasets, Census 2023 baselines, GIS GeoJSON boundaries, and source registries provided by PPRI."
+    />
+    <link rel="canonical" href="https://ppripakistan.github.io/data/datasets.html" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Open Datasets &amp; Machine-Readable Data | PPRI" />
+    <meta
+      property="og:description"
+      content="Download open-access datasets, Census 2023 baselines, GIS GeoJSON boundaries, and source registries provided by PPRI."
+    />
+    <meta property="og:image" content="https://ppripakistan.github.io/assets/images/brand/ppri-logo.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@PPRI_Pakistan" />
+    <link rel="icon" href="/assets/images/brand/ppri-favicon.png" />
     <link rel="stylesheet" href="/assets/css/style.css" />
+    <link rel="stylesheet" href="/assets/css/responsive.css" />
   </head>
   <body>
-    <main>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <header class="site-header">
+      <div class="container navbar">
+        <a class="brand" href="/index.html">
+          <img src="/assets/images/brand/ppri-logo-header.jpg" alt="PPRI logo" />
+          <span class="brand-text">
+            <strong>PPRI</strong>
+            <span>Pakistan Provincial Reform Institute</span>
+          </span>
+        </a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-navigation">
+          Menu
+        </button>
+        <nav id="site-navigation" class="nav-links" aria-label="Primary navigation">
+          <a href="/index.html">Home</a>
+          <a href="/research/index.html">Research</a>
+          <a href="/provinces/index.html">Reform</a>
+          <a href="/data/centre.html" aria-current="page">Data</a>
+          <a href="/publications/index.html">Publications</a>
+          <a href="/consultation/index.html">Engage</a>
+          <a href="/about.html">About</a>
+          <a class="nav-search" href="/search.html">Search</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main-content">
       <section class="page-hero">
         <div class="container">
           <span class="eyebrow">Open Research Data</span>
-          <h1>Datasets</h1>
-          <p>Machine-readable data and metadata used by PPRI.</p>
+          <h1>Datasets &amp; Spatial Files</h1>
+          <p>
+            Machine-readable data, Census 2023 provincial baselines, official GIS GeoJSON boundaries,
+            and source registries published under open public licenses for researchers and data journalists.
+          </p>
         </div>
       </section>
+
       <section class="section">
-        <div class="container grid grid-2">
-          <div class="card">
-            <h3>Provincial population — CSV</h3>
-            <p>Census 2023 province-level baseline.</p>
-            <a class="btn btn-primary" href="/data/provinces/provinces-2023.csv"
-              >Download</a
-            >
+        <div class="container">
+          <div class="highlight" style="margin-bottom: 32px;">
+            <h2>Open Access Standard</h2>
+            <p>
+              In accordance with PPRI's <a href="/mission.html">Pillar 5 (Open Data)</a>, all analytical tables,
+              spatial geometry files, and metadata standards are published openly without paywalls.
+              Every dataset includes documented reference periods, collection methodology, and primary source citations.
+            </p>
           </div>
-          <div class="card">
-            <h3>Provincial population — JSON</h3>
-            <p>Machine-readable version for the comparison interface.</p>
-            <a
-              class="btn btn-primary"
-              href="/data/provinces/provinces-2023.json"
-              >Download</a
-            >
+
+          <h2>Core Datasets</h2>
+          <div class="grid grid-2 mt-2">
+            <div class="card">
+              <span class="card-meta">CSV Dataset · 2023 Census Baseline</span>
+              <h3>Provincial Population &amp; Household Baseline</h3>
+              <p>
+                Complete province-wise breakdown of population totals, household counts, gender distribution,
+                and rural/urban ratios from the 7th Population &amp; Housing Census (2023).
+              </p>
+              <div class="mt-2" style="font-size: 0.85rem; color: #5a6e65;">
+                Format: UTF-8 CSV · Size: ~500 B · Source: PBS 2023
+              </div>
+              <div class="actions mt-3">
+                <a class="btn btn-primary" href="/data/provinces/provinces-2023.csv" download>Download CSV ↓</a>
+                <a class="btn btn-ghost" href="/data/provinces/provinces-2023.json" download>JSON Format ↓</a>
+              </div>
+            </div>
+
+            <div class="card">
+              <span class="card-meta">GeoJSON / GIS · Spatial Boundaries</span>
+              <h3>Pakistan Administrative &amp; Scenario Boundaries</h3>
+              <p>
+                Vector polygons for Pakistan’s 4 current constitutional provinces dissolved and segmented
+                into the 16 scenario administrative units used by the PPRI Scenario Lab.
+              </p>
+              <div class="mt-2" style="font-size: 0.85rem; color: #5a6e65;">
+                Format: GeoJSON · Size: ~325 KB · Coordinate System: WGS84
+              </div>
+              <div class="actions mt-3">
+                <a class="btn btn-primary" href="/assets/data/hero-pakistan-geography.json" download>Download GeoJSON ↓</a>
+                <a class="btn btn-ghost" href="/maps/scenarios/index.html">View in Scenario Lab →</a>
+              </div>
+            </div>
+
+            <div class="card">
+              <span class="card-meta">JSON Model · Scenario Lab Model 01</span>
+              <h3>16-Unit Scenario Indicator Dataset</h3>
+              <p>
+                Analytical dataset defining capitals, land area, projected populations, divisional components,
+                and legislative seat projections across all 16 scenario units.
+              </p>
+              <div class="mt-2" style="font-size: 0.85rem; color: #5a6e65;">
+                Format: JSON · Size: ~6.8 KB · Series: PPRI-SCN-01
+              </div>
+              <div class="actions mt-3">
+                <a class="btn btn-primary" href="/data/scenarios/ppri-01.json" download>Download Model JSON ↓</a>
+              </div>
+            </div>
+
+            <div class="card">
+              <span class="card-meta">CSV Registry · Source Documentation</span>
+              <h3>PPRI Primary Source Registry</h3>
+              <p>
+                Complete institutional index of constitutional articles, statutory acts, national census tables,
+                and official federal gazettes cited across PPRI research publications.
+              </p>
+              <div class="mt-2" style="font-size: 0.85rem; color: #5a6e65;">
+                Format: CSV / JSON · Size: ~2.5 KB · Last Updated: 2026
+              </div>
+              <div class="actions mt-3">
+                <a class="btn btn-primary" href="/data/downloads/source_registry.csv" download>Download Registry CSV ↓</a>
+                <a class="btn btn-ghost" href="/sources/index.html">Browse Online →</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="highlight mt-4">
+            <h2>Data Citation Guideline</h2>
+            <p>
+              When citing PPRI datasets in academic papers, policy briefs, or media visualizations, please use:
+              <br />
+              <code style="display: block; margin-top: 8px; padding: 10px; background: rgba(0,0,0,0.04); border-radius: 6px;">
+                Pakistan Provincial Reform Institute (PPRI). (2026). Open Research Datasets: Census 2023 Baseline and Administrative Scenario Layers. Retrieved from https://ppripakistan.github.io/data/datasets.html
+              </code>
+            </p>
           </div>
         </div>
       </section>
     </main>
-    <script src="/assets/js/modules/phase6-observatory.js" defer></script>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div>
+          <img src="/assets/images/brand/ppri-logo-header.jpg" alt="PPRI" class="footer-logo" />
+          <p>Pakistan Provincial Reform Institute</p>
+          <p>
+            Independent policy research on provincial reform, federalism, decentralization
+            and institutional design in Pakistan.
+          </p>
+        </div>
+        <div>
+          <h3>Research</h3>
+          <ul class="footer-links">
+            <li><a href="/research/policy-papers/index.html">Policy Papers</a></li>
+            <li><a href="/research/reports/index.html">Reports</a></li>
+            <li><a href="/research/briefs/index.html">Policy Briefs</a></li>
+            <li><a href="/research/working-papers/index.html">Working Papers</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Explore</h3>
+          <ul class="footer-links">
+            <li><a href="/maps/scenarios/index.html">Scenario Lab</a></li>
+            <li><a href="/data/centre.html">Data Centre</a></li>
+            <li><a href="/maps/index.html">Maps</a></li>
+            <li><a href="/methodology/index.html">Methodology</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Connect</h3>
+          <ul class="footer-links">
+            <li><a href="https://x.com/PPRI_Pakistan" rel="me">X / @PPRI_Pakistan</a></li>
+            <li><a href="/consultation/index.html">Public Consultation</a></li>
+            <li><a href="/consultation/submissions.html">Submit an idea</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        <span>© <span data-current-year></span> Pakistan Provincial Reform Institute</span>
+        <span><a href="/privacy.html">Privacy</a> · <a href="/terms.html">Terms</a> · <a href="/sitemap.xml">Sitemap</a></span>
+      </div>
+    </footer>
+    <script src="/assets/js/main.js" defer></script>
   </body>
 </html>

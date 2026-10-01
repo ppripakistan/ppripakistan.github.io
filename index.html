@@ -6,42 +6,68 @@
     <title>Pakistan Provincial Reform Institute | PPRI</title>
     <meta
       name="description"
-      content="PPRI research and evidence on provincial reform, federalism, decentralization and institutional design in Pakistan."
+      content="Pakistan Provincial Reform Institute: research, data, maps and public-policy analysis on provincial reform, governance, federalism and decentralization in Pakistan."
     />
     <link rel="canonical" href="https://ppripakistan.github.io/" />
     <meta property="og:type" content="website" />
-    <meta
-      property="og:title"
-      content="Pakistan Provincial Reform Institute | PPRI"
-    />
+    <meta property="og:title" content="Pakistan Provincial Reform Institute | PPRI" />
     <meta
       property="og:description"
-      content="PPRI research and evidence on provincial reform, federalism, decentralization and institutional design in Pakistan."
+      content="Research, data, maps and public-policy analysis on provincial reform, governance, federalism and decentralization in Pakistan."
     />
     <meta
       property="og:image"
       content="https://ppripakistan.github.io/assets/images/brand/ppri-logo.jpg"
     />
+    <meta property="og:url" content="https://ppripakistan.github.io/" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@PPRI_Pakistan" />
+    <meta name="twitter:title" content="Pakistan Provincial Reform Institute | PPRI" />
+    <meta
+      name="twitter:description"
+      content="Research, data, maps and public-policy analysis on provincial reform, governance, federalism and decentralization in Pakistan."
+    />
+    <meta
+      name="twitter:image"
+      content="https://ppripakistan.github.io/assets/images/brand/ppri-logo.jpg"
+    />
+    <meta name="theme-color" content="#073c3a" />
     <link rel="icon" href="/assets/images/brand/ppri-favicon.png" />
     <link rel="stylesheet" href="/assets/css/style.css" />
     <link rel="stylesheet" href="/assets/css/responsive.css" />
     <link rel="stylesheet" href="/assets/css/phase6.css" />
+    <link rel="stylesheet" href="/assets/css/homepage.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="" />
+    <link rel="stylesheet" href="/assets/css/hero-map.css" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Pakistan Provincial Reform Institute",
+        "alternateName": "PPRI",
+        "url": "https://ppripakistan.github.io/",
+        "logo": "https://ppripakistan.github.io/assets/images/brand/ppri-logo.jpg",
+        "sameAs": ["https://x.com/PPRI_Pakistan"],
+        "description": "Research and public-policy analysis on provincial reform, governance, federalism and decentralization in Pakistan."
+      }
+    </script>
   </head>
-  <body>
+  <body class="home-page">
     <a class="skip-link" href="#main-content">Skip to content</a>
-    <header class="site-header">
+    <div class="home-page-progress" data-page-progress aria-hidden="true"><span></span></div>
+
+    <header class="site-header home-header">
       <div class="container navbar">
-        <a class="brand" href="/index.html"
-          ><img
-            src="/assets/images/brand/ppri-logo-header.jpg"
-            alt="PPRI logo"
-          /><span class="brand-text"
-            ><strong>PPRI</strong
-            ><span>Pakistan Provincial Reform Institute</span></span
-          ></a
-        ><button
+        <a class="brand" href="/index.html">
+          <span class="home-brand-badge">
+            <img src="/assets/images/brand/ppri-logo-header.jpg" alt="PPRI logo" />
+          </span>
+          <span class="brand-text">
+            <strong>PPRI</strong>
+            <span>Pakistan Provincial Reform Institute</span>
+          </span>
+        </a>
+        <button
           class="menu-toggle"
           type="button"
           aria-expanded="false"
@@ -49,322 +75,467 @@
         >
           Menu
         </button>
-        <nav
-          id="site-navigation"
-          class="nav-links"
-          aria-label="Primary navigation"
-        >
-          <a href="/index.html" aria-current="page">Home</a
-          ><a href="/research/index.html">Research</a
-          ><a href="/provinces/index.html">Reform</a
-          ><a href="/data/centre.html">Data</a
-          ><a href="/publications/index.html">Publications</a
-          ><a href="/consultation/index.html">Engage</a
-          ><a href="/about.html">About</a
-          ><a class="nav-search" href="/search.html">Search</a>
+        <nav id="site-navigation" class="nav-links" aria-label="Primary navigation">
+          <a href="/index.html" aria-current="page">Home</a>
+          <a href="/research/index.html">Research</a>
+          <a href="/provinces/index.html">Reform</a>
+          <a href="/data/centre.html">Data</a>
+          <a href="/publications/index.html">Publications</a>
+          <a href="/consultation/index.html">Engage</a>
+          <a href="/about.html">About</a>
+          <a class="nav-search" href="/search.html" title="Search PPRI (Press ⌘K or Ctrl+K)">Search <kbd aria-hidden="true">⌘K</kbd></a>
         </nav>
       </div>
     </header>
+
     <main id="main-content">
-      <section class="hero">
-        <div class="container">
-          <span class="hero-kicker"
-            >Pakistan Provincial Reform Institute · Research · Evidence · Public
-            Debate</span
-          >
-          <h1>
-            Pakistan's administrative future is too important to leave to
-            <strong>slogans.</strong>
-          </h1>
-          <p>
-            PPRI examines how Pakistan organizes political authority, public
-            resources, representation and service delivery across the
-            federation, provinces and local governments.
+      <section class="home-hero hero-map-section" id="section-hero" aria-labelledby="home-title">
+        <div class="home-hero-gridlines" aria-hidden="true"></div>
+
+        <!-- Left-side radial scrim keeps copy 100% legible over map -->
+        <div id="hero-scrim" aria-hidden="true"></div>
+
+        <!-- Authentic Pakistan Map — Leaflet.js real vector borders (right column) -->
+        <div id="hero-map-container" class="hero-leaflet-map" aria-hidden="true"></div>
+
+        <!-- Hero copy — left side, always above scrim (z-index 4) -->
+        <div class="hero-map-copy">
+          <div class="home-kicker">
+            <span class="pulse-mark" aria-hidden="true"></span>
+            Pakistan Provincial Reform Institute · Research platform
+          </div>
+          <div class="home-hero-message" data-hero-message>
+            <h1 id="home-title">
+              <span data-hero-line-one>Study the structure.</span>
+              <span data-hero-line-two>Test the alternatives.</span>
+            </h1>
+          </div>
+          <p class="home-hero-lead">
+            PPRI examines how governance, representation, public resources and
+            administrative institutions are organized across Pakistan — from the
+            federation to provinces and local government.
           </p>
-          <div class="actions">
-            <a
-              class="btn btn-primary"
-              href="/research/policy-papers/provincial-reorganization-of-pakistan.html"
-              >Read the flagship paper</a
-            ><a class="btn btn-outline" href="/data/centre.html"
-              >Explore the evidence</a
-            ><a class="btn btn-outline" href="/consultation/survey.html"
-              >Join the debate</a
-            >
+          <div class="home-actions">
+            <a class="btn btn-home-primary" href="/maps/scenarios/index.html">
+              Explore the Scenario Lab <span aria-hidden="true">→</span>
+            </a>
+            <a class="btn btn-home-outline" href="/research/policy-papers/provincial-reorganization-of-pakistan.html">
+              Read the flagship paper
+            </a>
           </div>
-          <div class="hero-note">
-            Research platform · English · Static public archive · Evidence and
-            sources identified throughout
+          <div class="home-hero-note">
+            <span>Evidence-led research</span>
+            <span>Illustrative scenarios are labelled</span>
+            <span>Sources identified throughout</span>
           </div>
         </div>
-      </section>
-      <section class="section">
-        <div class="container">
-          <div class="quick-grid">
-            <a href="/provinces/constitutional-framework.html"
-              ><strong>Constitution</strong
-              ><span>What the legal framework requires</span></a
-            ><a href="/provinces/administrative-model.html"
-              ><strong>Administration</strong
-              ><span>How institutions and services reach citizens</span></a
-            ><a href="/provinces/fiscal-framework.html"
-              ><strong>Fiscal federalism</strong
-              ><span>Revenue, transfers and expenditure questions</span></a
-            ><a href="/provinces/local-government.html"
-              ><strong>Local government</strong
-              ><span>Devolution below the provincial level</span></a
-            >
-          </div>
+
+        <!-- Research Desk HUD — #hudWrapper provides buffer zone to prevent jitter -->
+        <div id="hudWrapper">
+          <div class="hud-dock" id="hudDock" role="complementary"
+               aria-label="Research desk" aria-expanded="false">
+
+            <!-- Minimized sleek horizontal pill tab -->
+            <div class="hud-pill-trigger" id="hudTrigger" aria-label="Open Research Desk">
+              <span class="hud-pill-text">Research Desk</span>
+              <span class="hud-pill-arrow" aria-hidden="true">←</span>
+            </div>
+
+            <!-- Close button (visible when expanded) -->
+            <button class="hud-close" id="hudClose" aria-label="Collapse research desk">&#215;</button>
+
+            <!-- Expanded card content (Modern Light Theme) -->
+            <div class="hud-card">
+              <div class="hud-card-header">
+                <span class="hud-card-title">On the research desk</span>
+                <span class="hud-live-badge"><i aria-hidden="true"></i> Active work</span>
+              </div>
+              <a class="hud-item" href="/maps/scenarios/index.html">
+                <span class="hud-item-num">01</span>
+                <span class="hud-item-copy">
+                  <strong>PPRI-01 Scenario Lab</strong>
+                  <small>Explore a first-pass administrative model and move from viewing to experimentation.</small>
+                </span>
+                <span class="hud-item-arrow">&#8599;</span>
+              </a>
+              <a class="hud-item" href="/data/centre.html">
+                <span class="hud-item-num">02</span>
+                <span class="hud-item-copy">
+                  <strong>Data Observatory</strong>
+                  <small>Population, geography, scale and source-linked evidence for the research programme.</small>
+                </span>
+                <span class="hud-item-arrow">&#8599;</span>
+              </a>
+              <a class="hud-item" href="/research/policy-papers/provincial-reorganization-of-pakistan.html">
+                <span class="hud-item-num">03</span>
+                <span class="hud-item-copy">
+                  <strong>Flagship policy paper</strong>
+                  <small>Constitutional, administrative, fiscal, demographic and local-government questions.</small>
+                </span>
+                <span class="hud-item-arrow">&#8599;</span>
+              </a>
+              <div class="hud-foot">
+                <span>PPRI / Research Desk</span>
+                <span>2026</span>
+              </div>
+            </div><!-- /.hud-card -->
+
+          </div><!-- /.hud-dock -->
+        </div><!-- /#hudWrapper -->
+
+        <!-- Cursor-following tooltip (populated by hero-map.js) -->
+        <div id="pak-tooltip" role="tooltip" aria-live="polite">
+          <span class="tt-name"></span>
+          <span class="tt-province"></span>
+          <div class="tt-meta"></div>
+        </div>
+
+        <!-- Scroll cue — bouncing double-chevron -->
+        <div class="hero-map-scroll-cue" aria-hidden="true">
+          <span>Scroll into the research</span>
+          <i></i>
         </div>
       </section>
-      <section class="section section-soft">
+
+      <section class="home-section home-latest-section" id="section-latest" aria-labelledby="latest-title">
         <div class="container">
-          <div class="section-head">
+          <div class="home-section-head" data-reveal>
             <div>
-              <span class="eyebrow">Why this matters</span>
-              <h2>A national question with local consequences.</h2>
+              <span class="home-section-label">Latest work</span>
+              <h2 id="latest-title">What PPRI is publishing and building.</h2>
             </div>
-            <p>
-              Territorial reform is not only a question of drawing lines. It can
-              affect constitutional institutions, budgets, public
-              administration, representation and the distance between citizens
-              and government.
-            </p>
+            <a class="btn btn-ghost" href="/publications/index.html">View the publication library →</a>
           </div>
-          <div class="fact-grid">
-            <div class="fact">
-              <strong>241.50m</strong
-              ><span>Pakistan's 2023 census population.</span>
-            </div>
-            <div class="fact">
-              <strong>4</strong
-              ><span>Provinces in the constitutional provincial baseline.</span>
-            </div>
-            <div class="fact">
-              <strong>140A</strong
-              ><span
-                >Constitutional provision on local-government devolution.</span
-              >
+
+          <div class="home-feature-layout" data-reveal>
+            <article class="featured-publication" data-featured-publication>
+              <div class="featured-glow" aria-hidden="true"></div>
+              <div class="featured-copy">
+                <span class="card-meta" data-feature-type>Policy Paper · PPRI-PP-001 · September 2026</span>
+                <h3 data-feature-title>The Provincial Reorganization of Pakistan</h3>
+                <p data-feature-summary>
+                  A research framework examining constitutional, administrative, fiscal,
+                  demographic and local-government questions around provincial reorganization.
+                </p>
+              </div>
+              <div class="featured-footer">
+                <div class="home-actions">
+                  <a class="btn btn-home-light" data-feature-link href="/research/policy-papers/provincial-reorganization-of-pakistan.html">Open research</a>
+                  <a class="featured-text-link" data-feature-download href="/documents/policy-papers/PPRI-PP-001.pdf">Download PDF <span aria-hidden="true">↗</span></a>
+                </div>
+                <span class="featured-tag">Flagship research</span>
+              </div>
+            </article>
+
+            <div class="latest-stack" data-homefeed aria-label="Latest secondary research">
+              <a class="latest-card" href="/research/briefs/administrative-scale.html">
+                <span class="card-meta">Policy Brief</span>
+                <h3>Administrative Scale &amp; Representation</h3>
+                <p>A framework for studying scale, geographic access and representation without assuming that smaller or larger units are automatically preferable.</p>
+                <span class="home-card-link">Open publication <span aria-hidden="true">→</span></span>
+              </a>
+              <a class="latest-card" href="/research/working-papers/provinces-local-government.html">
+                <span class="card-meta">Working Paper</span>
+                <h3>Provinces &amp; Local Government</h3>
+                <p>A comparative framework for examining territorial restructuring alongside constitutional local-government devolution.</p>
+                <span class="home-card-link">Open publication <span aria-hidden="true">→</span></span>
+              </a>
+              <a class="latest-card latest-card-quiet" href="/research/index.html">
+                <span class="card-meta">Research programme</span>
+                <h3>Follow the wider research agenda</h3>
+                <p>Move from individual publications into the connected questions PPRI is studying across institutions, geography and public finance.</p>
+                <span class="home-card-link">Explore research <span aria-hidden="true">→</span></span>
+              </a>
             </div>
           </div>
-          <p class="source-note">
-            Sources: Pakistan Bureau of Statistics Census 2023; Constitution of
-            Pakistan.
-          </p>
+          <p class="home-note">New homepage highlights are managed through <code>/content/homepage.json</code> so the editorial layer can grow without redesigning the page.</p>
         </div>
       </section>
-      <section class="section">
+
+      <section class="home-section home-scenario-section" id="section-scenario" aria-labelledby="scenario-title">
         <div class="container">
-          <div class="feature">
-            <div class="feature-main">
-              <span class="card-meta">Flagship Policy Paper · PPRI-PP-001</span>
-              <h2>The Provincial Reorganization of Pakistan</h2>
+          <div class="scenario-intro" data-reveal>
+            <div>
+              <span class="home-section-label">Interactive research</span>
+              <h2 id="scenario-title">See the question on the map.</h2>
               <p>
-                This paper examines constitutional, administrative, fiscal,
-                demographic and local-government questions around provincial
-                reorganization.
+                The Scenario Lab turns administrative reform from an abstract debate into
+                something you can inspect. Start with the current geography, switch to the
+                PPRI-01 illustrative model, then open the full lab to edit district assignments.
               </p>
-              <div class="actions">
-                <a
-                  class="btn btn-primary"
-                  href="/research/policy-papers/provincial-reorganization-of-pakistan.html"
-                  >Read online</a
-                ><a
-                  class="btn btn-ghost"
-                  href="/documents/policy-papers/PPRI-PP-001.pdf"
-                  >Download PDF</a
-                >
+            </div>
+            <div class="scenario-path" aria-label="Scenario Lab workflow">
+              <span><b>01</b> View</span>
+              <i aria-hidden="true"></i>
+              <span><b>02</b> Compare</span>
+              <i aria-hidden="true"></i>
+              <span><b>03</b> Edit</span>
+            </div>
+          </div>
+
+          <div class="scenario-preview-shell" data-reveal>
+            <div class="scenario-preview-topbar">
+              <div>
+                <span class="preview-live"><i aria-hidden="true"></i> Live map preview</span>
+                <strong data-preview-title>PPRI-01 · illustrative scenario</strong>
+              </div>
+              <div class="scenario-switcher" role="group" aria-label="Map preview model">
+                <button type="button" class="is-active" data-preview-mode="ppri">PPRI-01</button>
+                <button type="button" data-preview-mode="current">Current</button>
               </div>
             </div>
-            <aside class="feature-side">
-              <span class="badge">PPRI approach</span>
-              <h3>Evidence before conclusions.</h3>
-              <p>
-                Arguments are separated from facts, sources are identified, and
-                competing reform models are examined on institutional and fiscal
-                implications.
-              </p>
-            </aside>
+
+            <div class="scenario-preview-frame">
+              <div class="scenario-frame-corner scenario-frame-corner-tl" aria-hidden="true"></div>
+              <div class="scenario-frame-corner scenario-frame-corner-tr" aria-hidden="true"></div>
+              <div class="scenario-frame-corner scenario-frame-corner-bl" aria-hidden="true"></div>
+              <div class="scenario-frame-corner scenario-frame-corner-br" aria-hidden="true"></div>
+              <div class="scenario-map-badge">
+                <span>Pakistan</span>
+                <small data-preview-badge>PPRI-01 model</small>
+              </div>
+              <iframe
+                id="homeMapPreview"
+                title="Interactive preview of the PPRI-01 scenario map"
+                src="/maps/scenarios/index.html?embed=1"
+                loading="lazy"
+              ></iframe>
+              <div class="scenario-frame-note">Pan and zoom here · open the full lab to edit</div>
+            </div>
+
+            <div class="scenario-preview-bottom">
+              <div class="scenario-explanation">
+                <span class="scenario-mini-label">What you're seeing</span>
+                <p data-preview-copy>
+                  The live PPRI-01 preview uses the same scenario map that powers the full Scenario Lab.
+                  It is illustrative, editable and separate from enacted administrative boundaries.
+                </p>
+              </div>
+              <div class="scenario-actions">
+                <a class="btn btn-primary" href="/maps/scenarios/index.html">Open the full Scenario Lab <span aria-hidden="true">→</span></a>
+                <a class="scenario-text-link" href="/maps/methodology.html">Read the map methodology</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="scenario-footnote" data-reveal>
+            <span>Illustrative model</span>
+            <span>District-based building blocks</span>
+            <span>Federal overlays treated separately</span>
+            <span>Edits stay in your browser until exported/shared</span>
           </div>
         </div>
       </section>
-      <section class="section section-soft">
+
+      <section class="home-section home-question-section" id="section-questions" aria-labelledby="questions-title">
         <div class="container">
-          <div class="section-head">
+          <div class="home-section-head" data-reveal>
             <div>
-              <span class="eyebrow">Research programme</span>
-              <h2>Six questions. One connected system.</h2>
+              <span class="home-section-label">Start with a question</span>
+              <h2 id="questions-title">You do not need a policy degree to begin.</h2>
             </div>
+            <p>Choose a question, then follow it into research, data, maps and legal sources.</p>
           </div>
-          <div class="grid grid-3">
-            <a
-              class="card card-link"
-              href="/provinces/constitutional-framework.html"
-              ><span class="card-meta">01 · Constitutional</span>
-              <h3>Can it be done lawfully?</h3>
-              <p>
-                Constitutional amendment, provincial consent and institutional
-                procedure.
-              </p></a
-            ><a
-              class="card card-link"
-              href="/provinces/administrative-model.html"
-              ><span class="card-meta">02 · Administrative</span>
-              <h3>Can institutions be built?</h3>
-              <p>
-                Departments, civil services, courts, capital locations and
-                service networks.
-              </p></a
-            ><a class="card card-link" href="/provinces/fiscal-framework.html"
-              ><span class="card-meta">03 · Fiscal</span>
-              <h3>Can it be financed?</h3>
-              <p>
-                Revenue, transfers, assets, liabilities and transition
-                expenditure.
-              </p></a
-            ><a class="card card-link" href="/data/centre.html"
-              ><span class="card-meta">04 · Evidence</span>
-              <h3>What do the numbers show?</h3>
-              <p>
-                Population, density, geography and future socioeconomic
-                indicators.
-              </p></a
-            ><a class="card card-link" href="/maps/index.html"
-              ><span class="card-meta">05 · Geography</span>
-              <h3>Where are the boundaries?</h3>
-              <p>
-                Current official geography and clearly labelled analytical
-                scenarios.
-              </p></a
-            ><a class="card card-link" href="/provinces/local-government.html"
-              ><span class="card-meta">06 · Decentralization</span>
-              <h3>What should stay local?</h3>
-              <p>
-                Provincial restructuring and local empowerment should be tested
-                together.
-              </p></a
-            >
+
+          <div class="question-workbench" data-reveal>
+            <div class="question-rail" role="tablist" aria-label="Research questions">
+              <button class="question-tab is-active" type="button" role="tab" aria-selected="true" data-question="0">
+                <span>01</span><strong>Why are new provinces being discussed?</strong>
+              </button>
+              <button class="question-tab" type="button" role="tab" aria-selected="false" data-question="1">
+                <span>02</span><strong>Could stronger local government address some of the same issues?</strong>
+              </button>
+              <button class="question-tab" type="button" role="tab" aria-selected="false" data-question="2">
+                <span>03</span><strong>What would reform need to finance?</strong>
+              </button>
+              <button class="question-tab" type="button" role="tab" aria-selected="false" data-question="3">
+                <span>04</span><strong>What would the constitutional process involve?</strong>
+              </button>
+              <button class="question-tab" type="button" role="tab" aria-selected="false" data-question="4">
+                <span>05</span><strong>What does the evidence show?</strong>
+              </button>
+              <button class="question-tab" type="button" role="tab" aria-selected="false" data-question="5">
+                <span>06</span><strong>What could a different map look like?</strong>
+              </button>
+            </div>
+
+            <div class="question-panel" aria-live="polite">
+              <span class="question-panel-kicker" data-question-kicker>Research question 01</span>
+              <h3 data-question-title>Why are new provinces being discussed?</h3>
+              <p data-question-copy>
+                Explore arguments about representation, administrative reach, geographic scale,
+                public services, reservations and alternative reform pathways.
+              </p>
+              <div class="question-links">
+                <a class="btn btn-primary" data-question-link href="/provinces/why-provinces.html">Explore this question →</a>
+                <span class="question-route" data-question-route>Question → evidence → reform options</span>
+              </div>
+              <div class="question-signal" aria-hidden="true">
+                <span></span><span></span><span></span><span></span><span></span>
+              </div>
+            </div>
           </div>
         </div>
       </section>
-      <section class="section">
+
+      <section class="home-section home-research-section" id="section-research" aria-labelledby="research-title">
         <div class="container">
-          <div class="section-head">
+          <div class="home-section-head" data-reveal>
             <div>
-              <span class="eyebrow">Public debate</span>
-              <h2>Ask the difficult questions.</h2>
+              <span class="home-section-label">Research programme</span>
+              <h2 id="research-title">One reform question, six connected lenses.</h2>
             </div>
-            <a class="btn btn-ghost" href="/consultation/index.html"
-              >Public consultation</a
-            >
+            <a class="btn btn-ghost" href="/research/agenda.html">View research agenda →</a>
           </div>
-          <div class="grid grid-3">
-            <div class="card">
-              <h3>Would smaller provinces improve representation?</h3>
-              <p>
-                Examine population scale, institutional access and
-                representation without assuming the answer.
-              </p>
+
+          <div class="research-flow" data-reveal aria-label="PPRI research lenses">
+            <span class="research-flow-node is-active"><b>01</b> Constitutional</span>
+            <i aria-hidden="true"></i>
+            <span class="research-flow-node"><b>02</b> Administrative</span>
+            <i aria-hidden="true"></i>
+            <span class="research-flow-node"><b>03</b> Fiscal</span>
+            <i aria-hidden="true"></i>
+            <span class="research-flow-node"><b>04</b> Demography</span>
+            <i aria-hidden="true"></i>
+            <span class="research-flow-node"><b>05</b> Local government</span>
+            <i aria-hidden="true"></i>
+            <span class="research-flow-node"><b>06</b> Implementation</span>
+          </div>
+
+          <div class="research-grid">
+            <a class="research-card" href="/provinces/constitutional-framework.html" data-reveal>
+              <span class="card-number">01</span>
+              <h3>Constitutional framework</h3>
+              <p>What the governing legal process requires before an administrative change can become law.</p>
+            </a>
+            <a class="research-card" href="/provinces/administrative-model.html" data-reveal>
+              <span class="card-number">02</span>
+              <h3>Administrative design</h3>
+              <p>Institutions, civil services, courts, capital locations and service networks.</p>
+            </a>
+            <a class="research-card" href="/provinces/fiscal-framework.html" data-reveal>
+              <span class="card-number">03</span>
+              <h3>Fiscal federalism</h3>
+              <p>Revenue, transfers, assets, liabilities and the cost of transition.</p>
+            </a>
+            <a class="research-card" href="/data/demographics.html" data-reveal>
+              <span class="card-number">04</span>
+              <h3>Demography &amp; scale</h3>
+              <p>Population, density, geography and the way administrative scale changes the policy picture.</p>
+            </a>
+            <a class="research-card" href="/provinces/local-government.html" data-reveal>
+              <span class="card-number">05</span>
+              <h3>Local government</h3>
+              <p>Provincial restructuring and devolution below the provincial level should be examined together.</p>
+            </a>
+            <a class="research-card" href="/provinces/transition-framework.html" data-reveal>
+              <span class="card-number">06</span>
+              <h3>Implementation pathways</h3>
+              <p>Sequencing, institutions, personnel, assets and transition arrangements.</p>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="home-section home-platform-section" id="section-platform" aria-labelledby="platform-title">
+        <div class="container">
+          <div class="platform-shell" data-reveal>
+            <div class="platform-intro">
+              <span class="home-section-label">Explore the platform</span>
+              <h2 id="platform-title">Move between the evidence, the map and the argument.</h2>
+              <p>PPRI is designed as a connected research environment rather than a stack of unrelated pages.</p>
             </div>
-            <div class="card">
-              <h3>Could stronger local government achieve similar goals?</h3>
-              <p>
-                Article 140A places political, administrative and financial
-                devolution to elected local representatives in the
-                constitutional framework.
-              </p>
-            </div>
-            <div class="card">
-              <h3>What would reform cost?</h3>
-              <p>
-                New institutions require transition planning, assets and
-                liabilities, personnel arrangements and sustainable financing.
-              </p>
+            <div class="platform-grid">
+              <a class="platform-card" href="/data/centre.html"><span>Data Observatory</span><small>Evidence, indicators and source notes</small><b>↗</b></a>
+              <a class="platform-card" href="/maps/current/administrative.html"><span>Current geography</span><small>Reference map for the existing administrative structure</small><b>↗</b></a>
+              <a class="platform-card" href="/sources/index.html"><span>Source library</span><small>Institutional, academic and independent source pathways</small><b>↗</b></a>
+              <a class="platform-card" href="/methodology/research-standards.html"><span>Research standards</span><small>Evidence, interpretation and scenario boundaries</small><b>↗</b></a>
             </div>
           </div>
         </div>
       </section>
-      <section class="section section-dark">
+
+      <section class="home-section home-evidence-section" id="section-evidence" aria-labelledby="evidence-title">
+        <div class="container">
+          <div class="home-section-head" data-reveal>
+            <div>
+              <span class="home-section-label">How to read PPRI</span>
+              <h2 id="evidence-title">Evidence, interpretation and scenarios stay distinct.</h2>
+            </div>
+          </div>
+          <div class="evidence-process" data-reveal>
+            <div class="evidence-step"><span>01</span><strong>Source</strong><p>Start with an identified document, dataset or institutional source.</p></div>
+            <div class="evidence-connector" aria-hidden="true"></div>
+            <div class="evidence-step"><span>02</span><strong>Analysis</strong><p>Separate calculation and interpretation from the underlying record.</p></div>
+            <div class="evidence-connector" aria-hidden="true"></div>
+            <div class="evidence-step"><span>03</span><strong>Scenario</strong><p>Label illustrative models clearly instead of presenting them as enacted facts.</p></div>
+            <div class="evidence-connector" aria-hidden="true"></div>
+            <div class="evidence-step"><span>04</span><strong>Public discussion</strong><p>Bring questions, reservations and alternative ideas back into the research cycle.</p></div>
+          </div>
+          <div class="trust-strip" data-reveal>
+            <span>Official data</span>
+            <span>Academic research</span>
+            <span>Think tanks</span>
+            <span>International research</span>
+            <a href="/methodology/research-standards.html">Read the standards →</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="home-section home-participation-section" id="section-participation" aria-labelledby="participation-title">
+        <div class="container">
+          <div class="participation" data-reveal>
+            <div class="participation-copy">
+              <span class="home-section-label">Public participation</span>
+              <h2 id="participation-title">Bring a question, reservation or reform idea.</h2>
+              <p>
+                PPRI's research platform is meant to be read, tested and questioned. Follow the survey,
+                browse consultation material, or prepare an idea for the public research record.
+              </p>
+              <div class="home-actions">
+                <a class="btn btn-primary" href="/consultation/survey.html">Take the survey →</a>
+                <a class="btn btn-ghost" href="/consultation/submissions.html">Submit an idea →</a>
+              </div>
+            </div>
+            <div class="participation-art" aria-hidden="true">
+              <div class="participation-ring participation-ring-one"></div>
+              <div class="participation-ring participation-ring-two"></div>
+              <div class="participation-center">PPRI</div>
+              <div class="participation-orbit orbit-one"></div>
+              <div class="participation-orbit orbit-two"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-dark home-follow-section">
         <div class="container center">
           <span class="eyebrow">Follow PPRI</span>
-          <h2>Research, evidence and the debate as it develops.</h2>
-          <p>
-            Follow <strong>@PPRI_Pakistan</strong> on X for publication notices,
-            research updates and consultation announcements.
-          </p>
+          <h2>Research, evidence and the public debate as it develops.</h2>
+          <p>Follow <strong>@PPRI_Pakistan</strong> on X for publication notices, research updates and consultation announcements.</p>
           <div class="actions" style="justify-content: center">
-            <a class="btn btn-primary" href="https://x.com/PPRI_Pakistan"
-              >Follow on X</a
-            ><a class="btn btn-outline" href="/contact.html">Contact PPRI</a>
-          </div>
-        </div>
-      </section>
-      <section class="section">
-        <div class="container">
-          <div class="section-head">
-            <div>
-              <span class="eyebrow">Phase 5</span>
-              <h2>From one paper to a research programme.</h2>
-            </div>
-            <a class="btn btn-ghost" href="/research/agenda.html"
-              >View research agenda</a
-            >
-          </div>
-          <div class="grid grid-3">
-            <a class="card card-link" href="/research/agenda.html"
-              ><span class="card-meta">Programme</span>
-              <h3>Research Agenda 2026–2027</h3>
-              <p>
-                Six research streams designed to examine provincial reform as
-                part of a wider federal and local-governance system.
-              </p></a
-            ><a
-              class="card card-link"
-              href="/methodology/research-standards.html"
-              ><span class="card-meta">Integrity</span>
-              <h3>Research Standards</h3>
-              <p>
-                Clear distinctions between evidence, calculation,
-                interpretation, scenarios and policy options.
-              </p></a
-            ><a class="card card-link" href="/transparency.html"
-              ><span class="card-meta">Institution</span>
-              <h3>Transparency</h3>
-              <p>
-                Publication review, funding disclosure, conflicts, corrections
-                and research independence principles.
-              </p></a
-            >
+            <a class="btn btn-primary" href="https://x.com/PPRI_Pakistan">Follow on X</a>
+            <a class="btn btn-outline" href="/about.html">About PPRI</a>
           </div>
         </div>
       </section>
     </main>
+
     <footer class="site-footer">
       <div class="container footer-grid">
         <div>
-          <img
-            src="/assets/images/brand/ppri-logo-header.jpg"
-            alt="PPRI — Pakistan Provincial Reform Institute"
-            class="footer-logo"
-          />
+          <img src="/assets/images/brand/ppri-logo-header.jpg" alt="PPRI — Pakistan Provincial Reform Institute" class="footer-logo" />
           <p>Pakistan Provincial Reform Institute</p>
-          <p>
-            Policy research on provincial reform, federalism, decentralization
-            and institutional design in Pakistan.
-          </p>
+          <p>Policy research on provincial reform, federalism, decentralization and institutional design in Pakistan.</p>
         </div>
         <div>
           <h3>Research</h3>
           <ul class="footer-links">
-            <li>
-              <a href="/research/policy-papers/index.html">Policy Papers</a>
-            </li>
+            <li><a href="/research/policy-papers/index.html">Policy Papers</a></li>
             <li><a href="/research/reports/index.html">Reports</a></li>
             <li><a href="/research/briefs/index.html">Policy Briefs</a></li>
-            <li>
-              <a href="/research/working-papers/index.html">Working Papers</a>
-            </li>
-            <li><a href="/articles/index.html">Articles & Analysis</a></li>
+            <li><a href="/research/working-papers/index.html">Working Papers</a></li>
+            <li><a href="/articles/index.html">Articles &amp; Analysis</a></li>
           </ul>
         </div>
         <div>
@@ -380,27 +551,23 @@
         <div>
           <h3>Connect</h3>
           <ul class="footer-links">
-            <li>
-              <a href="https://x.com/PPRI_Pakistan" rel="me"
-                >X / @PPRI_Pakistan</a
-              >
-            </li>
+            <li><a href="https://x.com/PPRI_Pakistan" rel="me">X / @PPRI_Pakistan</a></li>
             <li><a href="/consultation/index.html">Public Consultation</a></li>
+            <li><a href="/consultation/submissions.html">Submit an idea</a></li>
             <li><a href="/contact.html">Contact</a></li>
           </ul>
         </div>
       </div>
       <div class="container footer-bottom">
-        <span
-          >© <span data-current-year></span> Pakistan Provincial Reform
-          Institute</span
-        ><span
-          ><a href="/privacy.html">Privacy</a> ·
-          <a href="/terms.html">Terms</a> ·
-          <a href="/sitemap.xml">Sitemap</a></span
-        >
+        <span>© <span data-current-year></span> Pakistan Provincial Reform Institute</span>
+        <span><a href="/privacy.html">Privacy</a> · <a href="/terms.html">Terms</a> · <a href="/sitemap.xml">Sitemap</a></span>
       </div>
     </footer>
+
+    <nav class="scroll-depth-nav" id="scrollDepthNav" aria-label="Page sections" aria-hidden="true"></nav>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
     <script src="/assets/js/main.js" defer></script>
+    <script src="/assets/js/hero-map.js" defer></script>
+    <script src="/assets/js/homepage.js" defer></script>
   </body>
 </html>

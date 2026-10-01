@@ -3,88 +3,216 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Demographics | PPRI</title>
+    <title>Demographics, Density &amp; Urbanization | PPRI Data</title>
     <meta
       name="description"
-      content="Census and demographic indicators used in territorial research."
+      content="Official Census 2023 spatial demographic data: population density per square kilometer, urbanization proportions, and land area across Pakistan's provinces."
     />
+    <link rel="canonical" href="https://ppripakistan.github.io/data/demographics.html" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Demographics, Density &amp; Urbanization | PPRI Data" />
+    <meta
+      property="og:description"
+      content="Official Census 2023 spatial demographic data: population density per square kilometer, urbanization proportions, and land area across Pakistan's provinces."
+    />
+    <meta property="og:image" content="https://ppripakistan.github.io/assets/images/brand/ppri-logo.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@PPRI_Pakistan" />
     <link rel="icon" href="/assets/images/brand/ppri-favicon.png" />
     <link rel="stylesheet" href="/assets/css/style.css" />
     <link rel="stylesheet" href="/assets/css/responsive.css" />
+    <style>
+      .data-stat-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 16px;
+        margin: 24px 0;
+      }
+      .data-stat-card {
+        background: #f7faf8;
+        border: 1px solid #d2e4db;
+        border-radius: 10px;
+        padding: 20px;
+        text-align: center;
+      }
+      .data-stat-card strong {
+        display: block;
+        font-size: 1.85rem;
+        color: #073c3a;
+        font-weight: 800;
+        line-height: 1.1;
+      }
+      .data-stat-card span {
+        display: block;
+        font-size: 0.82rem;
+        color: #5a6e65;
+        margin-top: 6px;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        font-weight: 600;
+      }
+      .data-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 24px 0;
+        font-size: 0.92rem;
+      }
+      .data-table th, .data-table td {
+        padding: 12px 14px;
+        text-align: left;
+        border-bottom: 1px solid #e2e8f0;
+      }
+      .data-table th {
+        background: #f0f7f3;
+        color: #073c3a;
+        font-weight: 700;
+      }
+      .num { text-align: right; font-variant-numeric: tabular-nums; }
+      th.num { text-align: right; }
+    </style>
   </head>
   <body>
     <a class="skip-link" href="#main-content">Skip to content</a>
     <header class="site-header">
       <div class="container navbar">
-        <a class="brand" href="/index.html"
-          ><img
-            src="/assets/images/brand/ppri-logo-header.jpg"
-            alt="PPRI logo"
-          /><span class="brand-text"
-            ><strong>PPRI</strong
-            ><span>Pakistan Provincial Reform Institute</span></span
-          ></a
-        ><button
-          class="menu-toggle"
-          type="button"
-          aria-expanded="false"
-          aria-controls="site-navigation"
-        >
+        <a class="brand" href="/index.html">
+          <img src="/assets/images/brand/ppri-logo-header.jpg" alt="PPRI logo" />
+          <span class="brand-text">
+            <strong>PPRI</strong>
+            <span>Pakistan Provincial Reform Institute</span>
+          </span>
+        </a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-navigation">
           Menu
         </button>
-        <nav id="site-navigation" class="nav-links">
-          <a href="/index.html">Home</a
-          ><a href="/research/index.html">Research</a
-          ><a href="/provinces/index.html">Reform</a
-          ><a href="/data/centre.html">Data</a
-          ><a href="/publications/index.html">Publications</a
-          ><a href="/consultation/index.html">Engage</a
-          ><a href="/about.html">About</a><a href="/search.html">Search</a>
+        <nav id="site-navigation" class="nav-links" aria-label="Primary navigation">
+          <a href="/index.html">Home</a>
+          <a href="/research/index.html">Research</a>
+          <a href="/provinces/index.html">Reform</a>
+          <a href="/data/centre.html" aria-current="page">Data</a>
+          <a href="/publications/index.html">Publications</a>
+          <a href="/consultation/index.html">Engage</a>
+          <a href="/about.html">About</a>
+          <a class="nav-search" href="/search.html">Search</a>
         </nav>
       </div>
     </header>
+
     <main id="main-content">
       <section class="page-hero">
         <div class="container">
-          <span class="eyebrow">Population evidence</span>
-          <h1>Demographics</h1>
-          <p>Census and demographic indicators used in territorial research.</p>
+          <span class="eyebrow">Spatial Demography</span>
+          <h1>Demographics, Density &amp; Urbanization</h1>
+          <p>
+            Spatial distribution indicators from Census 2023: population density per square kilometer,
+            urban-rural ratios, and geographical land area across Pakistan.
+          </p>
         </div>
       </section>
+
       <section class="section">
         <div class="container prose-wide">
-          <div class="highlight">
-            <h2>Research note</h2>
+          <div class="data-stat-grid">
+            <div class="data-stat-card">
+              <strong>621.8 / km²</strong>
+              <span>Punjab Density</span>
+            </div>
+            <div class="data-stat-card">
+              <strong>42.9 / km²</strong>
+              <span>Balochistan Density</span>
+            </div>
+            <div class="data-stat-card">
+              <strong>53.97%</strong>
+              <span>Sindh Urbanization</span>
+            </div>
+            <div class="data-stat-card">
+              <strong>15.01%</strong>
+              <span>KP Urbanization</span>
+            </div>
+          </div>
+
+          <h2>Provincial Density &amp; Urbanization Baseline (Census 2023)</h2>
+          <div class="table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Province / Territory</th>
+                  <th class="num">Area (km²)</th>
+                  <th class="num">Density (per km²)</th>
+                  <th class="num">Urban Proportion</th>
+                  <th class="num">Rural Proportion</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Punjab</strong></td>
+                  <td class="num">205,345</td>
+                  <td class="num"><strong>621.83</strong></td>
+                  <td class="num">40.71%</td>
+                  <td class="num">59.29%</td>
+                </tr>
+                <tr>
+                  <td><strong>Sindh</strong></td>
+                  <td class="num">140,914</td>
+                  <td class="num"><strong>395.25</strong></td>
+                  <td class="num"><strong>53.97%</strong></td>
+                  <td class="num">46.03%</td>
+                </tr>
+                <tr>
+                  <td><strong>Khyber Pakhtunkhwa</strong></td>
+                  <td class="num">101,741</td>
+                  <td class="num"><strong>401.57</strong></td>
+                  <td class="num">15.01%</td>
+                  <td class="num"><strong>84.99%</strong></td>
+                </tr>
+                <tr>
+                  <td><strong>Balochistan</strong></td>
+                  <td class="num"><strong>347,190</strong></td>
+                  <td class="num"><strong>42.90</strong></td>
+                  <td class="num">30.96%</td>
+                  <td class="num">69.04%</td>
+                </tr>
+                <tr>
+                  <td><strong>Islamabad (ICT)</strong></td>
+                  <td class="num">906</td>
+                  <td class="num"><strong>2,609.12</strong></td>
+                  <td class="num">46.91%</td>
+                  <td class="num">53.09%</td>
+                </tr>
+                <tr style="background: #f0f7f3; font-weight: 700;">
+                  <td><strong>Total Pakistan</strong></td>
+                  <td class="num"><strong>796,096</strong></td>
+                  <td class="num"><strong>303.35</strong></td>
+                  <td class="num"><strong>38.82%</strong></td>
+                  <td class="num"><strong>61.18%</strong></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="highlight mt-3">
+            <h3>Demographic Contrasts</h3>
             <p>
-              The 2023 Census provides the core population baseline. PPRI will
-              expand this module to age structure, sex ratio, urban/rural
-              distribution, growth and district-level indicators as comparable
-              source tables are incorporated.
+              Balochistan encompasses <strong>43.6%</strong> of Pakistan's entire land area but only 6.17% of its population,
+              yielding an extremely low population density of 42.9 people per square kilometer. Conversely, Punjab accommodates
+              more than half of the national population within approximately one-fourth of the land area.
+              Sindh is the most urbanized province (53.97%), heavily driven by the Karachi metropolitan agglomeration.
             </p>
           </div>
-          <h2>Source standard</h2>
-          <p>
-            Indicators should be traceable to the original institution,
-            reference period and definition. PPRI does not treat an unverified
-            number as established evidence.
-          </p>
-          <div class="actions">
-            <a class="btn btn-primary" href="/data/centre.html">Data Centre</a
-            ><a class="btn btn-ghost" href="/sources/index.html"
-              >Source registry</a
-            >
+
+          <div class="actions mt-4">
+            <a class="btn btn-primary" href="/data/district-explorer.html">Explore District Demographics →</a>
+            <a class="btn btn-ghost" href="/maps/current/administrative.html">View Administrative Map →</a>
+            <a class="btn btn-ghost" href="/data/centre.html">Data Centre</a>
           </div>
         </div>
       </section>
     </main>
+
     <footer class="site-footer">
       <div class="container footer-grid">
         <div>
-          <img
-            src="/assets/images/brand/ppri-logo-header.jpg"
-            alt="PPRI"
-            class="footer-logo"
-          />
+          <img src="/assets/images/brand/ppri-logo-header.jpg" alt="PPRI" class="footer-logo" />
           <p>Pakistan Provincial Reform Institute</p>
           <p>
             Policy research on provincial reform, federalism, decentralization
@@ -94,14 +222,10 @@
         <div>
           <h3>Research</h3>
           <ul class="footer-links">
-            <li>
-              <a href="/research/policy-papers/index.html">Policy Papers</a>
-            </li>
+            <li><a href="/research/policy-papers/index.html">Policy Papers</a></li>
             <li><a href="/research/reports/index.html">Reports</a></li>
             <li><a href="/research/briefs/index.html">Policy Briefs</a></li>
-            <li>
-              <a href="/research/working-papers/index.html">Working Papers</a>
-            </li>
+            <li><a href="/research/working-papers/index.html">Working Papers</a></li>
           </ul>
         </div>
         <div>
@@ -116,22 +240,16 @@
         <div>
           <h3>Connect</h3>
           <ul class="footer-links">
-            <li>
-              <a href="https://x.com/PPRI_Pakistan">X / @PPRI_Pakistan</a>
-            </li>
-            <li><a href="/consultation/index.html">Consultation</a></li>
+            <li><a href="https://x.com/PPRI_Pakistan" rel="me">X / @PPRI_Pakistan</a></li>
+            <li><a href="/consultation/index.html">Public Consultation</a></li>
+            <li><a href="/consultation/submissions.html">Submit an idea</a></li>
             <li><a href="/contact.html">Contact</a></li>
           </ul>
         </div>
       </div>
       <div class="container footer-bottom">
-        <span
-          >© <span data-current-year></span> Pakistan Provincial Reform
-          Institute</span
-        ><span
-          ><a href="/privacy.html">Privacy</a> ·
-          <a href="/terms.html">Terms</a></span
-        >
+        <span>© <span data-current-year></span> Pakistan Provincial Reform Institute</span>
+        <span><a href="/privacy.html">Privacy</a> · <a href="/terms.html">Terms</a> · <a href="/sitemap.xml">Sitemap</a></span>
       </div>
     </footer>
     <script src="/assets/js/main.js" defer></script>
