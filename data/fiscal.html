@@ -3,104 +3,244 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Fiscal Data | PPRI</title>
+    <title>Fiscal Federalism &amp; NFC Data | PPRI Data</title>
     <meta
       name="description"
-      content="Fiscal indicators for provincial-reform analysis."
+      content="Empirical public finance data: 7th NFC divisible pool distribution formula, horizontal provincial shares, and own-source revenue dependency ratios."
     />
+    <link rel="canonical" href="https://ppripakistan.github.io/data/fiscal.html" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Fiscal Federalism &amp; NFC Data | PPRI Data" />
+    <meta
+      property="og:description"
+      content="Empirical public finance data: 7th NFC divisible pool distribution formula, horizontal provincial shares, and own-source revenue dependency ratios."
+    />
+    <meta property="og:image" content="https://ppripakistan.github.io/assets/images/brand/ppri-logo.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@PPRI_Pakistan" />
     <link rel="icon" href="/assets/images/brand/ppri-favicon.png" />
     <link rel="stylesheet" href="/assets/css/style.css" />
     <link rel="stylesheet" href="/assets/css/responsive.css" />
+    <style>
+      .data-stat-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 16px;
+        margin: 24px 0;
+      }
+      .data-stat-card {
+        background: #f7faf8;
+        border: 1px solid #d2e4db;
+        border-radius: 10px;
+        padding: 20px;
+        text-align: center;
+      }
+      .data-stat-card strong {
+        display: block;
+        font-size: 1.85rem;
+        color: #073c3a;
+        font-weight: 800;
+        line-height: 1.1;
+      }
+      .data-stat-card span {
+        display: block;
+        font-size: 0.82rem;
+        color: #5a6e65;
+        margin-top: 6px;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        font-weight: 600;
+      }
+      .data-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 24px 0;
+        font-size: 0.92rem;
+      }
+      .data-table th, .data-table td {
+        padding: 12px 14px;
+        text-align: left;
+        border-bottom: 1px solid #e2e8f0;
+      }
+      .data-table th {
+        background: #f0f7f3;
+        color: #073c3a;
+        font-weight: 700;
+      }
+      .data-table tr:hover td {
+        background: #fdfdfd;
+      }
+      .num { text-align: right; font-variant-numeric: tabular-nums; }
+      th.num { text-align: right; }
+    </style>
   </head>
   <body>
     <a class="skip-link" href="#main-content">Skip to content</a>
     <header class="site-header">
       <div class="container navbar">
-        <a class="brand" href="/index.html"
-          ><img
-            src="/assets/images/brand/ppri-logo-header.jpg"
-            alt="PPRI logo"
-          /><span class="brand-text"
-            ><strong>PPRI</strong
-            ><span>Pakistan Provincial Reform Institute</span></span
-          ></a
-        ><button
-          class="menu-toggle"
-          type="button"
-          aria-expanded="false"
-          aria-controls="site-navigation"
-        >
+        <a class="brand" href="/index.html">
+          <img src="/assets/images/brand/ppri-logo-header.jpg" alt="PPRI logo" />
+          <span class="brand-text">
+            <strong>PPRI</strong>
+            <span>Pakistan Provincial Reform Institute</span>
+          </span>
+        </a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-navigation">
           Menu
         </button>
-        <nav id="site-navigation" class="nav-links">
-          <a href="/index.html">Home</a
-          ><a href="/research/index.html">Research</a
-          ><a href="/provinces/index.html">Reform</a
-          ><a href="/data/centre.html">Data</a
-          ><a href="/publications/index.html">Publications</a
-          ><a href="/consultation/index.html">Engage</a
-          ><a href="/about.html">About</a><a href="/search.html">Search</a>
+        <nav id="site-navigation" class="nav-links" aria-label="Primary navigation">
+          <a href="/index.html">Home</a>
+          <a href="/research/index.html">Research</a>
+          <a href="/provinces/index.html">Reform</a>
+          <a href="/data/centre.html" aria-current="page">Data</a>
+          <a href="/publications/index.html">Publications</a>
+          <a href="/consultation/index.html">Engage</a>
+          <a href="/about.html">About</a>
+          <a class="nav-search" href="/search.html">Search</a>
         </nav>
       </div>
     </header>
+
     <main id="main-content">
       <section class="page-hero">
         <div class="container">
-          <span class="eyebrow">Public finance</span>
-          <h1>Fiscal Data</h1>
-          <p>Fiscal indicators for provincial-reform analysis.</p>
+          <span class="eyebrow">Public Finance Data</span>
+          <h1>Fiscal Federalism &amp; NFC Award Data</h1>
+          <p>
+            Key indicators on vertical revenue sharing, the 7th NFC horizontal distribution formula,
+            provincial percentage shares, and own-source tax collection capacities.
+          </p>
         </div>
       </section>
+
       <section class="section">
         <div class="container prose-wide">
-          <div class="highlight">
-            <h2>Research note</h2>
-            <p>
-              PPRI separates own-source revenue, federal transfers, development
-              expenditure, current expenditure and fiscal balances. Fiscal
-              capacity should not be inferred from population or GDP alone.
-            </p>
+          <div class="data-stat-grid">
+            <div class="data-stat-card">
+              <strong>57.5%</strong>
+              <span>Provincial Share of Divisible Pool</span>
+            </div>
+            <div class="data-stat-card">
+              <strong>82.0%</strong>
+              <span>NFC Population Weight</span>
+            </div>
+            <div class="data-stat-card">
+              <strong>51.74%</strong>
+              <span>Punjab Horizontal Share</span>
+            </div>
+            <div class="data-stat-card">
+              <strong>9.09%</strong>
+              <span>Balochistan Horizontal Share</span>
+            </div>
           </div>
-          <h2>Source standard</h2>
-          <p>
-            Indicators should be traceable to the original institution,
-            reference period and definition. PPRI does not treat an unverified
-            number as established evidence.
-          </p>
-          <div class="actions">
-            <a class="btn btn-primary" href="/data/centre.html">Data Centre</a
-            ><a class="btn btn-ghost" href="/sources/index.html"
-              >Source registry</a
-            >
+
+          <h2>7th NFC Horizontal Sharing Formula</h2>
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Criterion / Indicator</th>
+                <th class="num">Weight</th>
+                <th>Objective &amp; Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Population</strong></td>
+                <td class="num"><strong>82.0%</strong></td>
+                <td>Equal per capita distribution baseline across all provinces.</td>
+              </tr>
+              <tr>
+                <td><strong>Poverty &amp; Backwardness</strong></td>
+                <td class="num"><strong>10.3%</strong></td>
+                <td>Equalization transfer based on official Multidimensional Poverty Index (MPI).</td>
+              </tr>
+              <tr>
+                <td><strong>Revenue Collection / Generation</strong></td>
+                <td class="num"><strong>5.0%</strong></td>
+                <td>Incentive share reflecting provincial economic contribution and tax collection.</td>
+              </tr>
+              <tr>
+                <td><strong>Inverse Population Density (IPD)</strong></td>
+                <td class="num"><strong>2.7%</strong></td>
+                <td>Compensates provinces with large territorial landmasses and low population densities.</td>
+              </tr>
+              <tr style="background: #f0f7f3; font-weight: 700;">
+                <td><strong>Total Horizontal Formula</strong></td>
+                <td class="num"><strong>100.0%</strong></td>
+                <td>Determines individual provincial shares of the 57.5% divisible pool.</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <h2 class="mt-4">Horizontal Share by Province (7th NFC Award)</h2>
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Province</th>
+                <th class="num">Horizontal NFC Share (%)</th>
+                <th class="num">Census 2023 Population Share</th>
+                <th>Primary Formula Beneficiary Factors</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Punjab</strong></td>
+                <td class="num"><strong>51.74%</strong></td>
+                <td class="num">52.87%</td>
+                <td>Dominant population weight (82%).</td>
+              </tr>
+              <tr>
+                <td><strong>Sindh</strong></td>
+                <td class="num"><strong>24.55%</strong></td>
+                <td class="num">23.06%</td>
+                <td>Revenue collection weight (5%) due to Karachi ports/headquarters.</td>
+              </tr>
+              <tr>
+                <td><strong>Khyber Pakhtunkhwa</strong></td>
+                <td class="num"><strong>14.62%</strong></td>
+                <td class="num">16.92%</td>
+                <td>Poverty indicator and war-on-terror grants (pre-merger).</td>
+              </tr>
+              <tr>
+                <td><strong>Balochistan</strong></td>
+                <td class="num"><strong>9.09%</strong></td>
+                <td class="num">6.17%</td>
+                <td>Inverse population density (2.7%) and backwardness equalization.</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div class="highlight mt-3">
+            <h3>NFC Reform &amp; Scenario Modeling</h3>
+            <p>
+              In a 12-unit or 16-unit provincial architecture, the multiple indicator formula must be recalculated.
+              Read our in-depth fiscal simulation to understand how regional shares and transition costs behave:
+              <br />
+              <a class="btn btn-primary mt-2" href="/articles/article-002.html">Read Article 002: Fiscal Equalization →</a>
+              <a class="btn btn-ghost mt-2" href="/provinces/fiscal-framework.html">View Fiscal Framework →</a>
+            </p>
           </div>
         </div>
       </section>
     </main>
+
     <footer class="site-footer">
       <div class="container footer-grid">
         <div>
-          <img
-            src="/assets/images/brand/ppri-logo-header.jpg"
-            alt="PPRI"
-            class="footer-logo"
-          />
+          <img src="/assets/images/brand/ppri-logo-header.jpg" alt="PPRI" class="footer-logo" />
           <p>Pakistan Provincial Reform Institute</p>
           <p>
-            Policy research on provincial reform, federalism, decentralization
+            Independent policy research on provincial reform, federalism, decentralization
             and institutional design in Pakistan.
           </p>
         </div>
         <div>
           <h3>Research</h3>
           <ul class="footer-links">
-            <li>
-              <a href="/research/policy-papers/index.html">Policy Papers</a>
-            </li>
+            <li><a href="/research/policy-papers/index.html">Policy Papers</a></li>
             <li><a href="/research/reports/index.html">Reports</a></li>
             <li><a href="/research/briefs/index.html">Policy Briefs</a></li>
-            <li>
-              <a href="/research/working-papers/index.html">Working Papers</a>
-            </li>
+            <li><a href="/research/working-papers/index.html">Working Papers</a></li>
           </ul>
         </div>
         <div>
@@ -115,22 +255,16 @@
         <div>
           <h3>Connect</h3>
           <ul class="footer-links">
-            <li>
-              <a href="https://x.com/PPRI_Pakistan">X / @PPRI_Pakistan</a>
-            </li>
-            <li><a href="/consultation/index.html">Consultation</a></li>
+            <li><a href="https://x.com/PPRI_Pakistan" rel="me">X / @PPRI_Pakistan</a></li>
+            <li><a href="/consultation/index.html">Public Consultation</a></li>
+            <li><a href="/consultation/submissions.html">Submit an idea</a></li>
             <li><a href="/contact.html">Contact</a></li>
           </ul>
         </div>
       </div>
       <div class="container footer-bottom">
-        <span
-          >© <span data-current-year></span> Pakistan Provincial Reform
-          Institute</span
-        ><span
-          ><a href="/privacy.html">Privacy</a> ·
-          <a href="/terms.html">Terms</a></span
-        >
+        <span>© <span data-current-year></span> Pakistan Provincial Reform Institute</span>
+        <span><a href="/privacy.html">Privacy</a> · <a href="/terms.html">Terms</a> · <a href="/sitemap.xml">Sitemap</a></span>
       </div>
     </footer>
     <script src="/assets/js/main.js" defer></script>

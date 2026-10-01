@@ -3,11 +3,21 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Maps | PPRI</title>
+    <title>Spatial Maps &amp; Geographic Data | PPRI Data</title>
     <meta
       name="description"
-      content="Territorial geography and scenario mapping."
+      content="Interactive spatial geography, boundary layers, and cartographic methodology connecting Pakistan's geography to policy indicators."
     />
+    <link rel="canonical" href="https://ppripakistan.github.io/data/maps.html" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Spatial Maps &amp; Geographic Data | PPRI Data" />
+    <meta
+      property="og:description"
+      content="Interactive spatial geography, boundary layers, and cartographic methodology connecting Pakistan's geography to policy indicators."
+    />
+    <meta property="og:image" content="https://ppripakistan.github.io/assets/images/brand/ppri-logo.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@PPRI_Pakistan" />
     <link rel="icon" href="/assets/images/brand/ppri-favicon.png" />
     <link rel="stylesheet" href="/assets/css/style.css" />
     <link rel="stylesheet" href="/assets/css/responsive.css" />
@@ -16,74 +26,97 @@
     <a class="skip-link" href="#main-content">Skip to content</a>
     <header class="site-header">
       <div class="container navbar">
-        <a class="brand" href="/index.html"
-          ><img
-            src="/assets/images/brand/ppri-logo-header.jpg"
-            alt="PPRI logo"
-          /><span class="brand-text"
-            ><strong>PPRI</strong
-            ><span>Pakistan Provincial Reform Institute</span></span
-          ></a
-        ><button
-          class="menu-toggle"
-          type="button"
-          aria-expanded="false"
-          aria-controls="site-navigation"
-        >
+        <a class="brand" href="/index.html">
+          <img src="/assets/images/brand/ppri-logo-header.jpg" alt="PPRI logo" />
+          <span class="brand-text">
+            <strong>PPRI</strong>
+            <span>Pakistan Provincial Reform Institute</span>
+          </span>
+        </a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-navigation">
           Menu
         </button>
-        <nav id="site-navigation" class="nav-links">
-          <a href="/index.html">Home</a
-          ><a href="/research/index.html">Research</a
-          ><a href="/provinces/index.html">Reform</a
-          ><a href="/data/centre.html">Data</a
-          ><a href="/publications/index.html">Publications</a
-          ><a href="/consultation/index.html">Engage</a
-          ><a href="/about.html">About</a><a href="/search.html">Search</a>
+        <nav id="site-navigation" class="nav-links" aria-label="Primary navigation">
+          <a href="/index.html">Home</a>
+          <a href="/research/index.html">Research</a>
+          <a href="/provinces/index.html">Reform</a>
+          <a href="/data/centre.html" aria-current="page">Data</a>
+          <a href="/publications/index.html">Publications</a>
+          <a href="/consultation/index.html">Engage</a>
+          <a href="/about.html">About</a>
+          <a class="nav-search" href="/search.html">Search</a>
         </nav>
       </div>
     </header>
+
     <main id="main-content">
       <section class="page-hero">
         <div class="container">
-          <span class="eyebrow">Geographic evidence</span>
-          <h1>Maps</h1>
-          <p>Territorial geography and scenario mapping.</p>
+          <span class="eyebrow">Spatial Geography</span>
+          <h1>Spatial Maps &amp; Geographic Systems</h1>
+          <p>
+            PPRI integrates official geographic boundaries with demographic, fiscal, and administrative datasets
+            to enable interactive visual analysis of Pakistan's territorial governance.
+          </p>
         </div>
       </section>
+
       <section class="section">
-        <div class="container prose-wide">
-          <div class="highlight">
-            <h2>Research note</h2>
-            <p>
-              PPRI distinguishes official administrative boundaries from
-              analytical scenarios. Map layers should carry source, date,
-              administrative level and licensing metadata.
-            </p>
+        <div class="container">
+          <div class="grid grid-2">
+            <a class="card card-link" href="/maps/scenarios/index.html">
+              <span class="card-meta">Interactive Simulation</span>
+              <h3>The Scenario Lab</h3>
+              <p>
+                Our flagship GIS mapping engine. Explore 4 constitutional provinces dissolving into 16 scenario
+                administrative units with live demographic, representation, and capital metrics.
+              </p>
+            </a>
+
+            <a class="card card-link" href="/maps/current/administrative.html">
+              <span class="card-meta">Current Geography</span>
+              <h3>Official Administrative Map</h3>
+              <p>
+                Detailed interactive boundary layers mapping Pakistan's 4 provinces, Islamabad Capital Territory,
+                and all 164 constituent administrative districts.
+              </p>
+            </a>
+
+            <a class="card card-link" href="/data/datasets.html">
+              <span class="card-meta">Vector GIS Data</span>
+              <h3>Download GeoJSON Boundary Files</h3>
+              <p>
+                Access open-source GeoJSON and shapefile datasets for Pakistan's national perimeter, provincial borders,
+                and scenario polygons.
+              </p>
+            </a>
+
+            <a class="card card-link" href="/maps/methodology.html">
+              <span class="card-meta">Cartographic Standards</span>
+              <h3>Mapping Methodology &amp; Coordinate Standards</h3>
+              <p>
+                Technical documentation on projection standards (WGS84), border demarcation standards,
+                and separation of official cartography from hypothetical research models.
+              </p>
+            </a>
           </div>
-          <h2>Source standard</h2>
-          <p>
-            Indicators should be traceable to the original institution,
-            reference period and definition. PPRI does not treat an unverified
-            number as established evidence.
-          </p>
-          <div class="actions">
-            <a class="btn btn-primary" href="/data/centre.html">Data Centre</a
-            ><a class="btn btn-ghost" href="/sources/index.html"
-              >Source registry</a
-            >
+
+          <div class="highlight mt-4">
+            <h2>Data Integration</h2>
+            <p>
+              All PPRI map layers are cross-referenced with Census 2023 district codes.
+              Visit the <a href="/data/district-explorer.html">District Explorer</a> to inspect indicator tables
+              linked directly to these geographic units.
+            </p>
           </div>
         </div>
       </section>
     </main>
+
     <footer class="site-footer">
       <div class="container footer-grid">
         <div>
-          <img
-            src="/assets/images/brand/ppri-logo-header.jpg"
-            alt="PPRI"
-            class="footer-logo"
-          />
+          <img src="/assets/images/brand/ppri-logo-header.jpg" alt="PPRI" class="footer-logo" />
           <p>Pakistan Provincial Reform Institute</p>
           <p>
             Policy research on provincial reform, federalism, decentralization
@@ -93,14 +126,10 @@
         <div>
           <h3>Research</h3>
           <ul class="footer-links">
-            <li>
-              <a href="/research/policy-papers/index.html">Policy Papers</a>
-            </li>
+            <li><a href="/research/policy-papers/index.html">Policy Papers</a></li>
             <li><a href="/research/reports/index.html">Reports</a></li>
             <li><a href="/research/briefs/index.html">Policy Briefs</a></li>
-            <li>
-              <a href="/research/working-papers/index.html">Working Papers</a>
-            </li>
+            <li><a href="/research/working-papers/index.html">Working Papers</a></li>
           </ul>
         </div>
         <div>
@@ -115,22 +144,16 @@
         <div>
           <h3>Connect</h3>
           <ul class="footer-links">
-            <li>
-              <a href="https://x.com/PPRI_Pakistan">X / @PPRI_Pakistan</a>
-            </li>
-            <li><a href="/consultation/index.html">Consultation</a></li>
+            <li><a href="https://x.com/PPRI_Pakistan" rel="me">X / @PPRI_Pakistan</a></li>
+            <li><a href="/consultation/index.html">Public Consultation</a></li>
+            <li><a href="/consultation/submissions.html">Submit an idea</a></li>
             <li><a href="/contact.html">Contact</a></li>
           </ul>
         </div>
       </div>
       <div class="container footer-bottom">
-        <span
-          >© <span data-current-year></span> Pakistan Provincial Reform
-          Institute</span
-        ><span
-          ><a href="/privacy.html">Privacy</a> ·
-          <a href="/terms.html">Terms</a></span
-        >
+        <span>© <span data-current-year></span> Pakistan Provincial Reform Institute</span>
+        <span><a href="/privacy.html">Privacy</a> · <a href="/terms.html">Terms</a> · <a href="/sitemap.xml">Sitemap</a></span>
       </div>
     </footer>
     <script src="/assets/js/main.js" defer></script>
