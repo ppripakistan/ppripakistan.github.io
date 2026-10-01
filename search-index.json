@@ -168,5 +168,47 @@
       "reform idea",
       "research question"
     ]
+  },
+  {
+    "title": "The Scale Imbalance: A 127-Million Citizen Province",
+    "type": "Article",
+    "description": "Examining demographic scale in Pakistan's federation: why a 127-million citizen province is a statistical outlier in global federalism.",
+    "url": "/articles/article-001.html",
+    "tags": ["punjab", "demography", "scale", "federalism", "census 2023", "representation"]
+  },
+  {
+    "title": "Beyond the 7th NFC: Fiscal Equalization Under 16 Units",
+    "type": "Article",
+    "description": "Simulating National Finance Commission distribution formulas, own-source revenue disparities, and provincial finance commissions.",
+    "url": "/articles/article-002.html",
+    "tags": ["NFC", "fiscal", "finance", "revenue", "equalization", "divisible pool", "article 160"]
+  },
+  {
+    "title": "Constitutional Architecture & Legal Framework",
+    "type": "Statutory Guide",
+    "description": "Interactive clause-by-clause legal explorer of Articles 1, 140A, 160, and 239 governing provincial limits and devolution.",
+    "url": "/resources/constitution.html",
+    "tags": ["constitution", "article 239", "article 140A", "article 160", "article 1", "amendment"]
+  },
+  {
+    "title": "Provincial Local Government Acts Matrix",
+    "type": "Statutory Guide",
+    "description": "Comparative statutory matrix tracking municipal hierarchies, mayoral elections, and PFCs across Punjab, Sindh, KP, and Balochistan.",
+    "url": "/resources/legislation.html",
+    "tags": ["local government", "PLGA", "SLGA", "KPLGA", "BLGA", "municipal", "devolution"]
+  },
+  {
+    "title": "Interactive Provincial Reform Survey",
+    "type": "Consultation",
+    "description": "Interactive multi-step questionnaire collecting citizen views on provincial structure and local government.",
+    "url": "/consultation/survey.html",
+    "tags": ["survey", "consultation", "feedback", "questionnaire"]
+  },
+  {
+    "title": "Mission & Research Charter",
+    "type": "About",
+    "description": "The founding mission, non-partisanship charter, and 5 analytical pillars of PPRI.",
+    "url": "/mission.html",
+    "tags": ["mission", "charter", "principles", "ethics", "independence", "about"]
   }
 ]

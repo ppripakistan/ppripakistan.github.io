@@ -1,1 +1,343 @@
-<!-- PPRI placeholder: resources/constitution.html. Replace with final content. -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Constitutional Architecture &amp; Legal Framework | PPRI</title>
+    <meta
+      name="description"
+      content="An interactive clause-by-clause legal explorer of the Constitution of Pakistan: examining Articles 1, 140A, 160, and 239 governing provincial reorganization and devolution."
+    />
+    <link rel="canonical" href="https://ppripakistan.github.io/resources/constitution.html" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Constitutional Architecture &amp; Legal Framework | PPRI" />
+    <meta
+      property="og:description"
+      content="An interactive clause-by-clause legal explorer of the Constitution of Pakistan: examining Articles 1, 140A, 160, and 239 governing provincial reorganization and devolution."
+    />
+    <meta property="og:image" content="https://ppripakistan.github.io/assets/images/brand/ppri-logo.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@PPRI_Pakistan" />
+    <link rel="icon" href="/assets/images/brand/ppri-favicon.png" />
+    <link rel="stylesheet" href="/assets/css/style.css" />
+    <link rel="stylesheet" href="/assets/css/responsive.css" />
+    <style>
+      .legal-tabs {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin: 24px 0 28px;
+        border-bottom: 2px solid #e2e8f0;
+        padding-bottom: 8px;
+      }
+      .legal-tab-btn {
+        padding: 10px 18px;
+        border: 1px solid #dce5e0;
+        border-radius: 8px;
+        background: #fdfdfd;
+        color: #3b5349;
+        font-weight: 700;
+        font-size: 0.88rem;
+        cursor: pointer;
+        transition: all 180ms ease;
+      }
+      .legal-tab-btn:hover {
+        background: #eef7f2;
+        color: #073c3a;
+        border-color: #073c3a;
+      }
+      .legal-tab-btn.is-active {
+        background: #073c3a;
+        color: #ffffff;
+        border-color: #073c3a;
+      }
+      .legal-clause-box {
+        background: #f8faf9;
+        border-left: 4px solid #145a32;
+        border-radius: 0 8px 8px 0;
+        padding: 20px 24px;
+        margin: 20px 0;
+        font-family: Georgia, serif;
+        font-size: 1.02rem;
+        line-height: 1.65;
+        color: #1e2924;
+      }
+      .legal-analysis-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 18px;
+        margin: 24px 0;
+      }
+      .legal-analysis-card {
+        background: #ffffff;
+        border: 1px solid #dce5e0;
+        border-radius: 10px;
+        padding: 20px;
+      }
+      .legal-analysis-card h4 {
+        color: #073c3a;
+        margin-bottom: 8px;
+        font-size: 0.98rem;
+      }
+    </style>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <header class="site-header">
+      <div class="container navbar">
+        <a class="brand" href="/index.html">
+          <img src="/assets/images/brand/ppri-logo-header.jpg" alt="PPRI logo" />
+          <span class="brand-text">
+            <strong>PPRI</strong>
+            <span>Pakistan Provincial Reform Institute</span>
+          </span>
+        </a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-navigation">
+          Menu
+        </button>
+        <nav id="site-navigation" class="nav-links" aria-label="Primary navigation">
+          <a href="/index.html">Home</a>
+          <a href="/research/index.html">Research</a>
+          <a href="/provinces/index.html">Reform</a>
+          <a href="/data/centre.html">Data</a>
+          <a href="/publications/index.html">Publications</a>
+          <a href="/consultation/index.html">Engage</a>
+          <a href="/about.html">About</a>
+          <a class="nav-search" href="/search.html">Search</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <section class="page-hero">
+        <div class="container">
+          <span class="eyebrow">Statutory &amp; Constitutional Reader</span>
+          <h1>Constitutional Architecture of Provincial Reform</h1>
+          <p>
+            An annotated, clause-by-clause legal explorer examining the four constitutional pillars
+            governing territorial boundaries, local devolution, fiscal distribution, and amendment thresholds.
+          </p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container prose-wide">
+          <div class="legal-tabs">
+            <button class="legal-tab-btn is-active" onclick="switchArticle('art239', this)">Article 239(4): Altering Provincial Limits</button>
+            <button class="legal-tab-btn" onclick="switchArticle('art1', this)">Article 1: Territories of Pakistan</button>
+            <button class="legal-tab-btn" onclick="switchArticle('art140a', this)">Article 140A: Local Government</button>
+            <button class="legal-tab-btn" onclick="switchArticle('art160', this)">Article 160: National Finance Commission</button>
+          </div>
+
+          <!-- ARTICLE 239 -->
+          <div class="article-panel" id="panel-art239">
+            <span class="badge" style="background: rgba(20, 90, 50, 0.1); color: #145a32; padding: 4px 10px; border-radius: 4px; font-weight: 700; font-size: 0.8rem;">
+              The Federal Constitutional Gatekeeper
+            </span>
+            <h2 class="mt-2">Article 239(4): Constitution Amendment Bill</h2>
+
+            <div class="legal-clause-box">
+              “A Bill to amend the Constitution which would have the effect of altering the limits of a Province
+              shall not be presented to the President for assent unless it has been passed by the Provincial Assembly
+              of that Province by the votes of not less than two-thirds of its total membership.”
+            </div>
+
+            <div class="legal-analysis-grid">
+              <div class="legal-analysis-card">
+                <h4>1. The Provincial Veto Power</h4>
+                <p>
+                  Unlike in India (where Parliament can alter state boundaries under Article 3 after merely consulting state legislatures),
+                  Pakistan's Article 239(4) grants the affected province an absolute constitutional veto.
+                  A 2/3 federal majority in the National Assembly and Senate cannot alter a province's boundaries unilaterally.
+                </p>
+              </div>
+
+              <div class="legal-analysis-card">
+                <h4>2. Meaning of "Total Membership"</h4>
+                <p>
+                  The threshold specifies two-thirds of the <em>total membership</em> of the provincial assembly,
+                  not two-thirds of members present and voting. For example, in the 371-member Punjab Assembly,
+                  at least <strong>248 affirmative votes</strong> are required.
+                </p>
+              </div>
+
+              <div class="legal-analysis-card">
+                <h4>3. The Multi-Province Sequence</h4>
+                <p>
+                  If a reform scenario involves splitting multiple provinces (e.g. establishing both a South Punjab
+                  province and an administrative division in Khyber Pakhtunkhwa), each respective provincial assembly
+                  must independently pass the amendment by a 2/3 supermajority.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- ARTICLE 1 -->
+          <div class="article-panel" id="panel-art1" style="display: none;">
+            <span class="badge" style="background: rgba(20, 90, 50, 0.1); color: #145a32; padding: 4px 10px; border-radius: 4px; font-weight: 700; font-size: 0.8rem;">
+              Territorial Definition
+            </span>
+            <h2 class="mt-2">Article 1: The Republic and its Territories</h2>
+
+            <div class="legal-clause-box">
+              “(1) Pakistan shall be a Federal Republic to be known as the Islamic Republic of Pakistan.<br />
+              (2) The territories of Pakistan shall comprise:<br />
+              &nbsp;&nbsp;&nbsp;&nbsp;(a) the Provinces of Balochistan, Khyber Pakhtunkhwa, Punjab and Sindh;<br />
+              &nbsp;&nbsp;&nbsp;&nbsp;(b) the Islamabad Capital Territory, hereinafter referred to as the Federal Capital;<br />
+              &nbsp;&nbsp;&nbsp;&nbsp;(c) such States and territories as are or may be included in Pakistan, whether by accession or otherwise.”
+            </div>
+
+            <div class="legal-analysis-grid">
+              <div class="legal-analysis-card">
+                <h4>Textual Enumeration</h4>
+                <p>
+                  Because Article 1(2)(a) explicitly lists the four provinces by name, creating any new province
+                  fundamentally requires a formal Constitutional Amendment Act modifying this specific subsection.
+                </p>
+              </div>
+              <div class="legal-analysis-card">
+                <h4>Senate Representation Adjustment</h4>
+                <p>
+                  Article 1 interacts directly with Article 59 (The Senate). Under Pakistan's bicameral design,
+                  each province is guaranteed equal representation (currently 23 senators per province).
+                  Creating new provinces requires amending Article 59 to define whether new units receive equal or modified Senate representation.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- ARTICLE 140A -->
+          <div class="article-panel" id="panel-art140a" style="display: none;">
+            <span class="badge" style="background: rgba(20, 90, 50, 0.1); color: #145a32; padding: 4px 10px; border-radius: 4px; font-weight: 700; font-size: 0.8rem;">
+              Local Government Devolution
+            </span>
+            <h2 class="mt-2">Article 140A: Local Government</h2>
+
+            <div class="legal-clause-box">
+              “(1) Each Province shall, by law, establish a local government system and devolve political,
+              administrative and financial responsibility and authority to the elected representatives of the local governments.<br />
+              (2) Elections to the local governments shall be held by the Election Commission of Pakistan.”
+            </div>
+
+            <div class="legal-analysis-grid">
+              <div class="legal-analysis-card">
+                <h4>The Tripartite Devolution Mandate</h4>
+                <p>
+                  Article 140A does not merely mandate advisory committees; it constitutionally requires the devolution
+                  of <strong>political</strong>, <strong>administrative</strong>, and <strong>financial</strong> authority.
+                  Supreme Court jurisprudence has repeatedly confirmed that provincial governments cannot arbitrarily dissolve elected local councils.
+                </p>
+              </div>
+              <div class="legal-analysis-card">
+                <h4>The Devolution Alternative</h4>
+                <p>
+                  In PPRI’s research framework, robust implementation of Article 140A serves as a direct policy alternative
+                  or complement to provincial creation. Empowering District Councils provides citizens with local governance
+                  without necessitating federal boundary amendments.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- ARTICLE 160 -->
+          <div class="article-panel" id="panel-art160" style="display: none;">
+            <span class="badge" style="background: rgba(20, 90, 50, 0.1); color: #145a32; padding: 4px 10px; border-radius: 4px; font-weight: 700; font-size: 0.8rem;">
+              Fiscal Equalization &amp; NFC
+            </span>
+            <h2 class="mt-2">Article 160: National Finance Commission</h2>
+
+            <div class="legal-clause-box">
+              “(3A) The share of the Provinces, in each Award of National Finance Commission shall not be less than the
+              share given to the Provinces in the previous Award.<br />
+              (4) As soon as may be after the recommendation of the National Finance Commission has been received,
+              the President shall, by Order, specify the share of the net proceeds of the taxes which is to be allocated to each Province...”
+            </div>
+
+            <div class="legal-analysis-grid">
+              <div class="legal-analysis-card">
+                <h4>The 3A Ratchet Clause</h4>
+                <p>
+                  Inserted by the 18th Constitutional Amendment, Article 160(3A) prevents the federal government
+                  from reducing the provincial share below 57.5% of the divisible pool, ensuring long-term fiscal predictability.
+                </p>
+              </div>
+              <div class="legal-analysis-card">
+                <h4>Commission Reconstitution</h4>
+                <p>
+                  The NFC is composed of the Federal Minister for Finance and the Finance Ministers of the Provinces.
+                  If the federation expands to 12 or 16 provinces, the NFC would expand accordingly, requiring refined
+                  consensus mechanisms for award approvals.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="highlight mt-4">
+            <h2>Related Legal Research</h2>
+            <p>
+              Examine our comprehensive constitutional analysis paper, detailing judicial precedents and civil service transitions:
+              <br />
+              <a class="btn btn-primary mt-2" href="/provinces/constitutional-framework.html">Constitutional Framework Paper →</a>
+              <a class="btn btn-ghost mt-2" href="/resources/legislation.html">Provincial Local Government Acts →</a>
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div>
+          <img src="/assets/images/brand/ppri-logo-header.jpg" alt="PPRI" class="footer-logo" />
+          <p>Pakistan Provincial Reform Institute</p>
+          <p>
+            Independent policy research on provincial reform, federalism, decentralization
+            and institutional design in Pakistan.
+          </p>
+        </div>
+        <div>
+          <h3>Research</h3>
+          <ul class="footer-links">
+            <li><a href="/research/policy-papers/index.html">Policy Papers</a></li>
+            <li><a href="/research/reports/index.html">Reports</a></li>
+            <li><a href="/research/briefs/index.html">Policy Briefs</a></li>
+            <li><a href="/research/working-papers/index.html">Working Papers</a></li>
+            <li><a href="/articles/index.html">Articles &amp; Analysis</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Explore</h3>
+          <ul class="footer-links">
+            <li><a href="/provinces/index.html">Provincial Reform</a></li>
+            <li><a href="/data/centre.html">Data Centre</a></li>
+            <li><a href="/maps/index.html">Maps</a></li>
+            <li><a href="/methodology/index.html">Methodology</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Connect</h3>
+          <ul class="footer-links">
+            <li><a href="https://x.com/PPRI_Pakistan" rel="me">X / @PPRI_Pakistan</a></li>
+            <li><a href="/consultation/index.html">Public Consultation</a></li>
+            <li><a href="/consultation/submissions.html">Submit an idea</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        <span>© <span data-current-year></span> Pakistan Provincial Reform Institute</span>
+        <span><a href="/privacy.html">Privacy</a> · <a href="/terms.html">Terms</a> · <a href="/sitemap.xml">Sitemap</a></span>
+      </div>
+    </footer>
+
+    <script src="/assets/js/main.js" defer></script>
+    <script>
+      function switchArticle(id, btn) {
+        document.querySelectorAll('.article-panel').forEach(p => p.style.display = 'none');
+        document.querySelectorAll('.legal-tab-btn').forEach(b => b.classList.remove('is-active'));
+        document.getElementById('panel-' + id).style.display = 'block';
+        btn.classList.add('is-active');
+      }
+    </script>
+  </body>
+</html>
