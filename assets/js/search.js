@@ -2,12 +2,16 @@
   const i = document.querySelector("[data-search]"),
     b = document.querySelector("[data-results]");
   if (!i || !b) return;
+  const params = new URLSearchParams(window.location.search);
+  const initialQ = params.get("q") || "";
+  if (initialQ) i.value = initialQ;
+
   let idx = [];
   fetch("/search-index.json")
     .then((r) => r.json())
     .then((d) => {
       idx = d;
-      render("");
+      render(i.value || "");
     });
   function render(q) {
     q = q.trim().toLowerCase();

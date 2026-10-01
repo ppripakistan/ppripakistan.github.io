@@ -19,6 +19,7 @@ const PPRI_NAV = [
       ["Provincial reform", "/provinces/index.html"],
       ["Why provinces?", "/provinces/why-provinces.html"],
       ["Proposed models", "/provinces/proposed-models.html"],
+      ["Administrative model", "/provinces/administrative-model.html"],
       ["Local government", "/provinces/local-government.html"],
       ["Fiscal framework", "/provinces/fiscal-framework.html"],
       ["Constitutional framework", "/provinces/constitutional-framework.html"],
