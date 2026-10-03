@@ -139,6 +139,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const sectionData = [
       { id: "section-hero",          label: "Hero" },
+      { id: "section-treatises",     label: "Treatises" },
       { id: "section-latest",        label: "Latest Work" },
       { id: "section-scenario",      label: "Scenario Lab" },
       { id: "section-questions",     label: "Questions" },

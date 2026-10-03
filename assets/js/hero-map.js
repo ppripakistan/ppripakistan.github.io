@@ -15,8 +15,16 @@
   const hudTrigger   = document.getElementById("hudTrigger");
   const hudClose     = document.getElementById("hudClose");
   const tooltip      = document.getElementById("pak-tooltip");
+  const mapLoader    = document.getElementById("hero-map-loader");
+  const telemetryStatus = document.getElementById("telemetryStatus");
+  const telemetryProg   = document.getElementById("telemetryProgress");
 
   if (!section || !mapContainer) return;
+
+  function updateTelemetry(text, progressPercent) {
+    if (telemetryStatus) telemetryStatus.textContent = text;
+    if (telemetryProg) telemetryProg.style.width = progressPercent + "%";
+  }
 
   /* ── State ─────────────────────────────────────────────────────────────── */
   let mapInstance       = null;
@@ -40,9 +48,12 @@
   /* ── Initialize Leaflet Map ────────────────────────────────────────────── */
   function initLeafletMap() {
     if (typeof L === "undefined") {
+      updateTelemetry("Loading cartographic library...", 20);
       setTimeout(initLeafletMap, 60);
       return;
     }
+
+    updateTelemetry("Configuring coordinate projection...", 35);
 
     // Pure vector canvas without external tile imagery or default controls
     mapInstance = L.map(mapContainer, {
@@ -72,16 +83,26 @@
 
   /* ── Load Authentic Geography & Build Layers ───────────────────────────── */
   function loadGeographicData() {
+    updateTelemetry("Streaming 325 KB vector mesh...", 60);
     fetch("/assets/data/hero-pakistan-geography.json")
       .then(res => {
         if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        updateTelemetry("Parsing 16 scenario boundaries...", 85);
         return res.json();
       })
       .then(data => {
         renderMapLayers(data);
+        updateTelemetry("Interactive cartography ready", 100);
+        setTimeout(() => {
+          if (mapLoader) mapLoader.classList.add("is-loaded");
+        }, 350);
       })
       .catch(err => {
         console.warn("Hero map geography load fallback:", err);
+        updateTelemetry("Vector system ready", 100);
+        setTimeout(() => {
+          if (mapLoader) mapLoader.classList.add("is-loaded");
+        }, 500);
       });
   }
 
@@ -122,7 +143,11 @@
         layer.on({
           mouseover: (e) => onUnitHover(e, u, layer),
           mouseout:  ()  => onUnitLeave(layer),
-          mousemove: onUnitMouseMove
+          mousemove: onUnitMouseMove,
+          click:     (e) => {
+            onUnitHover(e, u, layer);
+            onUnitMouseMove(e);
+          }
         });
       }
     }).addTo(scenarioGroup);
