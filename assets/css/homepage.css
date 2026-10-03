@@ -1022,6 +1022,105 @@
   }
 }
 
+/* ===== HOMEPAGE CORE SECTIONS RESPONSIVE STACKING ===== */
+@media (max-width: 900px) {
+  /* 1. Latest Work Section */
+  .home-feature-layout {
+    grid-template-columns: 1fr !important;
+    gap: 20px;
+  }
+  .featured-publication {
+    min-height: auto;
+    padding: 28px 22px;
+  }
+  .featured-footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+  }
+  .featured-footer .home-actions {
+    width: 100%;
+    margin-top: 0;
+  }
+
+  /* 2. Start with a Question Section */
+  .question-workbench {
+    grid-template-columns: 1fr !important;
+    gap: 16px;
+    padding: 14px;
+  }
+  .question-rail {
+    display: grid;
+    gap: 6px;
+  }
+  .question-panel {
+    min-height: auto;
+    padding: 26px 20px;
+  }
+  .question-signal {
+    display: none;
+  }
+
+  /* 3. Public Participation Section */
+  .participation {
+    grid-template-columns: 1fr !important;
+    gap: 24px;
+    padding: 28px 20px;
+  }
+  .participation-copy {
+    width: 100%;
+  }
+  .participation-art {
+    min-height: 180px;
+    margin: 10px auto 0;
+    width: 100%;
+    max-width: 320px;
+  }
+}
+
+@media (max-width: 640px) {
+  .featured-publication {
+    padding: 22px 18px;
+  }
+  .featured-publication h3 {
+    font-size: clamp(1.65rem, 6.2vw, 2.1rem);
+  }
+  .featured-footer .home-actions {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .featured-footer .home-actions .btn {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+  }
+  .question-workbench {
+    padding: 10px;
+  }
+  .question-tab {
+    padding: 12px 14px;
+  }
+  .question-panel {
+    padding: 22px 16px;
+  }
+  .question-panel h3 {
+    font-size: clamp(1.5rem, 5.5vw, 1.95rem);
+  }
+  .participation {
+    padding: 22px 16px;
+  }
+  .participation-copy .home-actions {
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+  }
+  .participation-copy .home-actions .btn {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+  }
+}
+
 @media (prefers-reduced-motion:reduce) {
   .home-page,.home-page * { scroll-behavior:auto; }
   .pulse-mark,.desk-live i,.preview-live i,.desk-pulse-line span,.hero-scroll-cue i,.featured-glow,.participation-ring,.participation-orbit,[data-reveal],.pak-outline,.pf,.pdl,.ppl,.prov-name,.prop-name,.cap-node { animation:none !important; transition:none !important; }

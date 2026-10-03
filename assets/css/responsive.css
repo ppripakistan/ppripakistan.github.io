@@ -235,7 +235,7 @@ code {
     margin-bottom: 24px;
   }
   .home-feature-layout {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr !important;
     gap: 20px;
   }
   .featured-publication {
@@ -274,7 +274,7 @@ code {
     min-height: 380px;
   }
   .question-workbench {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr !important;
     gap: 16px;
     padding: 14px;
   }
@@ -295,7 +295,7 @@ code {
     padding: 26px 20px;
   }
   .participation {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr !important;
     gap: 24px;
     padding: 28px 20px;
   }
