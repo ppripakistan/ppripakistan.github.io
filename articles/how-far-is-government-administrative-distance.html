@@ -1,0 +1,564 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>How Far Is Government? The Hidden Cost of Administrative Distance | PPRI</title>
+    <meta
+      name="description"
+      content="A methodological framework to quantify administrative distance in Pakistan: travel time isochrones, service deserts, and the Administrative Access Index."
+    />
+    <link rel="canonical" href="https://ppripakistan.github.io/articles/how-far-is-government-administrative-distance.html" />
+    <meta property="og:site_name" content="Pakistan Provincial Reform Institute (PPRI)" />
+    <meta property="og:locale" content="en_PK" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="How Far Is Government? The Hidden Cost of Administrative Distance | PPRI" />
+    <meta property="og:description" content="A methodological framework to quantify administrative distance in Pakistan: travel time isochrones, service deserts, and the Administrative Access Index." />
+    <meta property="og:url" content="https://ppripakistan.github.io/articles/how-far-is-government-administrative-distance.html" />
+    <meta property="og:image" content="https://ppripakistan.github.io/assets/images/brand/ppri-logo.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="PPRI - Pakistan Provincial Reform Institute" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@PPRI_Pakistan" />
+    <meta name="twitter:creator" content="@PPRI_Pakistan" />
+    <meta name="twitter:title" content="How Far Is Government? The Hidden Cost of Administrative Distance | PPRI" />
+    <meta name="twitter:description" content="A methodological framework to quantify administrative distance in Pakistan: travel time isochrones, service deserts, and the Administrative Access Index." />
+    <meta name="twitter:image" content="https://ppripakistan.github.io/assets/images/brand/ppri-logo.jpg" />
+    <meta name="theme-color" content="#073c3a" />
+    <link rel="icon" href="/assets/images/brand/ppri-favicon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="alternate" type="application/rss+xml" title="PPRI Policy Publications Feed" href="/feed.xml" />
+    <link rel="stylesheet" href="/assets/css/style.css" />
+    <link rel="stylesheet" href="/assets/css/responsive.css" />
+    <style>
+      .article-hero {
+        background: linear-gradient(135deg, #073c3a 0%, #0c2b26 100%);
+        color: #ffffff;
+        padding: 60px 0 45px;
+        border-bottom: 3px solid #d4af37;
+      }
+      .article-hero .eyebrow {
+        color: #d4af37;
+        font-size: 0.82rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        font-weight: 700;
+        display: block;
+        margin-bottom: 12px;
+      }
+      .article-hero h1 {
+        font-size: 2.35rem;
+        line-height: 1.24;
+        color: #ffffff;
+        max-width: 940px;
+        margin: 0 0 16px;
+      }
+      .article-standfirst {
+        font-size: 1.15rem;
+        line-height: 1.6;
+        color: #e2e8f0;
+        max-width: 840px;
+        margin: 0 0 24px;
+        font-weight: 400;
+      }
+      .article-meta-bar {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        align-items: center;
+        font-size: 0.85rem;
+        color: #cbd5e1;
+        padding-top: 18px;
+        border-top: 1px solid rgba(255, 255, 255, 0.15);
+      }
+      .article-meta-item strong {
+        color: #ffffff;
+      }
+      .stat-ribbon {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+        gap: 16px;
+        margin: 32px 0 40px;
+      }
+      .stat-card {
+        background: #f8fafc;
+        border: 1px solid #e2e8f0;
+        border-top: 4px solid #073c3a;
+        border-radius: 8px;
+        padding: 20px;
+        text-align: center;
+      }
+      .stat-card strong {
+        display: block;
+        font-size: 2rem;
+        color: #073c3a;
+        font-weight: 800;
+        line-height: 1.1;
+      }
+      .stat-card span {
+        display: block;
+        font-size: 0.85rem;
+        color: #64748b;
+        margin-top: 6px;
+        line-height: 1.35;
+      }
+      .dimensions-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 16px;
+        margin: 28px 0;
+      }
+      .dimension-card {
+        background: #ffffff;
+        border: 1px solid #cbd5e1;
+        border-radius: 8px;
+        padding: 18px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.03);
+      }
+      .dimension-card h4 {
+        margin: 0 0 6px;
+        color: #073c3a;
+        font-size: 1.05rem;
+      }
+      .dimension-card p {
+        margin: 0;
+        font-size: 0.86rem;
+        color: #475569;
+        line-height: 1.5;
+      }
+      .mockup-container {
+        background: #0f172a;
+        color: #f8fafc;
+        border-radius: 8px;
+        padding: 24px;
+        margin: 32px 0;
+        border: 1px solid #334155;
+      }
+      .mockup-container h3 {
+        color: #d4af37;
+        margin-top: 0;
+        font-size: 1.2rem;
+      }
+      .mockup-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+        margin-top: 16px;
+      }
+      @media (max-width: 768px) {
+        .mockup-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+      .mockup-col {
+        background: #1e293b;
+        padding: 16px;
+        border-radius: 6px;
+      }
+      .mockup-col h4 {
+        margin: 0 0 10px;
+        font-size: 1rem;
+        color: #38bdf8;
+      }
+      .mockup-item {
+        display: flex;
+        justify-content: space-between;
+        font-size: 0.86rem;
+        padding: 6px 0;
+        border-bottom: 1px solid #334155;
+      }
+      .mockup-item:last-child {
+        border-bottom: none;
+      }
+      .policy-highlight {
+        background: #f0fdf4;
+        border-left: 4px solid #073c3a;
+        padding: 20px 24px;
+        border-radius: 0 8px 8px 0;
+        margin: 32px 0;
+      }
+      .citation-box {
+        background: #f8fafc;
+        border: 1px solid #cbd5e1;
+        border-radius: 8px;
+        padding: 20px;
+        margin-top: 40px;
+        font-size: 0.88rem;
+        color: #475569;
+      }
+    </style>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Article",
+            "@id": "https://ppripakistan.github.io/articles/how-far-is-government-administrative-distance.html#article",
+            "isPartOf": {
+              "@type": "WebPage",
+              "@id": "https://ppripakistan.github.io/articles/how-far-is-government-administrative-distance.html"
+            },
+            "headline": "How Far Is Government? The Hidden Cost of Administrative Distance in Pakistan",
+            "description": "A methodological framework to quantify administrative distance in Pakistan: travel time isochrones, service deserts, and the Administrative Access Index.",
+            "url": "https://ppripakistan.github.io/articles/how-far-is-government-administrative-distance.html",
+            "inLanguage": "en-PK",
+            "mainEntityOfPage": "https://ppripakistan.github.io/articles/how-far-is-government-administrative-distance.html",
+            "datePublished": "2026-10-03T00:00:00+05:00",
+            "dateModified": "2026-10-03T00:00:00+05:00",
+            "author": {
+              "@type": "Organization",
+              "name": "Pakistan Provincial Reform Institute",
+              "url": "https://ppripakistan.github.io"
+            },
+            "publisher": {
+              "@type": "Organization",
+              "name": "Pakistan Provincial Reform Institute",
+              "url": "https://ppripakistan.github.io",
+              "logo": {
+                "@type": "ImageObject",
+                "url": "https://ppripakistan.github.io/assets/images/brand/ppri-logo.jpg"
+              }
+            },
+            "keywords": [
+              "Administrative Distance",
+              "Travel Time Isochrones",
+              "Administrative Access Index",
+              "Public Service Deserts",
+              "Provincial Reform Pakistan",
+              "Spatial Inequality"
+            ]
+          },
+          {
+            "@type": "BreadcrumbList",
+            "@id": "https://ppripakistan.github.io/articles/how-far-is-government-administrative-distance.html#breadcrumb",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://ppripakistan.github.io/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Articles & Analysis",
+                "item": "https://ppripakistan.github.io/articles/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "How Far Is Government?",
+                "item": "https://ppripakistan.github.io/articles/how-far-is-government-administrative-distance.html"
+              }
+            ]
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <header class="site-header">
+      <div class="container navbar">
+        <a class="brand" href="/">
+          <img src="/assets/images/brand/ppri-logo-header.jpg" alt="PPRI logo" />
+          <span class="brand-text"><strong>PPRI</strong><span>Pakistan Provincial Reform Institute</span></span>
+        </a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-navigation">Menu</button>
+        <nav id="site-navigation" class="nav-links">
+          <a href="/">Home</a>
+          <a href="/research/index.html">Research</a>
+          <a href="/provinces/index.html">Reform</a>
+          <a href="/data/centre.html">Data</a>
+          <a href="/maps/scenarios/index.html">Scenarios</a>
+          <a href="/articles/index.html" aria-current="page">Articles</a>
+          <a href="/consultation/index.html">Engage</a>
+          <a href="/about.html">About</a>
+          <a href="/search.html">Search</a>
+        </nav>
+      </div>
+    </header>
+
+    <div class="article-hero">
+      <div class="container">
+        <span class="eyebrow">Spatial Metrics &amp; Administrative Geography</span>
+        <h1>How Far Is Government? The Hidden Cost of Administrative Distance in Pakistan</h1>
+        <p class="article-standfirst">
+          “Government is too far away” is the most common political complaint in peripheral Pakistan. But distance is not merely kilometres on a map; it is travel time, financial friction, institutional hierarchy, and service deserts.
+        </p>
+        <div class="article-meta-bar">
+          <div class="article-meta-item">By <strong>PPRI Geospatial Policy Analytics Desk</strong></div>
+          <div class="article-meta-item">Published: <strong>October 3, 2026</strong></div>
+          <div class="article-meta-item">Reading Time: <strong>11 min read</strong></div>
+          <div class="article-meta-item">Citation: <strong>PPRI-ART-2026-020</strong></div>
+        </div>
+      </div>
+    </div>
+
+    <main id="main-content" class="container article-body" style="padding-top: 40px; padding-bottom: 60px; max-width: 860px;">
+      <article>
+        <p class="lead" style="font-size: 1.18rem; color: #1e293b; line-height: 1.7; margin-bottom: 24px;">
+          Across political rallies in South Punjab, Khyber Pakhtunkhwa’s Hazara belt, rural Balochistan, and Upper Sindh, a single phrase resonates with emotional power: <em>“Hukoomat bohot door hai”</em>—the government is too far away. Yet despite being the central emotional argument for provincial repartition, Pakistan has rarely quantified what “far away” actually means in empirical terms.
+        </p>
+
+        <p>
+          Is administrative distance 200 kilometres of highway? Is it an 8-hour bus ride across mountainous terrain? Is it the financial cost of two nights in a provincial capital hotel to obtain an arms license or pension clearance? Or is it the total absence of a pediatric tertiary ICU within a four-hour ambulance radius? To move the provincial debate from political slogans to scientific policy, PPRI introduces the concept of the <strong>Administrative Access Index (AAI)</strong>.
+        </p>
+
+        <div class="stat-ribbon">
+          <div class="stat-card">
+            <strong>6 Vectors</strong>
+            <span>Distinct dimensions defining administrative distance (Geographic, Time, Cost, Info, Org, Politics)</span>
+          </div>
+          <div class="stat-card">
+            <strong>14+ Hours</strong>
+            <span>Transit time required for a citizen in Gwadar or Washuk to reach the Balochistan Secretariat in Quetta</span>
+          </div>
+          <div class="stat-card">
+            <strong>31.87 Million</strong>
+            <span>Combined population of Karachi and Lahore alone (nearly 34% of national urban population)</span>
+          </div>
+          <div class="stat-card">
+            <strong>0 to 100</strong>
+            <span>Standardized Administrative Access Index (AAI) score scale under development at PPRI</span>
+          </div>
+        </div>
+
+        <h2>The Six Dimensions of Administrative Distance</h2>
+        <p>
+          Administrative distance is multidimensional. Two citizens living precisely 250 kilometres from their respective provincial secretariats experience completely different realities of state accessibility:
+        </p>
+
+        <div class="dimensions-grid">
+          <div class="dimension-card">
+            <h4>1. Geographic Distance</h4>
+            <p>Physical Euclidean mileage. While easy to calculate, it fails to capture topography, terrain friction, and seasonal impassability.</p>
+          </div>
+
+          <div class="dimension-card">
+            <h4>2. Time Isochrone Distance</h4>
+            <p>Hours required to reach the decision-making office via public transit or motorways. A 100km mountain road can take 5 hours, while 100km on an M-tag motorway takes 50 minutes.</p>
+          </div>
+
+          <div class="dimension-card">
+            <h4>3. Financial Friction Distance</h4>
+            <p>Direct economic burden of travel: transit fares, lost daily wages, accommodation, meals, and informal expediting fees for administrative intermediaries.</p>
+          </div>
+
+          <div class="dimension-card">
+            <h4>4. Information Asymmetry Distance</h4>
+            <p>Citizen uncertainty regarding which secretariat department or desk holds legal jurisdiction, resulting in repeated futile bureaucratic visits.</p>
+          </div>
+
+          <div class="dimension-card">
+            <h4>5. Institutional Discretion Distance</h4>
+            <p>Whether local field officers (ACs or Tehsildars) possess statutory authority to grant approvals, or whether documents must be physically routed to the provincial capital.</p>
+          </div>
+
+          <div class="dimension-card">
+            <h4>6. Political Access Distance</h4>
+            <p>Whether an ordinary resident can petition their elected representative directly without relying on an hereditary feudal or clan intermediary.</p>
+          </div>
+        </div>
+
+        <h2>The Travel Isochrone Reality: Reaching the Provincial State</h2>
+        <p>
+          The stark inequality of travel time to provincial secretariats across Pakistan’s 164 districts illustrates why peripheral alienation festers:
+        </p>
+
+        <div class="table-wrap">
+          <table class="data-table" style="width: 100%; border-collapse: collapse; margin: 24px 0; font-size: 0.92rem;">
+            <thead>
+              <tr style="background: #073c3a; color: #ffffff;">
+                <th style="padding: 12px 14px; text-align: left;">Peripheral District</th>
+                <th style="padding: 12px 14px; text-align: left;">Provincial Capital</th>
+                <th style="padding: 12px 14px; text-align: center;">Road Transit Distance</th>
+                <th style="padding: 12px 14px; text-align: center;">Public Transit Duration</th>
+                <th style="padding: 12px 14px; text-align: left;">Access Severity Level</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style="border-bottom: 1px solid #e2e8f0;">
+                <td style="padding: 10px 14px; font-weight: 600;">Gwadar / Turbat</td>
+                <td style="padding: 10px 14px;">Quetta (Balochistan)</td>
+                <td style="padding: 10px 14px; text-align: center;">~780 km</td>
+                <td style="padding: 10px 14px; text-align: center; color: #b91c1c; font-weight: 700;">14 – 16 Hours</td>
+                <td style="padding: 10px 14px; color: #b91c1c; font-weight: 600;">Extreme Isolation / Critical</td>
+              </tr>
+              <tr style="border-bottom: 1px solid #e2e8f0; background: #f8fafc;">
+                <td style="padding: 10px 14px; font-weight: 600;">Rajanpur / Rojhan</td>
+                <td style="padding: 10px 14px;">Lahore (Punjab)</td>
+                <td style="padding: 10px 14px; text-align: center;">~540 km</td>
+                <td style="padding: 10px 14px; text-align: center; color: #b91c1c; font-weight: 700;">8 – 10 Hours</td>
+                <td style="padding: 10px 14px; color: #b91c1c; font-weight: 600;">Severe Deprivation</td>
+              </tr>
+              <tr style="border-bottom: 1px solid #e2e8f0;">
+                <td style="padding: 10px 14px; font-weight: 600;">Upper Kohistan</td>
+                <td style="padding: 10px 14px;">Peshawar (KP)</td>
+                <td style="padding: 10px 14px; text-align: center;">~340 km</td>
+                <td style="padding: 10px 14px; text-align: center; color: #d97706; font-weight: 700;">7 – 9 Hours</td>
+                <td style="padding: 10px 14px; color: #d97706; font-weight: 600;">High Mountain Friction</td>
+              </tr>
+              <tr style="border-bottom: 1px solid #e2e8f0; background: #f8fafc;">
+                <td style="padding: 10px 14px; font-weight: 600;">Tharparkar (Nagarparkar)</td>
+                <td style="padding: 10px 14px;">Karachi (Sindh)</td>
+                <td style="padding: 10px 14px; text-align: center;">~450 km</td>
+                <td style="padding: 10px 14px; text-align: center; color: #d97706; font-weight: 700;">7 – 8 Hours</td>
+                <td style="padding: 10px 14px; color: #d97706; font-weight: 600;">High Desert Friction</td>
+              </tr>
+              <tr style="border-bottom: 1px solid #e2e8f0;">
+                <td style="padding: 10px 14px; font-weight: 600;">Kasur / Sheikhupura</td>
+                <td style="padding: 10px 14px;">Lahore (Punjab)</td>
+                <td style="padding: 10px 14px; text-align: center;">~50 km</td>
+                <td style="padding: 10px 14px; text-align: center; color: #15803d; font-weight: 700;">45 – 60 Minutes</td>
+                <td style="padding: 10px 14px; color: #15803d; font-weight: 600;">Metropolitan Core Access</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2>Simulating Administrative Access: The PPRI AAI Prototype</h2>
+        <p>
+          PPRI is constructing an interactive spatial dashboard allowing policymakers to evaluate how administrative reorganizations affect on-the-ground citizen accessibility:
+        </p>
+
+        <div class="mockup-container">
+          <h3>PPRI Administrative Access Index (AAI) Scenario Simulation</h3>
+          <p style="font-size: 0.88rem; color: #94a3b8; margin-top: 4px;">
+            Simulated profile comparing District Rajanpur under the current unitary Punjab framework vs a South Punjab polycentric model:
+          </p>
+
+          <div class="mockup-grid">
+            <div class="mockup-col">
+              <h4>Current Status Quo (Unitary Punjab)</h4>
+              <div class="mockup-item">
+                <span>Provincial Secretariat Access:</span>
+                <span style="color: #f87171; font-weight: 700;">8h 45m (Lahore)</span>
+              </div>
+              <div class="mockup-item">
+                <span>Nearest High Court Principal Seat:</span>
+                <span style="color: #f87171; font-weight: 700;">8h 45m (Lahore)</span>
+              </div>
+              <div class="mockup-item">
+                <span>Nearest Pediatric Oncology ICU:</span>
+                <span style="color: #fbbf24; font-weight: 700;">3h 15m (Multan)</span>
+              </div>
+              <div class="mockup-item">
+                <span>Engineering University Access:</span>
+                <span style="color: #fbbf24; font-weight: 700;">3h 10m (Multan)</span>
+              </div>
+              <div class="mockup-item">
+                <span>Local Govt PFC Dev Per Capita:</span>
+                <span style="color: #f87171; font-weight: 700;">Rs 1,420 / capita</span>
+              </div>
+              <div class="mockup-item">
+                <span>Composite AAI Access Score:</span>
+                <span style="color: #f87171; font-weight: 800;">28 / 100 (Severe Deficit)</span>
+              </div>
+            </div>
+
+            <div class="mockup-col">
+              <h4>Scenario Lab: Polycentric South Punjab</h4>
+              <div class="mockup-item">
+                <span>Provincial Secretariat Access:</span>
+                <span style="color: #4ade80; font-weight: 700;">2h 30m (Bahawalpur/Multan)</span>
+              </div>
+              <div class="mockup-item">
+                <span>Nearest High Court Principal Seat:</span>
+                <span style="color: #4ade80; font-weight: 700;">2h 15m (Bahawalpur Seat)</span>
+              </div>
+              <div class="mockup-item">
+                <span>Nearest Pediatric Oncology ICU:</span>
+                <span style="color: #4ade80; font-weight: 700;">1h 15m (D.G. Khan Upgrade)</span>
+              </div>
+              <div class="mockup-item">
+                <span>Engineering University Access:</span>
+                <span style="color: #4ade80; font-weight: 700;">1h 10m (D.G. Khan Sub-Campus)</span>
+              </div>
+              <div class="mockup-item">
+                <span>Local Govt PFC Dev Per Capita:</span>
+                <span style="color: #4ade80; font-weight: 700;">Rs 4,850 / capita</span>
+              </div>
+              <div class="mockup-item">
+                <span>Composite AAI Access Score:</span>
+                <span style="color: #4ade80; font-weight: 800;">74 / 100 (+164% Gain)</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <h2>Moving Beyond Maps: The Functional Devolution Test</h2>
+        <p>
+          The quantitative simulation reveals an essential policy insight: <strong>Moving the provincial capital shortens the travel time to the secretariat, but it only fixes citizen well-being if tertiary healthcare, universities, and district finances are decentralized at the exact same moment.</strong>
+        </p>
+        <p>
+          If a peasant farmer in Rojhan still has to travel three hours to Multan for dialysis because the local Tehsil Headquarters (THQ) hospital lacks a nephrologist and water filtration plant, the creation of a new province has failed its primary test. The ultimate goal of provincial reform is not simply redrawing boundary lines; it is eliminating administrative distance so that every citizen can access justice, healthcare, and accountable government within their own community.
+        </p>
+
+        <div class="policy-highlight">
+          <h3 style="margin-top: 0; color: #073c3a; font-size: 1.15rem;">The Scientific Frontier of Pakistan’s Devolution</h3>
+          <p style="margin-bottom: 0; font-size: 0.95rem; color: #334155; line-height: 1.6;">
+            By replacing rhetoric with geospatial analytics and travel isochrone indices, PPRI aims to transform Pakistan’s provincial debate. When a political faction demands a new province, the debate must no longer rest on ethnic identity alone. It must be subjected to quantitative scrutiny: <em>How many citizen travel hours will this reform eliminate? How will it rebalance subnational expenditure? And will it truly dismantle the administrative barrier between the Pakistani citizen and the state?</em>
+          </p>
+        </div>
+
+        <div class="citation-box">
+          <strong>Suggested Citation:</strong><br />
+          Pakistan Provincial Reform Institute (PPRI). (2026). <em>How Far Is Government? The Hidden Cost of Administrative Distance in Pakistan</em>. Policy Analysis Article PPRI-ART-2026-020. https://ppripakistan.github.io/articles/how-far-is-government-administrative-distance.html
+        </div>
+
+        <div class="article-references" style="margin-top: 50px; padding-top: 25px; border-top: 1px solid #e2e8f0;">
+          <h3 style="font-size: 1.15rem; color: #073c3a;">Primary Sources &amp; References</h3>
+          <ul style="font-size: 0.88rem; color: #475569; line-height: 1.6;">
+            <li><strong>Pakistan Bureau of Statistics (PBS):</strong> <em>7th Population and Housing Census 2023: Key Findings Report</em>. <a href="https://www.pbs.gov.pk/sites/default/files/population/2023/Key_Findings_Report.pdf" target="_blank" rel="noopener">pbs.gov.pk</a></li>
+            <li><strong>World Bank:</strong> <em>Strengthening Fiscal Federalism to Drive Development: Subnational Spending and Spatial Allocations</em> (July 2026). <a href="https://www.worldbank.org/en/news/press-release/2026/07/01/pakistan-strengthening-fiscal-federalism-to-drive-development" target="_blank" rel="noopener">worldbank.org</a></li>
+            <li><strong>Asian Development Bank (ADB):</strong> <em>Pakistan National Urban Assessment: Fostering Liveable and Competitive Cities</em> (2024). <a href="https://www.adb.org/documents/pakistan-national-urban-assessment" target="_blank" rel="noopener">adb.org</a></li>
+            <li><strong>National Highway Authority (NHA):</strong> <em>Pakistan National Highway &amp; Motorway Network Logistics and Travel Times Survey</em> (2025). <a href="https://nha.gov.pk" target="_blank" rel="noopener">nha.gov.pk</a></li>
+          </ul>
+        </div>
+      </article>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div>
+          <img src="/assets/images/brand/ppri-logo-header.jpg" alt="PPRI" class="footer-logo" />
+          <p>Pakistan Provincial Reform Institute</p>
+          <p>Policy research on provincial reform, federalism, decentralization and institutional design in Pakistan.</p>
+        </div>
+        <div>
+          <h3>Research</h3>
+          <ul class="footer-links">
+            <li><a href="/research/policy-papers/index.html">Policy Papers</a></li>
+            <li><a href="/research/reports/index.html">Reports</a></li>
+            <li><a href="/research/briefs/index.html">Policy Briefs</a></li>
+            <li><a href="/articles/index.html">Articles &amp; Analysis</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Explore</h3>
+          <ul class="footer-links">
+            <li><a href="/provinces/index.html">Provincial Reform</a></li>
+            <li><a href="/data/centre.html">Data Centre</a></li>
+            <li><a href="/maps/scenarios/index.html">Scenario Lab</a></li>
+            <li><a href="/resources/constitution.html">Constitution Reader</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Connect</h3>
+          <ul class="footer-links">
+            <li><a href="https://x.com/PPRI_Pakistan">X / @PPRI_Pakistan</a></li>
+            <li><a href="/consultation/index.html">Consultation</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        <span>&copy; <span data-current-year></span> Pakistan Provincial Reform Institute</span>
+        <span><a href="/privacy.html">Privacy</a> &middot; <a href="/terms.html">Terms</a> &middot; <a href="/feed.xml">RSS Feed</a></span>
+      </div>
+    </footer>
+    <script src="/assets/js/main.js" defer></script>
+  </body>
+</html>

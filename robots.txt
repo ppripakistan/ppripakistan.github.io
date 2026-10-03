@@ -1,3 +1,7 @@
 User-agent: *
 Allow: /
+Disallow: /search.html
+Disallow: /*?q=*
+Disallow: /*?embed=*
+
 Sitemap: https://ppripakistan.github.io/sitemap.xml

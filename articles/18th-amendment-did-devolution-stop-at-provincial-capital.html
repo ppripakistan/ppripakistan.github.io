@@ -1,0 +1,606 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>The 18th Amendment: Did Devolution Stop at the Provincial Capital? | PPRI</title>
+    <meta
+      name="description"
+      content="An empirical analysis of the 18th Amendment in Pakistan: federal devolution vs provincial recentralization, Article 140A scorecard, and local spending collapse."
+    />
+    <link rel="canonical" href="https://ppripakistan.github.io/articles/18th-amendment-did-devolution-stop-at-provincial-capital.html" />
+    <meta property="og:site_name" content="Pakistan Provincial Reform Institute (PPRI)" />
+    <meta property="og:locale" content="en_PK" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="The 18th Amendment: Did Devolution Stop at the Provincial Capital? | PPRI" />
+    <meta property="og:description" content="An empirical analysis of Pakistan's 18th Amendment: federal devolution vs provincial recentralization, Article 140A scorecard, and local spending collapse." />
+    <meta property="og:url" content="https://ppripakistan.github.io/articles/18th-amendment-did-devolution-stop-at-provincial-capital.html" />
+    <meta property="og:image" content="https://ppripakistan.github.io/assets/images/brand/ppri-logo.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="PPRI - Pakistan Provincial Reform Institute" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@PPRI_Pakistan" />
+    <meta name="twitter:creator" content="@PPRI_Pakistan" />
+    <meta name="twitter:title" content="The 18th Amendment: Did Devolution Stop at the Provincial Capital? | PPRI" />
+    <meta name="twitter:description" content="An empirical analysis of Pakistan's 18th Amendment: federal devolution vs provincial recentralization, Article 140A scorecard, and local spending collapse." />
+    <meta name="twitter:image" content="https://ppripakistan.github.io/assets/images/brand/ppri-logo.jpg" />
+    <meta name="theme-color" content="#073c3a" />
+    <link rel="icon" href="/assets/images/brand/ppri-favicon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="alternate" type="application/rss+xml" title="PPRI Policy Publications Feed" href="/feed.xml" />
+    <link rel="stylesheet" href="/assets/css/style.css" />
+    <link rel="stylesheet" href="/assets/css/responsive.css" />
+    <style>
+      .article-hero {
+        background: linear-gradient(135deg, #073c3a 0%, #0c2b26 100%);
+        color: #ffffff;
+        padding: 60px 0 45px;
+        border-bottom: 3px solid #d4af37;
+      }
+      .article-hero .eyebrow {
+        color: #d4af37;
+        font-size: 0.82rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        font-weight: 700;
+        display: block;
+        margin-bottom: 12px;
+      }
+      .article-hero h1 {
+        font-size: 2.45rem;
+        line-height: 1.22;
+        color: #ffffff;
+        max-width: 920px;
+        margin: 0 0 16px;
+      }
+      .article-standfirst {
+        font-size: 1.15rem;
+        line-height: 1.6;
+        color: #e2e8f0;
+        max-width: 840px;
+        margin: 0 0 24px;
+        font-weight: 400;
+      }
+      .article-meta-bar {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        align-items: center;
+        font-size: 0.85rem;
+        color: #cbd5e1;
+        padding-top: 18px;
+        border-top: 1px solid rgba(255, 255, 255, 0.15);
+      }
+      .article-meta-item strong {
+        color: #ffffff;
+      }
+      .stat-ribbon {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+        gap: 16px;
+        margin: 32px 0 40px;
+      }
+      .stat-card {
+        background: #f8fafc;
+        border: 1px solid #e2e8f0;
+        border-top: 4px solid #073c3a;
+        border-radius: 8px;
+        padding: 20px;
+        text-align: center;
+      }
+      .stat-card strong {
+        display: block;
+        font-size: 2rem;
+        color: #073c3a;
+        font-weight: 800;
+        line-height: 1.1;
+      }
+      .stat-card span {
+        display: block;
+        font-size: 0.85rem;
+        color: #64748b;
+        margin-top: 6px;
+        line-height: 1.35;
+      }
+      .pipeline-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 24px;
+        margin: 32px 0 40px;
+      }
+      .pipeline-card {
+        background: #ffffff;
+        border: 2px solid #e2e8f0;
+        border-radius: 10px;
+        padding: 24px;
+      }
+      .pipeline-card.success {
+        border-color: #10b981;
+        background: #f0fdf4;
+      }
+      .pipeline-card.danger {
+        border-color: #f59e0b;
+        background: #fffbeb;
+      }
+      .pipeline-card h3 {
+        margin: 0 0 10px;
+        font-size: 1.25rem;
+      }
+      .pipeline-card.success h3 {
+        color: #065f46;
+      }
+      .pipeline-card.danger h3 {
+        color: #92400e;
+      }
+      .pipeline-badge {
+        display: inline-block;
+        padding: 4px 10px;
+        border-radius: 4px;
+        font-size: 0.75rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        margin-bottom: 12px;
+      }
+      .pipeline-badge.green {
+        background: #d1fae5;
+        color: #065f46;
+      }
+      .pipeline-badge.amber {
+        background: #fef3c7;
+        color: #92400e;
+      }
+      .insight-box {
+        background: #f0fdfa;
+        border-left: 4px solid #0d9488;
+        padding: 20px 24px;
+        margin: 32px 0;
+        border-radius: 0 8px 8px 0;
+      }
+      .insight-box h4 {
+        margin: 0 0 8px;
+        color: #115e59;
+        font-size: 1.05rem;
+      }
+      .insight-box p {
+        margin: 0;
+        color: #134e4a;
+        font-size: 0.95rem;
+        line-height: 1.6;
+      }
+      .rubric-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 16px;
+        margin: 28px 0 36px;
+      }
+      .rubric-card {
+        background: #ffffff;
+        border: 1px solid #cbd5e1;
+        border-radius: 8px;
+        padding: 18px 20px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.03);
+      }
+      .rubric-card h4 {
+        margin: 0 0 8px;
+        color: #073c3a;
+        font-size: 1rem;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+      .rubric-card p {
+        margin: 0;
+        font-size: 0.88rem;
+        color: #475569;
+        line-height: 1.5;
+      }
+      .table-wrap {
+        overflow-x: auto;
+        margin: 28px 0 36px;
+        border: 1px solid #e2e8f0;
+        border-radius: 8px;
+      }
+      .data-table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 0.9rem;
+        text-align: left;
+      }
+      .data-table th {
+        background: #f8fafc;
+        color: #073c3a;
+        padding: 12px 16px;
+        font-weight: 700;
+        border-bottom: 2px solid #e2e8f0;
+      }
+      .data-table td {
+        padding: 12px 16px;
+        border-bottom: 1px solid #e2e8f0;
+        color: #334155;
+      }
+      .data-table tr:hover {
+        background: #f1f5f9;
+      }
+      .interactive-bridge {
+        background: linear-gradient(135deg, #f0f7f3 0%, #e2efe8 100%);
+        border: 1px solid #c2ded0;
+        border-radius: 8px;
+        padding: 24px;
+        margin: 36px 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 16px;
+      }
+      .interactive-bridge-text h4 {
+        margin: 0 0 6px;
+        color: #073c3a;
+        font-size: 1.1rem;
+      }
+      .interactive-bridge-text p {
+        margin: 0;
+        color: #2d5a4c;
+        font-size: 0.9rem;
+      }
+      @media (max-width: 768px) {
+        .article-hero h1 { font-size: 1.85rem; }
+        .pipeline-grid { grid-template-columns: 1fr; }
+      }
+    </style>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "The 18th Amendment: Did Devolution Stop at the Provincial Capital?",
+      "description": "An empirical analysis of Pakistan's 18th Amendment: federal devolution vs provincial recentralization, Article 140A scorecard, and local spending collapse.",
+      "url": "https://ppripakistan.github.io/articles/18th-amendment-did-devolution-stop-at-provincial-capital.html",
+      "inLanguage": "en",
+      "isAccessibleForFree": true,
+      "datePublished": "2026-10-02",
+      "dateModified": "2026-10-02",
+      "author": {
+        "@type": "Organization",
+        "name": "Pakistan Provincial Reform Institute",
+        "url": "https://ppripakistan.github.io/"
+      },
+      "publisher": {
+        "@type": "ResearchOrganization",
+        "name": "Pakistan Provincial Reform Institute",
+        "url": "https://ppripakistan.github.io/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://ppripakistan.github.io/assets/images/brand/ppri-logo.jpg"
+        }
+      },
+      "mainEntityOfPage": "https://ppripakistan.github.io/articles/18th-amendment-did-devolution-stop-at-provincial-capital.html"
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://ppripakistan.github.io/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Articles & Analysis",
+          "item": "https://ppripakistan.github.io/articles/index.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "The 18th Amendment & Devolution",
+          "item": "https://ppripakistan.github.io/articles/18th-amendment-did-devolution-stop-at-provincial-capital.html"
+        }
+      ]
+    }
+    </script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container navbar">
+        <a class="brand" href="/">
+          <div class="brand-mark">P</div>
+          <div class="brand-text">
+            <strong>PPRI</strong>
+            <span>Pakistan Provincial Reform Institute</span>
+          </div>
+        </a>
+        <nav class="nav-links">
+          <a href="/">Home</a>
+          <a href="/research/index.html">Research</a>
+          <a href="/data/centre.html">Data</a>
+          <a href="/maps/scenarios/index.html">Scenarios</a>
+          <a href="/articles/index.html" aria-current="page">Articles</a>
+          <a href="/about.html">About</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <section class="article-hero">
+        <div class="container">
+          <span class="eyebrow">Constitutional Devolution &amp; Fiscal Federalism · Treatise 04</span>
+          <h1>The 18th Amendment: Did Devolution Stop at the Provincial Capital?</h1>
+          <p class="article-standfirst">
+            Pakistan's 18th Amendment changed the federation by strengthening provincial autonomy. Fifteen years later, the harder question is whether that decentralisation travelled far enough downward—from provinces to districts, cities, and local governments.
+          </p>
+          <div class="article-meta-bar">
+            <div class="article-meta-item">Published: <strong>October 2026</strong></div>
+            <div class="article-meta-item">Reading Time: <strong>10 minutes</strong></div>
+            <div class="article-meta-item">Lead Researcher: <strong>PPRI Governance &amp; Devolution Unit</strong></div>
+            <div class="article-meta-item">Citation: <strong>PPRI-ART-2026-004</strong></div>
+          </div>
+        </div>
+      </section>
+
+      <article class="container prose-wide" style="padding: 40px 0 60px;">
+        <div class="stat-ribbon">
+          <div class="stat-card">
+            <strong>57.5%</strong>
+            <span>Provincial Divisible Pool share guaranteed under the 7th NFC Award</span>
+          </div>
+          <div class="stat-card">
+            <strong>&lt;5%</strong>
+            <span>Local government share of total public spending in 2024 (down from ~10% in 2005)</span>
+          </div>
+          <div class="stat-card">
+            <strong>15.7% &rarr; 5.8%</strong>
+            <span>Sindh provincial receipts transferred to local councils (FY12 to FY26)</span>
+          </div>
+          <div class="stat-card">
+            <strong>Art. 140A</strong>
+            <span>Constitutional mandate for financial, administrative, and political local devolution</span>
+          </div>
+        </div>
+
+        <p class="lead" style="font-size: 1.18rem; line-height: 1.7; color: #1e293b;">
+          Pakistan's argument about the 18th Amendment is often framed as a fight between two camps: those who defend provincial autonomy and those who say devolution produced weak governance. That binary is fundamentally misleading.
+        </p>
+
+        <p>
+          The 18th Constitutional Amendment, enacted in April 2010, was designed to correct an acute historical distortion: excessive federal centralisation. It abolished the Concurrent Legislative List, devolved 17 federal ministries, and restored vital federal balances that had eroded over decades of military rule and bureaucratic centralism.
+        </p>
+
+        <p>
+          Yet decentralisation cannot be measured solely by the transfer of authority from Islamabad to Lahore, Karachi, Peshawar, and Quetta. For the ordinary citizen, the ultimate test of governance is whether power, budgetary resources, and executive accountability travel downward to where public services are actually delivered.
+        </p>
+
+        <h2>What the 18th Amendment actually changed</h2>
+        <p>
+          The amendment was among the most profound constitutional restructurings in Pakistan's history. Alongside reconfiguring federal legislative powers, it introduced two structural pillars that redefined the federal-provincial compact:
+        </p>
+        <ul>
+          <li><strong>Article 140A:</strong> Mandates that each province must establish a local government system and devolve political, administrative, and financial responsibility and authority to elected local representatives.</li>
+          <li><strong>Article 160(3A):</strong> Guarantees that the provinces' collective share in each subsequent National Finance Commission (NFC) Award cannot be lower than their share in the preceding award.</li>
+        </ul>
+        <p>
+          These were structural, irreversible legal guarantees. They permanently shifted the constitutional gravity away from the centre.
+        </p>
+
+        <!-- Infographic 1: The Broken Devolution Pipeline -->
+        <div class="pipeline-grid">
+          <div class="pipeline-card success">
+            <span class="pipeline-badge green">Step 1: Federal &rarr; Provincial</span>
+            <h3>Constitutional &amp; Fiscal Success</h3>
+            <p><strong>NFC Divisible Pool:</strong> Provincial share raised to 57.5% from FY2011–12 onwards.</p>
+            <p><strong>Horizontal Formula:</strong> Diversified beyond population (82%) to include poverty (10.3%), revenue effort (5%), and inverse density (2.7%).</p>
+            <p><strong>Legislative Autonomy:</strong> 17 ministries devolved, Concurrent List deleted, provincial taxation on services established.</p>
+          </div>
+          <div class="pipeline-card danger">
+            <span class="pipeline-badge amber">Step 2: Provincial &rarr; Local</span>
+            <h3>The Devolution Bottleneck</h3>
+            <p><strong>Local Spending Collapse:</strong> Share of national expenditure undertaken by local tiers fell from ~10% (2005) to &lt;5% (2024).</p>
+            <p><strong>Provincial Fiscal Hoarding:</strong> Local transfers collapsed across all provinces (PIDE 2025): Punjab fell 28.0% &rarr; 19.1%, KP 30.0% &rarr; 22.0%, Balochistan 5.8% &rarr; 0.2%.</p>
+            <p><strong>Article 140A Resistance:</strong> Irregular local elections, dissolved councils, and unnotified Provincial Finance Commissions (PFCs).</p>
+          </div>
+        </div>
+
+        <h2>Did the money keep moving downward?</h2>
+        <p>
+          This is where empirical evidence challenges political rhetoric. While provincial leaders frequently demand greater shares from Islamabad, the evidence indicates an aggressive recentralisation of public resources at the provincial secretariat level.
+        </p>
+        <p>
+          According to the Pakistan Institute of Development Economics (PIDE) in their 2025 study, <em>Beyond the NFC Award: Pakistan's Unfinished Devolution to Local Governments</em>, the proportion of provincial receipts transferred downward to elected local councils has suffered a protracted collapse across all four federating units:
+        </p>
+
+        <!-- Table: Article 140A & Local Devolution Scorecard -->
+        <div class="table-wrap">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Province</th>
+                <th>Local Transfer Share (FY12)</th>
+                <th>Local Transfer Share (FY26)</th>
+                <th>Net Fiscal Change</th>
+                <th>Provincial Finance Commission Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Sindh</strong></td>
+                <td>15.7%</td>
+                <td>5.8%</td>
+                <td style="color: #dc2626; font-weight: 700;">-9.9% (-63% relative drop)</td>
+                <td>PFC Award dormant; ad-hoc grants to Karachi &amp; municipal councils</td>
+              </tr>
+              <tr>
+                <td><strong>Punjab</strong></td>
+                <td>28.0%</td>
+                <td>19.1%</td>
+                <td style="color: #dc2626; font-weight: 700;">-8.9% (-32% relative drop)</td>
+                <td>Interim PFC awards; extensive line-department bypassing</td>
+              </tr>
+              <tr>
+                <td><strong>Khyber Pakhtunkhwa</strong></td>
+                <td>30.0%</td>
+                <td>22.0%</td>
+                <td style="color: #dc2626; font-weight: 700;">-8.0% (-27% relative drop)</td>
+                <td>PFC rules notified; village council discretionary funds delayed</td>
+              </tr>
+              <tr>
+                <td><strong>Balochistan</strong></td>
+                <td>5.8%</td>
+                <td>0.2%</td>
+                <td style="color: #dc2626; font-weight: 700;">-5.6% (-96% relative drop)</td>
+                <td>Virtually zero institutional local municipal fiscal autonomy</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="insight-box">
+          <h4>World Bank 2026 Fiscal Federalism Assessment</h4>
+          <p>
+            In its July 2026 review, <em>Strengthening Fiscal Federalism to Drive Development</em>, the World Bank noted that while the 2010 constitutional settlement represented a major historic milestone, <strong>“the full promise of devolution has yet to be realized.”</strong> The report documented that local governments undertake less than 5% of all consolidated public expenditure, with provincial resource allocation continuing to follow historical bureaucratic inertia rather than district poverty or localized service-delivery deficits.
+          </p>
+        </div>
+
+        <h2>What local governments were supposed to do</h2>
+        <p>
+          Article 140A of the Constitution is not vague. It explicitly commands provincial assemblies to devolve <strong>political, administrative, and financial</strong> authority to elected local institutions.
+        </p>
+        <p>
+          This constitutional requirement is vital because the vast majority of citizens' daily interactions with the state occur at the municipal and district tier:
+        </p>
+        <ul>
+          <li>Municipal solid waste collection and sanitary drainage</li>
+          <li>Primary school attendance and basic health unit staffing</li>
+          <li>Local street paving, tertiary drainage, and neighborhood water supply</li>
+          <li>Zoning permissions, spatial planning, and building control</li>
+        </ul>
+        <p>
+          When provincial secretariats in Lahore, Karachi, or Peshawar retain exclusive sanctioning authority over elementary school repairs, district transfer postings, and municipal drainage schemes, the governance model ceases to be decentralized in practice—regardless of how fiercely provincial autonomy is defended in federal debates.
+        </p>
+
+        <h2>The political incentive problem</h2>
+        <p>
+          Why would a provincial government willingly devolve power downward? This is the core institutional dilemma of Pakistani governance.
+        </p>
+        <p>
+          Provincial politicians have an overwhelming electoral and ideological incentive to demand autonomy, natural resource rights, and increased divisible pool shares from Islamabad. However, once those powers and revenues arrive at the provincial secretariat, the exact same political logic discourages their transfer to municipal mayors, district council chairpersons, or union council representatives.
+        </p>
+        <p>
+          Elected members of provincial assemblies (MPAs) frequently view empowered local mayors and district chairs as direct political rivals who threaten their traditional role as primary dispensers of discretionary development funds and constituency patronage.
+        </p>
+        <blockquote>
+          If provincial secretariats hoard power and refuse to devolve downward to districts, citizens naturally conclude that the province itself has become too distant and unmanageable.
+        </blockquote>
+
+        <h2>The 2026 debate: bridging the &ldquo;Missing Middle&rdquo;</h2>
+        <p>
+          The renewed 2026 national debate has exposed this missing middle. Planning Minister Ahsan Iqbal has framed the choice as a structural crossroads: either Pakistan must create 12 to 15 smaller provinces to foster competitive federalism, or it must genuinely empower 160+ district governments with constitutional guarantees.
+        </p>
+        <p>
+          Former Balochistan Chief Minister Jam Kamal Khan similarly observed in August 2026 that the 18th Amendment successfully shifted powers from Islamabad to provincial capitals, but completely halted at the provincial secretariats, leaving districts and municipalities as disenfranchised administrative spectators.
+        </p>
+
+        <h2>The PPRI Framework: 5 criteria for complete devolution</h2>
+        <p>
+          To move beyond political rhetoric, PPRI proposes an empirical 5-point test for evaluating whether a proposed administrative reform genuinely fulfills constitutional devolution:
+        </p>
+
+        <!-- Infographic: PPRI 5-Question Framework Grid -->
+        <div class="rubric-grid">
+          <div class="rubric-card">
+            <h4><span>01.</span> Who Decides?</h4>
+            <p>Clear, unencumbered statutory authority must rest with the tier closest to the citizen for localized services without requiring provincial secretariat sign-offs.</p>
+          </div>
+          <div class="rubric-card">
+            <h4><span>02.</span> Who Pays?</h4>
+            <p>Predictable, formula-based transfers through statutory Provincial Finance Commissions (PFCs), protected from ad-hoc executive withholding.</p>
+          </div>
+          <div class="rubric-card">
+            <h4><span>03.</span> Who Is Accountable?</h4>
+            <p>Citizens must know exactly which elected official can be rewarded or voted out when water networks fail or basic schools lack teachers.</p>
+          </div>
+          <div class="rubric-card">
+            <h4><span>04.</span> Who Measures?</h4>
+            <p>Granular, district-level outcome tracking and service indicators must be published openly rather than hidden inside opaque provincial departmental reports.</p>
+          </div>
+          <div class="rubric-card">
+            <h4><span>05.</span> Who Equalises?</h4>
+            <p>Robust horizontal equalization formulas to ensure disadvantaged and remote districts receive compensatory funding to meet national minimum service baselines.</p>
+          </div>
+        </div>
+
+        <h2>Does this mean new provinces are unnecessary?</h2>
+        <p>
+          Not necessarily. In territories where demographic scale is staggering—such as Punjab with 127.7 million people—or where geographic isolation and regional neglect are deeply institutionalised, territorial reorganization under Article 239 may well be a valid complement to administrative decentralisation.
+        </p>
+        <p>
+          However, creating new provinces without fixing the local devolution pipeline merely multiplies the number of centralized provincial secretariats from four to ten or twelve. A new provincial capital can recreate the exact same bureaucratic concentration on a smaller canvas.
+        </p>
+
+        <div class="interactive-bridge">
+          <div class="interactive-bridge-text">
+            <h4>Explore the Local Governance Scenarios</h4>
+            <p>Compare territorial reorganization scenarios against Article 140A district empowerment in our interactive research models.</p>
+          </div>
+          <a href="/research/working-papers/provinces-local-government.html" class="btn btn-primary" style="background: #073c3a; color: #ffffff; padding: 10px 18px; border-radius: 6px; text-decoration: none; font-weight: 700; font-size: 0.88rem;">Open Working Paper &rarr;</a>
+        </div>
+
+        <div class="article-references" style="margin-top: 50px; padding-top: 25px; border-top: 1px solid #e2e8f0;">
+          <h3 style="font-size: 1.15rem; color: #073c3a;">Primary Sources &amp; References</h3>
+          <ul style="font-size: 0.88rem; color: #475569; line-height: 1.6;">
+            <li><strong>Constitution of the Islamic Republic of Pakistan:</strong> Articles 140A, 160(3A), and 239. <a href="/resources/constitution.html">PPRI Constitution Reader</a></li>
+            <li><strong>Pakistan Institute of Development Economics (PIDE):</strong> <em>Beyond the NFC Award: Pakistan's Unfinished Devolution to Local Governments</em> (2025). <a href="https://pide.org.pk/research/beyond-the-nfc-award-pakistans-unfinished-devolution-to-local-governments/" target="_blank" rel="noopener">PIDE Research Portal</a></li>
+            <li><strong>World Bank:</strong> <em>Strengthening Fiscal Federalism to Drive Development</em> (July 2026). <a href="https://www.worldbank.org/en/news/press-release/2026/07/01/pakistan-strengthening-fiscal-federalism-to-drive-development" target="_blank" rel="noopener">World Bank Press Release</a></li>
+            <li><strong>Ministry of Finance, Government of Pakistan:</strong> <em>7th National Finance Commission Award</em> (Year Book 2009–10). <a href="https://www.finance.gov.pk/publications/YearBook2009_10.pdf" target="_blank" rel="noopener">finance.gov.pk</a></li>
+            <li><strong>Planning Commission of Pakistan:</strong> Federal Minister Ahsan Iqbal policy address on competitive federalism (Geo News, June 2026).</li>
+            <li><strong>Federal Ministry of Commerce:</strong> Minister Jam Kamal Khan remarks on smaller administrative units (The Express Tribune, August 2026).</li>
+          </ul>
+        </div>
+      </article>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div>
+          <img src="/assets/images/brand/ppri-logo-header.jpg" alt="PPRI" class="footer-logo" />
+          <p>Pakistan Provincial Reform Institute</p>
+          <p>Policy research on provincial reform, federalism, decentralization and institutional design in Pakistan.</p>
+        </div>
+        <div>
+          <h3>Research</h3>
+          <ul class="footer-links">
+            <li><a href="/research/policy-papers/index.html">Policy Papers</a></li>
+            <li><a href="/research/reports/index.html">Reports</a></li>
+            <li><a href="/research/briefs/index.html">Policy Briefs</a></li>
+            <li><a href="/articles/index.html">Articles &amp; Analysis</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Explore</h3>
+          <ul class="footer-links">
+            <li><a href="/provinces/index.html">Provincial Reform</a></li>
+            <li><a href="/data/centre.html">Data Centre</a></li>
+            <li><a href="/maps/scenarios/index.html">Scenario Lab</a></li>
+            <li><a href="/resources/constitution.html">Constitution Reader</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Connect</h3>
+          <ul class="footer-links">
+            <li><a href="https://x.com/PPRI_Pakistan">X / @PPRI_Pakistan</a></li>
+            <li><a href="/consultation/index.html">Consultation</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        <span>&copy; <span data-current-year></span> Pakistan Provincial Reform Institute</span>
+        <span><a href="/privacy.html">Privacy</a> &middot; <a href="/terms.html">Terms</a> &middot; <a href="/feed.xml">RSS Feed</a></span>
+      </div>
+    </footer>
+    <script src="/assets/js/main.js" defer></script>
+  </body>
+</html>

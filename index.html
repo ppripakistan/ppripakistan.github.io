@@ -4,53 +4,74 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>Pakistan Provincial Reform Institute | PPRI</title>
-    <meta
-      name="description"
-      content="Pakistan Provincial Reform Institute: research, data, maps and public-policy analysis on provincial reform, governance, federalism and decentralization in Pakistan."
-    />
+    <meta name="description" content="Pakistan Provincial Reform Institute: research, data, maps and public-policy analysis on provincial reform, governance, federalism and decentralization in Pakistan." />
     <link rel="canonical" href="https://ppripakistan.github.io/" />
+    <meta property="og:site_name" content="Pakistan Provincial Reform Institute (PPRI)" />
+    <meta property="og:locale" content="en_PK" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Pakistan Provincial Reform Institute | PPRI" />
-    <meta
-      property="og:description"
-      content="Research, data, maps and public-policy analysis on provincial reform, governance, federalism and decentralization in Pakistan."
-    />
-    <meta
-      property="og:image"
-      content="https://ppripakistan.github.io/assets/images/brand/ppri-logo.jpg"
-    />
+    <meta property="og:description" content="Pakistan Provincial Reform Institute: research, data, maps and public-policy analysis on provincial reform, governance, federalism and decentralization in Pakistan." />
     <meta property="og:url" content="https://ppripakistan.github.io/" />
+    <meta property="og:image" content="https://ppripakistan.github.io/assets/images/brand/ppri-logo.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="PPRI - Pakistan Provincial Reform Institute" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@PPRI_Pakistan" />
+    <meta name="twitter:creator" content="@PPRI_Pakistan" />
     <meta name="twitter:title" content="Pakistan Provincial Reform Institute | PPRI" />
-    <meta
-      name="twitter:description"
-      content="Research, data, maps and public-policy analysis on provincial reform, governance, federalism and decentralization in Pakistan."
-    />
-    <meta
-      name="twitter:image"
-      content="https://ppripakistan.github.io/assets/images/brand/ppri-logo.jpg"
-    />
-    <meta name="theme-color" content="#073c3a" />
+    <meta name="twitter:description" content="Pakistan Provincial Reform Institute: research, data, maps and public-policy analysis on provincial reform, governance, federalism and decentralization in Pakistan." />
+    <meta name="twitter:image" content="https://ppripakistan.github.io/assets/images/brand/ppri-logo.jpg" />
     <link rel="icon" href="/assets/images/brand/ppri-favicon.png" />
     <link rel="stylesheet" href="/assets/css/style.css" />
-    <link rel="stylesheet" href="/assets/css/responsive.css" />
+
     <link rel="stylesheet" href="/assets/css/phase6.css" />
     <link rel="stylesheet" href="/assets/css/homepage.css" />
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="" />
     <link rel="stylesheet" href="/assets/css/hero-map.css" />
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "Organization",
-        "name": "Pakistan Provincial Reform Institute",
-        "alternateName": "PPRI",
-        "url": "https://ppripakistan.github.io/",
-        "logo": "https://ppripakistan.github.io/assets/images/brand/ppri-logo.jpg",
-        "sameAs": ["https://x.com/PPRI_Pakistan"],
-        "description": "Research and public-policy analysis on provincial reform, governance, federalism and decentralization in Pakistan."
-      }
+    <link rel="stylesheet" href="/assets/css/responsive.css" />
+      <script type="application/ld+json">
+    {
+          "@context": "https://schema.org",
+          "@type": "ResearchOrganization",
+          "@id": "https://ppripakistan.github.io/#organization",
+          "name": "Pakistan Provincial Reform Institute",
+          "alternateName": "PPRI",
+          "url": "https://ppripakistan.github.io/",
+          "logo": {
+                "@type": "ImageObject",
+                "url": "https://ppripakistan.github.io/assets/images/brand/ppri-logo.jpg",
+                "width": 1200,
+                "height": 630
+          },
+          "sameAs": [
+                "https://x.com/PPRI_Pakistan"
+          ],
+          "description": "Non-partisan policy research institute providing empirical data, cartographic scenario modeling, and constitutional legal analysis on provincial restructuring, federalism, and municipal devolution in Pakistan."
+    }
     </script>
+    <script type="application/ld+json">
+    {
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          "@id": "https://ppripakistan.github.io/#website",
+          "url": "https://ppripakistan.github.io/",
+          "name": "Pakistan Provincial Reform Institute",
+          "publisher": {
+                "@id": "https://ppripakistan.github.io/#organization"
+          },
+          "potentialAction": {
+                "@type": "SearchAction",
+                "target": "https://ppripakistan.github.io/search.html?q={search_term_string}",
+                "query-input": "required name=search_term_string"
+          }
+    }
+    </script>
+      <meta name="theme-color" content="#073c3a" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="alternate" type="application/rss+xml" title="PPRI Policy Publications Feed" href="/feed.xml" />
+    <link rel="preconnect" href="https://unpkg.com" crossorigin />
+    <link rel="dns-prefetch" href="https://cdn.jsdelivr.net" />
   </head>
   <body class="home-page">
     <a class="skip-link" href="#main-content">Skip to content</a>
@@ -96,7 +117,24 @@
         <div id="hero-scrim" aria-hidden="true"></div>
 
         <!-- Authentic Pakistan Map — Leaflet.js real vector borders (right column) -->
-        <div id="hero-map-container" class="hero-leaflet-map" aria-hidden="true"></div>
+        <div id="hero-map-container" class="hero-leaflet-map" aria-label="Interactive map of Pakistan administrative boundaries">
+          <!-- Atmospheric Cartographic Telemetry Loader -->
+          <div id="hero-map-loader" class="hero-map-loader" aria-live="polite">
+            <div class="loader-radar">
+              <div class="radar-sweep"></div>
+              <div class="radar-reticle-h"></div>
+              <div class="radar-reticle-v"></div>
+            </div>
+            <div class="loader-telemetry">
+              <span class="telemetry-badge">PPRI Cartographic Engine</span>
+              <span class="telemetry-status" id="telemetryStatus">Initializing boundary vectors...</span>
+              <div class="radar-coords">30.3753° N, 69.3451° E · REF: PAK-WGS84</div>
+              <div class="telemetry-bar">
+                <div class="telemetry-progress" id="telemetryProgress"></div>
+              </div>
+            </div>
+          </div>
+        </div>
 
         <!-- Hero copy — left side, always above scrim (z-index 4) -->
         <div class="hero-map-copy">
@@ -194,6 +232,141 @@
         <div class="hero-map-scroll-cue" aria-hidden="true">
           <span>Scroll into the research</span>
           <i></i>
+        </div>
+      </section>
+
+      <section class="home-section home-treatises-section" id="section-treatises" aria-labelledby="treatises-title">
+        <div class="container">
+          <div class="home-section-head" data-reveal>
+            <div>
+              <span class="home-section-label">Analytical Research Series</span>
+              <h2 id="treatises-title">Featured Treatises &amp; Policy Inquiries</h2>
+              <p>In-depth, data-grounded investigations into Pakistan's federalism, municipal devolution, administrative distance, and public finance.</p>
+            </div>
+            <a class="btn btn-ghost" href="/articles/index.html">View All 20+ Treatises →</a>
+          </div>
+
+          <div class="treatises-grid" data-reveal>
+            <article class="treatise-card">
+              <div class="treatise-card-top">
+                <span class="treatise-pill">Spatial Metrics</span>
+                <span class="treatise-time">11 min read</span>
+              </div>
+              <span class="treatise-code">PPRI-ART-2026-020</span>
+              <h3 class="treatise-title">
+                <a href="/articles/how-far-is-government-administrative-distance.html">How Far Is Government? The Hidden Cost of Administrative Distance in Pakistan</a>
+              </h3>
+              <p class="treatise-excerpt">
+                Quantifying travel time isochrones, economic friction, and public service deserts beyond nominal territorial boundaries.
+              </p>
+              <div class="treatise-footer">
+                <a class="treatise-link" href="/articles/how-far-is-government-administrative-distance.html">Read treatise <span aria-hidden="true">→</span></a>
+              </div>
+            </article>
+
+            <article class="treatise-card">
+              <div class="treatise-card-top">
+                <span class="treatise-pill">Spatial Economics</span>
+                <span class="treatise-time">12 min read</span>
+              </div>
+              <span class="treatise-code">PPRI-ART-2026-019</span>
+              <h3 class="treatise-title">
+                <a href="/articles/can-pakistan-grow-beyond-provincial-capitals-secondary-cities.html">Can Pakistan Grow Beyond Its Provincial Capitals? Secondary Cities</a>
+              </h3>
+              <p class="treatise-excerpt">
+                A spatial economic blueprint for polycentric urban development, municipal bond finance, and intermediate industrial clustering.
+              </p>
+              <div class="treatise-footer">
+                <a class="treatise-link" href="/articles/can-pakistan-grow-beyond-provincial-capitals-secondary-cities.html">Read treatise <span aria-hidden="true">→</span></a>
+              </div>
+            </article>
+
+            <article class="treatise-card">
+              <div class="treatise-card-top">
+                <span class="treatise-pill">Institutional Design</span>
+                <span class="treatise-time">10 min read</span>
+              </div>
+              <span class="treatise-code">PPRI-ART-2026-018</span>
+              <h3 class="treatise-title">
+                <a href="/articles/new-province-can-move-capital-can-it-move-power.html">A New Province Can Move a Capital. Can It Move Power?</a>
+              </h3>
+              <p class="treatise-excerpt">
+                Evaluating the capital-city centralization paradox, administrative inertia, and multi-tiered polycentric institutional dispersion.
+              </p>
+              <div class="treatise-footer">
+                <a class="treatise-link" href="/articles/new-province-can-move-capital-can-it-move-power.html">Read treatise <span aria-hidden="true">→</span></a>
+              </div>
+            </article>
+
+            <article class="treatise-card">
+              <div class="treatise-card-top">
+                <span class="treatise-pill">Subnational Finance</span>
+                <span class="treatise-time">11 min read</span>
+              </div>
+              <span class="treatise-code">PPRI-ART-2026-017</span>
+              <h3 class="treatise-title">
+                <a href="/articles/where-did-development-money-go-district-government.html">Where Did Development Money Go? Local Government Under 2001 Devolution</a>
+              </h3>
+              <p class="treatise-excerpt">
+                Empirical subnational financial flows, Provincial Allocable Shares (39.8%), CCB matching grants, and municipal fiscal autonomy.
+              </p>
+              <div class="treatise-footer">
+                <a class="treatise-link" href="/articles/where-did-development-money-go-district-government.html">Read treatise <span aria-hidden="true">→</span></a>
+              </div>
+            </article>
+
+            <article class="treatise-card">
+              <div class="treatise-card-top">
+                <span class="treatise-pill">Public Service Delivery</span>
+                <span class="treatise-time">12 min read</span>
+              </div>
+              <span class="treatise-code">PPRI-ART-2026-015</span>
+              <h3 class="treatise-title">
+                <a href="/articles/did-2001-devolution-improve-services-evidence.html">Did 2001 Devolution Improve Basic Services? The Empirical Evidence</a>
+              </h3>
+              <p class="treatise-excerpt">
+                An exhaustive review of primary schooling, BHU healthcare, and water supply metrics during Pakistan's district government experiment.
+              </p>
+              <div class="treatise-footer">
+                <a class="treatise-link" href="/articles/did-2001-devolution-improve-services-evidence.html">Read treatise <span aria-hidden="true">→</span></a>
+              </div>
+            </article>
+
+            <article class="treatise-card">
+              <div class="treatise-card-top">
+                <span class="treatise-pill">Regional Case Studies</span>
+                <span class="treatise-time">10 min read</span>
+              </div>
+              <span class="treatise-code">PPRI-ART-2026-007</span>
+              <h3 class="treatise-title">
+                <a href="/articles/south-punjab-why-does-the-province-demand-keep-returning.html">South Punjab: Why Does the Province Demand Keep Returning?</a>
+              </h3>
+              <p class="treatise-excerpt">
+                Analyzing administrative distance to Lahore, development budget allocations, and civil service quota grievances.
+              </p>
+              <div class="treatise-footer">
+                <a class="treatise-link" href="/articles/south-punjab-why-does-the-province-demand-keep-returning.html">Read treatise <span aria-hidden="true">→</span></a>
+              </div>
+            </article>
+          </div>
+
+          <div class="treatises-banner" data-reveal>
+            <div class="treatises-kpi-ribbon">
+              <div class="treatise-kpi-item">
+                <strong>20+</strong>
+                <span>Published Treatises</span>
+              </div>
+              <div class="treatise-kpi-item">
+                <strong>164</strong>
+                <span>Districts Analyzed</span>
+              </div>
+              <div class="treatise-kpi-item">
+                <strong>100%</strong>
+                <span>Open Access &amp; Data-Linked</span>
+              </div>
+            </div>
+            <a class="btn btn-primary" href="/articles/index.html">Explore Complete Research Archive (20+ Treatises) →</a>
+          </div>
         </div>
       </section>
 

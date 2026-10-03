@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Pakistan Provincial Reform Institute (PPRI) — Policy Research Feed</title>
+    <link>https://ppripakistan.github.io/</link>
+    <description>Peer-reviewed policy papers, empirical reports, datasets, and constitutional legal analysis on provincial reform, federalism, and municipal devolution in Pakistan.</description>
+    <language>en-pk</language>
+    <lastBuildDate>Sat, 03 Oct 2026 09:15:00 +0500</lastBuildDate>
+    <atom:link href="https://ppripakistan.github.io/feed.xml" rel="self" type="application/rss+xml" />
+    <image>
+      <url>https://ppripakistan.github.io/assets/images/brand/ppri-logo.jpg</url>
+      <title>Pakistan Provincial Reform Institute (PPRI)</title>
+      <link>https://ppripakistan.github.io/</link>
+    </image>
+
+    <item>
+      <title>The Provincial Reorganization of Pakistan: Constitutional, Demographic, Fiscal, and Administrative Architecture</title>
+      <link>https://ppripakistan.github.io/research/policy-papers/provincial-reorganization-of-pakistan.html</link>
+      <guid isPermaLink="true">https://ppripakistan.github.io/research/policy-papers/provincial-reorganization-of-pakistan.html</guid>
+      <pubDate>Tue, 15 Sep 2026 09:00:00 +0500</pubDate>
+      <description>Comprehensive institutional treatise connecting constitutional law, demographic scale, fiscal federalism, administrative transition, and Article 140A devolution in Pakistan.</description>
+      <category>Policy Papers</category>
+    </item>
+
+    <item>
+      <title>Administrative Scale &amp; Civil Service Ratios: Evaluating Field Governance Disparities</title>
+      <link>https://ppripakistan.github.io/research/briefs/administrative-scale.html</link>
+      <guid isPermaLink="true">https://ppripakistan.github.io/research/briefs/administrative-scale.html</guid>
+      <pubDate>Wed, 16 Sep 2026 09:00:00 +0500</pubDate>
+      <description>Policy brief examining administrative workload imbalances, officer-to-citizen ratios, and service delivery bottlenecks across Pakistan's 4 provinces.</description>
+      <category>Policy Briefs</category>
+    </item>
+
+    <item>
+      <title>Provinces and Local Government: Evaluating Devolution Architectures</title>
+      <link>https://ppripakistan.github.io/research/working-papers/provinces-local-government.html</link>
+      <guid isPermaLink="true">https://ppripakistan.github.io/research/working-papers/provinces-local-government.html</guid>
+      <pubDate>Thu, 17 Sep 2026 09:00:00 +0500</pubDate>
+      <description>Working paper analyzing the constitutional mandate of Article 140A, statutory Provincial Finance Commission (PFC) awards, and municipal financial empowerment.</description>
+      <category>Working Papers</category>
+    </item>
+
+    <item>
+      <title>The Scale Imbalance: Why Pakistan's 4-Province Model Is Administratively Overwhelmed</title>
+      <link>https://ppripakistan.github.io/articles/article-001.html</link>
+      <guid isPermaLink="true">https://ppripakistan.github.io/articles/article-001.html</guid>
+      <pubDate>Mon, 28 Sep 2026 09:00:00 +0500</pubDate>
+      <description>Analytical essay examining how Punjab's 127.7 million population creates the largest subnational administrative unit in any democracy worldwide, concentrating administrative strain.</description>
+      <category>Articles</category>
+    </item>
+
+    <item>
+      <title>Fiscal Equalization &amp; The NFC Formula: Designing Sustainable Revenue Transfers for New Provinces</title>
+      <link>https://ppripakistan.github.io/articles/article-002.html</link>
+      <guid isPermaLink="true">https://ppripakistan.github.io/articles/article-002.html</guid>
+      <pubDate>Tue, 29 Sep 2026 09:00:00 +0500</pubDate>
+      <description>Technical policy paper dissecting the 7th NFC divisible pool criteria, horizontal fiscal equalization formulas, and revenue sustainability under proposed administrative models.</description>
+      <category>Articles</category>
+    </item>
+
+    <item>
+      <title>Pakistan Subnational Baseline 2023 &amp; Census Open Datasets</title>
+      <link>https://ppripakistan.github.io/data/datasets.html</link>
+      <guid isPermaLink="true">https://ppripakistan.github.io/data/datasets.html</guid>
+      <pubDate>Thu, 01 Oct 2026 10:00:00 +0500</pubDate>
+      <description>Authoritative empirical dataset documenting Pakistan's 2017 and 2023 census population benchmarks, land areas, district counts, divisional structures, and NFC transfer parameters.</description>
+      <category>Data</category>
+    </item>
+
+    <item>
+      <title>Constitution of Pakistan: Statutory Provincial Reader</title>
+      <link>https://ppripakistan.github.io/resources/constitution.html</link>
+      <guid isPermaLink="true">https://ppripakistan.github.io/resources/constitution.html</guid>
+      <pubDate>Thu, 01 Oct 2026 11:00:00 +0500</pubDate>
+      <description>Interactive legal reader of the Constitution of Pakistan: examining Articles 1, 140A, 160, and 239 governing provincial reorganization and municipal powers.</description>
+      <category>Resources</category>
+    </item>
+
+    <item>
+      <title>Why Is Pakistan Debating New Provinces Again?</title>
+      <link>https://ppripakistan.github.io/articles/why-is-pakistan-debating-new-provinces-again.html</link>
+      <guid isPermaLink="true">https://ppripakistan.github.io/articles/why-is-pakistan-debating-new-provinces-again.html</guid>
+      <pubDate>Fri, 02 Oct 2026 09:00:00 +0500</pubDate>
+      <description>An empirical examination of the 2026 provincial restructuring debate: population scale, administrative distance, Article 239 supermajorities, and local devolution.</description>
+      <category>Articles</category>
+    </item>
+
+    <item>
+      <title>Four Provinces, 241.5 Million People: Has Pakistan Outgrown Its Administrative Structure?</title>
+      <link>https://ppripakistan.github.io/articles/four-provinces-241-million-people-administrative-scale.html</link>
+      <guid isPermaLink="true">https://ppripakistan.github.io/articles/four-provinces-241-million-people-administrative-scale.html</guid>
+      <pubDate>Fri, 02 Oct 2026 09:30:00 +0500</pubDate>
+      <description>Investigating demographic concentration: Punjab's 127.7M population compared to global federations, divisional giants, and governance limits.</description>
+      <category>Articles</category>
+    </item>
+
+    <item>
+      <title>What Would a New Province Actually Change in Pakistan?</title>
+      <link>https://ppripakistan.github.io/articles/what-would-a-new-province-actually-change.html</link>
+      <guid isPermaLink="true">https://ppripakistan.github.io/articles/what-would-a-new-province-actually-change.html</guid>
+      <pubDate>Fri, 02 Oct 2026 10:00:00 +0500</pubDate>
+      <description>An institutional analysis of provincial machinery: elected assemblies, high court principal seats, civil secretariats, asset division, and transition governance.</description>
+      <category>Articles</category>
+    </item>
+
+    <item>
+      <title>The 18th Amendment: Did Devolution Stop at the Provincial Capital?</title>
+      <link>https://ppripakistan.github.io/articles/18th-amendment-did-devolution-stop-at-provincial-capital.html</link>
+      <guid isPermaLink="true">https://ppripakistan.github.io/articles/18th-amendment-did-devolution-stop-at-provincial-capital.html</guid>
+      <pubDate>Fri, 02 Oct 2026 10:30:00 +0500</pubDate>
+      <description>Evaluating whether constitutional decentralisation reached citizens, or resulted in provincial fiscal hoarding and the collapse of municipal local spending.</description>
+      <category>Articles</category>
+    </item>
+
+    <item>
+      <title>Where Does Pakistan's Development Money Go? Federal, Provincial and Local Spending Explained</title>
+      <link>https://ppripakistan.github.io/articles/where-does-pakistans-development-money-go.html</link>
+      <guid isPermaLink="true">https://ppripakistan.github.io/articles/where-does-pakistans-development-money-go.html</guid>
+      <pubDate>Fri, 02 Oct 2026 11:00:00 +0500</pubDate>
+      <description>Following the public rupee from the federal divisible pool to provincial consolidated funds, recurrent burdens, and municipal service delivery outcomes.</description>
+      <category>Articles</category>
+    </item>
+
+    <item>
+      <title>More Provinces or Stronger Local Governments? Pakistan's Devolution Debate</title>
+      <link>https://ppripakistan.github.io/articles/more-provinces-or-stronger-local-governments.html</link>
+      <guid isPermaLink="true">https://ppripakistan.github.io/articles/more-provinces-or-stronger-local-governments.html</guid>
+      <pubDate>Fri, 02 Oct 2026 11:30:00 +0500</pubDate>
+      <description>Benchmarking territorial reorganization against municipal empowerment across citizen proximity, transition costs, fiscal viability, and daily service delivery.</description>
+      <category>Articles</category>
+    </item>
+
+    <item>
+      <title>South Punjab: Why Does the Province Demand Keep Returning?</title>
+      <link>https://ppripakistan.github.io/articles/south-punjab-why-does-the-province-demand-keep-returning.html</link>
+      <guid isPermaLink="true">https://ppripakistan.github.io/articles/south-punjab-why-does-the-province-demand-keep-returning.html</guid>
+      <pubDate>Fri, 02 Oct 2026 12:00:00 +0500</pubDate>
+      <description>Examining 40.4M citizens, acute UNDP human development disparities, legislative milestones (1970–2026), and the 2020 Secretariat experiment.</description>
+      <category>Articles</category>
+    </item>
+
+    <item>
+      <title>Hazara Province: Why Has the Demand Survived for So Long?</title>
+      <link>https://ppripakistan.github.io/articles/hazara-province-why-has-the-demand-survived.html</link>
+      <guid isPermaLink="true">https://ppripakistan.github.io/articles/hazara-province-why-has-the-demand-survived.html</guid>
+      <pubDate>Fri, 02 Oct 2026 12:30:00 +0500</pubDate>
+      <description>Analyzing 16 years of post-18th Amendment mobilization, 5.7M population, Article 239 supermajority barriers, and hydropower fiscal viability.</description>
+      <category>Articles</category>
+    </item>
+
+    <item>
+      <title>Karachi and Urban Sindh: Representation, Revenue and Administrative Control</title>
+      <link>https://ppripakistan.github.io/articles/karachi-urban-sindh-representation-revenue-administration.html</link>
+      <guid isPermaLink="true">https://ppripakistan.github.io/articles/karachi-urban-sindh-representation-revenue-administration.html</guid>
+      <pubDate>Fri, 02 Oct 2026 13:00:00 +0500</pubDate>
+      <description>Dissecting the 20.38M megacity governance mosaic (18+ overlapping agencies), tax attribution debates, and the September 2026 Sindh Assembly resolution.</description>
+      <category>Articles</category>
+    </item>
+
+    <item>
+      <title>How Should Pakistan Evaluate a Proposal for a New Province?</title>
+      <link>https://ppripakistan.github.io/articles/how-should-pakistan-evaluate-a-new-province.html</link>
+      <guid isPermaLink="true">https://ppripakistan.github.io/articles/how-should-pakistan-evaluate-a-new-province.html</guid>
+      <pubDate>Fri, 02 Oct 2026 13:30:00 +0500</pubDate>
+      <description>The PPRI 12-point empirical evaluation rubric: testing proposals across constitutional law, fiscal modeling, administrative capacity, and verifiable outcomes.</description>
+      <category>Articles</category>
+    </item>
+
+    <item>
+      <title>When Development Follows the Capital, People Follow: Urban Congestion Cycle</title>
+      <link>https://ppripakistan.github.io/articles/when-development-follows-the-capital-people-follow.html</link>
+      <guid isPermaLink="true">https://ppripakistan.github.io/articles/when-development-follows-the-capital-people-follow.html</guid>
+      <pubDate>Sat, 03 Oct 2026 08:00:00 +0500</pubDate>
+      <description>Analyzing capital-city pull, public spending disparities (Quetta Rs57k vs Rs12k; Lahore Rs31k vs Rs7k), migration feedback loops, and secondary city polycentric counter-models.</description>
+      <category>Articles</category>
+    </item>
+
+    <item>
+      <title>One Province, Many Needs: How Should a Government Decide Development Budget Priority?</title>
+      <link>https://ppripakistan.github.io/articles/one-province-many-needs-development-budget-priority.html</link>
+      <guid isPermaLink="true">https://ppripakistan.github.io/articles/one-province-many-needs-development-budget-priority.html</guid>
+      <pubDate>Sat, 03 Oct 2026 08:15:00 +0500</pubDate>
+      <description>Dissecting subnational capital allocations across 164 districts: competing allocation principles, political discretion, and interactive formula equalization simulator.</description>
+      <category>Articles</category>
+    </item>
+
+    <item>
+      <title>Why Is Local Government Always the Last Tier to Get Power in Pakistan?</title>
+      <link>https://ppripakistan.github.io/articles/why-is-local-government-always-the-last-tier-to-get-power.html</link>
+      <guid isPermaLink="true">https://ppripakistan.github.io/articles/why-is-local-government-always-the-last-tier-to-get-power.html</guid>
+      <pubDate>Sat, 03 Oct 2026 08:30:00 +0500</pubDate>
+      <description>An examination of Article 140A, municipal finance decline (&lt;5% of public spend), legislative resistance, and the structural political economy behind the fragile third tier.</description>
+      <category>Articles</category>
+    </item>
+
+    <item>
+      <title>Pakistan Has Tried Local Government Again and Again: Why Does the System Keep Disappearing?</title>
+      <link>https://ppripakistan.github.io/articles/pakistan-keeps-reinventing-local-government-history.html</link>
+      <guid isPermaLink="true">https://ppripakistan.github.io/articles/pakistan-keeps-reinventing-local-government-history.html</guid>
+      <pubDate>Sat, 03 Oct 2026 08:45:00 +0500</pubDate>
+      <description>A 70-year comparative analysis of local governance cycles, from Basic Democracies to the 2001 Devolution Plan, civil-military dynamics, and post-18th Amendment statutory churn.</description>
+      <category>Articles</category>
+    </item>
+
+    <item>
+      <title>Did Pakistan’s 2001 Devolution Plan Actually Improve Services? The Evidence Is More Complicated Than You Think</title>
+      <link>https://ppripakistan.github.io/articles/did-2001-devolution-improve-services-evidence.html</link>
+      <guid isPermaLink="true">https://ppripakistan.github.io/articles/did-2001-devolution-improve-services-evidence.html</guid>
+      <pubDate>Sat, 03 Oct 2026 09:00:00 +0500</pubDate>
+      <description>Rigorous sectoral evaluation across education panels (34 Punjab districts) and national healthcare household surveys (57,000+ homes), isolating key implementation bottlenecks.</description>
+      <category>Articles</category>
+    </item>
+
+    <item>
+      <title>Before Local Government Faded, What Did Pakistanis Think About It?</title>
+      <link>https://ppripakistan.github.io/articles/before-local-government-faded-citizen-perceptions.html</link>
+      <guid isPermaLink="true">https://ppripakistan.github.io/articles/before-local-government-faded-citizen-perceptions.html</guid>
+      <pubDate>Sat, 03 Oct 2026 09:15:00 +0500</pubDate>
+      <description>Quantitative analysis of the 2004/05 National Social Audit: 46.8% citizen point-of-contact for union councils, 33% female councillor quota impact, and dispute conciliation.</description>
+      <category>Articles</category>
+    </item>
+
+    <item>
+      <title>Where Did the Development Money Go When Pakistan Tried District Government?</title>
+      <link>https://ppripakistan.github.io/articles/where-did-development-money-go-district-government.html</link>
+      <guid isPermaLink="true">https://ppripakistan.github.io/articles/where-did-development-money-go-district-government.html</guid>
+      <pubDate>Sat, 03 Oct 2026 09:30:00 +0500</pubDate>
+      <description>Empirical fiscal analysis of 2001 district budgets: 67/33 PFC formulas, Citizen Community Board 80% matching grants, and the post-2008 provincial budgetary clawback.</description>
+      <category>Articles</category>
+    </item>
+
+    <item>
+      <title>A New Province Can Move the Capital—But Can It Move the Power?</title>
+      <link>https://ppripakistan.github.io/articles/new-province-can-move-capital-can-it-move-power.html</link>
+      <guid isPermaLink="true">https://ppripakistan.github.io/articles/new-province-can-move-capital-can-it-move-power.html</guid>
+      <pubDate>Sat, 03 Oct 2026 09:45:00 +0500</pubDate>
+      <description>Analyzing the capital centralization paradox in new province scenarios: avoiding administrative primacy, dispersing public institutions, and empowering local districts.</description>
+      <category>Articles</category>
+    </item>
+
+    <item>
+      <title>Can Pakistan Grow Beyond Its Provincial Capitals? The Case for Stronger Secondary Cities</title>
+      <link>https://ppripakistan.github.io/articles/can-pakistan-grow-beyond-provincial-capitals-secondary-cities.html</link>
+      <guid isPermaLink="true">https://ppripakistan.github.io/articles/can-pakistan-grow-beyond-provincial-capitals-secondary-cities.html</guid>
+      <pubDate>Sat, 03 Oct 2026 10:00:00 +0500</pubDate>
+      <description>A spatial economic blueprint for polycentric urban development: World Bank PICIIP intermediate city results (4.5M residents), municipal tax autonomy, and regional clusters.</description>
+      <category>Articles</category>
+    </item>
+
+    <item>
+      <title>How Far Is Government? The Hidden Cost of Administrative Distance in Pakistan</title>
+      <link>https://ppripakistan.github.io/articles/how-far-is-government-administrative-distance.html</link>
+      <guid isPermaLink="true">https://ppripakistan.github.io/articles/how-far-is-government-administrative-distance.html</guid>
+      <pubDate>Sat, 03 Oct 2026 10:15:00 +0500</pubDate>
+      <description>Introducing the PPRI Administrative Access Index (AAI): 6 dimensions of distance, travel time isochrones (14h+ in peripheral districts), and service desert mapping.</description>
+      <category>Articles</category>
+    </item>
+  </channel>
+</rss>

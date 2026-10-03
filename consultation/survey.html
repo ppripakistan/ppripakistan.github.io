@@ -3,215 +3,106 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Provincial Reform Survey — Interactive Consultation | PPRI</title>
-    <meta
-      name="description"
-      content="An interactive public consultation questionnaire collecting evidence, citizen views, and reform priorities on Pakistan's provincial architecture and local government."
-    />
+    <title>Thematic Consultation Survey Hub | PPRI</title>
+    <meta name="description" content="PPRI interactive consultation hub featuring thematic questionnaires on territorial restructuring, fiscal federalism, local government, and administrative distance." />
     <link rel="canonical" href="https://ppripakistan.github.io/consultation/survey.html" />
+    <meta property="og:site_name" content="Pakistan Provincial Reform Institute (PPRI)" />
+    <meta property="og:locale" content="en_PK" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Provincial Reform Survey — Interactive Consultation | PPRI" />
-    <meta
-      property="og:description"
-      content="An interactive public consultation questionnaire collecting evidence, citizen views, and reform priorities on Pakistan's provincial architecture and local government."
-    />
+    <meta property="og:title" content="Thematic Consultation Survey Hub | PPRI" />
+    <meta property="og:description" content="PPRI interactive consultation hub featuring thematic questionnaires on territorial restructuring, fiscal federalism, local government, and administrative distance." />
+    <meta property="og:url" content="https://ppripakistan.github.io/consultation/survey.html" />
     <meta property="og:image" content="https://ppripakistan.github.io/assets/images/brand/ppri-logo.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="PPRI - Pakistan Provincial Reform Institute" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@PPRI_Pakistan" />
+    <meta name="twitter:creator" content="@PPRI_Pakistan" />
+    <meta name="twitter:title" content="Thematic Consultation Survey Hub | PPRI" />
+    <meta name="twitter:description" content="PPRI interactive consultation hub featuring thematic questionnaires on territorial restructuring, fiscal federalism, local government, and administrative distance." />
+    <meta name="twitter:image" content="https://ppripakistan.github.io/assets/images/brand/ppri-logo.jpg" />
     <link rel="icon" href="/assets/images/brand/ppri-favicon.png" />
     <link rel="stylesheet" href="/assets/css/style.css" />
     <link rel="stylesheet" href="/assets/css/responsive.css" />
-    <style>
-      .survey-card {
-        background: #ffffff;
-        border: 1px solid var(--line, #e2e8f0);
-        border-radius: 12px;
-        padding: 28px;
-        margin-bottom: 24px;
-        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+    <link rel="stylesheet" href="/assets/css/survey-hub.css" />
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Thematic Consultation Survey Hub",
+      "description": "PPRI interactive consultation hub collecting citizen views and empirical priorities across four core governance themes in Pakistan.",
+      "url": "https://ppripakistan.github.io/consultation/survey.html",
+      "publisher": {
+        "@type": "ResearchOrganization",
+        "name": "Pakistan Provincial Reform Institute",
+        "url": "https://ppripakistan.github.io/"
       }
-      .survey-step-indicator {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        margin-bottom: 24px;
-        padding-bottom: 16px;
-        border-bottom: 1px solid var(--line, #e2e8f0);
-      }
-      .survey-badge {
-        display: inline-block;
-        font-size: 0.75rem;
-        font-weight: 700;
-        text-transform: uppercase;
-        letter-spacing: 0.08em;
-        padding: 4px 10px;
-        border-radius: 20px;
-        background: rgba(7, 60, 58, 0.08);
-        color: #073c3a;
-      }
-      .survey-progress-bar {
-        width: 100%;
-        height: 6px;
-        background: #e2e8f0;
-        border-radius: 3px;
-        margin-top: 8px;
-        overflow: hidden;
-      }
-      .survey-progress-fill {
-        height: 100%;
-        width: 33%;
-        background: #145a32;
-        transition: width 300ms ease;
-      }
-      .survey-question {
-        margin-bottom: 26px;
-      }
-      .survey-question h3 {
-        font-size: 1.05rem;
-        font-weight: 700;
-        margin-bottom: 10px;
-        color: #0e2d22;
-      }
-      .survey-options {
-        display: grid;
-        gap: 10px;
-      }
-      .survey-option-label {
-        display: flex;
-        align-items: center;
-        gap: 12px;
-        padding: 12px 16px;
-        border: 1px solid #dce5e0;
-        border-radius: 8px;
-        background: #fdfdfd;
-        cursor: pointer;
-        transition: all 180ms ease;
-      }
-      .survey-option-label:hover {
-        background: #f4fbf7;
-        border-color: #a8e06a;
-      }
-      .survey-option-label input[type="radio"],
-      .survey-option-label input[type="checkbox"] {
-        accent-color: #073c3a;
-        width: 18px;
-        height: 18px;
-        margin: 0;
-      }
-      .survey-option-label input:checked + span {
-        font-weight: 600;
-        color: #073c3a;
-      }
-      .survey-scale {
-        display: flex;
-        justify-content: space-between;
-        gap: 8px;
-        margin: 12px 0 6px;
-      }
-      .scale-btn {
-        flex: 1;
-        text-align: center;
-        padding: 12px 6px;
-        border: 1px solid #dce5e0;
-        border-radius: 8px;
-        background: #fafafa;
-        cursor: pointer;
-        font-weight: 700;
-        transition: all 160ms ease;
-      }
-      .scale-btn:hover {
-        background: #eef7f2;
-        border-color: #145a32;
-      }
-      .scale-btn input {
-        display: none;
-      }
-      .scale-btn.is-selected {
-        background: #073c3a;
-        color: #ffffff;
-        border-color: #073c3a;
-      }
-      .scale-labels {
-        display: flex;
-        justify-content: space-between;
-        font-size: 0.78rem;
-        color: #5a6e65;
-        margin-bottom: 14px;
-      }
-      .survey-actions {
-        display: flex;
-        gap: 12px;
-        align-items: center;
-        margin-top: 24px;
-      }
-      .survey-summary-card {
-        background: #f7faf8;
-        border: 1px solid #c2dbcd;
-        border-radius: 12px;
-        padding: 24px;
-        margin-top: 24px;
-        display: none;
-      }
-      .survey-summary-card.is-active {
-        display: block;
-      }
-      .survey-summary-item {
-        margin-bottom: 14px;
-        padding-bottom: 12px;
-        border-bottom: 1px dashed #d1e2d9;
-      }
-      .survey-summary-item strong {
-        display: block;
-        font-size: 0.82rem;
-        text-transform: uppercase;
-        letter-spacing: 0.05em;
-        color: #3b5349;
-        margin-bottom: 4px;
-      }
-      .survey-summary-item span {
-        font-size: 0.95rem;
-        color: #0e2d22;
-        font-weight: 600;
-      }
-      .field-text {
-        width: 100%;
-        padding: 10px 14px;
-        border: 1px solid #dce5e0;
-        border-radius: 8px;
-        font-family: inherit;
-        font-size: 0.9rem;
-        margin-top: 6px;
-      }
-      .field-text:focus {
-        outline: none;
-        border-color: #073c3a;
-        box-shadow: 0 0 0 3px rgba(7, 60, 58, 0.12);
-      }
-    </style>
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://ppripakistan.github.io/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Public Consultation",
+          "item": "https://ppripakistan.github.io/consultation/index.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Thematic Survey Hub",
+          "item": "https://ppripakistan.github.io/consultation/survey.html"
+        }
+      ]
+    }
+    </script>
+    <meta name="theme-color" content="#073c3a" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="alternate" type="application/rss+xml" title="PPRI Policy Publications Feed" href="/feed.xml" />
   </head>
   <body>
     <a class="skip-link" href="#main-content">Skip to content</a>
     <header class="site-header">
       <div class="container navbar">
-        <a class="brand" href="/index.html">
-          <img src="/assets/images/brand/ppri-logo-header.jpg" alt="PPRI logo" />
-          <span class="brand-text">
-            <strong>PPRI</strong>
-            <span>Pakistan Provincial Reform Institute</span>
-          </span>
-        </a>
-        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-navigation">
+        <a class="brand" href="/index.html"
+          ><img
+            src="/assets/images/brand/ppri-logo-header.jpg"
+            alt="PPRI logo"
+          /><span class="brand-text"
+            ><strong>PPRI</strong
+            ><span>Pakistan Provincial Reform Institute</span></span
+          ></a
+        ><button
+          class="menu-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="site-navigation"
+        >
           Menu
         </button>
-        <nav id="site-navigation" class="nav-links" aria-label="Primary navigation">
-          <a href="/index.html">Home</a>
-          <a href="/research/index.html">Research</a>
-          <a href="/provinces/index.html">Reform</a>
-          <a href="/data/centre.html">Data</a>
-          <a href="/publications/index.html">Publications</a>
-          <a href="/consultation/index.html" aria-current="page">Engage</a>
-          <a href="/about.html">About</a>
-          <a class="nav-search" href="/search.html">Search</a>
+        <nav
+          id="site-navigation"
+          class="nav-links"
+          aria-label="Primary navigation"
+        >
+          <a href="/index.html">Home</a
+          ><a href="/research/index.html">Research</a
+          ><a href="/provinces/index.html">Reform</a
+          ><a href="/data/centre.html">Data</a
+          ><a href="/publications/index.html">Publications</a
+          ><a href="/consultation/index.html" aria-current="page">Engage</a
+          ><a href="/about.html">About</a
+          ><a class="nav-search" href="/search.html">Search</a>
         </nav>
       </div>
     </header>
@@ -219,215 +110,387 @@
     <main id="main-content">
       <section class="page-hero">
         <div class="container">
-          <span class="eyebrow">Public Consultation</span>
-          <h1>Provincial Reform Survey</h1>
+          <span class="eyebrow">PPRI Public Consultation Hub</span>
+          <h1>Thematic Governance Questionnaires</h1>
           <p>
-            An interactive questionnaire collecting citizen perspectives on provincial structure,
-            devolution under Article 140A, and governance priorities across Pakistan.
+            Choose a policy theme below to contribute your perspective. Your responses directly inform PPRI working papers, scenario modeling, and legislative policy briefs. Submissions are quick, frictionless, and can be sent directly via Gmail or email.
           </p>
         </div>
       </section>
 
       <section class="section">
-        <div class="container prose-wide">
-          <div class="highlight" style="margin-bottom: 28px;">
-            <h2>Methodology &amp; Transparency Standard</h2>
-            <p>
-              This questionnaire is a qualitative research consultation instrument. Responses help identify
-              regional priorities, perceived institutional risks, and trade-offs. Individual responses are
-              stored privately in your browser session and can be compiled into a research submission draft.
-            </p>
+        <div class="container" style="max-width: 880px;">
+          <!-- Thematic Questionnaires Navigation -->
+          <div class="survey-topic-nav" role="tablist">
+            <button class="survey-topic-btn active" data-topic="topic-boundaries" role="tab" aria-selected="true">
+              1. Territorial Boundaries
+            </button>
+            <button class="survey-topic-btn" data-topic="topic-fiscal" role="tab" aria-selected="false">
+              2. Fiscal &amp; NFC Reform
+            </button>
+            <button class="survey-topic-btn" data-topic="topic-localgov" role="tab" aria-selected="false">
+              3. Local Government (Art. 140A)
+            </button>
+            <button class="survey-topic-btn" data-topic="topic-distance" role="tab" aria-selected="false">
+              4. Administrative Distance
+            </button>
           </div>
 
-          <form id="ppriSurveyForm" class="survey-card" onsubmit="event.preventDefault();">
-            <div class="survey-step-indicator">
-              <div>
-                <span class="survey-badge" id="stepBadge">Section A: Provincial Structure</span>
-                <div class="survey-progress-bar">
-                  <div class="survey-progress-fill" id="progressBar"></div>
-                </div>
+          <!-- QUESTIONNAIRE 1: TERRITORIAL BOUNDARIES -->
+          <div class="survey-topic-pane active" id="topic-boundaries" role="tabpanel">
+            <form id="formBoundaries" class="survey-card" onsubmit="event.preventDefault(); handleSurveySubmit('formBoundaries', 'Territorial Boundaries & Restructuring');">
+              <div class="survey-step-indicator">
+                <span class="survey-badge">Theme 01: Territorial Delimitation</span>
+                <span style="font-size: 0.82rem; color: #64748b;">4 Quick Questions</span>
               </div>
-              <span id="stepCount" style="font-size: 0.85rem; font-weight: 700; color: #5a6e65;">Step 1 of 3</span>
-            </div>
 
-            <!-- SECTION 1: PROVINCIAL STRUCTURE -->
-            <div class="survey-step" id="step1">
               <div class="survey-question">
-                <h3>1. In principle, do you support or oppose the creation of additional provinces in Pakistan?</h3>
+                <h3>1. In your view, what is the strongest justification for creating new provinces in Pakistan?</h3>
                 <div class="survey-options">
                   <label class="survey-option-label">
-                    <input type="radio" name="support_level" value="Strongly Support" required />
-                    <span>Strongly Support</span>
+                    <input type="radio" name="boundary_justification" value="Demographic Scale (Oversized single provinces)" required />
+                    <span>Demographic scale — Current provinces (e.g., Punjab with 127M+ people) are too large for effective governance.</span>
                   </label>
                   <label class="survey-option-label">
-                    <input type="radio" name="support_level" value="Somewhat Support" />
-                    <span>Somewhat Support</span>
+                    <input type="radio" name="boundary_justification" value="Geographic & Travel Distance" />
+                    <span>Geographic distance — Peripheral districts are situated too far from provincial secretariats and High Courts.</span>
                   </label>
                   <label class="survey-option-label">
-                    <input type="radio" name="support_level" value="Neutral / Undecided" />
-                    <span>Neutral / Undecided</span>
+                    <input type="radio" name="boundary_justification" value="Equitable Representation in Senate" />
+                    <span>Political voice — Ensuring underrepresented regions receive dedicated representation in the Senate.</span>
                   </label>
                   <label class="survey-option-label">
-                    <input type="radio" name="support_level" value="Somewhat Oppose" />
-                    <span>Somewhat Oppose</span>
-                  </label>
-                  <label class="survey-option-label">
-                    <input type="radio" name="support_level" value="Strongly Oppose" />
-                    <span>Strongly Oppose</span>
+                    <input type="radio" name="boundary_justification" value="Status Quo is Adequate" />
+                    <span>Status quo is adequate — Existing 4 provinces are sufficient; focus should be on municipal devolution.</span>
                   </label>
                 </div>
               </div>
 
               <div class="survey-question">
-                <h3>2. What are the primary factors driving your position? (Select all that apply)</h3>
+                <h3>2. How should boundaries for any proposed new provinces be drawn?</h3>
                 <div class="survey-options">
                   <label class="survey-option-label">
-                    <input type="checkbox" name="drivers" value="Closer geographic access to government headquarters" />
-                    <span>Closer geographic access to provincial administration &amp; High Courts</span>
+                    <input type="radio" name="boundary_basis" value="Administrative Divisions (Existing 37 divisions)" required />
+                    <span>Existing Administrative Divisions — Grouping contiguous divisions without altering district borders.</span>
                   </label>
                   <label class="survey-option-label">
-                    <input type="checkbox" name="drivers" value="More balanced population representation" />
-                    <span>More balanced representation in Senate and federal institutions</span>
+                    <input type="radio" name="boundary_basis" value="Historical & Cultural Regions" />
+                    <span>Historical and cultural regions — Reflecting distinct regional identities and linguistic coherence.</span>
                   </label>
                   <label class="survey-option-label">
-                    <input type="checkbox" name="drivers" value="Fairer regional fiscal allocation" />
-                    <span>Fairer regional development and fiscal allocation</span>
-                  </label>
-                  <label class="survey-option-label">
-                    <input type="checkbox" name="drivers" value="Risk of excessive bureaucratic transition overhead" />
-                    <span>Risk of excessive bureaucratic transition overhead and fiscal costs</span>
-                  </label>
-                  <label class="survey-option-label">
-                    <input type="checkbox" name="drivers" value="Concerns over national cohesion or ethnic divisions" />
-                    <span>Concerns regarding political polarization or ethnic divisions</span>
-                  </label>
-                </div>
-              </div>
-
-              <div class="survey-actions">
-                <button class="btn btn-primary" type="button" onclick="nextStep(2)">Proceed to Section B →</button>
-              </div>
-            </div>
-
-            <!-- SECTION 2: ALTERNATIVES & DEVOLUTION -->
-            <div class="survey-step" id="step2" style="display: none;">
-              <div class="survey-question">
-                <h3>3. To what extent would empowering elected Local Governments (Article 140A) address governance challenges without changing provincial borders?</h3>
-                <div class="survey-scale" id="scaleGroup">
-                  <label class="scale-btn" onclick="selectScale(this)">
-                    <input type="radio" name="local_gov_efficacy" value="1 - Not Effective" required /> 1
-                  </label>
-                  <label class="scale-btn" onclick="selectScale(this)">
-                    <input type="radio" name="local_gov_efficacy" value="2 - Slightly Effective" /> 2
-                  </label>
-                  <label class="scale-btn" onclick="selectScale(this)">
-                    <input type="radio" name="local_gov_efficacy" value="3 - Moderately Effective" /> 3
-                  </label>
-                  <label class="scale-btn" onclick="selectScale(this)">
-                    <input type="radio" name="local_gov_efficacy" value="4 - Very Effective" /> 4
-                  </label>
-                  <label class="scale-btn" onclick="selectScale(this)">
-                    <input type="radio" name="local_gov_efficacy" value="5 - Fully Resolves Issues" /> 5
-                  </label>
-                </div>
-                <div class="scale-labels">
-                  <span>1: Not effective at all</span>
-                  <span>5: Entirely sufficient alternative</span>
-                </div>
-              </div>
-
-              <div class="survey-question">
-                <h3>4. Which institutional reforms should be prioritized alongside or prior to provincial reorganization?</h3>
-                <div class="survey-options">
-                  <label class="survey-option-label">
-                    <input type="checkbox" name="alternatives" value="Empowered District Councils with fiscal autonomy" />
-                    <span>Empowered District Councils with constitutional fiscal shares</span>
-                  </label>
-                  <label class="survey-option-label">
-                    <input type="checkbox" name="alternatives" value="Divisional administrative decentralization" />
-                    <span>Divisional-level administrative decentralization (Secretariats)</span>
-                  </label>
-                  <label class="survey-option-label">
-                    <input type="checkbox" name="alternatives" value="Revamped Provincial Finance Commissions (PFCs)" />
-                    <span>Regular, formula-based Provincial Finance Commissions (PFC Awards)</span>
-                  </label>
-                  <label class="survey-option-label">
-                    <input type="checkbox" name="alternatives" value="Civil service and police autonomy reforms" />
-                    <span>Civil service professionalization and police operational autonomy</span>
-                  </label>
-                </div>
-              </div>
-
-              <div class="survey-actions">
-                <button class="btn btn-ghost" type="button" onclick="nextStep(1)">← Back</button>
-                <button class="btn btn-primary" type="button" onclick="nextStep(3)">Proceed to Section C →</button>
-              </div>
-            </div>
-
-            <!-- SECTION 3: PRIORITIES & REGION -->
-            <div class="survey-step" id="step3" style="display: none;">
-              <div class="survey-question">
-                <h3>5. Which single public outcome matters most in evaluating governance reform?</h3>
-                <div class="survey-options">
-                  <label class="survey-option-label">
-                    <input type="radio" name="primary_outcome" value="Public Service Delivery (Health & Education)" required />
-                    <span>Public service delivery (Quality of schools, hospitals, municipal services)</span>
-                  </label>
-                  <label class="survey-option-label">
-                    <input type="radio" name="primary_outcome" value="Administrative Access (Offices, Police & Courts)" />
-                    <span>Administrative access (Proximity to High Courts, land records, police command)</span>
-                  </label>
-                  <label class="survey-option-label">
-                    <input type="radio" name="primary_outcome" value="Political Representation & Regional Voice" />
-                    <span>Political voice and legislative representation</span>
-                  </label>
-                  <label class="survey-option-label">
-                    <input type="radio" name="primary_outcome" value="Fiscal Efficiency & Low Overhead" />
-                    <span>Fiscal efficiency (Avoiding excessive government payroll and overhead)</span>
+                    <input type="radio" name="boundary_basis" value="Economic & Agro-Ecological Corridors" />
+                    <span>Economic viability — Designing units around agro-ecological zones and industrial corridors.</span>
                   </label>
                 </div>
               </div>
 
               <div class="survey-question">
-                <h3>6. What is your home province or region? (For geographic cross-tabulation)</h3>
-                <select name="respondent_region" class="field-text" required>
+                <h3>3. Rate the feasibility of passing a boundary amendment under Article 239 (requiring 2/3rds in both Houses plus affected provincial assembly):</h3>
+                <div class="survey-scale">
+                  <label class="scale-btn"><input type="radio" name="art239_feasibility" value="1 - Very Low" />1<div style="font-size: 0.68rem;">Low</div></label>
+                  <label class="scale-btn"><input type="radio" name="art239_feasibility" value="2 - Low" />2<div style="font-size: 0.68rem;">Mod-Low</div></label>
+                  <label class="scale-btn"><input type="radio" name="art239_feasibility" value="3 - Moderate" checked />3<div style="font-size: 0.68rem;">Neutral</div></label>
+                  <label class="scale-btn"><input type="radio" name="art239_feasibility" value="4 - High" />4<div style="font-size: 0.68rem;">High</div></label>
+                  <label class="scale-btn"><input type="radio" name="art239_feasibility" value="5 - Very High" />5<div style="font-size: 0.68rem;">Very High</div></label>
+                </div>
+              </div>
+
+              <div class="survey-question">
+                <h3>4. Your home province/region:</h3>
+                <select name="respondent_region" class="field-text" style="width: 100%; padding: 10px; border-radius: 6px; border: 1px solid #cbd5e1;" required>
                   <option value="">Select your province/region...</option>
                   <option value="Punjab">Punjab</option>
                   <option value="Sindh">Sindh</option>
                   <option value="Khyber Pakhtunkhwa">Khyber Pakhtunkhwa</option>
                   <option value="Balochistan">Balochistan</option>
                   <option value="Islamabad Capital Territory">Islamabad Capital Territory</option>
-                  <option value="Gilgit-Baltistan">Gilgit-Baltistan</option>
-                  <option value="Azad Jammu & Kashmir">Azad Jammu &amp; Kashmir</option>
+                  <option value="Gilgit-Baltistan / AJK">Gilgit-Baltistan / AJK</option>
                   <option value="Overseas Pakistani">Overseas Pakistani</option>
                 </select>
               </div>
 
+              <button type="submit" class="btn btn-primary" style="width: 100%; padding: 12px; font-weight: 700;">
+                Review &amp; Submit Questionnaire Answers &rarr;
+              </button>
+            </form>
+          </div>
+
+          <!-- QUESTIONNAIRE 2: FISCAL FEDERALISM -->
+          <div class="survey-topic-pane" id="topic-fiscal" role="tabpanel">
+            <form id="formFiscal" class="survey-card" onsubmit="event.preventDefault(); handleSurveySubmit('formFiscal', 'Fiscal Federalism & NFC Reform');">
+              <div class="survey-step-indicator">
+                <span class="survey-badge">Theme 02: NFC &amp; Revenue</span>
+                <span style="font-size: 0.82rem; color: #64748b;">4 Quick Questions</span>
+              </div>
+
               <div class="survey-question">
-                <h3>7. Optional: Any specific observation or question for PPRI researchers?</h3>
-                <textarea name="comments" rows="3" class="field-text" placeholder="Share specific local context, district challenges, or institutional observations..."></textarea>
+                <h3>1. In the National Finance Commission (NFC) Award, should population weight remain at 82%?</h3>
+                <div class="survey-options">
+                  <label class="survey-option-label">
+                    <input type="radio" name="nfc_pop_stance" value="Reduce population weight below 60%" required />
+                    <span>Reduce below 60% — Shift weight to poverty, backwardness, and inverse density to support underdeveloped regions.</span>
+                  </label>
+                  <label class="survey-option-label">
+                    <input type="radio" name="nfc_pop_stance" value="Maintain 82% population weight" />
+                    <span>Maintain 82% — Every citizen should count equally regardless of geography.</span>
+                  </label>
+                  <label class="survey-option-label">
+                    <input type="radio" name="nfc_pop_stance" value="Increase revenue collection incentive" />
+                    <span>Increase revenue collection weight (currently 5%) — Reward provinces for mobilizing provincial taxes.</span>
+                  </label>
+                </div>
               </div>
 
-              <div class="survey-actions">
-                <button class="btn btn-ghost" type="button" onclick="nextStep(2)">← Back</button>
-                <button class="btn btn-primary" type="button" onclick="submitSurvey()">Generate Consultation Summary ✓</button>
+              <div class="survey-question">
+                <h3>2. Should federal NFC funds be legally tied to Provincial Finance Commission (PFC) transfers to districts?</h3>
+                <div class="survey-options">
+                  <label class="survey-option-label">
+                    <input type="radio" name="pfc_link" value="Mandatory PFC statutory intercept" required />
+                    <span>Yes, mandatory — Provinces must pass a minimum percentage (e.g. 35%) directly to elected local councils.</span>
+                  </label>
+                  <label class="survey-option-label">
+                    <input type="radio" name="pfc_link" value="Discretionary for Provincial Assemblies" />
+                    <span>No, discretionary — Provincial assemblies must retain full authority over their provincial consolidated fund.</span>
+                  </label>
+                </div>
               </div>
-            </div>
-          </form>
 
-          <!-- SUMMARY CARD -->
-          <div class="survey-summary-card" id="surveySummary">
-            <h2 style="color: #073c3a; margin-bottom: 12px;">Your Consultation Response Summary</h2>
-            <p style="margin-bottom: 18px; font-size: 0.92rem;">
-              Thank you for participating. Your response summary has been structured below and saved in your local session.
+              <div class="survey-question">
+                <h3>3. What tax category should provinces prioritize devolving to municipal authorities?</h3>
+                <div class="survey-options">
+                  <label class="survey-option-label">
+                    <input type="radio" name="devolved_tax" value="Urban Immovable Property Tax (UIPT)" required />
+                    <span>Urban Immovable Property Tax (UIPT) — Allow city corporations to tax property directly for local services.</span>
+                  </label>
+                  <label class="survey-option-label">
+                    <input type="radio" name="devolved_tax" value="Motor Vehicle & Commercial Registration" />
+                    <span>Motor vehicle and commercial licensing fees.</span>
+                  </label>
+                  <label class="survey-option-label">
+                    <input type="radio" name="devolved_tax" value="Local Betterment & Zoning Levies" />
+                    <span>Local betterment levies and infrastructure impact fees.</span>
+                  </label>
+                </div>
+              </div>
+
+              <div class="survey-question">
+                <h3>4. Your home province/region:</h3>
+                <select name="respondent_region" class="field-text" style="width: 100%; padding: 10px; border-radius: 6px; border: 1px solid #cbd5e1;" required>
+                  <option value="">Select your province/region...</option>
+                  <option value="Punjab">Punjab</option>
+                  <option value="Sindh">Sindh</option>
+                  <option value="Khyber Pakhtunkhwa">Khyber Pakhtunkhwa</option>
+                  <option value="Balochistan">Balochistan</option>
+                  <option value="Islamabad Capital Territory">Islamabad Capital Territory</option>
+                  <option value="Gilgit-Baltistan / AJK">Gilgit-Baltistan / AJK</option>
+                  <option value="Overseas Pakistani">Overseas Pakistani</option>
+                </select>
+              </div>
+
+              <button type="submit" class="btn btn-primary" style="width: 100%; padding: 12px; font-weight: 700;">
+                Review &amp; Submit Questionnaire Answers &rarr;
+              </button>
+            </form>
+          </div>
+
+          <!-- QUESTIONNAIRE 3: LOCAL GOVERNMENT (ART. 140A) -->
+          <div class="survey-topic-pane" id="topic-localgov" role="tabpanel">
+            <form id="formLocalGov" class="survey-card" onsubmit="event.preventDefault(); handleSurveySubmit('formLocalGov', 'Local Government Autonomy (Article 140A)');">
+              <div class="survey-step-indicator">
+                <span class="survey-badge">Theme 03: Third-Tier Subsidiarity</span>
+                <span style="font-size: 0.82rem; color: #64748b;">4 Quick Questions</span>
+              </div>
+
+              <div class="survey-question">
+                <h3>1. How effective has Article 140A been in securing durable local governments in Pakistan?</h3>
+                <div class="survey-scale">
+                  <label class="scale-btn"><input type="radio" name="art140a_effectiveness" value="1 - Very Ineffective" />1<div style="font-size: 0.68rem;">Poor</div></label>
+                  <label class="scale-btn"><input type="radio" name="art140a_effectiveness" value="2 - Ineffective" checked />2<div style="font-size: 0.68rem;">Weak</div></label>
+                  <label class="scale-btn"><input type="radio" name="art140a_effectiveness" value="3 - Moderate" />3<div style="font-size: 0.68rem;">Moderate</div></label>
+                  <label class="scale-btn"><input type="radio" name="art140a_effectiveness" value="4 - Effective" />4<div style="font-size: 0.68rem;">Good</div></label>
+                  <label class="scale-btn"><input type="radio" name="art140a_effectiveness" value="5 - Highly Effective" />5<div style="font-size: 0.68rem;">Excellent</div></label>
+                </div>
+                <div class="survey-hint">Note: Local governments have been suspended or placed under administrators for over 15 of the last 20 years.</div>
+              </div>
+
+              <div class="survey-question">
+                <h3>2. How should city mayors and district chairpersons be elected?</h3>
+                <div class="survey-options">
+                  <label class="survey-option-label">
+                    <input type="radio" name="mayoral_election_method" value="Direct popular vote by citizens" required />
+                    <span>Direct popular election — Citizens vote directly for the Mayor, ensuring an independent mandate.</span>
+                  </label>
+                  <label class="survey-option-label">
+                    <input type="radio" name="mayoral_election_method" value="Indirect election by elected councilors" />
+                    <span>Indirect election — Elected union councilors select the Mayor from among themselves.</span>
+                  </label>
+                </div>
+              </div>
+
+              <div class="survey-question">
+                <h3>3. Which departments should be placed under the command of elected local mayors?</h3>
+                <div class="survey-options">
+                  <label class="survey-option-label">
+                    <input type="checkbox" name="devolved_departments" value="Primary Healthcare & Clinics" checked />
+                    <span>Primary Healthcare &amp; Basic Health Units (BHUs)</span>
+                  </label>
+                  <label class="survey-option-label">
+                    <input type="checkbox" name="devolved_departments" value="Primary & Elementary Schools" checked />
+                    <span>Primary and elementary education</span>
+                  </label>
+                  <label class="survey-option-label">
+                    <input type="checkbox" name="devolved_departments" value="Solid Waste & Water Supply (WASA)" checked />
+                    <span>Water supply, sanitation, and municipal solid waste</span>
+                  </label>
+                  <label class="survey-option-label">
+                    <input type="checkbox" name="devolved_departments" value="Local Traffic & Municipal Policing" />
+                    <span>Municipal and traffic policing</span>
+                  </label>
+                </div>
+              </div>
+
+              <div class="survey-question">
+                <h3>4. Your home province/region:</h3>
+                <select name="respondent_region" class="field-text" style="width: 100%; padding: 10px; border-radius: 6px; border: 1px solid #cbd5e1;" required>
+                  <option value="">Select your province/region...</option>
+                  <option value="Punjab">Punjab</option>
+                  <option value="Sindh">Sindh</option>
+                  <option value="Khyber Pakhtunkhwa">Khyber Pakhtunkhwa</option>
+                  <option value="Balochistan">Balochistan</option>
+                  <option value="Islamabad Capital Territory">Islamabad Capital Territory</option>
+                  <option value="Gilgit-Baltistan / AJK">Gilgit-Baltistan / AJK</option>
+                  <option value="Overseas Pakistani">Overseas Pakistani</option>
+                </select>
+              </div>
+
+              <button type="submit" class="btn btn-primary" style="width: 100%; padding: 12px; font-weight: 700;">
+                Review &amp; Submit Questionnaire Answers &rarr;
+              </button>
+            </form>
+          </div>
+
+          <!-- QUESTIONNAIRE 4: ADMINISTRATIVE DISTANCE -->
+          <div class="survey-topic-pane" id="topic-distance" role="tabpanel">
+            <form id="formDistance" class="survey-card" onsubmit="event.preventDefault(); handleSurveySubmit('formDistance', 'Administrative Distance & Spatial Access');">
+              <div class="survey-step-indicator">
+                <span class="survey-badge">Theme 04: Spatial Equity</span>
+                <span style="font-size: 0.82rem; color: #64748b;">4 Quick Questions</span>
+              </div>
+
+              <div class="survey-question">
+                <h3>1. How many hours does it take to travel from your district headquarters to the provincial capital?</h3>
+                <div class="survey-options">
+                  <label class="survey-option-label">
+                    <input type="radio" name="travel_hours" value="Less than 2 hours" required />
+                    <span>Less than 2 hours (Close proximity)</span>
+                  </label>
+                  <label class="survey-option-label">
+                    <input type="radio" name="travel_hours" value="2 to 5 hours" />
+                    <span>2 to 5 hours (Moderate commute)</span>
+                  </label>
+                  <label class="survey-option-label">
+                    <input type="radio" name="travel_hours" value="5 to 8 hours" />
+                    <span>5 to 8 hours (Significant barrier)</span>
+                  </label>
+                  <label class="survey-option-label">
+                    <input type="radio" name="travel_hours" value="More than 8 hours" />
+                    <span>More than 8 hours (Severe administrative isolation)</span>
+                  </label>
+                </div>
+              </div>
+
+              <div class="survey-question">
+                <h3>2. Could establishing autonomous Divisional Secretariats (without full new provinces) solve distance issues?</h3>
+                <div class="survey-options">
+                  <label class="survey-option-label">
+                    <input type="radio" name="divisional_secretariat_solution" value="Yes, highly effective intermediate solution" required />
+                    <span>Yes — Empowering Commissioners and Additional Chief Secretaries at division level resolves 80% of issues.</span>
+                  </label>
+                  <label class="survey-option-label">
+                    <input type="radio" name="divisional_secretariat_solution" value="No, only full constitutional provinces grant true empowerment" />
+                    <span>No — Citizens need their own elected provincial assembly, cabinet, and High Court seat.</span>
+                  </label>
+                  <label class="survey-option-label">
+                    <input type="radio" name="divisional_secretariat_solution" value="E-governance and digitisation is superior to physical secretariats" />
+                    <span>E-governance is superior — Digitize land records, permits, and court filings to remove physical travel needs.</span>
+                  </label>
+                </div>
+              </div>
+
+              <div class="survey-question">
+                <h3>3. What public service suffers most from spatial distance to the capital?</h3>
+                <div class="survey-options">
+                  <label class="survey-option-label">
+                    <input type="radio" name="service_suffering_distance" value="High Court writ jurisdiction & judicial appeals" required />
+                    <span>Access to justice — High Court writ petitions and specialized tribunals.</span>
+                  </label>
+                  <label class="survey-option-label">
+                    <input type="radio" name="service_suffering_distance" value="Tertiary specialized healthcare" />
+                    <span>Tertiary medical facilities and organ/cancer care centers.</span>
+                  </label>
+                  <label class="survey-option-label">
+                    <input type="radio" name="service_suffering_distance" value="Development scheme approvals & PC-1 clearances" />
+                    <span>Development project approvals (Planning &amp; Development Department).</span>
+                  </label>
+                </div>
+              </div>
+
+              <div class="survey-question">
+                <h3>4. Your home province/region:</h3>
+                <select name="respondent_region" class="field-text" style="width: 100%; padding: 10px; border-radius: 6px; border: 1px solid #cbd5e1;" required>
+                  <option value="">Select your province/region...</option>
+                  <option value="Punjab">Punjab</option>
+                  <option value="Sindh">Sindh</option>
+                  <option value="Khyber Pakhtunkhwa">Khyber Pakhtunkhwa</option>
+                  <option value="Balochistan">Balochistan</option>
+                  <option value="Islamabad Capital Territory">Islamabad Capital Territory</option>
+                  <option value="Gilgit-Baltistan / AJK">Gilgit-Baltistan / AJK</option>
+                  <option value="Overseas Pakistani">Overseas Pakistani</option>
+                </select>
+              </div>
+
+              <button type="submit" class="btn btn-primary" style="width: 100%; padding: 12px; font-weight: 700;">
+                Review &amp; Submit Questionnaire Answers &rarr;
+              </button>
+            </form>
+          </div>
+
+          <!-- FRICTIONLESS GMAIL & EMAIL SUBMISSION MODAL -->
+          <div id="submissionModal" class="survey-submission-modal">
+            <h3 style="color: #166534; margin: 0 0 10px; font-size: 1.25rem;">Your Consultation Submission is Ready!</h3>
+            <p style="color: #334155; font-size: 0.92rem; margin-bottom: 18px; line-height: 1.5;">
+              To make submission effortless, we have formatted your answers. Choose your preferred 1-click option below to send your responses to PPRI researchers:
             </p>
-            <div id="summaryContent"></div>
 
-            <div class="survey-actions mt-3">
-              <button class="btn btn-primary" type="button" onclick="copySurveyDraft()">Copy Response Summary</button>
-              <a class="btn btn-ghost" href="/consultation/submissions.html">Attach to Formal Idea Submission →</a>
-              <button class="btn btn-ghost" type="button" onclick="resetSurvey()">Reset Questionnaire</button>
+            <!-- 1-Click Action Buttons -->
+            <div style="display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 20px;">
+              <a id="btnSendGmail" class="survey-btn-gmail" href="#" target="_blank" rel="noopener">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                Send via Gmail (Web)
+              </a>
+              <a id="btnSendEmail" class="survey-btn-email" href="#">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 2v.01L12 13 4 6.01V6h16zM4 18V8.24l8 6.99 8-6.99V18H4z"/></svg>
+                Send via Default Email App
+              </a>
+              <button type="button" id="btnCopySurvey" class="survey-btn-copy">
+                Copy Answers to Clipboard
+              </button>
             </div>
+
+            <!-- Formatted Output Preview -->
+            <div style="background: #ffffff; border: 1px solid #cbd5e1; border-radius: 6px; padding: 14px; font-family: monospace; font-size: 0.82rem; white-space: pre-wrap; color: #1e293b; max-height: 220px; overflow-y: auto;" id="modalSummaryText">
+              <!-- Text auto-generated here -->
+            </div>
+
+            <p style="font-size: 0.78rem; color: #166534; margin-top: 12px; margin-bottom: 0;">
+              ✓ Saved automatically to your local browser session. No third-party account required.
+            </p>
+          </div>
+
+          <div style="margin-top: 40px; text-align: center;">
+            <p style="color: #64748b; font-size: 0.85rem;">
+              Want to provide a longer written policy proposal? Visit our <a href="/consultation/submissions.html">Formal Submissions Portal</a>.
+            </p>
           </div>
         </div>
       </section>
@@ -455,7 +518,7 @@
         <div>
           <h3>Explore</h3>
           <ul class="footer-links">
-            <li><a href="/maps/scenarios/index.html">Scenario Lab</a></li>
+            <li><a href="/provinces/index.html">Provincial Reform</a></li>
             <li><a href="/data/centre.html">Data Centre</a></li>
             <li><a href="/maps/index.html">Maps</a></li>
             <li><a href="/methodology/index.html">Methodology</a></li>
@@ -478,160 +541,6 @@
     </footer>
 
     <script src="/assets/js/main.js" defer></script>
-    <script>
-      function nextStep(step) {
-        document.querySelectorAll('.survey-step').forEach(el => el.style.display = 'none');
-        document.getElementById('step' + step).style.display = 'block';
-
-        const bar = document.getElementById('progressBar');
-        const badge = document.getElementById('stepBadge');
-        const count = document.getElementById('stepCount');
-
-        if (step === 1) {
-          bar.style.width = '33%';
-          badge.textContent = 'Section A: Provincial Structure';
-          count.textContent = 'Step 1 of 3';
-        } else if (step === 2) {
-          bar.style.width = '66%';
-          badge.textContent = 'Section B: Devolution & Alternatives';
-          count.textContent = 'Step 2 of 3';
-        } else {
-          bar.style.width = '100%';
-          badge.textContent = 'Section C: Priorities & Region';
-          count.textContent = 'Step 3 of 3';
-        }
-        window.scrollTo({ top: document.getElementById('ppriSurveyForm').offsetTop - 90, behavior: 'smooth' });
-      }
-
-      function selectScale(el) {
-        document.querySelectorAll('.scale-btn').forEach(b => b.classList.remove('is-selected'));
-        el.classList.add('is-selected');
-        el.querySelector('input').checked = true;
-      }
-
-      function submitSurvey() {
-        const form = document.getElementById('ppriSurveyForm');
-        const data = new FormData(form);
-
-        const supportLevel = data.get('support_level') || 'Not specified';
-        const drivers = data.getAll('drivers').join('; ') || 'None selected';
-        const localGov = data.get('local_gov_efficacy') || 'Not rated';
-        const alternatives = data.getAll('alternatives').join('; ') || 'None selected';
-        const outcome = data.get('primary_outcome') || 'Not specified';
-        const region = data.get('respondent_region') || 'Not specified';
-        const comments = data.get('comments') || 'None provided';
-
-        const summaryData = {
-          supportLevel,
-          drivers,
-          localGov,
-          alternatives,
-          outcome,
-          region,
-          comments,
-          submittedAt: new Date().toISOString()
-        };
-
-        localStorage.setItem('ppri_survey_response', JSON.stringify(summaryData));
-
-        const html = `
-          <div class="survey-summary-item">
-            <strong>Provincial Structure Position</strong>
-            <span>${supportLevel}</span>
-          </div>
-          <div class="survey-summary-item">
-            <strong>Primary Considerations</strong>
-            <span>${drivers}</span>
-          </div>
-          <div class="survey-summary-item">
-            <strong>Article 140A Devolution Efficacy</strong>
-            <span>${localGov}</span>
-          </div>
-          <div class="survey-summary-item">
-            <strong>Institutional Alternatives</strong>
-            <span>${alternatives}</span>
-          </div>
-          <div class="survey-summary-item">
-            <strong>Key Outcome Priority</strong>
-            <span>${outcome}</span>
-          </div>
-          <div class="survey-summary-item">
-            <strong>Respondent Region</strong>
-            <span>${region}</span>
-          </div>
-          ${comments !== 'None provided' ? `
-          <div class="survey-summary-item">
-            <strong>Observations / Feedback</strong>
-            <span>${comments}</span>
-          </div>` : ''}
-        `;
-
-        document.getElementById('summaryContent').innerHTML = html;
-        const sumCard = document.getElementById('surveySummary');
-        sumCard.classList.add('is-active');
-        sumCard.scrollIntoView({ behavior: 'smooth' });
-      }
-
-      function copySurveyDraft() {
-        const raw = localStorage.getItem('ppri_survey_response');
-        if (!raw) return;
-        const d = JSON.parse(raw);
-        const text = `PPRI Citizen Consultation Response Summary:
-• Position on New Provinces: ${d.supportLevel}
-• Primary Drivers: ${d.drivers}
-• Local Gov (Art. 140A) Rating: ${d.localGov}
-• Institutional Alternatives: ${d.alternatives}
-• Priority Outcome: ${d.outcome}
-• Region: ${d.region}
-• Observations: ${d.comments}
-Date: ${d.submittedAt}`;
-
-        navigator.clipboard.writeText(text).then(() => {
-          alert('Consultation response summary copied to clipboard! You can paste this into an email or submission.');
-        });
-      }
-
-      function resetSurvey() {
-        localStorage.removeItem('ppri_survey_response');
-        document.getElementById('ppriSurveyForm').reset();
-        document.querySelectorAll('.scale-btn').forEach(b => b.classList.remove('is-selected'));
-        document.getElementById('surveySummary').classList.remove('is-active');
-        nextStep(1);
-      }
-
-      // Check saved
-      window.addEventListener('DOMContentLoaded', () => {
-        const saved = localStorage.getItem('ppri_survey_response');
-        if (saved) {
-          try {
-            const d = JSON.parse(saved);
-            const html = `
-              <div class="survey-summary-item">
-                <strong>Provincial Structure Position</strong>
-                <span>${d.supportLevel}</span>
-              </div>
-              <div class="survey-summary-item">
-                <strong>Primary Considerations</strong>
-                <span>${d.drivers}</span>
-              </div>
-              <div class="survey-summary-item">
-                <strong>Article 140A Devolution Efficacy</strong>
-                <span>${d.localGov}</span>
-              </div>
-              <div class="survey-summary-item">
-                <strong>Key Outcome Priority</strong>
-                <span>${d.outcome}</span>
-              </div>
-              <div class="survey-summary-item">
-                <strong>Respondent Region</strong>
-                <span>${d.region}</span>
-              </div>
-            `;
-            document.getElementById('summaryContent').innerHTML = html;
-            document.getElementById('surveySummary').classList.add('is-active');
-          } catch(e) {}
-        }
-      });
-    </script>
+    <script src="/assets/js/survey-hub.js" defer></script>
   </body>
 </html>

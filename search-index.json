@@ -174,41 +174,410 @@
     "type": "Article",
     "description": "Examining demographic scale in Pakistan's federation: why a 127-million citizen province is a statistical outlier in global federalism.",
     "url": "/articles/article-001.html",
-    "tags": ["punjab", "demography", "scale", "federalism", "census 2023", "representation"]
+    "tags": [
+      "punjab",
+      "demography",
+      "scale",
+      "federalism",
+      "census 2023",
+      "representation"
+    ]
   },
   {
     "title": "Beyond the 7th NFC: Fiscal Equalization Under 16 Units",
     "type": "Article",
     "description": "Simulating National Finance Commission distribution formulas, own-source revenue disparities, and provincial finance commissions.",
     "url": "/articles/article-002.html",
-    "tags": ["NFC", "fiscal", "finance", "revenue", "equalization", "divisible pool", "article 160"]
+    "tags": [
+      "NFC",
+      "fiscal",
+      "finance",
+      "revenue",
+      "equalization",
+      "divisible pool",
+      "article 160"
+    ]
   },
   {
     "title": "Constitutional Architecture & Legal Framework",
     "type": "Statutory Guide",
     "description": "Interactive clause-by-clause legal explorer of Articles 1, 140A, 160, and 239 governing provincial limits and devolution.",
     "url": "/resources/constitution.html",
-    "tags": ["constitution", "article 239", "article 140A", "article 160", "article 1", "amendment"]
+    "tags": [
+      "constitution",
+      "article 239",
+      "article 140A",
+      "article 160",
+      "article 1",
+      "amendment"
+    ]
   },
   {
     "title": "Provincial Local Government Acts Matrix",
     "type": "Statutory Guide",
     "description": "Comparative statutory matrix tracking municipal hierarchies, mayoral elections, and PFCs across Punjab, Sindh, KP, and Balochistan.",
     "url": "/resources/legislation.html",
-    "tags": ["local government", "PLGA", "SLGA", "KPLGA", "BLGA", "municipal", "devolution"]
+    "tags": [
+      "local government",
+      "PLGA",
+      "SLGA",
+      "KPLGA",
+      "BLGA",
+      "municipal",
+      "devolution"
+    ]
   },
   {
     "title": "Interactive Provincial Reform Survey",
     "type": "Consultation",
     "description": "Interactive multi-step questionnaire collecting citizen views on provincial structure and local government.",
     "url": "/consultation/survey.html",
-    "tags": ["survey", "consultation", "feedback", "questionnaire"]
+    "tags": [
+      "survey",
+      "consultation",
+      "feedback",
+      "questionnaire"
+    ]
   },
   {
     "title": "Mission & Research Charter",
     "type": "About",
     "description": "The founding mission, non-partisanship charter, and 5 analytical pillars of PPRI.",
     "url": "/mission.html",
-    "tags": ["mission", "charter", "principles", "ethics", "independence", "about"]
+    "tags": [
+      "mission",
+      "charter",
+      "principles",
+      "ethics",
+      "independence",
+      "about"
+    ]
+  },
+  {
+    "title": "Why Is Pakistan Debating New Provinces Again?",
+    "type": "Article",
+    "description": "An empirical examination of the 2026 provincial debate: population scale, administrative distance, Article 239 supermajorities, and local devolution.",
+    "url": "/articles/why-is-pakistan-debating-new-provinces-again.html",
+    "tags": [
+      "article",
+      "provinces",
+      "scale",
+      "article 239",
+      "supermajority",
+      "devolution",
+      "census 2023",
+      "ahsan iqbal"
+    ]
+  },
+  {
+    "title": "Four Provinces, 241.5 Million People: Has Pakistan Outgrown Its Administrative Structure?",
+    "type": "Article",
+    "description": "An empirical examination of demographic scale in Pakistan: 127M citizens in Punjab, global federalism comparisons, divisional scale, and urban governance.",
+    "url": "/articles/four-provinces-241-million-people-administrative-scale.html",
+    "tags": [
+      "article",
+      "demography",
+      "scale",
+      "punjab",
+      "divisions",
+      "census 2023",
+      "governance",
+      "federalism"
+    ]
+  },
+  {
+    "title": "What Would a New Province Actually Change in Pakistan?",
+    "type": "Article",
+    "description": "An institutional examination of provincial machinery: elected assemblies, high courts, civil secretariats, asset division, and transition governance.",
+    "url": "/articles/what-would-a-new-province-actually-change.html",
+    "tags": [
+      "article",
+      "institutions",
+      "assembly",
+      "high court",
+      "secretariat",
+      "transition",
+      "assets",
+      "liabilities"
+    ]
+  },
+  {
+    "title": "The 18th Amendment: Did Devolution Stop at the Provincial Capital?",
+    "type": "Article",
+    "description": "An empirical analysis of the 18th Amendment in Pakistan: federal devolution vs provincial recentralization, Article 140A scorecard, and local spending collapse.",
+    "url": "/articles/18th-amendment-did-devolution-stop-at-provincial-capital.html",
+    "tags": [
+      "article",
+      "18th amendment",
+      "article 140A",
+      "devolution",
+      "local government",
+      "pide",
+      "world bank",
+      "pfc"
+    ]
+  },
+  {
+    "title": "Where Does Pakistan's Development Money Go? Federal, Provincial and Local Spending Explained",
+    "type": "Article",
+    "description": "An empirical tracing of the public rupee in Pakistan: from the 7th NFC divisible pool to provincial consolidated funds, recurrent burdens, and local services.",
+    "url": "/articles/where-does-pakistans-development-money-go.html",
+    "tags": [
+      "article",
+      "finance",
+      "nfc",
+      "divisible pool",
+      "recurrent budget",
+      "adp",
+      "south punjab",
+      "spending"
+    ]
+  },
+  {
+    "title": "More Provinces or Stronger Local Governments? Pakistan's Devolution Debate",
+    "type": "Article",
+    "description": "Evaluating the devolution dilemma in Pakistan: more provinces vs empowered local governments across fiscal viability, citizen proximity, and institutional design.",
+    "url": "/articles/more-provinces-or-stronger-local-governments.html",
+    "tags": [
+      "article",
+      "local government",
+      "more provinces",
+      "comparison",
+      "article 140A",
+      "districts",
+      "hybrid model"
+    ]
+  },
+  {
+    "title": "South Punjab: Why Does the Province Demand Keep Returning?",
+    "type": "Article",
+    "description": "An empirical analysis of South Punjab: demographic scale of 40.4 million citizens, UNDP human development deficits, the 2020 Secretariat, and reform paths.",
+    "url": "/articles/south-punjab-why-does-the-province-demand-keep-returning.html",
+    "tags": [
+      "article",
+      "south punjab",
+      "multan",
+      "bahawalpur",
+      "dg khan",
+      "saraiki",
+      "undp",
+      "secretariat",
+      "resolution 62"
+    ]
+  },
+  {
+    "title": "Hazara Province: Why Has the Demand Survived for So Long?",
+    "type": "Article",
+    "description": "An empirical analysis of the Hazara province movement in Khyber Pakhtunkhwa: 5.7M population, Article 239 barriers, assembly resolutions, and fiscal viability.",
+    "url": "/articles/hazara-province-why-has-the-demand-survived.html",
+    "tags": [
+      "article",
+      "hazara",
+      "abbottabad",
+      "mansehra",
+      "haripur",
+      "kp",
+      "article 239",
+      "resolutions",
+      "cpec"
+    ]
+  },
+  {
+    "title": "Karachi and Urban Sindh: Representation, Revenue and Administrative Control",
+    "type": "Article",
+    "description": "An empirical analysis of Karachi and urban Sindh: 20.38M population, fragmented municipal governance, revenue debates, and the September 2026 assembly clash.",
+    "url": "/articles/karachi-urban-sindh-representation-revenue-administration.html",
+    "tags": [
+      "article",
+      "karachi",
+      "urban sindh",
+      "kmc",
+      "revenue",
+      "resolution 3309",
+      "municipal",
+      "mustafa kamal",
+      "devolution"
+    ]
+  },
+  {
+    "title": "How Should Pakistan Evaluate a Proposal for a New Province?",
+    "type": "Article",
+    "description": "The PPRI 12-point empirical evaluation rubric: testing subnational proposals across constitutional law, fiscal viability, administrative access, and outcomes.",
+    "url": "/articles/how-should-pakistan-evaluate-a-new-province.html",
+    "tags": [
+      "article",
+      "rubric",
+      "evaluation",
+      "12 points",
+      "scorecard",
+      "standards",
+      "framework",
+      "calculator",
+      "criteria"
+    ]
+  },
+  {
+    "title": "When Development Follows the Capital, People Follow: Urban Congestion Cycle",
+    "type": "Article",
+    "description": "An empirical analysis of urban concentration in Pakistan: capital-city pull, public spending disparities, migration feedback loops, and secondary city networks.",
+    "url": "/articles/when-development-follows-the-capital-people-follow.html",
+    "tags": [
+      "article",
+      "urban",
+      "capital city",
+      "lahore",
+      "quetta",
+      "karachi",
+      "peshawar",
+      "migration",
+      "piciip",
+      "congestion"
+    ]
+  },
+  {
+    "title": "One Province, Many Needs: How Should a Government Decide Development Budget Priority?",
+    "type": "Article",
+    "description": "An empirical inquiry into subnational public finance in Pakistan: district allocations, recurrent spending burdens, and formula-driven equalization models.",
+    "url": "/articles/one-province-many-needs-development-budget-priority.html",
+    "tags": [
+      "article",
+      "public finance",
+      "budget",
+      "pfc",
+      "districts",
+      "equalization",
+      "simulator",
+      "punjab adp"
+    ]
+  },
+  {
+    "title": "Why Is Local Government Always the Last Tier to Get Power in Pakistan?",
+    "type": "Article",
+    "description": "An examination of Article 140A, municipal finance decline, legislative resistance, and the structural political economy behind Pakistan’s fragile third tier.",
+    "url": "/articles/why-is-local-government-always-the-last-tier-to-get-power.html",
+    "tags": [
+      "article",
+      "local government",
+      "article 140a",
+      "devolution",
+      "mpa",
+      "mayor",
+      "pfc",
+      "sindh",
+      "punjab"
+    ]
+  },
+  {
+    "title": "Pakistan Has Tried Local Government Again and Again: Why Does the System Keep Disappearing?",
+    "type": "Article",
+    "description": "A historical policy analysis of Pakistan’s 70-year cycle of local governance reforms, from Basic Democracies to the 2001 Devolution Plan and Article 140A.",
+    "url": "/articles/pakistan-keeps-reinventing-local-government-history.html",
+    "tags": [
+      "article",
+      "history",
+      "basic democracies",
+      "1959",
+      "1979",
+      "2001 devolution",
+      "article 140a",
+      "local bodies",
+      "ecp"
+    ]
+  },
+  {
+    "title": "Did Pakistan’s 2001 Devolution Plan Actually Improve Services? The Evidence Is More Complicated Than You Think",
+    "type": "Article",
+    "description": "An empirical evaluation of Pakistan’s 2001 Devolution Plan: assessing health outcomes, primary school enrolment data, citizen access, and systemic bottlenecks.",
+    "url": "/articles/did-2001-devolution-improve-services-evidence.html",
+    "tags": [
+      "article",
+      "2001 devolution",
+      "service delivery",
+      "health",
+      "education",
+      "panel data",
+      "punjab",
+      "ciet"
+    ]
+  },
+  {
+    "title": "Before Local Government Faded, What Did Pakistanis Think About It?",
+    "type": "Article",
+    "description": "A quantitative analysis of the 2004/05 National Social Audit: examining citizen proximity, union council accessibility, and grassroots dispute resolution.",
+    "url": "/articles/before-local-government-faded-citizen-perceptions.html",
+    "tags": [
+      "article",
+      "social audit",
+      "public opinion",
+      "union nazim",
+      "councillor",
+      "women quota",
+      "ccb",
+      "dispute resolution"
+    ]
+  },
+  {
+    "title": "Where Did the Development Money Go When Pakistan Tried District Government?",
+    "type": "Article",
+    "description": "An empirical fiscal analysis of Pakistan’s 2001 district budgets: resource formulas, Provincial Finance Commissions, CCB grants, and provincial clawbacks.",
+    "url": "/articles/where-did-development-money-go-district-government.html",
+    "tags": [
+      "article",
+      "district budget",
+      "pfc formula",
+      "ccb",
+      "rawalpindi",
+      "fiscal decentralisation",
+      "clawback"
+    ]
+  },
+  {
+    "title": "A New Province Can Move the Capital—But Can It Move the Power?",
+    "type": "Article",
+    "description": "An analysis of administrative centralization in new province scenarios: avoiding capital primacy, dispersing institutions, and empowering local districts.",
+    "url": "/articles/new-province-can-move-capital-can-it-move-power.html",
+    "tags": [
+      "article",
+      "new provinces",
+      "capital city",
+      "centralization",
+      "polycentric",
+      "south punjab",
+      "hazara",
+      "secretariat"
+    ]
+  },
+  {
+    "title": "Can Pakistan Grow Beyond Its Provincial Capitals? The Case for Stronger Secondary Cities",
+    "type": "Article",
+    "description": "A spatial economic blueprint for polycentric urban development in Pakistan: intermediate city finance, industrial clustering, and municipal autonomy.",
+    "url": "/articles/can-pakistan-grow-beyond-provincial-capitals-secondary-cities.html",
+    "tags": [
+      "article",
+      "secondary cities",
+      "intermediate cities",
+      "piciip",
+      "faisalabad",
+      "sialkot",
+      "multan",
+      "sukkur",
+      "clusters"
+    ]
+  },
+  {
+    "title": "How Far Is Government? The Hidden Cost of Administrative Distance in Pakistan",
+    "type": "Article",
+    "description": "A methodological framework to quantify administrative distance in Pakistan: travel time isochrones, service deserts, and the Administrative Access Index.",
+    "url": "/articles/how-far-is-government-administrative-distance.html",
+    "tags": [
+      "article",
+      "administrative distance",
+      "isochrones",
+      "travel time",
+      "aai",
+      "gwadar",
+      "rajanpur",
+      "service deserts"
+    ]
   }
 ]

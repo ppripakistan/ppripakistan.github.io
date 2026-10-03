@@ -21,12 +21,23 @@ body {
 }
 
 img:not(.leaflet-tile),
-svg,
+svg:not(.leaflet-zoom-animated):not([class*="leaflet"]),
 video,
-canvas,
+canvas:not(.leaflet-pane canvas),
 iframe {
   max-width: 100%;
   height: auto;
+}
+
+/* Strictly protect Leaflet map vector layers, panes, and geographic masks */
+.leaflet-container svg,
+.leaflet-pane svg,
+.leaflet-zoom-animated,
+.leaflet-overlay-pane svg {
+  max-width: none !important;
+  max-height: none !important;
+  height: initial !important;
+  width: initial !important;
 }
 
 /* Text Wrapping & Overflow Defenses */
@@ -212,6 +223,85 @@ code {
   .p6-source-grid {
     grid-template-columns: 1fr;
   }
+
+  /* Homepage Section Refinements (max-width: 900px) */
+  .home-section {
+    padding: 56px 0;
+  }
+  .home-section-head {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+    margin-bottom: 24px;
+  }
+  .home-feature-layout {
+    grid-template-columns: 1fr !important;
+    gap: 20px;
+  }
+  .featured-publication {
+    min-height: auto;
+    padding: 28px 24px;
+  }
+  .scenario-intro {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 20px;
+  }
+  .scenario-path {
+    overflow-x: auto;
+    width: 100%;
+    padding-bottom: 4px;
+  }
+  .scenario-preview-topbar,
+  .scenario-preview-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+  }
+  .scenario-actions {
+    width: 100%;
+    justify-items: stretch;
+  }
+  .scenario-actions .btn {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+  }
+  .scenario-preview-frame,
+  .scenario-preview-frame iframe {
+    height: 380px;
+    min-height: 380px;
+  }
+  .question-workbench {
+    grid-template-columns: 1fr !important;
+    gap: 16px;
+    padding: 14px;
+  }
+  .question-panel {
+    min-height: auto;
+    padding: 26px 20px;
+  }
+  .question-signal {
+    display: none;
+  }
+  .research-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+  }
+  .platform-shell {
+    grid-template-columns: 1fr;
+    gap: 22px;
+    padding: 26px 20px;
+  }
+  .participation {
+    grid-template-columns: 1fr !important;
+    gap: 24px;
+    padding: 28px 20px;
+  }
+  .participation-art {
+    min-height: 200px;
+  }
 }
 
 /* --------------------------------------------------------------------------
@@ -221,6 +311,55 @@ code {
   .container {
     width: calc(100% - 28px);
     margin: auto;
+  }
+
+  /* Homepage Section Refinements (max-width: 640px) */
+  .home-section {
+    padding: 40px 0;
+  }
+  .featured-publication h3 {
+    font-size: clamp(1.7rem, 6.5vw, 2.2rem);
+  }
+  .featured-footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+  }
+  .featured-footer .home-actions {
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+  }
+  .featured-footer .home-actions .btn {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+  }
+  .scenario-preview-frame,
+  .scenario-preview-frame iframe {
+    height: 320px;
+    min-height: 320px;
+  }
+  .research-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  .platform-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  .participation {
+    padding: 22px 16px;
+  }
+  .participation-copy .home-actions {
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+  }
+  .participation-copy .home-actions .btn {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
   }
 
   /* Page Heroes */
@@ -339,13 +478,6 @@ code {
   form[action*="search.html"] .btn,
   form[action*="search.html"] button {
     width: 100%;
-  }
-
-  /* Touch-Action on Map Displays */
-  .p6-map,
-  .p6-scenario-map,
-  #hero-pakistan-map {
-    touch-action: pan-x pan-y;
   }
 }
 

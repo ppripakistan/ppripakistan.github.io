@@ -1,0 +1,584 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>One Province, Many Needs: When Regions Compete for the Same Development Budget, Who Gets Priority? | PPRI</title>
+    <meta
+      name="description"
+      content="Analyzing intra-provincial budget competition in Pakistan: historical spending momentum vs multidimensional poverty, geographic terrain costs, and PFC awards."
+    />
+    <link rel="canonical" href="https://ppripakistan.github.io/articles/one-province-many-needs-development-budget-priority.html" />
+    <meta property="og:site_name" content="Pakistan Provincial Reform Institute (PPRI)" />
+    <meta property="og:locale" content="en_PK" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="One Province, Many Needs: When Regions Compete for the Same Development Budget, Who Gets Priority? | PPRI" />
+    <meta property="og:description" content="Analyzing intra-provincial budget competition in Pakistan: historical spending momentum vs multidimensional poverty, geographic terrain costs, and PFC awards." />
+    <meta property="og:url" content="https://ppripakistan.github.io/articles/one-province-many-needs-development-budget-priority.html" />
+    <meta property="og:image" content="https://ppripakistan.github.io/assets/images/brand/ppri-logo.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="PPRI - Pakistan Provincial Reform Institute" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@PPRI_Pakistan" />
+    <meta name="twitter:creator" content="@PPRI_Pakistan" />
+    <meta name="twitter:title" content="One Province, Many Needs: When Regions Compete for the Same Development Budget, Who Gets Priority? | PPRI" />
+    <meta name="twitter:description" content="Analyzing intra-provincial budget competition in Pakistan: historical spending momentum vs multidimensional poverty, geographic terrain costs, and PFC awards." />
+    <meta name="twitter:image" content="https://ppripakistan.github.io/assets/images/brand/ppri-logo.jpg" />
+    <meta name="theme-color" content="#073c3a" />
+    <link rel="icon" href="/assets/images/brand/ppri-favicon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="alternate" type="application/rss+xml" title="PPRI Policy Publications Feed" href="/feed.xml" />
+    <link rel="stylesheet" href="/assets/css/style.css" />
+    <link rel="stylesheet" href="/assets/css/responsive.css" />
+    <style>
+      .article-hero {
+        background: linear-gradient(135deg, #073c3a 0%, #0c2b26 100%);
+        color: #ffffff;
+        padding: 60px 0 45px;
+        border-bottom: 3px solid #d4af37;
+      }
+      .article-hero .eyebrow {
+        color: #d4af37;
+        font-size: 0.82rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        font-weight: 700;
+        display: block;
+        margin-bottom: 12px;
+      }
+      .article-hero h1 {
+        font-size: 2.35rem;
+        line-height: 1.24;
+        color: #ffffff;
+        max-width: 940px;
+        margin: 0 0 16px;
+      }
+      .article-standfirst {
+        font-size: 1.15rem;
+        line-height: 1.6;
+        color: #e2e8f0;
+        max-width: 840px;
+        margin: 0 0 24px;
+        font-weight: 400;
+      }
+      .article-meta-bar {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        align-items: center;
+        font-size: 0.85rem;
+        color: #cbd5e1;
+        padding-top: 18px;
+        border-top: 1px solid rgba(255, 255, 255, 0.15);
+      }
+      .article-meta-item strong {
+        color: #ffffff;
+      }
+      .stat-ribbon {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+        gap: 16px;
+        margin: 32px 0 40px;
+      }
+      .stat-card {
+        background: #f8fafc;
+        border: 1px solid #e2e8f0;
+        border-top: 4px solid #073c3a;
+        border-radius: 8px;
+        padding: 20px;
+        text-align: center;
+      }
+      .stat-card strong {
+        display: block;
+        font-size: 2rem;
+        color: #073c3a;
+        font-weight: 800;
+        line-height: 1.1;
+      }
+      .stat-card span {
+        display: block;
+        font-size: 0.85rem;
+        color: #64748b;
+        margin-top: 6px;
+        line-height: 1.35;
+      }
+      .table-wrap {
+        overflow-x: auto;
+        margin: 28px 0 36px;
+        border: 1px solid #e2e8f0;
+        border-radius: 8px;
+      }
+      .data-table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 0.9rem;
+        text-align: left;
+      }
+      .data-table th {
+        background: #f8fafc;
+        color: #073c3a;
+        padding: 12px 16px;
+        font-weight: 700;
+        border-bottom: 2px solid #e2e8f0;
+      }
+      .data-table td {
+        padding: 12px 16px;
+        border-bottom: 1px solid #e2e8f0;
+        color: #334155;
+      }
+      .data-table tr:hover {
+        background: #f1f5f9;
+      }
+      .simulator-box {
+        background: #f8fafc;
+        border: 2px solid #073c3a;
+        border-radius: 10px;
+        padding: 24px;
+        margin: 36px 0;
+      }
+      .simulator-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        border-bottom: 1px solid #cbd5e1;
+        padding-bottom: 14px;
+        margin-bottom: 20px;
+      }
+      .simulator-header h3 {
+        margin: 0;
+        font-size: 1.25rem;
+        color: #073c3a;
+      }
+      .simulator-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 16px;
+        margin-bottom: 20px;
+      }
+      .sim-control {
+        background: #ffffff;
+        border: 1px solid #cbd5e1;
+        border-radius: 6px;
+        padding: 12px 14px;
+      }
+      .sim-control label {
+        display: flex;
+        justify-content: space-between;
+        font-size: 0.85rem;
+        font-weight: 700;
+        color: #334155;
+        margin-bottom: 6px;
+      }
+      .sim-control input[type="range"] {
+        width: 100%;
+        accent-color: #073c3a;
+      }
+      .sim-results {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 14px;
+        background: #ffffff;
+        border: 1px solid #cbd5e1;
+        border-radius: 8px;
+        padding: 18px;
+      }
+      .sim-result-card strong {
+        display: block;
+        font-size: 0.82rem;
+        text-transform: uppercase;
+        color: #64748b;
+        margin-bottom: 4px;
+      }
+      .sim-result-card .value {
+        font-size: 1.35rem;
+        font-weight: 800;
+        color: #073c3a;
+      }
+      .interactive-bridge {
+        background: linear-gradient(135deg, #f0f7f3 0%, #e2efe8 100%);
+        border: 1px solid #c2ded0;
+        border-radius: 8px;
+        padding: 24px;
+        margin: 36px 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 16px;
+      }
+      .interactive-bridge-text h4 {
+        margin: 0 0 6px;
+        color: #073c3a;
+        font-size: 1.1rem;
+      }
+      .interactive-bridge-text p {
+        margin: 0;
+        color: #2d5a4c;
+        font-size: 0.9rem;
+      }
+      @media (max-width: 768px) {
+        .article-hero h1 { font-size: 1.85rem; }
+      }
+    </style>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "One Province, Many Needs: When Regions Compete for the Same Development Budget, Who Gets Priority?",
+      "description": "Analyzing intra-provincial budget competition in Pakistan: historical spending momentum vs multidimensional poverty, geographic terrain costs, and PFC awards.",
+      "url": "https://ppripakistan.github.io/articles/one-province-many-needs-development-budget-priority.html",
+      "inLanguage": "en",
+      "isAccessibleForFree": true,
+      "datePublished": "2026-10-03",
+      "dateModified": "2026-10-03",
+      "author": {
+        "@type": "Organization",
+        "name": "Pakistan Provincial Reform Institute",
+        "url": "https://ppripakistan.github.io/"
+      },
+      "publisher": {
+        "@type": "ResearchOrganization",
+        "name": "Pakistan Provincial Reform Institute",
+        "url": "https://ppripakistan.github.io/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://ppripakistan.github.io/assets/images/brand/ppri-logo.jpg"
+        }
+      },
+      "mainEntityOfPage": "https://ppripakistan.github.io/articles/one-province-many-needs-development-budget-priority.html"
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://ppripakistan.github.io/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Articles & Analysis",
+          "item": "https://ppripakistan.github.io/articles/index.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Intra-Provincial Resource Allocation",
+          "item": "https://ppripakistan.github.io/articles/one-province-many-needs-development-budget-priority.html"
+        }
+      ]
+    }
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <header class="site-header">
+      <div class="container navbar">
+        <a class="brand" href="/">
+          <img src="/assets/images/brand/ppri-logo-header.jpg" alt="PPRI logo" />
+          <span class="brand-text"><strong>PPRI</strong><span>Pakistan Provincial Reform Institute</span></span>
+        </a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-navigation">Menu</button>
+        <nav id="site-navigation" class="nav-links">
+          <a href="/">Home</a>
+          <a href="/research/index.html">Research</a>
+          <a href="/provinces/index.html">Reform</a>
+          <a href="/data/centre.html">Data</a>
+          <a href="/maps/scenarios/index.html">Scenarios</a>
+          <a href="/articles/index.html" aria-current="page">Articles</a>
+          <a href="/consultation/index.html">Engage</a>
+          <a href="/about.html">About</a>
+          <a href="/search.html">Search</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <section class="article-hero">
+        <div class="container">
+          <span class="eyebrow">Public Finance &amp; Fiscal Equalization · Treatise 12</span>
+          <h1>One Province, Many Needs: When Regions Compete for the Same Development Budget, Who Gets Priority?</h1>
+          <p class="article-standfirst">
+            A single province contains megacities, riverine plains, mountain passes, and impoverished rural districts. How should public development money be distributed when the needs are completely different and resources are strictly limited?
+          </p>
+          <div class="article-meta-bar">
+            <div class="article-meta-item">Published: <strong>October 2026</strong></div>
+            <div class="article-meta-item">Reading Time: <strong>11 minutes</strong></div>
+            <div class="article-meta-item">Lead Researcher: <strong>PPRI Public Finance &amp; Regional Equalization Unit</strong></div>
+            <div class="article-meta-item">Citation: <strong>PPRI-ART-2026-012</strong></div>
+          </div>
+        </div>
+      </section>
+
+      <article class="container prose-wide" style="padding: 40px 0 60px;">
+        <div class="stat-ribbon">
+          <div class="stat-card">
+            <strong>&gt;80% Recurrent</strong>
+            <span>Consolidated provincial budgets absorbed by civil service pay, pensions, and debt service (World Bank 2026)</span>
+          </div>
+          <div class="stat-card">
+            <strong>Rs 100 vs 26 vs 5</strong>
+            <span>Historical development outlay disparity (Lahore 100 vs Multan 26 vs Pakpattan 5)</span>
+          </div>
+          <div class="stat-card">
+            <strong>164 Districts</strong>
+            <span>Administrative districts competing annually for provincial development allocations</span>
+          </div>
+          <div class="stat-card">
+            <strong>4 Variables</strong>
+            <span>The balanced equalisation formula: Population, Poverty, Terrain, and Own-Source Effort</span>
+          </div>
+        </div>
+
+        <p class="lead" style="font-size: 1.18rem; line-height: 1.7; color: #1e293b;">
+          A provincial budget white paper can look astronomical on television and yet feel completely invisible in the communities it is supposed to develop.
+        </p>
+
+        <p>
+          The fundamental reason is that a Pakistani province is not a single economic zone or a uniform landscape. In Punjab, a single provincial government must fund modern mass transit in Lahore while financing basic canal lining in Bahawalnagar and flood embankments in Rajanpur. In Sindh, the treasury must maintain stormwater networks for a 20-million-person megacity in Karachi while expanding primary school buildings in the Thar desert. In Balochistan, an exchequer must deliver services across 347,000 square kilometres of rugged mountainous terrain.
+        </p>
+
+        <p>
+          These are not competing versions of the same project; they are fundamentally distinct institutional problems. This tension creates the central operational question of fiscal federalism: <strong>when intensely different regions depend on a single provincial cabinet for scarce development funds, who gets priority?</strong>
+        </p>
+
+        <h2>The recurrent budget reality: why fiscal space is tiny</h2>
+        <p>
+          Public discussions frequently assume that a Rs 1 trillion provincial budget represents Rs 1 trillion in discretionary capital. The reality is far more constrained.
+        </p>
+        <p>
+          According to the World Bank&rsquo;s 2026 review, <em>Strengthening Fiscal Federalism to Drive Development</em>, <strong>over 80% of provincial expenditure in Pakistan is locked into recurrent obligations</strong>—primarily civil service salaries, police operations, schoolteacher payrolls, hospital maintenance, pension liabilities, and interest payments.
+        </p>
+        <p>
+          Consequently, the actual discretionary space available for the Annual Development Programme (ADP) rarely exceeds 15% to 20% of total revenue. When 30 to 40 districts compete for that modest capital remainder, political discretion routinely overrides objective need.
+        </p>
+
+        <h2>Five competing allocation principles</h2>
+        <p>
+          Provincial finance departments can allocate capital using five distinct criteria, each carrying profound governance trade-offs:
+        </p>
+
+        <!-- Table: 5 Competing Allocation Principles -->
+        <div class="table-wrap">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Allocation Principle</th>
+                <th>Policy Justification</th>
+                <th>Institutional Risk / Blind Spot</th>
+                <th>Impact on Peripheral Districts</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>1. Raw Population</strong></td>
+                <td>Every citizen receives an equal per-capita public capital allotment.</td>
+                <td>Severely penalizes remote, sparsely populated districts where infrastructure costs per citizen are high.</td>
+                <td>Disadvantages mountain districts in KP and vast desert expanses in Balochistan and South Punjab.</td>
+              </tr>
+              <tr>
+                <td><strong>2. Poverty &amp; Deprivation</strong></td>
+                <td>Directs capital to districts with high child stunting, illiteracy, and mud housing.</td>
+                <td>Relies on outdated surveys; risks neglecting urban infrastructure that generates the province&rsquo;s tax revenue.</td>
+                <td>Substantially accelerates social catch-up in southern Punjab, rural Sindh, and merged districts.</td>
+              </tr>
+              <tr>
+                <td><strong>3. Geographic Terrain Cost</strong></td>
+                <td>Assigns higher construction cost allowances for difficult mountain and arid terrains.</td>
+                <td>High capital costs per scheme connect fewer total voters, reducing political appeal.</td>
+                <td>Protects Kohistan, Chitral, and Awaran from perpetual infrastructure abandonment.</td>
+              </tr>
+              <tr>
+                <td><strong>4. Economic Multiplier</strong></td>
+                <td>Invests where roads, power, and logistics unlock the highest private-sector returns.</td>
+                <td>Directs capital almost exclusively to already developed industrial corridors.</td>
+                <td>Entrenches cumulative regional inequality and exacerbates capital-city migration.</td>
+              </tr>
+              <tr>
+                <td><strong>5. Political Patronage</strong></td>
+                <td>Funds high-profile schemes based on assembly seat margins and coalition bargaining.</td>
+                <td>Produces &ldquo;monuments to ministers&rdquo;—flyovers and underpasses—while primary schools collapse.</td>
+                <td>Leaves non-coalition and opposition constituencies completely starved of development.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2>The historical trap: development follows existing development</h2>
+        <p>
+          The most insidious dynamic in provincial finance is cumulative advantage. A major commercial city already possesses four-lane roads, power grids, and engineering contractors. When planners evaluate new economic projects, building an extension in that city demonstrates immediate economic return.
+        </p>
+        <p>
+          Conversely, building a farm-to-market road in an isolated rural tehsil connects fewer households per rupee spent. If economic return or raw demographic density is the sole metric, the capital city wins every budgetary cycle.
+        </p>
+        <p>
+          As documented in the <em>Punjab Growth Strategy</em>, historical per-capita development outlays in the 2014–18 period stood at 100 for Lahore, 26 for Multan, 10 for Bahawalnagar, and 5 for Pakpattan. This compounding imbalance proves that without formulaic equalisation, the public rupee naturally flows toward the political center.
+        </p>
+
+        <!-- Interactive District Allocation Simulator -->
+        <div class="simulator-box" id="allocation-sim">
+          <div class="simulator-header">
+            <div>
+              <h3>Provincial District Allocation Formula Simulator</h3>
+              <span style="font-size: 0.85rem; color: #64748b;">Simulate how adjusting formula weights shifts capital between a metropolitan hub and an underdeveloped rural district:</span>
+            </div>
+            <button type="button" class="btn" onclick="resetSim()" style="background: #cbd5e1; border: none; padding: 6px 12px; border-radius: 4px; font-size: 0.8rem; cursor: pointer;">Reset Formula</button>
+          </div>
+
+          <div class="simulator-grid">
+            <div class="sim-control">
+              <label><span>Population Weight</span><span id="pop-val">50%</span></label>
+              <input type="range" id="pop-weight" min="0" max="100" value="50" oninput="runSim()" />
+            </div>
+            <div class="sim-control">
+              <label><span>Poverty / Deprivation Weight</span><span id="pov-val">30%</span></label>
+              <input type="range" id="pov-weight" min="0" max="100" value="30" oninput="runSim()" />
+            </div>
+            <div class="sim-control">
+              <label><span>Inverse Density / Terrain</span><span id="area-val">10%</span></label>
+              <input type="range" id="area-weight" min="0" max="100" value="10" oninput="runSim()" />
+            </div>
+            <div class="sim-control">
+              <label><span>Revenue Effort Incentive</span><span id="rev-val">10%</span></label>
+              <input type="range" id="rev-weight" min="0" max="100" value="10" oninput="runSim()" />
+            </div>
+          </div>
+
+          <div class="sim-results">
+            <div class="sim-result-card">
+              <strong>Metropolitan Hub Share (Lahore/Karachi)</strong>
+              <div class="value" id="metro-share">38.4%</div>
+              <span style="font-size: 0.78rem; color: #64748b;">Dense pop &amp; high tax collection</span>
+            </div>
+            <div class="sim-result-card">
+              <strong>Secondary City Share (Multan/Hyderabad)</strong>
+              <div class="value" id="secondary-share">22.8%</div>
+              <span style="font-size: 0.78rem; color: #64748b;">Moderate density &amp; poverty</span>
+            </div>
+            <div class="sim-result-card">
+              <strong>Peripheral District Share (Rajanpur/Thar)</strong>
+              <div class="value" id="rural-share">38.8%</div>
+              <span style="font-size: 0.78rem; color: #065f46; font-weight: 700;">Protected by Poverty &amp; Area weights</span>
+            </div>
+          </div>
+        </div>
+
+        <script>
+          function runSim() {
+            let p = parseInt(document.getElementById('pop-weight').value, 10);
+            let pov = parseInt(document.getElementById('pov-weight').value, 10);
+            let a = parseInt(document.getElementById('area-weight').value, 10);
+            let r = parseInt(document.getElementById('rev-weight').value, 10);
+            let total = p + pov + a + r;
+            if (total === 0) total = 1;
+            
+            p = (p / total) * 100;
+            pov = (pov / total) * 100;
+            a = (a / total) * 100;
+            r = (r / total) * 100;
+
+            document.getElementById('pop-val').textContent = Math.round(p) + '%';
+            document.getElementById('pov-val').textContent = Math.round(pov) + '%';
+            document.getElementById('area-val').textContent = Math.round(a) + '%';
+            document.getElementById('rev-val').textContent = Math.round(r) + '%';
+
+            // Calculate simulated distribution shares
+            let metro = (p * 0.55) + (pov * 0.10) + (a * 0.05) + (r * 0.75);
+            let secondary = (p * 0.25) + (pov * 0.25) + (a * 0.15) + (r * 0.20);
+            let rural = (p * 0.20) + (pov * 0.65) + (a * 0.80) + (r * 0.05);
+
+            document.getElementById('metro-share').textContent = metro.toFixed(1) + '%';
+            document.getElementById('secondary-share').textContent = secondary.toFixed(1) + '%';
+            document.getElementById('rural-share').textContent = rural.toFixed(1) + '%';
+          }
+
+          function resetSim() {
+            document.getElementById('pop-weight').value = 50;
+            document.getElementById('pov-weight').value = 30;
+            document.getElementById('area-weight').value = 10;
+            document.getElementById('rev-weight').value = 10;
+            runSim();
+          }
+        </script>
+
+        <h2>The solution: statutory Provincial Finance Commissions</h2>
+        <p>
+          Why do these imbalances endure? Because unlike the federal NFC Award, which is constitutionally mandated by Article 160, <strong>Provincial Finance Commissions (PFCs)</strong> have been rendered discretionary and toothless by provincial governments.
+        </p>
+        <p>
+          As documented in PIDE&rsquo;s 2025 research, provincial transfers to local governments have steadily fallen across all four provinces. Provincial cabinets frequently withhold PFC awards, preferring to distribute capital through ad-hoc, discretionary MPA schemes.
+        </p>
+        <p>
+          The policy remedy is straightforward: make PFC awards constitutionally mandatory, formula-driven, and publicly disaggregated. When every district receives an automatic, legally guaranteed share of provincial revenue based on poverty and terrain costs, the incentive to demand territorial separation diminishes.
+        </p>
+
+        <div class="interactive-bridge">
+          <div class="interactive-bridge-text">
+            <h4>Inspect Comparative Fiscal Indicators</h4>
+            <p>Compare provincial own-source tax collection, federal transfer shares, and development spending in our Fiscal Data Hub.</p>
+          </div>
+          <a href="/data/fiscal.html" class="btn btn-primary" style="background: #073c3a; color: #ffffff; padding: 10px 18px; border-radius: 6px; text-decoration: none; font-weight: 700; font-size: 0.88rem;">Open Fiscal Data &rarr;</a>
+        </div>
+
+        <div class="article-references" style="margin-top: 50px; padding-top: 25px; border-top: 1px solid #e2e8f0;">
+          <h3 style="font-size: 1.15rem; color: #073c3a;">Primary Sources &amp; References</h3>
+          <ul style="font-size: 0.88rem; color: #475569; line-height: 1.6;">
+            <li><strong>World Bank:</strong> <em>Strengthening Fiscal Federalism to Drive Development: District Allocations and Service Delivery Gaps</em> (July 2026). <a href="https://www.worldbank.org/en/news/press-release/2026/07/01/pakistan-strengthening-fiscal-federalism-to-drive-development" target="_blank" rel="noopener">World Bank Document Portal</a></li>
+            <li><strong>Pakistan Institute of Development Economics (PIDE):</strong> <em>Beyond the NFC Award: Pakistan's Unfinished Devolution to Local Governments</em> (2025). <a href="https://pide.org.pk/research/beyond-the-nfc-award-pakistans-unfinished-devolution-to-local-governments/" target="_blank" rel="noopener">pide.org.pk</a></li>
+            <li><strong>Pakistan Institute of Development Economics (PIDE):</strong> <em>A Critical Path to Fiscal Federalism: Policy Imperatives for the NFC Award Remake</em> (2025).</li>
+            <li><strong>Planning &amp; Development Board, Government of the Punjab:</strong> <em>Punjab Growth Strategy: District per-capita development spending benchmarks</em>. <a href="https://pbit.gop.pk/system/files?file=PGS_1.pdf" target="_blank" rel="noopener">pbit.gop.pk</a></li>
+            <li><strong>Constitution of the Islamic Republic of Pakistan:</strong> Article 140A (Local Government) and Article 160 (National Finance Commission). <a href="/resources/constitution.html">PPRI Constitution Reader</a></li>
+          </ul>
+        </div>
+      </article>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div>
+          <img src="/assets/images/brand/ppri-logo-header.jpg" alt="PPRI" class="footer-logo" />
+          <p>Pakistan Provincial Reform Institute</p>
+          <p>Policy research on provincial reform, federalism, decentralization and institutional design in Pakistan.</p>
+        </div>
+        <div>
+          <h3>Research</h3>
+          <ul class="footer-links">
+            <li><a href="/research/policy-papers/index.html">Policy Papers</a></li>
+            <li><a href="/research/reports/index.html">Reports</a></li>
+            <li><a href="/research/briefs/index.html">Policy Briefs</a></li>
+            <li><a href="/articles/index.html">Articles &amp; Analysis</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Explore</h3>
+          <ul class="footer-links">
+            <li><a href="/provinces/index.html">Provincial Reform</a></li>
+            <li><a href="/data/centre.html">Data Centre</a></li>
+            <li><a href="/maps/scenarios/index.html">Scenario Lab</a></li>
+            <li><a href="/resources/constitution.html">Constitution Reader</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Connect</h3>
+          <ul class="footer-links">
+            <li><a href="https://x.com/PPRI_Pakistan">X / @PPRI_Pakistan</a></li>
+            <li><a href="/consultation/index.html">Consultation</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        <span>&copy; <span data-current-year></span> Pakistan Provincial Reform Institute</span>
+        <span><a href="/privacy.html">Privacy</a> &middot; <a href="/terms.html">Terms</a> &middot; <a href="/feed.xml">RSS Feed</a></span>
+      </div>
+    </footer>
+    <script src="/assets/js/main.js" defer></script>
+  </body>
+</html>

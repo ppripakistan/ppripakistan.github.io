@@ -1,6 +1,21 @@
 {
   "name": "Pakistan Provincial Reform Institute",
   "short_name": "PPRI",
+  "description": "Research and public-policy analysis on provincial reform, governance, federalism and decentralization in Pakistan.",
   "start_url": "/",
-  "display": "standalone"
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#073c3a",
+  "icons": [
+    {
+      "src": "/assets/images/brand/ppri-favicon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/images/brand/ppri-logo.jpg",
+      "sizes": "512x512",
+      "type": "image/jpeg"
+    }
+  ]
 }
