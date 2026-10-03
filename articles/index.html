@@ -3,20 +3,200 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Articles & Analysis | PPRI</title>
-    <meta
-      name="description"
-      content="PPRI articles and explainers on provincial reform, decentralization and governance."
-    />
+    <title>Articles &amp; Policy Analysis Portal | PPRI</title>
+    <link rel="canonical" href="https://ppripakistan.github.io/articles/index.html" />
+    <meta property="og:site_name" content="Pakistan Provincial Reform Institute (PPRI)" />
+    <meta property="og:locale" content="en_PK" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Articles &amp; Policy Analysis Portal | PPRI" />
+    <meta property="og:description" content="In-depth analytical articles, empirical treatises, and policy frameworks on provincial restructuring, fiscal federalism, and devolution in Pakistan." />
+    <meta property="og:url" content="https://ppripakistan.github.io/articles/index.html" />
+    <meta property="og:image" content="https://ppripakistan.github.io/assets/images/brand/ppri-logo.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="PPRI - Pakistan Provincial Reform Institute" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@PPRI_Pakistan" />
+    <meta name="twitter:creator" content="@PPRI_Pakistan" />
+    <meta name="twitter:title" content="Articles &amp; Policy Analysis Portal | PPRI" />
+    <meta name="twitter:description" content="In-depth analytical articles, empirical treatises, and policy frameworks on provincial restructuring, fiscal federalism, and devolution in Pakistan." />
+    <meta name="twitter:image" content="https://ppripakistan.github.io/assets/images/brand/ppri-logo.jpg" />
+    <meta name="description" content="In-depth analytical articles, empirical treatises, and policy frameworks on provincial restructuring, fiscal federalism, and devolution in Pakistan." />
+    <meta name="theme-color" content="#073c3a" />
     <link rel="icon" href="/assets/images/brand/ppri-favicon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="alternate" type="application/rss+xml" title="PPRI Policy Publications Feed" href="/feed.xml" />
     <link rel="stylesheet" href="/assets/css/style.css" />
     <link rel="stylesheet" href="/assets/css/responsive.css" />
+    <style>
+      .portal-search {
+        display: flex;
+        gap: 12px;
+        margin: 24px 0 32px;
+        flex-wrap: wrap;
+      }
+      .portal-search input {
+        flex: 1;
+        min-width: 260px;
+        padding: 12px 18px;
+        border: 2px solid #cbd5e1;
+        border-radius: 8px;
+        font-size: 1rem;
+        outline: none;
+        transition: border-color 0.2s;
+      }
+      .portal-search input:focus {
+        border-color: #073c3a;
+      }
+      .filter-tabs {
+        display: flex;
+        gap: 8px;
+        flex-wrap: wrap;
+        margin-bottom: 30px;
+      }
+      .filter-btn {
+        background: #f1f5f9;
+        border: 1px solid #cbd5e1;
+        color: #334155;
+        padding: 8px 16px;
+        border-radius: 20px;
+        font-size: 0.85rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.2s;
+      }
+      .filter-btn:hover,
+      .filter-btn.active {
+        background: #073c3a;
+        color: #ffffff;
+        border-color: #073c3a;
+      }
+      .articles-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+        gap: 24px;
+      }
+      .article-card {
+        background: #ffffff;
+        border: 1px solid #e2e8f0;
+        border-radius: 10px;
+        padding: 24px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        text-decoration: none;
+        color: inherit;
+        transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.03);
+      }
+      .article-card:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.07);
+        border-color: #073c3a;
+      }
+      .article-card-header {
+        margin-bottom: 12px;
+      }
+      .article-badge {
+        display: inline-block;
+        padding: 3px 8px;
+        border-radius: 4px;
+        font-size: 0.72rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        background: #e2efe8;
+        color: #073c3a;
+        margin-bottom: 8px;
+      }
+      .article-card h3 {
+        margin: 0 0 10px;
+        font-size: 1.22rem;
+        color: #0f172a;
+        line-height: 1.35;
+      }
+      .article-card p {
+        margin: 0;
+        font-size: 0.9rem;
+        color: #475569;
+        line-height: 1.55;
+      }
+      .article-card-footer {
+        margin-top: 18px;
+        padding-top: 14px;
+        border-top: 1px solid #f1f5f9;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 0.82rem;
+        color: #64748b;
+      }
+      .read-more-link {
+        color: #073c3a;
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        gap: 4px;
+      }
+      .stat-ribbon {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 16px;
+        margin: 32px 0 40px;
+      }
+      .stat-card {
+        background: #f8fafc;
+        border: 1px solid #e2e8f0;
+        border-top: 4px solid #073c3a;
+        border-radius: 8px;
+        padding: 20px;
+        text-align: center;
+      }
+      .stat-card strong {
+        display: block;
+        font-size: 2rem;
+        color: #073c3a;
+        font-weight: 800;
+        line-height: 1.1;
+      }
+      .stat-card span {
+        display: block;
+        font-size: 0.85rem;
+        color: #64748b;
+        margin-top: 6px;
+        line-height: 1.35;
+      }
+      @media (max-width: 768px) {
+        .articles-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://ppripakistan.github.io/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Articles & Analysis",
+          "item": "https://ppripakistan.github.io/articles/index.html"
+        }
+      ]
+    }
+    </script>
   </head>
   <body>
     <a class="skip-link" href="#main-content">Skip to content</a>
     <header class="site-header">
       <div class="container navbar">
-        <a class="brand" href="/index.html"
+        <a class="brand" href="/"
           ><img
             src="/assets/images/brand/ppri-logo-header.jpg"
             alt="PPRI logo"
@@ -24,7 +204,8 @@
             ><strong>PPRI</strong
             ><span>Pakistan Provincial Reform Institute</span></span
           ></a
-        ><button
+        >
+        <button
           class="menu-toggle"
           type="button"
           aria-expanded="false"
@@ -33,92 +214,269 @@
           Menu
         </button>
         <nav id="site-navigation" class="nav-links">
-          <a href="/index.html">Home</a
-          ><a href="/research/index.html">Research</a
-          ><a href="/provinces/index.html">Reform</a
-          ><a href="/data/centre.html">Data</a
-          ><a href="/publications/index.html">Publications</a
-          ><a href="/consultation/index.html">Engage</a
-          ><a href="/about.html">About</a><a href="/search.html">Search</a>
+          <a href="/">Home</a>
+          <a href="/research/index.html">Research</a>
+          <a href="/provinces/index.html">Reform</a>
+          <a href="/data/centre.html">Data</a>
+          <a href="/maps/scenarios/index.html">Scenarios</a>
+          <a href="/articles/index.html" aria-current="page">Articles</a>
+          <a href="/consultation/index.html">Engage</a>
+          <a href="/about.html">About</a>
+          <a href="/search.html">Search</a>
         </nav>
       </div>
     </header>
+
     <main id="main-content">
       <section class="page-hero">
         <div class="container">
-          <span class="eyebrow">Articles & analysis</span>
-          <h1>Explaining the debate without reducing it.</h1>
+          <span class="eyebrow">Public Policy Treatises &amp; Empirical Analysis</span>
+          <h1>Articles &amp; Policy Analysis Portal</h1>
           <p>
-            Short-form PPRI analysis for readers who want the policy question,
-            the evidence and the unresolved issues in one place.
+            Rigorous, evidence-based research examining provincial restructuring, fiscal federalism, local government devolution, and constitutional mechanisms in Pakistan.
           </p>
         </div>
       </section>
+
       <section class="section">
-        <div class="container grid grid-2">
-          <a class="card card-link" href="/articles/article-001.html">
-            <span class="card-meta">PPRI-ART-001 · Demography &amp; Scale</span>
-            <h3>The Scale Imbalance: A 127-Million Citizen Province</h3>
-            <p>
-              Why Punjab’s 52.9% national population share is an anomaly among world federations,
-              and what spatial distance means for citizens in peripheral divisions.
-            </p>
-          </a>
-          <a class="card card-link" href="/articles/article-002.html">
-            <span class="card-meta">PPRI-ART-002 · Fiscal Federalism</span>
-            <h3>Beyond the 7th NFC: Equalization Under 16 Units</h3>
-            <p>
-              Simulating federal divisible pool distributions, own-source revenue disparities,
-              and the critical necessity of Provincial Finance Commissions.
-            </p>
-          </a>
+        <div class="container">
+          <!-- Stat Ribbon -->
+          <div class="stat-ribbon">
+            <div class="stat-card">
+              <strong>12</strong>
+              <span>Analytical treatises &amp; empirical policy papers</span>
+            </div>
+            <div class="stat-card">
+              <strong>4 Tracks</strong>
+              <span>Scale, Fiscal Federalism, Regional Cases &amp; Rubrics</span>
+            </div>
+            <div class="stat-card">
+              <strong>241.5 M</strong>
+              <span>Demographic coverage spanning all 4 provinces and ICT</span>
+            </div>
+            <div class="stat-card">
+              <strong>100%</strong>
+              <span>Open-access research with primary source citations</span>
+            </div>
+          </div>
+
+          <!-- Interactive Search & Filter Controls -->
+          <div class="portal-search">
+            <input
+              type="text"
+              id="article-search"
+              placeholder="Search articles by keyword, province, or topic (e.g., NFC, Punjab, Hazara, Karachi, Article 140A)..."
+              oninput="filterArticles()"
+            />
+          </div>
+
+          <div class="filter-tabs" role="tablist">
+            <button class="filter-btn active" onclick="setCategory('all', this)">All Treatises (12)</button>
+            <button class="filter-btn" onclick="setCategory('scale', this)">Scale &amp; Demography</button>
+            <button class="filter-btn" onclick="setCategory('fiscal', this)">Fiscal Federalism &amp; Devolution</button>
+            <button class="filter-btn" onclick="setCategory('regional', this)">Regional Case Studies</button>
+            <button class="filter-btn" onclick="setCategory('rubric', this)">Standards &amp; Frameworks</button>
+          </div>
+
+          <!-- 12-Article Catalog Grid -->
+          <div class="articles-grid" id="articles-catalog">
+            <!-- Article 01 -->
+            <a class="article-card" href="/articles/why-is-pakistan-debating-new-provinces-again.html" data-category="scale rubric" data-keywords="scale ahsan iqbal article 239 supermajority debate 2026 census">
+              <div class="article-card-header">
+                <span class="article-badge">Foundational &middot; Overview</span>
+                <h3>Why Is Pakistan Debating New Provinces Again?</h3>
+                <p>An empirical examination of the 2026 provincial restructuring debate: population scale, administrative distance, Article 239 supermajorities, and local devolution.</p>
+              </div>
+              <div class="article-card-footer">
+                <span>PPRI-ART-2026-001 &middot; 10 min read</span>
+                <span class="read-more-link">Read &rarr;</span>
+              </div>
+            </a>
+
+            <!-- Article 02 -->
+            <a class="article-card" href="/articles/four-provinces-241-million-people-administrative-scale.html" data-category="scale" data-keywords="population 241 million punjab scale global federalism division 127m census">
+              <div class="article-card-header">
+                <span class="article-badge">Demographics &middot; Scale</span>
+                <h3>Four Provinces, 241.5 Million People: Has Pakistan Outgrown Its Administrative Structure?</h3>
+                <p>Investigating demographic concentration: Punjab&rsquo;s 127.7M population compared to global federations, divisional giants, and governance limits.</p>
+              </div>
+              <div class="article-card-footer">
+                <span>PPRI-ART-2026-002 &middot; 11 min read</span>
+                <span class="read-more-link">Read &rarr;</span>
+              </div>
+            </a>
+
+            <!-- Article 03 -->
+            <a class="article-card" href="/articles/what-would-a-new-province-actually-change.html" data-category="rubric" data-keywords="machinery institutions assembly high court secretariat 36 month transition assets liabilities">
+              <div class="article-card-header">
+                <span class="article-badge">Institutional Design</span>
+                <h3>What Would a New Province Actually Change in Pakistan?</h3>
+                <p>An institutional analysis of provincial machinery: elected assemblies, high court principal seats, civil secretariats, asset division, and transition governance.</p>
+              </div>
+              <div class="article-card-footer">
+                <span>PPRI-ART-2026-003 &middot; 12 min read</span>
+                <span class="read-more-link">Read &rarr;</span>
+              </div>
+            </a>
+
+            <!-- Article 04 -->
+            <a class="article-card" href="/articles/18th-amendment-did-devolution-stop-at-provincial-capital.html" data-category="fiscal" data-keywords="18th amendment article 140a nfc local government pide world bank spending">
+              <div class="article-card-header">
+                <span class="article-badge">Devolution &middot; Fiscal</span>
+                <h3>The 18th Amendment: Did Devolution Stop at the Provincial Capital?</h3>
+                <p>Evaluating whether constitutional decentralisation reached citizens, or resulted in provincial fiscal hoarding and the collapse of municipal local spending.</p>
+              </div>
+              <div class="article-card-footer">
+                <span>PPRI-ART-2026-004 &middot; 10 min read</span>
+                <span class="read-more-link">Read &rarr;</span>
+              </div>
+            </a>
+
+            <!-- Article 05 -->
+            <a class="article-card" href="/articles/where-does-pakistans-development-money-go.html" data-category="fiscal" data-keywords="public rupee nfc divisible pool recurrent adp south punjab 556 billion pfc">
+              <div class="article-card-header">
+                <span class="article-badge">Public Finance</span>
+                <h3>Where Does Pakistan&rsquo;s Development Money Go? Federal, Provincial and Local Spending Explained</h3>
+                <p>Following the public rupee from the federal divisible pool to provincial consolidated funds, recurrent burdens, and municipal service delivery outcomes.</p>
+              </div>
+              <div class="article-card-footer">
+                <span>PPRI-ART-2026-005 &middot; 11 min read</span>
+                <span class="read-more-link">Read &rarr;</span>
+              </div>
+            </a>
+
+            <!-- Article 06 -->
+            <a class="article-card" href="/articles/more-provinces-or-stronger-local-governments.html" data-category="fiscal rubric" data-keywords="local government more provinces article 140a comparison matrix decision tree 160 districts">
+              <div class="article-card-header">
+                <span class="article-badge">Comparative Federalism</span>
+                <h3>More Provinces or Stronger Local Governments? Pakistan&rsquo;s Devolution Debate</h3>
+                <p>Benchmarking territorial reorganization against municipal empowerment across citizen proximity, transition costs, fiscal viability, and daily service delivery.</p>
+              </div>
+              <div class="article-card-footer">
+                <span>PPRI-ART-2026-006 &middot; 10 min read</span>
+                <span class="read-more-link">Read &rarr;</span>
+              </div>
+            </a>
+
+            <!-- Article 07 -->
+            <a class="article-card" href="/articles/south-punjab-why-does-the-province-demand-keep-returning.html" data-category="regional" data-keywords="south punjab multan bahawalpur dg khan undp secretariat resolution 62 40 million">
+              <div class="article-card-header">
+                <span class="article-badge">Regional Case Study</span>
+                <h3>South Punjab: Why Does the Province Demand Keep Returning?</h3>
+                <p>Examining 40.4M citizens, acute UNDP human development disparities, legislative milestones (1970–2026), and the 2020 Secretariat experiment.</p>
+              </div>
+              <div class="article-card-footer">
+                <span>PPRI-ART-2026-007 &middot; 11 min read</span>
+                <span class="read-more-link">Read &rarr;</span>
+              </div>
+            </a>
+
+            <!-- Article 08 -->
+            <a class="article-card" href="/articles/hazara-province-why-has-the-demand-survived.html" data-category="regional" data-keywords="hazara abbottabad mansehra haripur kohistan kp assembly sardar yousaf article 239">
+              <div class="article-card-header">
+                <span class="article-badge">Regional Case Study</span>
+                <h3>Hazara Province: Why Has the Demand Survived for So Long?</h3>
+                <p>Analyzing 16 years of post-18th Amendment mobilization, 5.7M population, Article 239 supermajority barriers, and hydropower fiscal viability.</p>
+              </div>
+              <div class="article-card-footer">
+                <span>PPRI-ART-2026-008 &middot; 10 min read</span>
+                <span class="read-more-link">Read &rarr;</span>
+              </div>
+            </a>
+
+            <!-- Article 09 -->
+            <a class="article-card" href="/articles/karachi-urban-sindh-representation-revenue-administration.html" data-category="regional fiscal" data-keywords="karachi urban sindh 20 million kmc tmc resolution 3309 revenue mqm mustafa kamal">
+              <div class="article-card-header">
+                <span class="article-badge">Regional Case Study</span>
+                <h3>Karachi and Urban Sindh: Representation, Revenue and Administrative Control</h3>
+                <p>Dissecting the 20.38M megacity governance mosaic (18+ overlapping agencies), tax attribution debates, and the September 2026 Sindh Assembly resolution.</p>
+              </div>
+              <div class="article-card-footer">
+                <span>PPRI-ART-2026-009 &middot; 11 min read</span>
+                <span class="read-more-link">Read &rarr;</span>
+              </div>
+            </a>
+
+            <!-- Article 10 -->
+            <a class="article-card" href="/articles/how-should-pakistan-evaluate-a-new-province.html" data-category="rubric" data-keywords="evaluation rubric 12 points criteria scorecard calculator test standards framework">
+              <div class="article-card-header">
+                <span class="article-badge">Flagship Standard</span>
+                <h3>How Should Pakistan Evaluate a Proposal for a New Province?</h3>
+                <p>The PPRI 12-point empirical evaluation rubric: testing proposals across constitutional law, fiscal modeling, administrative capacity, and verifiable outcomes.</p>
+              </div>
+              <div class="article-card-footer">
+                <span>PPRI-ART-2026-010 &middot; 12 min read</span>
+                <span class="read-more-link">Read &rarr;</span>
+              </div>
+            </a>
+
+            <!-- Article 001 (Original Flagship) -->
+            <a class="article-card" href="/articles/article-001.html" data-category="scale" data-keywords="scale imbalance punjab 127 million spatial distance divisions">
+              <div class="article-card-header">
+                <span class="article-badge">Baseline Paper</span>
+                <h3>The Scale Imbalance: A 127-Million Citizen Province</h3>
+                <p>Why Punjab&rsquo;s 52.9% national population share is an anomaly among world federations, and what spatial distance means for citizens in peripheral divisions.</p>
+              </div>
+              <div class="article-card-footer">
+                <span>PPRI-ART-001 &middot; 8 min read</span>
+                <span class="read-more-link">Read &rarr;</span>
+              </div>
+            </a>
+
+            <!-- Article 002 (Original Flagship) -->
+            <a class="article-card" href="/articles/article-002.html" data-category="fiscal" data-keywords="nfc equalization 16 units divisible pool own-source pfc">
+              <div class="article-card-header">
+                <span class="article-badge">Baseline Paper</span>
+                <h3>Beyond the 7th NFC: Equalization Under 16 Units</h3>
+                <p>Simulating federal divisible pool distributions, own-source revenue disparities, and the critical necessity of Provincial Finance Commissions.</p>
+              </div>
+              <div class="article-card-footer">
+                <span>PPRI-ART-002 &middot; 9 min read</span>
+                <span class="read-more-link">Read &rarr;</span>
+              </div>
+            </a>
+          </div>
         </div>
-        <div class="container grid grid-3 mt-3">
-          <a
-            class="card card-link"
-            href="/research/briefs/administrative-scale.html"
-            ><span class="card-meta">Policy Brief</span>
-            <h3>Administrative Scale &amp; Representation</h3>
-            <p>
-              Five tests for evaluating territorial and institutional reform.
-            </p></a
-          ><a class="card card-link" href="/provinces/local-government.html"
-            ><span class="card-meta">Explainer</span>
-            <h3>Provinces vs Local Government</h3>
-            <p>Why the two reforms should be studied together.</p></a
-          ><a class="card card-link" href="/provinces/fiscal-framework.html"
-            ><span class="card-meta">Explainer</span>
-            <h3>What would reform cost?</h3>
-            <p>The fiscal questions that a serious scenario must answer.</p></a
-          >
+      </section>
+
+      <section class="section section-soft" style="background: #f8fafc; border-top: 1px solid #e2e8f0; padding: 50px 0;">
+        <div class="container">
+          <h2 style="font-size: 1.4rem; color: #073c3a; margin-bottom: 20px;">Connected Policy Briefs &amp; Explainers</h2>
+          <div class="grid grid-3">
+            <a class="card card-link" href="/research/briefs/administrative-scale.html">
+              <span class="card-meta">Policy Brief</span>
+              <h3>Administrative Scale &amp; Representation</h3>
+              <p>Five constitutional tests for evaluating territorial and institutional reform in Pakistan.</p>
+            </a>
+            <a class="card card-link" href="/provinces/local-government.html">
+              <span class="card-meta">Explainer</span>
+              <h3>Provinces vs Local Government</h3>
+              <p>Why territorial redivision and municipal devolution must be evaluated in tandem.</p>
+            </a>
+            <a class="card card-link" href="/provinces/fiscal-framework.html">
+              <span class="card-meta">Explainer</span>
+              <h3>What Would Reform Cost?</h3>
+              <p>The transition budgets, capital expenditures, and recurring liabilities of subnational restructuring.</p>
+            </a>
+          </div>
         </div>
       </section>
     </main>
+
     <footer class="site-footer">
       <div class="container footer-grid">
         <div>
-          <img
-            src="/assets/images/brand/ppri-logo-header.jpg"
-            alt="PPRI"
-            class="footer-logo"
-          />
+          <img src="/assets/images/brand/ppri-logo-header.jpg" alt="PPRI" class="footer-logo" />
           <p>Pakistan Provincial Reform Institute</p>
-          <p>
-            Policy research on provincial reform, federalism, decentralization
-            and institutional design in Pakistan.
-          </p>
+          <p>Policy research on provincial reform, federalism, decentralization and institutional design in Pakistan.</p>
         </div>
         <div>
           <h3>Research</h3>
           <ul class="footer-links">
-            <li>
-              <a href="/research/policy-papers/index.html">Policy Papers</a>
-            </li>
+            <li><a href="/research/policy-papers/index.html">Policy Papers</a></li>
             <li><a href="/research/reports/index.html">Reports</a></li>
             <li><a href="/research/briefs/index.html">Policy Briefs</a></li>
-            <li>
-              <a href="/research/working-papers/index.html">Working Papers</a>
-            </li>
+            <li><a href="/articles/index.html">Articles &amp; Analysis</a></li>
           </ul>
         </div>
         <div>
@@ -126,31 +484,54 @@
           <ul class="footer-links">
             <li><a href="/provinces/index.html">Provincial Reform</a></li>
             <li><a href="/data/centre.html">Data Centre</a></li>
-            <li><a href="/maps/index.html">Maps</a></li>
-            <li><a href="/methodology/index.html">Methodology</a></li>
+            <li><a href="/maps/scenarios/index.html">Scenario Lab</a></li>
+            <li><a href="/resources/constitution.html">Constitution Reader</a></li>
           </ul>
         </div>
         <div>
           <h3>Connect</h3>
           <ul class="footer-links">
-            <li>
-              <a href="https://x.com/PPRI_Pakistan">X / @PPRI_Pakistan</a>
-            </li>
+            <li><a href="https://x.com/PPRI_Pakistan">X / @PPRI_Pakistan</a></li>
             <li><a href="/consultation/index.html">Consultation</a></li>
             <li><a href="/contact.html">Contact</a></li>
           </ul>
         </div>
       </div>
       <div class="container footer-bottom">
-        <span
-          >© <span data-current-year></span> Pakistan Provincial Reform
-          Institute</span
-        ><span
-          ><a href="/privacy.html">Privacy</a> ·
-          <a href="/terms.html">Terms</a></span
-        >
+        <span>&copy; <span data-current-year></span> Pakistan Provincial Reform Institute</span>
+        <span><a href="/privacy.html">Privacy</a> &middot; <a href="/terms.html">Terms</a> &middot; <a href="/feed.xml">RSS Feed</a></span>
       </div>
     </footer>
+
     <script src="/assets/js/main.js" defer></script>
+    <script>
+      let currentCategory = 'all';
+
+      function setCategory(category, btn) {
+        currentCategory = category;
+        document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        filterArticles();
+      }
+
+      function filterArticles() {
+        const query = document.getElementById('article-search').value.toLowerCase().trim();
+        const cards = document.querySelectorAll('.article-card');
+
+        cards.forEach(card => {
+          const category = card.getAttribute('data-category') || '';
+          const keywords = (card.getAttribute('data-keywords') || '') + ' ' + card.innerText.toLowerCase();
+          
+          const matchesCategory = (currentCategory === 'all') || category.includes(currentCategory);
+          const matchesSearch = (!query) || keywords.includes(query);
+
+          if (matchesCategory && matchesSearch) {
+            card.style.display = 'flex';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      }
+    </script>
   </body>
 </html>

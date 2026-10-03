@@ -1,0 +1,620 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Where Does Pakistan's Development Money Go? Federal, Provincial and Local Spending Explained | PPRI</title>
+    <meta
+      name="description"
+      content="An empirical tracing of the public rupee in Pakistan: from the 7th NFC divisible pool to provincial consolidated funds, recurrent burdens, and local services."
+    />
+    <link rel="canonical" href="https://ppripakistan.github.io/articles/where-does-pakistans-development-money-go.html" />
+    <meta property="og:site_name" content="Pakistan Provincial Reform Institute (PPRI)" />
+    <meta property="og:locale" content="en_PK" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Where Does Pakistan's Development Money Go? Federal, Provincial and Local Spending Explained | PPRI" />
+    <meta property="og:description" content="An empirical tracing of Pakistan's public rupee: from the 7th NFC divisible pool to provincial consolidated funds, recurrent burdens, and local service delivery." />
+    <meta property="og:url" content="https://ppripakistan.github.io/articles/where-does-pakistans-development-money-go.html" />
+    <meta property="og:image" content="https://ppripakistan.github.io/assets/images/brand/ppri-logo.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="PPRI - Pakistan Provincial Reform Institute" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@PPRI_Pakistan" />
+    <meta name="twitter:creator" content="@PPRI_Pakistan" />
+    <meta name="twitter:title" content="Where Does Pakistan's Development Money Go? Federal, Provincial and Local Spending Explained | PPRI" />
+    <meta name="twitter:description" content="An empirical tracing of Pakistan's public rupee: from the 7th NFC divisible pool to provincial consolidated funds, recurrent burdens, and local service delivery." />
+    <meta name="twitter:image" content="https://ppripakistan.github.io/assets/images/brand/ppri-logo.jpg" />
+    <meta name="theme-color" content="#073c3a" />
+    <link rel="icon" href="/assets/images/brand/ppri-favicon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="alternate" type="application/rss+xml" title="PPRI Policy Publications Feed" href="/feed.xml" />
+    <link rel="stylesheet" href="/assets/css/style.css" />
+    <link rel="stylesheet" href="/assets/css/responsive.css" />
+    <style>
+      .article-hero {
+        background: linear-gradient(135deg, #073c3a 0%, #0c2b26 100%);
+        color: #ffffff;
+        padding: 60px 0 45px;
+        border-bottom: 3px solid #d4af37;
+      }
+      .article-hero .eyebrow {
+        color: #d4af37;
+        font-size: 0.82rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        font-weight: 700;
+        display: block;
+        margin-bottom: 12px;
+      }
+      .article-hero h1 {
+        font-size: 2.45rem;
+        line-height: 1.22;
+        color: #ffffff;
+        max-width: 940px;
+        margin: 0 0 16px;
+      }
+      .article-standfirst {
+        font-size: 1.15rem;
+        line-height: 1.6;
+        color: #e2e8f0;
+        max-width: 840px;
+        margin: 0 0 24px;
+        font-weight: 400;
+      }
+      .article-meta-bar {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        align-items: center;
+        font-size: 0.85rem;
+        color: #cbd5e1;
+        padding-top: 18px;
+        border-top: 1px solid rgba(255, 255, 255, 0.15);
+      }
+      .article-meta-item strong {
+        color: #ffffff;
+      }
+      .stat-ribbon {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+        gap: 16px;
+        margin: 32px 0 40px;
+      }
+      .stat-card {
+        background: #f8fafc;
+        border: 1px solid #e2e8f0;
+        border-top: 4px solid #073c3a;
+        border-radius: 8px;
+        padding: 20px;
+        text-align: center;
+      }
+      .stat-card strong {
+        display: block;
+        font-size: 2rem;
+        color: #073c3a;
+        font-weight: 800;
+        line-height: 1.1;
+      }
+      .stat-card span {
+        display: block;
+        font-size: 0.85rem;
+        color: #64748b;
+        margin-top: 6px;
+        line-height: 1.35;
+      }
+      .sankey-flow {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        margin: 32px 0 40px;
+      }
+      .flow-tier {
+        background: #ffffff;
+        border: 1px solid #cbd5e1;
+        border-left: 6px solid #073c3a;
+        border-radius: 8px;
+        padding: 20px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.04);
+      }
+      .flow-tier-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        margin-bottom: 10px;
+      }
+      .flow-tier-header h4 {
+        margin: 0;
+        font-size: 1.1rem;
+        color: #073c3a;
+      }
+      .flow-tag {
+        background: #e2efe8;
+        color: #073c3a;
+        font-size: 0.75rem;
+        font-weight: 700;
+        padding: 3px 8px;
+        border-radius: 4px;
+        text-transform: uppercase;
+      }
+      .flow-tier p {
+        margin: 0;
+        font-size: 0.92rem;
+        color: #475569;
+        line-height: 1.55;
+      }
+      .flow-branches {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 12px;
+        margin-top: 14px;
+      }
+      .flow-branch {
+        background: #f8fafc;
+        border: 1px solid #e2e8f0;
+        border-radius: 6px;
+        padding: 12px;
+        font-size: 0.85rem;
+      }
+      .flow-branch strong {
+        display: block;
+        color: #0f172a;
+        margin-bottom: 4px;
+      }
+      .table-wrap {
+        overflow-x: auto;
+        margin: 28px 0 36px;
+        border: 1px solid #e2e8f0;
+        border-radius: 8px;
+      }
+      .data-table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 0.9rem;
+        text-align: left;
+      }
+      .data-table th {
+        background: #f8fafc;
+        color: #073c3a;
+        padding: 12px 16px;
+        font-weight: 700;
+        border-bottom: 2px solid #e2e8f0;
+      }
+      .data-table td {
+        padding: 12px 16px;
+        border-bottom: 1px solid #e2e8f0;
+        color: #334155;
+      }
+      .data-table tr:hover {
+        background: #f1f5f9;
+      }
+      .principles-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 18px;
+        margin: 28px 0 36px;
+      }
+      .principle-card {
+        background: #ffffff;
+        border: 1px solid #cbd5e1;
+        border-top: 4px solid #b45309;
+        border-radius: 8px;
+        padding: 20px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.03);
+      }
+      .principle-card h4 {
+        margin: 0 0 8px;
+        color: #78350f;
+        font-size: 1.05rem;
+      }
+      .principle-card p {
+        margin: 0;
+        font-size: 0.88rem;
+        color: #475569;
+        line-height: 1.5;
+      }
+      .interactive-bridge {
+        background: linear-gradient(135deg, #f0f7f3 0%, #e2efe8 100%);
+        border: 1px solid #c2ded0;
+        border-radius: 8px;
+        padding: 24px;
+        margin: 36px 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 16px;
+      }
+      .interactive-bridge-text h4 {
+        margin: 0 0 6px;
+        color: #073c3a;
+        font-size: 1.1rem;
+      }
+      .interactive-bridge-text p {
+        margin: 0;
+        color: #2d5a4c;
+        font-size: 0.9rem;
+      }
+      @media (max-width: 768px) {
+        .article-hero h1 { font-size: 1.85rem; }
+      }
+    </style>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Where Does Pakistan's Development Money Go? Federal, Provincial and Local Spending Explained",
+      "description": "An empirical tracing of Pakistan's public rupee: from the 7th NFC divisible pool to provincial consolidated funds, recurrent burdens, and local service delivery.",
+      "url": "https://ppripakistan.github.io/articles/where-does-pakistans-development-money-go.html",
+      "inLanguage": "en",
+      "isAccessibleForFree": true,
+      "datePublished": "2026-10-02",
+      "dateModified": "2026-10-02",
+      "author": {
+        "@type": "Organization",
+        "name": "Pakistan Provincial Reform Institute",
+        "url": "https://ppripakistan.github.io/"
+      },
+      "publisher": {
+        "@type": "ResearchOrganization",
+        "name": "Pakistan Provincial Reform Institute",
+        "url": "https://ppripakistan.github.io/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://ppripakistan.github.io/assets/images/brand/ppri-logo.jpg"
+        }
+      },
+      "mainEntityOfPage": "https://ppripakistan.github.io/articles/where-does-pakistans-development-money-go.html"
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://ppripakistan.github.io/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Articles & Analysis",
+          "item": "https://ppripakistan.github.io/articles/index.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Where Does Pakistan's Development Money Go?",
+          "item": "https://ppripakistan.github.io/articles/where-does-pakistans-development-money-go.html"
+        }
+      ]
+    }
+    </script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container navbar">
+        <a class="brand" href="/">
+          <div class="brand-mark">P</div>
+          <div class="brand-text">
+            <strong>PPRI</strong>
+            <span>Pakistan Provincial Reform Institute</span>
+          </div>
+        </a>
+        <nav class="nav-links">
+          <a href="/">Home</a>
+          <a href="/research/index.html">Research</a>
+          <a href="/data/centre.html">Data</a>
+          <a href="/maps/scenarios/index.html">Scenarios</a>
+          <a href="/articles/index.html" aria-current="page">Articles</a>
+          <a href="/about.html">About</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <section class="article-hero">
+        <div class="container">
+          <span class="eyebrow">Public Finance &amp; Fiscal Federalism · Treatise 05</span>
+          <h1>Where Does Pakistan's Development Money Go? Federal, Provincial and Local Spending Explained</h1>
+          <p class="article-standfirst">
+            Arguments about &ldquo;unequal funds&rdquo; often conflate completely different stages of public finance. Pakistan's real challenge becomes clear when we trace the public rupee from the federal pool down to provinces, districts, projects, and final service delivery.
+          </p>
+          <div class="article-meta-bar">
+            <div class="article-meta-item">Published: <strong>October 2026</strong></div>
+            <div class="article-meta-item">Reading Time: <strong>11 minutes</strong></div>
+            <div class="article-meta-item">Lead Researcher: <strong>PPRI Fiscal Governance Unit</strong></div>
+            <div class="article-meta-item">Citation: <strong>PPRI-ART-2026-005</strong></div>
+          </div>
+        </div>
+      </section>
+
+      <article class="container prose-wide" style="padding: 40px 0 60px;">
+        <div class="stat-ribbon">
+          <div class="stat-card">
+            <strong>57.5%</strong>
+            <span>Federal Divisible Pool transferred to provinces under the 7th NFC Award</span>
+          </div>
+          <div class="stat-card">
+            <strong>&gt;80%</strong>
+            <span>Provincial expenditure consumed by recurrent overhead (salaries, pensions, debt)</span>
+          </div>
+          <div class="stat-card">
+            <strong>Rs 556 B</strong>
+            <span>FY27 South Punjab development allocation across 387 announced schemes</span>
+          </div>
+          <div class="stat-card">
+            <strong>5 Tiers</strong>
+            <span>The public finance chain: Allocation &rarr; Release &rarr; Spend &rarr; Completion &rarr; Outcome</span>
+          </div>
+        </div>
+
+        <p class="lead" style="font-size: 1.18rem; line-height: 1.7; color: #1e293b;">
+          &ldquo;Why didn't our area get the money?&rdquo; is one of the oldest and most emotive questions in Pakistani politics. The trouble is that the answer is rarely contained in a single budget announcement or assembly speech.
+        </p>
+
+        <p>
+          Public finance in Pakistan moves through complex, institutional layers. There is the federal divisible pool governed by the National Finance Commission (NFC). There are provincial consolidated funds. There are recurrent operational expenditures and annual development programs (ADPs). There are district grants, treasury releases, revised estimates, and, eventually, whatever physical infrastructure or basic services citizens actually encounter on the ground.
+        </p>
+
+        <p>
+          By the time a political debate reaches a village school with collapsed boundary walls, a basic health unit without doctors, or an unpaved road, it becomes almost impossible for citizens to discern where the promised funding disappeared along the pipeline. This opacity is why the debate over new provinces is fundamentally a debate over fiscal federalism.
+        </p>
+
+        <h2>The Public Rupee Flow: following the money from Islamabad to the citizen</h2>
+        <p>
+          To understand why large fiscal transfers frequently fail to transform living standards in peripheral districts, we must trace the structural journey of public revenue across four distinct institutional tiers:
+        </p>
+
+        <!-- Infographic: The Public Rupee Flow Architecture -->
+        <div class="sankey-flow">
+          <div class="flow-tier">
+            <div class="flow-tier-header">
+              <h4>Tier 1: Federal Divisible Pool (7th NFC Award)</h4>
+              <span class="flow-tag">Federal-to-Provincial</span>
+            </div>
+            <p>
+              The federal government transfers <strong>57.5%</strong> of net divisible tax receipts to the four provinces. Provincial horizontal shares are determined by a four-part formula: Population (82%), Poverty/Backwardness (10.3%), Revenue Collection (5%), and Inverse Density (2.7%).
+            </p>
+            <div class="flow-branches">
+              <div class="flow-branch"><strong>Punjab: 51.74%</strong> Population scale driver</div>
+              <div class="flow-branch"><strong>Sindh: 24.55%</strong> Revenue collection weight</div>
+              <div class="flow-branch"><strong>KP: 14.62%</strong> Post-merger NMD adjustments</div>
+              <div class="flow-branch"><strong>Balochistan: 9.09%</strong> Inverse population density weight</div>
+            </div>
+          </div>
+
+          <div class="flow-tier">
+            <div class="flow-tier-header">
+              <h4>Tier 2: Provincial Consolidated Fund &amp; Recurrent Burden</h4>
+              <span class="flow-tag">Provincial Secretariat</span>
+            </div>
+            <p>
+              Once federal transfers and provincial own-source taxes enter the provincial treasury, the vast majority is immediately locked into mandatory operational overhead.
+            </p>
+            <div class="flow-branches">
+              <div class="flow-branch"><strong>Recurrent Overhead (&gt;80%)</strong> Civil service salaries, pensions, policing, operational utilities, and debt servicing.</div>
+              <div class="flow-branch"><strong>Development Space (&lt;20%)</strong> Discretionary capital available for the Annual Development Programme (ADP).</div>
+            </div>
+          </div>
+
+          <div class="flow-tier">
+            <div class="flow-tier-header">
+              <h4>Tier 3: The Annual Development Programme (ADP) Breakdown</h4>
+              <span class="flow-tag">Capital Allocation</span>
+            </div>
+            <p>
+              The remaining capital budget is split between competing priorities, often prioritizing politically visible megaprojects over basic rural service delivery.
+            </p>
+            <div class="flow-branches">
+              <div class="flow-branch"><strong>Provincial Megaprojects</strong> Highways, expressways, tertiary hospitals, mass transit in major urban centers.</div>
+              <div class="flow-branch"><strong>Discretionary Constituency Schemes</strong> Political allocations channeled through MPAs and MNAs rather than institutional local councils.</div>
+            </div>
+          </div>
+
+          <div class="flow-tier">
+            <div class="flow-tier-header">
+              <h4>Tier 4: District &amp; Municipal Service Delivery</h4>
+              <span class="flow-tag">Citizen Interface</span>
+            </div>
+            <p>
+              The final tier where services are delivered to citizens. Total expenditure undertaken by local governments has collapsed to <strong>under 5% of consolidated public spending</strong> nationwide.
+            </p>
+            <div class="flow-branches">
+              <div class="flow-branch"><strong>Urban Municipalities</strong> Waste, drainage, streetlights, zoning (heavily dependent on provincial subsidies).</div>
+              <div class="flow-branch"><strong>Rural District Councils</strong> Primary schools, rural dispensaries, farm-to-market roads (frequently paralyzed by unreleased funds).</div>
+            </div>
+          </div>
+        </div>
+
+        <h2>Step two: provincial money is not the same as local money</h2>
+        <p>
+          This critical distinction is routinely obscured in public discourse. When a provincial government celebrates a record federal transfer under the NFC Award, citizens often assume their district will prosper proportionally.
+        </p>
+        <p>
+          Yet as documented by PIDE's 2025 study, provincial governments have systematically reduced the share of their revenues allocated to local tiers. In Sindh, transfers to local councils fell from 15.7% of provincial receipts in FY2012 to 5.8% in FY2026. In Punjab, the share fell from 28.0% to 19.1%. In Khyber Pakhtunkhwa, from 30.0% to 22.0%. In Balochistan, it dropped from an already meager 5.8% to an almost imperceptible 0.2%.
+        </p>
+        <p>
+          A province receiving unprecedented federal funding while simultaneously strangling its own municipal and district institutions does not represent decentralisation; it represents provincial fiscal concentration.
+        </p>
+
+        <h2>Step three: an allocation is not an expenditure</h2>
+        <p>
+          Budgetary announcements are political; actual service delivery is administrative. When a government announces a multi-billion rupee development package for an underdeveloped region, five distinct institutional hurdles must be crossed:
+        </p>
+
+        <!-- Table: 5-Stage Allocation vs Outcome Disparity Table -->
+        <div class="table-wrap">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Stage</th>
+                <th>Public Finance Mechanism</th>
+                <th>Institutional Bottleneck / Risk</th>
+                <th>Empirical Ground Reality</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>1. Allocation</strong></td>
+                <td>Annual budget speech and ADP white paper listing.</td>
+                <td>Schemes announced without approved PC-I project documents or feasibility studies.</td>
+                <td>Paper allocations designed to generate positive news headlines before elections.</td>
+              </tr>
+              <tr>
+                <td><strong>2. Release</strong></td>
+                <td>Provincial Finance Department issues quarterly sanction letters.</td>
+                <td>Treasury cash-flow rationing; releases withheld or delayed to fiscal Q4.</td>
+                <td>Contractors face non-payment; construction work grinds to a halt mid-year.</td>
+              </tr>
+              <tr>
+                <td><strong>3. Expenditure</strong></td>
+                <td>Treasury cheques cleared and contractor invoices debited.</td>
+                <td>Lapse of unspent funds on June 30; bureaucratic procurement delays.</td>
+                <td>Rushed end-of-year book adjustments that disguise uncompleted work.</td>
+              </tr>
+              <tr>
+                <td><strong>4. Completion</strong></td>
+                <td>Contractor hands over physical structure to line department.</td>
+                <td>Substandard materials, structural defects, absence of utility connections.</td>
+                <td>Constructed hospital buildings standing empty without electricity or water.</td>
+              </tr>
+              <tr>
+                <td><strong>5. Service Outcome</strong></td>
+                <td>Operational facility delivers tangible human development outcomes.</td>
+                <td>SNE (Schedule of New Expenditure) unfunded: zero budget for doctors, teachers, medicines.</td>
+                <td>&ldquo;Ghost facilities&rdquo; that consume capital without delivering public service.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2>South Punjab: a practical case study in budget mechanics</h2>
+        <p>
+          Consider South Punjab as an instructive case. In June 2026, the Punjab Finance Minister announced an allocation of <strong>Rs 556 billion for 387 development schemes</strong> in South Punjab for the 2026–27 fiscal year, alongside Rs 38 billion dedicated to Katcha riverine development.
+        </p>
+        <p>
+          On paper, Rs 556 billion appears to be a transformative regional capital injection. However, evaluating whether this allocation addresses historical regional grievances requires answering rigorous empirical questions:
+        </p>
+        <ul>
+          <li><strong>Demographic proportionality:</strong> South Punjab accounts for approximately 31% of Punjab's population (40.4 million citizens) and over 45% of its geographic area. Does the allocation match its demographic share of the total provincial development portfolio?</li>
+          <li><strong>Need-based weighting:</strong> Given that districts like Rajanpur, D.G. Khan, and Muzaffargarh exhibit multidimensional poverty rates double that of northern and central Punjab, does the allocation compensate for service-delivery deficits, or merely maintain baseline historical spending?</li>
+          <li><strong>Actual treasury release:</strong> What percentage of the Rs 556 billion will actually be released across the four quarters, versus diverted to emergency flood relief or urban transport subsidies in Lahore?</li>
+          <li><strong>Operational staffing (SNE):</strong> Have recurrent budget provisions been created to recruit doctors, technicians, and educators to run the newly constructed facilities?</li>
+        </ul>
+
+        <h2>The World Bank finding: historical inertia vs need</h2>
+        <p>
+          In its landmark 2026 review, <em>Strengthening Fiscal Federalism to Drive Development</em>, the World Bank uncovered a systemic flaw in Pakistan's public spending: <strong>district-level allocations continue to follow historical precedent rather than poverty rates or objective infrastructure deficits.</strong>
+        </p>
+        <p>
+          Historically endowed districts with influential political patronage networks reliably receive substantial capital allotments year after year. Conversely, peripheral, remote, or politically fractured districts remain trapped at the bottom of the funding distribution, regardless of their acute developmental distress.
+        </p>
+        <blockquote>
+          If a funding formula does not explicitly measure district poverty, child stunting, maternal mortality, and geographic travel time, then increasing provincial budgets merely expands the volume of unequal spending.
+        </blockquote>
+
+        <h2>The recurrent budget trap</h2>
+        <p>
+          Another structural constraint identified by the World Bank is that <strong>over 80% of provincial spending in FY2023 was recurrent</strong>. Civil service pay, pension liabilities, policing, operational maintenance, and interest payments consume four out of every five rupees entering the provincial exchequer.
+        </p>
+        <p>
+          This massive recurrent overhead leaves provincial governments with extremely constrained fiscal space for discretionary development investments. It also holds profound implications for new province proposals:
+        </p>
+        <p>
+          A newly created province would not simply receive a clean development slate. It would inherit a proportional share of existing civil service salary obligations and pension debts, while simultaneously incurring massive initial capital costs to establish a new provincial assembly, high court principal seat, civil secretariat, and departmental directorates. Without a major expansion in domestic revenue mobilization, administrative overhead could easily consume the very funds intended for schools and hospitals.
+        </p>
+
+        <h2>Four principles of transparent public spending</h2>
+        <p>
+          If Pakistan is to resolve its regional funding grievances—whether within existing provincial borders or through new administrative units—reform must adhere to four institutional principles:
+        </p>
+
+        <!-- Infographic: Four Principles Grid -->
+        <div class="principles-grid">
+          <div class="principle-card">
+            <h4>1. Statutory PFC Awards</h4>
+            <p>Provincial Finance Commissions must be made constitutionally mandatory, with formula-driven allocations that automatically flow to districts based on poverty, infrastructure gaps, and own-source collection effort.</p>
+          </div>
+          <div class="principle-card">
+            <h4>2. District Budget Disaggregation</h4>
+            <p>Every provincial budget white paper must explicitly publish district-by-district allocations, releases, and actual expenditures, eliminating opaque multi-district lump-sum development envelopes.</p>
+          </div>
+          <div class="principle-card">
+            <h4>3. Digital Treasury Transparency</h4>
+            <p>Implement public, real-time expenditure dashboards linked to provincial treasuries, allowing citizens, journalists, and researchers to track releases from approval to contractor disbursement.</p>
+          </div>
+          <div class="principle-card">
+            <h4>4. Third-Party Outcome Auditing</h4>
+            <p>Shift public audits from formal procedural compliance to independent physical verification: verifying whether constructed schools have enrolled students and whether water treatment plants deliver potable water.</p>
+          </div>
+        </div>
+
+        <div class="interactive-bridge">
+          <div class="interactive-bridge-text">
+            <h4>Inspect Provincial Development Indicators</h4>
+            <p>Explore comparative provincial baseline statistics, literacy rates, and health infrastructure indicators in our Data Centre.</p>
+          </div>
+          <a href="/data/provincial-comparison.html" class="btn btn-primary" style="background: #073c3a; color: #ffffff; padding: 10px 18px; border-radius: 6px; text-decoration: none; font-weight: 700; font-size: 0.88rem;">Open Provincial Data &rarr;</a>
+        </div>
+
+        <div class="article-references" style="margin-top: 50px; padding-top: 25px; border-top: 1px solid #e2e8f0;">
+          <h3 style="font-size: 1.15rem; color: #073c3a;">Primary Sources &amp; References</h3>
+          <ul style="font-size: 0.88rem; color: #475569; line-height: 1.6;">
+            <li><strong>World Bank:</strong> <em>Strengthening Fiscal Federalism to Drive Development</em> (July 2026). <a href="https://www.worldbank.org/en/news/press-release/2026/07/01/pakistan-strengthening-fiscal-federalism-to-drive-development" target="_blank" rel="noopener">World Bank Document Portal</a></li>
+            <li><strong>Pakistan Institute of Development Economics (PIDE):</strong> <em>Beyond the NFC Award: Pakistan's Unfinished Devolution to Local Governments</em> (2025). <a href="https://pide.org.pk/research/beyond-the-nfc-award-pakistans-unfinished-devolution-to-local-governments/" target="_blank" rel="noopener">PIDE Research Series</a></li>
+            <li><strong>Pakistan Institute of Development Economics (PIDE):</strong> <em>A Critical Path to Fiscal Federalism: Policy Imperatives for the NFC Award Remake</em> (2025).</li>
+            <li><strong>Ministry of Finance, Government of Pakistan:</strong> <em>7th National Finance Commission Award</em> (Year Book 2009–10). <a href="https://www.finance.gov.pk/publications/YearBook2009_10.pdf" target="_blank" rel="noopener">finance.gov.pk</a></li>
+            <li><strong>Finance Department, Government of the Punjab:</strong> <em>Annual Budget 2026–27 Speech &amp; Estimates of Charged Expenditure and Demands for Grants</em> (June 2026).</li>
+            <li><strong>Dawn:</strong> <em>Punjab Budget 2026–27: Capital outlays and regional allocations</em> (June 2026). <a href="https://pass.dawn.com/news/2010693/punjab-budget-2026-27-budget-critics-in-house-panned-by-minister" target="_blank" rel="noopener">dawn.com</a></li>
+          </ul>
+        </div>
+      </article>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div>
+          <img src="/assets/images/brand/ppri-logo-header.jpg" alt="PPRI" class="footer-logo" />
+          <p>Pakistan Provincial Reform Institute</p>
+          <p>Policy research on provincial reform, federalism, decentralization and institutional design in Pakistan.</p>
+        </div>
+        <div>
+          <h3>Research</h3>
+          <ul class="footer-links">
+            <li><a href="/research/policy-papers/index.html">Policy Papers</a></li>
+            <li><a href="/research/reports/index.html">Reports</a></li>
+            <li><a href="/research/briefs/index.html">Policy Briefs</a></li>
+            <li><a href="/articles/index.html">Articles &amp; Analysis</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Explore</h3>
+          <ul class="footer-links">
+            <li><a href="/provinces/index.html">Provincial Reform</a></li>
+            <li><a href="/data/centre.html">Data Centre</a></li>
+            <li><a href="/maps/scenarios/index.html">Scenario Lab</a></li>
+            <li><a href="/resources/constitution.html">Constitution Reader</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Connect</h3>
+          <ul class="footer-links">
+            <li><a href="https://x.com/PPRI_Pakistan">X / @PPRI_Pakistan</a></li>
+            <li><a href="/consultation/index.html">Consultation</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        <span>&copy; <span data-current-year></span> Pakistan Provincial Reform Institute</span>
+        <span><a href="/privacy.html">Privacy</a> &middot; <a href="/terms.html">Terms</a> &middot; <a href="/feed.xml">RSS Feed</a></span>
+      </div>
+    </footer>
+    <script src="/assets/js/main.js" defer></script>
+  </body>
+</html>
