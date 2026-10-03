@@ -415,5 +415,169 @@
       "calculator",
       "criteria"
     ]
+  },
+  {
+    "title": "When Development Follows the Capital, People Follow: Urban Congestion Cycle",
+    "type": "Article",
+    "description": "An empirical analysis of urban concentration in Pakistan: capital-city pull, public spending disparities, migration feedback loops, and secondary city networks.",
+    "url": "/articles/when-development-follows-the-capital-people-follow.html",
+    "tags": [
+      "article",
+      "urban",
+      "capital city",
+      "lahore",
+      "quetta",
+      "karachi",
+      "peshawar",
+      "migration",
+      "piciip",
+      "congestion"
+    ]
+  },
+  {
+    "title": "One Province, Many Needs: How Should a Government Decide Development Budget Priority?",
+    "type": "Article",
+    "description": "An empirical inquiry into subnational public finance in Pakistan: district allocations, recurrent spending burdens, and formula-driven equalization models.",
+    "url": "/articles/one-province-many-needs-development-budget-priority.html",
+    "tags": [
+      "article",
+      "public finance",
+      "budget",
+      "pfc",
+      "districts",
+      "equalization",
+      "simulator",
+      "punjab adp"
+    ]
+  },
+  {
+    "title": "Why Is Local Government Always the Last Tier to Get Power in Pakistan?",
+    "type": "Article",
+    "description": "An examination of Article 140A, municipal finance decline, legislative resistance, and the structural political economy behind Pakistan’s fragile third tier.",
+    "url": "/articles/why-is-local-government-always-the-last-tier-to-get-power.html",
+    "tags": [
+      "article",
+      "local government",
+      "article 140a",
+      "devolution",
+      "mpa",
+      "mayor",
+      "pfc",
+      "sindh",
+      "punjab"
+    ]
+  },
+  {
+    "title": "Pakistan Has Tried Local Government Again and Again: Why Does the System Keep Disappearing?",
+    "type": "Article",
+    "description": "A historical policy analysis of Pakistan’s 70-year cycle of local governance reforms, from Basic Democracies to the 2001 Devolution Plan and Article 140A.",
+    "url": "/articles/pakistan-keeps-reinventing-local-government-history.html",
+    "tags": [
+      "article",
+      "history",
+      "basic democracies",
+      "1959",
+      "1979",
+      "2001 devolution",
+      "article 140a",
+      "local bodies",
+      "ecp"
+    ]
+  },
+  {
+    "title": "Did Pakistan’s 2001 Devolution Plan Actually Improve Services? The Evidence Is More Complicated Than You Think",
+    "type": "Article",
+    "description": "An empirical evaluation of Pakistan’s 2001 Devolution Plan: assessing health outcomes, primary school enrolment data, citizen access, and systemic bottlenecks.",
+    "url": "/articles/did-2001-devolution-improve-services-evidence.html",
+    "tags": [
+      "article",
+      "2001 devolution",
+      "service delivery",
+      "health",
+      "education",
+      "panel data",
+      "punjab",
+      "ciet"
+    ]
+  },
+  {
+    "title": "Before Local Government Faded, What Did Pakistanis Think About It?",
+    "type": "Article",
+    "description": "A quantitative analysis of the 2004/05 National Social Audit: examining citizen proximity, union council accessibility, and grassroots dispute resolution.",
+    "url": "/articles/before-local-government-faded-citizen-perceptions.html",
+    "tags": [
+      "article",
+      "social audit",
+      "public opinion",
+      "union nazim",
+      "councillor",
+      "women quota",
+      "ccb",
+      "dispute resolution"
+    ]
+  },
+  {
+    "title": "Where Did the Development Money Go When Pakistan Tried District Government?",
+    "type": "Article",
+    "description": "An empirical fiscal analysis of Pakistan’s 2001 district budgets: resource formulas, Provincial Finance Commissions, CCB grants, and provincial clawbacks.",
+    "url": "/articles/where-did-development-money-go-district-government.html",
+    "tags": [
+      "article",
+      "district budget",
+      "pfc formula",
+      "ccb",
+      "rawalpindi",
+      "fiscal decentralisation",
+      "clawback"
+    ]
+  },
+  {
+    "title": "A New Province Can Move the Capital—But Can It Move the Power?",
+    "type": "Article",
+    "description": "An analysis of administrative centralization in new province scenarios: avoiding capital primacy, dispersing institutions, and empowering local districts.",
+    "url": "/articles/new-province-can-move-capital-can-it-move-power.html",
+    "tags": [
+      "article",
+      "new provinces",
+      "capital city",
+      "centralization",
+      "polycentric",
+      "south punjab",
+      "hazara",
+      "secretariat"
+    ]
+  },
+  {
+    "title": "Can Pakistan Grow Beyond Its Provincial Capitals? The Case for Stronger Secondary Cities",
+    "type": "Article",
+    "description": "A spatial economic blueprint for polycentric urban development in Pakistan: intermediate city finance, industrial clustering, and municipal autonomy.",
+    "url": "/articles/can-pakistan-grow-beyond-provincial-capitals-secondary-cities.html",
+    "tags": [
+      "article",
+      "secondary cities",
+      "intermediate cities",
+      "piciip",
+      "faisalabad",
+      "sialkot",
+      "multan",
+      "sukkur",
+      "clusters"
+    ]
+  },
+  {
+    "title": "How Far Is Government? The Hidden Cost of Administrative Distance in Pakistan",
+    "type": "Article",
+    "description": "A methodological framework to quantify administrative distance in Pakistan: travel time isochrones, service deserts, and the Administrative Access Index.",
+    "url": "/articles/how-far-is-government-administrative-distance.html",
+    "tags": [
+      "article",
+      "administrative distance",
+      "isochrones",
+      "travel time",
+      "aai",
+      "gwadar",
+      "rajanpur",
+      "service deserts"
+    ]
   }
 ]

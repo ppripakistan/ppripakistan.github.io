@@ -243,12 +243,12 @@
           <!-- Stat Ribbon -->
           <div class="stat-ribbon">
             <div class="stat-card">
-              <strong>12</strong>
+              <strong>22</strong>
               <span>Analytical treatises &amp; empirical policy papers</span>
             </div>
             <div class="stat-card">
-              <strong>4 Tracks</strong>
-              <span>Scale, Fiscal Federalism, Regional Cases &amp; Rubrics</span>
+              <strong>5 Tracks</strong>
+              <span>Scale, Fiscal Federalism, Local Devolution, Regional Cases &amp; Rubrics</span>
             </div>
             <div class="stat-card">
               <strong>241.5 M</strong>
@@ -265,20 +265,21 @@
             <input
               type="text"
               id="article-search"
-              placeholder="Search articles by keyword, province, or topic (e.g., NFC, Punjab, Hazara, Karachi, Article 140A)..."
+              placeholder="Search articles by keyword, province, or topic (e.g., NFC, Punjab, Hazara, Karachi, Article 140A, PICIIP)..."
               oninput="filterArticles()"
             />
           </div>
 
           <div class="filter-tabs" role="tablist">
-            <button class="filter-btn active" onclick="setCategory('all', this)">All Treatises (12)</button>
+            <button class="filter-btn active" onclick="setCategory('all', this)">All Treatises (22)</button>
             <button class="filter-btn" onclick="setCategory('scale', this)">Scale &amp; Demography</button>
-            <button class="filter-btn" onclick="setCategory('fiscal', this)">Fiscal Federalism &amp; Devolution</button>
-            <button class="filter-btn" onclick="setCategory('regional', this)">Regional Case Studies</button>
-            <button class="filter-btn" onclick="setCategory('rubric', this)">Standards &amp; Frameworks</button>
+            <button class="filter-btn" onclick="setCategory('fiscal', this)">Fiscal Federalism &amp; Budgets</button>
+            <button class="filter-btn" onclick="setCategory('localgov', this)">Local Government &amp; Third Tier</button>
+            <button class="filter-btn" onclick="setCategory('regional', this)">Regional &amp; Urban Case Studies</button>
+            <button class="filter-btn" onclick="setCategory('rubric', this)">Standards &amp; Spatial Frameworks</button>
           </div>
 
-          <!-- 12-Article Catalog Grid -->
+          <!-- 22-Article Catalog Grid -->
           <div class="articles-grid" id="articles-catalog">
             <!-- Article 01 -->
             <a class="article-card" href="/articles/why-is-pakistan-debating-new-provinces-again.html" data-category="scale rubric" data-keywords="scale ahsan iqbal article 239 supermajority debate 2026 census">
@@ -406,6 +407,136 @@
               </div>
               <div class="article-card-footer">
                 <span>PPRI-ART-2026-010 &middot; 12 min read</span>
+                <span class="read-more-link">Read &rarr;</span>
+              </div>
+            </a>
+
+            <!-- Article 11 -->
+            <a class="article-card" href="/articles/when-development-follows-the-capital-people-follow.html" data-category="scale regional" data-keywords="urban concentration capital pull lahore quetta karachi peshawar piciip migration congestion">
+              <div class="article-card-header">
+                <span class="article-badge">Spatial Economics</span>
+                <h3>When Development Follows the Capital, People Follow: Urban Congestion Cycle</h3>
+                <p>Analyzing capital-city pull, public spending disparities (Quetta Rs57k vs Rs12k; Lahore Rs31k vs Rs7k), migration feedback loops, and secondary city alternatives.</p>
+              </div>
+              <div class="article-card-footer">
+                <span>PPRI-ART-2026-011 &middot; 11 min read</span>
+                <span class="read-more-link">Read &rarr;</span>
+              </div>
+            </a>
+
+            <!-- Article 12 -->
+            <a class="article-card" href="/articles/one-province-many-needs-development-budget-priority.html" data-category="fiscal rubric" data-keywords="development budget priority 164 districts pfc allocation formula simulator recurrent outlay">
+              <div class="article-card-header">
+                <span class="article-badge">Public Finance</span>
+                <h3>One Province, Many Needs: How Should a Government Decide Budget Priority?</h3>
+                <p>Dissecting subnational capital allocations across 164 districts: competing allocation principles, political discretion, and interactive formula equalization simulator.</p>
+              </div>
+              <div class="article-card-footer">
+                <span>PPRI-ART-2026-012 &middot; 12 min read</span>
+                <span class="read-more-link">Read &rarr;</span>
+              </div>
+            </a>
+
+            <!-- Article 13 -->
+            <a class="article-card" href="/articles/why-is-local-government-always-the-last-tier-to-get-power.html" data-category="localgov fiscal" data-keywords="local government article 140a mpa mayor patronage provincial transfers pfc sindh punjab">
+              <div class="article-card-header">
+                <span class="article-badge">Article 140A Devolution</span>
+                <h3>Why Is Local Government Always the Last Tier to Get Power in Pakistan?</h3>
+                <p>An examination of Article 140A, municipal finance decline (&lt;5% of public spend), legislative resistance, and the structural political economy behind the fragile third tier.</p>
+              </div>
+              <div class="article-card-footer">
+                <span>PPRI-ART-2026-013 &middot; 11 min read</span>
+                <span class="read-more-link">Read &rarr;</span>
+              </div>
+            </a>
+
+            <!-- Article 14 -->
+            <a class="article-card" href="/articles/pakistan-keeps-reinventing-local-government-history.html" data-category="localgov rubric" data-keywords="history 70 years basic democracies 1959 1979 2001 devolution ecp local bodies churn">
+              <div class="article-card-header">
+                <span class="article-badge">Institutional History</span>
+                <h3>Pakistan Has Tried Local Government Again and Again: Why Does It Keep Disappearing?</h3>
+                <p>A 70-year comparative analysis of local governance cycles, from Basic Democracies to the 2001 Devolution Plan, civil-military dynamics, and post-18th Amendment statutory churn.</p>
+              </div>
+              <div class="article-card-footer">
+                <span>PPRI-ART-2026-014 &middot; 12 min read</span>
+                <span class="read-more-link">Read &rarr;</span>
+              </div>
+            </a>
+
+            <!-- Article 15 -->
+            <a class="article-card" href="/articles/did-2001-devolution-improve-services-evidence.html" data-category="localgov rubric" data-keywords="2001 devolution evidence healthcare education panel 34 punjab districts ansari ciet">
+              <div class="article-card-header">
+                <span class="article-badge">Empirical Evidence</span>
+                <h3>Did Pakistan’s 2001 Devolution Plan Actually Improve Services? The Evidence</h3>
+                <p>Rigorous sectoral evaluation across education panels (34 Punjab districts) and national healthcare household surveys (57,000+ homes), isolating key implementation bottlenecks.</p>
+              </div>
+              <div class="article-card-footer">
+                <span>PPRI-ART-2026-015 &middot; 13 min read</span>
+                <span class="read-more-link">Read &rarr;</span>
+              </div>
+            </a>
+
+            <!-- Article 16 -->
+            <a class="article-card" href="/articles/before-local-government-faded-citizen-perceptions.html" data-category="localgov regional" data-keywords="social audit 2004 citizen perception union nazim councillor women quota proximity ccb">
+              <div class="article-card-header">
+                <span class="article-badge">Survey Evidence</span>
+                <h3>Before Local Government Faded, What Did Pakistanis Think About It?</h3>
+                <p>Quantitative analysis of the 2004/05 National Social Audit: 46.8% citizen point-of-contact for union councils, 33% female councillor quota impact, and dispute conciliation.</p>
+              </div>
+              <div class="article-card-footer">
+                <span>PPRI-ART-2026-016 &middot; 10 min read</span>
+                <span class="read-more-link">Read &rarr;</span>
+              </div>
+            </a>
+
+            <!-- Article 17 -->
+            <a class="article-card" href="/articles/where-did-development-money-go-district-government.html" data-category="fiscal localgov" data-keywords="district budget public finance pfc formula rawalpindi ccb matching grant clawback">
+              <div class="article-card-header">
+                <span class="article-badge">Subnational Finance</span>
+                <h3>Where Did the Development Money Go When Pakistan Tried District Government?</h3>
+                <p>Empirical fiscal analysis of 2001 district budgets: 67/33 PFC formulas, Citizen Community Board 80% matching grants, and the post-2008 provincial budgetary clawback.</p>
+              </div>
+              <div class="article-card-footer">
+                <span>PPRI-ART-2026-017 &middot; 11 min read</span>
+                <span class="read-more-link">Read &rarr;</span>
+              </div>
+            </a>
+
+            <!-- Article 18 -->
+            <a class="article-card" href="/articles/new-province-can-move-capital-can-it-move-power.html" data-category="scale regional rubric" data-keywords="capital move power multan bahawalpur hazara urbanization secretariat centralization polycentric">
+              <div class="article-card-header">
+                <span class="article-badge">Spatial Planning</span>
+                <h3>A New Province Can Move the Capital—But Can It Move the Power?</h3>
+                <p>Analyzing the capital centralization paradox in new province scenarios: avoiding administrative primacy, dispersing public institutions, and empowering local districts.</p>
+              </div>
+              <div class="article-card-footer">
+                <span>PPRI-ART-2026-018 &middot; 11 min read</span>
+                <span class="read-more-link">Read &rarr;</span>
+              </div>
+            </a>
+
+            <!-- Article 19 -->
+            <a class="article-card" href="/articles/can-pakistan-grow-beyond-provincial-capitals-secondary-cities.html" data-category="scale regional" data-keywords="secondary cities intermediate cities piciip faisalabad sialkot gujranwala multan sukkur polycentric">
+              <div class="article-card-header">
+                <span class="article-badge">Urban Systems</span>
+                <h3>Can Pakistan Grow Beyond Its Provincial Capitals? Secondary Cities</h3>
+                <p>A spatial economic blueprint for polycentric urban development: World Bank PICIIP intermediate city results (4.5M residents), municipal tax autonomy, and regional clusters.</p>
+              </div>
+              <div class="article-card-footer">
+                <span>PPRI-ART-2026-019 &middot; 12 min read</span>
+                <span class="read-more-link">Read &rarr;</span>
+              </div>
+            </a>
+
+            <!-- Article 20 -->
+            <a class="article-card" href="/articles/how-far-is-government-administrative-distance.html" data-category="scale regional rubric" data-keywords="administrative distance travel isochrone access index aai gwadar rajanpur kohistan deserts">
+              <div class="article-card-header">
+                <span class="article-badge">Geospatial Metrics</span>
+                <h3>How Far Is Government? The Hidden Cost of Administrative Distance in Pakistan</h3>
+                <p>Introducing the PPRI Administrative Access Index (AAI): 6 dimensions of distance, travel time isochrones (14h+ in peripheral districts), and service desert mapping.</p>
+              </div>
+              <div class="article-card-footer">
+                <span>PPRI-ART-2026-020 &middot; 11 min read</span>
                 <span class="read-more-link">Read &rarr;</span>
               </div>
             </a>
