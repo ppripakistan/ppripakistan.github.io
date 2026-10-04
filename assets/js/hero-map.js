@@ -92,10 +92,12 @@
       })
       .then(data => {
         renderMapLayers(data);
-        updateTelemetry("Interactive cartography ready", 100);
+        // Safety timeout: ensure loader dismisses even if observer is delayed
         setTimeout(() => {
-          if (mapLoader) mapLoader.classList.add("is-loaded");
-        }, 350);
+          if (mapLoader && !mapLoader.classList.contains("is-loaded")) {
+            mapLoader.classList.add("is-loaded");
+          }
+        }, 2200);
       })
       .catch(err => {
         console.warn("Hero map geography load fallback:", err);
@@ -179,18 +181,29 @@
   function startDissolveSequence() {
     if (prefersReducedMotion) {
       mapContainer.querySelectorAll(".hero-unit-path").forEach(p => p.classList.add("is-active"));
+      updateTelemetry("16 territorial units ready", 100);
+      if (mapLoader) mapLoader.classList.add("is-loaded");
       return;
     }
 
     // Phase 1: 4 current provinces shown in crisp wireframe
-    // Phase 2: After 1.2s delay, dissolve cleanly into the 16 scenario units
+    updateTelemetry("Establishing provincial baseline...", 90);
+
+    // Phase 2: After brief alignment, dissolve cleanly into the 16 scenario units
     setTimeout(() => {
       // Dim the current provinces outline
       mapContainer.querySelectorAll(".hero-prov-path").forEach(p => p.classList.add("is-dimmed"));
 
       // Fade in the 16 scenario units
       mapContainer.querySelectorAll(".hero-unit-path").forEach(p => p.classList.add("is-active"));
-    }, 1200);
+
+      updateTelemetry("16 territorial units active", 100);
+
+      // Dismiss loader only after the units are active and visible
+      setTimeout(() => {
+        if (mapLoader) mapLoader.classList.add("is-loaded");
+      }, 350);
+    }, 600);
   }
 
   /* ── Interactive Magnetic Hover & Tooltip ──────────────────────────────── */

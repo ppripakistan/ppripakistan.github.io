@@ -390,7 +390,7 @@
     const el = document.getElementById("p6CurrentMap");
     if (!el || typeof L === "undefined") return;
     const map = L.map(el, {
-      scrollWheelZoom: true,
+      scrollWheelZoom: false,
       minZoom: 4,
       maxZoom: 12,
       worldCopyJump: false,
@@ -471,7 +471,7 @@
           "Provincial boundaries": provinceLayer,
           "District boundaries": districtLayer,
         },
-        { collapsed: false },
+        { collapsed: true },
       )
       .addTo(map);
   }
@@ -713,7 +713,7 @@
     const el = document.getElementById("p6ScenarioMap");
     if (!el || typeof L === "undefined") return;
     const map = L.map(el, {
-      scrollWheelZoom: true,
+      scrollWheelZoom: false,
       minZoom: 4,
       maxZoom: 12,
       worldCopyJump: false,
@@ -1302,7 +1302,7 @@
           .layers(
             { OpenStreetMap: bases.street, "Light map": bases.light },
             overlayControls,
-            { collapsed: false },
+            { collapsed: true },
           )
           .addTo(map);
 
