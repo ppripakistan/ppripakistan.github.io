@@ -632,5 +632,47 @@
     "description": "In-depth analytical reports assessing regional data, spatial access, and institutional readiness across Pakistan.",
     "url": "/research/reports/index.html",
     "tags": ["reports", "technical", "spatial", "regional", "data"]
+  },
+  {
+    "title": "Income Went Up. So Why Does Life Feel Harder?",
+    "type": "Research Report",
+    "description": "Pakistan's household squeeze in the data: examining income, consumption, food insecurity, poverty and purchasing power from HIES 2024–25.",
+    "url": "/research/reports/income-went-up-why-does-life-feel-harder.html",
+    "tags": ["household income", "cost of living", "food insecurity", "poverty", "HIES", "inflation", "purchasing power"]
+  },
+  {
+    "title": "The Price of a Simple Task",
+    "type": "Research Report",
+    "description": "How much does Pakistan's bureaucracy cost citizens? Complaint data, ombudsman evidence, e-Khidmat and the PPRI Administrative Burden Index.",
+    "url": "/research/reports/price-of-a-simple-task-pakistan-bureaucracy-cost.html",
+    "tags": ["bureaucracy", "administrative burden", "citizen portal", "ombudsman", "e-khidmat", "public service cost"]
+  },
+  {
+    "title": "Same Country, Different Life",
+    "type": "Research Report",
+    "description": "How much does your district determine your access to basic services? Geographic disparities in education, water, internet and food security.",
+    "url": "/research/reports/same-country-different-life-district-access.html",
+    "tags": ["district inequality", "basic services", "education", "clean water", "internet access", "regional disparity"]
+  },
+  {
+    "title": "The Bribe You Can't See",
+    "type": "Research Report",
+    "description": "How corruption becomes a private tax on citizens: perception surveys, reported bribe payments and the Citizen Cost of Corruption.",
+    "url": "/research/reports/bribe-you-cant-see-corruption-private-tax.html",
+    "tags": ["corruption", "bribery", "police", "land administration", "judiciary", "private tax", "transparency"]
+  },
+  {
+    "title": "Does Money Work Better When It Is Spent Closer to the People?",
+    "type": "Research Report",
+    "description": "Local government finance, fiscal decentralization, international OECD benchmarks and empirical lessons from Punjab's intermediate cities.",
+    "url": "/research/reports/does-money-work-better-spent-closer-to-people.html",
+    "tags": ["local government finance", "fiscal decentralization", "Punjab cities programme", "Article 140A", "subnational spending"]
+  },
+  {
+    "title": "Sentiment & Citizen-Experience Methodology",
+    "type": "Methodology",
+    "description": "PPRI methodology for citizen perception data, grievance platforms, media discourse and rules for responsible empirical language.",
+    "url": "/methodology/sentiment-analysis.html",
+    "tags": ["methodology", "sentiment analysis", "citizen experience", "complaint data", "perception surveys"]
   }
 ]

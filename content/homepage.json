@@ -10,13 +10,43 @@
   },
   "latest": [
     {
-      "type": "Policy Brief",
+      "type": "Research Report · PPRI-REP-2026-01",
+      "title": "Income Went Up. So Why Does Life Feel Harder?",
+      "summary": "Pakistan's household squeeze: income nearly doubled but food insecurity and poverty rose.",
+      "url": "/research/reports/income-went-up-why-does-life-feel-harder.html"
+    },
+    {
+      "type": "Research Report · PPRI-REP-2026-02",
+      "title": "The Price of a Simple Task",
+      "summary": "How much does Pakistan's bureaucracy cost citizens? Complaint data, ombudsman evidence and the Administrative Burden Index.",
+      "url": "/research/reports/price-of-a-simple-task-pakistan-bureaucracy-cost.html"
+    },
+    {
+      "type": "Research Report · PPRI-REP-2026-03",
+      "title": "Same Country, Different Life",
+      "summary": "District-level disparities in education, water, internet and food security across Pakistan.",
+      "url": "/research/reports/same-country-different-life-district-access.html"
+    },
+    {
+      "type": "Research Report · PPRI-REP-2026-04",
+      "title": "The Bribe You Can't See",
+      "summary": "How corruption becomes a private tax on citizens: perception surveys, reported bribe payments and the Citizen Cost of Corruption.",
+      "url": "/research/reports/bribe-you-cant-see-corruption-private-tax.html"
+    },
+    {
+      "type": "Research Report · PPRI-REP-2026-05",
+      "title": "Does Money Work Better When It Is Spent Closer to the People?",
+      "summary": "Local government finance, fiscal decentralization and Pakistan's own cities.",
+      "url": "/research/reports/does-money-work-better-spent-closer-to-people.html"
+    },
+    {
+      "type": "Policy Brief · PPRI-PB-001",
       "title": "Administrative Scale & Representation",
       "summary": "A framework for studying scale, geographic access and representation without assuming that smaller or larger units are automatically preferable.",
       "url": "/research/briefs/administrative-scale.html"
     },
     {
-      "type": "Working Paper",
+      "type": "Working Paper · PPRI-WP-001",
       "title": "Provinces & Local Government",
       "summary": "A comparative framework for examining territorial restructuring alongside constitutional local-government devolution.",
       "url": "/research/working-papers/provinces-local-government.html"

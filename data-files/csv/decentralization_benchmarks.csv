@@ -1,0 +1,4 @@
+metric,value,year,interpretation_note
+local_government_share_of_total_government_spending_percent_approx,10,2005,World Bank estimate
+local_government_share_of_total_government_spending_percent_less_than,5,2024,World Bank estimate; not an exact 4.xx figure
+provincial_recurrent_expenditure_share_percent_more_than,80,FY2023,World Bank consolidated provincial spending
