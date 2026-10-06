@@ -5,13 +5,58 @@
     <link>https://ppripakistan.github.io/</link>
     <description>Peer-reviewed policy papers, empirical reports, datasets, and constitutional legal analysis on provincial reform, federalism, and municipal devolution in Pakistan.</description>
     <language>en-pk</language>
-    <lastBuildDate>Sat, 03 Oct 2026 09:15:00 +0500</lastBuildDate>
+    <lastBuildDate>Tue, 06 Oct 2026 09:00:00 +0500</lastBuildDate>
     <atom:link href="https://ppripakistan.github.io/feed.xml" rel="self" type="application/rss+xml" />
     <image>
       <url>https://ppripakistan.github.io/assets/images/brand/ppri-logo.jpg</url>
       <title>Pakistan Provincial Reform Institute (PPRI)</title>
       <link>https://ppripakistan.github.io/</link>
     </image>
+
+    <item>
+      <title>Income Went Up. So Why Does Life Feel Harder? Pakistan's Household Squeeze in the Data</title>
+      <link>https://ppripakistan.github.io/research/reports/income-went-up-why-does-life-feel-harder.html</link>
+      <guid isPermaLink="true">https://ppripakistan.github.io/research/reports/income-went-up-why-does-life-feel-harder.html</guid>
+      <pubDate>Tue, 06 Oct 2026 09:00:00 +0500</pubDate>
+      <description>Empirical research report examining household income, consumption, food insecurity, poverty and purchasing power in Pakistan using HIES 2024–25 data.</description>
+      <category>Research Reports</category>
+    </item>
+
+    <item>
+      <title>The Price of a Simple Task: How Much Does Pakistan's Bureaucracy Cost Citizens?</title>
+      <link>https://ppripakistan.github.io/research/reports/price-of-a-simple-task-pakistan-bureaucracy-cost.html</link>
+      <guid isPermaLink="true">https://ppripakistan.github.io/research/reports/price-of-a-simple-task-pakistan-bureaucracy-cost.html</guid>
+      <pubDate>Tue, 06 Oct 2026 09:00:00 +0500</pubDate>
+      <description>Research report analyzing administrative burden, citizen grievance signals from the Pakistan Citizen's Portal, Mohtasib reports, and introducing the PPRI Administrative Burden Index.</description>
+      <category>Research Reports</category>
+    </item>
+
+    <item>
+      <title>Same Country, Different Life: How Much Does Your District Determine Your Access to Basic Services?</title>
+      <link>https://ppripakistan.github.io/research/reports/same-country-different-life-district-access.html</link>
+      <guid isPermaLink="true">https://ppripakistan.github.io/research/reports/same-country-different-life-district-access.html</guid>
+      <pubDate>Tue, 06 Oct 2026 09:00:00 +0500</pubDate>
+      <description>Research report investigating geographic inequality across Pakistan's districts in education, clean water access, internet penetration, and household food insecurity.</description>
+      <category>Research Reports</category>
+    </item>
+
+    <item>
+      <title>The Bribe You Can't See: How Corruption Becomes a Private Tax on Citizens</title>
+      <link>https://ppripakistan.github.io/research/reports/bribe-you-cant-see-corruption-private-tax.html</link>
+      <guid isPermaLink="true">https://ppripakistan.github.io/research/reports/bribe-you-cant-see-corruption-private-tax.html</guid>
+      <pubDate>Tue, 06 Oct 2026 09:00:00 +0500</pubDate>
+      <description>Research report conceptualizing corruption as a regressive private tax on public service access, drawing on Transparency International Pakistan survey data and administrative complaint evidence.</description>
+      <category>Research Reports</category>
+    </item>
+
+    <item>
+      <title>Does Money Work Better When It Is Spent Closer to the People?</title>
+      <link>https://ppripakistan.github.io/research/reports/does-money-work-better-spent-closer-to-people.html</link>
+      <guid isPermaLink="true">https://ppripakistan.github.io/research/reports/does-money-work-better-spent-closer-to-people.html</guid>
+      <pubDate>Tue, 06 Oct 2026 09:00:00 +0500</pubDate>
+      <description>Research report evaluating fiscal decentralization, local government spending benchmarks from the World Bank and OECD, and lessons from intermediate city programmes in Punjab.</description>
+      <category>Research Reports</category>
+    </item>
 
     <item>
       <title>The Provincial Reorganization of Pakistan: Constitutional, Demographic, Fiscal, and Administrative Architecture</title>

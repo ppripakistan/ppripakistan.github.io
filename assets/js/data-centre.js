@@ -172,35 +172,44 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const searchInput = document.getElementById("districtSearchInput");
   const provinceFilter = document.getElementById("districtProvinceFilter");
+  const popFilter = document.getElementById("districtPopFilter");
   const districtTbody = document.getElementById("districtTbody");
   const districtCountEl = document.getElementById("districtCount");
   const exportCsvBtn = document.getElementById("btnExportDistrictCsv");
   const exportJsonBtn = document.getElementById("btnExportDistrictJson");
 
+  let currentFilteredDistricts = districtData;
+
   function renderDistricts() {
     if (!districtTbody) return;
     const query = (searchInput ? searchInput.value : "").trim().toLowerCase();
     const prov = provinceFilter ? provinceFilter.value : "all";
+    const popTier = popFilter ? popFilter.value : "all";
 
-    const filtered = districtData.filter(function (d) {
+    currentFilteredDistricts = districtData.filter(function (d) {
       const matchesSearch =
         d.district.toLowerCase().includes(query) ||
         d.division.toLowerCase().includes(query) ||
         d.province.toLowerCase().includes(query);
       const matchesProv = prov === "all" || d.province === prov;
-      return matchesSearch && matchesProv;
+      const matchesPop =
+        popTier === "all" ||
+        (popTier === "small" && d.pop < 1000000) ||
+        (popTier === "medium" && d.pop >= 1000000 && d.pop <= 3000000) ||
+        (popTier === "large" && d.pop > 3000000);
+      return matchesSearch && matchesProv && matchesPop;
     });
 
     if (districtCountEl) {
-      districtCountEl.textContent = `Showing ${filtered.length} of ${districtData.length} baseline units`;
+      districtCountEl.textContent = `Showing ${currentFilteredDistricts.length} of ${districtData.length} baseline units`;
     }
 
-    if (filtered.length === 0) {
+    if (currentFilteredDistricts.length === 0) {
       districtTbody.innerHTML = `<tr><td colspan="7" style="text-align:center; padding: 24px; color: #64748b;">No administrative units found matching your search.</td></tr>`;
       return;
     }
 
-    districtTbody.innerHTML = filtered
+    districtTbody.innerHTML = currentFilteredDistricts
       .map(function (d) {
         return `<tr>
           <td style="font-weight: 700; color: #073c3a;">${d.district}</td>
@@ -217,12 +226,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
   if (searchInput) searchInput.addEventListener("input", renderDistricts);
   if (provinceFilter) provinceFilter.addEventListener("change", renderDistricts);
+  if (popFilter) popFilter.addEventListener("change", renderDistricts);
 
   // CSV Export
   if (exportCsvBtn) {
     exportCsvBtn.addEventListener("click", function () {
+      const exportList = currentFilteredDistricts.length > 0 ? currentFilteredDistricts : districtData;
       const headers = ["District", "Province", "Division", "Population_2023", "Area_km2", "Density_per_km2", "Distance_to_Capital"];
-      const rows = districtData.map((d) => [
+      const rows = exportList.map((d) => [
         `"${d.district}"`,
         `"${d.province}"`,
         `"${d.division}"`,
@@ -247,7 +258,8 @@ document.addEventListener("DOMContentLoaded", function () {
   // JSON Export
   if (exportJsonBtn) {
     exportJsonBtn.addEventListener("click", function () {
-      const jsonContent = JSON.stringify({ dataset: "PPRI District & Administrative Baseline", source: "PBS Census 2023", data: districtData }, null, 2);
+      const exportList = currentFilteredDistricts.length > 0 ? currentFilteredDistricts : districtData;
+      const jsonContent = JSON.stringify({ dataset: "PPRI District & Administrative Baseline", source: "PBS Census 2023", count: exportList.length, data: exportList }, null, 2);
       const blob = new Blob([jsonContent], { type: "application/json" });
       const url = URL.createObjectURL(blob);
       const a = document.createElement("a");

@@ -357,6 +357,29 @@
 .leaflet-control-layers {
   font-size: 0.76rem;
 }
+@media (max-width: 768px) {
+  .leaflet-control-layers {
+    font-size: 0.72rem;
+    border-radius: 6px;
+    padding: 3px 6px;
+    max-width: 200px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+  .leaflet-control-layers-toggle {
+    width: 30px !important;
+    height: 30px !important;
+    background-size: 16px 16px !important;
+  }
+  .leaflet-control-layers-list {
+    max-height: 180px;
+    overflow-y: auto;
+    font-size: 0.72rem;
+  }
+  .leaflet-control-layers label {
+    margin-bottom: 2px;
+    font-size: 0.72rem;
+  }
+}
 .leaflet-popup-content {
   line-height: 1.45;
 }

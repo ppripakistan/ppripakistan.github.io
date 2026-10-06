@@ -113,7 +113,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     // Configure Direct Gmail Web Compose link
-    const emailTo = "consultation@ppri.org.pk";
+    const emailTo = "ppripakistan@gmail.com";
     const subject = `[PPRI Consultation] Submission: ${topicTitle} - ${regionVal}`;
     const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(emailTo)}&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(emailBody)}`;
     const mailtoUrl = `mailto:${encodeURIComponent(emailTo)}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(emailBody)}`;

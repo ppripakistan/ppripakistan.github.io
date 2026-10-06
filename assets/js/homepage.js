@@ -382,8 +382,20 @@ document.addEventListener("DOMContentLoaded", () => {
         return response.json();
       })
       .then((data) => {
-        const latest = Array.isArray(data.latest) ? data.latest.slice(0, 3) : [];
-        if (latest.length) feed.innerHTML = latest.map(formatCard).join("");
+        const latest = Array.isArray(data.latest) ? data.latest.slice(0, 8) : [];
+        if (latest.length) {
+          feed.innerHTML = latest.map(formatCard).join("");
+          const countEl = document.querySelector("[data-feed-count]");
+          if (countEl) countEl.textContent = `${latest.length} items`;
+        }
+
+        const fadeBottom = document.querySelector(".feed-fade-bottom");
+        if (fadeBottom) {
+          feed.addEventListener("scroll", () => {
+            const isAtBottom = feed.scrollHeight - feed.scrollTop <= feed.clientHeight + 15;
+            fadeBottom.style.opacity = isAtBottom ? "0" : "1";
+          }, { passive: true });
+        }
 
         const featured = data.featured;
         if (!featured) return;

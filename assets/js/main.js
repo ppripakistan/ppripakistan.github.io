@@ -89,6 +89,11 @@ function buildEnhancedNavigation(nav) {
     home.removeAttribute("aria-current");
     home.classList.toggle("is-current", linkIsCurrent(home.href));
     if (linkIsCurrent(home.href)) home.setAttribute("aria-current", "page");
+    home.addEventListener("click", () => {
+      nav.classList.remove("is-open");
+      const mb = document.querySelector(".menu-toggle");
+      if (mb) mb.setAttribute("aria-expanded", "false");
+    });
     fragment.appendChild(home);
   }
 
@@ -166,6 +171,8 @@ function buildEnhancedNavigation(nav) {
         wrapper.classList.remove("is-open");
         trigger.setAttribute("aria-expanded", "false");
         nav.classList.remove("is-open");
+        const mb = document.querySelector(".menu-toggle");
+        if (mb) mb.setAttribute("aria-expanded", "false");
       });
     });
 
@@ -174,6 +181,11 @@ function buildEnhancedNavigation(nav) {
   });
 
   if (search) {
+    search.addEventListener("click", () => {
+      nav.classList.remove("is-open");
+      const mb = document.querySelector(".menu-toggle");
+      if (mb) mb.setAttribute("aria-expanded", "false");
+    });
     fragment.appendChild(search);
   }
 

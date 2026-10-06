@@ -313,6 +313,12 @@
     <priority>0.7</priority>
   </url>
 <url>
+    <loc>https://ppripakistan.github.io/methodology/sentiment-analysis.html</loc>
+    <lastmod>2026-10-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+<url>
     <loc>https://ppripakistan.github.io/mission.html</loc>
     <lastmod>2026-10-01</lastmod>
     <changefreq>yearly</changefreq>
@@ -434,9 +440,39 @@
   </url>
 <url>
     <loc>https://ppripakistan.github.io/research/reports/index.html</loc>
-    <lastmod>2026-10-01</lastmod>
+    <lastmod>2026-10-06</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ppripakistan.github.io/research/reports/income-went-up-why-does-life-feel-harder.html</loc>
+    <lastmod>2026-10-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://ppripakistan.github.io/research/reports/price-of-a-simple-task-pakistan-bureaucracy-cost.html</loc>
+    <lastmod>2026-10-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://ppripakistan.github.io/research/reports/same-country-different-life-district-access.html</loc>
+    <lastmod>2026-10-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://ppripakistan.github.io/research/reports/bribe-you-cant-see-corruption-private-tax.html</loc>
+    <lastmod>2026-10-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://ppripakistan.github.io/research/reports/does-money-work-better-spent-closer-to-people.html</loc>
+    <lastmod>2026-10-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
   </url>
 <url>
     <loc>https://ppripakistan.github.io/research/working-papers/index.html</loc>

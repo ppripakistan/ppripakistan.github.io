@@ -70,5 +70,225 @@
     "year": 2026,
     "url": "https://www.ips.org.pk/beyond-new-provinces-rethinking-pakistans-governance-crisis-urdu-version/",
     "relevance": "Places provincial restructuring in the wider context of local government and institutional reform."
+  },
+  {
+    "id": "PBS-HIES-2024-25",
+    "type": "Government",
+    "organization": "Pakistan Bureau of Statistics",
+    "title": "Household Integrated Economic Survey (HIES) 2024\u201325",
+    "year": 2025,
+    "url": "https://www.pbs.gov.pk/hies/",
+    "relevance": "Household income, consumption, expenditure, food insecurity, WASH, ICT, education, rural/urban gaps.",
+    "papers": ["PPRI-REP-2026-01", "PPRI-REP-2026-03"]
+  },
+  {
+    "id": "PBS-HIES-ECON-2024-25",
+    "type": "Government",
+    "organization": "Pakistan Bureau of Statistics",
+    "title": "HIES 2024\u201325 Economic Report",
+    "year": 2025,
+    "url": "https://www.pbs.gov.pk/hies/",
+    "relevance": "Household income and consumption by quintile; expenditure composition; household size; earners; fuel spending.",
+    "papers": ["PPRI-REP-2026-01"]
+  },
+  {
+    "id": "PBS-HIES-SOCIAL-2024-25",
+    "type": "Government",
+    "organization": "Pakistan Bureau of Statistics",
+    "title": "HIES 2024\u201325 Social Report",
+    "year": 2025,
+    "url": "https://www.pbs.gov.pk/hies/",
+    "relevance": "Food insecurity, water, ICT, education, electricity, sanitation, provincial and rural/urban comparisons.",
+    "papers": ["PPRI-REP-2026-01", "PPRI-REP-2026-03"]
+  },
+  {
+    "id": "PBS-PSLM",
+    "type": "Government",
+    "organization": "Pakistan Bureau of Statistics",
+    "title": "Pakistan Social and Living Standards Measurement (PSLM)",
+    "year": 2024,
+    "url": "https://www.pbs.gov.pk/pslm/",
+    "relevance": "District-level socioeconomic indicators and the design of district comparisons.",
+    "papers": ["PPRI-REP-2026-03"]
+  },
+  {
+    "id": "PBS-LFS-2024-25",
+    "type": "Government",
+    "organization": "Pakistan Bureau of Statistics",
+    "title": "Labour Force Survey 2024\u201325",
+    "year": 2025,
+    "url": "https://www.pbs.gov.pk/lfs/",
+    "relevance": "Unemployment, labour-force participation, wage context.",
+    "papers": ["PPRI-REP-2026-01"]
+  },
+  {
+    "id": "PBS-CPI",
+    "type": "Government",
+    "organization": "Pakistan Bureau of Statistics",
+    "title": "CPI / Price Statistics",
+    "year": 2025,
+    "url": "https://www.pbs.gov.pk/",
+    "relevance": "Inflation path used for illustrative purchasing-power calculations.",
+    "papers": ["PPRI-REP-2026-01"]
+  },
+  {
+    "id": "FIN-PES-2025-26",
+    "type": "Government",
+    "organization": "Government of Pakistan, Finance Division",
+    "title": "Pakistan Economic Survey 2025\u201326",
+    "year": 2026,
+    "url": "https://www.finance.gov.pk/survey_2026.html",
+    "relevance": "Poverty, Gini/inequality, inflation and macroeconomic context.",
+    "papers": ["PPRI-REP-2026-01"]
+  },
+  {
+    "id": "PAK-CONSTITUTION",
+    "type": "Government",
+    "organization": "Government of Pakistan",
+    "title": "Pakistan Code / Constitution",
+    "year": 2024,
+    "url": "https://pakistancode.gov.pk/",
+    "relevance": "Article 140A and constitutional/devolution context.",
+    "papers": ["PPRI-REP-2026-05"]
+  },
+  {
+    "id": "WB-FISCAL-FED-2026",
+    "type": "International",
+    "organization": "World Bank",
+    "title": "Strengthening Fiscal Federalism to Drive Development in Pakistan",
+    "year": 2026,
+    "url": "https://www.worldbank.org/en/news/press-release/2026/07/01/pakistan-strengthening-fiscal-federalism-to-drive-development",
+    "relevance": "Local-government spending share, provincial fiscal structure, recurrent spending, district allocation patterns.",
+    "papers": ["PPRI-REP-2026-05"]
+  },
+  {
+    "id": "WB-PUNJAB-CITIES-2026",
+    "type": "International",
+    "organization": "World Bank",
+    "title": "Punjab\u2019s Intermediate Cities Raise the Bar on Urban Management and Service Delivery",
+    "year": 2026,
+    "url": "https://www.worldbank.org/en/results/2026/06/18/punjab-s-intermediate-cities-raise-the-bar-on-urban-management-and-service-deliver",
+    "relevance": "16 intermediate cities, 4.5m beneficiaries, three-year planning, GIS asset inventories, own-source revenue increase.",
+    "papers": ["PPRI-REP-2026-05"]
+  },
+  {
+    "id": "WB-URBAN-SPATIAL",
+    "type": "International",
+    "organization": "World Bank",
+    "title": "Pakistan urban / spatial development work",
+    "year": 2026,
+    "url": "https://www.worldbank.org/",
+    "relevance": "Urbanization, agglomeration, infrastructure and urban pressures.",
+    "papers": ["PPRI-REP-2026-05"]
+  },
+  {
+    "id": "ADB-URBAN-ASSESS",
+    "type": "International",
+    "organization": "Asian Development Bank",
+    "title": "Pakistan National Urban Assessment",
+    "year": 2024,
+    "url": "https://www.adb.org/documents/pakistan-national-urban-assessment",
+    "relevance": "Urbanisation, infrastructure, housing, planning and city-management context.",
+    "papers": ["PPRI-REP-2026-05"]
+  },
+  {
+    "id": "OECD-SUBNATIONAL",
+    "type": "International",
+    "organization": "OECD",
+    "title": "Subnational Finance and Investment",
+    "year": 2024,
+    "url": "https://www.oecd.org/en/topics/subnational-finance-and-investment.html",
+    "relevance": "Subnational government share of public expenditure/investment; international benchmark.",
+    "papers": ["PPRI-REP-2026-05"]
+  },
+  {
+    "id": "OECD-DECENTRALISATION",
+    "type": "International",
+    "organization": "OECD",
+    "title": "Making Decentralisation Work",
+    "year": 2019,
+    "url": "https://www.oecd.org/en/publications/2019/03/making-decentralisation-work_g1g9faa.html",
+    "relevance": "Benefits/risks of decentralization, proximity/accountability/scale.",
+    "papers": ["PPRI-REP-2026-05"]
+  },
+  {
+    "id": "CITIZEN-PORTAL",
+    "type": "Government",
+    "organization": "Government of Pakistan",
+    "title": "Pakistan Citizen\u2019s Portal",
+    "year": 2025,
+    "url": "https://www.citizenportal.gov.pk/",
+    "relevance": "Registered citizens, cumulative complaints, complaints marked resolved; platform-status data.",
+    "papers": ["PPRI-REP-2026-02", "PPRI-REP-2026-04"]
+  },
+  {
+    "id": "MOHTASIB-2024",
+    "type": "Government",
+    "organization": "Wafaqi Mohtasib Pakistan",
+    "title": "Wafaqi Mohtasib \u2014 Annual Report / Statistics",
+    "year": 2024,
+    "url": "https://www.mohtasib.gov.pk/",
+    "relevance": "Complaint volume, redressal, implementation, outreach.",
+    "papers": ["PPRI-REP-2026-02"]
+  },
+  {
+    "id": "OMBUDSMAN-PUNJAB-2024",
+    "type": "Government",
+    "organization": "Office of the Ombudsman Punjab",
+    "title": "Ombudsman Punjab \u2014 Annual Report 2024",
+    "year": 2024,
+    "url": "https://ombudsmanpunjab.gov.pk/system/files/Annual%20Report%202024.pdf",
+    "relevance": "Sectoral complaint volumes, delays, maladministration and institutional response.",
+    "papers": ["PPRI-REP-2026-02"]
+  },
+  {
+    "id": "PITB-EKHIDMAT",
+    "type": "Government",
+    "organization": "Punjab Information Technology Board",
+    "title": "e-Khidmat Markaz",
+    "year": 2025,
+    "url": "https://pitb.gov.pk/ekm",
+    "relevance": "One-window service model, simplification, transparency, accessibility and anti-corruption design.",
+    "papers": ["PPRI-REP-2026-02"]
+  },
+  {
+    "id": "TI-NCPS-2025",
+    "type": "Survey",
+    "organization": "Transparency International Pakistan",
+    "title": "National Corruption Perception Survey 2025",
+    "year": 2025,
+    "url": "https://transparency.org.pk/Annual-Reports/Annual-Report-2025.pdf",
+    "relevance": "Perceived corruption by sector, anti-corruption satisfaction, survey design and reported bribery incidence.",
+    "papers": ["PPRI-REP-2026-04"]
+  },
+  {
+    "id": "TI-NCPS-2023",
+    "type": "Survey",
+    "organization": "Transparency International Pakistan",
+    "title": "National Corruption Perception Survey 2023",
+    "year": 2023,
+    "url": "https://transparency.org.pk/NCPS_REPORTS/NCPS-2023/National-Corruption-Perception-Survey-2023-Report-TI-Pakistan.pdf",
+    "relevance": "Reported average bribe amounts by sector/province and corruption experience.",
+    "papers": ["PPRI-REP-2026-04"]
+  },
+  {
+    "id": "DEVOLUTION-HEALTH-2001",
+    "type": "Academic",
+    "organization": "Peer-reviewed research",
+    "title": "Historical evidence on 2001 devolution and service outcomes",
+    "year": 2012,
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3332563/",
+    "relevance": "Health-service satisfaction and utilization around the devolution period; implementation caveats.",
+    "papers": ["PPRI-REP-2026-05"]
+  },
+  {
+    "id": "FISCAL-DECENTR-PUNJAB",
+    "type": "Academic",
+    "organization": "Academic research",
+    "title": "Historical evidence on Punjab district fiscal decentralization",
+    "year": 2020,
+    "url": "https://www.poverty.com.pk/index.php/Journal/article/view/555",
+    "relevance": "Relationship between fiscal decentralization and primary-school enrolment.",
+    "papers": ["PPRI-REP-2026-05"]
   }
 ]

@@ -114,48 +114,66 @@
   },
   {
     "title": "Research Agenda 2026–2027",
+    "type": "Research",
+    "description": "The institutional research programme exploring constitutional, demographic, administrative, fiscal, and local-government dimensions of provincial reform.",
     "url": "/research/agenda.html",
-    "text": "PPRI research programme constitutional demographic administrative fiscal local government public preferences"
+    "tags": ["agenda", "research", "programme", "priorities", "constitutional", "fiscal"]
   },
   {
-    "title": "Research Standards",
+    "title": "Research Standards & Methodology",
+    "type": "Methodology",
+    "description": "PPRI research standards: source hierarchy, empirical verification, scenario calculations, survey protocols, and correction procedures.",
     "url": "/methodology/research-standards.html",
-    "text": "source hierarchy evidence calculations scenarios surveys corrections methodology"
+    "tags": ["methodology", "standards", "empirical", "evidence", "scenarios", "surveys"]
   },
   {
     "title": "Transparency & Research Integrity",
+    "type": "Governance",
+    "description": "Our commitment to research independence, funding disclosures, conflict-of-interest management, and open-access publications.",
     "url": "/transparency.html",
-    "text": "independence funding disclosure conflicts corrections publication review"
+    "tags": ["transparency", "governance", "ethics", "independence", "funding"]
   },
   {
     "title": "Comparative Subnational Governance",
+    "type": "Research",
+    "description": "International comparative analysis of federal architectures, intermediate tiers, and decentralization across global democracies.",
     "url": "/research/comparative-governance.html",
-    "text": "international comparison provinces states regions local government fiscal constitutional transition"
+    "tags": ["comparative", "international", "federalism", "provinces", "states", "regions"]
   },
   {
     "title": "Constitutional & Legal Library",
+    "type": "Legal Library",
+    "description": "Key constitutional provisions governing Pakistani federalism: Articles 1, 140A, 160, and 239 amendments and case law.",
     "url": "/research/legal-library.html",
-    "text": "Article 1 Article 140A Article 160 Article 239 Constitution provinces local government NFC amendment"
+    "tags": ["constitution", "legal", "article 239", "amendment", "article 140A", "NFC"]
   },
   {
     "title": "Data Notes & Definitions",
+    "type": "Data",
+    "description": "Methodological definitions, baseline census metrics, spatial boundaries, and reproducibility protocols for PPRI datasets.",
     "url": "/data/data-notes.html",
-    "text": "population administrative geography fiscal governance reproducibility Census 2023"
+    "tags": ["data", "census", "metrics", "methodology", "reproducibility"]
   },
   {
     "title": "PPRI Research Archive",
+    "type": "Archive",
+    "description": "Comprehensive chronological record of PPRI research outputs, working papers, revisions, and milestone releases.",
     "url": "/archive/index.html",
-    "text": "archive publication record versions milestones"
+    "tags": ["archive", "publications", "history", "milestones", "record"]
   },
   {
     "title": "PPRI Media Centre",
+    "type": "Media",
+    "description": "Resources for journalists, official statements, broadcast briefings, and press contacts for PPRI faculty.",
     "url": "/media/index.html",
-    "text": "media resources journalists research publications contact"
+    "tags": ["media", "press", "journalism", "briefings", "interviews"]
   },
   {
     "title": "Frequently Asked Questions",
+    "type": "FAQ",
+    "description": "Answers to common public and policy questions regarding provincial reorganization, fiscal viability, and local government.",
     "url": "/research/faq.html",
-    "text": "new provinces local government PPRI FAQ evidence methodology"
+    "tags": ["faq", "questions", "answers", "reform", "evidence"]
   },
   {
     "title": "Submit an Idea",
@@ -579,5 +597,82 @@
       "rajanpur",
       "service deserts"
     ]
+  },
+  {
+    "title": "Articles & Analysis Directory",
+    "type": "Articles",
+    "description": "Index of all 20+ empirical and analytical articles covering fiscal federalism, administrative scale, and provincial reform.",
+    "url": "/articles/index.html",
+    "tags": ["articles", "analysis", "directory", "index", "archive"]
+  },
+  {
+    "title": "Policy Papers Hub",
+    "type": "Policy Papers",
+    "description": "Multi-disciplinary flagship policy papers examining structural, legal, and operational dimensions of provincial reform in Pakistan.",
+    "url": "/research/policy-papers/index.html",
+    "tags": ["policy papers", "flagship", "research", "reform", "governance"]
+  },
+  {
+    "title": "Policy Briefs Hub",
+    "type": "Policy Briefs",
+    "description": "Executive policy briefs providing concise, data-driven analysis of administrative scale, fiscal formulas, and governance models.",
+    "url": "/research/briefs/index.html",
+    "tags": ["policy briefs", "briefs", "executive summary", "scale", "federalism"]
+  },
+  {
+    "title": "Working Papers Hub",
+    "type": "Working Papers",
+    "description": "Academic working papers presenting preliminary empirical research on local government, fiscal devolution, and federal mechanics.",
+    "url": "/research/working-papers/index.html",
+    "tags": ["working papers", "academic", "preliminary", "local government", "devolution"]
+  },
+  {
+    "title": "Research Reports Hub",
+    "type": "Reports",
+    "description": "In-depth analytical reports assessing regional data, spatial access, and institutional readiness across Pakistan.",
+    "url": "/research/reports/index.html",
+    "tags": ["reports", "technical", "spatial", "regional", "data"]
+  },
+  {
+    "title": "Income Went Up. So Why Does Life Feel Harder?",
+    "type": "Research Report",
+    "description": "Pakistan's household squeeze in the data: examining income, consumption, food insecurity, poverty and purchasing power from HIES 2024–25.",
+    "url": "/research/reports/income-went-up-why-does-life-feel-harder.html",
+    "tags": ["household income", "cost of living", "food insecurity", "poverty", "HIES", "inflation", "purchasing power"]
+  },
+  {
+    "title": "The Price of a Simple Task",
+    "type": "Research Report",
+    "description": "How much does Pakistan's bureaucracy cost citizens? Complaint data, ombudsman evidence, e-Khidmat and the PPRI Administrative Burden Index.",
+    "url": "/research/reports/price-of-a-simple-task-pakistan-bureaucracy-cost.html",
+    "tags": ["bureaucracy", "administrative burden", "citizen portal", "ombudsman", "e-khidmat", "public service cost"]
+  },
+  {
+    "title": "Same Country, Different Life",
+    "type": "Research Report",
+    "description": "How much does your district determine your access to basic services? Geographic disparities in education, water, internet and food security.",
+    "url": "/research/reports/same-country-different-life-district-access.html",
+    "tags": ["district inequality", "basic services", "education", "clean water", "internet access", "regional disparity"]
+  },
+  {
+    "title": "The Bribe You Can't See",
+    "type": "Research Report",
+    "description": "How corruption becomes a private tax on citizens: perception surveys, reported bribe payments and the Citizen Cost of Corruption.",
+    "url": "/research/reports/bribe-you-cant-see-corruption-private-tax.html",
+    "tags": ["corruption", "bribery", "police", "land administration", "judiciary", "private tax", "transparency"]
+  },
+  {
+    "title": "Does Money Work Better When It Is Spent Closer to the People?",
+    "type": "Research Report",
+    "description": "Local government finance, fiscal decentralization, international OECD benchmarks and empirical lessons from Punjab's intermediate cities.",
+    "url": "/research/reports/does-money-work-better-spent-closer-to-people.html",
+    "tags": ["local government finance", "fiscal decentralization", "Punjab cities programme", "Article 140A", "subnational spending"]
+  },
+  {
+    "title": "Sentiment & Citizen-Experience Methodology",
+    "type": "Methodology",
+    "description": "PPRI methodology for citizen perception data, grievance platforms, media discourse and rules for responsible empirical language.",
+    "url": "/methodology/sentiment-analysis.html",
+    "tags": ["methodology", "sentiment analysis", "citizen experience", "complaint data", "perception surveys"]
   }
 ]
