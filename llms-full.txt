@@ -1,0 +1,37 @@
+# Pakistan Provincial Reform Institute (PPRI) — Extended Reference
+
+> Full reference file for AI search engines, research agents, and automated analysts.
+
+## Mission and Charter
+The Pakistan Provincial Reform Institute (PPRI) is a non-partisan research organization dedicated to the study of subnational governance, federalism, municipal autonomy, administrative scale, and public finance in Pakistan.
+
+## Primary Research Publications
+1. **The Provincial Reorganization of Pakistan (PPRI-PP-001)**
+   URL: https://ppripakistan.github.io/research/policy-papers/provincial-reorganization-of-pakistan.html
+   Summary: Proposes a 10-dimensional empirical framework assessing constitutional amendment pathways (Articles 1 and 239(4)), administrative division of powers, revenue assignment, civil service restructuring, and municipal empowerment.
+
+2. **Income Went Up. So Why Does Life Feel Harder? (PPRI-REP-2026-01)**
+   URL: https://ppripakistan.github.io/research/reports/income-went-up-why-does-life-feel-harder.html
+   Summary: Analyzes HIES income quintiles against CPI inflation baskets to demonstrate how food and utility inflation eroded household welfare despite nominal income increases.
+
+3. **The Price of a Simple Task (PPRI-REP-2026-02)**
+   URL: https://ppripakistan.github.io/research/reports/price-of-a-simple-task-pakistan-bureaucracy-cost.html
+   Summary: Quantifies citizen time costs, ombudsman case volumes, and bureaucratic friction through the Administrative Burden Index.
+
+4. **Same Country, Different Life (PPRI-REP-2026-03)**
+   URL: https://ppripakistan.github.io/research/reports/same-country-different-life-district-access.html
+   Summary: Maps district disparities across Pakistan using Census 2023 and PSLM indicators for clean water, electricity, secondary education, and healthcare.
+
+5. **The Bribe You Can't See (PPRI-REP-2026-04)**
+   URL: https://ppripakistan.github.io/research/reports/bribe-you-cant-see-corruption-private-tax.html
+   Summary: Measures informal extortion and corruption costs imposed on citizens using National Corruption Perception Survey benchmarks.
+
+6. **Does Money Work Better Spent Closer to the People? (PPRI-REP-2026-05)**
+   URL: https://ppripakistan.github.io/research/reports/does-money-work-better-spent-closer-to-people.html
+   Summary: Evaluates municipal expenditure efficiency and fiscal federalism, demonstrating service quality differentials between centralized provincial spending and devolved municipal budgets.
+
+## Interactive Tools
+- **Scenario Lab (PPRI-01 Model)**: https://ppripakistan.github.io/maps/scenarios/index.html
+- **Data Centre**: https://ppripakistan.github.io/data/centre.html
+- **Full Article Series**: https://ppripakistan.github.io/articles/index.html
+- **Search Portal**: https://ppripakistan.github.io/search.html

@@ -317,7 +317,7 @@
     cancelExpand();
     hudExpandTimer = setTimeout(() => {
       hudDock.classList.add("is-expanded");
-      hudDock.setAttribute("aria-expanded", "true");
+      if (hudTrigger) hudTrigger.setAttribute("aria-expanded", "true");
       section.classList.add("hud-open");
       hudExpandTimer = null;
     }, HUD_EXPAND_DELAY);
@@ -329,7 +329,7 @@
     cancelCollapse();
     hudCollapseTimer = setTimeout(() => {
       hudDock.classList.remove("is-expanded");
-      hudDock.setAttribute("aria-expanded", "false");
+      if (hudTrigger) hudTrigger.setAttribute("aria-expanded", "false");
       section.classList.remove("hud-open");
       hudCollapseTimer = null;
     }, HUD_COLLAPSE_DELAY);
@@ -363,17 +363,27 @@
       cancelCollapse();
       if (hudDock) {
         hudDock.classList.remove("is-expanded");
-        hudDock.setAttribute("aria-expanded", "false");
+      }
+      if (hudTrigger) {
+        hudTrigger.setAttribute("aria-expanded", "false");
       }
       section.classList.remove("hud-open");
     });
   }
 
   /* ── Boot ──────────────────────────────────────────────────────────────── */
+  const boot = () => {
+    if ("requestIdleCallback" in window) {
+      window.requestIdleCallback(initLeafletMap, { timeout: 800 });
+    } else {
+      setTimeout(initLeafletMap, 50);
+    }
+  };
+
   if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", initLeafletMap);
+    document.addEventListener("DOMContentLoaded", boot);
   } else {
-    initLeafletMap();
+    boot();
   }
 
 })();

@@ -103,6 +103,12 @@
       title="PPRI Policy Publications Feed"
       href="/feed.xml"
     />
+    <link
+      rel="alternate"
+      type="text/markdown"
+      title="PPRI LLM Machine-Readable Index"
+      href="/llms.txt"
+    />
     <link rel="preconnect" href="https://unpkg.com" crossorigin />
     <link rel="dns-prefetch" href="https://cdn.jsdelivr.net" />
     <meta
@@ -244,17 +250,19 @@
             id="hudDock"
             role="complementary"
             aria-label="Research desk"
-            aria-expanded="false"
           >
             <!-- Minimized sleek horizontal pill tab -->
-            <div
+            <button
+              type="button"
               class="hud-pill-trigger"
               id="hudTrigger"
               aria-label="Open Research Desk"
+              aria-expanded="false"
+              aria-controls="hudDock"
             >
               <span class="hud-pill-text">Research Desk</span>
               <span class="hud-pill-arrow" aria-hidden="true">←</span>
-            </div>
+            </button>
 
             <!-- Close button (visible when expanded) -->
             <button
@@ -788,10 +796,15 @@
                   type="button"
                   class="is-active"
                   data-preview-mode="ppri"
+                  aria-pressed="true"
                 >
                   PPRI-01
                 </button>
-                <button type="button" data-preview-mode="current">
+                <button
+                  type="button"
+                  data-preview-mode="current"
+                  aria-pressed="false"
+                >
                   Current
                 </button>
               </div>
@@ -821,7 +834,7 @@
               <iframe
                 id="homeMapPreview"
                 title="Interactive preview of the PPRI-01 scenario map"
-                src="/maps/scenarios/index.html?embed=1"
+                data-src="/maps/scenarios/index.html?embed=1"
                 loading="lazy"
               ></iframe>
               <div class="scenario-frame-note">
@@ -888,7 +901,9 @@
                 class="question-tab is-active"
                 type="button"
                 role="tab"
+                id="qtab-0"
                 aria-selected="true"
+                aria-controls="questionTabpanel"
                 data-question="0"
               >
                 <span>01</span
@@ -898,7 +913,9 @@
                 class="question-tab"
                 type="button"
                 role="tab"
+                id="qtab-1"
                 aria-selected="false"
+                aria-controls="questionTabpanel"
                 data-question="1"
               >
                 <span>02</span
@@ -911,7 +928,9 @@
                 class="question-tab"
                 type="button"
                 role="tab"
+                id="qtab-2"
                 aria-selected="false"
+                aria-controls="questionTabpanel"
                 data-question="2"
               >
                 <span>03</span
@@ -921,7 +940,9 @@
                 class="question-tab"
                 type="button"
                 role="tab"
+                id="qtab-3"
                 aria-selected="false"
+                aria-controls="questionTabpanel"
                 data-question="3"
               >
                 <span>04</span
@@ -931,7 +952,9 @@
                 class="question-tab"
                 type="button"
                 role="tab"
+                id="qtab-4"
                 aria-selected="false"
+                aria-controls="questionTabpanel"
                 data-question="4"
               >
                 <span>05</span><strong>What does the evidence show?</strong>
@@ -940,7 +963,9 @@
                 class="question-tab"
                 type="button"
                 role="tab"
+                id="qtab-5"
                 aria-selected="false"
+                aria-controls="questionTabpanel"
                 data-question="5"
               >
                 <span>06</span
@@ -948,7 +973,7 @@
               </button>
             </div>
 
-            <div class="question-panel" aria-live="polite">
+            <div class="question-panel" id="questionTabpanel" role="tabpanel" aria-labelledby="qtab-0" aria-live="polite">
               <span class="question-panel-kicker" data-question-kicker
                 >Research question 01</span
               >
@@ -1330,6 +1355,7 @@
     <script
       src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
       crossorigin=""
+      defer
     ></script>
     <script src="/assets/js/main.js" defer></script>
     <script src="/assets/js/hero-map.js" defer></script>

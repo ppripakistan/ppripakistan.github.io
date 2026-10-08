@@ -45,10 +45,13 @@ document.addEventListener("DOMContentLoaded", () => {
       index = nextIndex % messages.length;
       const [first, second] = messages[index];
       shell.classList.remove("is-changing");
-      void shell.offsetWidth;
       lineOne.textContent = first;
       lineTwo.textContent = second;
-      if (!reduceMotion.matches) shell.classList.add("is-changing");
+      if (!reduceMotion.matches) {
+        requestAnimationFrame(() => {
+          shell.classList.add("is-changing");
+        });
+      }
     };
 
     const start = () => {
@@ -194,11 +197,38 @@ document.addEventListener("DOMContentLoaded", () => {
 
     let loadedMode = "ppri";
 
+    const loadFrame = () => {
+      if (!frame.src && frame.dataset.src) {
+        frame.src = frame.dataset.src;
+      }
+    };
+
+    if ("IntersectionObserver" in window) {
+      const observer = new IntersectionObserver(
+        (entries) => {
+          if (entries[0].isIntersecting) {
+            loadFrame();
+            observer.disconnect();
+          }
+        },
+        { rootMargin: "250px" }
+      );
+      observer.observe(frame);
+    } else {
+      loadFrame();
+    }
+
     const applyMode = (mode) => {
       const model = models[mode];
       if (!model) return;
 
-      buttons.forEach((button) => button.classList.toggle("is-active", button.dataset.previewMode === mode));
+      loadFrame();
+
+      buttons.forEach((button) => {
+        const active = button.dataset.previewMode === mode;
+        button.classList.toggle("is-active", active);
+        button.setAttribute("aria-pressed", String(active));
+      });
       if (title) title.textContent = model.title;
       if (badge) badge.textContent = model.badge;
       if (copy) copy.textContent = model.copy;
@@ -223,6 +253,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const link = document.querySelector("[data-question-link]");
     const kicker = document.querySelector("[data-question-kicker]");
     const route = document.querySelector("[data-question-route]");
+    const panel = document.getElementById("questionTabpanel");
 
     const questions = [
       {
@@ -271,6 +302,7 @@ document.addEventListener("DOMContentLoaded", () => {
         tab.classList.toggle("is-active", active);
         tab.setAttribute("aria-selected", String(active));
       });
+      if (panel) panel.setAttribute("aria-labelledby", `qtab-${index}`);
       if (kicker) kicker.textContent = `Research question ${String(index + 1).padStart(2, "0")}`;
       if (title) title.textContent = item.title;
       if (copy) copy.textContent = item.copy;
