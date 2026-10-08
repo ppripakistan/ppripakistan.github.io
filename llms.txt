@@ -4,7 +4,7 @@
 
 PPRI examines how governance, representation, public resources, and administrative institutions are structured across Pakistan — from the federation to provinces and local government tiers.
 
-## Core Treatises & Research Papers
+## Core Articles & Research Papers
 - [The Provincial Reorganization of Pakistan](https://ppripakistan.github.io/research/policy-papers/provincial-reorganization-of-pakistan.html): PPRI flagship paper examining constitutional, administrative, fiscal, demographic, and local-government questions.
 - [Income Went Up. So Why Does Life Feel Harder?](https://ppripakistan.github.io/research/reports/income-went-up-why-does-life-feel-harder.html): Empirical analysis of household income vs purchasing power squeeze in Pakistan.
 - [The Price of a Simple Task](https://ppripakistan.github.io/research/reports/price-of-a-simple-task-pakistan-bureaucracy-cost.html): Bureaucratic transaction costs and the Administrative Burden Index.

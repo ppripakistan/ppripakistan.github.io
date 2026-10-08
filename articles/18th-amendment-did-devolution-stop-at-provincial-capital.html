@@ -305,22 +305,24 @@
     </script>
   </head>
   <body>
-    <header class="site-header">
+    <div class="reading-progress" id="reading-progress" aria-hidden="true"></div>
+        <header class="site-header">
       <div class="container navbar">
-        <a class="brand" href="/">
-          <div class="brand-mark">P</div>
-          <div class="brand-text">
-            <strong>PPRI</strong>
-            <span>Pakistan Provincial Reform Institute</span>
-          </div>
+        <a class="brand" href="/index.html">
+          <img src="/assets/images/brand/ppri-logo-header.jpg" alt="PPRI logo" width="38" height="38" loading="eager" />
+          <span class="brand-text"><strong>PPRI</strong><span>Pakistan Provincial Reform Institute</span></span>
         </a>
-        <nav class="nav-links">
-          <a href="/">Home</a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-navigation">Menu</button>
+        <nav id="site-navigation" class="nav-links" aria-label="Primary navigation">
+          <a href="/index.html">Home</a>
           <a href="/research/index.html">Research</a>
+          <a href="/provinces/index.html">Reform</a>
           <a href="/data/centre.html">Data</a>
           <a href="/maps/scenarios/index.html">Scenarios</a>
           <a href="/articles/index.html" aria-current="page">Articles</a>
+          <a href="/consultation/index.html">Engage</a>
           <a href="/about.html">About</a>
+          <a href="/search.html">Search</a>
         </nav>
       </div>
     </header>
@@ -328,7 +330,7 @@
     <main id="main-content">
       <section class="article-hero">
         <div class="container">
-          <span class="eyebrow">Constitutional Devolution &amp; Fiscal Federalism · Treatise 04</span>
+          <span class="eyebrow">Constitutional Devolution &amp; Fiscal Federalism · Article 04</span>
           <h1>The 18th Amendment: Did Devolution Stop at the Provincial Capital?</h1>
           <p class="article-standfirst">
             Pakistan's 18th Amendment changed the federation by strengthening provincial autonomy. Fifteen years later, the harder question is whether that decentralisation travelled far enough downward—from provinces to districts, cities, and local governments.
@@ -559,6 +561,61 @@
             <li><strong>Federal Ministry of Commerce:</strong> Minister Jam Kamal Khan remarks on smaller administrative units (The Express Tribune, August 2026).</li>
           </ul>
         </div>
+              <section class="article-related-content" aria-labelledby="related-content-heading">
+          <div class="related-content-header">
+            <span class="related-eyebrow">Continue Exploring</span>
+            <h2 id="related-content-heading">Related Research &amp; Analysis</h2>
+            <p>Empirical evidence and policy evaluations from the Pakistan Provincial Reform Institute.</p>
+          </div>
+          <div class="related-content-grid">
+            <div class="related-col">
+              <div class="related-col-header">
+                <h3>Recent Articles</h3>
+                <a href="/articles/index.html" class="related-view-all">All 22 Articles &rarr;</a>
+              </div>
+              <div class="related-cards">
+          <a href="/articles/four-provinces-241-million-people-administrative-scale.html" class="related-card">
+            <span class="card-badge">Policy Article</span>
+            <h4>Four Provinces, 241 Million People: Administrative Scale Crisis</h4>
+            <p>Comparative administrative scale across global federations and delivery spans.</p>
+          </a>
+          <a href="/articles/more-provinces-or-stronger-local-governments.html" class="related-card">
+            <span class="card-badge">Policy Article</span>
+            <h4>More Provinces or Stronger Local Governments? A False Dichotomy</h4>
+            <p>Why provincial creation and local governance powers must reinforce each other.</p>
+          </a>
+          <a href="/articles/why-is-pakistan-debating-new-provinces-again.html" class="related-card">
+            <span class="card-badge">Policy Article</span>
+            <h4>Why Is Pakistan Debating New Provinces Again? Five Drivers</h4>
+            <p>Demographic pressure, fiscal friction, administrative strain, and political mandates.</p>
+          </a>
+              </div>
+            </div>
+            <div class="related-col">
+              <div class="related-col-header">
+                <h3>Key Research Reports</h3>
+                <a href="/research/reports/index.html" class="related-view-all">All Reports &rarr;</a>
+              </div>
+              <div class="related-cards">
+          <a href="/research/reports/does-money-work-better-spent-closer-to-people.html" class="related-card">
+            <span class="card-badge">Research Report · PPRI-REP-02</span>
+            <h4>Does Money Work Better When Spent Closer to the People?</h4>
+            <p>Evaluating local government public finance, allocative efficiency, and social delivery across 134 districts.</p>
+          </a>
+          <a href="/research/reports/bribe-you-cant-see-corruption-private-tax.html" class="related-card">
+            <span class="card-badge">Research Report · PPRI-REP-01</span>
+            <h4>The Bribe You Can't See: Corruption as an Invisible Private Tax</h4>
+            <p>Quantifying informal transaction fees and administrative rent extraction on micro-enterprises and citizens.</p>
+          </a>
+          <a href="/research/reports/same-country-different-life-district-access.html" class="related-card">
+            <span class="card-badge">Research Report · PPRI-REP-05</span>
+            <h4>Same Country, Different Life: Measuring District Service Inequality</h4>
+            <p>Granular divergence metrics across water, healthcare access, literacy, and infrastructure disparities.</p>
+          </a>
+              </div>
+            </div>
+          </div>
+        </section>
       </article>
     </main>
 
@@ -602,5 +659,7 @@
       </div>
     </footer>
     <script src="/assets/js/main.js" defer></script>
+      <div class="article-progress-pill" id="articleProgressPill" aria-live="polite">📖 <span class="article-pct">0%</span> read</div>
+    <script src="/assets/js/article-reading.js" defer></script>
   </body>
 </html>
