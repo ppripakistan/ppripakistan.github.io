@@ -49,7 +49,7 @@ PPRI combines rigorous quantitative datasets from official census bulletins, pro
 |---|---|---|
 | **Districts Analyzed** | **130+ Districts** across 4 Provinces & Territories | Pakistan Bureau of Statistics (PBS) 7th Population & Housing Census |
 | **Flagship Research Reports** | **5 Comprehensive Reports** (120+ peer-reviewed chapters) | PPRI Public Interest Research Programme (2026) |
-| **Analytical Treatises** | **20+ In-Depth Policy Inquiries** | Empirical investigations into Hazara, South Punjab, secondary cities, & scale |
+| **Analytical Articles** | **22 In-Depth Policy Inquiries** | Empirical investigations into Hazara, South Punjab, secondary cities, & scale |
 | **Interactive Decision Engines** | **4 Client-Side Explorers** | Scenario Lab, Data Observatory, Interactive Map, Evidence Library |
 | **Open Data Repositories** | **12 Clean CSV Datasets** | Public interest time-series, quintile breakdowns, and fiscal transfers |
 | **Platform Delivery** | **Zero-Dependency Static Web** | 100% client-side HTML5/CSS3/ES6 execution, sub-second load, GitHub Pages |
@@ -159,7 +159,7 @@ PPRI's flagship 2026 research series investigates the lived reality of Pakistani
 
 ---
 
-## 🔬 Connected Analytical Treatises
+## 🔬 Connected Analytical Articles
 
 In addition to the 5 flagship reports, PPRI publishes peer-reviewed policy inquiries addressing specific regional and constitutional questions:
 

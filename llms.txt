@@ -1,0 +1,24 @@
+# Pakistan Provincial Reform Institute (PPRI)
+
+> PPRI is an independent, non-partisan public-policy research institute providing empirical data, cartographic scenario modeling, and constitutional legal analysis on provincial restructuring, federalism, public finance, and municipal devolution in Pakistan.
+
+PPRI examines how governance, representation, public resources, and administrative institutions are structured across Pakistan — from the federation to provinces and local government tiers.
+
+## Core Articles & Research Papers
+- [The Provincial Reorganization of Pakistan](https://ppripakistan.github.io/research/policy-papers/provincial-reorganization-of-pakistan.html): PPRI flagship paper examining constitutional, administrative, fiscal, demographic, and local-government questions.
+- [Income Went Up. So Why Does Life Feel Harder?](https://ppripakistan.github.io/research/reports/income-went-up-why-does-life-feel-harder.html): Empirical analysis of household income vs purchasing power squeeze in Pakistan.
+- [The Price of a Simple Task](https://ppripakistan.github.io/research/reports/price-of-a-simple-task-pakistan-bureaucracy-cost.html): Bureaucratic transaction costs and the Administrative Burden Index.
+- [Same Country, Different Life](https://ppripakistan.github.io/research/reports/same-country-different-life-district-access.html): District-level spatial disparities in education, water, electricity, and food security.
+- [The Bribe You Can't See](https://ppripakistan.github.io/research/reports/bribe-you-cant-see-corruption-private-tax.html): Corruption as an informal tax on citizens and small enterprises.
+- [Does Money Work Better Spent Closer to the People?](https://ppripakistan.github.io/research/reports/does-money-work-better-spent-closer-to-people.html): Local government finance and fiscal decentralization across Pakistan's cities.
+
+## Institutional Frameworks & Law
+- [Constitutional Framework](https://ppripakistan.github.io/provinces/constitutional-framework.html): Articles 1, 140A, 160, and 239 governing territorial restructuring.
+- [Fiscal Framework](https://ppripakistan.github.io/provinces/fiscal-framework.html): National Finance Commission (NFC) transfers, provincial revenue, and transition costs.
+- [Administrative Design](https://ppripakistan.github.io/provinces/administrative-model.html): Civil service, judiciary, law enforcement, and municipal administration models.
+- [Local Government](https://ppripakistan.github.io/provinces/local-government.html): Constitutional local-government devolution under Article 140A.
+
+## Interactive Tools & Data
+- [Scenario Lab](https://ppripakistan.github.io/maps/scenarios/index.html): Interactive district-level cartographic scenario testing engine.
+- [Data Centre & Observatory](https://ppripakistan.github.io/data/centre.html): NFC divisible pool reform simulator, population benchmarks, and district indicators.
+- [Source Registry & Standards](https://ppripakistan.github.io/methodology/research-standards.html): Institutional documentation, data citations, and analytical standards.
