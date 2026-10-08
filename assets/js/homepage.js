@@ -69,69 +69,6 @@ document.addEventListener("DOMContentLoaded", () => {
     start();
   };
 
-  const setupPakistanCanvas = () => {
-    const mapBg = document.querySelector("[data-pak-map]");
-    if (!mapBg) return;
-
-    const pakSvg = mapBg.querySelector(".pak-map-svg");
-    if (!pakSvg) return;
-
-    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
-
-    // Calibrate the border-draw animation using actual path length
-    const outline = pakSvg.querySelector(".pak-outline");
-    if (outline) {
-      try {
-        const len = Math.ceil(outline.getTotalLength()) + 20;
-        outline.style.strokeDasharray = len;
-        outline.style.strokeDashoffset = len;
-      } catch (_) { /* SVG not in DOM yet — CSS fallback value of 2600 applies */ }
-    }
-
-    if (reduceMotion.matches) {
-      pakSvg.classList.add("is-animated");
-      return;
-    }
-
-    // Start animation sequence when the research desk enters the viewport
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (!entry.isIntersecting) return;
-        pakSvg.classList.add("is-animated");
-        observer.unobserve(entry.target);
-      },
-      { threshold: 0.25 }
-    );
-    observer.observe(mapBg);
-
-    // Province hover interactions
-    const zones = [...mapBg.querySelectorAll(".prov-zone")];
-    const fills = [...mapBg.querySelectorAll("[data-prov-fill]")];
-    const badges = [...mapBg.querySelectorAll("[data-badge]")];
-
-    zones.forEach((zone) => {
-      zone.addEventListener("mouseenter", () => {
-        const prov = zone.dataset.prov;
-        fills.forEach((f) => {
-          f.classList.toggle("pf-highlight", f.dataset.provFill === prov);
-          f.classList.toggle("pf-dim", f.dataset.provFill !== prov);
-        });
-        badges.forEach((badge) => badge.classList.toggle("is-active", badge.dataset.badge === prov));
-      });
-      zone.addEventListener("mouseleave", () => {
-        fills.forEach((f) => { f.classList.remove("pf-highlight", "pf-dim"); });
-        badges.forEach((badge) => badge.classList.remove("is-active"));
-      });
-      // Mobile tap
-      zone.addEventListener("focus", () => {
-        const prov = zone.dataset.prov;
-        badges.forEach((badge) => badge.classList.toggle("is-active", badge.dataset.badge === prov));
-      });
-      zone.addEventListener("blur", () => {
-        badges.forEach((badge) => badge.classList.remove("is-active"));
-      });
-    });
-  };
 
   const setupScrollDepthNav = () => {
     const nav = document.getElementById("scrollDepthNav");
@@ -423,7 +360,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   setRevealObserver();
   setupHeroMessages();
-  setupPakistanCanvas();
   setupPageProgress();
   setupScenarioPreview();
   setupQuestionWorkbench();

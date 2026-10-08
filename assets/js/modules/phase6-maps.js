@@ -292,7 +292,7 @@
   function fetchJSON(url, label = url, timeoutMs = 12000) {
     const controller = new AbortController();
     const timer = setTimeout(() => controller.abort(), timeoutMs);
-    return fetch(url, { signal: controller.signal, cache: "no-store" })
+    return fetch(url, { signal: controller.signal })
       .then((r) => {
         if (!r.ok) throw new Error(`${label}: HTTP ${r.status}`);
         return r.json();

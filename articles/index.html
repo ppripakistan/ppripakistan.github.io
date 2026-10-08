@@ -637,6 +637,22 @@
     <script src="/assets/js/main.js" defer></script>
     <script>
       let currentCategory = 'all';
+      let articleData = [];
+
+      function initArticleData() {
+        const cards = document.querySelectorAll('.article-card');
+        articleData = Array.from(cards).map(card => ({
+          el: card,
+          category: card.getAttribute('data-category') || '',
+          text: ((card.getAttribute('data-keywords') || '') + ' ' + (card.textContent || '')).toLowerCase()
+        }));
+      }
+
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initArticleData);
+      } else {
+        initArticleData();
+      }
 
       function setCategory(category, btn) {
         currentCategory = category;
@@ -646,21 +662,14 @@
       }
 
       function filterArticles() {
-        const query = document.getElementById('article-search').value.toLowerCase().trim();
-        const cards = document.querySelectorAll('.article-card');
+        if (!articleData.length) initArticleData();
+        const searchInput = document.getElementById('article-search');
+        const query = (searchInput ? searchInput.value : '').toLowerCase().trim();
 
-        cards.forEach(card => {
-          const category = card.getAttribute('data-category') || '';
-          const keywords = (card.getAttribute('data-keywords') || '') + ' ' + card.innerText.toLowerCase();
-          
-          const matchesCategory = (currentCategory === 'all') || category.includes(currentCategory);
-          const matchesSearch = (!query) || keywords.includes(query);
-
-          if (matchesCategory && matchesSearch) {
-            card.style.display = 'flex';
-          } else {
-            card.style.display = 'none';
-          }
+        articleData.forEach(item => {
+          const matchesCategory = (currentCategory === 'all') || item.category.includes(currentCategory);
+          const matchesSearch = (!query) || item.text.includes(query);
+          item.el.style.display = (matchesCategory && matchesSearch) ? 'flex' : 'none';
         });
       }
     </script>
