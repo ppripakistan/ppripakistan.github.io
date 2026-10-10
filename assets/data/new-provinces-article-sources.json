@@ -1,0 +1,146 @@
+{
+  "as_of": "2026-10-10",
+  "note": "Source register for the five new PPRI articles. Political claims are attributed; verify links and official legal text again at publication.",
+  "sources": {
+    "pbs_census": {
+      "title": "Pakistan Bureau of Statistics — National Census Report 2023",
+      "url": "https://www.pbs.gov.pk/sites/default/files/population/2023/reports/National%20Census%20Report-2023.pdf",
+      "type": "Primary official statistical source",
+      "notes": "Use for 2023 census totals; do not present 2023 census counts as 2026 population estimates."
+    },
+    "pbs_release": {
+      "title": "Pakistan Bureau of Statistics — Release of National and Provincial Census Reports 2023",
+      "url": "https://www.pbs.gov.pk/release-of-national-and-provincial-census-reports-of-population-and-housing-census-2023-2/",
+      "type": "Primary official statistical source",
+      "notes": "Release page for province-level and district-level census reports."
+    },
+    "pakistan_gov_provinces": {
+      "title": "Government of Pakistan — Provinces",
+      "url": "https://www.pakistan.gov.pk/provinces",
+      "type": "Official government overview",
+      "notes": "Lists the four provinces and separately describes Azad Kashmir and Gilgit-Baltistan."
+    },
+    "pakistancode": {
+      "title": "Pakistan Code — Constitution of the Islamic Republic of Pakistan",
+      "url": "https://www.pakistancode.gov.pk/english/UY2FqaJw2-apaUY2Fvbpw%3D-sg-jjjjjjjjjjjjj-con-13180",
+      "type": "Official legal portal",
+      "notes": "Verify the consolidated Constitution and Gazette amendments before making a legal claim."
+    },
+    "article239": {
+      "title": "Constitution of Pakistan, Article 239 — consolidated text reference",
+      "url": "https://statutes.pk/constitution/239",
+      "type": "Secondary legal reference to be checked against Pakistan Code/Gazette",
+      "notes": "Article 239(2) concerns parliamentary supermajorities; Article 239(4) requires approval by at least two-thirds of total membership of the affected provincial assembly for a bill altering provincial limits. Confirm exact wording in the official current text before publication."
+    },
+    "geo_15": {
+      "title": "Geo News — Planning minister proposes creation of up to 15 new provinces",
+      "url": "https://www.geo.tv/latest/680599-planning-minister-proposes-creation-of-up-to-15-new-provinces",
+      "type": "Current news reporting",
+      "date": "2026-09-04",
+      "notes": "Reports Ahsan Iqbal called for a committee and national debate; it is a proposal, not approval."
+    },
+    "dawn_naqvi": {
+      "title": "Dawn — Naqvi says new administrative units to be formed only with people’s consent",
+      "url": "https://www.dawn.com/news/2027688",
+      "type": "Current news reporting",
+      "date": "2026-09-05",
+      "notes": "Reports Mohsin Naqvi’s stated condition of public support and political consensus."
+    },
+    "moneycontrol_economist": {
+      "title": "Moneycontrol — Why is Pakistan debating new provinces, and what would it take to create them?",
+      "url": "https://www.moneycontrol.com/world/why-is-pakistan-debating-new-provinces-and-what-would-it-take-to-create-them-article-14048147.html",
+      "type": "Secondary current-affairs report summarising reporting attributed to The Economist",
+      "date": "2026-10-09",
+      "notes": "Treat claims about a proposed map or institutional support as reported claims, not officially confirmed policy."
+    },
+    "sdpi_dialogue": {
+      "title": "SDPI — Should Pakistan Create More Administrative Units?",
+      "url": "https://sdpi.org/should-pakistan-create-more-administrative-units/event_detail",
+      "type": "Policy dialogue / event page",
+      "date": "2026-08-11",
+      "notes": "Documents a national policy dialogue covering provinces, administrative boundaries and local-government empowerment."
+    },
+    "ips_finance": {
+      "title": "Institute of Policy Studies — New Administrative Units in Pakistan: An Economic and Financial Context of the Debate",
+      "url": "https://www.ips.org.pk/new-administrative-units-in-pakistan-an-economic-and-financial-context-of-the-debate/",
+      "type": "Policy analysis",
+      "date": "2026-08-22",
+      "notes": "Financial analysis of transfers, new governance costs, tax administration, borrowing and reform sequencing."
+    },
+    "senate_south_punjab": {
+      "title": "Senate of Pakistan — Senate Standing Committee on Law and Justice considers South Punjab bill",
+      "url": "https://www.senate.gov.pk/en/news_content.php?id=NTgxNQ%3D%3D",
+      "type": "Official parliamentary record",
+      "date": "2025-01-08",
+      "notes": "Records consideration of proposed amendments for a South Punjab province; the committee discussion is not enactment."
+    },
+    "dawn_bahawalpur_campaign": {
+      "title": "Dawn — Bahawalpur province restoration campaign launched",
+      "url": "https://www.dawn.com/news/2027956",
+      "type": "Current news reporting",
+      "date": "2026-09-07",
+      "notes": "Reports the Bahawalpur Suba Mahaz campaign and statements by advocates; attribute political/historical assertions to campaigners."
+    },
+    "dawn_bahawalpur_rally": {
+      "title": "Dawn — Rally demands restoration of Bahawalpur province",
+      "url": "https://www.dawn.com/news/2024895/rally-demands-restoration-of-bahawalpur-province",
+      "type": "Current news reporting",
+      "date": "2026-08-24",
+      "notes": "Reports a rally for restoration; it does not establish current legal status."
+    },
+    "punjab_bahawalpur_history": {
+      "title": "Government of Punjab — Bahawalpur history",
+      "url": "https://bahawalpur.punjab.gov.pk/our-history",
+      "type": "Official district history page",
+      "notes": "Use alongside independent history; distinguish the princely state and One Unit from the post-1970 province structure."
+    },
+    "pu_bahawalpur_academic": {
+      "title": "University of the Punjab — Movement for Bahawalpur Province",
+      "url": "https://pu.edu.pk/images/journal/pols/Currentissue-pdf/Movement%20for%20Bahawalpur%20Province.pdf",
+      "type": "Academic research",
+      "notes": "Historical background to the Bahawalpur restoration demand."
+    },
+    "ppri_south": {
+      "title": "PPRI — South Punjab: Why Does the Province Demand Keep Returning?",
+      "url": "https://ppripakistan.github.io/articles/south-punjab-why-does-the-province-demand-keep-returning.html",
+      "type": "Existing site article",
+      "notes": "Use for continuity and internal linking; verify all data against cited primary sources."
+    },
+    "ppri_provinces": {
+      "title": "PPRI — Four Provinces, 241.5 Million People: Has Pakistan Outgrown Its Administrative Structure?",
+      "url": "https://ppripakistan.github.io/articles/four-provinces-241-million-people-administrative-scale.html",
+      "type": "Existing site article",
+      "notes": "Related demographic and scale analysis."
+    },
+    "ppri_overview": {
+      "title": "PPRI — Why Is Pakistan Debating New Provinces Again?",
+      "url": "https://ppripakistan.github.io/articles/why-is-pakistan-debating-new-provinces-again.html",
+      "type": "Existing site article",
+      "notes": "Existing flagship overview; avoid duplicating its argument."
+    },
+    "gb_gov": {
+      "title": "Government of Pakistan — Gilgit-Baltistan",
+      "url": "https://www.pakistan.gov.pk/gilgit-baltistan",
+      "type": "Official government overview",
+      "notes": "Official overview of Gilgit-Baltistan as a distinct administrative area."
+    },
+    "ajk_gov": {
+      "title": "Government of Azad Jammu and Kashmir — Official Portal",
+      "url": "https://ajk.gov.pk/",
+      "type": "Official regional government source",
+      "notes": "Describes AJK’s self-governing institutions and official status."
+    },
+    "ajk_constitution": {
+      "title": "Azad Jammu and Kashmir Interim Constitution, 1974 — official assembly copy",
+      "url": "https://ajkassembly.gok.pk/wp-content/uploads/2022/04/Act-1974.pdf",
+      "type": "Primary legal document",
+      "notes": "Source for AJK’s separate constitutional arrangement."
+    },
+    "ppri_archive": {
+      "title": "PPRI — Articles and Policy Analysis Portal",
+      "url": "https://ppripakistan.github.io/articles/index.html",
+      "type": "Internal linking / overlap audit",
+      "notes": "Reviewed to minimise overlap and use the site’s existing categories and style."
+    }
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "dataset_title": "Pakistan provincial populations and areas",
+  "as_of": "2026-10-10",
+  "population_reference_year": 2023,
+  "population_is_projection": false,
+  "geography_note": "Four constitutional provinces only. Do not count ICT, Gilgit-Baltistan or Azad Jammu and Kashmir as additional provinces in this table.",
+  "source": {
+    "title": "Pakistan Bureau of Statistics, 7th Population and Housing Census 2023",
+    "url": "https://www.pbs.gov.pk/sites/default/files/population/2023/reports/National%20Census%20Report-2023.pdf"
+  },
+  "provinces": [
+    {
+      "name": "Punjab",
+      "capital": "Lahore",
+      "population_2023": 127688922,
+      "area_km2": 205344
+    },
+    {
+      "name": "Sindh",
+      "capital": "Karachi",
+      "population_2023": 55696147,
+      "area_km2": 140914
+    },
+    {
+      "name": "Khyber Pakhtunkhwa",
+      "capital": "Peshawar",
+      "population_2023": 40856097,
+      "area_km2": 101741
+    },
+    {
+      "name": "Balochistan",
+      "capital": "Quetta",
+      "population_2023": 14894402,
+      "area_km2": 347190
+    }
+  ],
+  "country_2023_census_population": 241499431,
+  "caveat": "Before republishing exact values, confirm against the PBS national/provincial report tables; areas can vary by source/convention and proposed-province populations depend on chosen boundaries."
+}

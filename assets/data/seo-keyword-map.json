@@ -1,0 +1,194 @@
+{
+  "as_of": "2026-10-10",
+  "method_note": "This is a prioritized seed-keyword plan, not a verified search-volume dataset. The project package does not contain a Google Keyword Planner export. Validate country, language and monthly searches in Keyword Planner and compare relative interest in Google Trends before labelling any phrase “most searched”.",
+  "recommended_tools": [
+    {
+      "name": "Google Keyword Planner",
+      "url": "https://ads.google.com/home/tools/keyword-planner/",
+      "use": "Pakistan location; collect average monthly searches and month-by-month history."
+    },
+    {
+      "name": "Google Trends Pakistan",
+      "url": "https://trends.google.com/trends/explore?geo=PK",
+      "use": "Compare relative interest over 12 months and 5 years; this is not absolute search volume."
+    }
+  ],
+  "keywords": [
+    {
+      "keyword": "new administrative units in Pakistan",
+      "article": "Article 1",
+      "search_intent": "current affairs / explainer",
+      "priority_label": "High editorial priority",
+      "language": "English",
+      "search_volume": "not yet verified"
+    },
+    {
+      "keyword": "new provinces in Pakistan 2026",
+      "article": "Article 1",
+      "search_intent": "current affairs / explainer",
+      "priority_label": "High editorial priority",
+      "language": "English",
+      "search_volume": "not yet verified"
+    },
+    {
+      "keyword": "Pakistan administrative reforms",
+      "article": "Article 1",
+      "search_intent": "policy explainer",
+      "priority_label": "Medium editorial priority",
+      "language": "English",
+      "search_volume": "not yet verified"
+    },
+    {
+      "keyword": "12 to 15 provinces Pakistan",
+      "article": "Article 1",
+      "search_intent": "news-specific long-tail",
+      "priority_label": "Medium editorial priority",
+      "language": "English",
+      "search_volume": "not yet verified"
+    },
+    {
+      "keyword": "empowered local governments Pakistan",
+      "article": "Article 1",
+      "search_intent": "policy comparison",
+      "priority_label": "Medium editorial priority",
+      "language": "English",
+      "search_volume": "not yet verified"
+    },
+    {
+      "keyword": "provinces of Pakistan",
+      "article": "Article 2",
+      "search_intent": "evergreen informational",
+      "priority_label": "High editorial priority",
+      "language": "English",
+      "search_volume": "not yet verified"
+    },
+    {
+      "keyword": "Pakistan provinces names and capitals",
+      "article": "Article 2",
+      "search_intent": "quick factual answer",
+      "priority_label": "High editorial priority",
+      "language": "English",
+      "search_volume": "not yet verified"
+    },
+    {
+      "keyword": "how many provinces in Pakistan",
+      "article": "Article 2",
+      "search_intent": "quick factual answer",
+      "priority_label": "High editorial priority",
+      "language": "English",
+      "search_volume": "not yet verified"
+    },
+    {
+      "keyword": "Pakistan provinces population 2023 census",
+      "article": "Article 2",
+      "search_intent": "data / reference",
+      "priority_label": "Medium editorial priority",
+      "language": "English",
+      "search_volume": "not yet verified"
+    },
+    {
+      "keyword": "South Punjab vs Saraiki province",
+      "article": "Article 3",
+      "search_intent": "comparison",
+      "priority_label": "Medium editorial priority",
+      "language": "English",
+      "search_volume": "not yet verified"
+    },
+    {
+      "keyword": "Bahawalpur province demand",
+      "article": "Article 3",
+      "search_intent": "regional political",
+      "priority_label": "Medium editorial priority",
+      "language": "English",
+      "search_volume": "not yet verified"
+    },
+    {
+      "keyword": "Saraiki province demand",
+      "article": "Article 3",
+      "search_intent": "regional political",
+      "priority_label": "Medium editorial priority",
+      "language": "English",
+      "search_volume": "not yet verified"
+    },
+    {
+      "keyword": "Bahawalpur province restoration",
+      "article": "Article 4",
+      "search_intent": "regional news / history",
+      "priority_label": "High editorial priority",
+      "language": "English",
+      "search_volume": "not yet verified"
+    },
+    {
+      "keyword": "Bahawalpur province latest news",
+      "article": "Article 4",
+      "search_intent": "current affairs",
+      "priority_label": "High editorial priority",
+      "language": "English",
+      "search_volume": "not yet verified"
+    },
+    {
+      "keyword": "Bahawalpur Suba Mahaz",
+      "article": "Article 4",
+      "search_intent": "campaign / news",
+      "priority_label": "Niche long-tail",
+      "language": "English",
+      "search_volume": "not yet verified"
+    },
+    {
+      "keyword": "Is Gilgit-Baltistan a province of Pakistan",
+      "article": "Article 5",
+      "search_intent": "constitutional status question",
+      "priority_label": "High editorial priority",
+      "language": "English",
+      "search_volume": "not yet verified"
+    },
+    {
+      "keyword": "Gilgit-Baltistan province status",
+      "article": "Article 5",
+      "search_intent": "constitutional status",
+      "priority_label": "Medium editorial priority",
+      "language": "English",
+      "search_volume": "not yet verified"
+    },
+    {
+      "keyword": "Is AJK a province",
+      "article": "Article 5",
+      "search_intent": "constitutional status question",
+      "priority_label": "Medium editorial priority",
+      "language": "English",
+      "search_volume": "not yet verified"
+    },
+    {
+      "keyword": "پاکستان میں نئے انتظامی یونٹس",
+      "article": "Article 1",
+      "search_intent": "current affairs / explainer",
+      "priority_label": "Validate Urdu volume",
+      "language": "Urdu",
+      "search_volume": "not yet verified"
+    },
+    {
+      "keyword": "پاکستان میں کتنے صوبے ہیں",
+      "article": "Article 2",
+      "search_intent": "quick factual answer",
+      "priority_label": "Validate Urdu volume",
+      "language": "Urdu",
+      "search_volume": "not yet verified"
+    },
+    {
+      "keyword": "بہاولپور صوبہ بحالی",
+      "article": "Article 4",
+      "search_intent": "regional news / history",
+      "priority_label": "Validate Urdu volume",
+      "language": "Urdu",
+      "search_volume": "not yet verified"
+    },
+    {
+      "keyword": "گلگت بلتستان صوبہ ہے یا نہیں",
+      "article": "Article 5",
+      "search_intent": "constitutional status question",
+      "priority_label": "Validate Urdu volume",
+      "language": "Urdu",
+      "search_volume": "not yet verified"
+    }
+  ]
+}

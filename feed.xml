@@ -5,8 +5,49 @@
     <link>https://ppripakistan.github.io/</link>
     <description>Peer-reviewed policy papers, empirical reports, datasets, and constitutional legal analysis on provincial reform, federalism, and municipal devolution in Pakistan.</description>
     <language>en-pk</language>
-    <lastBuildDate>Tue, 06 Oct 2026 09:00:00 +0500</lastBuildDate>
-    <atom:link href="https://ppripakistan.github.io/feed.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 10 Oct 2026 12:00:00 GMT</lastBuildDate>
+    
+    <item>
+      <title>New Administrative Units in Pakistan 2026: What Is Actually Being Proposed?</title>
+      <link>https://ppripakistan.github.io/articles/new-administrative-units-pakistan-2026.html</link>
+      <guid>https://ppripakistan.github.io/articles/new-administrative-units-pakistan-2026.html</guid>
+      <pubDate>Sat, 10 Oct 2026 00:00:00 GMT</pubDate>
+      <description>Pakistan’s 2026 administrative-units debate explained: proposals for 12–15 new provinces, 160 empowered local governments, Article 239 supermajorities, and verified legal status.</description>
+      <category>Administrative Reform</category>
+    </item>
+    <item>
+      <title>Provinces of Pakistan 2026: Names, Capitals, Population and Area</title>
+      <link>https://ppripakistan.github.io/articles/provinces-of-pakistan-names-capitals-population.html</link>
+      <guid>https://ppripakistan.github.io/articles/provinces-of-pakistan-names-capitals-population.html</guid>
+      <pubDate>Sat, 10 Oct 2026 00:00:00 GMT</pubDate>
+      <description>A factual guide to Pakistan’s four provinces, capitals, 2023 census populations and area—plus the difference between provinces, territories, divisions and districts.</description>
+      <category>Demographics</category>
+    </item>
+    <item>
+      <title>South Punjab vs Saraiki Province vs Bahawalpur: What’s the Difference?</title>
+      <link>https://ppripakistan.github.io/articles/south-punjab-saraiki-bahawalpur-difference.html</link>
+      <guid>https://ppripakistan.github.io/articles/south-punjab-saraiki-bahawalpur-difference.html</guid>
+      <pubDate>Sat, 10 Oct 2026 00:00:00 GMT</pubDate>
+      <description>South Punjab, Saraiki province and Bahawalpur restoration are related but distinct demands. Compare their political goals, regional identities, historical roots and current status.</description>
+      <category>Regional Studies</category>
+    </item>
+    <item>
+      <title>Bahawalpur Province Restoration 2026: Why the Demand Is Back</title>
+      <link>https://ppripakistan.github.io/articles/bahawalpur-province-restoration-2026.html</link>
+      <guid>https://ppripakistan.github.io/articles/bahawalpur-province-restoration-2026.html</guid>
+      <pubDate>Sat, 10 Oct 2026 00:00:00 GMT</pubDate>
+      <description>Why is Bahawalpur demanding restoration as a separate province? Follow the historical argument, the 2026 campaign, the South Punjab distinction and constitutional hurdles.</description>
+      <category>Regional History</category>
+    </item>
+    <item>
+      <title>Is Gilgit-Baltistan a Province of Pakistan? GB, AJK and Islamabad Explained</title>
+      <link>https://ppripakistan.github.io/articles/is-gilgit-baltistan-a-province-of-pakistan.html</link>
+      <guid>https://ppripakistan.github.io/articles/is-gilgit-baltistan-a-province-of-pakistan.html</guid>
+      <pubDate>Sat, 10 Oct 2026 00:00:00 GMT</pubDate>
+      <description>Gilgit-Baltistan is not one of Pakistan’s four constitutional provinces. Learn how GB, Azad Jammu and Kashmir, Islamabad Capital Territory and the four provinces differ in legal and administrative status.</description>
+      <category>Constitutional Law</category>
+    </item>
+<atom:link href="https://ppripakistan.github.io/feed.xml" rel="self" type="application/rss+xml" />
     <image>
       <url>https://ppripakistan.github.io/assets/images/brand/ppri-logo.jpg</url>
       <title>Pakistan Provincial Reform Institute (PPRI)</title>
@@ -83,24 +124,6 @@
       <pubDate>Thu, 17 Sep 2026 09:00:00 +0500</pubDate>
       <description>Working paper analyzing the constitutional mandate of Article 140A, statutory Provincial Finance Commission (PFC) awards, and municipal financial empowerment.</description>
       <category>Working Papers</category>
-    </item>
-
-    <item>
-      <title>The Scale Imbalance: Why Pakistan's 4-Province Model Is Administratively Overwhelmed</title>
-      <link>https://ppripakistan.github.io/articles/article-001.html</link>
-      <guid isPermaLink="true">https://ppripakistan.github.io/articles/article-001.html</guid>
-      <pubDate>Mon, 28 Sep 2026 09:00:00 +0500</pubDate>
-      <description>Analytical essay examining how Punjab's 127.7 million population creates the largest subnational administrative unit in any democracy worldwide, concentrating administrative strain.</description>
-      <category>Articles</category>
-    </item>
-
-    <item>
-      <title>Fiscal Equalization &amp; The NFC Formula: Designing Sustainable Revenue Transfers for New Provinces</title>
-      <link>https://ppripakistan.github.io/articles/article-002.html</link>
-      <guid isPermaLink="true">https://ppripakistan.github.io/articles/article-002.html</guid>
-      <pubDate>Tue, 29 Sep 2026 09:00:00 +0500</pubDate>
-      <description>Technical policy paper dissecting the 7th NFC divisible pool criteria, horizontal fiscal equalization formulas, and revenue sustainability under proposed administrative models.</description>
-      <category>Articles</category>
     </item>
 
     <item>
