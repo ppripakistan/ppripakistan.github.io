@@ -66,6 +66,15 @@ code {
   white-space: pre-wrap;
 }
 
+/* Universal CSS Grid & Flex child blowout defense */
+.paper-layout > *,
+.prose-wide > *,
+.article-body > *,
+.grid > *,
+.card-grid > * {
+  min-width: 0;
+}
+
 /* --------------------------------------------------------------------------
    2. Universal Responsive Table System
    -------------------------------------------------------------------------- */
@@ -260,6 +269,17 @@ code {
   .grid-3 {
     grid-template-columns: 1fr 1fr;
     gap: 16px;
+  }
+
+  .paper-layout {
+    grid-template-columns: minmax(0, 1fr) !important;
+    gap: 28px !important;
+  }
+
+  .paper-layout > article,
+  .paper-layout > .prose-wide {
+    min-width: 0 !important;
+    width: 100% !important;
   }
 
   .infographic-flow {

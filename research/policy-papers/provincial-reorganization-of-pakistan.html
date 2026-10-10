@@ -85,9 +85,95 @@
       ]
     }
     </script>
-    <meta name="theme-color" content="#073c3a" />
-    <link rel="manifest" href="/site.webmanifest" />
-    <link rel="alternate" type="application/rss+xml" title="PPRI Policy Publications Feed" href="/feed.xml" />
+    <style>
+      .paper-layout {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) 280px;
+        gap: 48px;
+        align-items: start;
+      }
+      .paper-layout > article.prose-wide {
+        min-width: 0 !important;
+        max-width: 100% !important;
+      }
+      .paper-layout > .toc {
+        position: sticky;
+        top: 96px;
+        background: #ffffff;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        padding: 16px 20px;
+        box-shadow: 0 4px 16px rgba(11, 29, 42, 0.04);
+        max-height: calc(100vh - 120px);
+        overflow-y: auto;
+      }
+      .paper-layout > .toc strong {
+        font-size: 0.95rem;
+        color: var(--navy);
+        display: block;
+        margin-bottom: 12px;
+        padding-bottom: 8px;
+        border-bottom: 1px solid var(--line);
+      }
+      .paper-layout > .toc a {
+        display: block;
+        padding: 6px 8px;
+        color: var(--muted);
+        text-decoration: none;
+        font-size: 0.82rem;
+        border-radius: 4px;
+        transition: background 0.15s ease, color 0.15s ease;
+      }
+      .paper-layout > .toc a:hover {
+        background: #f1f5f9;
+        color: var(--navy);
+      }
+      @media (max-width: 900px) {
+        .paper-layout {
+          grid-template-columns: minmax(0, 1fr) !important;
+          gap: 24px !important;
+        }
+        .paper-layout > article.prose-wide {
+          min-width: 0 !important;
+          width: 100% !important;
+        }
+        .paper-layout > .toc {
+          position: static !important;
+          max-height: none !important;
+          order: -1;
+          margin-bottom: 24px;
+          background: #f8fafc;
+        }
+      }
+      @media (max-width: 640px) {
+        .flowchart-wrap {
+          padding: 16px 12px !important;
+          margin: 20px 0 !important;
+        }
+        .flowchart-step {
+          padding: 12px 10px !important;
+          gap: 10px !important;
+        }
+        .matrix-wrap {
+          padding: 16px 12px !important;
+        }
+        .matrix-grid {
+          grid-template-columns: 1fr !important;
+        }
+        .models-grid {
+          grid-template-columns: 1fr !important;
+        }
+        .paper-kpi-ribbon {
+          grid-template-columns: 1fr 1fr !important;
+          gap: 10px !important;
+        }
+      }
+      @media (max-width: 400px) {
+        .paper-kpi-ribbon {
+          grid-template-columns: 1fr !important;
+        }
+      }
+    </style>
   </head>
   <body>
     <a class="skip-link" href="#main-content">Skip to content</a>
@@ -155,7 +241,7 @@
         <div class="container paper-layout">
           <article class="prose-wide">
             <!-- 4-Stat KPI Header Ribbon -->
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin: 0 0 32px;">
+            <div class="paper-kpi-ribbon" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr)); gap: 16px; margin: 0 0 32px;">
               <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-top: 4px solid #073c3a; border-radius: 8px; padding: 18px; text-align: center;">
                 <strong style="display: block; font-size: 1.85rem; color: #073c3a; font-weight: 800;">241.5M</strong>
                 <span style="font-size: 0.82rem; color: #64748b; margin-top: 4px; display: block;">National Population (7th Census 2023)</span>
@@ -224,31 +310,31 @@
             </p>
 
             <!-- Visual Flowchart: Article 239 Constitutional Amendment Pathway -->
-            <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 24px; margin: 28px 0;">
+            <div class="flowchart-wrap" style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 24px; margin: 28px 0; box-sizing: border-box;">
               <h4 style="margin: 0 0 16px; color: #073c3a; font-size: 1.05rem; text-transform: uppercase; letter-spacing: 0.05em;">
                 Constitutional Flowchart: Article 239(4) Boundary Amendment Pathway
               </h4>
               <div style="display: flex; flex-direction: column; gap: 12px;">
-                <div style="display: flex; align-items: center; gap: 14px; background: #ffffff; padding: 14px; border-radius: 6px; border-left: 4px solid #073c3a; box-shadow: 0 1px 3px rgba(0,0,0,0.05);">
-                  <span style="font-weight: 800; color: #073c3a; font-size: 1.1rem; min-width: 28px;">01</span>
+                <div class="flowchart-step" style="display: flex; align-items: flex-start; gap: 14px; background: #ffffff; padding: 14px; border-radius: 6px; border-left: 4px solid #073c3a; box-shadow: 0 1px 3px rgba(0,0,0,0.05); box-sizing: border-box;">
+                  <span style="font-weight: 800; color: #073c3a; font-size: 1.1rem; min-width: 28px; line-height: 1.2;">01</span>
                   <div>
                     <strong style="color: #073c3a;">Bill Introduction:</strong> Constitutional Amendment Bill introduced in either the National Assembly or the Senate (Article 239(1)).
                   </div>
                 </div>
-                <div style="display: flex; align-items: center; gap: 14px; background: #ffffff; padding: 14px; border-radius: 6px; border-left: 4px solid #12645d; box-shadow: 0 1px 3px rgba(0,0,0,0.05);">
-                  <span style="font-weight: 800; color: #12645d; font-size: 1.1rem; min-width: 28px;">02</span>
+                <div class="flowchart-step" style="display: flex; align-items: flex-start; gap: 14px; background: #ffffff; padding: 14px; border-radius: 6px; border-left: 4px solid #12645d; box-shadow: 0 1px 3px rgba(0,0,0,0.05); box-sizing: border-box;">
+                  <span style="font-weight: 800; color: #12645d; font-size: 1.1rem; min-width: 28px; line-height: 1.2;">02</span>
                   <div>
                     <strong style="color: #12645d;">Federal Parliament Supermajority:</strong> Passed by not less than two-thirds of total membership in <em>both</em> the National Assembly and the Senate (Article 239(2)).
                   </div>
                 </div>
-                <div style="display: flex; align-items: center; gap: 14px; background: #ffffff; padding: 14px; border-radius: 6px; border-left: 4px solid #b7d83d; box-shadow: 0 1px 3px rgba(0,0,0,0.05);">
-                  <span style="font-weight: 800; color: #073c3a; font-size: 1.1rem; min-width: 28px;">03</span>
+                <div class="flowchart-step" style="display: flex; align-items: flex-start; gap: 14px; background: #ffffff; padding: 14px; border-radius: 6px; border-left: 4px solid #b7d83d; box-shadow: 0 1px 3px rgba(0,0,0,0.05); box-sizing: border-box;">
+                  <span style="font-weight: 800; color: #073c3a; font-size: 1.1rem; min-width: 28px; line-height: 1.2;">03</span>
                   <div>
                     <strong style="color: #073c3a;">Provincial Veto Shield:</strong> If the bill alters provincial limits, it <em>cannot be presented to the President</em> unless passed by the affected Provincial Assembly by at least two-thirds of its total membership (Article 239(4)).
                   </div>
                 </div>
-                <div style="display: flex; align-items: center; gap: 14px; background: #ffffff; padding: 14px; border-radius: 6px; border-left: 4px solid #c5a15a; box-shadow: 0 1px 3px rgba(0,0,0,0.05);">
-                  <span style="font-weight: 800; color: #854d0e; font-size: 1.1rem; min-width: 28px;">04</span>
+                <div class="flowchart-step" style="display: flex; align-items: flex-start; gap: 14px; background: #ffffff; padding: 14px; border-radius: 6px; border-left: 4px solid #c5a15a; box-shadow: 0 1px 3px rgba(0,0,0,0.05); box-sizing: border-box;">
+                  <span style="font-weight: 800; color: #854d0e; font-size: 1.1rem; min-width: 28px; line-height: 1.2;">04</span>
                   <div>
                     <strong style="color: #854d0e;">Presidential Assent &amp; Gazette:</strong> Submission to the President for mandatory assent, followed by official statutory gazette notification and institutional demarcation.
                   </div>
@@ -347,12 +433,12 @@
             </p>
 
             <!-- Six-Pillar Assessment Matrix -->
-            <div style="background: #ffffff; border: 1px solid #cbd5e1; border-radius: 8px; padding: 24px; margin: 28px 0;">
+            <div class="matrix-wrap" style="background: #ffffff; border: 1px solid #cbd5e1; border-radius: 8px; padding: 24px; margin: 28px 0; box-sizing: border-box;">
               <h3 style="margin-top: 0; color: #073c3a; font-size: 1.15rem;">PPRI Six-Pillar Reorganization Assessment Matrix</h3>
               <p style="font-size: 0.9rem; color: #475569; margin-bottom: 20px;">
                 PPRI evaluates any territorial restructuring proposal against six non-negotiable structural criteria:
               </p>
-              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px;">
+              <div class="matrix-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr)); gap: 16px;">
                 <div style="border-left: 3px solid #073c3a; padding-left: 12px;">
                   <strong style="color: #073c3a; display: block; font-size: 0.95rem;">1. Demographic Balance</strong>
                   <span style="font-size: 0.85rem; color: #64748b;">Prevents single-unit hegemony without creating demographically unviable micro-units.</span>
@@ -452,7 +538,7 @@
             </div>
 
             <h2 id="models">9. Research models</h2>
-            <div class="grid grid-2" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; margin: 24px 0;">
+            <div class="grid grid-2 models-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)); gap: 16px; margin: 24px 0;">
               <div class="card" style="border: 1px solid #cbd5e1; border-radius: 8px; padding: 20px; background: #ffffff;">
                 <h3 style="margin-top: 0; color: #073c3a; font-size: 1.05rem;">
                   Model A — Existing structure + stronger local government
@@ -526,19 +612,20 @@
               opinion.
             </div>
           </article>
-          <aside class="toc">
-            <strong>Contents</strong><a href="#problem">1. The problem</a
-            ><a href="#baseline">2. Constitutional baseline</a
-            ><a href="#demography">3. Demography</a
-            ><a href="#arguments">4. Arguments</a
-            ><a href="#reservations">5. Reservations</a
-            ><a href="#local">6. Local government</a
-            ><a href="#fiscal">7. Fiscal architecture</a
-            ><a href="#administration">8. Administration</a
-            ><a href="#models">9. Models</a
-            ><a href="#framework">10. Evidence framework</a
-            ><a href="#process">11. Constitutional process</a
-            ><a href="#conclusion">12. Conclusion</a>
+          <aside class="toc" aria-label="Table of contents">
+            <strong>Contents</strong>
+            <a href="#problem">1. The Problem</a>
+            <a href="#baseline">2. Constitutional Baseline</a>
+            <a href="#demography">3. Demography &amp; Scale</a>
+            <a href="#arguments">4. Arguments for Reform</a>
+            <a href="#reservations">5. Reservations to Test</a>
+            <a href="#local">6. Local Government</a>
+            <a href="#fiscal">7. Fiscal Architecture</a>
+            <a href="#administration">8. Administrative Transition</a>
+            <a href="#models">9. Research Models</a>
+            <a href="#framework">10. Evidence Framework</a>
+            <a href="#process">11. Constitutional Process</a>
+            <a href="#conclusion">12. Conclusion</a>
           </aside>
         </div>
       </section>
