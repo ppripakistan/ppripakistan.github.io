@@ -3,8 +3,6 @@ PPRI_Pakistan_Website_Template/
 ├── 404.html
 ├── README.md
 ├── about.html
-├── articles/article-001.html
-├── articles/article-002.html
 ├── articles/index.html
 ├── assets/css/print.css
 ├── assets/css/responsive.css
