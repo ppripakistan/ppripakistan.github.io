@@ -1,0 +1,166 @@
+﻿geography_id,geography_name,geography_type,parent_geography_id,aliases,geography_vintage,population_observation_status,source_id,source_url
+PK,Pakistan,country,,Islamic Republic of Pakistan,PBS Census 2023,baseline geography,PBS_CENSUS_XLSX,https://www.pbs.gov.pk/result-excel/
+PK-PB,Punjab,province,PK,,PBS Census 2023,baseline geography,PBS_CENSUS_XLSX,https://www.pbs.gov.pk/result-excel/
+PK-SD,Sindh,province,PK,,PBS Census 2023,baseline geography,PBS_CENSUS_XLSX,https://www.pbs.gov.pk/result-excel/
+PK-KP,Khyber Pakhtunkhwa,province,PK,,PBS Census 2023,baseline geography,PBS_CENSUS_XLSX,https://www.pbs.gov.pk/result-excel/
+PK-BA,Balochistan,province,PK,,PBS Census 2023,baseline geography,PBS_CENSUS_XLSX,https://www.pbs.gov.pk/result-excel/
+PK-ICT,Islamabad Capital Territory,federal_territory,PK,ICT; Islamabad,PBS Census 2023,Census/administrative unit,PBS_CENSUS_XLSX,https://www.pbs.gov.pk/result-excel/
+PK-BA-D-AWARAN,Awaran,district,PK-BA,,PBS Census 2023 listed-district vintage,population workbook linked; numeric rows not included,PBS_CENSUS_XLSX,https://www.pbs.gov.pk/result-excel/
+PK-BA-D-BARKHAN,Barkhan,district,PK-BA,,PBS Census 2023 listed-district vintage,population workbook linked; numeric rows not included,PBS_CENSUS_XLSX,https://www.pbs.gov.pk/result-excel/
+PK-BA-D-CHAGAI,Chagai,district,PK-BA,,PBS Census 2023 listed-district vintage,population workbook linked; numeric rows not included,PBS_CENSUS_XLSX,https://www.pbs.gov.pk/result-excel/
+PK-BA-D-CHAMAN,Chaman,district,PK-BA,,PBS Census 2023 listed-district vintage,population workbook linked; numeric rows not included,PBS_CENSUS_XLSX,https://www.pbs.gov.pk/result-excel/
+PK-BA-D-DERA-BUGTI,Dera Bugti,district,PK-BA,,PBS Census 2023 listed-district vintage,population workbook linked; numeric rows not included,PBS_CENSUS_XLSX,https://www.pbs.gov.pk/result-excel/
+PK-BA-D-DUKI,Duki,district,PK-BA,,PBS Census 2023 listed-district vintage,population workbook linked; numeric rows not included,PBS_CENSUS_XLSX,https://www.pbs.gov.pk/result-excel/
+PK-BA-D-GWADAR,Gwadar,district,PK-BA,,PBS Census 2023 listed-district vintage,population workbook linked; numeric rows not included,PBS_CENSUS_XLSX,https://www.pbs.gov.pk/result-excel/
+PK-BA-D-HARNAI,Harnai,district,PK-BA,,PBS Census 2023 listed-district vintage,population workbook linked; numeric rows not included,PBS_CENSUS_XLSX,https://www.pbs.gov.pk/result-excel/
+PK-BA-D-JAFFARABAD,Jaffarabad,district,PK-BA,,PBS Census 2023 listed-district vintage,population workbook linked; numeric rows not included,PBS_CENSUS_XLSX,https://www.pbs.gov.pk/result-excel/
+PK-BA-D-JHAL-MAGSI,Jhal Magsi,district,PK-BA,,PBS Census 2023 listed-district vintage,population workbook linked; numeric rows not included,PBS_CENSUS_XLSX,https://www.pbs.gov.pk/result-excel/
+PK-BA-D-KACHHI,Kachhi,district,PK-BA,,PBS Census 2023 listed-district vintage,population workbook linked; numeric rows not included,PBS_CENSUS_XLSX,https://www.pbs.gov.pk/result-excel/
+PK-BA-D-KALAT,Kalat,district,PK-BA,,PBS Census 2023 listed-district vintage,population workbook linked; numeric rows not included,PBS_CENSUS_XLSX,https://www.pbs.gov.pk/result-excel/
+PK-BA-D-KECH,Kech,district,PK-BA,,PBS Census 2023 listed-district vintage,population workbook linked; numeric rows not included,PBS_CENSUS_XLSX,https://www.pbs.gov.pk/result-excel/
+PK-BA-D-KHARAN,Kharan,district,PK-BA,,PBS Census 2023 listed-district vintage,population workbook linked; numeric rows not included,PBS_CENSUS_XLSX,https://www.pbs.gov.pk/result-excel/
+PK-BA-D-KHUZDAR,Khuzdar,district,PK-BA,,PBS Census 2023 listed-district vintage,population workbook linked; numeric rows not included,PBS_CENSUS_XLSX,https://www.pbs.gov.pk/result-excel/
+PK-BA-D-KILLA-ABDULLAH,Killa Abdullah,district,PK-BA,,PBS Census 2023 listed-district vintage,population workbook linked; numeric rows not included,PBS_CENSUS_XLSX,https://www.pbs.gov.pk/result-excel/
+PK-BA-D-KILLA-SAIFULLAH,Killa Saifullah,district,PK-BA,,PBS Census 2023 listed-district vintage,population workbook linked; numeric rows not included,PBS_CENSUS_XLSX,https://www.pbs.gov.pk/result-excel/
+PK-BA-D-KOHLU,Kohlu,district,PK-BA,,PBS Census 2023 listed-district vintage,population workbook linked; numeric rows not included,PBS_CENSUS_XLSX,https://www.pbs.gov.pk/result-excel/
+PK-BA-D-LASBELA,Lasbela,district,PK-BA,,PBS Census 2023 listed-district vintage,population workbook linked; numeric rows not included,PBS_CENSUS_XLSX,https://www.pbs.gov.pk/result-excel/
+PK-BA-D-LORALAI,Loralai,district,PK-BA,,PBS Census 2023 listed-district vintage,population workbook linked; numeric rows not included,PBS_CENSUS_XLSX,https://www.pbs.gov.pk/result-excel/
+PK-BA-D-MASTUNG,Mastung,district,PK-BA,,PBS Census 2023 listed-district vintage,population workbook linked; numeric rows not included,PBS_CENSUS_XLSX,https://www.pbs.gov.pk/result-excel/
+PK-BA-D-MUSAKHEL,Musakhel,district,PK-BA,,PBS Census 2023 listed-district vintage,population workbook linked; numeric rows not included,PBS_CENSUS_XLSX,https://www.pbs.gov.pk/result-excel/
+PK-BA-D-NASIRABAD,Nasirabad,district,PK-BA,,PBS Census 2023 listed-district vintage,population workbook linked; numeric rows not included,PBS_CENSUS_XLSX,https://www.pbs.gov.pk/result-excel/
+PK-BA-D-NUSHKI,Nushki,district,PK-BA,,PBS Census 2023 listed-district vintage,population workbook linked; numeric rows not included,PBS_CENSUS_XLSX,https://www.pbs.gov.pk/result-excel/
+PK-BA-D-PANJGUR,Panjgur,district,PK-BA,,PBS Census 2023 listed-district vintage,population workbook linked; numeric rows not included,PBS_CENSUS_XLSX,https://www.pbs.gov.pk/result-excel/
+PK-BA-D-PISHIN,Pishin,district,PK-BA,,PBS Census 2023 listed-district vintage,population workbook linked; numeric rows not included,PBS_CENSUS_XLSX,https://www.pbs.gov.pk/result-excel/
+PK-BA-D-QUETTA,Quetta,district,PK-BA,,PBS Census 2023 listed-district vintage,population workbook linked; numeric rows not included,PBS_CENSUS_XLSX,https://www.pbs.gov.pk/result-excel/
+PK-BA-D-SHERANI,Sherani,district,PK-BA,,PBS Census 2023 listed-district vintage,population workbook linked; numeric rows not included,PBS_CENSUS_XLSX,https://www.pbs.gov.pk/result-excel/
+PK-BA-D-SIBI,Sibi,district,PK-BA,,PBS Census 2023 listed-district vintage,population workbook linked; numeric rows not included,PBS_CENSUS_XLSX,https://www.pbs.gov.pk/result-excel/
+PK-BA-D-SOHBATPUR,Sohbatpur,district,PK-BA,,PBS Census 2023 listed-district vintage,population workbook linked; numeric rows not included,PBS_CENSUS_XLSX,https://www.pbs.gov.pk/result-excel/
+PK-BA-D-SURAB,Surab,district,PK-BA,,PBS Census 2023 listed-district vintage,population workbook linked; numeric rows not included,PBS_CENSUS_XLSX,https://www.pbs.gov.pk/result-excel/
+PK-BA-D-WASHUK,Washuk,district,PK-BA,,PBS Census 2023 listed-district vintage,population workbook linked; numeric rows not included,PBS_CENSUS_XLSX,https://www.pbs.gov.pk/result-excel/
+PK-BA-D-ZHOB,Zhob,district,PK-BA,,PBS Census 2023 listed-district vintage,population workbook linked; numeric rows not included,PBS_CENSUS_XLSX,https://www.pbs.gov.pk/result-excel/
+PK-BA-D-ZIARAT,Ziarat,district,PK-BA,,PBS Census 2023 listed-district vintage,population workbook linked; numeric rows not included,PBS_CENSUS_XLSX,https://www.pbs.gov.pk/result-excel/
+PK-KP-D-ABBOTTABAD,Abbottabad,district,PK-KP,,PBS Census 2023 listed-district vintage,population workbook linked; numeric rows not included,PBS_CENSUS_XLSX,https://www.pbs.gov.pk/result-excel/
+PK-KP-D-BAJAUR,Bajaur,district,PK-KP,,PBS Census 2023 listed-district vintage,population workbook linked; numeric rows not included,PBS_CENSUS_XLSX,https://www.pbs.gov.pk/result-excel/
+PK-KP-D-BANNU,Bannu,district,PK-KP,,PBS Census 2023 listed-district vintage,population workbook linked; numeric rows not included,PBS_CENSUS_XLSX,https://www.pbs.gov.pk/result-excel/
+PK-KP-D-BATAGRAM,Batagram,district,PK-KP,,PBS Census 2023 listed-district vintage,population workbook linked; numeric rows not included,PBS_CENSUS_XLSX,https://www.pbs.gov.pk/result-excel/
+PK-KP-D-BUNER,Buner,district,PK-KP,,PBS Census 2023 listed-district vintage,population workbook linked; numeric rows not included,PBS_CENSUS_XLSX,https://www.pbs.gov.pk/result-excel/
+PK-KP-D-CHARSADDA,Charsadda,district,PK-KP,,PBS Census 2023 listed-district vintage,population workbook linked; numeric rows not included,PBS_CENSUS_XLSX,https://www.pbs.gov.pk/result-excel/
+PK-KP-D-DERA-ISMAIL-KHAN,Dera Ismail Khan,district,PK-KP,,PBS Census 2023 listed-district vintage,population workbook linked; numeric rows not included,PBS_CENSUS_XLSX,https://www.pbs.gov.pk/result-excel/
+PK-KP-D-HANGU,Hangu,district,PK-KP,,PBS Census 2023 listed-district vintage,population workbook linked; numeric rows not included,PBS_CENSUS_XLSX,https://www.pbs.gov.pk/result-excel/
+PK-KP-D-HARIPUR,Haripur,district,PK-KP,,PBS Census 2023 listed-district vintage,population workbook linked; numeric rows not included,PBS_CENSUS_XLSX,https://www.pbs.gov.pk/result-excel/
+PK-KP-D-KARAK,Karak,district,PK-KP,,PBS Census 2023 listed-district vintage,population workbook linked; numeric rows not included,PBS_CENSUS_XLSX,https://www.pbs.gov.pk/result-excel/
+PK-KP-D-KHYBER,Khyber,district,PK-KP,,PBS Census 2023 listed-district vintage,population workbook linked; numeric rows not included,PBS_CENSUS_XLSX,https://www.pbs.gov.pk/result-excel/
+PK-KP-D-KOHAT,Kohat,district,PK-KP,,PBS Census 2023 listed-district vintage,population workbook linked; numeric rows not included,PBS_CENSUS_XLSX,https://www.pbs.gov.pk/result-excel/
+PK-KP-D-KOLAI-PALAS-KOHISTAN,Kolai Palas Kohistan,district,PK-KP,,PBS Census 2023 listed-district vintage,population workbook linked; numeric rows not included,PBS_CENSUS_XLSX,https://www.pbs.gov.pk/result-excel/
+PK-KP-D-KURRAM,Kurram,district,PK-KP,,PBS Census 2023 listed-district vintage,population workbook linked; numeric rows not included,PBS_CENSUS_XLSX,https://www.pbs.gov.pk/result-excel/
+PK-KP-D-LAKKI-MARWAT,Lakki Marwat,district,PK-KP,,PBS Census 2023 listed-district vintage,population workbook linked; numeric rows not included,PBS_CENSUS_XLSX,https://www.pbs.gov.pk/result-excel/
+PK-KP-D-LOWER-CHITRAL,Lower Chitral,district,PK-KP,,PBS Census 2023 listed-district vintage,population workbook linked; numeric rows not included,PBS_CENSUS_XLSX,https://www.pbs.gov.pk/result-excel/
+PK-KP-D-LOWER-DIR,Lower Dir,district,PK-KP,,PBS Census 2023 listed-district vintage,population workbook linked; numeric rows not included,PBS_CENSUS_XLSX,https://www.pbs.gov.pk/result-excel/
+PK-KP-D-LOWER-KOHISTAN,Lower Kohistan,district,PK-KP,,PBS Census 2023 listed-district vintage,population workbook linked; numeric rows not included,PBS_CENSUS_XLSX,https://www.pbs.gov.pk/result-excel/
+PK-KP-D-MALAKAND,Malakand,district,PK-KP,,PBS Census 2023 listed-district vintage,population workbook linked; numeric rows not included,PBS_CENSUS_XLSX,https://www.pbs.gov.pk/result-excel/
+PK-KP-D-MANSEHRA,Mansehra,district,PK-KP,,PBS Census 2023 listed-district vintage,population workbook linked; numeric rows not included,PBS_CENSUS_XLSX,https://www.pbs.gov.pk/result-excel/
+PK-KP-D-MARDAN,Mardan,district,PK-KP,,PBS Census 2023 listed-district vintage,population workbook linked; numeric rows not included,PBS_CENSUS_XLSX,https://www.pbs.gov.pk/result-excel/
+PK-KP-D-MOHMAND,Mohmand,district,PK-KP,,PBS Census 2023 listed-district vintage,population workbook linked; numeric rows not included,PBS_CENSUS_XLSX,https://www.pbs.gov.pk/result-excel/
+PK-KP-D-NORTH-WAZIRISTAN,North Waziristan,district,PK-KP,,PBS Census 2023 listed-district vintage,population workbook linked; numeric rows not included,PBS_CENSUS_XLSX,https://www.pbs.gov.pk/result-excel/
+PK-KP-D-NOWSHERA,Nowshera,district,PK-KP,,PBS Census 2023 listed-district vintage,population workbook linked; numeric rows not included,PBS_CENSUS_XLSX,https://www.pbs.gov.pk/result-excel/
+PK-KP-D-ORAKZAI,Orakzai,district,PK-KP,,PBS Census 2023 listed-district vintage,population workbook linked; numeric rows not included,PBS_CENSUS_XLSX,https://www.pbs.gov.pk/result-excel/
+PK-KP-D-PESHAWAR,Peshawar,district,PK-KP,,PBS Census 2023 listed-district vintage,population workbook linked; numeric rows not included,PBS_CENSUS_XLSX,https://www.pbs.gov.pk/result-excel/
+PK-KP-D-SHANGLA,Shangla,district,PK-KP,,PBS Census 2023 listed-district vintage,population workbook linked; numeric rows not included,PBS_CENSUS_XLSX,https://www.pbs.gov.pk/result-excel/
+PK-KP-D-SOUTH-WAZIRISTAN,South Waziristan,district,PK-KP,,PBS Census 2023 listed-district vintage,population workbook linked; numeric rows not included,PBS_CENSUS_XLSX,https://www.pbs.gov.pk/result-excel/
+PK-KP-D-SWABI,Swabi,district,PK-KP,,PBS Census 2023 listed-district vintage,population workbook linked; numeric rows not included,PBS_CENSUS_XLSX,https://www.pbs.gov.pk/result-excel/
+PK-KP-D-SWAT,Swat,district,PK-KP,,PBS Census 2023 listed-district vintage,population workbook linked; numeric rows not included,PBS_CENSUS_XLSX,https://www.pbs.gov.pk/result-excel/
+PK-KP-D-TANK,Tank,district,PK-KP,,PBS Census 2023 listed-district vintage,population workbook linked; numeric rows not included,PBS_CENSUS_XLSX,https://www.pbs.gov.pk/result-excel/
+PK-KP-D-TORGHAR,Torghar,district,PK-KP,,PBS Census 2023 listed-district vintage,population workbook linked; numeric rows not included,PBS_CENSUS_XLSX,https://www.pbs.gov.pk/result-excel/
+PK-KP-D-UPPER-CHITRAL,Upper Chitral,district,PK-KP,,PBS Census 2023 listed-district vintage,population workbook linked; numeric rows not included,PBS_CENSUS_XLSX,https://www.pbs.gov.pk/result-excel/
+PK-KP-D-UPPER-DIR,Upper Dir,district,PK-KP,,PBS Census 2023 listed-district vintage,population workbook linked; numeric rows not included,PBS_CENSUS_XLSX,https://www.pbs.gov.pk/result-excel/
+PK-KP-D-UPPER-KOHISTAN,Upper Kohistan,district,PK-KP,,PBS Census 2023 listed-district vintage,population workbook linked; numeric rows not included,PBS_CENSUS_XLSX,https://www.pbs.gov.pk/result-excel/
+PK-PB-D-ATTOCK,Attock,district,PK-PB,,PBS Census 2023 listed-district vintage,population workbook linked; numeric rows not included,PBS_CENSUS_XLSX,https://www.pbs.gov.pk/result-excel/
+PK-PB-D-BAHAWALNAGAR,Bahawalnagar,district,PK-PB,,PBS Census 2023 listed-district vintage,population workbook linked; numeric rows not included,PBS_CENSUS_XLSX,https://www.pbs.gov.pk/result-excel/
+PK-PB-D-BAHAWALPUR,Bahawalpur,district,PK-PB,,PBS Census 2023 listed-district vintage,population workbook linked; numeric rows not included,PBS_CENSUS_XLSX,https://www.pbs.gov.pk/result-excel/
+PK-PB-D-BHAKKAR,Bhakkar,district,PK-PB,,PBS Census 2023 listed-district vintage,population workbook linked; numeric rows not included,PBS_CENSUS_XLSX,https://www.pbs.gov.pk/result-excel/
+PK-PB-D-CHAKWAL,Chakwal,district,PK-PB,,PBS Census 2023 listed-district vintage,population workbook linked; numeric rows not included,PBS_CENSUS_XLSX,https://www.pbs.gov.pk/result-excel/
+PK-PB-D-CHINIOT,Chiniot,district,PK-PB,,PBS Census 2023 listed-district vintage,population workbook linked; numeric rows not included,PBS_CENSUS_XLSX,https://www.pbs.gov.pk/result-excel/
+PK-PB-D-DERA-GHAZI-KHAN,Dera Ghazi Khan,district,PK-PB,,PBS Census 2023 listed-district vintage,population workbook linked; numeric rows not included,PBS_CENSUS_XLSX,https://www.pbs.gov.pk/result-excel/
+PK-PB-D-FAISALABAD,Faisalabad,district,PK-PB,,PBS Census 2023 listed-district vintage,population workbook linked; numeric rows not included,PBS_CENSUS_XLSX,https://www.pbs.gov.pk/result-excel/
+PK-PB-D-GUJRANWALA,Gujranwala,district,PK-PB,,PBS Census 2023 listed-district vintage,population workbook linked; numeric rows not included,PBS_CENSUS_XLSX,https://www.pbs.gov.pk/result-excel/
+PK-PB-D-GUJRAT,Gujrat,district,PK-PB,,PBS Census 2023 listed-district vintage,population workbook linked; numeric rows not included,PBS_CENSUS_XLSX,https://www.pbs.gov.pk/result-excel/
+PK-PB-D-HAFIZABAD,Hafizabad,district,PK-PB,,PBS Census 2023 listed-district vintage,population workbook linked; numeric rows not included,PBS_CENSUS_XLSX,https://www.pbs.gov.pk/result-excel/
+PK-PB-D-JHANG,Jhang,district,PK-PB,,PBS Census 2023 listed-district vintage,population workbook linked; numeric rows not included,PBS_CENSUS_XLSX,https://www.pbs.gov.pk/result-excel/
+PK-PB-D-JHELUM,Jhelum,district,PK-PB,,PBS Census 2023 listed-district vintage,population workbook linked; numeric rows not included,PBS_CENSUS_XLSX,https://www.pbs.gov.pk/result-excel/
+PK-PB-D-KASUR,Kasur,district,PK-PB,,PBS Census 2023 listed-district vintage,population workbook linked; numeric rows not included,PBS_CENSUS_XLSX,https://www.pbs.gov.pk/result-excel/
+PK-PB-D-KHANEWAL,Khanewal,district,PK-PB,,PBS Census 2023 listed-district vintage,population workbook linked; numeric rows not included,PBS_CENSUS_XLSX,https://www.pbs.gov.pk/result-excel/
+PK-PB-D-KHUSHAB,Khushab,district,PK-PB,,PBS Census 2023 listed-district vintage,population workbook linked; numeric rows not included,PBS_CENSUS_XLSX,https://www.pbs.gov.pk/result-excel/
+PK-PB-D-LAHORE,Lahore,district,PK-PB,,PBS Census 2023 listed-district vintage,population workbook linked; numeric rows not included,PBS_CENSUS_XLSX,https://www.pbs.gov.pk/result-excel/
+PK-PB-D-LAYYAH,Layyah,district,PK-PB,,PBS Census 2023 listed-district vintage,population workbook linked; numeric rows not included,PBS_CENSUS_XLSX,https://www.pbs.gov.pk/result-excel/
+PK-PB-D-LODHRAN,Lodhran,district,PK-PB,,PBS Census 2023 listed-district vintage,population workbook linked; numeric rows not included,PBS_CENSUS_XLSX,https://www.pbs.gov.pk/result-excel/
+PK-PB-D-MANDI-BAHAUDDIN,Mandi Bahauddin,district,PK-PB,,PBS Census 2023 listed-district vintage,population workbook linked; numeric rows not included,PBS_CENSUS_XLSX,https://www.pbs.gov.pk/result-excel/
+PK-PB-D-MIANWALI,Mianwali,district,PK-PB,,PBS Census 2023 listed-district vintage,population workbook linked; numeric rows not included,PBS_CENSUS_XLSX,https://www.pbs.gov.pk/result-excel/
+PK-PB-D-MULTAN,Multan,district,PK-PB,,PBS Census 2023 listed-district vintage,population workbook linked; numeric rows not included,PBS_CENSUS_XLSX,https://www.pbs.gov.pk/result-excel/
+PK-PB-D-MUZAFFARGARH,Muzaffargarh,district,PK-PB,,PBS Census 2023 listed-district vintage,population workbook linked; numeric rows not included,PBS_CENSUS_XLSX,https://www.pbs.gov.pk/result-excel/
+PK-PB-D-NANKANA-SAHIB,Nankana Sahib,district,PK-PB,,PBS Census 2023 listed-district vintage,population workbook linked; numeric rows not included,PBS_CENSUS_XLSX,https://www.pbs.gov.pk/result-excel/
+PK-PB-D-NAROWAL,Narowal,district,PK-PB,,PBS Census 2023 listed-district vintage,population workbook linked; numeric rows not included,PBS_CENSUS_XLSX,https://www.pbs.gov.pk/result-excel/
+PK-PB-D-OKARA,Okara,district,PK-PB,,PBS Census 2023 listed-district vintage,population workbook linked; numeric rows not included,PBS_CENSUS_XLSX,https://www.pbs.gov.pk/result-excel/
+PK-PB-D-PAKPATTAN,Pakpattan,district,PK-PB,,PBS Census 2023 listed-district vintage,population workbook linked; numeric rows not included,PBS_CENSUS_XLSX,https://www.pbs.gov.pk/result-excel/
+PK-PB-D-RAHIM-YAR-KHAN,Rahim Yar Khan,district,PK-PB,,PBS Census 2023 listed-district vintage,population workbook linked; numeric rows not included,PBS_CENSUS_XLSX,https://www.pbs.gov.pk/result-excel/
+PK-PB-D-RAJANPUR,Rajanpur,district,PK-PB,,PBS Census 2023 listed-district vintage,population workbook linked; numeric rows not included,PBS_CENSUS_XLSX,https://www.pbs.gov.pk/result-excel/
+PK-PB-D-RAWALPINDI,Rawalpindi,district,PK-PB,,PBS Census 2023 listed-district vintage,population workbook linked; numeric rows not included,PBS_CENSUS_XLSX,https://www.pbs.gov.pk/result-excel/
+PK-PB-D-SAHIWAL,Sahiwal,district,PK-PB,,PBS Census 2023 listed-district vintage,population workbook linked; numeric rows not included,PBS_CENSUS_XLSX,https://www.pbs.gov.pk/result-excel/
+PK-PB-D-SARGODHA,Sargodha,district,PK-PB,,PBS Census 2023 listed-district vintage,population workbook linked; numeric rows not included,PBS_CENSUS_XLSX,https://www.pbs.gov.pk/result-excel/
+PK-PB-D-SHEIKHUPURA,Sheikhupura,district,PK-PB,,PBS Census 2023 listed-district vintage,population workbook linked; numeric rows not included,PBS_CENSUS_XLSX,https://www.pbs.gov.pk/result-excel/
+PK-PB-D-SIALKOT,Sialkot,district,PK-PB,,PBS Census 2023 listed-district vintage,population workbook linked; numeric rows not included,PBS_CENSUS_XLSX,https://www.pbs.gov.pk/result-excel/
+PK-PB-D-TOBA-TEK-SINGH,Toba Tek Singh,district,PK-PB,,PBS Census 2023 listed-district vintage,population workbook linked; numeric rows not included,PBS_CENSUS_XLSX,https://www.pbs.gov.pk/result-excel/
+PK-PB-D-VEHARI,Vehari,district,PK-PB,,PBS Census 2023 listed-district vintage,population workbook linked; numeric rows not included,PBS_CENSUS_XLSX,https://www.pbs.gov.pk/result-excel/
+PK-SD-D-BADIN,Badin,district,PK-SD,,PBS Census 2023 listed-district vintage,population workbook linked; numeric rows not included,PBS_CENSUS_XLSX,https://www.pbs.gov.pk/result-excel/
+PK-SD-D-DADU,Dadu,district,PK-SD,,PBS Census 2023 listed-district vintage,population workbook linked; numeric rows not included,PBS_CENSUS_XLSX,https://www.pbs.gov.pk/result-excel/
+PK-SD-D-GHOTKI,Ghotki,district,PK-SD,,PBS Census 2023 listed-district vintage,population workbook linked; numeric rows not included,PBS_CENSUS_XLSX,https://www.pbs.gov.pk/result-excel/
+PK-SD-D-HYDERABAD,Hyderabad,district,PK-SD,,PBS Census 2023 listed-district vintage,population workbook linked; numeric rows not included,PBS_CENSUS_XLSX,https://www.pbs.gov.pk/result-excel/
+PK-SD-D-JACOBABAD,Jacobabad,district,PK-SD,,PBS Census 2023 listed-district vintage,population workbook linked; numeric rows not included,PBS_CENSUS_XLSX,https://www.pbs.gov.pk/result-excel/
+PK-SD-D-JAMSHORO,Jamshoro,district,PK-SD,,PBS Census 2023 listed-district vintage,population workbook linked; numeric rows not included,PBS_CENSUS_XLSX,https://www.pbs.gov.pk/result-excel/
+PK-SD-D-KAMBAR-SHAHDAD-KOT,Kambar Shahdad Kot,district,PK-SD,,PBS Census 2023 listed-district vintage,population workbook linked; numeric rows not included,PBS_CENSUS_XLSX,https://www.pbs.gov.pk/result-excel/
+PK-SD-D-KARACHI-CENTRAL,Karachi Central,district,PK-SD,,PBS Census 2023 listed-district vintage,population workbook linked; numeric rows not included,PBS_CENSUS_XLSX,https://www.pbs.gov.pk/result-excel/
+PK-SD-D-KARACHI-EAST,Karachi East,district,PK-SD,,PBS Census 2023 listed-district vintage,population workbook linked; numeric rows not included,PBS_CENSUS_XLSX,https://www.pbs.gov.pk/result-excel/
+PK-SD-D-KARACHI-SOUTH,Karachi South,district,PK-SD,,PBS Census 2023 listed-district vintage,population workbook linked; numeric rows not included,PBS_CENSUS_XLSX,https://www.pbs.gov.pk/result-excel/
+PK-SD-D-KARACHI-WEST,Karachi West,district,PK-SD,,PBS Census 2023 listed-district vintage,population workbook linked; numeric rows not included,PBS_CENSUS_XLSX,https://www.pbs.gov.pk/result-excel/
+PK-SD-D-KASHMORE,Kashmore,district,PK-SD,,PBS Census 2023 listed-district vintage,population workbook linked; numeric rows not included,PBS_CENSUS_XLSX,https://www.pbs.gov.pk/result-excel/
+PK-SD-D-KEAMARI,Keamari,district,PK-SD,,PBS Census 2023 listed-district vintage,population workbook linked; numeric rows not included,PBS_CENSUS_XLSX,https://www.pbs.gov.pk/result-excel/
+PK-SD-D-KHAIRPUR,Khairpur,district,PK-SD,,PBS Census 2023 listed-district vintage,population workbook linked; numeric rows not included,PBS_CENSUS_XLSX,https://www.pbs.gov.pk/result-excel/
+PK-SD-D-KORANGI,Korangi,district,PK-SD,,PBS Census 2023 listed-district vintage,population workbook linked; numeric rows not included,PBS_CENSUS_XLSX,https://www.pbs.gov.pk/result-excel/
+PK-SD-D-LARKANA,Larkana,district,PK-SD,,PBS Census 2023 listed-district vintage,population workbook linked; numeric rows not included,PBS_CENSUS_XLSX,https://www.pbs.gov.pk/result-excel/
+PK-SD-D-MALIR,Malir,district,PK-SD,,PBS Census 2023 listed-district vintage,population workbook linked; numeric rows not included,PBS_CENSUS_XLSX,https://www.pbs.gov.pk/result-excel/
+PK-SD-D-MATIARI,Matiari,district,PK-SD,,PBS Census 2023 listed-district vintage,population workbook linked; numeric rows not included,PBS_CENSUS_XLSX,https://www.pbs.gov.pk/result-excel/
+PK-SD-D-MIRPUR-KHAS,Mirpur Khas,district,PK-SD,,PBS Census 2023 listed-district vintage,population workbook linked; numeric rows not included,PBS_CENSUS_XLSX,https://www.pbs.gov.pk/result-excel/
+PK-SD-D-NAUSHAHRO-FEROZE,Naushahro Feroze,district,PK-SD,,PBS Census 2023 listed-district vintage,population workbook linked; numeric rows not included,PBS_CENSUS_XLSX,https://www.pbs.gov.pk/result-excel/
+PK-SD-D-SANGHAR,Sanghar,district,PK-SD,,PBS Census 2023 listed-district vintage,population workbook linked; numeric rows not included,PBS_CENSUS_XLSX,https://www.pbs.gov.pk/result-excel/
+PK-SD-D-SHAHEED-BENAZIRABAD,Shaheed Benazirabad,district,PK-SD,,PBS Census 2023 listed-district vintage,population workbook linked; numeric rows not included,PBS_CENSUS_XLSX,https://www.pbs.gov.pk/result-excel/
+PK-SD-D-SHIKARPUR,Shikarpur,district,PK-SD,,PBS Census 2023 listed-district vintage,population workbook linked; numeric rows not included,PBS_CENSUS_XLSX,https://www.pbs.gov.pk/result-excel/
+PK-SD-D-SUJAWAL,Sujawal,district,PK-SD,,PBS Census 2023 listed-district vintage,population workbook linked; numeric rows not included,PBS_CENSUS_XLSX,https://www.pbs.gov.pk/result-excel/
+PK-SD-D-SUKKUR,Sukkur,district,PK-SD,,PBS Census 2023 listed-district vintage,population workbook linked; numeric rows not included,PBS_CENSUS_XLSX,https://www.pbs.gov.pk/result-excel/
+PK-SD-D-TANDO-ALLAHYAR,Tando Allahyar,district,PK-SD,,PBS Census 2023 listed-district vintage,population workbook linked; numeric rows not included,PBS_CENSUS_XLSX,https://www.pbs.gov.pk/result-excel/
+PK-SD-D-TANDO-MUHAMMAD-KHAN,Tando Muhammad Khan,district,PK-SD,,PBS Census 2023 listed-district vintage,population workbook linked; numeric rows not included,PBS_CENSUS_XLSX,https://www.pbs.gov.pk/result-excel/
+PK-SD-D-THARPARKAR,Tharparkar,district,PK-SD,,PBS Census 2023 listed-district vintage,population workbook linked; numeric rows not included,PBS_CENSUS_XLSX,https://www.pbs.gov.pk/result-excel/
+PK-SD-D-THATTA,Thatta,district,PK-SD,,PBS Census 2023 listed-district vintage,population workbook linked; numeric rows not included,PBS_CENSUS_XLSX,https://www.pbs.gov.pk/result-excel/
+PK-SD-D-UMERKOT,Umerkot,district,PK-SD,,PBS Census 2023 listed-district vintage,population workbook linked; numeric rows not included,PBS_CENSUS_XLSX,https://www.pbs.gov.pk/result-excel/
+PK-URB-KARACHI,Karachi,urban_locality,PK-SD,,PBS Census 2023 urban-locality definition,population observation included,PBS_CENSUS_XLSX,https://www.pbs.gov.pk/result-excel/
+PK-URB-LAHORE,Lahore,urban_locality,PK-PB,,PBS Census 2023 urban-locality definition,population observation included,PBS_CENSUS_XLSX,https://www.pbs.gov.pk/result-excel/
+PK-URB-FAISALABAD,Faisalabad,urban_locality,PK-PB,,PBS Census 2023 urban-locality definition,population observation included,PBS_CENSUS_XLSX,https://www.pbs.gov.pk/result-excel/
+PK-URB-RAWALPINDI,Rawalpindi,urban_locality,PK-PB,,PBS Census 2023 urban-locality definition,population observation included,PBS_CENSUS_XLSX,https://www.pbs.gov.pk/result-excel/
+PK-URB-GUJRANWALA,Gujranwala,urban_locality,PK-PB,,PBS Census 2023 urban-locality definition,population observation included,PBS_CENSUS_XLSX,https://www.pbs.gov.pk/result-excel/
+PK-URB-MULTAN,Multan,urban_locality,PK-PB,,PBS Census 2023 urban-locality definition,population observation included,PBS_CENSUS_XLSX,https://www.pbs.gov.pk/result-excel/
+PK-URB-HYDERABAD,Hyderabad,urban_locality,PK-SD,,PBS Census 2023 urban-locality definition,population observation included,PBS_CENSUS_XLSX,https://www.pbs.gov.pk/result-excel/
+PK-URB-PESHAWAR,Peshawar,urban_locality,PK-KP,,PBS Census 2023 urban-locality definition,population observation included,PBS_CENSUS_XLSX,https://www.pbs.gov.pk/result-excel/
+PK-URB-QUETTA,Quetta,urban_locality,PK-BA,,PBS Census 2023 urban-locality definition,population observation included,PBS_CENSUS_XLSX,https://www.pbs.gov.pk/result-excel/
+PK-URB-ISLAMABAD,Islamabad,urban_locality,PK-ICT,,PBS Census 2023 urban-locality definition,population observation included,PBS_CENSUS_XLSX,https://www.pbs.gov.pk/result-excel/
+PK-URB-SARGODHA,Sargodha,urban_locality,PK-PB,,PBS Census 2023 urban-locality definition,population observation included,PBS_CENSUS_XLSX,https://www.pbs.gov.pk/result-excel/
+PK-URB-SIALKOT,Sialkot,urban_locality,PK-PB,,PBS Census 2023 urban-locality definition,population observation included,PBS_CENSUS_XLSX,https://www.pbs.gov.pk/result-excel/
+PK-URB-BAHAWALPUR,Bahawalpur,urban_locality,PK-PB,,PBS Census 2023 urban-locality definition,population observation included,PBS_CENSUS_XLSX,https://www.pbs.gov.pk/result-excel/
+PK-URB-JHANG,Jhang,urban_locality,PK-PB,,PBS Census 2023 urban-locality definition,population observation included,PBS_CENSUS_XLSX,https://www.pbs.gov.pk/result-excel/
+PK-URB-SHEIKHUPURA,Sheikhupura,urban_locality,PK-PB,,PBS Census 2023 urban-locality definition,population observation included,PBS_CENSUS_XLSX,https://www.pbs.gov.pk/result-excel/
+PK-URB-GUJRAT,Gujrat,urban_locality,PK-PB,,PBS Census 2023 urban-locality definition,population observation included,PBS_CENSUS_XLSX,https://www.pbs.gov.pk/result-excel/
+PK-URB-SUKKUR,Sukkur,urban_locality,PK-SD,,PBS Census 2023 urban-locality definition,population observation included,PBS_CENSUS_XLSX,https://www.pbs.gov.pk/result-excel/
+PK-URB-LARKANA,Larkana,urban_locality,PK-SD,,PBS Census 2023 urban-locality definition,population observation included,PBS_CENSUS_XLSX,https://www.pbs.gov.pk/result-excel/
+PK-URB-SAHIWAL,Sahiwal,urban_locality,PK-PB,,PBS Census 2023 urban-locality definition,population observation included,PBS_CENSUS_XLSX,https://www.pbs.gov.pk/result-excel/
+PK-URB-OKARA,Okara,urban_locality,PK-PB,,PBS Census 2023 urban-locality definition,population observation included,PBS_CENSUS_XLSX,https://www.pbs.gov.pk/result-excel/
+PK-URB-RAHIM-YAR-KHAN,Rahim Yar Khan,urban_locality,PK-PB,,PBS Census 2023 urban-locality definition,population observation included,PBS_CENSUS_XLSX,https://www.pbs.gov.pk/result-excel/
+PK-URB-KASUR,Kasur,urban_locality,PK-PB,,PBS Census 2023 urban-locality definition,population observation included,PBS_CENSUS_XLSX,https://www.pbs.gov.pk/result-excel/
+PK-URBAN,Pakistan urban,urban_rural_area,PK,source-defined geography,PBS Census 2023,source-defined geography,PBS_CENSUS_XLSX,https://www.pbs.gov.pk/result-excel/
+PK-RURAL,Pakistan rural,urban_rural_area,PK,source-defined geography,PBS Census 2023,source-defined geography,PBS_CENSUS_XLSX,https://www.pbs.gov.pk/result-excel/

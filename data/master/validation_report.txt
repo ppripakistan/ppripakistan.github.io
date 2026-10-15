@@ -1,0 +1,5 @@
+PPRI Pakistan Dataset v0.2.0 — Validation
+Observations: 275 | indicators: 92 | geographies: 165 | sources: 79
+Queries: 388 | canonical clusters/pages: 67 | YIS ranks: 129 | deduplicated YIS terms: 129
+RESULT: PASS
+

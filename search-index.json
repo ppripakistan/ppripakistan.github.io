@@ -58,29 +58,6 @@
     ]
   },
   {
-    "title": "Provincial Data Centre",
-    "type": "Data",
-    "description": "Source-first demographic and territorial evidence for provincial reform research.",
-    "url": "/data/centre.html",
-    "tags": [
-      "data",
-      "census",
-      "population",
-      "districts"
-    ]
-  },
-  {
-    "title": "Provincial Comparison",
-    "type": "Data",
-    "description": "Census 2023 population comparison for Pakistan provinces and ICT.",
-    "url": "/data/provincial-comparison.html",
-    "tags": [
-      "population",
-      "census 2023",
-      "comparison"
-    ]
-  },
-  {
     "title": "Administrative Scale & Representation",
     "type": "Policy Brief",
     "description": "Five tests for evaluating administrative scale and political access.",
@@ -179,19 +156,6 @@
       "amendment",
       "article 140A",
       "NFC"
-    ]
-  },
-  {
-    "title": "Data Notes & Definitions",
-    "type": "Data",
-    "description": "Methodological definitions, baseline census metrics, spatial boundaries, and reproducibility protocols for PPRI datasets.",
-    "url": "/data/data-notes.html",
-    "tags": [
-      "data",
-      "census",
-      "metrics",
-      "methodology",
-      "reproducibility"
     ]
   },
   {
@@ -860,6 +824,229 @@
       "PPRI",
       "Pakistan",
       "provinces"
+    ]
+  },
+  {
+    "title": "Data Observatory & Interactive Knowledge Map",
+    "type": "Data Observatory",
+    "description": "Central empirical observatory: Interactive Knowledge Map of Pakistan's public data, Census 2023 baseline, NFC Reform Simulator, and district explorer.",
+    "url": "/data/centre.html",
+    "tags": [
+      "data observatory",
+      "knowledge map",
+      "census 2023",
+      "nfc simulator",
+      "districts",
+      "provinces",
+      "data hub",
+      "datasets",
+      "statistics"
+    ]
+  },
+  {
+    "title": "Pakistan Population, Demographics & Urbanization Data",
+    "type": "Data Observatory: Population",
+    "description": "Verified PBS 7th Census 2023 results: 241.49M national population, provincial breakdowns, urban-rural distributions, sex ratios, and top 22 city populations.",
+    "url": "/data/population/",
+    "tags": [
+      "population",
+      "pakistan population",
+      "census 2023",
+      "punjab population",
+      "sindh population",
+      "kp population",
+      "balochistan population",
+      "karachi population",
+      "lahore population",
+      "urbanization",
+      "growth rate",
+      "demographics",
+      "largest cities",
+      "household size",
+      "mother tongues"
+    ]
+  },
+  {
+    "title": "Pakistan Economy, Inflation & Market Benchmarks Data",
+    "type": "Data Observatory: Economy",
+    "description": "Verified economic indicators: CPI & SPI inflation bulletins, real GDP growth rates (3.7%), sector growth, IT software exports ($3.39B), and wages.",
+    "url": "/data/economy/",
+    "tags": [
+      "economy",
+      "inflation",
+      "cpi inflation",
+      "spi inflation",
+      "food prices",
+      "gdp growth",
+      "gdp per capita",
+      "petrol price",
+      "dollar rate",
+      "remittances",
+      "trade balance",
+      "wages",
+      "lsm growth",
+      "it exports",
+      "market prices"
+    ]
+  },
+  {
+    "title": "Pakistan Living Standards, Poverty & Household Income Data",
+    "type": "Data Observatory: Living Standards",
+    "description": "Findings from PBS Household Integrated Economic Survey (HIES) 2024–25: household income quintiles (mean PKR 63,450), monthly consumption, water access, and energy.",
+    "url": "/data/living-standards/",
+    "tags": [
+      "living standards",
+      "household income",
+      "hies 2024",
+      "consumption expenditure",
+      "poverty",
+      "income quintiles",
+      "drinking water",
+      "sanitation",
+      "electricity access",
+      "clean fuel",
+      "wealth",
+      "well-being"
+    ]
+  },
+  {
+    "title": "Pakistan Public Finance, Budgets & NFC Award Formula Data",
+    "type": "Data Observatory: Public Finance",
+    "description": "Verified fiscal data: National Finance Commission (NFC) formula weights (82% population), provincial divisible pool transfers (Rs 5.5T+), tax revenue, and public debt.",
+    "url": "/data/public-finance/",
+    "tags": [
+      "public finance",
+      "nfc award",
+      "divisible pool",
+      "federal budget",
+      "provincial budget",
+      "fbr tax revenue",
+      "public debt",
+      "domestic debt",
+      "external debt",
+      "debt maturity",
+      "education budget",
+      "fiscal federalism"
+    ]
+  },
+  {
+    "title": "Pakistan Education, Literacy & Human Capital Data",
+    "type": "Data Observatory: Education",
+    "description": "Educational statistics: national literacy rate (61%), provincial literacy comparison, gender literacy gap (71% M / 50% F), and 26.2M out-of-school children.",
+    "url": "/data/education/",
+    "tags": [
+      "education",
+      "literacy rate",
+      "female literacy",
+      "out of school children",
+      "school completion",
+      "education spending",
+      "primary education",
+      "secondary education",
+      "human capital",
+      "schools pakistan"
+    ]
+  },
+  {
+    "title": "Pakistan Public Health & Demographic Health Indicators Data",
+    "type": "Data Observatory: Health",
+    "description": "Verified health indicators: child immunization coverage (73%), total fertility rate (3.6 births/woman), prenatal healthcare consultations, and maternal health access.",
+    "url": "/data/health/",
+    "tags": [
+      "health",
+      "public health",
+      "child immunization",
+      "vaccination",
+      "fertility rate",
+      "prenatal care",
+      "contraceptive",
+      "maternal health",
+      "hospitals",
+      "infant health"
+    ]
+  },
+  {
+    "title": "Pakistan Digital Access, Mobile & Telecom Infrastructure Data",
+    "type": "Data Observatory: Digital Access",
+    "description": "Digital infrastructure data: 95% household mobile access, individual mobile ownership gender gap (30%), household broadband access (34%), and IT exports ($3.39B).",
+    "url": "/data/digital-access/",
+    "tags": [
+      "digital access",
+      "mobile phones",
+      "internet access",
+      "broadband",
+      "telecom",
+      "4g",
+      "mobile ownership gender gap",
+      "it exports",
+      "computer access",
+      "digital economy"
+    ]
+  },
+  {
+    "title": "Subnational Comparator: Provinces & Administrative Units",
+    "type": "Data Observatory: Comparator",
+    "description": "Side-by-side empirical comparison of Punjab, Sindh, Khyber Pakhtunkhwa, Balochistan, and Islamabad across Census 2023 population, land area, urbanization, and living standards.",
+    "url": "/data/compare/",
+    "tags": [
+      "compare",
+      "provinces comparator",
+      "punjab vs sindh",
+      "balochistan vs punjab",
+      "kp vs sindh",
+      "subnational comparison",
+      "provincial comparison",
+      "territorial scale",
+      "provincial density"
+    ]
+  },
+  {
+    "title": "CSS Aspirants & Researchers Fast-Fact Matrix",
+    "type": "Data Observatory: Fast Facts",
+    "description": "Verified official statistics for Pakistan competitive exams (CSS, PMS), academic research, and policy journalism with one-click copyable APA citations.",
+    "url": "/data/quick-facts/",
+    "tags": [
+      "css",
+      "pms",
+      "css pakistan affairs",
+      "fast facts",
+      "exam facts",
+      "pakistan facts",
+      "css current affairs",
+      "cheat sheet",
+      "citations",
+      "official numbers"
+    ]
+  },
+  {
+    "title": "Open Public Data Downloads Hub",
+    "type": "Data Observatory: Downloads",
+    "description": "Download machine-readable CSV datasets: Census 2023 population, HIES 2024–25 income, inflation, and public debt under Creative Commons CC-BY 4.0.",
+    "url": "/data/downloads/",
+    "tags": [
+      "downloads",
+      "csv",
+      "open data",
+      "census 2023 csv",
+      "hies download",
+      "raw data",
+      "pakistan datasets",
+      "excel data"
+    ]
+  },
+  {
+    "title": "Data Observatory Sources & Verification Methodology",
+    "type": "Data Observatory: Methodology",
+    "description": "Verification policies, primary official authorities (PBS, Finance Division, SBP), definition hygiene, and search intent mapping standards.",
+    "url": "/data/methodology/",
+    "tags": [
+      "methodology",
+      "data sources",
+      "pbs",
+      "verification",
+      "definitions",
+      "citations",
+      "academic authority"
     ]
   }
 ]

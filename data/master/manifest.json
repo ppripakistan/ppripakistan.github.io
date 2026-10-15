@@ -1,0 +1,44 @@
+{
+  "dataset_name": "PPRI Pakistan Search-Driven Data Observatory Dataset",
+  "version": "0.2.0",
+  "built_on": "2026-10-15",
+  "market": "Pakistan",
+  "counts": {
+    "canonical_observations": 275,
+    "indicator_definitions": 92,
+    "geography_entities": 165,
+    "source_registry_records": 79,
+    "candidate_query_variants": 388,
+    "canonical_query_clusters": 67,
+    "canonical_pages": 67,
+    "Google_Year_in_Search_rank_records": 129,
+    "deduplicated_YIS_terms": 129,
+    "query_to_indicator_links": 101
+  },
+  "search_evidence_policy": "YIS = trending-query evidence, not volume; candidate variants unmeasured; absolute/monthly volume blank.",
+  "fact_policy": "One canonical observation per indicator/geography/period/dimension. CSV is master; JSON is the same facts serialized for website builds.",
+  "important_gaps": [
+    "District numeric workbooks not downloaded/extracted",
+    "Keyword Planner and Google Trends numerical exports absent",
+    "Full source chapter/table extraction not complete",
+    "Current district boundary crosswalk not completed",
+    "Some SDG indicator definitions require detailed table verification"
+  ],
+  "principal_files": [
+    "facts/observations.csv",
+    "facts/observations.json",
+    "facts/indicator_catalog.csv",
+    "search/google_year_in_search_rankings.csv",
+    "search/google_year_in_search_terms.csv",
+    "search/query_variants.csv",
+    "search/query_clusters.csv",
+    "pages/page_catalog.csv",
+    "geography/geographies.csv",
+    "relations/query_fact_map.csv",
+    "sources/source_registry.csv",
+    "sources/source_dataset_index.csv",
+    "sources/next_extraction_queue.csv",
+    "quality/data_quality_report.csv",
+    "scripts/validate_dataset.py"
+  ]
+}

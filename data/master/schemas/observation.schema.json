@@ -1,0 +1,54 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "PPRI observation",
+  "type": "object",
+  "required": [
+    "observation_id",
+    "indicator_id",
+    "geography_id",
+    "reference_period",
+    "value",
+    "unit",
+    "source_id",
+    "source_url",
+    "verification_status"
+  ],
+  "properties": {
+    "observation_id": {
+      "type": "string"
+    },
+    "indicator_id": {
+      "type": "string"
+    },
+    "geography_id": {
+      "type": "string"
+    },
+    "reference_period": {
+      "type": "string"
+    },
+    "dimension": {
+      "type": "string"
+    },
+    "value": {
+      "type": [
+        "number",
+        "string"
+      ]
+    },
+    "unit": {
+      "type": "string"
+    },
+    "source_id": {
+      "type": "string"
+    },
+    "source_url": {
+      "type": "string"
+    },
+    "verification_status": {
+      "type": "string"
+    },
+    "caveat": {
+      "type": "string"
+    }
+  }
+}

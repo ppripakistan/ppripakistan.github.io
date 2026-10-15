@@ -1,0 +1,10 @@
+indicator_label,reference_period,dimension,value,unit,source_id,definition,caveat
+Average time to maturity of domestic government securities,End-March 2026,,3.86,years,PES_2026_COMPLETE,Average time to maturity of domestic government securities.,Check table definition before comparing across years.
+Domestic saving-to-GDP ratio,FY2025–26,,7.03,percent_of_gdp,PES_HIGHLIGHTS_2026,PES headline ratio.,Do not conflate with national savings.
+IT exports,July–March FY2025–26,,3388,USD_million,PES_2025_26,Economic Survey IT chapter headline for reported period.,Partial-year figure only; do not label as full FY2026 exports.
+Per-capita income,FY2025–26,,1901,USD_per_person_per_year,PES_HIGHLIGHTS_2026,Pakistan Economic Survey headline.,Nominal US-dollar figure; exchange rates and national-account revisions affect comparability.
+Domestic public debt,End-March 2026,debt_component=domestic,57566,PKR_billion,PES_2026_COMPLETE,Domestic public debt,End-March 2026; Rs billion; rounded.
+External public debt,End-March 2026,debt_component=external,25720,PKR_billion,PES_2026_COMPLETE,External public debt,End-March 2026; Rs billion; rounded; components sum to Rs 1bn above total due rounding.
+Total public debt,End-March 2026,debt_component=total,83285,PKR_billion,PES_2026_COMPLETE,Total public debt,End-March 2026; Rs billion; rounded.
+Real GDP growth,FY2025–26,,3.7,percent,PES_HIGHLIGHTS_2026,Pakistan Economic Survey headline.,Provisional estimate; update when national accounts are revised.
+Annual real GDP growth (provisional),FY2025–26 provisional,,3.7,percent,PES_2026_COMPLETE,Provisional annual real GDP growth.,Preserve provisional label; compare only after revision check.

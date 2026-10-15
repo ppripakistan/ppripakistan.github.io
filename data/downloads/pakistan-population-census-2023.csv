@@ -1,0 +1,23 @@
+geography_name,geography_type,indicator_label,reference_period,dimension,value,unit,source_id,caveat
+Pakistan,national,Average household size,Census 2023,,6.3,persons_per_household,PBS_CENSUS_TABLE1_NATIONAL,Rounded to two decimals.
+Pakistan,country,Census population by sex,Census 2017,sex=female,101344632,people,PBS_CENSUS_KEY_FINDINGS,"Counts are census enumerations, not projections."
+Pakistan,country,Census population by sex,Census 2017,sex=male,106318220,people,PBS_CENSUS_KEY_FINDINGS,"Counts are census enumerations, not projections."
+Pakistan,country,Census population by sex,Census 2017,sex=transgender,21774,people,PBS_CENSUS_KEY_FINDINGS,"Counts are census enumerations, not projections."
+Pakistan,country,Census population by sex,Census 2023,sex=female,117154694,people,PBS_CENSUS_KEY_FINDINGS,"Counts are census enumerations, not projections."
+Pakistan,country,Census population by sex,Census 2023,sex=male,124324406,people,PBS_CENSUS_KEY_FINDINGS,"Counts are census enumerations, not projections."
+Pakistan,country,Census population by sex,Census 2023,sex=transgender,20331,people,PBS_CENSUS_KEY_FINDINGS,"Counts are census enumerations, not projections."
+Pakistan,national,Annual population growth rate,Census 2017–2023,,2.55,percent_per_year,PBS_CENSUS_TABLE1_NATIONAL,Not a current 2026 population growth estimate.
+Balochistan,province,"Annual population growth, 2017–2023",Census 2017–2023,,3.2,percent_per_year,PBS_CENSUS_TABLE1_NATIONAL,"Historical census growth, not a 2026 projection."
+Islamabad Capital Territory,federal_territory,"Annual population growth, 2017–2023",Census 2017–2023,,2.8,percent_per_year,PBS_CENSUS_TABLE1_NATIONAL,"Historical census growth, not a 2026 projection."
+Khyber Pakhtunkhwa,province,"Annual population growth, 2017–2023",Census 2017–2023,,2.38,percent_per_year,PBS_CENSUS_TABLE1_NATIONAL,"Historical census growth, not a 2026 projection."
+Punjab,province,"Annual population growth, 2017–2023",Census 2017–2023,,2.53,percent_per_year,PBS_CENSUS_TABLE1_NATIONAL,"Historical census growth, not a 2026 projection."
+Sindh,province,"Annual population growth, 2017–2023",Census 2017–2023,,2.57,percent_per_year,PBS_CENSUS_TABLE1_NATIONAL,"Historical census growth, not a 2026 projection."
+Pakistan,national,Total population at previous census,Census 2017,,207684626,people,PBS_CENSUS_TABLE1_NATIONAL,Boundary/coverage comparability should be considered when interpreting growth.
+Pakistan,national,Total enumerated population,Census 2023,,241499431,people,PBS_CENSUS_TABLE1_NATIONAL,Census total covers four provinces and ICT in this Table 1 series; AJK and GB are separate.
+Balochistan,province,"Population, 2023 census",Census 2023,,14894402,people,PBS_CENSUS_TABLE1_NATIONAL,"For ICT, this is a federal territory, not a province."
+Islamabad Capital Territory,federal_territory,"Population, 2023 census",Census 2023,,2363863,people,PBS_CENSUS_TABLE1_NATIONAL,"For ICT, this is a federal territory, not a province."
+Khyber Pakhtunkhwa,province,"Population, 2023 census",Census 2023,,40856097,people,PBS_CENSUS_TABLE1_NATIONAL,"For ICT, this is a federal territory, not a province."
+Punjab,province,"Population, 2023 census",Census 2023,,127688922,people,PBS_CENSUS_TABLE1_NATIONAL,"For ICT, this is a federal territory, not a province."
+Pakistan rural,national,Rural population,Census 2023 Table 1,,147748707,people,PBS_CENSUS_TABLE1_NATIONAL,Some key-findings report tables show slightly different urban/rural split totals; use one table family consistently and preserve table citation.
+Sindh,province,"Population, 2023 census",Census 2023,,55696147,people,PBS_CENSUS_TABLE1_NATIONAL,"For ICT, this is a federal territory, not a province."
+Pakistan urban,national,Urban population,Census 2023 Table 1,,93750724,people,PBS_CENSUS_TABLE1_NATIONAL,Some key-findings report tables show slightly different urban/rural split totals; use one table family consistently and preserve table citation.

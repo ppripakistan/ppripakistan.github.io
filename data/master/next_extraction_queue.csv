@@ -1,0 +1,12 @@
+﻿dataset_name,primary_source,priority,expected_fields,target_clusters,status
+PBS Census Table 1 district workbooks,PBS Census 2023 Table 1 province/ICT XLSX files,P1,"District population, households, density, area, sex, rural/urban and growth",district-population;population-density;district-comparator,Linked; binary workbooks not included
+PBS Census education/literacy tables,PBS Census 2023 detailed Excel table index,P1,"Age groups, mother tongue, literacy, enrollment and OOSC where tables provide it",literacy-province;out-of-school;age-structure;mother-tongue,Source table available; extraction needed
+HIES social indicator tables,PBS HIES 2024–25 Social Report,P1,"Internet, devices, water, sanitation, health, school completion and gender parity",household-internet;drinking-water;sanitation;child-immunization,Partial headline values only; full-table validation needed
+Monthly CPI/SPI/WPI time series,PBS Price Statistics,P1,Latest monthly/weekly index levels and inflation history,inflation;food-prices,Latest snapshot in v0.1; automate refresh
+Monthly external trade,PBS External Trade Statistics,P1,"Exports, imports, balance and commodity detail",trade-balance,Official workbooks listed; data not imported
+SBP remittance and FX series,SBP EasyData / Economic Data,P1,"Monthly remittances, official exchange rates, reserves",remittances;exchange-rate,Source portal linked; series selection/export pending
+FY2026–27 federal and provincial fiscal data,Finance Division budget/fiscal operations,P1,"Budgets, actuals, revenue, development expenditure, NFC transfers",federal-budget;provincial-budgets;nfc-award;tax-revenue,Official PDFs indexed; detailed values pending extraction
+PTA broadband/telecom series,PTA annual report and telecom indicators,P2,Mobile and broadband subscriptions by technology,internet-use;mobile-ownership,Need latest exact table; subscriptions not individual people
+Official market/regulated price series,"OGRA, NEPRA and market provider with provenance",P2,"Petroleum notifications, tariff categories and gold market quotes",petrol;gold-rates,Dynamic source/source policy required
+NDMA/PMD historical disaster tables,NDMA reports and PMD rainfall/flood data,P2,"Flood events, affected districts and official alerts",floods,Join historical dataset to current timestamped alerts
+ECP constituency result tables,Election Commission of Pakistan,P2,"Votes, turnout, constituency metadata and official revisions",election-results,Official source extraction pending

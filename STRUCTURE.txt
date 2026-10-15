@@ -24,12 +24,18 @@ PPRI_Pakistan_Website_Template/
 ├── consultation/submissions.html
 ├── consultation/survey.html
 ├── contact.html
-├── data/demographics.html
-├── data/economy.html
-├── data/governance.html
-├── data/index.html
-├── data/methodology.html
-├── data/population.html
+├── data/centre.html
+├── data/compare/index.html
+├── data/digital-access/index.html
+├── data/downloads/index.html
+├── data/economy/index.html
+├── data/education/index.html
+├── data/health/index.html
+├── data/living-standards/index.html
+├── data/master/ (Permanent Observation & Query Fact Stores)
+├── data/methodology/index.html
+├── data/population/index.html
+├── data/public-finance/index.html
 ├── documents/briefs/.gitkeep
 ├── documents/datasets/.gitkeep
 ├── documents/policy-papers/.gitkeep

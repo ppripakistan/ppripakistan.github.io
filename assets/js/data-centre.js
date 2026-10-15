@@ -272,5 +272,299 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
+  // --- INTERACTIVE DATA OBSERVATORY KNOWLEDGE MAP ---
+  function initKnowledgeMap() {
+    const kmapContainer = document.getElementById("kmapInteractiveNodes");
+    if (!kmapContainer) return;
+
+    const domains = [
+      {
+        id: "population",
+        title: "Population & Cities",
+        icon: "👥",
+        badge: "Census 2023",
+        metric: "241.49M",
+        metricSub: "National Population (+2.55%/yr)",
+        url: "/data/population/",
+        topics: ["National Population (241.5M)", "Provincial Breakdown", "Urban vs Rural (38.8%)", "Sex Ratio (106M:100F)", "Household Size (6.3)", "Top 22 Cities (Karachi, Lahore)"],
+        researchTitle: "Four Provinces, 241M People: Administrative Scale",
+        researchUrl: "/articles/four-provinces-241-million-people-administrative-scale.html",
+        keywords: ["population", "census", "karachi", "lahore", "faisalabad", "demographics", "urban", "rural", "gender", "growth", "cities", "household", "languages"]
+      },
+      {
+        id: "economy",
+        title: "Economy & Inflation",
+        icon: "📈",
+        badge: "PBS / SBP / PES",
+        metric: "10.26%",
+        metricSub: "National CPI YoY Inflation",
+        url: "/data/economy/",
+        topics: ["CPI Inflation (10.26%)", "SPI Weekly (8.4%)", "Real GDP Growth (3.7%)", "GDP Per Capita ($1,680)", "LSM Output (+10.37%)", "IT Exports ($3.39B)"],
+        researchTitle: "Income Went Up. So Why Does Life Feel Harder?",
+        researchUrl: "/research/reports/income-went-up-why-does-life-feel-harder.html",
+        keywords: ["economy", "inflation", "cpi", "spi", "food prices", "gdp", "growth", "prices", "remittances", "trade", "wages", "lsm", "dollar", "rupee", "petrol"]
+      },
+      {
+        id: "living-standards",
+        title: "Living Standards & Income",
+        icon: "🏠",
+        badge: "HIES 2024–25",
+        metric: "PKR 63,450",
+        metricSub: "Mean Monthly Household Income",
+        url: "/data/living-standards/",
+        topics: ["Monthly Income Quintiles", "Household Consumption", "Drinking Water (97%)", "Sanitation (74%)", "Electricity (95%)", "Clean Fuel (38%)"],
+        researchTitle: "Same Country, Different Life: Spatial Inequality",
+        researchUrl: "/research/reports/same-country-different-life-district-access.html",
+        keywords: ["living standards", "income", "household", "hies", "consumption", "poverty", "water", "sanitation", "electricity", "energy", "welfare", "wages"]
+      },
+      {
+        id: "public-finance",
+        title: "Public Finance & NFC",
+        icon: "⚖️",
+        badge: "Finance Division",
+        metric: "Rs 5.5T+",
+        metricSub: "Federal Divisible Pool Size",
+        url: "/data/public-finance/",
+        topics: ["7th NFC Formula Weights", "Provincial Divisible Shares", "Total Public Debt (Rs 83.3T)", "Debt Maturity (3.86 Yrs)", "Education Outlay (Rs 962B)"],
+        researchTitle: "Does Money Work Better Spent Closer to the People?",
+        researchUrl: "/research/reports/does-money-work-better-spent-closer-to-people.html",
+        keywords: ["public finance", "nfc", "divisible pool", "budget", "debt", "tax", "fbr", "revenue", "transfers", "fiscal", "spending", "provinces"]
+      },
+      {
+        id: "education",
+        title: "Education & Literacy",
+        icon: "🎓",
+        badge: "PBS / AEPAM",
+        metric: "61.0%",
+        metricSub: "National Literacy Rate (10+ Yrs)",
+        url: "/data/education/",
+        topics: ["Literacy Rate (61%)", "Gender Gap (71% M / 50% F)", "Out-of-School Children (26.2M)", "Primary Completion (70%)", "Secondary Completion (30%)"],
+        researchTitle: "The 26 Million Out-of-School Children Crisis",
+        researchUrl: "/research/reports/same-country-different-life-district-access.html",
+        keywords: ["education", "literacy", "schools", "out of school", "completion", "gender gap", "parity", "children", "attendance", "teachers"]
+      },
+      {
+        id: "health",
+        title: "Public Health",
+        icon: "🏥",
+        badge: "PDHS / PBS",
+        metric: "73.0%",
+        metricSub: "Child Immunization Coverage",
+        url: "/data/health/",
+        topics: ["Child Immunization (73%)", "Fertility Rate (3.6 Births)", "Prenatal Consultation (88%)", "Contraceptive Use (38%)", "Health Decision Autonomy (56%)"],
+        researchTitle: "How Far Is Government? Health Administrative Distance",
+        researchUrl: "/articles/how-far-is-government-administrative-distance.html",
+        keywords: ["health", "immunization", "vaccine", "fertility", "prenatal", "maternal", "hospital", "contraceptive", "doctors", "clinics"]
+      },
+      {
+        id: "digital-access",
+        title: "Digital Access & Tech",
+        icon: "🌐",
+        badge: "HIES / PTA",
+        metric: "95.0%",
+        metricSub: "Household Mobile Ownership",
+        url: "/data/digital-access/",
+        topics: ["Mobile Access (95%)", "Individual Gender Gap (69% M / 39% F)", "Broadband Access (34%)", "Internet Users (57%)", "Computer Access (14%)"],
+        researchTitle: "The Price of a Simple Task: Digital Governance",
+        researchUrl: "/research/reports/price-of-a-simple-task-pakistan-bureaucracy-cost.html",
+        keywords: ["digital", "internet", "broadband", "mobile", "smartphone", "telecom", "gender gap", "technology", "it exports", "computer"]
+      },
+      {
+        id: "compare",
+        title: "Provinces Comparator",
+        icon: "📊",
+        badge: "Multi-Domain",
+        metric: "5 Units",
+        metricSub: "Punjab, Sindh, KP, Balochistan, ICT",
+        url: "/data/compare/",
+        topics: ["Population Shares", "Territorial Land Area", "Population Density", "Urbanization Rates", "Provincial Income Levels", "NFC Divisible Shares"],
+        researchTitle: "The Provincial Reorganization of Pakistan",
+        researchUrl: "/research/policy-papers/provincial-reorganization-of-pakistan.html",
+        keywords: ["compare", "provinces", "punjab", "sindh", "kp", "balochistan", "ict", "islamabad", "subnational", "regions", "density", "area"]
+      }
+    ];
+
+    const container = kmapContainer;
+    const svgCanvas = document.getElementById("kmapSvgCanvas");
+    const inspectorEl = document.getElementById("kmapInspector");
+    const searchInput = document.getElementById("kmapSearchInput");
+    const quickChips = document.querySelectorAll(".kmap-quick-chip");
+    const viewGraphBtn = document.getElementById("btnViewGraph");
+    const viewGridBtn = document.getElementById("btnViewGrid");
+    const graphStage = document.getElementById("kmapStage");
+    const gridStage = document.getElementById("kmapGridStage");
+
+    function positionNodes() {
+      const rect = container.getBoundingClientRect();
+      const cx = rect.width / 2;
+      const cy = rect.height / 2;
+      const rx = Math.min(cx - 95, 230);
+      const ry = Math.min(cy - 50, 180);
+
+      let svgLines = "";
+
+      domains.forEach((d, i) => {
+        const angle = (i * 2 * Math.PI / domains.length) - (Math.PI / 2);
+        const x = cx + rx * Math.cos(angle);
+        const y = cy + ry * Math.sin(angle);
+
+        let node = document.getElementById("kmap-node-" + d.id);
+        if (!node) {
+          node = document.createElement("a");
+          node.id = "kmap-node-" + d.id;
+          node.href = d.url;
+          node.className = "kmap-node";
+          node.setAttribute("data-domain", d.id);
+          node.innerHTML = `
+            <span class="kmap-node-icon">${d.icon}</span>
+            <div class="kmap-node-text">
+              <strong>${d.title}</strong>
+              <span>${d.metric}</span>
+            </div>
+          `;
+          container.appendChild(node);
+
+          node.addEventListener("click", function (e) {
+            e.preventDefault();
+            selectDomain(d.id);
+          });
+
+          node.addEventListener("mouseenter", function () {
+            selectDomain(d.id, false);
+          });
+        }
+
+        node.style.left = x + "px";
+        node.style.top = y + "px";
+
+        svgLines += `<line x1="${cx}" y1="${cy}" x2="${x}" y2="${y}" stroke="rgba(94, 234, 212, 0.35)" stroke-width="1.5" stroke-dasharray="4,4" />`;
+      });
+
+      if (svgCanvas) {
+        svgCanvas.innerHTML = svgLines;
+      }
+    }
+
+    function selectDomain(domainId, scrollToInspector) {
+      const d = domains.find(item => item.id === domainId);
+      if (!d || !inspectorEl) return;
+
+      document.querySelectorAll(".kmap-node").forEach(n => {
+        n.classList.toggle("active", n.getAttribute("data-domain") === domainId);
+      });
+
+      const topicChips = d.topics.map(t => `<span class="kmap-insp-chip">${t}</span>`).join("");
+
+      inspectorEl.innerHTML = `
+        <div class="kmap-insp-header">
+          <div class="kmap-insp-icon">${d.icon}</div>
+          <div>
+            <h3 class="kmap-insp-title">${d.title}</h3>
+            <span class="kmap-insp-badge">&check; ${d.badge} Verified</span>
+          </div>
+        </div>
+
+        <div class="kmap-insp-stat-box">
+          <div class="kmap-insp-stat-val">${d.metric}</div>
+          <div class="kmap-insp-stat-sub">${d.metricSub}</div>
+        </div>
+
+        <div class="kmap-insp-topics">
+          <div class="kmap-insp-topics-label">Verified Topics &amp; Indicators:</div>
+          <div class="kmap-insp-chips">
+            ${topicChips}
+          </div>
+        </div>
+
+        <div class="kmap-insp-research">
+          <strong>Related Policy Analysis:</strong>
+          <a href="${d.researchUrl}">${d.researchTitle} &rarr;</a>
+        </div>
+
+        <div class="kmap-insp-actions">
+          <a href="${d.url}" class="obs-btn obs-btn-primary" style="justify-content:center; text-align:center;">
+            Open ${d.title} Hub &rarr;
+          </a>
+          <a href="/data/downloads/" class="obs-btn obs-btn-outline" style="justify-content:center; text-align:center; font-size:0.82rem;">
+            &darr; Download Domain CSV
+          </a>
+        </div>
+      `;
+    }
+
+    function filterNodes(q) {
+      q = q.toLowerCase().trim();
+      let firstMatch = null;
+
+      domains.forEach(d => {
+        const node = document.getElementById("kmap-node-" + d.id);
+        if (!node) return;
+
+        const isMatch = !q ||
+          d.title.toLowerCase().includes(q) ||
+          d.metric.toLowerCase().includes(q) ||
+          d.topics.some(t => t.toLowerCase().includes(q)) ||
+          d.keywords.some(k => k.toLowerCase().includes(q));
+
+        if (isMatch) {
+          node.classList.remove("dimmed");
+          if (q) {
+            node.classList.add("highlight");
+            if (!firstMatch) firstMatch = d.id;
+          } else {
+            node.classList.remove("highlight");
+          }
+        } else {
+          node.classList.add("dimmed");
+          node.classList.remove("highlight");
+        }
+      });
+
+      if (firstMatch) {
+        selectDomain(firstMatch, false);
+      } else if (!q) {
+        selectDomain("population", false);
+      }
+    }
+
+    if (searchInput) {
+      searchInput.addEventListener("input", function () {
+        filterNodes(this.value);
+      });
+    }
+
+    quickChips.forEach(chip => {
+      chip.addEventListener("click", function () {
+        const query = this.getAttribute("data-query");
+        if (searchInput) {
+          searchInput.value = query;
+          filterNodes(query);
+        }
+      });
+    });
+
+    if (viewGraphBtn && viewGridBtn && graphStage && gridStage) {
+      viewGraphBtn.addEventListener("click", function () {
+        viewGraphBtn.classList.add("active");
+        viewGridBtn.classList.remove("active");
+        graphStage.style.display = "grid";
+        gridStage.style.display = "none";
+        positionNodes();
+      });
+
+      viewGridBtn.addEventListener("click", function () {
+        viewGridBtn.classList.add("active");
+        viewGraphBtn.classList.remove("active");
+        graphStage.style.display = "none";
+        gridStage.style.display = "grid";
+      });
+    }
+
+    positionNodes();
+    selectDomain("population", false);
+    window.addEventListener("resize", positionNodes);
+  }
+
   renderDistricts();
+  initKnowledgeMap();
 });
