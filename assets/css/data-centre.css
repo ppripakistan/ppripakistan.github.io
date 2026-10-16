@@ -278,3 +278,20 @@
   color: #64748b;
   line-height: 1.4;
 }
+
+/* Fail-safe backup for Data Centre Hero */
+.dc-hero {
+  background-color: #072e27 !important;
+  background: #072e27 radial-gradient(circle at 85% 15%, rgba(168, 224, 106, 0.12) 0%, transparent 45%),
+              linear-gradient(135deg, #072e27 0%, #0e443c 55%, #051d19 100%) !important;
+  color: #ffffff !important;
+}
+.dc-hero-title {
+  color: #ffffff !important;
+}
+.dc-hero-title span {
+  color: #a8e06a !important;
+}
+.dc-hero-lead {
+  color: #e2f0e8 !important;
+}

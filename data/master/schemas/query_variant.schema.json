@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "PPRI query variant",
+  "type": "object",
+  "required": [
+    "query_id",
+    "cluster_id",
+    "query_text",
+    "language",
+    "market",
+    "search_evidence_status"
+  ],
+  "properties": {
+    "query_id": {
+      "type": "string"
+    },
+    "cluster_id": {
+      "type": "string"
+    },
+    "query_text": {
+      "type": "string"
+    },
+    "language": {
+      "type": "string"
+    },
+    "market": {
+      "const": "Pakistan"
+    },
+    "search_evidence_status": {
+      "type": "string"
+    },
+    "monthly_search_volume": {
+      "type": "string"
+    },
+    "page_path": {
+      "type": "string"
+    }
+  }
+}

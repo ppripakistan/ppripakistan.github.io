@@ -43,6 +43,8 @@
       html.map-embed .p6-callout { display: none !important; }
       html.map-embed #p6CurrentMap { height: 100vh; min-height: 420px; border: 0; border-radius: 0; }
     </style>
+    <link rel="preconnect" href="https://unpkg.com" crossorigin />
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
     <link
       rel="stylesheet"
       href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
@@ -53,6 +55,7 @@
       src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
       integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
       crossorigin=""
+      defer
     ></script>
       <script type="application/ld+json">
     {
@@ -91,10 +94,7 @@
     <header class="site-header">
       <div class="container navbar">
         <a class="brand" href="/index.html"
-          ><img
-            src="/assets/images/brand/ppri-logo-header.jpg"
-            alt="PPRI logo"
-          /><span class="brand-text"
+          ><img src="/assets/images/brand/ppri-logo-header.jpg" alt="PPRI logo" width="44" height="44" loading="eager" decoding="async" /><span class="brand-text"
             ><strong>PPRI</strong
             ><span>Pakistan Provincial Reform Institute</span></span
           ></a
@@ -219,6 +219,10 @@
             src="/assets/images/brand/ppri-logo-header.jpg"
             alt="PPRI — Pakistan Provincial Reform Institute"
             class="footer-logo"
+            width="84"
+            height="84"
+            loading="lazy"
+            decoding="async"
           />
           <p>Pakistan Provincial Reform Institute</p>
           <p>
@@ -278,6 +282,7 @@
     <script
       src="https://cdn.jsdelivr.net/npm/@turf/turf@7.2.0/turf.min.js"
       crossorigin="anonymous"
+      defer
     ></script>
     <script src="/assets/js/modules/phase6-maps.js?v=6.22" defer></script>
   </body>

@@ -34,13 +34,12 @@ const PPRI_NAV = [
     label: "Explore",
     href: "/maps/index.html",
     items: [
-      ["Scenario Lab", "/maps/scenarios/index.html"],
-      ["Current administrative map", "/maps/current/administrative.html"],
       ["Data Observatory", "/data/centre.html"],
-      ["Provincial comparison", "/data/provincial-comparison.html"],
-      ["District explorer", "/data/district-explorer.html"],
-      ["Open Datasets", "/data/datasets.html"],
-      ["Sources", "/sources/index.html"],
+      ["Provinces Comparator", "/data/compare/"],
+      ["Scenario Lab", "/maps/scenarios/index.html"],
+      ["Administrative Maps", "/maps/index.html"],
+      ["Open Data Downloads", "/data/downloads/"],
+      ["Sources Registry", "/sources/index.html"],
       ["Methodology", "/methodology/index.html"],
     ],
   },
@@ -84,6 +83,18 @@ function buildEnhancedNavigation(nav) {
   const home = currentLinks.find((link) => normalizePath(new URL(link.href).pathname) === "/");
   const search = currentLinks.find((link) => link.classList.contains("nav-search"));
 
+  let navCloseTimer = null;
+  const closeAllNavGroups = () => {
+    if (navCloseTimer) {
+      clearTimeout(navCloseTimer);
+      navCloseTimer = null;
+    }
+    nav.querySelectorAll(".nav-group.is-open").forEach((other) => {
+      other.classList.remove("is-open");
+      other.querySelector(".nav-trigger")?.setAttribute("aria-expanded", "false");
+    });
+  };
+
   const fragment = document.createDocumentFragment();
   if (home) {
     home.removeAttribute("aria-current");
@@ -93,6 +104,9 @@ function buildEnhancedNavigation(nav) {
       nav.classList.remove("is-open");
       const mb = document.querySelector(".menu-toggle");
       if (mb) mb.setAttribute("aria-expanded", "false");
+    });
+    home.addEventListener("mouseenter", () => {
+      if (window.innerWidth > 900) closeAllNavGroups();
     });
     fragment.appendChild(home);
   }
@@ -130,11 +144,13 @@ function buildEnhancedNavigation(nav) {
 
     if (groupIsCurrent) wrapper.classList.add("is-current");
 
-    let closeTimer = null;
     wrapper.addEventListener("mouseenter", () => {
       if (window.innerWidth > 900) {
-        if (closeTimer) { clearTimeout(closeTimer); closeTimer = null; }
-        document.querySelectorAll(".nav-group.is-open").forEach((other) => {
+        if (navCloseTimer) {
+          clearTimeout(navCloseTimer);
+          navCloseTimer = null;
+        }
+        nav.querySelectorAll(".nav-group.is-open").forEach((other) => {
           if (other !== wrapper) {
             other.classList.remove("is-open");
             other.querySelector(".nav-trigger")?.setAttribute("aria-expanded", "false");
@@ -147,17 +163,22 @@ function buildEnhancedNavigation(nav) {
 
     wrapper.addEventListener("mouseleave", () => {
       if (window.innerWidth > 900) {
-        closeTimer = setTimeout(() => {
+        if (navCloseTimer) clearTimeout(navCloseTimer);
+        navCloseTimer = setTimeout(() => {
           wrapper.classList.remove("is-open");
           trigger.setAttribute("aria-expanded", "false");
-        }, 220);
+          navCloseTimer = null;
+        }, 180);
       }
     });
 
     trigger.addEventListener("click", () => {
-      if (closeTimer) { clearTimeout(closeTimer); closeTimer = null; }
+      if (navCloseTimer) {
+        clearTimeout(navCloseTimer);
+        navCloseTimer = null;
+      }
       const willOpen = !wrapper.classList.contains("is-open");
-      document.querySelectorAll(".nav-group.is-open").forEach((other) => {
+      nav.querySelectorAll(".nav-group.is-open").forEach((other) => {
         other.classList.remove("is-open");
         other.querySelector(".nav-trigger")?.setAttribute("aria-expanded", "false");
       });
@@ -167,9 +188,7 @@ function buildEnhancedNavigation(nav) {
 
     menu.querySelectorAll("a").forEach((item) => {
       item.addEventListener("click", () => {
-        if (closeTimer) { clearTimeout(closeTimer); closeTimer = null; }
-        wrapper.classList.remove("is-open");
-        trigger.setAttribute("aria-expanded", "false");
+        closeAllNavGroups();
         nav.classList.remove("is-open");
         const mb = document.querySelector(".menu-toggle");
         if (mb) mb.setAttribute("aria-expanded", "false");
@@ -186,27 +205,31 @@ function buildEnhancedNavigation(nav) {
       const mb = document.querySelector(".menu-toggle");
       if (mb) mb.setAttribute("aria-expanded", "false");
     });
+    search.addEventListener("mouseenter", () => {
+      if (window.innerWidth > 900) closeAllNavGroups();
+    });
     fragment.appendChild(search);
   }
+
+  nav.addEventListener("mouseleave", () => {
+    if (window.innerWidth > 900) {
+      if (navCloseTimer) clearTimeout(navCloseTimer);
+      navCloseTimer = setTimeout(closeAllNavGroups, 180);
+    }
+  });
 
   nav.replaceChildren(fragment);
   nav.dataset.enhanced = "true";
 
   document.addEventListener("click", (event) => {
     if (!nav.contains(event.target)) {
-      nav.querySelectorAll(".nav-group.is-open").forEach((group) => {
-        group.classList.remove("is-open");
-        group.querySelector(".nav-trigger")?.setAttribute("aria-expanded", "false");
-      });
+      closeAllNavGroups();
     }
   });
 
   document.addEventListener("keydown", (event) => {
     if (event.key === "Escape") {
-      nav.querySelectorAll(".nav-group.is-open").forEach((group) => {
-        group.classList.remove("is-open");
-        group.querySelector(".nav-trigger")?.setAttribute("aria-expanded", "false");
-      });
+      closeAllNavGroups();
     }
   });
 }

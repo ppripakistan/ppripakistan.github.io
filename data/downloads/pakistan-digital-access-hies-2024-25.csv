@@ -1,0 +1,31 @@
+geography_name,indicator_label,reference_period,dimension,value,unit,source_id,caveat
+Pakistan,Adults with bank or mobile-money account,HIES 2024–25,sdg=8.10.2,28,percent_of_adults_15_plus,PBS_HIES_DASHBOARD,Check age/denominator definition in source table before explanatory copy.
+Pakistan,Households with computer access,HIES 2018–19,,14,percent_of_households,PBS_HIES_DASHBOARD,Use household access definition; not equivalent to individual use or telecom subscriptions.
+Pakistan,Households with computer access,HIES 2024–25,,11,percent_of_households,PBS_HIES_DASHBOARD,Use household access definition; not equivalent to individual use or telecom subscriptions.
+Rural,Households with computer access,HIES 2018–19,,7,percent_of_households,PBS_HIES_DASHBOARD,Use household access definition; not equivalent to individual use or telecom subscriptions.
+Rural,Households with computer access,HIES 2024–25,,7,percent_of_households,PBS_HIES_DASHBOARD,Use household access definition; not equivalent to individual use or telecom subscriptions.
+Urban,Households with computer access,HIES 2018–19,,27,percent_of_households,PBS_HIES_DASHBOARD,Use household access definition; not equivalent to individual use or telecom subscriptions.
+Urban,Households with computer access,HIES 2024–25,,16,percent_of_households,PBS_HIES_DASHBOARD,Use household access definition; not equivalent to individual use or telecom subscriptions.
+Pakistan,Households using electricity/solar for lighting,HIES 2018–19,,95,percent_of_households,PBS_HIES_DASHBOARD,Use household access definition; not equivalent to individual use or telecom subscriptions.
+Pakistan,Households using electricity (grid and solar) for lighting,HIES 2024–25,,96,percent_of_households,PBS_HIES_202425,Use the HIES social report for disaggregations and confidence/denominator details.
+Rural,Households using electricity/solar for lighting,HIES 2018–19,,93,percent_of_households,PBS_HIES_DASHBOARD,Use household access definition; not equivalent to individual use or telecom subscriptions.
+Rural,Households using electricity/solar for lighting,HIES 2024–25,,94,percent_of_households,PBS_HIES_DASHBOARD,Use household access definition; not equivalent to individual use or telecom subscriptions.
+Urban,Households using electricity/solar for lighting,HIES 2018–19,,99,percent_of_households,PBS_HIES_DASHBOARD,Use household access definition; not equivalent to individual use or telecom subscriptions.
+Urban,Households using electricity/solar for lighting,HIES 2024–25,,98,percent_of_households,PBS_HIES_DASHBOARD,Use household access definition; not equivalent to individual use or telecom subscriptions.
+Pakistan,Households with internet access,HIES 2018–19,,34,percent_of_households,PBS_HIES_DASHBOARD,Use household access definition; not equivalent to individual use or telecom subscriptions.
+Pakistan,Households with internet usage,HIES 2024–25,,70,percent_of_households,PBS_HIES_202425,Use the HIES social report for disaggregations and confidence/denominator details.
+Rural,Households with internet access,HIES 2018–19,,24,percent_of_households,PBS_HIES_DASHBOARD,Use household access definition; not equivalent to individual use or telecom subscriptions.
+Rural,Households with internet access,HIES 2024–25,,61,percent_of_households,PBS_HIES_DASHBOARD,Use household access definition; not equivalent to individual use or telecom subscriptions.
+Urban,Households with internet access,HIES 2018–19,,51,percent_of_households,PBS_HIES_DASHBOARD,Use household access definition; not equivalent to individual use or telecom subscriptions.
+Urban,Households with internet access,HIES 2024–25,,82,percent_of_households,PBS_HIES_DASHBOARD,Use household access definition; not equivalent to individual use or telecom subscriptions.
+Pakistan,Households with mobile/smartphone access,HIES 2018–19,,95,percent_of_households,PBS_HIES_DASHBOARD,Use household access definition; not equivalent to individual use or telecom subscriptions.
+Pakistan,Households with mobile/smartphone access,HIES 2024–25,,96,percent_of_households,PBS_HIES_DASHBOARD,Use household access definition; not equivalent to individual use or telecom subscriptions.
+Rural,Households with mobile/smartphone access,HIES 2018–19,,93,percent_of_households,PBS_HIES_DASHBOARD,Use household access definition; not equivalent to individual use or telecom subscriptions.
+Rural,Households with mobile/smartphone access,HIES 2024–25,,95,percent_of_households,PBS_HIES_DASHBOARD,Use household access definition; not equivalent to individual use or telecom subscriptions.
+Urban,Households with mobile/smartphone access,HIES 2018–19,,98,percent_of_households,PBS_HIES_DASHBOARD,Use household access definition; not equivalent to individual use or telecom subscriptions.
+Urban,Households with mobile/smartphone access,HIES 2024–25,,98,percent_of_households,PBS_HIES_DASHBOARD,Use household access definition; not equivalent to individual use or telecom subscriptions.
+Pakistan,Mobile/smartphone ownership,HIES 2024–25,,50,percent,PBS_HIES_202425,Use the HIES social report for disaggregations and confidence/denominator details.
+Pakistan,Individuals with personal mobile/smartphone ownership,HIES 2024–25,sex=female,39,percent_of_population_age_10_plus,PBS_HIES_DASHBOARD,Do not confuse with household ownership/access.
+Pakistan,Individuals with personal mobile/smartphone ownership,HIES 2024–25,sex=male,69,percent_of_population_age_10_plus,PBS_HIES_DASHBOARD,Do not confuse with household ownership/access.
+Rural,Individuals with personal mobile/smartphone ownership,HIES 2024–25,,44,percent_of_population_age_10_plus,PBS_HIES_DASHBOARD,Do not confuse with household ownership/access.
+Urban,Individuals with personal mobile/smartphone ownership,HIES 2024–25,,58,percent_of_population_age_10_plus,PBS_HIES_DASHBOARD,Do not confuse with household ownership/access.

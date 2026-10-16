@@ -18,6 +18,16 @@
       b.innerHTML = "<div class='callout'>Unable to load search index. Please try again.</div>";
     });
 
+  function escapeHTML(str) {
+    if (!str) return "";
+    return String(str)
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;")
+      .replace(/'/g, "&#39;");
+  }
+
   function render(q) {
     q = q.trim().toLowerCase();
     const rows = q
@@ -36,9 +46,9 @@
     b.innerHTML =
       rows
         .map((x) => {
-          const typeBadge = x.type ? `<span class="card-meta">${x.type}</span>` : "";
+          const typeBadge = x.type ? `<span class="card-meta">${escapeHTML(x.type)}</span>` : "";
           const descText = x.description || x.text || "";
-          return `<a class="card card-link" href="${x.url}">${typeBadge}<h3>${x.title}</h3>${descText ? `<p>${descText}</p>` : ""}</a>`;
+          return `<a class="card card-link" href="${escapeHTML(x.url)}">${typeBadge}<h3>${escapeHTML(x.title)}</h3>${descText ? `<p>${escapeHTML(descText)}</p>` : ""}</a>`;
         })
         .join("") ||
       "<div class='callout'>No matching PPRI material was found.</div>";

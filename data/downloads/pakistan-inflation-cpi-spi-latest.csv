@@ -1,0 +1,8 @@
+geography_name,indicator_label,reference_period,value,unit,source_id,caveat
+Pakistan,"National CPI inflation, month-on-month",September 2026 vs August 2026,1.27,percent_mom,PBS_CPI_SEP2026,Month-on-month is not annual inflation.
+Pakistan,"National CPI inflation, year-on-year",September 2026 vs September 2025,10.26,percent_yoy,PBS_CPI_SEP2026,A monthly snapshot; use latest publication for a current page.
+Pakistan rural,"Rural CPI inflation, year-on-year",September 2026,10.5,percent_yoy,PBS_PRICE,Rounded to one decimal in the official monthly review.
+Pakistan urban,"Urban CPI inflation, year-on-year",September 2026,10.1,percent_yoy,PBS_PRICE,Rounded to one decimal in the official monthly review.
+Pakistan,"Average CPI inflation, Jul–Sep FY2026–27",July–September 2026–27 vs July–September 2025–26,10.2,percent_yoy_average,PBS_CPI_SEP2026,Period-average metric; not directly equivalent to September year-on-year CPI.
+Pakistan,Weekly SPI change,Week ended 2026-10-08,0.57,percent_week_on_week,PBS_PRICE,"This is a week-over-week index change, not year-on-year inflation."
+Pakistan,"Sensitive Price Indicator inflation, year-on-year",September 2026,8.4,percent_yoy,PBS_PRICE,Different basket and frequency from CPI.

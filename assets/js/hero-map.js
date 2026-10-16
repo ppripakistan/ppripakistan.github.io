@@ -246,6 +246,15 @@
     updateTooltipPosition();
   }
 
+  function clearAllHoverHighlights() {
+    scenarioLayersMap.forEach((l) => {
+      const path = l.getElement ? l.getElement() : null;
+      if (path) {
+        path.classList.remove("is-hovered", "is-dimmed");
+      }
+    });
+  }
+
   /* ── Tooltip Management ────────────────────────────────────────────────── */
   function showTooltip(unit) {
     if (!tooltip || !unit) return;
@@ -300,8 +309,52 @@
   document.addEventListener("mousemove", (e) => {
     mouseX = e.clientX;
     mouseY = e.clientY;
-    if (tooltipVisible) updateTooltipPosition();
+    if (tooltipVisible) {
+      const rect = section.getBoundingClientRect();
+      if (
+        e.clientY < rect.top ||
+        e.clientY > rect.bottom ||
+        e.clientX < rect.left ||
+        e.clientX > rect.right
+      ) {
+        hideTooltip();
+        clearAllHoverHighlights();
+      } else {
+        updateTooltipPosition();
+      }
+    }
   }, { passive: true });
+
+  window.addEventListener("scroll", () => {
+    if (tooltipVisible) {
+      hideTooltip();
+      clearAllHoverHighlights();
+    }
+  }, { passive: true });
+
+  section.addEventListener("mouseleave", () => {
+    hideTooltip();
+    clearAllHoverHighlights();
+  });
+
+  if (mapContainer) {
+    mapContainer.addEventListener("mouseleave", () => {
+      hideTooltip();
+      clearAllHoverHighlights();
+    });
+  }
+
+  if (hudDock) {
+    hudDock.addEventListener("mouseenter", () => {
+      hideTooltip();
+      clearAllHoverHighlights();
+    });
+  }
+
+  window.addEventListener("blur", () => {
+    hideTooltip();
+    clearAllHoverHighlights();
+  });
 
   /* ── Jitter-Free Collapsible HUD Dock ──────────────────────────────────── */
   function cancelExpand() {

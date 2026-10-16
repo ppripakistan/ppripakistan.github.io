@@ -1,0 +1,462 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Pakistan Provinces &amp; Regions Subnational Comparator | PPRI Data Observatory</title>
+    <meta name="description" content="Side-by-side empirical comparison of Punjab, Sindh, Khyber Pakhtunkhwa, Balochistan, and Islamabad Capital Territory across Census 2023 population, land area, urbanization, literacy, and household income." />
+    <link rel="canonical" href="https://ppripakistan.github.io/data/compare/" />
+    <meta property="og:site_name" content="Pakistan Provincial Reform Institute (PPRI)" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Pakistan Provinces Subnational Comparator | PPRI Data Observatory" />
+    <meta property="og:description" content="Side-by-side empirical comparison of Punjab, Sindh, Khyber Pakhtunkhwa, Balochistan, and Islamabad across Census 2023 population, area, literacy, and household income." />
+    <meta property="og:url" content="https://ppripakistan.github.io/data/compare/" />
+    <meta property="og:image" content="https://ppripakistan.github.io/assets/images/brand/ppri-logo.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@PPRI_Pakistan" />
+    <meta name="twitter:title" content="Pakistan Provinces Subnational Comparator | PPRI" />
+    <meta name="twitter:description" content="Side-by-side empirical comparison of Punjab, Sindh, Khyber Pakhtunkhwa, Balochistan, and Islamabad." />
+    <meta name="twitter:image" content="https://ppripakistan.github.io/assets/images/brand/ppri-logo.jpg" />
+    <link rel="icon" href="/assets/images/brand/ppri-favicon.png" />
+    <link rel="stylesheet" href="/assets/css/style.css" />
+    <link rel="stylesheet" href="/assets/css/responsive.css" />
+    <link rel="stylesheet" href="/assets/css/observatory.css" />
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Dataset",
+      "name": "Pakistan Provinces & Subnational Units Comparator",
+      "description": "Comparative baseline dataset across Pakistan's 4 provinces and federal capital across population, land area, urbanization, literacy, and living standards.",
+      "url": "https://ppripakistan.github.io/data/compare/",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "spatialCoverage": {
+        "@type": "Place",
+        "name": "Pakistan"
+      },
+      "creator": {
+        "@type": "Organization",
+        "name": "Pakistan Provincial Reform Institute",
+        "url": "https://ppripakistan.github.io/"
+      },
+      "distribution": [
+        {
+          "@type": "DataDownload",
+          "encodingFormat": "text/csv",
+          "contentUrl": "https://ppripakistan.github.io/data/downloads/pakistan-provinces-census-2023.csv"
+        }
+      ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://ppripakistan.github.io/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Data Observatory",
+          "item": "https://ppripakistan.github.io/data/centre.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Provinces Comparator",
+          "item": "https://ppripakistan.github.io/data/compare/"
+        }
+      ]
+    }
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <header class="site-header">
+      <div class="container navbar">
+        <a class="brand" href="/index.html">
+          <img src="/assets/images/brand/ppri-logo-header.jpg" alt="PPRI logo" width="44" height="44" loading="eager" decoding="async" />
+          <span class="brand-text"><strong>PPRI</strong><span>Pakistan Provincial Reform Institute</span></span>
+        </a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-navigation">Menu</button>
+        <nav id="site-navigation" class="nav-links" aria-label="Primary navigation">
+          <a href="/index.html">Home</a>
+          <a href="/research/index.html">Research</a>
+          <a href="/provinces/index.html">Reform</a>
+          <a href="/data/centre.html" aria-current="page">Data</a>
+          <a href="/publications/index.html">Publications</a>
+          <a href="/consultation/index.html">Engage</a>
+          <a href="/about.html">About</a>
+          <a class="nav-search" href="/search.html">Search</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <div class="obs-header">
+        <div class="container">
+          <ul class="obs-breadcrumbs">
+            <li><a href="/index.html">Home</a></li>
+            <li class="separator">/</li>
+            <li><a href="/data/centre.html">Data Observatory</a></li>
+            <li class="separator">/</li>
+            <li aria-current="page">Subnational Comparator</li>
+          </ul>
+          <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px;">
+            <span class="obs-badge obs-badge-official">&check; Verified Multi-Domain Benchmark</span>
+            <span class="obs-badge obs-badge-period">Census 2023 &amp; HIES 2024–25</span>
+          </div>
+          <h1 class="obs-title">Subnational Comparator: Provinces &amp; Administrative Units</h1>
+          <p class="obs-subtitle">
+            Side-by-side empirical comparison of Punjab, Sindh, Khyber Pakhtunkhwa, Balochistan, and Islamabad Capital Territory across demographic scale, territorial landmass, urbanization, human capital, and fiscal shares.
+          </p>
+        </div>
+      </div>
+
+      <div class="container">
+        <!-- Observatory Nav Rail -->
+        <div style="background:#ffffff;border:1px solid var(--obs-border);border-radius:var(--obs-radius-md);padding:14px 18px;margin-bottom:28px;box-shadow:var(--obs-shadow);">
+          <div style="font-size:0.8rem;font-weight:700;color:var(--obs-text-muted);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:8px;">Observatory Thematic Hubs</div>
+          <div style="display:flex;flex-wrap:wrap;gap:8px;">
+            <a href="/data/centre.html" class="obs-query-chip">🌐 Overview &amp; Map</a>
+            <a href="/data/population/" class="obs-query-chip">👥 Population &amp; Cities</a>
+            <a href="/data/economy/" class="obs-query-chip">📈 Economy &amp; Inflation</a>
+            <a href="/data/living-standards/" class="obs-query-chip">🏠 Living Standards</a>
+            <a href="/data/public-finance/" class="obs-query-chip">⚖️ Public Finance &amp; NFC</a>
+            <a href="/data/education/" class="obs-query-chip">🎓 Education</a>
+            <a href="/data/health/" class="obs-query-chip">🏥 Health</a>
+            <a href="/data/digital-access/" class="obs-query-chip">🌐 Digital Access</a>
+            <a href="/data/compare/" class="obs-query-chip active" style="background:var(--obs-primary);color:#fff;border-color:var(--obs-primary);">📊 Compare</a>
+            <a href="/data/quick-facts/" class="obs-query-chip">★ Fast Facts</a>
+          </div>
+        </div>
+
+        <!-- 4 Comparative Stat Cards -->
+        <div class="obs-stat-grid">
+          <div class="obs-stat-card">
+            <span class="obs-stat-label">Demographic Core &bull; Punjab</span>
+            <div class="obs-stat-val">127.69M</div>
+            <div class="obs-stat-unit">52.87% of National Population</div>
+            <div class="obs-stat-footer" style="display:flex;justify-content:space-between;align-items:center;">
+              <span>622 Persons / km²</span>
+              <a href="/data/population/" class="obs-source-link">Demographics &rarr;</a>
+            </div>
+          </div>
+          <div class="obs-stat-card">
+            <span class="obs-stat-label">Territorial Scale &bull; Balochistan</span>
+            <div class="obs-stat-val">347,190 km²</div>
+            <div class="obs-stat-unit">43.6% of Pakistan's Total Area</div>
+            <div class="obs-stat-footer" style="display:flex;justify-content:space-between;align-items:center;">
+              <span>43 Persons / km²</span>
+              <a href="/data/public-finance/" class="obs-source-link">NFC Factor &rarr;</a>
+            </div>
+          </div>
+          <div class="obs-stat-card">
+            <span class="obs-stat-label">Highest Urban Share &bull; Sindh</span>
+            <div class="obs-stat-val">53.7%</div>
+            <div class="obs-stat-unit">Majority Urban Population</div>
+            <div class="obs-stat-footer" style="display:flex;justify-content:space-between;align-items:center;">
+              <span>Karachi: 20.38M</span>
+              <a href="/data/population/" class="obs-source-link">Urban Localities &rarr;</a>
+            </div>
+          </div>
+          <div class="obs-stat-card">
+            <span class="obs-stat-label">Household Income &bull; HIES</span>
+            <div class="obs-stat-val">Rs 63,450</div>
+            <div class="obs-stat-unit">Mean Monthly Household Income</div>
+            <div class="obs-stat-footer" style="display:flex;justify-content:space-between;align-items:center;">
+              <span>HIES 2024–25</span>
+              <a href="/data/living-standards/" class="obs-source-link">Incomes &rarr;</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Comprehensive Multi-Domain Comparison Table -->
+        <section class="obs-section">
+          <div class="obs-section-header">
+            <div>
+              <span class="obs-badge obs-badge-official">&check; Verified Subnational Metrics</span>
+              <h2 class="obs-section-title" style="margin-top:6px;">Cross-Province Benchmark Matrix (Census 2023, HIES, NFC)</h2>
+            </div>
+            <button class="obs-btn obs-btn-outline" onclick="PPRIObservatory.exportTableToCSV('comparatorTable', 'pakistan_provinces_comparison.csv')">&darr; Export CSV</button>
+          </div>
+          <div class="obs-table-container">
+            <table class="obs-table" id="comparatorTable">
+              <thead>
+                <tr>
+                  <th class="sortable">Province / Region <span class="sort-arrow">&udhar;</span></th>
+                  <th class="sortable num">Population (2023) <span class="sort-arrow">&udhar;</span></th>
+                  <th class="sortable num">Pop Share (%) <span class="sort-arrow">&udhar;</span></th>
+                  <th class="sortable num">Growth Rate (%) <span class="sort-arrow">&udhar;</span></th>
+                  <th class="sortable num">Area (km²) <span class="sort-arrow">&udhar;</span></th>
+                  <th class="sortable num">Density (/km²) <span class="sort-arrow">&udhar;</span></th>
+                  <th class="sortable num">Urban % <span class="sort-arrow">&udhar;</span></th>
+                  <th class="sortable num">Literacy % <span class="sort-arrow">&udhar;</span></th>
+                  <th class="sortable num">Mean Income (PKR) <span class="sort-arrow">&udhar;</span></th>
+                  <th class="sortable num">NFC Share % <span class="sort-arrow">&udhar;</span></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Punjab (PK-PB)</strong></td>
+                  <td class="num">127,688,922</td>
+                  <td class="num">52.87%</td>
+                  <td class="num">2.53%</td>
+                  <td class="num">205,344</td>
+                  <td class="num">622</td>
+                  <td class="num">40.7%</td>
+                  <td class="num">66.0%</td>
+                  <td class="num">62,948</td>
+                  <td class="num">51.74%</td>
+                </tr>
+                <tr>
+                  <td><strong>Sindh (PK-SD)</strong></td>
+                  <td class="num">55,696,147</td>
+                  <td class="num">23.06%</td>
+                  <td class="num">2.57%</td>
+                  <td class="num">140,914</td>
+                  <td class="num">396</td>
+                  <td class="num">53.7%</td>
+                  <td class="num">61.0%</td>
+                  <td class="num">64,210</td>
+                  <td class="num">24.55%</td>
+                </tr>
+                <tr>
+                  <td><strong>Khyber Pakhtunkhwa (PK-KP)</strong></td>
+                  <td class="num">40,856,097</td>
+                  <td class="num">16.92%</td>
+                  <td class="num">2.38%</td>
+                  <td class="num">101,741</td>
+                  <td class="num">401</td>
+                  <td class="num">15.0%</td>
+                  <td class="num">55.0%</td>
+                  <td class="num">59,830</td>
+                  <td class="num">14.62%</td>
+                </tr>
+                <tr>
+                  <td><strong>Balochistan (PK-BA)</strong></td>
+                  <td class="num">14,894,402</td>
+                  <td class="num">6.17%</td>
+                  <td class="num">3.20%</td>
+                  <td class="num">347,190</td>
+                  <td class="num">43</td>
+                  <td class="num">31.0%</td>
+                  <td class="num">42.0%</td>
+                  <td class="num">56,120</td>
+                  <td class="num">9.09%</td>
+                </tr>
+                <tr>
+                  <td><strong>Islamabad Capital Territory (PK-ICT)</strong></td>
+                  <td class="num">2,363,863</td>
+                  <td class="num">0.98%</td>
+                  <td class="num">2.80%</td>
+                  <td class="num">906</td>
+                  <td class="num">2,604</td>
+                  <td class="num">47.0%</td>
+                  <td class="num">84.0%</td>
+                  <td class="num">88,400</td>
+                  <td class="num">Federal</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- Interactive Population & Territorial Comparison Charts -->
+        <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(420px, 1fr));gap:24px;margin-bottom:32px;">
+          <section class="obs-section" style="margin-bottom:0;">
+            <div class="obs-section-header">
+              <h2 class="obs-section-title">Population by Province (Millions)</h2>
+            </div>
+            <div class="obs-chart-wrapper" id="comparatorPopChart"></div>
+          </section>
+
+          <section class="obs-section" style="margin-bottom:0;">
+            <div class="obs-section-header">
+              <h2 class="obs-section-title">Territorial Land Area (km²)</h2>
+            </div>
+            <div class="obs-chart-wrapper" id="comparatorAreaChart"></div>
+          </section>
+        </div>
+
+        <!-- Citation & Downloads -->
+        <div class="obs-actions-bar">
+          <div class="obs-actions-text">
+            <strong>Download the complete baseline CSV with all provincial and district benchmarks:</strong>
+          </div>
+          <div class="obs-actions-btns">
+            <button class="obs-btn obs-btn-outline" onclick="PPRIObservatory.copyCitation('Pakistan Provincial Reform Institute (PPRI). (2025). Subnational Baseline and Inter-Provincial Comparator. Islamic Republic of Pakistan.')">
+              &boxbox; Copy Citation (APA)
+            </button>
+            <a href="/data/downloads/pakistan-provinces-census-2023.csv" class="obs-btn obs-btn-primary" download>
+              &darr; Download Provinces CSV
+            </a>
+          </div>
+        </div>
+
+        <!-- Sources Card -->
+        <div class="obs-source-card">
+          <h3 class="obs-source-title">Official Sources &amp; Caveats</h3>
+          <p class="obs-source-text">
+            Population, density, area and growth figures: Pakistan Bureau of Statistics 7th Population &amp; Housing Census 2023 (Table 1 National).<br />
+            Household income and size: PBS Household Integrated Economic Survey (HIES) 2024–25 Economic Report.<br />
+            NFC shares: 7th National Finance Commission Award distribution formula calculations.<br />
+            <em>Constitutional Note: Islamabad Capital Territory (ICT) is a federal administrative territory directly administered under the Federal Government and not a province.</em>
+          </p>
+          <div style="display:flex;gap:12px;flex-wrap:wrap;align-items:center;">
+            <a href="/data/methodology/" class="obs-source-link">&rarr; View Data Verification Standards</a>
+            <span style="color:var(--obs-text-muted);">&middot;</span>
+            <a href="/data/downloads/" class="obs-source-link">&rarr; Browse All Public Datasets</a>
+          </div>
+        </div>
+
+        <!-- Policy Research Section -->
+        <section class="obs-section" style="margin-top:36px;border-top:3px solid var(--obs-accent);">
+          <div class="obs-section-header" style="margin-bottom:18px;">
+            <div>
+              <span class="obs-badge obs-badge-survey">&bull; Context &amp; Governance Implications</span>
+              <h2 class="obs-section-title" style="margin-top:6px;">What Does This Data Mean for Pakistan? Related Policy Research</h2>
+              <p style="margin:4px 0 0 0;font-size:0.95rem;color:var(--obs-text-muted);">
+                Explore in-depth PPRI research reports, working papers, and policy analyses exploring provincial scale, federalism, and territorial reform.
+              </p>
+            </div>
+            <a href="/research/index.html" class="obs-btn obs-btn-outline">All Research Papers &rarr;</a>
+          </div>
+          <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));gap:20px;">
+            <div class="obs-stat-card" style="padding:22px;">
+              <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;">
+                <span class="obs-badge" style="background:#fef3c7;color:#92400e;font-weight:700;">Policy Paper</span>
+                <span style="font-size:0.8rem;color:var(--obs-text-muted);font-weight:600;">25 min read</span>
+              </div>
+              <h3 style="margin:0 0 10px 0;font-size:1.15rem;line-height:1.4;">
+                <a href="/research/policy-papers/provincial-reorganization-of-pakistan.html" style="color:var(--obs-dark);text-decoration:none;">The Provincial Reorganization of Pakistan: Flagship Proposal</a>
+              </h3>
+              <p style="font-size:0.9rem;color:var(--obs-text);line-height:1.55;margin:0 0 16px 0;">A detailed constitutional model for reforming Pakistan's four mega-provinces into smaller, administratively responsive federal units.</p>
+              <div style="margin-top:auto;">
+                <a href="/research/policy-papers/provincial-reorganization-of-pakistan.html" class="obs-source-link" style="font-weight:700;">Read Policy Analysis &rarr;</a>
+              </div>
+            </div>
+
+            <div class="obs-stat-card" style="padding:22px;">
+              <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;">
+                <span class="obs-badge" style="background:#dcfce7;color:#166534;font-weight:700;">Article</span>
+                <span style="font-size:0.8rem;color:var(--obs-text-muted);font-weight:600;">9 min read</span>
+              </div>
+              <h3 style="margin:0 0 10px 0;font-size:1.15rem;line-height:1.4;">
+                <a href="/articles/four-provinces-241-million-people-administrative-scale.html" style="color:var(--obs-dark);text-decoration:none;">Four Provinces, 241.5 Million People: Has Pakistan Outgrown Its Structure?</a>
+              </h3>
+              <p style="font-size:0.9rem;color:var(--obs-text);line-height:1.55;margin:0 0 16px 0;">Comparative analysis demonstrating how extreme population scale per administrative unit weakens citizen accountability and service delivery.</p>
+              <div style="margin-top:auto;">
+                <a href="/articles/four-provinces-241-million-people-administrative-scale.html" class="obs-source-link" style="font-weight:700;">Read Policy Analysis &rarr;</a>
+              </div>
+            </div>
+
+            <div class="obs-stat-card" style="padding:22px;">
+              <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;">
+                <span class="obs-badge" style="background:#e0f2fe;color:#0369a1;font-weight:700;">Report</span>
+                <span style="font-size:0.8rem;color:var(--obs-text-muted);font-weight:600;">16 min read</span>
+              </div>
+              <h3 style="margin:0 0 10px 0;font-size:1.15rem;line-height:1.4;">
+                <a href="/research/reports/does-money-work-better-spent-closer-to-people.html" style="color:var(--obs-dark);text-decoration:none;">Does Money Work Better When Spent Closer to the People?</a>
+              </h3>
+              <p style="font-size:0.9rem;color:var(--obs-text);line-height:1.55;margin:0 0 16px 0;">Evaluating how provincial divisible pool revenues are spent across districts and the imperative of sub-provincial financial decentralization.</p>
+              <div style="margin-top:auto;">
+                <a href="/research/reports/does-money-work-better-spent-closer-to-people.html" class="obs-source-link" style="font-weight:700;">Read Policy Analysis &rarr;</a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div>
+          <img
+            src="/assets/images/brand/ppri-logo-header.jpg"
+            alt="PPRI — Pakistan Provincial Reform Institute"
+            class="footer-logo"
+            width="84"
+            height="84"
+            loading="lazy"
+            decoding="async"
+          />
+          <p>Pakistan Provincial Reform Institute</p>
+          <p>Non-partisan research, empirical data observatories, and cartographic analysis on governance, provincial reform, and decentralization in Pakistan.</p>
+        </div>
+        <div>
+          <h3>Data Observatory</h3>
+          <ul class="footer-links">
+            <li><a href="/data/centre.html">Observatory Hub &amp; Map</a></li>
+            <li><a href="/data/population/">Population &amp; Cities</a></li>
+            <li><a href="/data/economy/">Economy &amp; Inflation</a></li>
+            <li><a href="/data/living-standards/">Living Standards &amp; Income</a></li>
+            <li><a href="/data/public-finance/">Public Finance &amp; NFC</a></li>
+            <li><a href="/data/education/">Education &amp; Literacy</a></li>
+            <li><a href="/data/health/">Public Health</a></li>
+            <li><a href="/data/digital-access/">Digital Access</a></li>
+            <li><a href="/data/compare/">Provinces Comparator</a></li>
+            <li><a href="/data/quick-facts/">Fast Facts Matrix</a></li>
+            <li><a href="/data/downloads/">Open Data Downloads</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Research &amp; Policy</h3>
+          <ul class="footer-links">
+            <li><a href="/research/policy-papers/provincial-reorganization-of-pakistan.html">Flagship Reorganization</a></li>
+            <li><a href="/research/reports/income-went-up-why-does-life-feel-harder.html">Income &amp; Inflation Report</a></li>
+            <li><a href="/research/reports/does-money-work-better-spent-closer-to-people.html">Fiscal Decentralization</a></li>
+            <li><a href="/research/reports/same-country-different-life-district-access.html">Spatial Inequality</a></li>
+            <li><a href="/articles/four-provinces-241-million-people-administrative-scale.html">Administrative Scale</a></li>
+            <li><a href="/articles/index.html">All Policy Articles</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Connect</h3>
+          <ul class="footer-links">
+            <li><a href="https://x.com/PPRI_Pakistan" rel="me">X / @PPRI_Pakistan</a></li>
+            <li><a href="/consultation/index.html">Public Consultation</a></li>
+            <li><a href="/contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        <span>&copy; <span data-current-year>2026</span> Pakistan Provincial Reform Institute</span>
+        <span><a href="/privacy.html">Privacy</a> &middot; <a href="/terms.html">Terms</a> &middot; <a href="/sitemap.xml">Sitemap</a></span>
+      </div>
+    </footer>
+
+    <script src="/assets/js/main.js" defer></script>
+    <script src="/assets/js/observatory-engine.js" defer></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        if (typeof PPRIObservatory !== 'undefined') {
+          // Population chart
+          PPRIObservatory.renderBarChart('#comparatorPopChart', [
+            { label: 'Punjab', value: 127.69, formattedValue: '127.7M (52.9%)', color: '#073c3a' },
+            { label: 'Sindh', value: 55.70, formattedValue: '55.7M (23.1%)', color: '#0f766e' },
+            { label: 'KP', value: 40.86, formattedValue: '40.9M (16.9%)', color: '#0284c7' },
+            { label: 'Balochistan', value: 14.89, formattedValue: '14.9M (6.2%)', color: '#d97706' },
+            { label: 'Islamabad', value: 2.36, formattedValue: '2.4M (1.0%)', color: '#64748b' }
+          ], { title: 'Population by Province (Millions)' });
+
+          // Land Area chart
+          PPRIObservatory.renderBarChart('#comparatorAreaChart', [
+            { label: 'Balochistan', value: 347.19, formattedValue: '347,190 km² (43.6%)', color: '#d97706' },
+            { label: 'Punjab', value: 205.34, formattedValue: '205,344 km² (25.8%)', color: '#073c3a' },
+            { label: 'Sindh', value: 140.91, formattedValue: '140,914 km² (17.7%)', color: '#0f766e' },
+            { label: 'KP', value: 101.74, formattedValue: '101,741 km² (12.8%)', color: '#0284c7' },
+            { label: 'Islamabad', value: 0.91, formattedValue: '906 km² (0.1%)', color: '#64748b' }
+          ], { title: 'Territorial Land Area (Thousand km²)' });
+
+          PPRIObservatory.setupTableSort('comparatorTable');
+        }
+      });
+    </script>
+  </body>
+</html>

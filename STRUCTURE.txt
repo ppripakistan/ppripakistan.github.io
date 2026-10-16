@@ -1,71 +1,273 @@
-PPRI_Pakistan_Website_Template/
-├── .nojekyll
+ppripakistan.github.io/
+├── archive/
+│   └── index.html
+├── articles/
+│   ├── 18th-amendment-did-devolution-stop-at-provincial-capital.html
+│   ├── bahawalpur-province-restoration-2026.html
+│   ├── before-local-government-faded-citizen-perceptions.html
+│   ├── can-pakistan-grow-beyond-provincial-capitals-secondary-cities.html
+│   ├── did-2001-devolution-improve-services-evidence.html
+│   ├── four-provinces-241-million-people-administrative-scale.html
+│   ├── hazara-province-why-has-the-demand-survived.html
+│   ├── how-far-is-government-administrative-distance.html
+│   ├── how-should-pakistan-evaluate-a-new-province.html
+│   ├── index.html
+│   ├── is-gilgit-baltistan-a-province-of-pakistan.html
+│   ├── karachi-urban-sindh-representation-revenue-administration.html
+│   ├── more-provinces-or-stronger-local-governments.html
+│   ├── new-administrative-units-pakistan-2026.html
+│   ├── new-province-can-move-capital-can-it-move-power.html
+│   ├── one-province-many-needs-development-budget-priority.html
+│   ├── pakistan-keeps-reinventing-local-government-history.html
+│   ├── provinces-of-pakistan-names-capitals-population.html
+│   ├── south-punjab-saraiki-bahawalpur-difference.html
+│   ├── south-punjab-why-does-the-province-demand-keep-returning.html
+│   ├── what-would-a-new-province-actually-change.html
+│   ├── when-development-follows-the-capital-people-follow.html
+│   ├── where-did-development-money-go-district-government.html
+│   ├── where-does-pakistans-development-money-go.html
+│   ├── why-is-local-government-always-the-last-tier-to-get-power.html
+│   └── why-is-pakistan-debating-new-provinces-again.html
+├── assets/
+│   ├── css/
+│   │   ├── consultation.css
+│   │   ├── data-centre.css
+│   │   ├── hero-map.css
+│   │   ├── homepage.css
+│   │   ├── observatory.css
+│   │   ├── phase6.css
+│   │   ├── research-papers.css
+│   │   ├── responsive.css
+│   │   ├── style.css
+│   │   └── survey-hub.css
+│   ├── data/
+│   │   ├── hero-pakistan-geography.json
+│   │   └── pakistan-provinces-census-2023.json
+│   ├── images/
+│   │   ├── articles/
+│   │   ├── brand/
+│   │   │   ├── ppri-favicon.png
+│   │   │   ├── ppri-logo-header.jpg
+│   │   │   └── ppri-logo.jpg
+│   │   ├── events/
+│   │   ├── general/
+│   │   ├── maps/
+│   │   └── research/
+│   └── js/
+│       ├── modules/
+│       │   ├── phase6-maps.js
+│       │   └── phase6-observatory.js
+│       ├── article-reading.js
+│       ├── consultation.js
+│       ├── data-centre.js
+│       ├── hero-map.js
+│       ├── homepage.js
+│       ├── main.js
+│       ├── observatory-engine.js
+│       ├── research-papers.js
+│       ├── search.js
+│       └── survey-hub.js
+├── consultation/
+│   ├── frequently-asked-questions.html
+│   ├── index.html
+│   ├── methodology.html
+│   ├── submissions.html
+│   └── survey.html
+├── content/
+│   └── homepage.json
+├── data/
+│   ├── compare/
+│   │   └── index.html
+│   ├── digital-access/
+│   │   └── index.html
+│   ├── downloads/
+│   │   ├── index.html
+│   │   ├── pakistan-digital-access-hies-2024-25.csv
+│   │   ├── pakistan-economic-benchmarks-2026.csv
+│   │   ├── pakistan-household-income-consumption-hies-2024-25.csv
+│   │   ├── pakistan-inflation-cpi-spi-latest.csv
+│   │   ├── pakistan-largest-cities-census-2023.csv
+│   │   ├── pakistan-population-census-2023.csv
+│   │   ├── pakistan-provinces-census-2023.csv
+│   │   ├── province_baseline_2023.csv
+│   │   └── README-data.txt
+│   ├── economy/
+│   │   └── index.html
+│   ├── education/
+│   │   └── index.html
+│   ├── health/
+│   │   └── index.html
+│   ├── living-standards/
+│   │   └── index.html
+│   ├── master/
+│   │   ├── schemas/
+│   │   │   ├── observation.schema.json
+│   │   │   └── query_variant.schema.json
+│   │   ├── DATA_DICTIONARY.md
+│   │   ├── data_quality_report.csv
+│   │   ├── geographies.csv
+│   │   ├── google_year_in_search_rankings.csv
+│   │   ├── google_year_in_search_terms.csv
+│   │   ├── indicator_catalog.csv
+│   │   ├── manifest.json
+│   │   ├── next_extraction_queue.csv
+│   │   ├── observations.csv
+│   │   ├── observations.json
+│   │   ├── page_catalog.csv
+│   │   ├── query_clusters.csv
+│   │   ├── query_fact_map.csv
+│   │   ├── query_variants.csv
+│   │   ├── README.md
+│   │   ├── source_dataset_index.csv
+│   │   ├── source_registry.csv
+│   │   └── validation_report.txt
+│   ├── metadata/
+│   │   └── provinces-2023.json
+│   ├── methodology/
+│   │   └── index.html
+│   ├── population/
+│   │   └── index.html
+│   ├── provinces/
+│   │   └── provinces-2023.json
+│   ├── public-finance/
+│   │   └── index.html
+│   ├── quick-facts/
+│   │   └── index.html
+│   ├── scenarios/
+│   │   └── ppri-01.json
+│   ├── centre.html
+│   ├── data-notes.html
+│   ├── datasets.html
+│   ├── demographics.html
+│   ├── district-explorer.html
+│   ├── economy.html
+│   ├── fiscal.html
+│   ├── governance.html
+│   ├── index.html
+│   ├── maps.html
+│   ├── methodology.html
+│   ├── population.html
+│   └── provincial-comparison.html
+├── data-files/
+│   └── csv/
+│       ├── citizen_portal_snapshot.csv
+│       ├── corruption_perception_2025.csv
+│       ├── decentralization_benchmarks.csv
+│       ├── food_insecurity.csv
+│       ├── food_insecurity_by_province.csv
+│       ├── hies_income_quintiles.csv
+│       ├── inflation_income_illustration.csv
+│       ├── mohtasib_2024.csv
+│       ├── provincial_capital_spending_gap.csv
+│       ├── reported_bribe_amounts_ncps_2023.csv
+│       └── water_access_by_province.csv
+├── documents/
+│   ├── briefs/
+│   │   └── README.md
+│   ├── datasets/
+│   ├── policy-papers/
+│   │   ├── PPRI-PP-001.pdf
+│   │   └── README.md
+│   └── reports/
+│       └── README.md
+├── maps/
+│   ├── current/
+│   │   └── administrative.html
+│   ├── scenarios/
+│   │   └── index.html
+│   ├── index.html
+│   └── methodology.html
+├── media/
+│   ├── events.html
+│   ├── index.html
+│   ├── interviews.html
+│   └── press.html
+├── methodology/
+│   ├── index.html
+│   ├── research-standards.html
+│   └── sentiment-analysis.html
+├── news/
+│   └── index.html
+├── opinion/
+│   └── index.html
+├── provinces/
+│   ├── administrative-model.html
+│   ├── constitutional-framework.html
+│   ├── fiscal-framework.html
+│   ├── index.html
+│   ├── local-government.html
+│   ├── proposed-models.html
+│   ├── transition-framework.html
+│   └── why-provinces.html
+├── publications/
+│   └── index.html
+├── research/
+│   ├── briefs/
+│   │   ├── administrative-scale.html
+│   │   └── index.html
+│   ├── policy-papers/
+│   │   ├── index.html
+│   │   └── provincial-reorganization-of-pakistan.html
+│   ├── reports/
+│   │   ├── bribe-you-cant-see-corruption-private-tax.html
+│   │   ├── does-money-work-better-spent-closer-to-people.html
+│   │   ├── income-went-up-why-does-life-feel-harder.html
+│   │   ├── index.html
+│   │   ├── price-of-a-simple-task-pakistan-bureaucracy-cost.html
+│   │   └── same-country-different-life-district-access.html
+│   ├── working-papers/
+│   │   ├── index.html
+│   │   └── provinces-local-government.html
+│   ├── agenda.html
+│   ├── comparative-governance.html
+│   ├── faq.html
+│   ├── index.html
+│   └── legal-library.html
+├── researchers/
+│   └── index.html
+├── resources/
+│   ├── constitution.html
+│   ├── datasets.html
+│   ├── external-resources.html
+│   ├── index.html
+│   ├── legislation.html
+│   └── maps.html
+├── scenarios/
+│   ├── comparative-analysis/
+│   │   └── index.html
+│   ├── current-structure/
+│   │   └── index.html
+│   ├── local-government/
+│   │   └── index.html
+│   ├── new-provinces/
+│   │   └── index.html
+│   └── index.html
+├── scripts/
+│   ├── build_observatory_hubs.py
+│   ├── run_full_site_audit.py
+│   └── update_sitemap_and_search_index.py
+├── sources/
+│   └── index.html
+├── updates/
+│   └── index.html
 ├── 404.html
-├── README.md
 ├── about.html
-├── articles/index.html
-├── assets/css/print.css
-├── assets/css/responsive.css
-├── assets/css/style.css
-├── assets/fonts/.gitkeep
-├── assets/icons/.gitkeep
-├── assets/images/articles/.gitkeep
-├── assets/images/events/.gitkeep
-├── assets/images/general/.gitkeep
-├── assets/images/logo/.gitkeep
-├── assets/images/maps/.gitkeep
-├── assets/images/research/.gitkeep
-├── assets/js/accessibility.js
-├── assets/js/filters.js
-├── assets/js/main.js
-├── assets/js/search.js
-├── consultation/frequently-asked-questions.html
-├── consultation/index.html
-├── consultation/submissions.html
-├── consultation/survey.html
 ├── contact.html
-├── data/demographics.html
-├── data/economy.html
-├── data/governance.html
-├── data/index.html
-├── data/methodology.html
-├── data/population.html
-├── documents/briefs/.gitkeep
-├── documents/datasets/.gitkeep
-├── documents/policy-papers/.gitkeep
-├── documents/reports/.gitkeep
+├── feed.xml
 ├── governance.html
 ├── index.html
-├── media/events.html
-├── media/index.html
-├── media/interviews.html
-├── media/press.html
+├── llms-full.txt
+├── llms.txt
 ├── methodology.html
 ├── mission.html
-├── news/index.html
-├── opinion/index.html
 ├── privacy.html
-├── provinces/administrative-model.html
-├── provinces/constitutional-framework.html
-├── provinces/fiscal-framework.html
-├── provinces/index.html
-├── provinces/proposed-models.html
-├── provinces/transition-framework.html
-├── provinces/why-provinces.html
-├── research/briefs.html
-├── research/index.html
-├── research/policy-papers.html
-├── research/publications.html
-├── research/reports.html
-├── research/working-papers.html
-├── resources/constitution.html
-├── resources/datasets.html
-├── resources/external-resources.html
-├── resources/index.html
-├── resources/legislation.html
-├── resources/maps.html
+├── README.md
+├── release-manifest.json
 ├── robots.txt
+├── search-index.json
+├── search.html
 ├── site.webmanifest
 ├── sitemap.xml
+├── STRUCTURE.txt
 ├── terms.html
-├── updates/index.html
+└── transparency.html
