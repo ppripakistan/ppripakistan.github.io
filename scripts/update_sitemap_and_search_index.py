@@ -49,6 +49,15 @@ def clean_and_update_sitemap():
     valid_entries = []
     seen_locs = set()
 
+    REDIRECT_STUBS = {
+        "governance.html", "methodology.html", "media/events.html", "media/interviews.html",
+        "news/index.html", "opinion/index.html", "resources/datasets.html", "resources/maps.html",
+        "updates/index.html", "data/methodology.html", "data/economy.html", "data/population.html",
+        "data/fiscal.html", "data/demographics.html", "data/governance.html", "data/data-notes.html",
+        "data/index.html", "data/maps.html", "data/datasets.html", "data/provincial-comparison.html",
+        "data/district-explorer.html", "404.html", "search.html"
+    }
+
     for url_el in root.findall('sm:url', ns):
         loc_el = url_el.find('sm:loc', ns)
         if loc_el is None or not loc_el.text:
@@ -64,12 +73,19 @@ def clean_and_update_sitemap():
         path_part = loc.replace("https://ppripakistan.github.io/", "")
         if path_part == "" or path_part == "index.html":
             file_path = ROOT_DIR / "index.html"
+            rel_str = "index.html"
         else:
             file_path = ROOT_DIR / path_part
+            rel_str = path_part
             if not file_path.exists() and (ROOT_DIR / f"{path_part}.html").exists():
                 file_path = ROOT_DIR / f"{path_part}.html"
+                rel_str = f"{path_part}.html"
             elif not file_path.exists() and (ROOT_DIR / path_part / "index.html").exists():
                 file_path = ROOT_DIR / path_part / "index.html"
+                rel_str = f"{path_part}/index.html"
+
+        if rel_str in REDIRECT_STUBS or path_part in REDIRECT_STUBS:
+            continue
 
         if file_path.exists() and loc not in seen_locs:
             lastmod_el = url_el.find('sm:lastmod', ns)
