@@ -1460,3 +1460,26 @@ img {
   }
 }
 
+/* Print Styles */
+@media print {
+  .site-header,
+  .site-footer,
+  .menu-toggle,
+  .actions,
+  .nav-links,
+  .article-progress-pill {
+    display: none !important;
+  }
+  .hero,
+  .page-hero,
+  .paper-header,
+  .section {
+    padding: 25px 0;
+    background: #fff;
+    color: #000;
+  }
+  .hero p,
+  .paper-header p {
+    color: #000;
+  }
+}
