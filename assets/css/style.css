@@ -1483,3 +1483,297 @@ img {
     color: #000;
   }
 }
+
+/* ==========================================================================
+   PPRI Technical SEO, Crawl Spiderweb & Rich Component Styles
+   ========================================================================== */
+
+/* 1. Inline Spiderweb Callout Bridge */
+.ppri-callout-bridge {
+  background: linear-gradient(135deg, #f0f7f4 0%, #e8f3ed 100%);
+  border: 1px solid #c2ded0;
+  border-left: 5px solid #073c3a;
+  border-radius: 8px;
+  padding: 22px 24px;
+  margin: 34px 0 38px;
+  box-shadow: 0 4px 14px rgba(7, 60, 58, 0.06);
+}
+.ppri-callout-bridge .callout-header {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+.ppri-callout-bridge .callout-badge {
+  display: inline-block;
+  background: #073c3a;
+  color: #ffffff;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 3px 8px;
+  border-radius: 4px;
+}
+.ppri-callout-bridge h4 {
+  margin: 0;
+  color: #073c3a;
+  font-size: 1.15rem;
+  font-weight: 700;
+}
+.ppri-callout-bridge p {
+  margin: 0 0 14px;
+  color: #2d5a4c;
+  font-size: 0.94rem;
+  line-height: 1.55;
+}
+.ppri-callout-bridge .callout-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 10px 18px;
+}
+.ppri-callout-bridge .callout-links li {
+  font-size: 0.88rem;
+  line-height: 1.45;
+}
+.ppri-callout-bridge .callout-links a {
+  color: #073c3a;
+  text-decoration: underline;
+  text-decoration-color: rgba(7, 60, 58, 0.35);
+  text-underline-offset: 3px;
+  transition: color 0.15s ease, text-decoration-color 0.15s ease;
+}
+.ppri-callout-bridge .callout-links a:hover {
+  color: #87672f;
+  text-decoration-color: #87672f;
+}
+
+/* 2. Global Research Directory Index (Above Footer) */
+.site-directory {
+  background: #09202a;
+  color: #e2e8f0;
+  border-top: 3px solid #d4af37;
+  padding: 44px 0 40px;
+  font-size: 0.88rem;
+}
+.site-directory .directory-details {
+  border: none;
+  background: transparent;
+}
+.site-directory .directory-summary {
+  list-style: none;
+  cursor: pointer;
+  padding-bottom: 24px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  margin-bottom: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.site-directory .directory-summary::-webkit-details-marker {
+  display: none;
+}
+.site-directory .directory-title {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: -0.01em;
+}
+.site-directory .directory-hint {
+  font-size: 0.88rem;
+  color: #cbd5e1;
+}
+.site-directory .directory-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+}
+.site-directory .directory-col h4 {
+  color: #d4af37;
+  font-size: 0.88rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 700;
+  margin: 0 0 16px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid rgba(212, 175, 55, 0.25);
+}
+.site-directory .directory-col ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.site-directory .directory-col a {
+  color: #e2e8f0;
+  text-decoration: none;
+  line-height: 1.45;
+  transition: color 0.15s ease;
+  display: block;
+}
+.site-directory .directory-col a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+  text-decoration-color: #d4af37;
+  text-underline-offset: 3px;
+}
+
+@media (max-width: 1024px) {
+  .site-directory .directory-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px;
+  }
+}
+@media (max-width: 680px) {
+  .site-directory .directory-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .site-directory .directory-summary {
+    position: relative;
+    padding-right: 32px;
+  }
+  .site-directory .directory-summary::after {
+    content: "▼";
+    position: absolute;
+    right: 4px;
+    top: 6px;
+    font-size: 0.85rem;
+    color: #d4af37;
+    transition: transform 0.2s ease;
+  }
+  .site-directory details[open] .directory-summary::after {
+    transform: rotate(180deg);
+  }
+}
+
+/* 3. Static Executive Data Summaries (Observatories & Maps) */
+.seo-data-summary {
+  background: #ffffff;
+  border: 1px solid #cbd5e1;
+  border-top: 4px solid #073c3a;
+  border-radius: 8px;
+  padding: 28px 30px;
+  margin: 28px 0 36px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+}
+.seo-data-summary h2 {
+  color: #073c3a;
+  font-size: 1.45rem;
+  margin: 0 0 12px;
+}
+.seo-data-summary .summary-lead {
+  font-size: 1rem;
+  color: #334155;
+  line-height: 1.68;
+  margin-bottom: 20px;
+}
+.seo-data-summary .table-wrap {
+  overflow-x: auto;
+  margin: 20px 0;
+  -webkit-overflow-scrolling: touch;
+}
+.data-summary-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+  text-align: left;
+}
+.data-summary-table th {
+  background: #f1f5f9;
+  color: #073c3a;
+  font-weight: 700;
+  padding: 10px 14px;
+  border-bottom: 2px solid #cbd5e1;
+}
+.data-summary-table td {
+  padding: 10px 14px;
+  border-bottom: 1px solid #e2e8f0;
+  color: #334155;
+}
+.data-summary-table tr:hover {
+  background: #f8fafc;
+}
+.seo-data-summary .summary-note {
+  font-size: 0.84rem;
+  color: #64748b;
+  margin-top: 14px;
+  line-height: 1.5;
+}
+
+/* 4. Semantic FAQ Accordions */
+.faq-section {
+  margin: 48px 0 36px;
+  padding-top: 36px;
+  border-top: 2px solid #e2e8f0;
+}
+.faq-section h2 {
+  color: #073c3a;
+  font-size: 1.65rem;
+  margin: 0 0 16px;
+}
+.faq-section .faq-intro {
+  color: #475569;
+  font-size: 0.98rem;
+  margin-bottom: 24px;
+}
+.faq-accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.faq-item {
+  background: #ffffff;
+  border: 1px solid #cbd5e1;
+  border-left: 4px solid #073c3a;
+  border-radius: 6px;
+  overflow: hidden;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+.faq-item[open] {
+  border-left-color: #d4af37;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.05);
+}
+.faq-question {
+  cursor: pointer;
+  padding: 16px 20px;
+  font-weight: 700;
+  color: #073c3a;
+  font-size: 1.02rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  user-select: none;
+}
+.faq-question::-webkit-details-marker {
+  display: none;
+}
+.faq-question::after {
+  content: "+";
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #87672f;
+  margin-left: 12px;
+  transition: transform 0.2s ease;
+}
+.faq-item[open] .faq-question::after {
+  content: "−";
+}
+.faq-answer {
+  padding: 0 20px 18px;
+  color: #334155;
+  font-size: 0.95rem;
+  line-height: 1.65;
+}
+.faq-answer p {
+  margin: 0 0 10px;
+}
+.faq-answer p:last-child {
+  margin-bottom: 0;
+}

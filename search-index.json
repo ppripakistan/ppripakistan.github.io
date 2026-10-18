@@ -82,7 +82,7 @@
     "title": "Public Consultation",
     "type": "Engage",
     "description": "PPRI questionnaire and methodology for public views on governance reform.",
-    "url": "/consultation/index.html",
+    "url": "/consultation/",
     "tags": [
       "survey",
       "consultation",
@@ -162,7 +162,7 @@
     "title": "PPRI Research Archive",
     "type": "Archive",
     "description": "Comprehensive chronological record of PPRI research outputs, working papers, revisions, and milestone releases.",
-    "url": "/archive/index.html",
+    "url": "/archive/",
     "tags": [
       "archive",
       "publications",
@@ -175,7 +175,7 @@
     "title": "PPRI Media Centre",
     "type": "Media",
     "description": "Resources for journalists, official statements, broadcast briefings, and press contacts for PPRI faculty.",
-    "url": "/media/index.html",
+    "url": "/media/",
     "tags": [
       "media",
       "press",
@@ -595,7 +595,7 @@
     "title": "Articles & Analysis Directory",
     "type": "Articles",
     "description": "Index of all 20+ empirical and analytical articles covering fiscal federalism, administrative scale, and provincial reform.",
-    "url": "/articles/index.html",
+    "url": "/articles/",
     "tags": [
       "articles",
       "analysis",
@@ -608,7 +608,7 @@
     "title": "Policy Papers Hub",
     "type": "Policy Papers",
     "description": "Multi-disciplinary flagship policy papers examining structural, legal, and operational dimensions of provincial reform in Pakistan.",
-    "url": "/research/policy-papers/index.html",
+    "url": "/research/policy-papers/",
     "tags": [
       "policy papers",
       "flagship",
@@ -621,7 +621,7 @@
     "title": "Policy Briefs Hub",
     "type": "Policy Briefs",
     "description": "Executive policy briefs providing concise, data-driven analysis of administrative scale, fiscal formulas, and governance models.",
-    "url": "/research/briefs/index.html",
+    "url": "/research/briefs/",
     "tags": [
       "policy briefs",
       "briefs",
@@ -634,7 +634,7 @@
     "title": "Working Papers Hub",
     "type": "Working Papers",
     "description": "Academic working papers presenting preliminary empirical research on local government, fiscal devolution, and federal mechanics.",
-    "url": "/research/working-papers/index.html",
+    "url": "/research/working-papers/",
     "tags": [
       "working papers",
       "academic",
@@ -647,7 +647,7 @@
     "title": "Research Reports Hub",
     "type": "Reports",
     "description": "In-depth analytical reports assessing regional data, spatial access, and institutional readiness across Pakistan.",
-    "url": "/research/reports/index.html",
+    "url": "/research/reports/",
     "tags": [
       "reports",
       "technical",

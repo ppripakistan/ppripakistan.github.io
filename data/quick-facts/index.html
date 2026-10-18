@@ -48,13 +48,20 @@
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "WebPage",
-      "name": "CSS Aspirants & Researchers Fast-Fact Matrix",
-      "description": "Verified official statistics for Pakistan competitive exams and academic research.",
+      "@type": "Dataset",
+      "name": "Pakistan Governance, Demographics & Fast-Fact Matrix Dataset",
+      "description": "Verified official statistics for Pakistan competitive exams (CSS/PMS) and subnational policy research covering Census 2023, 7th NFC Award, and HIES 2024–25 benchmarks.",
       "url": "https://ppripakistan.github.io/data/quick-facts/",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "spatialCoverage": {
+        "@type": "Place",
+        "name": "Pakistan"
+      },
+      "temporalCoverage": "2023/2026",
       "creator": {
         "@type": "Organization",
-        "name": "Pakistan Provincial Reform Institute"
+        "name": "Pakistan Provincial Reform Institute",
+        "url": "https://ppripakistan.github.io/"
       }
     }
     </script>
@@ -63,18 +70,18 @@
     <a class="skip-link" href="#main-content">Skip to content</a>
     <header class="site-header">
       <div class="container navbar">
-        <a class="brand" href="/index.html">
+        <a class="brand" href="/">
           <img src="/assets/images/brand/ppri-logo-header.jpg" alt="PPRI logo" width="44" height="44" loading="eager" decoding="async" />
           <span class="brand-text"><strong>PPRI</strong><span>Pakistan Provincial Reform Institute</span></span>
         </a>
         <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-navigation">Menu</button>
         <nav id="site-navigation" class="nav-links" aria-label="Primary navigation">
-          <a href="/index.html">Home</a>
-          <a href="/research/index.html">Research</a>
-          <a href="/provinces/index.html">Reform</a>
+          <a href="/">Home</a>
+          <a href="/research/">Research</a>
+          <a href="/provinces/">Reform</a>
           <a href="/data/centre.html" aria-current="page">Data</a>
-          <a href="/publications/index.html">Publications</a>
-          <a href="/consultation/index.html">Engage</a>
+          <a href="/publications/">Publications</a>
+          <a href="/consultation/">Engage</a>
           <a href="/about.html">About</a>
           <a class="nav-search" href="/search.html">Search</a>
         </nav>
@@ -85,7 +92,7 @@
       <div class="obs-header">
         <div class="container">
           <ul class="obs-breadcrumbs">
-            <li><a href="/index.html">Home</a></li>
+            <li><a href="/">Home</a></li>
             <li class="separator">/</li>
             <li><a href="/data/centre.html">Data Observatory</a></li>
             <li class="separator">/</li>
@@ -131,7 +138,17 @@
         </div>
 
         <!-- Facts Grid -->
-        <div id="factsList">
+        
+      <!-- Phase 4: Crawlable Static HTML Executive Data Summary & Key Benchmarks -->
+      <section class="seo-data-summary" id="executive-data-summary" aria-label="Executive Data Summary">
+        <h2>Pakistan Governance, Demographics & Fast Facts Matrix: Executive Summary</h2>
+        <p class="summary-lead"><strong>Executive Overview:</strong> This rapid reference data matrix provides official, verified statistical benchmarks on Pakistan's constitutional structure, demographic scale, public finance, and territorial administration. Sourced directly from the Pakistan Bureau of Statistics 7th Census 2023, the 7th NFC Award, the Pakistan Economic Survey 2025–26, and the Constitution of Pakistan, these verified indicators support empirical research, civil service examination preparation, and public policy analysis.</p>
+        <p>Pakistan operates as a federal parliamentary republic established under the Constitution of 1973. It comprises 4 constitutional provinces, 1 federal territory, 33 administrative divisions, 146 districts (plus 24 districts across AJK and Gilgit-Baltistan), and 574 tehsils. The 18th Constitutional Amendment of 2010 devolved 47 federal subjects to provincial assemblies, but sub-provincial devolution under Article 140A remains incomplete across all four provinces.</p>
+        <div class="table-wrap"><table class="data-summary-table"><thead><tr><th>Core Fast Fact Domain</th><th>Official Verified Statistic</th><th>Constitutional / Statutory Reference</th><th>Primary Authority</th></tr></thead><tbody><tr><td>Total Federation Population</td><td>241,499,431 Citizens</td><td>7th Population & Housing Census</td><td>PBS (August 2023)</td></tr><tr><td>Constitutional Provinces</td><td>4 (Punjab, Sindh, KP, Balochistan)</td><td>Article 1(2)(a) of 1973 Constitution</td><td>Constitution of Pakistan</td></tr><tr><td>Federal Capital Territory</td><td>Islamabad (Area: 906 km², Pop: 2.36M)</td><td>Article 1(2)(b) of 1973 Constitution</td><td>Capital Dev Authority</td></tr><tr><td>Autonomous Territories</td><td>Azad Jammu & Kashmir, Gilgit-Baltistan</td><td>Special Constitutional Status / Orders</td><td>Ministry of Kashmir Affairs</td></tr><tr><td>Administrative Tiers</td><td>4 Provinces &rarr; 33 Divisions &rarr; 146 Districts</td><td>Provincial Administrative Codes</td><td>Provincial Boards of Revenue</td></tr><tr><td>Federal Divisible Pool Share</td><td>57.5% Provincial / 42.5% Federal</td><td>Article 160(3A) of Constitution</td><td>7th NFC Award (2010)</td></tr><tr><td>National Assemblies Seats</td><td>336 National Assembly / 96 Senate</td><td>Article 51 & 59 of Constitution</td><td>Election Commission of Pak</td></tr><tr><td>Local Government Mandate</td><td>Mandatory political, fiscal & admin devolution</td><td>Article 140A of 1973 Constitution</td><td>Provincial LG Acts</td></tr></tbody></table></div>
+        <p class="summary-note"><em>Data Benchmark: Official verified public figures from PBS Census 2023, HIES 2024–25, PES 2025–26, and 7th NFC Award documents. Fully crawlable static reference data.</em></p>
+      </section>
+
+      <div id="factsList">
         <div class="obs-stat-card fact-card" data-category="demographics" style="margin-bottom:20px;">
           <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:8px;margin-bottom:8px;">
             <span class="obs-badge obs-badge-official">Pakistan Affairs / Demographics</span>
@@ -307,7 +324,7 @@
                 Going beyond raw numbers: explore PPRI policy papers and reports cited in federal reform debates.
               </p>
             </div>
-            <a href="/research/index.html" class="obs-btn obs-btn-outline">All Research Papers &rarr;</a>
+            <a href="/research/" class="obs-btn obs-btn-outline">All Research Papers &rarr;</a>
           </div>
           <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));gap:20px;">
             <div class="obs-stat-card" style="padding:22px;">
@@ -334,6 +351,104 @@
     </main>
 
 
+    
+    <!-- Global Research Directory: Complete PPRI Policy & Data Index -->
+    <section class="site-directory" aria-label="Complete PPRI Policy &amp; Data Index">
+      <div class="container">
+        <details class="directory-details" open>
+          <summary class="directory-summary">
+            <span class="directory-title">Complete PPRI Policy, Data &amp; Research Index</span>
+            <span class="directory-hint">Explore all 25 Policy Articles, 5 Research Reports, 10 Data Observatories, and Reform Frameworks</span>
+          </summary>
+          <div class="directory-grid">
+            <div class="directory-col">
+              <h4>Policy Articles &amp; Analysis</h4>
+              <ul>
+                <li><a href="/articles/provinces-of-pakistan-names-capitals-population.html">How Many Provinces in Pakistan (2026)? Names &amp; Capitals</a></li>
+                <li><a href="/articles/four-provinces-241-million-people-administrative-scale.html">Pakistan Provinces Population: 4 Provinces vs. 241.5M Scale</a></li>
+                <li><a href="/articles/south-punjab-why-does-the-province-demand-keep-returning.html">South Punjab Province: Population, 11 Districts Map &amp; Budget</a></li>
+                <li><a href="/articles/hazara-province-why-has-the-demand-survived.html">Hazara Province Movement: History, 8 Districts Map &amp; KP Fiscal Share</a></li>
+                <li><a href="/articles/karachi-urban-sindh-representation-revenue-administration.html">Karachi Administrative Structure: 7 Districts &amp; 25 Towns</a></li>
+                <li><a href="/articles/new-administrative-units-pakistan-2026.html">New Provinces in Pakistan: PPRI-01 Map &amp; 13 Units Model</a></li>
+                <li><a href="/articles/south-punjab-saraiki-bahawalpur-difference.html">South Punjab vs. Bahawalpur vs. Saraiki Suba Differences</a></li>
+                <li><a href="/articles/bahawalpur-province-restoration-2026.html">Bahawalpur Province Restoration: 1955 Merger &amp; History</a></li>
+                <li><a href="/articles/what-would-a-new-province-actually-change.html">What Would a New Province Actually Change in Pakistan?</a></li>
+                <li><a href="/articles/why-is-pakistan-debating-new-provinces-again.html">Why Is Pakistan Debating New Provinces Again? (2026 Analysis)</a></li>
+                <li><a href="/articles/more-provinces-or-stronger-local-governments.html">More Provinces vs. Stronger Local Governments Dilemma</a></li>
+                <li><a href="/articles/can-pakistan-grow-beyond-provincial-capitals-secondary-cities.html">Secondary Cities in Pakistan: Urbanization &amp; Decentralization</a></li>
+                <li><a href="/articles/new-province-can-move-capital-can-it-move-power.html">New Provinces: Secretariat Scale vs. Municipal Devolution</a></li>
+                <li><a href="/articles/where-did-development-money-go-district-government.html">Where Did Development Money Go? PFC Awards &amp; 2001 Devolution</a></li>
+                <li><a href="/articles/where-does-pakistans-development-money-go.html">Where Does Pakistan's Development Money Go? NFC &amp; ADP Breakdown</a></li>
+                <li><a href="/articles/18th-amendment-did-devolution-stop-at-provincial-capital.html">18th Amendment: Provincial Devolution vs. Article 140A</a></li>
+                <li><a href="/articles/is-gilgit-baltistan-a-province-of-pakistan.html">Is Gilgit-Baltistan a Province of Pakistan? Legal Status</a></li>
+                <li><a href="/articles/how-far-is-government-administrative-distance.html">Administrative Distance: Travel Times to Secretariats</a></li>
+                <li><a href="/articles/how-should-pakistan-evaluate-a-new-province.html">PPRI 12-Point Empirical Rubric for New Sub-Units</a></li>
+                <li><a href="/articles/before-local-government-faded-citizen-perceptions.html">Citizen Perceptions: 2004/05 National Social Audit</a></li>
+                <li><a href="/articles/did-2001-devolution-improve-services-evidence.html">Did 2001 Devolution Improve Services? Empirical Evidence</a></li>
+                <li><a href="/articles/one-province-many-needs-development-budget-priority.html">Provincial ADP Spending: Capital Bias &amp; Regional Inequity</a></li>
+                <li><a href="/articles/pakistan-keeps-reinventing-local-government-history.html">History of Local Government in Pakistan (1959–2026)</a></li>
+                <li><a href="/articles/when-development-follows-the-capital-people-follow.html">Capital City Migration &amp; Urban Congestion Cycles</a></li>
+                <li><a href="/articles/why-is-local-government-always-the-last-tier-to-get-power.html">Why Local Government Fails to Get Power in Pakistan</a></li>
+                <li><a href="/articles/"><strong>View All 25 Analytical Articles &rarr;</strong></a></li>
+              </ul>
+            </div>
+            <div class="directory-col">
+              <h4>Research Reports &amp; Papers</h4>
+              <ul>
+                <li><a href="/research/reports/income-went-up-why-does-life-feel-harder.html">Average Household Income in Pakistan (HIES 2024-25 vs Inflation)</a></li>
+                <li><a href="/research/reports/bribe-you-cant-see-corruption-private-tax.html">NCPS 2025 Corruption Data: Administrative Bribes as Private Tax</a></li>
+                <li><a href="/research/reports/price-of-a-simple-task-pakistan-bureaucracy-cost.html">Price of a Simple Task: Pakistan Bureaucracy Cost Index</a></li>
+                <li><a href="/research/reports/same-country-different-life-district-access.html">District Inequality in Pakistan: HIES 2024-25 Basic Services</a></li>
+                <li><a href="/research/reports/does-money-work-better-spent-closer-to-people.html">Fiscal Decentralization: Local Government vs Centralized ADP</a></li>
+                <li><a href="/research/policy-papers/provincial-reorganization-of-pakistan.html">Flagship Paper: Provincial Reorganization of Pakistan</a></li>
+                <li><a href="/research/working-papers/provinces-local-government.html">Working Paper: Provinces and Local Governments</a></li>
+                <li><a href="/research/briefs/administrative-scale.html">Research Brief: Administrative Scale &amp; Governance Ratios</a></li>
+                <li><a href="/research/comparative-governance.html">Comparative Subnational Governance: Global Federations</a></li>
+                <li><a href="/research/legal-library.html">Constitutional Legal Library: Article 239 &amp; Article 140A</a></li>
+                <li><a href="/research/reports/"><strong>View All Research Reports &rarr;</strong></a></li>
+              </ul>
+            </div>
+            <div class="directory-col">
+              <h4>Data Observatories</h4>
+              <ul>
+                <li><a href="/data/centre.html">Central Data Observatory &amp; Knowledge Map</a></li>
+                <li><a href="/data/population/">Population &amp; Cities Observatory (Census 2023)</a></li>
+                <li><a href="/data/economy/">Economy, Inflation &amp; Markets Benchmarks</a></li>
+                <li><a href="/data/living-standards/">Living Standards &amp; HIES 2024–25 Income</a></li>
+                <li><a href="/data/public-finance/">Public Finance &amp; 7th NFC Simulator</a></li>
+                <li><a href="/data/education/">Education &amp; Literacy Benchmarks</a></li>
+                <li><a href="/data/health/">Public Health &amp; Medical Infrastructure</a></li>
+                <li><a href="/data/digital-access/">Digital Access &amp; Teledensity Tracker</a></li>
+                <li><a href="/data/compare/">Cross-Provincial Indicator Comparator</a></li>
+                <li><a href="/data/quick-facts/">Fast Facts Matrix (CSS/PMS Reference)</a></li>
+                <li><a href="/data/downloads/">Open Data Downloads (CSV / JSON)</a></li>
+                <li><a href="/maps/scenarios/">Interactive Scenario Lab (PPRI-01 Map)</a></li>
+                <li><a href="/maps/">Cartographic Map Gallery</a></li>
+              </ul>
+            </div>
+            <div class="directory-col">
+              <h4>Reform Models &amp; Engagement</h4>
+              <ul>
+                <li><a href="/provinces/proposed-models.html">Proposed Reform Models: 13-Unit Structure</a></li>
+                <li><a href="/provinces/fiscal-framework.html">Fiscal Framework: NFC Divisible Pool Sharing</a></li>
+                <li><a href="/provinces/constitutional-framework.html">Constitutional Path: Article 239(4) Bill Guide</a></li>
+                <li><a href="/provinces/local-government.html">Local Government Framework: Article 140A Devolution</a></li>
+                <li><a href="/provinces/administrative-model.html">Administrative Secretariat &amp; Cadre Transition</a></li>
+                <li><a href="/provinces/transition-framework.html">Transition Framework: 3-Year Implementation</a></li>
+                <li><a href="/provinces/why-provinces.html">Why Sub-National Reform? Core Case Studies</a></li>
+                <li><a href="/resources/constitution.html">Constitution Reader: Federal &amp; Provincial Lists</a></li>
+                <li><a href="/resources/legislation.html">Provincial Local Government Acts &amp; Statutes</a></li>
+                <li><a href="/consultation/">Public Consultation Portal</a></li>
+                <li><a href="/consultation/survey.html">Participate in National Governance Survey</a></li>
+                <li><a href="/consultation/submissions.html">Submit Policy Memoranda &amp; Feedback</a></li>
+                <li><a href="/about.html">About Pakistan Provincial Reform Institute</a></li>
+              </ul>
+            </div>
+          </div>
+        </details>
+      </div>
+    </section>
+
     <footer class="site-footer">
       <div class="container footer-grid">
         <div>
@@ -354,7 +469,7 @@
           <h3>Connect</h3>
           <ul class="footer-links">
             <li><a href="https://x.com/PPRI_Pakistan" rel="me">X / @PPRI_Pakistan</a></li>
-            <li><a href="/consultation/index.html">Public Consultation</a></li>
+            <li><a href="/consultation/">Public Consultation</a></li>
             <li><a href="/contact.html">Contact Us</a></li>
           </ul>
         </div>
