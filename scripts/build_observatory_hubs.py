@@ -647,17 +647,31 @@ def generate_hub_html(key, hub):
     <meta name="description" content="{hub['description']}" />
     <link rel="canonical" href="{hub['canonical']}" />
     <meta property="og:site_name" content="Pakistan Provincial Reform Institute (PPRI)" />
+    <meta property="og:locale" content="en_PK" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="{hub['title']} | PPRI Data Observatory" />
     <meta property="og:description" content="{hub['description']}" />
     <meta property="og:url" content="{hub['canonical']}" />
-    <meta property="og:image" content="https://ppripakistan.github.io/assets/images/brand/ppri-logo.jpg" />
+    <meta property="og:image" content="https://ppripakistan.github.io/assets/images/brand/ppri-social-share.jpg?v=2" />
+    <meta property="og:image:secure_url" content="https://ppripakistan.github.io/assets/images/brand/ppri-social-share.jpg?v=2" />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="{hub['title']} | PPRI Data Observatory" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@PPRI_Pakistan" />
+    <meta name="twitter:creator" content="@PPRI_Pakistan" />
     <meta name="twitter:title" content="{hub['title']} | PPRI Data Observatory" />
     <meta name="twitter:description" content="{hub['description']}" />
-    <meta name="twitter:image" content="https://ppripakistan.github.io/assets/images/brand/ppri-logo.jpg" />
-    <link rel="icon" href="/assets/images/brand/ppri-favicon.png" />
+    <meta name="twitter:image" content="https://ppripakistan.github.io/assets/images/brand/ppri-social-share.jpg?v=2" />
+    <meta name="twitter:image:alt" content="{hub['title']} | PPRI Data Observatory" />
+    <link rel="icon" href="/favicon.ico" sizes="48x48" />
+    <link rel="icon" href="/assets/images/brand/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/brand/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/brand/favicon-16x16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <meta name="theme-color" content="#073c3a" />
     <link rel="stylesheet" href="/assets/css/style.css" />
     <link rel="stylesheet" href="/assets/css/responsive.css" />
     <link rel="stylesheet" href="/assets/css/observatory.css" />
