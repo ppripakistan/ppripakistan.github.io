@@ -12,14 +12,14 @@
     </script>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Constitutional Architecture &amp; Legal Framework | PPRI</title>
-    <meta name="description" content="Interactive legal reader of the Constitution of Pakistan: examining Articles 1, 140A, 160, and 239 governing provincial reorganization and municipal powers." />
+    <title>Constitution of Pakistan 1973 Reader: Article 1, 140A, 160 (NFC), 18th Amendment & 239 | PPRI</title>
+    <meta name="description" content="Interactive and annotated reader of key constitutional articles in Pakistan's 1973 Constitution: Article 1 (territories), Article 140A (local government), Article 160 (NFC), Article 172 (resources), and Article 239(4) (provincial borders)." />
     <link rel="canonical" href="https://ppripakistan.github.io/resources/constitution.html" />
     <meta property="og:site_name" content="Pakistan Provincial Reform Institute" />
     <meta property="og:locale" content="en_PK" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Constitutional Architecture &amp; Legal Framework | PPRI" />
-    <meta property="og:description" content="Interactive legal reader of the Constitution of Pakistan: examining Articles 1, 140A, 160, and 239 governing provincial reorganization and municipal powers." />
+    <meta property="og:title" content="Constitution of Pakistan 1973 Reader: Article 1, 140A, 160 (NFC), 18th Amendment & 239 | PPRI" />
+    <meta property="og:description" content="Interactive and annotated reader of key constitutional articles in Pakistan's 1973 Constitution: Article 1 (territories), Article 140A (local government), Article 160 (NFC), Article 172 (resources), and Article 239(4) (provincial borders)." />
     <meta property="og:url" content="https://ppripakistan.github.io/resources/constitution.html" />
     <meta property="og:image" content="https://ppripakistan.github.io/assets/images/brand/ppri-social-share.jpg?v=2" />
     <meta property="og:image:secure_url" content="https://ppripakistan.github.io/assets/images/brand/ppri-social-share.jpg?v=2" />
@@ -30,8 +30,8 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@PPRI_Pakistan" />
     <meta name="twitter:creator" content="@PPRI_Pakistan" />
-    <meta name="twitter:title" content="Constitutional Architecture &amp; Legal Framework | PPRI" />
-    <meta name="twitter:description" content="Interactive legal reader of the Constitution of Pakistan: examining Articles 1, 140A, 160, and 239 governing provincial reorganization and municipal powers." />
+    <meta name="twitter:title" content="Constitution of Pakistan 1973 Reader: Article 1, 140A, 160 (NFC), 18th Amendment & 239 | PPRI" />
+    <meta name="twitter:description" content="Interactive and annotated reader of key constitutional articles in Pakistan's 1973 Constitution: Article 1 (territories), Article 140A (local government), Article 160 (NFC), Article 172 (resources), and Article 239(4) (provincial borders)." />
     <meta name="twitter:image" content="https://ppripakistan.github.io/assets/images/brand/ppri-social-share.jpg?v=2" />
     <meta name="twitter:image:alt" content="Pakistan Provincial Reform Institute (PPRI)" />
     <link rel="icon" type="image/png" href="/favicon.png" />
@@ -172,15 +172,16 @@
 
       <section class="section">
         <div class="container prose-wide">
-          <div class="legal-tabs">
-            <button class="legal-tab-btn is-active" onclick="switchArticle('art239', this)">Article 239(4): Altering Provincial Limits</button>
-            <button class="legal-tab-btn" onclick="switchArticle('art1', this)">Article 1: Territories of Pakistan</button>
-            <button class="legal-tab-btn" onclick="switchArticle('art140a', this)">Article 140A: Local Government</button>
-            <button class="legal-tab-btn" onclick="switchArticle('art160', this)">Article 160: National Finance Commission</button>
+          <div class="legal-tabs" role="navigation" aria-label="Constitutional Articles Navigation">
+            <a href="#article-239" class="legal-tab-btn is-active">Article 239(4): Altering Limits</a>
+            <a href="#article-1" class="legal-tab-btn">Article 1: Territories</a>
+            <a href="#article-140a" class="legal-tab-btn">Article 140A: Local Govt</a>
+            <a href="#article-160" class="legal-tab-btn">Article 160: NFC Award</a>
+            <a href="#article-172" class="legal-tab-btn">Article 172: Natural Resources</a>
           </div>
 
           <!-- ARTICLE 239 -->
-          <div class="article-panel" id="panel-art239">
+          <div class="article-panel" id="article-239">
             <span class="badge" style="background: rgba(20, 90, 50, 0.1); color: #145a32; padding: 4px 10px; border-radius: 4px; font-weight: 700; font-size: 0.8rem;">
               The Federal Constitutional Gatekeeper
             </span>
@@ -223,7 +224,7 @@
           </div>
 
           <!-- ARTICLE 1 -->
-          <div class="article-panel" id="panel-art1" style="display: none;">
+          <div class="article-panel" id="article-1" style="margin-top: 36px; padding-top: 24px; border-top: 1px solid #e2e8f0;">
             <span class="badge" style="background: rgba(20, 90, 50, 0.1); color: #145a32; padding: 4px 10px; border-radius: 4px; font-weight: 700; font-size: 0.8rem;">
               Territorial Definition
             </span>
@@ -257,7 +258,7 @@
           </div>
 
           <!-- ARTICLE 140A -->
-          <div class="article-panel" id="panel-art140a" style="display: none;">
+          <div class="article-panel" id="article-140a" style="margin-top: 36px; padding-top: 24px; border-top: 1px solid #e2e8f0;">
             <span class="badge" style="background: rgba(20, 90, 50, 0.1); color: #145a32; padding: 4px 10px; border-radius: 4px; font-weight: 700; font-size: 0.8rem;">
               Local Government Devolution
             </span>
@@ -290,7 +291,7 @@
           </div>
 
           <!-- ARTICLE 160 -->
-          <div class="article-panel" id="panel-art160" style="display: none;">
+          <div class="article-panel" id="article-160" style="margin-top: 36px; padding-top: 24px; border-top: 1px solid #e2e8f0;">
             <span class="badge" style="background: rgba(20, 90, 50, 0.1); color: #145a32; padding: 4px 10px; border-radius: 4px; font-weight: 700; font-size: 0.8rem;">
               Fiscal Equalization &amp; NFC
             </span>
@@ -322,6 +323,44 @@
             </div>
           </div>
 
+          
+          <!-- ARTICLE 172 -->
+          <div class="article-panel" id="article-172" style="margin-top: 36px; padding-top: 24px; border-top: 1px solid #e2e8f0;">
+            <span class="badge" style="background: rgba(20, 90, 50, 0.1); color: #145a32; padding: 4px 10px; border-radius: 4px; font-weight: 700; font-size: 0.8rem;">
+              Natural Resources &amp; 18th Amendment Co-Ownership
+            </span>
+            <h2 class="mt-2">Article 172: Ownerless Property, Minerals, Oil &amp; Natural Gas</h2>
+
+            <div class="legal-clause-box">
+              &ldquo;(1) Any property which has no rightful owner shall, if located in a Province, vest in the Government of that Province, and in every other case, in the Federal Government.<br /><br />
+              (2) All lands, minerals and other things of value within the continental shelf or underlying the ocean within the territorial waters of Pakistan shall vest in the Federal Government.<br /><br />
+              (3) Subject to the existing commitments and obligations, mineral oil and natural gas within the Province or the territorial waters adjacent thereto shall vest jointly and equally in that Province and the Federal Government.&rdquo;
+            </div>
+
+            <div class="legal-analysis-grid">
+              <div class="legal-analysis-card">
+                <h4>1. The 50-50 Joint Ownership Rule</h4>
+                <p>
+                  Inserted by Section 65 of the 18th Constitutional Amendment (2010), Article 172(3) replaced exclusive federal ownership with a landmark 50-50 co-ownership model between the federal federation and the producing province for on-shore and adjacent offshore hydrocarbons.
+                </p>
+              </div>
+
+              <div class="legal-analysis-card">
+                <h4>2. Natural Gas Royalties &amp; Wellhead Levies</h4>
+                <p>
+                  Article 172 operates in synergy with Article 161 (Natural Gas and Hydro-electric Power). Under Article 161(1), net proceeds of federal excise duties and royalties on natural gas are transferred straight to the province where the wellhead is situated (e.g. Sui gas fields in Balochistan, Badin and Ghotki in Sindh).
+                </p>
+              </div>
+
+              <div class="legal-analysis-card">
+                <h4>3. Fiscal Implications for Sub-Units</h4>
+                <p>
+                  When proposing territorial reorganization (such as carving out a South Punjab province, a Makran coastal unit, or a Hazara unit), revenue distribution from mineral deposits (Reko Diq, Saindak copper-gold) and gas fields must be codified. Article 172 ensures mineral wealth directly benefits the contiguous provincial treasury.
+                </p>
+              </div>
+            </div>
+          </div>
+        
           <div class="highlight mt-4">
             <h2>Related Legal Research</h2>
             <p>
@@ -467,6 +506,7 @@
             <li><a href="/provinces/">Provincial Reform</a></li>
             <li><a href="/data/centre.html">Data Centre</a></li>
             <li><a href="/maps/">Maps</a></li>
+            <li><a href="/directory.html">Site Directory</a></li>
             <li><a href="/methodology/">Methodology</a></li>
           </ul>
         </div>
@@ -482,18 +522,19 @@
       </div>
       <div class="container footer-bottom">
         <span>© <span data-current-year></span> Pakistan Provincial Reform Institute</span>
-        <span><a href="/privacy.html">Privacy</a> · <a href="/terms.html">Terms</a> · <a href="/sitemap.xml">Sitemap</a></span>
+        <span><a href="/privacy.html">Privacy</a> · <a href="/terms.html">Terms</a> · <a href="/directory.html">Directory</a> &middot; <a href="/directory.html">Directory</a> · <a href="/sitemap.xml">Sitemap</a></span>
       </div>
     </footer>
 
     <script src="/assets/js/main.js" defer></script>
     <script>
-      function switchArticle(id, btn) {
-        document.querySelectorAll('.article-panel').forEach(p => p.style.display = 'none');
-        document.querySelectorAll('.legal-tab-btn').forEach(b => b.classList.remove('is-active'));
-        document.getElementById('panel-' + id).style.display = 'block';
-        btn.classList.add('is-active');
-      }
+      // Smooth scrolling for constitutional tabs and active class highlight
+      document.querySelectorAll('.legal-tab-btn').forEach(btn => {
+        btn.addEventListener('click', function(e) {
+          document.querySelectorAll('.legal-tab-btn').forEach(b => b.classList.remove('is-active'));
+          this.classList.add('is-active');
+        });
+      });
     </script>
   </body>
 </html>
