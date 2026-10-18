@@ -13,7 +13,8 @@ ROOT_DIR = Path(__file__).resolve().parent.parent
 
 IGNORED_DIRS = {'.git', '.vscode', 'node_modules', '.gemini', 'scratch_inspect'}
 
-FAVICON_BLOCK = """    <link rel="icon" href="/favicon.ico" sizes="48x48" />
+FAVICON_BLOCK = """    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="icon" href="/favicon.ico" sizes="48x48" />
     <link rel="icon" href="/assets/images/brand/favicon.svg" type="image/svg+xml" />
     <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/brand/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/brand/favicon-16x16.png" />
@@ -84,7 +85,7 @@ def process_html_file(file_path):
     is_redirect = 'http-equiv="refresh"' in content or "http-equiv='refresh'" in content
 
     # Standard Social & Meta Block
-    social_block = f"""    <meta property="og:site_name" content="Pakistan Provincial Reform Institute (PPRI)" />
+    social_block = f"""    <meta property="og:site_name" content="Pakistan Provincial Reform Institute" />
     <meta property="og:locale" content="en_PK" />
     <meta property="og:type" content="{og_type}" />
     <meta property="og:title" content="{title}" />
@@ -142,6 +143,15 @@ def process_html_file(file_path):
         '"url": "https://ppripakistan.github.io/assets/images/brand/ppri-social-share.jpg"',
         '"url": "https://ppripakistan.github.io/assets/images/brand/ppri-social-share.jpg?v=2"'
     )
+
+    # For index.html, ensure WebSite JSON-LD contains alternateName
+    if rel_path == "index.html":
+        if '"@type": "WebSite"' in content and '"alternateName": "PPRI"' not in content:
+            content = re.sub(
+                r'("name":\s*"Pakistan Provincial Reform Institute",\r?\n)(\s*"publisher":)',
+                r'\1        "alternateName": "PPRI",\r\n\2',
+                content
+            )
 
     file_path.write_text(content, encoding="utf-8")
     return "updated"

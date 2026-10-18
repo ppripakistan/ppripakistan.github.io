@@ -53,6 +53,13 @@ def verify_all():
     else:
         print(f"  [PASS] Root favicon.svg exists ({root_svg.stat().st_size} bytes).")
 
+    root_png = ROOT_DIR / "favicon.png"
+    if not root_png.exists():
+        errors.append("Root /favicon.png does not exist.")
+    else:
+        im = Image.open(root_png)
+        print(f"  [PASS] Root favicon.png exists ({im.size[0]}x{im.size[1]} px).")
+
     brand_assets = [
         ("favicon-16x16.png", (16, 16)),
         ("favicon-32x32.png", (32, 32)),
@@ -60,6 +67,7 @@ def verify_all():
         ("icon-192.png", (192, 192)),
         ("icon-512.png", (512, 512)),
         ("ppri-favicon.png", (192, 192)),
+        ("favicon.png", (512, 512)),
     ]
     for name, expected_size in brand_assets:
         p = BRAND_DIR / name
@@ -138,13 +146,15 @@ def verify_all():
         rel = str(p.relative_to(ROOT_DIR)).replace("\\", "/")
         if 'rel="icon"' not in text and "rel='icon'" not in text:
             missing_favicon.append(rel)
+        elif '/favicon.png' not in text:
+            missing_favicon.append(f"{rel} (missing /favicon.png)")
         if 'site.webmanifest' not in text:
             missing_manifest_links.append(rel)
 
     if missing_favicon:
         errors.append(f"HTML pages missing favicon: {missing_favicon}")
     else:
-        print("  [PASS] 100% of HTML pages contain standardized favicon link tags.")
+        print("  [PASS] 100% of HTML pages contain standardized favicon link tags including /favicon.png.")
 
     if missing_manifest_links:
         errors.append(f"HTML pages missing site.webmanifest: {missing_manifest_links}")
@@ -162,10 +172,15 @@ def verify_all():
     missing_og = []
     missing_tw = []
     broken_og_images = []
+    deprecated_site_names = []
 
     for p in content_pages:
         text = p.read_text(encoding="utf-8")
         rel = str(p.relative_to(ROOT_DIR)).replace("\\", "/")
+
+        og_site_m = re.search(r'<meta[^>]*property=[\"\']og:site_name[\"\'][^>]*content=[\"\']([^\"\']+)[\"\']', text)
+        if og_site_m and "(PPRI)" in og_site_m.group(1):
+            deprecated_site_names.append(rel)
 
         og_img_m = re.search(r'<meta[^>]*property=[\"\']og:image[\"\'][^>]*content=[\"\']([^\"\']+)[\"\']', text)
         if not og_img_m:
@@ -182,6 +197,11 @@ def verify_all():
         tw_card_m = re.search(r'<meta[^>]*name=[\"\']twitter:card[\"\'][^>]*content=[\"\']([^\"\']+)[\"\']', text)
         if not tw_card_m:
             missing_tw.append(rel)
+
+    if deprecated_site_names:
+        errors.append(f"Pages with deprecated '(PPRI)' in og:site_name: {deprecated_site_names}")
+    else:
+        print("  [PASS] 100% of active pages use clean og:site_name='Pakistan Provincial Reform Institute'.")
 
     if missing_og:
         errors.append(f"Content pages missing og:image: {missing_og}")
@@ -211,6 +231,15 @@ def verify_all():
         errors.append(f"HTML pages missing Google tag: {missing_gtag}")
     else:
         print("  [PASS] 100% of 120 HTML pages retain the Google tag (gtag.js) snippet.")
+
+    # Verify index.html WebSite JSON-LD
+    index_html = ROOT_DIR / "index.html"
+    if index_html.exists():
+        idx_txt = index_html.read_text(encoding="utf-8")
+        if '"alternateName": "PPRI"' not in idx_txt:
+            errors.append("index.html WebSite structured data missing alternateName: 'PPRI'")
+        else:
+            print("  [PASS] index.html WebSite JSON-LD correctly includes alternateName: 'PPRI'.")
 
     # Summary
     print("\n" + "=" * 75)

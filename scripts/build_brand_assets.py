@@ -75,8 +75,24 @@ def extract_master_emblem():
 
     return emblem_raw
 
-def build_favicons(master_emblem):
+def get_favicon_master():
+    root_png = ROOT_DIR / "favicon.png"
+    if root_png.exists():
+        return Image.open(root_png)
+    return extract_master_emblem()
+
+def build_favicons(master_emblem=None):
+    if master_emblem is None:
+        master_emblem = get_favicon_master()
     print("Building Favicon Suite...")
+
+    # Copy root favicon.png to brand dir if exists
+    root_fav = ROOT_DIR / "favicon.png"
+    if root_fav.exists():
+        import shutil
+        shutil.copy2(root_fav, BRAND_DIR / "favicon.png")
+        print("  Copied favicon.png to assets/images/brand/")
+
     # 1. Standard PNG sizes
     sizes = {
         "favicon-16x16.png": 16,
@@ -94,7 +110,10 @@ def build_favicons(master_emblem):
     # 2. Apple Touch Icon (180x180 with subtle margin on solid/subtle institutional background)
     apple_icon = Image.new("RGBA", (180, 180), (255, 255, 255, 255))
     emb_150 = master_emblem.resize((150, 150), Image.Resampling.LANCZOS)
-    apple_icon.paste(emb_150, (15, 15), emb_150)
+    if emb_150.mode == "RGBA":
+        apple_icon.paste(emb_150, (15, 15), emb_150)
+    else:
+        apple_icon.paste(emb_150, (15, 15))
     apple_icon.convert("RGB").save(ROOT_DIR / "apple-touch-icon.png", format="PNG")
     apple_icon.convert("RGB").save(BRAND_DIR / "apple-touch-icon.png", format="PNG")
     print("  Generated apple-touch-icon.png (180x180)")
@@ -109,8 +128,9 @@ def build_favicons(master_emblem):
     emb_buf = io.BytesIO()
     master_emblem.save(emb_buf, format="PNG")
     b64_data = base64.b64encode(emb_buf.getvalue()).decode('ascii')
-    svg_content = f'''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 450 450" width="100%" height="100%">
-  <image width="450" height="450" href="data:image/png;base64,{b64_data}"/>
+    w, h = master_emblem.size
+    svg_content = f'''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {w} {h}" width="100%" height="100%">
+  <image width="{w}" height="{h}" href="data:image/png;base64,{b64_data}"/>
 </svg>'''
     (ROOT_DIR / "favicon.svg").write_text(svg_content, encoding="utf-8")
     (BRAND_DIR / "favicon.svg").write_text(svg_content, encoding="utf-8")
@@ -249,13 +269,21 @@ def build_research_publication_cards(master_emblem):
         print(f"  Generated {pub['filename']} ({W}x{H})")
 
 def main():
+    import sys
     print("=" * 60)
-    print("Building Master PPRI Brand & Social Asset Suite")
+    print("Building Master PPRI Brand & Favicon Suite")
     print("=" * 60)
-    emblem = extract_master_emblem()
-    build_favicons(emblem)
-    build_default_social_cards(emblem)
-    build_research_publication_cards(emblem)
+    fav_master = get_favicon_master()
+    build_favicons(fav_master)
+
+    if "--favicons-only" not in sys.argv:
+        try:
+            emblem = extract_master_emblem()
+            build_default_social_cards(emblem)
+            build_research_publication_cards(emblem)
+        except Exception as e:
+            print(f"Skipping social card rebuild: {e}")
+
     print("=" * 60)
     print("Asset generation complete!")
 
