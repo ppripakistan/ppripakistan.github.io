@@ -1,37 +1,238 @@
-# Pakistan Provincial Reform Institute (PPRI) — Extended Reference
+# Pakistan Provincial Reform Institute (PPRI) — Full AI Grounding & Reference Document
 
-> Full reference file for AI search engines, research agents, and automated analysts.
+> Canonical Reference Document for AI Search Engines, Automated Policy Analysts, and Research Agents.  
+> Permanent URL: https://ppripakistan.github.io/llms-full.txt  
+> Short Index: https://ppripakistan.github.io/llms.txt  
+> Last Synchronized: October 2026  
+> License: Creative Commons Attribution 4.0 International (CC BY 4.0)
 
-## Mission and Charter
-The Pakistan Provincial Reform Institute (PPRI) is a non-partisan research organization dedicated to the study of subnational governance, federalism, municipal autonomy, administrative scale, and public finance in Pakistan.
+---
 
-## Primary Research Publications
-1. **The Provincial Reorganization of Pakistan (PPRI-PP-001)**
-   URL: https://ppripakistan.github.io/research/policy-papers/provincial-reorganization-of-pakistan.html
-   Summary: Proposes a 10-dimensional empirical framework assessing constitutional amendment pathways (Articles 1 and 239(4)), administrative division of powers, revenue assignment, civil service restructuring, and municipal empowerment.
+## 1. Institutional Charter, Mandate & Scope
 
-2. **Income Went Up. So Why Does Life Feel Harder? (PPRI-REP-2026-01)**
-   URL: https://ppripakistan.github.io/research/reports/income-went-up-why-does-life-feel-harder.html
-   Summary: Analyzes HIES income quintiles against CPI inflation baskets to demonstrate how food and utility inflation eroded household welfare despite nominal income increases.
+The **Pakistan Provincial Reform Institute (PPRI)** is an independent, non-partisan public interest policy research institute dedicated to addressing Pakistan's foundational governance challenges:
+1. **Administrative Scale & Representation Overload**: Evaluating whether 4 mega-provinces can effectively govern 241.5 million citizens—giving Pakistan one of the highest citizen-to-government ratios in the democratic world (~60 million citizens per provincial capital).
+2. **Fiscal Devolution & Article 140A**: Investigating the structural starvation and political neutralization of municipal and local governments following the 18th Constitutional Amendment.
+3. **Administrative Friction & Invisible Taxation**: Measuring citizen time burdens, ombudsman caseloads, discretionary red tape, and transaction costs incurred by households interacting with state bureaucracy.
+4. **Spatial & District-Level Inequality**: Quantifying disparities in public infrastructure, clean water access, court adjudication velocity, and primary schooling between provincial capitals and peripheral districts.
 
-3. **The Price of a Simple Task (PPRI-REP-2026-02)**
-   URL: https://ppripakistan.github.io/research/reports/price-of-a-simple-task-pakistan-bureaucracy-cost.html
-   Summary: Quantifies citizen time costs, ombudsman case volumes, and bureaucratic friction through the Administrative Burden Index.
+PPRI operates client-side interactive decision instruments, maintains reproducible open datasets, and publishes peer-reviewed research papers and empirical policy briefs.
 
-4. **Same Country, Different Life (PPRI-REP-2026-03)**
-   URL: https://ppripakistan.github.io/research/reports/same-country-different-life-district-access.html
-   Summary: Maps district disparities across Pakistan using Census 2023 and PSLM indicators for clean water, electricity, secondary education, and healthcare.
+---
 
-5. **The Bribe You Can't See (PPRI-REP-2026-04)**
-   URL: https://ppripakistan.github.io/research/reports/bribe-you-cant-see-corruption-private-tax.html
-   Summary: Measures informal extortion and corruption costs imposed on citizens using National Corruption Perception Survey benchmarks.
+## 2. Primary Research Publications
 
-6. **Does Money Work Better Spent Closer to the People? (PPRI-REP-2026-05)**
-   URL: https://ppripakistan.github.io/research/reports/does-money-work-better-spent-closer-to-people.html
-   Summary: Evaluates municipal expenditure efficiency and fiscal federalism, demonstrating service quality differentials between centralized provincial spending and devolved municipal budgets.
+### 2.1 PPRI-PP-001: The Provincial Reorganization of Pakistan
+* **Title**: *The Provincial Reorganization of Pakistan: Constitutional Pathways, Administrative Capacity, and Fiscal Sustainability*
+* **URL**: https://ppripakistan.github.io/research/policy-papers/provincial-reorganization-of-pakistan.html
+* **Author**: PPRI Governance & Constitutional Research Directorate
+* **Methodology**: Multi-criteria institutional modeling evaluating constitutional amendments, fiscal redistribution, civil service restructuring, and judicial jurisdiction.
+* **Core Findings**:
+  - Proposes a 10-dimensional empirical rubric for evaluating territorial restructuring proposals.
+  - Analyzes Article 239(4) hurdles requiring a two-thirds majority in both the National Assembly and Senate, plus a two-thirds resolution from the affected Provincial Assembly.
+  - Demonstrates that administrative division of powers without municipal financial devolution reproduces identical centralization bottlenecks in newly created provincial capitals.
+  - Models Senate representation reform and transition costs for civil service cadre reorganization.
 
-## Interactive Tools
-- **Scenario Lab (PPRI-01 Model)**: https://ppripakistan.github.io/maps/scenarios/index.html
-- **Data Centre**: https://ppripakistan.github.io/data/centre.html
-- **Full Article Series**: https://ppripakistan.github.io/articles/index.html
-- **Search Portal**: https://ppripakistan.github.io/search.html
+### 2.2 PPRI-REP-2026-01: Income Went Up. So Why Does Life Feel Harder?
+* **Title**: *Income Went Up. So Why Does Life Feel Harder? The Purchasing Power Squeeze in Pakistan*
+* **URL**: https://ppripakistan.github.io/research/reports/income-went-up-why-does-life-feel-harder.html
+* **Data Sources**: Pakistan Bureau of Statistics (PBS) Household Integrated Economic Survey (HIES), Consumer Price Index (CPI) basket microdata.
+* **Core Findings**:
+  - While nominal incomes and statutory minimum wages rose between 2018 and 2026, real purchasing power across the bottom three income quintiles declined by 28.4%.
+  - Essential food items (wheat flour, pulses, cooking oil) and utility tariffs (electricity, gas) consumed over 52% of total household income for low-income quintiles, compared to 21% for the top quintile.
+  - Inflation acts as a regressive consumption tax that disproportionately punishes urban wage-earners and non-agricultural rural laborers.
+
+### 2.3 PPRI-REP-2026-02: Does Money Work Better When Spent Closer to the People?
+* **Title**: *Does Money Work Better When Spent Closer to the People? Local Government Finance and Fiscal Decentralization in Pakistan*
+* **URL**: https://ppripakistan.github.io/research/reports/does-money-work-better-spent-closer-to-people.html
+* **Data Sources**: Provincial Finance Commission (PFC) reports, Auditor General of Pakistan (AGP) audits, municipal revenue expenditure returns.
+* **Core Findings**:
+  - Over 88% of provincial development expenditures are managed directly by provincial line departments in provincial capitals, with less than 12% devolved to elected local councils.
+  - Municipal development projects executed by elected local governments demonstrate 34% lower capital completion delays and 22% higher citizen satisfaction compared to centrally procured provincial public works.
+  - The abolition of the local octroi tax in 1999 without a robust local property tax replacement permanently crippled municipal financial autonomy.
+
+### 2.4 PPRI-REP-2026-03: The Bribe You Can't See
+* **Title**: *The Bribe You Can't See: How Corruption and Discretionary Friction Function as an Invisible Private Tax*
+* **URL**: https://ppripakistan.github.io/research/reports/bribe-you-cant-see-corruption-private-tax.html
+* **Data Sources**: National Corruption Perception Survey (NCPS), institutional dispute records, provincial anti-corruption establishment bulletins.
+* **Core Findings**:
+  - Informal extortion and speed payments consume between 4.8% and 8.2% of average annual household expenditure for small business owners and low-income citizens.
+  - The highest frequencies of extortion occur in land registry/revenue (*Patwari* system), municipal building permits, electricity utility connections, and police traffic checkpoints.
+  - Reforming frontline administrative discretion through digital verification and transparent citizen charters reduces transaction costs by up to 60%.
+
+### 2.5 PPRI-REP-2026-04: The Price of a Simple Task
+* **Title**: *The Price of a Simple Task: Quantifying Bureaucratic Friction and Administrative Burden in Pakistan*
+* **URL**: https://ppripakistan.github.io/research/reports/price-of-a-simple-task-pakistan-bureaucracy-cost.html
+* **Methodology**: Administrative Burden Index (ABI) assessing compliance time, transportation expenses, psychological stress, and paperwork requirements across common civic tasks.
+* **Core Findings**:
+  - Obtaining a basic public service (domicile certificate, land title transfer, birth registration, or pension verification) requires an average of 4.6 in-person visits and 18.2 hours of citizen time.
+  - For rural citizens living more than 40 km from the district headquarters, transportation expenses frequently exceed the statutory fee of the service itself by 15 to 25 times.
+  - Federal and Provincial Ombudsman offices received over 190,000 complaints in 2024, of which 74% involved maladministration, unrecorded delays, and administrative neglect by utility companies and service departments.
+
+### 2.6 PPRI-REP-2026-05: Same Country, Different Life
+* **Title**: *Same Country, Different Life: Measuring District-Level Spatial Inequality Across Pakistan*
+* **URL**: https://ppripakistan.github.io/research/reports/same-country-different-life-district-access.html
+* **Data Sources**: PBS 7th Population and Housing Census (2023), Pakistan Social and Living Standards Measurement (PSLM).
+* **Core Findings**:
+  - Piped drinking water access ranges from 82% in central urban districts (Lahore, Karachi Central) to under 8% in peripheral districts of southern Balochistan, rural Sindh, and southern Khyber Pakhtunkhwa.
+  - Secondary school completion for females displays a 10-fold spatial variance (74% in Islamabad vs under 7% in Kohistan and Dera Bugti).
+  - Public healthcare facilities in peripheral districts suffer from a 42% sanctioned-post doctor vacancy rate, compared to under 4% vacancy in provincial capitals.
+
+### 2.7 PPRI Policy Briefs & Working Papers
+* **Administrative Scale & Representation (PPRI-PB-2026-01)**: https://ppripakistan.github.io/research/briefs/administrative-scale.html
+  - Comparative analysis: Pakistan has 4 provinces for 241M people (1:60M ratio). By contrast, India has 28 states and 8 union territories for 1.4B people (1:45M), Nigeria has 36 states for 220M (1:6M), and the USA has 50 states for 335M (1:6.7M).
+* **Provinces & Local Government: Subnational Fiscal Architecture (PPRI-WP-2026-01)**: https://ppripakistan.github.io/research/working-papers/provinces-local-government.html
+  - Evaluates constitutional mechanisms to enforce Provincial Finance Commissions (PFCs) analogous to the federal National Finance Commission (NFC).
+
+---
+
+## 3. Pakistan Data Observatory: Indicators & Empirical Baselines
+
+The PPRI Data Observatory structures empirical indicators across 8 dedicated thematic hubs, combining PBS 7th Census microdata, State Bank of Pakistan reports, and provincial budget books:
+
+### 3.1 Population & Demographics
+* **URL**: https://ppripakistan.github.io/data/population/index.html
+* **Key Baseline Metrics**:
+  - Total Federation Population (Census 2023): **241,499,431**
+  - Punjab: **127,688,922** (52.87% of national total)
+  - Sindh: **55,696,147** (23.06%)
+  - Khyber Pakhtunkhwa: **40,856,097** (16.92%)
+  - Balochistan: **14,894,402** (6.17%)
+  - Islamabad Capital Territory: **2,363,863** (0.98%)
+  - National Intercensal Growth Rate: **2.55% per annum** (Balochistan: 3.2%, ICT: 2.8%, KP: 2.38%, Sindh: 2.57%, Punjab: 2.53%)
+  - Urbanization: 38.82% national urban share (Sindh: 53.73%, Punjab: 40.70%, KP: 15.01%, Balochistan: 30.96%).
+
+### 3.2 Provincial Economy & GRP
+* **URL**: https://ppripakistan.github.io/data/economy/index.html
+* **Key Metrics**:
+  - Subnational Gross Regional Product (GRP) estimated distribution: Punjab (~54%), Sindh (~29%), Khyber Pakhtunkhwa (~12%), Balochistan (~4%), ICT (~1%).
+  - Agricultural Sector Contributions: Punjab and Sindh account for 81% of total agricultural value added.
+  - Spatial Concentration: 6 intermediate districts account for over 48% of total formal manufacturing output.
+
+### 3.3 Public Finance & Fiscal Federalism
+* **URL**: https://ppripakistan.github.io/data/public-finance/index.html
+* **NFC Divisible Pool Distribution Formula (7th NFC Award)**:
+  - Provincial Share: **57.5%** of federal divisible pool; Federal Share: **42.5%**.
+  - Inter-Provincial Allocation Weights:
+    - Population: **82.0%**
+    - Poverty / Backwardness: **10.3%**
+    - Revenue Generation / Collection: **5.0%**
+    - Inverse Population Density (Area Sparsity): **2.7%**
+  - Resulting Provincial Shares: Punjab (51.74%), Sindh (24.55%), Khyber Pakhtunkhwa (14.62%), Balochistan (9.09%).
+  - Fiscal Dependency: Provincial budgets rely on federal NFC transfers for 78% to 92% of total operational revenues, with own-source tax collection representing under 1.2% of provincial GDP.
+
+### 3.4 Education
+* **URL**: https://ppripakistan.github.io/data/education/index.html
+* **Metrics**: National literacy rate stands at 61% (male 70%, female 51%). Out-of-school children (OOSC) estimated at 26.2 million. District disparities range from 88% literacy in Islamabad and Abbottabad to under 22% in Torghar and Kohlu.
+
+### 3.5 Health & Nutrition
+* **URL**: https://ppripakistan.github.io/data/health/index.html
+* **Metrics**: Under-5 stunting rate national average is 40.2% (rural 43.2%, urban 34.8%). Balochistan records the highest child stunting rate at 46.6%. Primary healthcare facility density shows 1 Basic Health Unit (BHU) per 19,400 rural citizens.
+
+### 3.6 Living Standards & Amenities
+* **URL**: https://ppripakistan.github.io/data/living-standards/index.html
+* **Metrics**: Piped water inside housing units: 31.2% national average (urban 54.4%, rural 18.2%). Grid electricity connection: 88.4% national average, but drops to under 41% in southwest Balochistan.
+
+### 3.7 Digital Access & Telecommunications
+* **URL**: https://ppripakistan.github.io/data/digital-access/index.html
+* **Metrics**: Cellular teledensity stands at 79.2%; broadband subscribers exceed 135 million. Fixed-line broadband penetration remains under 3.5% of total households, creating acute urban-rural digital access divides.
+
+### 3.8 National Quick Facts & Data Tools
+* **Quick Facts**: https://ppripakistan.github.io/data/quick-facts/index.html
+* **Cross-District Comparison Tool**: https://ppripakistan.github.io/data/compare/index.html
+* **Bulk Downloads Engine**: https://ppripakistan.github.io/data/downloads/index.html
+
+---
+
+## 4. Complete Analytical Articles Series (25 Policy Inquiries)
+
+1. **[Four Provinces, 241.5 Million People: Has Pakistan Outgrown Its Administrative Structure?](https://ppripakistan.github.io/articles/four-provinces-241-million-people-administrative-scale.html)**: Demographic surge from 33.7M in 1947 to 241.5M in 2023 has crippled the delivery capacity of 4 provincial secretariats.
+2. **[The 18th Amendment: Did Devolution Stop at the Provincial Capital?](https://ppripakistan.github.io/articles/18th-amendment-did-devolution-stop-at-provincial-capital.html)**: Analyzes how federal powers devolved in 2010 were hoarded by Chief Ministers and provincial secretariats rather than passed down to municipal tiers.
+3. **[More Provinces or Stronger Local Governments? Pakistan's Devolution Debate](https://ppripakistan.github.io/articles/more-provinces-or-stronger-local-governments.html)**: Evaluates whether carving new provinces or revitalizing constitutional local governments delivers superior public value.
+4. **[How Far Is Government? The Hidden Cost of Administrative Distance](https://ppripakistan.github.io/articles/how-far-is-government-administrative-distance.html)**: Quantifies the economic burden of traveling up to 600 km to reach provincial high courts and secretariats from peripheral districts.
+5. **[Where Does Pakistan's Development Money Go?](https://ppripakistan.github.io/articles/where-does-pakistans-development-money-go.html)**: Empirical tracking of PSDP and provincial ADP allocations exposing spatial concentration in favored political constituencies.
+6. **[One Province, Many Needs: Development Budget Priority](https://ppripakistan.github.io/articles/one-province-many-needs-development-budget-priority.html)**: Why multi-region provinces consistently prioritize capital city infrastructure over agrarian and peripheral basic services.
+7. **[Where Did Development Money Go When Pakistan Tried District Government?](https://ppripakistan.github.io/articles/where-did-development-money-go-district-government.html)**: Historical analysis of fiscal flows during the 2001–2009 devolution era showing increased spending on rural schools and water.
+8. **[Why Is Local Government Always the Last Tier to Get Power?](https://ppripakistan.github.io/articles/why-is-local-government-always-the-last-tier-to-get-power.html)**: Political economy dynamics between Member of National Assembly (MNA)/Member of Provincial Assembly (MPA) development funds and municipal councillors.
+9. **[Pakistan Has Tried Local Government Again and Again: Why Does the System Keep Disappearing?](https://ppripakistan.github.io/articles/pakistan-keeps-reinventing-local-government-history.html)**: Institutional review of the 1959 Basic Democracies, 1979 Local Government Ordinances, and 2001 Devolution Plan.
+10. **[Did Pakistan's 2001 Devolution Plan Actually Improve Services?](https://ppripakistan.github.io/articles/did-2001-devolution-improve-services-evidence.html)**: Review of empirical literature and World Bank/ADB evaluations of citizen access during the 2001 reforms.
+11. **[Before Local Government Faded, What Did Pakistanis Think About It?](https://ppripakistan.github.io/articles/before-local-government-faded-citizen-perceptions.html)**: Public opinion survey analysis showing high popular support for union council grievance redressal.
+12. **[New Administrative Units in Pakistan 2026: Latest Debate](https://ppripakistan.github.io/articles/new-administrative-units-pakistan-2026.html)**: Summary of active legislative bills and parliamentary caucus initiatives regarding administrative restructuring.
+13. **[Why Is Pakistan Debating New Provinces Again?](https://ppripakistan.github.io/articles/why-is-pakistan-debating-new-provinces-again.html)**: Escalating economic stress, urban primacy challenges, and peripheral alienation reviving restructuring demands.
+14. **[What Would a New Province Actually Change in Pakistan?](https://ppripakistan.github.io/articles/what-would-a-new-province-actually-change.html)**: Realistic assessment of Senate seat adjustments, NFC award recalculations, and administrative transition friction.
+15. **[A New Province Can Move the Capital—But Can It Move the Power?](https://ppripakistan.github.io/articles/new-province-can-move-capital-can-it-move-power.html)**: Examines whether new provincial structures merely recreate centralized bureaucratic hierarchies at smaller scales.
+16. **[How Should Pakistan Evaluate a Proposal for a New Province?](https://ppripakistan.github.io/articles/how-should-pakistan-evaluate-a-new-province.html)**: An empirical 7-pillar evaluation rubric: demographic scale, economic viability, administrative contiguity, fiscal self-reliance, consensus, local government alignment, and judicial accessibility.
+17. **[South Punjab: Why Does the Province Demand Keep Returning?](https://ppripakistan.github.io/articles/south-punjab-why-does-the-province-demand-keep-returning.html)**: Structural disparities, agricultural pricing grievances, and administrative neglect driving South Punjab statehood demands.
+18. **[South Punjab vs Saraiki vs Bahawalpur Province Explained](https://ppripakistan.github.io/articles/south-punjab-saraiki-bahawalpur-difference.html)**: Disentangling administrative division models from ethno-linguistic Saraiki demands and historical Bahawalpur restoration claims.
+19. **[Bahawalpur Province Restoration 2026: History & Status](https://ppripakistan.github.io/articles/bahawalpur-province-restoration-2026.html)**: Constitutional analysis of the 1951 Instrument of Accession and the 1970 One-Unit dissolution arrangements.
+20. **[Hazara Province: Why Has the Demand Survived for So Long?](https://ppripakistan.github.io/articles/hazara-province-why-has-the-demand-survived.html)**: Origins of the 2010 Hazara movement following the 18th Amendment renaming of NWFP to Khyber Pakhtunkhwa.
+21. **[Karachi and Urban Sindh: Representation, Revenue and Administrative Control](https://ppripakistan.github.io/articles/karachi-urban-sindh-representation-revenue-administration.html)**: Structural analysis of municipal fragmentation, the Sindh Local Government Act 2013, and Karachi's public finance deficits.
+22. **[Is Gilgit-Baltistan a Province of Pakistan?](https://ppripakistan.github.io/articles/is-gilgit-baltistan-a-province-of-pakistan.html)**: Detailed legal analysis of the 2018 and 2019 Supreme Court judgments, UN resolutions, and provisional provincial models.
+23. **[Can Pakistan Grow Beyond Its Provincial Capitals? Secondary Cities](https://ppripakistan.github.io/articles/can-pakistan-grow-beyond-provincial-capitals-secondary-cities.html)**: Case studies of secondary urban centers (Faisalabad, Gujranwala, Hyderabad, Sukkur, Multan, Abbottabad) starved of infrastructure capital.
+24: **[When Development Follows the Capital, People Follow](https://ppripakistan.github.io/articles/when-development-follows-the-capital-people-follow.html)**: Examining how spatial skew in public investment fuels rural-to-urban migration and infrastructure collapse in megacities.
+25. **[Provinces of Pakistan 2026: Names, Capitals & Population](https://ppripakistan.github.io/articles/provinces-of-pakistan-names-capitals-population.html)**: Official demographic and geographic handbook with verified Census 2023 statistics.
+
+---
+
+## 5. Constitutional & Legal Architecture
+
+1. **Article 1 of the Constitution (The Republic and its Territories)**:
+   Defines the territories of Pakistan as the Provinces of Balochistan, Khyber Pakhtunkhwa, Punjab, and Sindh; the Islamabad Capital Territory; and such States and territories as are or may be included.
+2. **Article 239(4) (Amendment of Constitution)**:
+   Mandates that a Bill to amend the Constitution which would have the effect of altering the limits of a Province shall not be presented to the President for assent unless it has been passed by the Provincial Assembly of that Province by the votes of not less than two-thirds of its total membership.
+3. **Article 140A (Local Government)**:
+   Directs that each Province shall, by law, establish a local government system and devolve political, administrative, and financial responsibility and authority to the elected representatives of the local governments.
+4. **Article 160 (National Finance Commission)**:
+   Establishes the NFC tasked with making recommendations regarding the distribution between the Federation and the Provinces of the net proceeds of taxes, and the allocation among the Provinces of their respective shares. Under Article 160(3A) enacted via the 18th Amendment, the share of the Provinces in each successive Award cannot be less than the share given in the previous Award (the "ratchet clause").
+
+---
+
+## 6. Master Open Data Engine (`data/master/`)
+
+PPRI maintains a standardized open data engine powering all analytical views across the platform:
+* **`observations.csv`**: Over 129,000 structured observation rows mapping indicators across year, geography, demographic slice, and source.
+* **`indicator_catalog.csv`**: Comprehensive catalog specifying indicator codes, descriptive titles, units of measurement, primary source citations, and thematic domain mapping.
+* **`geographies.csv`**: Standardized identifiers, hierarchy codes, and centroid coordinates for Pakistan's 4 provinces, 3 territories, 37 divisions, and 130+ districts.
+* **`source_registry.csv`**: Authoritative citation directory recording publication dates, survey methodologies, and validation status of institutional source bulletins.
+* **`DATA_DICTIONARY.md`**: Technical specification detailing schemas, column types, validation rules, and statistical confidence levels.
+
+---
+
+## 7. Interactive Decision Engines & Tools
+
+1. **[Scenario Lab Engine](https://ppripakistan.github.io/maps/scenarios/index.html)**:
+   Allows researchers and citizens to simulate alternative subnational boundary proposals (e.g., division-based provincial model, 8-province model, 12-province model). Calculates dynamic updates to:
+   - NFC divisible pool revenue distribution
+   - Senate seat allocation
+   - Population density and administrative friction index
+2. **[Interactive Administrative Map](https://ppripakistan.github.io/maps/)**:
+   High-performance Leaflet-based spatial explorer rendering district boundaries, division groupings, administrative travel distances, and demographic heatmaps.
+3. **[Public Consultation Hub](https://ppripakistan.github.io/consultation/)**:
+   Open portal enabling civic organizations, academics, and citizens to submit policy memorandums, participate in survey questions, and review public hearing transcripts.
+4. **[Client-Side Instant Search](https://ppripakistan.github.io/search.html)**:
+   Zero-dependency full-text search indexing all 25 articles, 5 research reports, 8 data observatory hubs, and constitutional library resources.
+
+---
+
+## 8. Citation & Academic Referencing
+
+### APA Style
+> Pakistan Provincial Reform Institute (PPRI). (2026). *Public Interest Research Programme: Governance Scale, Administrative Burden, and Fiscal Devolution in Pakistan*. Islamabad: PPRI. Retrieved from https://ppripakistan.github.io/
+
+### BibTeX
+```bibtex
+@misc{ppri2026research,
+  author       = {{Pakistan Provincial Reform Institute}},
+  title        = {{PPRI Public Interest Research Programme: Governance Scale, Administrative Burden, and Fiscal Devolution in Pakistan}},
+  year         = {2026},
+  publisher    = {PPRI Repository},
+  howpublished = {\url{https://ppripakistan.github.io/}},
+  note         = {Independent Policy Research Repository}
+}
+```
+
+### Institutional Contact
+* **Portal**: https://ppripakistan.github.io/
+* **Research Inquiries**: https://ppripakistan.github.io/contact.html
+* **Public Engagement on X**: [@PPRI_Pakistan](https://x.com/PPRI_Pakistan)
+* **Code Repository**: https://github.com/ppripakistan/ppripakistan.github.io

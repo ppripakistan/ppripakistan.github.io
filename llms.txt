@@ -1,24 +1,74 @@
 # Pakistan Provincial Reform Institute (PPRI)
 
-> PPRI is an independent, non-partisan public-policy research institute providing empirical data, cartographic scenario modeling, and constitutional legal analysis on provincial restructuring, federalism, public finance, and municipal devolution in Pakistan.
+> PPRI is an independent, non-partisan public policy research institute providing empirical data, cartographic scenario modeling, and constitutional legal analysis on provincial restructuring, federalism, public finance, and municipal devolution in Pakistan.
 
 PPRI examines how governance, representation, public resources, and administrative institutions are structured across Pakistan — from the federation to provinces and local government tiers.
 
-## Core Articles & Research Papers
-- [The Provincial Reorganization of Pakistan](https://ppripakistan.github.io/research/policy-papers/provincial-reorganization-of-pakistan.html): PPRI flagship paper examining constitutional, administrative, fiscal, demographic, and local-government questions.
-- [Income Went Up. So Why Does Life Feel Harder?](https://ppripakistan.github.io/research/reports/income-went-up-why-does-life-feel-harder.html): Empirical analysis of household income vs purchasing power squeeze in Pakistan.
-- [The Price of a Simple Task](https://ppripakistan.github.io/research/reports/price-of-a-simple-task-pakistan-bureaucracy-cost.html): Bureaucratic transaction costs and the Administrative Burden Index.
-- [Same Country, Different Life](https://ppripakistan.github.io/research/reports/same-country-different-life-district-access.html): District-level spatial disparities in education, water, electricity, and food security.
-- [The Bribe You Can't See](https://ppripakistan.github.io/research/reports/bribe-you-cant-see-corruption-private-tax.html): Corruption as an informal tax on citizens and small enterprises.
-- [Does Money Work Better Spent Closer to the People?](https://ppripakistan.github.io/research/reports/does-money-work-better-spent-closer-to-people.html): Local government finance and fiscal decentralization across Pakistan's cities.
+## Core Policy Papers & Research Reports
+- [The Provincial Reorganization of Pakistan](https://ppripakistan.github.io/research/policy-papers/provincial-reorganization-of-pakistan.html): Flagship paper establishing a 10-dimensional empirical framework for subnational restructuring, constitutional amendments, and administrative reorganization.
+- [Income Went Up. So Why Does Life Feel Harder?](https://ppripakistan.github.io/research/reports/income-went-up-why-does-life-feel-harder.html): Quantitative investigation into household purchasing power deterioration and inflation-wage disparity across income quintiles.
+- [Does Money Work Better When Spent Closer to the People?](https://ppripakistan.github.io/research/reports/does-money-work-better-spent-closer-to-people.html): Empirical study on municipal expenditure efficiency, local government financing, and service quality differentials under fiscal decentralization.
+- [The Bribe You Can't See: Corruption as an Invisible Private Tax](https://ppripakistan.github.io/research/reports/bribe-you-cant-see-corruption-private-tax.html): Analysis of informal taxation, bureaucratic extortion, and discretionary rent-seeking on citizens and small enterprises.
+- [The Price of a Simple Task: Quantifying Bureaucracy Cost](https://ppripakistan.github.io/research/reports/price-of-a-simple-task-pakistan-bureaucracy-cost.html): Measurement of citizen time burdens, ombudsman complaints, and administrative friction using the Administrative Burden Index.
+- [Same Country, Different Life: Measuring District Service Inequality](https://ppripakistan.github.io/research/reports/same-country-different-life-district-access.html): Spatial disparity analysis across 130+ districts measuring clean water, electricity, secondary schooling, and food security.
+- [Administrative Scale & Representation](https://ppripakistan.github.io/research/briefs/administrative-scale.html): Policy brief analyzing Pakistan's citizen-to-government ratio of 60M:1 per province vs international federal democracies.
+- [Provinces & Local Government: Subnational Fiscal Architecture](https://ppripakistan.github.io/research/working-papers/provinces-local-government.html): Working paper evaluating Article 140A devolution failures and local council revenue models.
+
+## Pakistan Data Observatory: Thematic Hubs
+- [Data Centre & Observatory](https://ppripakistan.github.io/data/centre.html): Central analytical dashboard uniting multi-dimensional district indicators, NFC simulator, and interactive data visualization.
+- [Population & Demographics Hub](https://ppripakistan.github.io/data/population/index.html): Official Census 2023 district population counts, urban-rural ratios, dependency rates, and density analysis.
+- [Provincial Economy & GRP Hub](https://ppripakistan.github.io/data/economy/index.html): Subnational economic output, regional gross product estimates, sectoral distribution, and spatial wealth concentration.
+- [Public Finance & NFC Hub](https://ppripakistan.github.io/data/public-finance/index.html): National Finance Commission (NFC) divisible pool transfers, provincial own-source revenue, and development expenditure splits.
+- [Education Observatory](https://ppripakistan.github.io/data/education/index.html): District literacy rates, out-of-school children, gender parity indices, and educational infrastructure access.
+- [Health & Nutrition Observatory](https://ppripakistan.github.io/data/health/index.html): Child stunting, maternal mortality, hospital bed ratios, and primary healthcare facility coverage.
+- [Living Standards Observatory](https://ppripakistan.github.io/data/living-standards/index.html): Multi-dimensional poverty indices, housing quality, piped water coverage, and electricity electrification gaps.
+- [Digital Access & Telecommunications](https://ppripakistan.github.io/data/digital-access/index.html): Cellular mobile tele-density, broadband internet access, and digital governance divide metrics.
+- [National Quick Facts](https://ppripakistan.github.io/data/quick-facts/index.html): High-level statistical summaries and baseline governance indicators for Pakistan's federation.
+- [Cross-District Comparison Tool](https://ppripakistan.github.io/data/compare/index.html): Interactive side-by-side comparative analysis of any two districts or administrative units across all metrics.
+- [Data Downloads & API](https://ppripakistan.github.io/data/downloads/index.html): Direct access to download verified open datasets in CSV and JSON formats.
+
+## Analytical Policy Inquiries (Articles)
+- [Four Provinces, 241.5 Million People: Has Pakistan Outgrown Its Administrative Structure?](https://ppripakistan.github.io/articles/four-provinces-241-million-people-administrative-scale.html): Demographic explosion vs institutional capacity in Pakistan's mega-provinces.
+- [The 18th Amendment: Did Devolution Stop at the Provincial Capital?](https://ppripakistan.github.io/articles/18th-amendment-did-devolution-stop-at-provincial-capital.html): Critical analysis of provincial recentralization following federal power transfer.
+- [More Provinces or Stronger Local Governments? Pakistan's Devolution Debate](https://ppripakistan.github.io/articles/more-provinces-or-stronger-local-governments.html): Evaluating whether municipal empowerment or new provincial boundaries best solve governance paralysis.
+- [How Far Is Government? The Hidden Cost of Administrative Distance](https://ppripakistan.github.io/articles/how-far-is-government-administrative-distance.html): Spatial travel friction, transportation costs, and citizen alienation from distant provincial secretariats.
+- [Where Does Pakistan's Development Money Go?](https://ppripakistan.github.io/articles/where-does-pakistans-development-money-go.html): Spatial analysis of Public Sector Development Programme (PSDP) and Annual Development Programme (ADP) allocations.
+- [One Province, Many Needs: Development Budget Priority](https://ppripakistan.github.io/articles/one-province-many-needs-development-budget-priority.html): Capital city bias vs peripheral neglect in provincial development spending.
+- [Where Did Development Money Go When Pakistan Tried District Government?](https://ppripakistan.github.io/articles/where-did-development-money-go-district-government.html): Empirical audit of district budget allocations under the Local Government Ordinance 2001.
+- [Why Is Local Government Always the Last Tier to Get Power?](https://ppripakistan.github.io/articles/why-is-local-government-always-the-last-tier-to-get-power.html): Political economy and bureaucratic resistance to constitutional local devolution under Article 140A.
+- [Pakistan Has Tried Local Government Again and Again: Why Does the System Keep Disappearing?](https://ppripakistan.github.io/articles/pakistan-keeps-reinventing-local-government-history.html): Historical cycle of military empowerment and civilian rollback of local councils (1959–2026).
+- [Did Pakistan's 2001 Devolution Plan Actually Improve Services?](https://ppripakistan.github.io/articles/did-2001-devolution-improve-services-evidence.html): Review of empirical research on service delivery outcomes under the Devolution Plan.
+- [Before Local Government Faded, What Did Pakistanis Think About It?](https://ppripakistan.github.io/articles/before-local-government-faded-citizen-perceptions.html): Public survey evidence on citizen satisfaction and accessibility with local nazims and councillors.
+- [New Administrative Units in Pakistan 2026: Latest Debate](https://ppripakistan.github.io/articles/new-administrative-units-pakistan-2026.html): Contemporary legislative and political proposals for administrative restructuring.
+- [Why Is Pakistan Debating New Provinces Again?](https://ppripakistan.github.io/articles/why-is-pakistan-debating-new-provinces-again.html): Structural drivers, governance failures, and fiscal strains reviving territorial partition debates.
+- [What Would a New Province Actually Change in Pakistan?](https://ppripakistan.github.io/articles/what-would-a-new-province-actually-change.html): Reality check on Senate seats, NFC shares, civil service cadring, and citizen service delivery.
+- [A New Province Can Move the Capital—But Can It Move the Power?](https://ppripakistan.github.io/articles/new-province-can-move-capital-can-it-move-power.html): Evaluating institutional centralization within newly established provincial capitals.
+- [How Should Pakistan Evaluate a Proposal for a New Province?](https://ppripakistan.github.io/articles/how-should-pakistan-evaluate-a-new-province.html): A 7-point objective empirical rubric for evaluating provincial reorganization proposals.
+- [South Punjab: Why Does the Province Demand Keep Returning?](https://ppripakistan.github.io/articles/south-punjab-why-does-the-province-demand-keep-returning.html): History, grievance drivers, and administrative challenges of the South Punjab demand.
+- [South Punjab vs Saraiki vs Bahawalpur Province Explained](https://ppripakistan.github.io/articles/south-punjab-saraiki-bahawalpur-difference.html): Disentangling linguistic, administrative, and historical statehood claims in southern Punjab.
+- [Bahawalpur Province Restoration 2026: History & Status](https://ppripakistan.github.io/articles/bahawalpur-province-restoration-2026.html): The constitutional and historical argument surrounding the accession agreement of the former Bahawalpur State.
+- [Hazara Province: Why Has the Demand Survived for So Long?](https://ppripakistan.github.io/articles/hazara-province-why-has-the-demand-survived.html): Analysis of the Hazara movement, 18th Amendment naming disputes, and administrative viability.
+- [Karachi and Urban Sindh: Representation, Revenue and Administrative Control](https://ppripakistan.github.io/articles/karachi-urban-sindh-representation-revenue-administration.html): Fiscal contribution vs municipal paralysis, octroi abolition, and urban governance in Karachi.
+- [Is Gilgit-Baltistan a Province of Pakistan?](https://ppripakistan.github.io/articles/is-gilgit-baltistan-a-province-of-pakistan.html): Constitutional status, supreme appellate court rulings, UN resolutions, and provisional provincial models.
+- [Can Pakistan Grow Beyond Its Provincial Capitals? Secondary Cities](https://ppripakistan.github.io/articles/can-pakistan-grow-beyond-provincial-capitals-secondary-cities.html): Neglect of intermediate urban centers (Faisalabad, Multan, Hyderabad, Gujranwala, Sukkur).
+- [When Development Follows the Capital, People Follow](https://ppripakistan.github.io/articles/when-development-follows-the-capital-people-follow.html): Unplanned mega-city urbanization caused by spatial public investment concentration.
+- [Provinces of Pakistan 2026: Names, Capitals & Population](https://ppripakistan.github.io/articles/provinces-of-pakistan-names-capitals-population.html): Definitive geographical reference with official Census 2023 statistics.
 
 ## Institutional Frameworks & Law
-- [Constitutional Framework](https://ppripakistan.github.io/provinces/constitutional-framework.html): Articles 1, 140A, 160, and 239 governing territorial restructuring.
-- [Fiscal Framework](https://ppripakistan.github.io/provinces/fiscal-framework.html): National Finance Commission (NFC) transfers, provincial revenue, and transition costs.
-- [Administrative Design](https://ppripakistan.github.io/provinces/administrative-model.html): Civil service, judiciary, law enforcement, and municipal administration models.
-- [Local Government](https://ppripakistan.github.io/provinces/local-government.html): Constitutional local-government devolution under Article 140A.
+- [Constitutional Framework](https://ppripakistan.github.io/provinces/constitutional-framework.html): Articles 1, 140A, 160, and 239 governing territorial restructuring and provincial borders.
+- [Fiscal Framework](https://ppripakistan.github.io/provinces/fiscal-framework.html): NFC formula mechanics, divisible pool shares, revenue assignment, and transition budgeting.
+- [Administrative Design](https://ppripakistan.github.io/provinces/administrative-model.html): Civil service reorganization (DMG/PAS cadring), High Court jurisdiction, and departmental scaling.
+- [Local Government Architecture](https://ppripakistan.github.io/provinces/local-government.html): Metropolitan corporations, district councils, and fiscal decentralization under Article 140A.
+- [Constitutional & Legal Research Library](https://ppripakistan.github.io/research/legal-library.html): Repository of Pakistan's local government acts, constitutional amendments, and restructuring bills.
 
-## Interactive Tools & Data
-- [Scenario Lab](https://ppripakistan.github.io/maps/scenarios/index.html): Interactive district-level cartographic scenario testing engine.
-- [Data Centre & Observatory](https://ppripakistan.github.io/data/centre.html): NFC divisible pool reform simulator, population benchmarks, and district indicators.
-- [Source Registry & Standards](https://ppripakistan.github.io/methodology/research-standards.html): Institutional documentation, data citations, and analytical standards.
+## Interactive Decision Engines
+- [Interactive Scenario Lab](https://ppripakistan.github.io/maps/scenarios/index.html): Interactive district-level cartographic scenario testing engine simulating NFC transfers, Senate seats, and administrative boundaries.
+- [Administrative Map & GIS Explorer](https://ppripakistan.github.io/maps/): Spatial GIS explorer mapping 130+ districts, division borders, and travel-distance isochrones to secretariats.
+- [Public Consultation Portal](https://ppripakistan.github.io/consultation/): Interactive citizen feedback and policy submission engine.
+- [Full-Text Search Portal](https://ppripakistan.github.io/search.html): Instant client-side index across all research reports, articles, and indicators.
+
+## Open Data & Master Repositories
+- [Master Observation Layer](https://ppripakistan.github.io/data/master/observations.csv): 129,000+ empirical observations covering all districts and census variables.
+- [Master Indicator Catalog](https://ppripakistan.github.io/data/master/indicator_catalog.csv): Standardized definitions and metadata for every tracked public policy metric.
+- [Geographic Entity Registry](https://ppripakistan.github.io/data/master/geographies.csv): Machine-readable district, division, and province identifiers.
+- [Open Data Downloads & Hub](https://ppripakistan.github.io/data/downloads/index.html): Direct access to download verified open datasets in CSV and JSON formats.
