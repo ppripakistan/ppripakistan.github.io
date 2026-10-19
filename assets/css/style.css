@@ -1777,3 +1777,173 @@ img {
 .faq-answer p:last-child {
   margin-bottom: 0;
 }
+
+/* 5. Directory Collapsible Links (All Pillars) */
+.dir-more-articles,
+.dir-more-section {
+  margin-top: 10px;
+}
+.dir-more-summary {
+  cursor: pointer;
+  font-weight: 700;
+  color: #073c3a;
+  font-size: 0.84rem;
+  padding: 6px 12px;
+  background: #eef7f2;
+  border: 1px solid #c8ded3;
+  border-radius: 6px;
+  list-style: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 180ms ease;
+  user-select: none;
+}
+.dir-more-summary:hover {
+  background: #073c3a;
+  color: #ffffff;
+  border-color: #073c3a;
+}
+.dir-more-summary::-webkit-details-marker {
+  display: none;
+}
+.dir-more-list {
+  margin-top: 10px !important;
+  border-left: 2px solid #cbd5e1;
+  padding-left: 12px !important;
+}
+
+/* 6. Centered FAQ Page Styles */
+.faq-page-section {
+  padding: 48px 0 80px;
+  background: #fdfdfd;
+}
+.faq-container-centered {
+  max-width: 860px;
+  margin: 0 auto;
+}
+.faq-topic-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+  margin-bottom: 36px;
+}
+.faq-topic-btn {
+  padding: 8px 16px;
+  border: 1px solid #cbd5e1;
+  background: #ffffff;
+  color: #334155;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 180ms ease;
+}
+.faq-topic-btn:hover {
+  border-color: #073c3a;
+  color: #073c3a;
+  background: #f0f7f3;
+}
+.faq-topic-btn.active {
+  background: #073c3a;
+  color: #ffffff;
+  border-color: #073c3a;
+  box-shadow: 0 2px 6px rgba(7, 60, 58, 0.25);
+}
+.faq-card-modern {
+  background: #ffffff;
+  border: 1px solid #d2e4db;
+  border-radius: 10px;
+  margin-bottom: 14px;
+  transition: border-color 180ms ease, box-shadow 180ms ease;
+  overflow: hidden;
+}
+.faq-card-modern:hover {
+  border-color: #073c3a;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+}
+.faq-card-modern[open] {
+  border-color: #073c3a;
+  box-shadow: 0 4px 16px rgba(7, 60, 58, 0.08);
+}
+.faq-card-modern summary {
+  font-weight: 700;
+  color: #073c3a;
+  cursor: pointer;
+  font-size: 1.05rem;
+  padding: 16px 20px;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  user-select: none;
+  background: #ffffff;
+  transition: background 150ms ease;
+}
+.faq-card-modern summary::-webkit-details-marker {
+  display: none;
+}
+.faq-card-modern summary:hover {
+  background: #f8faf9;
+}
+.faq-card-modern summary::after {
+  content: "+";
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: #145a32;
+  margin-left: 12px;
+  flex-shrink: 0;
+  line-height: 1;
+}
+.faq-card-modern[open] summary::after {
+  content: "−";
+}
+.faq-card-modern[open] summary {
+  border-bottom: 1px solid #eef2f0;
+  background: #f8faf9;
+}
+.faq-card-modern .faq-body {
+  padding: 16px 20px 20px;
+  color: #334155;
+  line-height: 1.68;
+  font-size: 0.95rem;
+}
+.faq-card-modern .faq-body p:last-child {
+  margin-bottom: 0;
+}
+
+/* 7. Article Card Layout Standardization */
+.articles-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 24px;
+  align-items: stretch;
+}
+.article-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+.article-card-header {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+.article-card h3 {
+  min-height: 2.8em;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.article-card p {
+  flex-grow: 1;
+  margin-bottom: 14px;
+}
+.article-card-footer {
+  margin-top: auto;
+}
+
