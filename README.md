@@ -21,6 +21,7 @@
     <a href="#technical-architecture"><img src="https://img.shields.io/badge/Stack-Vanilla%20JS%20%7C%20Zero%20Dependencies-b08a49?style=for-the-badge&logo=javascript&logoColor=white" alt="Stack: Vanilla JS" /></a>
     <a href="data-files/csv/"><img src="https://img.shields.io/badge/Open%20Data-100%25%20Verified%20CSV-1e40af?style=for-the-badge&logo=databricks&logoColor=white" alt="Open Data CSV" /></a>
     <a href="https://www.pbs.gov.pk/census/"><img src="https://img.shields.io/badge/Census%20Aligned-PBS%207th%20Census-166534?style=for-the-badge&logo=pakistan&logoColor=white" alt="Census Aligned PBS" /></a>
+    <a href="https://ppripakistan.github.io/llms.txt"><img src="https://img.shields.io/badge/LLMs.txt-AI%20Grounding-6366f1?style=for-the-badge&logo=openai&logoColor=white" alt="LLMs.txt AI Grounding" /></a>
   </p>
 
 </div>
@@ -49,9 +50,12 @@ PPRI combines rigorous quantitative datasets from official census bulletins, pro
 |---|---|---|
 | **Districts Analyzed** | **130+ Districts** across 4 Provinces & Territories | Pakistan Bureau of Statistics (PBS) 7th Population & Housing Census |
 | **Flagship Research Reports** | **5 Comprehensive Reports** (120+ peer-reviewed chapters) | PPRI Public Interest Research Programme (2026) |
-| **Analytical Articles** | **22 In-Depth Policy Inquiries** | Empirical investigations into Hazara, South Punjab, secondary cities, & scale |
+| **Analytical Articles** | **25 In-Depth Policy Inquiries** | Empirical investigations into Hazara, South Punjab, secondary cities, & scale |
+| **Thematic Data Hubs** | **8 Interactive Observatory Portals** | Dedicated statistical hubs: Population, Economy, Finance, Education, Health, Living Standards, Tech |
 | **Interactive Decision Engines** | **4 Client-Side Explorers** | Scenario Lab, Data Observatory, Interactive Map, Evidence Library |
-| **Open Data Repositories** | **12 Clean CSV Datasets** | Public interest time-series, quintile breakdowns, and fiscal transfers |
+| **Master Observation Layer** | **129,000+ Structured Observations** | Machine-readable multi-dimensional dataset (`data/master/observations.csv`) |
+| **Curated CSV Repositories** | **12 Clean CSV Datasets** | Public interest time-series, quintile breakdowns, and fiscal transfers |
+| **Machine-Readable LLM Index** | **Full AI Grounding (`/llms.txt`)** | Standardized context indexing for LLMs, automated agents, and AI researchers |
 | **Platform Delivery** | **Zero-Dependency Static Web** | 100% client-side HTML5/CSS3/ES6 execution, sub-second load, GitHub Pages |
 
 ---
@@ -78,7 +82,10 @@ PPRI builds accessible, client-side digital instruments that allow researchers a
 
 1. **[Interactive Administrative Map](/maps/)**: Spatial mapping of Pakistan's current 4-province structure alongside proposed multi-province reorganization models. Computes geographic centroids and travel-time friction for peripheral districts.
 2. **[Scenario Lab](/scenarios/)**: An interactive policy playground enabling users to adjust provincial boundary models, simulate fiscal allocations under alternative National Finance Commission (NFC) formulas, and test parliamentary seat distributions.
-3. **[Data Centre & Observatory](/data/centre.html)**: Clean visual dashboards tracking multi-dimensional poverty, public expenditure composition (capital vs. salary overhead), and municipal service delivery benchmarks.
+3. **[Data Centre & Observatory](/data/centre.html)**: Central analytical hub powering 8 dedicated thematic observatories:
+   - [Population & Demographics](/data/population/) • [Economy & GRP](/data/economy/) • [Public Finance & NFC](/data/public-finance/)
+   - [Education & Literacy](/data/education/) • [Health & Nutrition](/data/health/) • [Living Standards](/data/living-standards/)
+   - [Digital Access](/data/digital-access/) • [Quick Facts](/data/quick-facts/) • [Cross-District Compare](/data/compare/)
 4. **[Legal & Constitutional Library](/research/legal-library.html)**: A catalog of relevant constitutional clauses (Articles 1, 239, 140A, 160), local government acts (2001, 2013, 2019, 2022), and historical boundary reform bills.
 
 ---
@@ -220,9 +227,19 @@ flowchart TD
 
 ---
 
-## 📂 Open Data & Reproducibility
+## 📂 Open Data Architecture & Reproducibility
 
-PPRI adheres strictly to open science and data reproducibility principles. All quantitative charts on the platform are powered by machine-readable, comma-separated values stored in [`data-files/csv/`](data-files/csv/):
+PPRI adheres strictly to open science and data reproducibility principles. All quantitative charts and indicators on the platform are powered by machine-readable open datasets:
+
+### 1. Master Data Layer (`data/master/`)
+For econometric modeling and national policy analysis:
+* [`data/master/observations.csv`](data/master/observations.csv): 129,000+ validated observation rows mapping district metrics across time.
+* [`data/master/indicator_catalog.csv`](data/master/indicator_catalog.csv): Standardized definitions and metadata for every tracked public policy indicator.
+* [`data/master/geographies.csv`](data/master/geographies.csv): Machine-readable district, division, and province identifiers.
+* [`data/master/DATA_DICTIONARY.md`](data/master/DATA_DICTIONARY.md): Complete data dictionary, column types, and validation schemas.
+
+### 2. Curated Chart CSVs (`data-files/csv/`)
+Lightweight, focused comma-separated files powering individual report visualizers:
 
 ```text
 data-files/csv/
@@ -243,6 +260,24 @@ To clone the repository and explore the raw data locally:
 git clone https://github.com/ppripakistan/ppripakistan.github.io.git
 cd ppripakistan.github.io
 # No npm install or build step required. Open index.html in any modern browser!
+```
+
+---
+
+## 🤖 AI Agents & Machine-Readable Grounding (`llms.txt`)
+
+PPRI supports the emerging [`/llms.txt` standard](https://llmstxt.org/) to enable large language models, automated research agents, and AI search engines (ChatGPT, Claude, Perplexity, Gemini, Cursor) to navigate and cite PPRI's empirical research directly with zero token overhead:
+
+* **Concise Manifest**: [`https://ppripakistan.github.io/llms.txt`](https://ppripakistan.github.io/llms.txt) — Fast, token-efficient index linking all research papers, 8 data observatory hubs, 25 policy articles, and legal frameworks.
+* **Deep Reference Knowledge Base**: [`https://ppripakistan.github.io/llms-full.txt`](https://ppripakistan.github.io/llms-full.txt) — Exhaustive reference file containing executive summaries, quantitative findings, 25 article abstracts, Data Observatory baseline metrics, and constitutional pathways.
+
+### Example Usage for AI Researchers
+```markdown
+# In Cursor, Claude Project, or custom LLM agent:
+Add context from: https://ppripakistan.github.io/llms.txt
+
+# For deep empirical analysis:
+Fetch reference from: https://ppripakistan.github.io/llms-full.txt
 ```
 
 ---

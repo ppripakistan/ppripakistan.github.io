@@ -82,7 +82,7 @@
     "title": "Public Consultation",
     "type": "Engage",
     "description": "PPRI questionnaire and methodology for public views on governance reform.",
-    "url": "/consultation/index.html",
+    "url": "/consultation/",
     "tags": [
       "survey",
       "consultation",
@@ -162,7 +162,7 @@
     "title": "PPRI Research Archive",
     "type": "Archive",
     "description": "Comprehensive chronological record of PPRI research outputs, working papers, revisions, and milestone releases.",
-    "url": "/archive/index.html",
+    "url": "/archive/",
     "tags": [
       "archive",
       "publications",
@@ -175,7 +175,7 @@
     "title": "PPRI Media Centre",
     "type": "Media",
     "description": "Resources for journalists, official statements, broadcast briefings, and press contacts for PPRI faculty.",
-    "url": "/media/index.html",
+    "url": "/media/",
     "tags": [
       "media",
       "press",
@@ -595,7 +595,7 @@
     "title": "Articles & Analysis Directory",
     "type": "Articles",
     "description": "Index of all 20+ empirical and analytical articles covering fiscal federalism, administrative scale, and provincial reform.",
-    "url": "/articles/index.html",
+    "url": "/articles/",
     "tags": [
       "articles",
       "analysis",
@@ -608,7 +608,7 @@
     "title": "Policy Papers Hub",
     "type": "Policy Papers",
     "description": "Multi-disciplinary flagship policy papers examining structural, legal, and operational dimensions of provincial reform in Pakistan.",
-    "url": "/research/policy-papers/index.html",
+    "url": "/research/policy-papers/",
     "tags": [
       "policy papers",
       "flagship",
@@ -621,7 +621,7 @@
     "title": "Policy Briefs Hub",
     "type": "Policy Briefs",
     "description": "Executive policy briefs providing concise, data-driven analysis of administrative scale, fiscal formulas, and governance models.",
-    "url": "/research/briefs/index.html",
+    "url": "/research/briefs/",
     "tags": [
       "policy briefs",
       "briefs",
@@ -634,7 +634,7 @@
     "title": "Working Papers Hub",
     "type": "Working Papers",
     "description": "Academic working papers presenting preliminary empirical research on local government, fiscal devolution, and federal mechanics.",
-    "url": "/research/working-papers/index.html",
+    "url": "/research/working-papers/",
     "tags": [
       "working papers",
       "academic",
@@ -647,7 +647,7 @@
     "title": "Research Reports Hub",
     "type": "Reports",
     "description": "In-depth analytical reports assessing regional data, spatial access, and institutional readiness across Pakistan.",
-    "url": "/research/reports/index.html",
+    "url": "/research/reports/",
     "tags": [
       "reports",
       "technical",
@@ -1047,6 +1047,53 @@
       "definitions",
       "citations",
       "academic authority"
+    ]
+  },
+  {
+    "title": "164 Districts of Pakistan Database (2023 Census)",
+    "type": "Data Observatory: Districts",
+    "description": "Searchable database and reference table of Pakistan's 164 districts across Punjab, Sindh, KP, and Balochistan based on the 2023 PBS Census.",
+    "url": "/data/district-explorer.html",
+    "tags": [
+      "districts",
+      "164 districts",
+      "district database",
+      "pakistan districts",
+      "districts list",
+      "population by district",
+      "largest districts"
+    ]
+  },
+  {
+    "title": "Pakistan Fast Facts Matrix (CSS & PMS Reference Guide 2026)",
+    "type": "Data Observatory: Fast Facts",
+    "description": "Essential constitutional, demographic, and fiscal fast facts on Pakistan for CSS/PMS candidates and policy researchers: Census 2023, NFC formulas, and administrative tiers.",
+    "url": "/data/css-fast-facts-pakistan.html",
+    "tags": [
+      "css fast facts",
+      "pms",
+      "css pakistan affairs",
+      "competitive exams",
+      "cheat sheet",
+      "gk pakistan",
+      "nfc formula",
+      "article 239",
+      "article 140a"
+    ]
+  },
+  {
+    "title": "PPRI Master Research Directory & Policy Sitemap",
+    "type": "Institutional: Directory",
+    "description": "Complete index and master sitemap of Pakistan Provincial Reform Institute: browse all 25 policy articles, 10 data observatories, cartographic maps, and constitutional models.",
+    "url": "/directory.html",
+    "tags": [
+      "directory",
+      "sitemap",
+      "index",
+      "all articles",
+      "policy directory",
+      "data directory",
+      "research sitemap"
     ]
   }
 ]
