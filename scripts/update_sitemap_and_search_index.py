@@ -177,11 +177,11 @@ def clean_and_update_search_index():
             "tags": ["data observatory", "knowledge map", "census 2023", "nfc simulator", "districts", "provinces", "data hub", "datasets", "statistics"]
         },
         {
-            "title": "Pakistan Population, Demographics & Urbanization Data",
+            "title": "Pakistan Population 2023 Census: Total, Province-Wise & City Data",
             "type": "Data Observatory: Population",
-            "description": "Verified PBS 7th Census 2023 results: 241.49M national population, provincial breakdowns, urban-rural distributions, sex ratios, and top 22 city populations.",
+            "description": "Pakistan had 241,499,431 people in the 2023 Census. Explore official province-wise population, urban and rural shares, major city counts, and 16 population FAQs.",
             "url": "/data/population/",
-            "tags": ["population", "pakistan population", "census 2023", "punjab population", "sindh population", "kp population", "balochistan population", "karachi population", "lahore population", "urbanization", "growth rate", "demographics", "largest cities", "household size", "mother tongues"]
+            "tags": ["population", "pakistan population", "census 2023", "punjab population", "sindh population", "kp population", "balochistan population", "karachi population", "lahore population", "urbanization", "growth rate", "demographics", "largest cities", "household size", "mother tongues", "population faqs"]
         },
         {
             "title": "Pakistan Economy, Inflation & Market Benchmarks Data",
