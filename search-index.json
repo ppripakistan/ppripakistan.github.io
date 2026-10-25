@@ -827,6 +827,21 @@
     ]
   },
   {
+    "title": "PPRI Master Research Directory & Policy Sitemap",
+    "type": "Institutional: Directory",
+    "description": "Complete index and master sitemap of Pakistan Provincial Reform Institute: browse all 25 policy articles, 10 data observatories, cartographic maps, and constitutional models.",
+    "url": "/directory.html",
+    "tags": [
+      "directory",
+      "sitemap",
+      "index",
+      "all articles",
+      "policy directory",
+      "data directory",
+      "research sitemap"
+    ]
+  },
+  {
     "title": "Data Observatory & Interactive Knowledge Map",
     "type": "Data Observatory",
     "description": "Central empirical observatory: Interactive Knowledge Map of Pakistan's public data, Census 2023 baseline, NFC Reform Simulator, and district explorer.",
@@ -1047,53 +1062,6 @@
       "definitions",
       "citations",
       "academic authority"
-    ]
-  },
-  {
-    "title": "164 Districts of Pakistan Database (2023 Census)",
-    "type": "Data Observatory: Districts",
-    "description": "Searchable database and reference table of Pakistan's 164 districts across Punjab, Sindh, KP, and Balochistan based on the 2023 PBS Census.",
-    "url": "/data/district-explorer.html",
-    "tags": [
-      "districts",
-      "164 districts",
-      "district database",
-      "pakistan districts",
-      "districts list",
-      "population by district",
-      "largest districts"
-    ]
-  },
-  {
-    "title": "Pakistan Fast Facts Matrix (CSS & PMS Reference Guide 2026)",
-    "type": "Data Observatory: Fast Facts",
-    "description": "Essential constitutional, demographic, and fiscal fast facts on Pakistan for CSS/PMS candidates and policy researchers: Census 2023, NFC formulas, and administrative tiers.",
-    "url": "/data/css-fast-facts-pakistan.html",
-    "tags": [
-      "css fast facts",
-      "pms",
-      "css pakistan affairs",
-      "competitive exams",
-      "cheat sheet",
-      "gk pakistan",
-      "nfc formula",
-      "article 239",
-      "article 140a"
-    ]
-  },
-  {
-    "title": "PPRI Master Research Directory & Policy Sitemap",
-    "type": "Institutional: Directory",
-    "description": "Complete index and master sitemap of Pakistan Provincial Reform Institute: browse all 25 policy articles, 10 data observatories, cartographic maps, and constitutional models.",
-    "url": "/directory.html",
-    "tags": [
-      "directory",
-      "sitemap",
-      "index",
-      "all articles",
-      "policy directory",
-      "data directory",
-      "research sitemap"
     ]
   }
 ]
