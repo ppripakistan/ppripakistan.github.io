@@ -134,10 +134,10 @@ OBSERVATORY_METRICS = {
     },
     'living-standards': {
         'tag': 'HOUSEHOLD WELFARE',
-        'value': 'Rs 46,800',
-        'label': 'National Middle Quintile Monthly Income',
-        'bars': [('5th (Richest)', 'Rs 112,500', 1.00, COL_FOREST), ('4th Quintile', 'Rs 61,400', 0.55, COL_EMERALD), ('3rd (Middle)', 'Rs 46,800', 0.42, (48, 136, 128)), ('1st (Poorest)', 'Rs 29,049', 0.26, COL_LIME)],
-        'source': 'PBS HIES 2024-25 Microdata Findings'
+        'value': 'Rs 65,741',
+        'label': 'Mean Monthly Income, Middle Consumption Quintile',
+        'bars': [('5th (Richest)', 'Rs 139,317', 1.00, COL_FOREST), ('4th Quintile', 'Rs 80,387', 0.58, COL_EMERALD), ('3rd (Middle)', 'Rs 65,741', 0.47, (48, 136, 128)), ('1st (Poorest)', 'Rs 41,851', 0.30, COL_LIME)],
+        'source': 'PBS HIES 2024–25 Economic Report, Table 3.5.A'
     },
     'compare': {
         'tag': 'COMPARATIVE BENCHMARKS',

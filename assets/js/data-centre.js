@@ -328,19 +328,19 @@ document.addEventListener("DOMContentLoaded", function () {
         title: "Living Standards & Income",
         icon: "🏠",
         badge: "HIES 2024–25",
-        metric: "PKR 63,450",
+        metric: "PKR 82,179",
         metricSub: "Mean Monthly Household Income (PBS)",
         url: "/data/living-standards/",
         csvUrl: "/data/downloads/pakistan-household-income-consumption-hies-2024-25.csv",
-        chartTitle: "Monthly Household Income by Quintile (HIES 2024–25 PKR)",
+        chartTitle: "Average Monthly Household Income by Consumption Quintile (HIES 2024–25 PKR)",
         chartData: [
-          { label: "1st Quintile (Poorest)", value: 29049, formattedValue: "Rs 29,049", color: "#d97706" },
-          { label: "2nd Quintile", value: 37210, formattedValue: "Rs 37,210", color: "#0284c7" },
-          { label: "3rd Quintile (Middle)", value: 46800, formattedValue: "Rs 46,800", color: "#0f766e" },
-          { label: "4th Quintile", value: 61400, formattedValue: "Rs 61,400", color: "#073c3a" },
-          { label: "5th Quintile (Richest)", value: 112500, formattedValue: "Rs 112,500", color: "#16a34a" }
+          { label: "Q1 (Lowest consumption)", value: 41851, formattedValue: "Rs 41,851", color: "#d97706" },
+          { label: "Q2", value: 55138, formattedValue: "Rs 55,138", color: "#0284c7" },
+          { label: "Q3", value: 65741, formattedValue: "Rs 65,741", color: "#0f766e" },
+          { label: "Q4", value: 80387, formattedValue: "Rs 80,387", color: "#073c3a" },
+          { label: "Q5 (Highest consumption)", value: 139317, formattedValue: "Rs 139,317", color: "#16a34a" }
         ],
-        topics: ["Monthly Household Income (Rs 63,450)", "Monthly Consumption Spending (Rs 58,200)", "Income Quintile Disparities", "Improved Drinking Water Access (97%)", "Sanitation / Flush Toilet (74%)", "Grid Electricity Access (95%)"],
+        topics: ["Monthly Household Income (Rs 82,179)", "Monthly Consumption Spending (Rs 79,150)", "Income Quintile Disparities", "Improved Drinking Water Access (97%)", "Sanitation / Flush Toilet (74%)", "Grid Electricity Access (95%)"],
         researchTitle: "Same Country, Different Life: Spatial Inequality Across Pakistan's Districts",
         researchUrl: "/research/reports/same-country-different-life-district-access.html",
         keywords: ["living standards", "income", "household", "hies", "consumption", "poverty", "water", "sanitation", "electricity", "energy", "welfare", "wages"]

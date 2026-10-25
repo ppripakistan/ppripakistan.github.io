@@ -193,7 +193,7 @@ def clean_and_update_search_index():
         {
             "title": "Pakistan Living Standards, Poverty & Household Income Data",
             "type": "Data Observatory: Living Standards",
-            "description": "Findings from PBS Household Integrated Economic Survey (HIES) 2024–25: household income quintiles (mean PKR 63,450), monthly consumption, water access, and energy.",
+            "description": "PBS HIES 2024–25 household income and consumption: mean monthly household income PKR 82,179, mean consumption PKR 79,150, consumption-quintile comparisons, and living-standard indicators.",
             "url": "/data/living-standards/",
             "tags": ["living standards", "household income", "hies 2024", "consumption expenditure", "poverty", "income quintiles", "drinking water", "sanitation", "electricity access", "clean fuel", "wealth", "well-being"]
         },
