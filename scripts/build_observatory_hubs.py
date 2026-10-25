@@ -648,8 +648,8 @@ def generate_hub_html(key, hub):
     <meta property="og:title" content="{hub['title']} | PPRI Data Observatory" />
     <meta property="og:description" content="{hub['description']}" />
     <meta property="og:url" content="{hub['canonical']}" />
-    <meta property="og:image" content="https://ppripakistan.github.io/assets/images/brand/ppri-social-share.jpg?v=2" />
-    <meta property="og:image:secure_url" content="https://ppripakistan.github.io/assets/images/brand/ppri-social-share.jpg?v=2" />
+    <meta property="og:image" content="https://ppripakistan.github.io/assets/images/previews/index.jpg" />
+    <meta property="og:image:secure_url" content="https://ppripakistan.github.io/assets/images/previews/index.jpg" />
     <meta property="og:image:type" content="image/jpeg" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
@@ -659,7 +659,7 @@ def generate_hub_html(key, hub):
     <meta name="twitter:creator" content="@PPRI_Pakistan" />
     <meta name="twitter:title" content="{hub['title']} | PPRI Data Observatory" />
     <meta name="twitter:description" content="{hub['description']}" />
-    <meta name="twitter:image" content="https://ppripakistan.github.io/assets/images/brand/ppri-social-share.jpg?v=2" />
+    <meta name="twitter:image" content="https://ppripakistan.github.io/assets/images/previews/index.jpg" />
     <meta name="twitter:image:alt" content="{hub['title']} | PPRI Data Observatory" />
     <link rel="icon" href="/favicon.ico" sizes="48x48" />
     <link rel="icon" href="/assets/images/brand/favicon.svg" type="image/svg+xml" />

@@ -101,7 +101,7 @@ def verify_all():
     # 3. Verify Social Share Preview Cards on Disk
     print("\n[Check 3/6] Verifying 1200x630 Social Preview Images...")
     social_cards = [
-        BRAND_DIR / "ppri-social-share.jpg",
+        ROOT_DIR / "assets" / "images" / "previews" / "index.jpg",
     ]
     for card_path in social_cards:
         if not card_path.exists():

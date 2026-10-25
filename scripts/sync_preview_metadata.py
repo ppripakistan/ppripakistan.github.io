@@ -35,7 +35,7 @@ def sync_page(file_path):
     if preview_disk_path.exists():
         img_url = f"{BASE_URL}/assets/images/previews/{preview_filename}"
     else:
-        img_url = f"{BASE_URL}/assets/images/brand/ppri-social-share.jpg"
+        img_url = f"{BASE_URL}/assets/images/previews/index.jpg"
 
     # Extract title & description for alt tags
     title_m = re.search(r'<title>(.*?)</title>', content, re.IGNORECASE | re.DOTALL)
