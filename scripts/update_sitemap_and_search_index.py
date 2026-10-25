@@ -207,7 +207,7 @@ def clean_and_update_search_index():
         {
             "title": "Pakistan Education, Literacy & Human Capital Data",
             "type": "Data Observatory: Education",
-            "description": "Educational statistics: national literacy rate (61%), provincial literacy comparison, gender literacy gap (71% M / 50% F), and 26.2M out-of-school children.",
+            "description": "PBS HIES 2024–25 education indicators: 63% literacy among people aged 10+, provincial literacy rates, sex and urban-rural breakdowns, and a 28% out-of-school rate for children aged 5–16.",
             "url": "/data/education/",
             "tags": ["education", "literacy rate", "female literacy", "out of school children", "school completion", "education spending", "primary education", "secondary education", "human capital", "schools pakistan"]
         },

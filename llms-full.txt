@@ -123,7 +123,7 @@ The PPRI Data Observatory structures empirical indicators across 8 dedicated the
 
 ### 3.4 Education
 * **URL**: https://ppripakistan.github.io/data/education/index.html
-* **Metrics**: National literacy rate stands at 61% (male 70%, female 51%). Out-of-school children (OOSC) estimated at 26.2 million. District disparities range from 88% literacy in Islamabad and Abbottabad to under 22% in Torghar and Kohlu.
+* **Education metrics (PBS HIES 2024–25)**: Literacy is 63% among people aged 10+ (male 73%, female 54%; urban 74%, rural 55%). Provincial rates for age 10+: Punjab 68%, Sindh 58%, Khyber Pakhtunkhwa 58%, Balochistan 49%. Out-of-school rate among children aged 5–16 is 28% (boys 25%, girls 31%). These are HIES indicators and should not be mixed with Census 2023 or other education series without stating the different definitions.
 
 ### 3.5 Health & Nutrition
 * **URL**: https://ppripakistan.github.io/data/health/index.html

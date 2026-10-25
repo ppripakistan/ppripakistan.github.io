@@ -120,10 +120,10 @@ OBSERVATORY_METRICS = {
     },
     'education': {
         'tag': 'HUMAN CAPITAL',
-        'value': '61.0%',
-        'label': 'National Adult Literacy Rate',
-        'bars': [('Punjab', '66.0%', 0.66, COL_FOREST), ('Sindh', '61.0%', 0.61, COL_EMERALD), ('KP', '55.0%', 0.55, (48, 136, 128)), ('Balochistan', '42.0%', 0.42, COL_LIME)],
-        'source': 'Pakistan Bureau of Statistics PSLM Survey Baseline'
+        'value': '63.0%',
+        'label': 'Literacy Rate (Population Age 10+)',
+        'bars': [('Punjab', '68.0%', 0.68, COL_FOREST), ('Sindh', '58.0%', 0.58, COL_EMERALD), ('KP', '58.0%', 0.58, (48, 136, 128)), ('Balochistan', '49.0%', 0.49, COL_LIME)],
+        'source': 'PBS HIES 2024–25 Social Report'
     },
     'health': {
         'tag': 'PUBLIC HEALTH',
