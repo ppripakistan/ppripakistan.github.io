@@ -24,40 +24,6 @@
     ]
   },
   {
-    "title": "Administrative Model",
-    "type": "Research topic",
-    "description": "Institutional setup, personnel, courts, security, service delivery and transition planning.",
-    "url": "/provinces/administrative-model.html",
-    "tags": [
-      "administration",
-      "civil service",
-      "transition"
-    ]
-  },
-  {
-    "title": "Fiscal Framework",
-    "type": "Research topic",
-    "description": "NFC, revenue, transfers, expenditure, assets, liabilities and transition costs.",
-    "url": "/provinces/fiscal-framework.html",
-    "tags": [
-      "finance",
-      "NFC",
-      "revenue",
-      "expenditure"
-    ]
-  },
-  {
-    "title": "Local Government",
-    "type": "Research topic",
-    "description": "Article 140A and the relationship between provincial restructuring and local devolution.",
-    "url": "/provinces/local-government.html",
-    "tags": [
-      "local government",
-      "decentralization",
-      "140A"
-    ]
-  },
-  {
     "title": "Administrative Scale & Representation",
     "type": "Policy Brief",
     "description": "Five tests for evaluating administrative scale and political access.",
@@ -169,19 +135,6 @@
       "history",
       "milestones",
       "record"
-    ]
-  },
-  {
-    "title": "PPRI Media Centre",
-    "type": "Media",
-    "description": "Resources for journalists, official statements, broadcast briefings, and press contacts for PPRI faculty.",
-    "url": "/media/",
-    "tags": [
-      "media",
-      "press",
-      "journalism",
-      "briefings",
-      "interviews"
     ]
   },
   {
@@ -602,45 +555,6 @@
       "directory",
       "index",
       "archive"
-    ]
-  },
-  {
-    "title": "Policy Papers Hub",
-    "type": "Policy Papers",
-    "description": "Multi-disciplinary flagship policy papers examining structural, legal, and operational dimensions of provincial reform in Pakistan.",
-    "url": "/research/policy-papers/",
-    "tags": [
-      "policy papers",
-      "flagship",
-      "research",
-      "reform",
-      "governance"
-    ]
-  },
-  {
-    "title": "Policy Briefs Hub",
-    "type": "Policy Briefs",
-    "description": "Executive policy briefs providing concise, data-driven analysis of administrative scale, fiscal formulas, and governance models.",
-    "url": "/research/briefs/",
-    "tags": [
-      "policy briefs",
-      "briefs",
-      "executive summary",
-      "scale",
-      "federalism"
-    ]
-  },
-  {
-    "title": "Working Papers Hub",
-    "type": "Working Papers",
-    "description": "Academic working papers presenting preliminary empirical research on local government, fiscal devolution, and federal mechanics.",
-    "url": "/research/working-papers/",
-    "tags": [
-      "working papers",
-      "academic",
-      "preliminary",
-      "local government",
-      "devolution"
     ]
   },
   {
