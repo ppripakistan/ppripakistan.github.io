@@ -6,14 +6,14 @@
   "geography_note": "Four constitutional provinces only. Do not count ICT, Gilgit-Baltistan or Azad Jammu and Kashmir as additional provinces in this table.",
   "source": {
     "title": "Pakistan Bureau of Statistics, 7th Population and Housing Census 2023",
-    "url": "https://www.pbs.gov.pk/sites/default/files/population/2023/reports/National%20Census%20Report-2023.pdf"
+    "url": "https://www.pbs.gov.pk/sites/default/files/population/2023/tables/table_1_national.pdf"
   },
   "provinces": [
     {
       "name": "Punjab",
       "capital": "Lahore",
       "population_2023": 127688922,
-      "area_km2": 205344
+      "area_km2": 205345
     },
     {
       "name": "Sindh",
@@ -35,5 +35,5 @@
     }
   ],
   "country_2023_census_population": 241499431,
-  "caveat": "Before republishing exact values, confirm against the PBS national/provincial report tables; areas can vary by source/convention and proposed-province populations depend on chosen boundaries."
+  "caveat": "Population and area values follow PBS Census 2023 Table 1. Population values are census enumerations, not 2026 projections. Administrative-area conventions can differ across sources; use the cited table consistently."
 }
