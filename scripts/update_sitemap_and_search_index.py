@@ -55,7 +55,7 @@ def clean_and_update_sitemap():
         "updates/index.html", "data/methodology.html", "data/economy.html", "data/population.html",
         "data/fiscal.html", "data/demographics.html", "data/governance.html", "data/data-notes.html",
         "data/index.html", "data/maps.html", "data/datasets.html", "data/provincial-comparison.html",
-        "data/district-explorer.html", "404.html", "search.html"
+         "404.html", "search.html"
     }
 
     for url_el in root.findall('sm:url', ns):

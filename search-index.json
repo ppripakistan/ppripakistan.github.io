@@ -756,6 +756,25 @@
     ]
   },
   {
+    "title": "Subnational Governance Scenarios & Reform Models Suite",
+    "url": "/scenarios/",
+    "category": "Scenarios",
+    "keywords": [
+      "scenarios",
+      "subnational governance",
+      "reform models",
+      "four provinces",
+      "new provinces",
+      "local government",
+      "article 140a",
+      "article 239",
+      "comparative matrix",
+      "administrative scale",
+      "devolution"
+    ],
+    "description": "Evidence-based comparative suite evaluating Pakistan's 4-province baseline against territorial restructuring, municipal devolution under Article 140A, and global federal models."
+  },
+  {
     "title": "Data Observatory & Interactive Knowledge Map",
     "type": "Data Observatory",
     "description": "Central empirical observatory: Interactive Knowledge Map of Pakistan's public data, Census 2023 baseline, NFC Reform Simulator, and district explorer.",
@@ -978,59 +997,5 @@
       "citations",
       "academic authority"
     ]
-  },
-  {
-    "title": "Pakistan Fast Facts Matrix (CSS & PMS Reference Guide 2026)",
-    "type": "Data Observatory: Fast Facts",
-    "description": "Essential constitutional, demographic, and fiscal fast facts on Pakistan for CSS/PMS candidates and policy researchers: Census 2023 populations, NFC percentages, land areas, and administrative structures.",
-    "url": "/data/css-fast-facts-pakistan.html",
-    "tags": [
-      "css",
-      "pms",
-      "fast facts",
-      "pakistan fast facts",
-      "nfc formula",
-      "census 2023 facts",
-      "administrative hierarchy",
-      "divisions list",
-      "provinces area",
-      "cheat sheet"
-    ]
-  },
-  {
-    "title": "164 Districts of Pakistan Database (2023 Census)",
-    "type": "Data Observatory: Districts",
-    "description": "Searchable database and reference table of Pakistan's 164 districts across Punjab, Sindh, KP, and Balochistan based on the 2023 PBS Census, listing population, division, and capital distance.",
-    "url": "/data/district-explorer.html",
-    "tags": [
-      "districts",
-      "164 districts",
-      "district explorer",
-      "punjab districts",
-      "sindh districts",
-      "kp districts",
-      "balochistan districts",
-      "capital distance",
-      "district populations"
-    ]
-  },
-  {
-    "title": "Subnational Governance Scenarios & Reform Models Suite",
-    "url": "/scenarios/",
-    "category": "Scenarios",
-    "keywords": [
-      "scenarios",
-      "subnational governance",
-      "reform models",
-      "four provinces",
-      "new provinces",
-      "local government",
-      "article 140a",
-      "article 239",
-      "comparative matrix",
-      "administrative scale",
-      "devolution"
-    ],
-    "description": "Evidence-based comparative suite evaluating Pakistan's 4-province baseline against territorial restructuring, municipal devolution under Article 140A, and global federal models."
   }
 ]
