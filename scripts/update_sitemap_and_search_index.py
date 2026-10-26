@@ -27,7 +27,7 @@ CANONICAL_OBSERVATORY_HUBS = [
     ("https://ppripakistan.github.io/data/health/", "0.9", "weekly"),
     ("https://ppripakistan.github.io/data/digital-access/", "0.9", "weekly"),
     ("https://ppripakistan.github.io/data/compare/", "0.9", "weekly"),
-    ("https://ppripakistan.github.io/knowledge-library/", "0.95", "weekly"),
+    ("https://ppripakistan.github.io/data/quick-facts/", "0.9", "weekly"),
     ("https://ppripakistan.github.io/data/downloads/", "0.8", "monthly"),
     ("https://ppripakistan.github.io/data/methodology/", "0.8", "monthly"),
 ]
@@ -55,7 +55,7 @@ def clean_and_update_sitemap():
         "updates/index.html", "data/methodology.html", "data/economy.html", "data/population.html",
         "data/fiscal.html", "data/demographics.html", "data/governance.html", "data/data-notes.html",
         "data/index.html", "data/maps.html", "data/datasets.html", "data/provincial-comparison.html",
-         "404.html", "search.html", "data/quick-facts/index.html"
+        "data/district-explorer.html", "404.html", "search.html"
     }
 
     for url_el in root.findall('sm:url', ns):
@@ -177,11 +177,11 @@ def clean_and_update_search_index():
             "tags": ["data observatory", "knowledge map", "census 2023", "nfc simulator", "districts", "provinces", "data hub", "datasets", "statistics"]
         },
         {
-            "title": "Pakistan Population 2023 Census: Total, Province-Wise & City Data",
+            "title": "Pakistan Population, Demographics & Urbanization Data",
             "type": "Data Observatory: Population",
-            "description": "Pakistan had 241,499,431 people in the 2023 Census. Explore official province-wise population, urban and rural shares, major city counts, and 16 population FAQs.",
+            "description": "Verified PBS 7th Census 2023 results: 241.49M national population, provincial breakdowns, urban-rural distributions, sex ratios, and top 22 city populations.",
             "url": "/data/population/",
-            "tags": ["population", "pakistan population", "census 2023", "punjab population", "sindh population", "kp population", "balochistan population", "karachi population", "lahore population", "urbanization", "growth rate", "demographics", "largest cities", "household size", "mother tongues", "population faqs"]
+            "tags": ["population", "pakistan population", "census 2023", "punjab population", "sindh population", "kp population", "balochistan population", "karachi population", "lahore population", "urbanization", "growth rate", "demographics", "largest cities", "household size", "mother tongues"]
         },
         {
             "title": "Pakistan Economy, Inflation & Market Benchmarks Data",
@@ -193,7 +193,7 @@ def clean_and_update_search_index():
         {
             "title": "Pakistan Living Standards, Poverty & Household Income Data",
             "type": "Data Observatory: Living Standards",
-            "description": "PBS HIES 2024–25 household income and consumption: mean monthly household income PKR 82,179, mean consumption PKR 79,150, consumption-quintile comparisons, and living-standard indicators.",
+            "description": "Findings from PBS Household Integrated Economic Survey (HIES) 2024–25: household income quintiles (mean PKR 63,450), monthly consumption, water access, and energy.",
             "url": "/data/living-standards/",
             "tags": ["living standards", "household income", "hies 2024", "consumption expenditure", "poverty", "income quintiles", "drinking water", "sanitation", "electricity access", "clean fuel", "wealth", "well-being"]
         },
@@ -207,7 +207,7 @@ def clean_and_update_search_index():
         {
             "title": "Pakistan Education, Literacy & Human Capital Data",
             "type": "Data Observatory: Education",
-            "description": "PBS HIES 2024–25 education indicators: 63% literacy among people aged 10+, provincial literacy rates, sex and urban-rural breakdowns, and a 28% out-of-school rate for children aged 5–16.",
+            "description": "Educational statistics: national literacy rate (61%), provincial literacy comparison, gender literacy gap (71% M / 50% F), and 26.2M out-of-school children.",
             "url": "/data/education/",
             "tags": ["education", "literacy rate", "female literacy", "out of school children", "school completion", "education spending", "primary education", "secondary education", "human capital", "schools pakistan"]
         },
@@ -233,10 +233,10 @@ def clean_and_update_search_index():
             "tags": ["compare", "provinces comparator", "punjab vs sindh", "balochistan vs punjab", "kp vs sindh", "subnational comparison", "provincial comparison", "territorial scale", "provincial density"]
         },
         {
-            "title": "PPRI Pakistan Knowledge Library",
-            "type": "Knowledge Library & Question Bank",
+            "title": "CSS Aspirants & Researchers Fast-Fact Matrix",
+            "type": "Data Observatory: Fast Facts",
             "description": "Verified official statistics for Pakistan competitive exams (CSS, PMS), academic research, and policy journalism with one-click copyable APA citations.",
-            "url": "/knowledge-library/",
+            "url": "/data/quick-facts/",
             "tags": ["css", "pms", "css pakistan affairs", "fast facts", "exam facts", "pakistan facts", "css current affairs", "cheat sheet", "citations", "official numbers"]
         },
         {

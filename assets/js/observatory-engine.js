@@ -82,9 +82,9 @@
     if (!el || !data || !data.length) return;
 
     options = options || {};
-    var height = options.height || 340;
+    var height = options.height || 320;
     var width = options.width || 700;
-    var padding = { top: 30, right: 20, bottom: options.bottomPadding || 65, left: 60 };
+    var padding = { top: 30, right: 20, bottom: 50, left: 60 };
     var chartW = width - padding.left - padding.right;
     var chartH = height - padding.top - padding.bottom;
 
@@ -176,35 +176,15 @@
       topLabel.textContent = d.formattedValue || engine.formatNumber(d.value);
       svg.appendChild(topLabel);
 
-      // Bottom Category Label with intelligent multiline wrapping
+      // Bottom Category Label
       var catLabel = document.createElementNS('http://www.w3.org/2000/svg', 'text');
       catLabel.setAttribute('x', x + barWidth / 2);
-      catLabel.setAttribute('y', padding.top + chartH + 18);
+      catLabel.setAttribute('y', padding.top + chartH + 20);
       catLabel.setAttribute('text-anchor', 'middle');
-      catLabel.setAttribute('font-size', '11');
+      catLabel.setAttribute('font-size', '12');
       catLabel.setAttribute('font-weight', '600');
       catLabel.setAttribute('fill', '#475569');
-
-      var words = d.label.split(' ');
-      if (words.length > 1 && (d.label.length > 12 || barStep < 120)) {
-        var mid = Math.ceil(words.length / 2);
-        var line1 = words.slice(0, mid).join(' ');
-        var line2 = words.slice(mid).join(' ');
-
-        var tspan1 = document.createElementNS('http://www.w3.org/2000/svg', 'tspan');
-        tspan1.setAttribute('x', x + barWidth / 2);
-        tspan1.setAttribute('dy', '0');
-        tspan1.textContent = line1;
-        catLabel.appendChild(tspan1);
-
-        var tspan2 = document.createElementNS('http://www.w3.org/2000/svg', 'tspan');
-        tspan2.setAttribute('x', x + barWidth / 2);
-        tspan2.setAttribute('dy', '14');
-        tspan2.textContent = line2;
-        catLabel.appendChild(tspan2);
-      } else {
-        catLabel.textContent = d.label;
-      }
+      catLabel.textContent = d.label;
       svg.appendChild(catLabel);
     });
 

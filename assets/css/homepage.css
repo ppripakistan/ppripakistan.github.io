@@ -61,7 +61,7 @@
   overflow: hidden;
   border-radius: 8px;
   background: #fff;
-  border: none;
+  border: 1.5px solid rgba(168, 224, 106, 0.35);
   flex: 0 0 44px;
   padding: 2px;
   box-sizing: border-box;
