@@ -1064,5 +1064,40 @@
       "citations",
       "academic authority"
     ]
+  },
+  {
+    "title": "Pakistan Fast Facts Matrix (CSS & PMS Reference Guide 2026)",
+    "type": "Data Observatory: Fast Facts",
+    "description": "Essential constitutional, demographic, and fiscal fast facts on Pakistan for CSS/PMS candidates and policy researchers: Census 2023 populations, NFC percentages, land areas, and administrative structures.",
+    "url": "/data/css-fast-facts-pakistan.html",
+    "tags": [
+      "css",
+      "pms",
+      "fast facts",
+      "pakistan fast facts",
+      "nfc formula",
+      "census 2023 facts",
+      "administrative hierarchy",
+      "divisions list",
+      "provinces area",
+      "cheat sheet"
+    ]
+  },
+  {
+    "title": "164 Districts of Pakistan Database (2023 Census)",
+    "type": "Data Observatory: Districts",
+    "description": "Searchable database and reference table of Pakistan's 164 districts across Punjab, Sindh, KP, and Balochistan based on the 2023 PBS Census, listing population, division, and capital distance.",
+    "url": "/data/district-explorer.html",
+    "tags": [
+      "districts",
+      "164 districts",
+      "district explorer",
+      "punjab districts",
+      "sindh districts",
+      "kp districts",
+      "balochistan districts",
+      "capital distance",
+      "district populations"
+    ]
   }
 ]

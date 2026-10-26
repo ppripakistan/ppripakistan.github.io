@@ -119,6 +119,7 @@
           <a href="/">Home</a>
           <a href="/research/">Research</a>
           <a href="/provinces/">Reform</a>
+          <a href="/scenarios/">Scenarios</a>
           <a href="/data/centre.html" aria-current="page">Data</a>
           <a href="/publications/">Publications</a>
           <a href="/consultation/">Engage</a>
@@ -185,7 +186,7 @@
                 <span>01 // EXPLORE</span>
                 <span class="icon">🗺️</span>
               </div>
-              <h3 class="dc-onboard-title">Data Atlas <span>&rarr;</span></h3>
+              <h2 class="dc-onboard-title">Data Atlas <span>&rarr;</span></h2>
               <p class="dc-onboard-desc">8 verified public domains with interactive SVG mini-charts and indicator trackers.</p>
             </a>
             <a href="#simulators-section" class="dc-onboard-card">
@@ -193,7 +194,7 @@
                 <span>02 // SIMULATE</span>
                 <span class="icon">🧮</span>
               </div>
-              <h3 class="dc-onboard-title">NFC Lab <span>&rarr;</span></h3>
+              <h2 class="dc-onboard-title">NFC Lab <span>&rarr;</span></h2>
               <p class="dc-onboard-desc">Model divisible pool redistributions with dynamic criteria sliders and rupee allocations.</p>
             </a>
             <a href="#districts-section" class="dc-onboard-card">
@@ -201,7 +202,7 @@
                 <span>03 // ANALYZE</span>
                 <span class="icon">📍</span>
               </div>
-              <h3 class="dc-onboard-title">District Database <span>&rarr;</span></h3>
+              <h2 class="dc-onboard-title">District Database <span>&rarr;</span></h2>
               <p class="dc-onboard-desc">Searchable 164-district matrix with demographics, land area, and capital transit times.</p>
             </a>
             <a href="/data/quick-facts/" class="dc-onboard-card">
@@ -209,7 +210,7 @@
                 <span>04 // REFERENCE</span>
                 <span class="icon">⚡</span>
               </div>
-              <h3 class="dc-onboard-title">CSS Fast Facts <span>&rarr;</span></h3>
+              <h2 class="dc-onboard-title">CSS Fast Facts <span>&rarr;</span></h2>
               <p class="dc-onboard-desc">Verified rapid reference matrix with official citations for researchers and exam prep.</p>
             </a>
           </div>
@@ -292,7 +293,7 @@
                 <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 16px; border-bottom: 1px solid #e2e8f0; padding-bottom: 20px; margin-bottom: 20px;">
                   <div class="nfc-pool-input" style="margin-bottom: 0;">
                     <label for="nfcPoolAmount">Divisible Pool Size (PKR Billion):</label>
-                    <input type="number" id="nfcPoolAmount" value="5500" min="500" max="25000" step="100" />
+                    <input type="number" id="nfcPoolAmount" aria-label="Divisible Pool Size (PKR Billion)" value="5500" min="500" max="25000" step="100" />
                   </div>
                   <div style="display: flex; flex-wrap: wrap; gap: 8px;">
                     <button type="button" class="dc-btn-reset" id="preset7th">7th NFC Award (Status Quo)</button>
@@ -312,7 +313,7 @@
                         <label for="nfcWeightPop">Population Weight:</label>
                         <span class="nfc-slider-val" id="valPop">82.0%</span>
                       </div>
-                      <input type="range" class="nfc-range" id="nfcWeightPop" min="0" max="100" step="0.5" value="82.0" />
+                      <input type="range" class="nfc-range" id="nfcWeightPop" aria-label="NFC Population Weight percentage" min="0" max="100" step="0.5" value="82.0" />
                       <div class="nfc-slider-desc">Pro-rata population size from 7th Population Census 2023. Favors populous provinces like Punjab.</div>
                     </div>
 
@@ -321,7 +322,7 @@
                         <label for="nfcWeightPov">Poverty &amp; Backwardness Weight:</label>
                         <span class="nfc-slider-val" id="valPov">10.3%</span>
                       </div>
-                      <input type="range" class="nfc-range" id="nfcWeightPov" min="0" max="50" step="0.5" value="10.3" />
+                      <input type="range" class="nfc-range" id="nfcWeightPov" aria-label="NFC Poverty and Backwardness Weight percentage" min="0" max="50" step="0.5" value="10.3" />
                       <div class="nfc-slider-desc">Multi-dimensional poverty and deprivation index. Substantially boosts Balochistan and KP.</div>
                     </div>
 
@@ -330,7 +331,7 @@
                         <label for="nfcWeightRev">Revenue Generation Weight:</label>
                         <span class="nfc-slider-val" id="valRev">5.0%</span>
                       </div>
-                      <input type="range" class="nfc-range" id="nfcWeightRev" min="0" max="30" step="0.5" value="5.0" />
+                      <input type="range" class="nfc-range" id="nfcWeightRev" aria-label="NFC Revenue Generation Weight percentage" min="0" max="30" step="0.5" value="5.0" />
                       <div class="nfc-slider-desc">Recognizes commercial and ports revenue generation. Significantly boosts Sindh.</div>
                     </div>
 
@@ -339,14 +340,14 @@
                         <label for="nfcWeightDen">Inverse Population Density Weight:</label>
                         <span class="nfc-slider-val" id="valDen">2.7%</span>
                       </div>
-                      <input type="range" class="nfc-range" id="nfcWeightDen" min="0" max="30" step="0.5" value="2.7" />
+                      <input type="range" class="nfc-range" id="nfcWeightDen" aria-label="NFC Inverse Population Density Weight percentage" min="0" max="30" step="0.5" value="2.7" />
                       <div class="nfc-slider-desc">Equalizes delivery cost over vast, sparsely populated landmasses. Highly benefits Balochistan.</div>
                     </div>
                   </div>
 
                   <!-- Live Results Column -->
                   <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 20px;">
-                    <h4 style="margin: 0 0 16px; color: #073c3a; font-size: 1.05rem;">Simulated Provincial Allocation</h4>
+                    <h3 style="margin: 0 0 16px; color: #073c3a; font-size: 1.05rem;">Simulated Provincial Allocation</h3>
                     <div class="table-wrap">
                       <table class="nfc-results-table">
                         <thead>
@@ -450,22 +451,22 @@
 
               <div class="distance-grid">
                 <div class="distance-card">
-                  <h4>Gwadar &amp; Kech (Makran) &rarr; Quetta</h4>
+                  <h3>Gwadar &amp; Kech (Makran) &rarr; Quetta</h3>
                   <span class="dist-stat">13.5 Hours</span>
                   <p>910 km over rugged regional highways. Requires multiple days of overland transit for routine constitutional writ petitions or administrative appeals.</p>
                 </div>
                 <div class="distance-card">
-                  <h4>Rajanpur &amp; Rahim Yar Khan &rarr; Lahore</h4>
+                  <h3>Rajanpur &amp; Rahim Yar Khan &rarr; Lahore</h3>
                   <span class="dist-stat">8.5 Hours</span>
                   <p>610 km from southern Punjab periphery to Civil Secretariat Lahore, reinforcing demands for south Punjab administrative decentralization.</p>
                 </div>
                 <div class="distance-card">
-                  <h4>Tharparkar (Mithi) &rarr; Karachi</h4>
+                  <h3>Tharparkar (Mithi) &rarr; Karachi</h3>
                   <span class="dist-stat">6.5 Hours</span>
                   <p>410 km across desert terrain to reach provincial departments and specialized healthcare clusters in the provincial capital.</p>
                 </div>
                 <div class="distance-card">
-                  <h4>Chitral &amp; Upper Dir &rarr; Peshawar</h4>
+                  <h3>Chitral &amp; Upper Dir &rarr; Peshawar</h3>
                   <span class="dist-stat">7.5 Hours</span>
                   <p>360 km through mountain passes with frequent weather disruptions, highlighting the necessity of Malakand regional governance autonomy.</p>
                 </div>
@@ -494,7 +495,7 @@
 
           <!-- Search and Filter Bar -->
           <div class="district-toolbar">
-            <input type="text" id="districtSearchInput" class="district-search-input" placeholder="Search by district name, division or province (e.g. Multan, Gwadar, Malakand)..." />
+            <input type="text" id="districtSearchInput" aria-label="Search district data table" class="district-search-input" placeholder="Search by district name, division or province (e.g. Multan, Gwadar, Malakand)..." />
             <select id="districtProvinceFilter" class="district-filter-select" aria-label="Filter by Province">
               <option value="all">All Provinces &amp; Regions</option>
               <option value="Punjab">Punjab</option>
@@ -582,7 +583,7 @@
             <div class="card" style="display:flex; flex-direction:column; justify-content:space-between;">
               <div>
                 <span class="badge" style="background:#e6f4ea; color:#0d5c59; margin-bottom:8px; display:inline-block;">CSV &bull; 2.4 KB</span>
-                <h4 style="margin:0 0 8px 0; color:var(--obs-dark);">Census 2023 Provincial Baseline</h4>
+                <h3 style="margin:0 0 8px 0; color:var(--obs-dark);">Census 2023 Provincial Baseline</h3>
                 <p style="font-size:0.88rem; color:var(--obs-text-muted); margin:0 0 16px 0;">Official population, shares, territorial area, density, and urbanization rates by province.</p>
               </div>
               <a href="/data/downloads/province_baseline_2023.csv" class="obs-btn obs-btn-outline" download style="justify-content:center; text-align:center;">&darr; Download CSV</a>
@@ -591,7 +592,7 @@
             <div class="card" style="display:flex; flex-direction:column; justify-content:space-between;">
               <div>
                 <span class="badge" style="background:#e6f4ea; color:#0d5c59; margin-bottom:8px; display:inline-block;">CSV &bull; 3.8 KB</span>
-                <h4 style="margin:0 0 8px 0; color:var(--obs-dark);">Economic Benchmarks 2026</h4>
+                <h3 style="margin:0 0 8px 0; color:var(--obs-dark);">Economic Benchmarks 2026</h3>
                 <p style="font-size:0.88rem; color:var(--obs-text-muted); margin:0 0 16px 0;">Real GDP growth, sectoral output, CPI/SPI inflation rates, IT exports, and average wages.</p>
               </div>
               <a href="/data/downloads/pakistan-economic-benchmarks-2026.csv" class="obs-btn obs-btn-outline" download style="justify-content:center; text-align:center;">&darr; Download CSV</a>
@@ -600,7 +601,7 @@
             <div class="card" style="display:flex; flex-direction:column; justify-content:space-between;">
               <div>
                 <span class="badge" style="background:#e6f4ea; color:#0d5c59; margin-bottom:8px; display:inline-block;">CSV &bull; 2.9 KB</span>
-                <h4 style="margin:0 0 8px 0; color:var(--obs-dark);">HIES Living Standards 2024–25</h4>
+                <h3 style="margin:0 0 8px 0; color:var(--obs-dark);">HIES Living Standards 2024–25</h3>
                 <p style="font-size:0.88rem; color:var(--obs-text-muted); margin:0 0 16px 0;">Mean household income quintiles, consumption baskets, water, sanitation, and power access.</p>
               </div>
               <a href="/data/downloads/pakistan-household-income-consumption-hies-2024-25.csv" class="obs-btn obs-btn-outline" download style="justify-content:center; text-align:center;">&darr; Download CSV</a>
@@ -609,7 +610,7 @@
 
           <!-- Citation Block -->
           <div style="margin-top: 32px; background: #ffffff; border: 1.5px solid var(--obs-border); border-radius: var(--obs-radius-md); padding: 20px 24px;">
-            <h4 style="margin:0 0 8px 0; font-size:0.95rem; color:var(--obs-dark); text-transform:uppercase; letter-spacing:0.04em;">Citation Standard (APA):</h4>
+            <h3 style="margin:0 0 8px 0; font-size:0.95rem; color:var(--obs-dark); text-transform:uppercase; letter-spacing:0.04em;">Citation Standard (APA):</h3>
             <code style="display:block; background:#f8fafc; padding:12px 16px; border-radius:6px; font-size:0.85rem; color:#334155; border:1px solid #e2e8f0; word-break:break-all;">
               Pakistan Provincial Reform Institute. (2026). PPRI Pakistan Data Observatory: Empirical Scale &amp; Policy Simulators [Data set]. https://ppripakistan.github.io/data/centre.html
             </code>
@@ -629,7 +630,7 @@
           </summary>
                     <div class="directory-grid">
             <div class="directory-col">
-              <h4>Policy Articles &amp; Analysis</h4>
+              <h3>Policy Articles &amp; Analysis</h3>
               <ul>
                 <li><a href="/articles/provinces-of-pakistan-names-capitals-population.html">How Many Provinces in Pakistan (2026)? Names &amp; Capitals</a></li>
                 <li><a href="/articles/four-provinces-241-million-people-administrative-scale.html">Pakistan Provinces Population: 4 Provinces vs. 241.5M Scale</a></li>
@@ -665,7 +666,7 @@
               </ul>
             </div>
             <div class="directory-col">
-              <h4>Research Reports &amp; Papers</h4>
+              <h3>Research Reports &amp; Papers</h3>
               <ul>
                 <li><a href="/research/reports/income-went-up-why-does-life-feel-harder.html">Average Household Income in Pakistan (HIES 2024-25 vs Inflation)</a></li>
                 <li><a href="/research/reports/bribe-you-cant-see-corruption-private-tax.html">NCPS 2025 Corruption Data: Administrative Bribes as Private Tax</a></li>
@@ -686,7 +687,7 @@
               </ul>
             </div>
             <div class="directory-col">
-              <h4>Data Observatories</h4>
+              <h3>Data Observatories</h3>
               <ul>
                 <li><a href="/data/centre.html">Central Data Observatory &amp; Knowledge Map</a></li>
                 <li><a href="/data/population/">Population &amp; Cities Observatory (Census 2023)</a></li>
@@ -709,7 +710,7 @@
               </ul>
             </div>
             <div class="directory-col">
-              <h4>Reform Models &amp; Engagement</h4>
+              <h3>Reform Models &amp; Engagement</h3>
               <ul>
                 <li><a href="/provinces/proposed-models.html">Proposed Reform Models: 13-Unit Structure</a></li>
                 <li><a href="/provinces/fiscal-framework.html">Fiscal Framework: NFC Divisible Pool Sharing</a></li>
