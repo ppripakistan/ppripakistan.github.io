@@ -24,40 +24,6 @@
     ]
   },
   {
-    "title": "Administrative Model",
-    "type": "Research topic",
-    "description": "Institutional setup, personnel, courts, security, service delivery and transition planning.",
-    "url": "/provinces/administrative-model.html",
-    "tags": [
-      "administration",
-      "civil service",
-      "transition"
-    ]
-  },
-  {
-    "title": "Fiscal Framework",
-    "type": "Research topic",
-    "description": "NFC, revenue, transfers, expenditure, assets, liabilities and transition costs.",
-    "url": "/provinces/fiscal-framework.html",
-    "tags": [
-      "finance",
-      "NFC",
-      "revenue",
-      "expenditure"
-    ]
-  },
-  {
-    "title": "Local Government",
-    "type": "Research topic",
-    "description": "Article 140A and the relationship between provincial restructuring and local devolution.",
-    "url": "/provinces/local-government.html",
-    "tags": [
-      "local government",
-      "decentralization",
-      "140A"
-    ]
-  },
-  {
     "title": "Administrative Scale & Representation",
     "type": "Policy Brief",
     "description": "Five tests for evaluating administrative scale and political access.",
@@ -169,19 +135,6 @@
       "history",
       "milestones",
       "record"
-    ]
-  },
-  {
-    "title": "PPRI Media Centre",
-    "type": "Media",
-    "description": "Resources for journalists, official statements, broadcast briefings, and press contacts for PPRI faculty.",
-    "url": "/media/",
-    "tags": [
-      "media",
-      "press",
-      "journalism",
-      "briefings",
-      "interviews"
     ]
   },
   {
@@ -605,45 +558,6 @@
     ]
   },
   {
-    "title": "Policy Papers Hub",
-    "type": "Policy Papers",
-    "description": "Multi-disciplinary flagship policy papers examining structural, legal, and operational dimensions of provincial reform in Pakistan.",
-    "url": "/research/policy-papers/",
-    "tags": [
-      "policy papers",
-      "flagship",
-      "research",
-      "reform",
-      "governance"
-    ]
-  },
-  {
-    "title": "Policy Briefs Hub",
-    "type": "Policy Briefs",
-    "description": "Executive policy briefs providing concise, data-driven analysis of administrative scale, fiscal formulas, and governance models.",
-    "url": "/research/briefs/",
-    "tags": [
-      "policy briefs",
-      "briefs",
-      "executive summary",
-      "scale",
-      "federalism"
-    ]
-  },
-  {
-    "title": "Working Papers Hub",
-    "type": "Working Papers",
-    "description": "Academic working papers presenting preliminary empirical research on local government, fiscal devolution, and federal mechanics.",
-    "url": "/research/working-papers/",
-    "tags": [
-      "working papers",
-      "academic",
-      "preliminary",
-      "local government",
-      "devolution"
-    ]
-  },
-  {
     "title": "Research Reports Hub",
     "type": "Reports",
     "description": "In-depth analytical reports assessing regional data, spatial access, and institutional readiness across Pakistan.",
@@ -758,9 +672,9 @@
     ]
   },
   {
-    "title": "Provinces of Pakistan 2026: Names, Capitals, Population and Area",
+    "title": "Provinces of Pakistan: Names, Capitals, Map, Population & Facts",
     "type": "Article",
-    "description": "A factual guide to Pakistan’s four provinces, capitals, 2023 census populations and area—plus the difference between provinces, territories, divisions and districts.",
+    "description": "Learn Pakistan’s four provinces, capitals, map, Census 2023 population and area, largest and smallest provinces, key geography facts, and answers to common general-knowledge questions.",
     "url": "/articles/provinces-of-pakistan-names-capitals-population.html",
     "tags": [
       "provinces of Pakistan",
@@ -827,6 +741,58 @@
     ]
   },
   {
+    "title": "PPRI Master Research Directory & Policy Sitemap",
+    "type": "Institutional: Directory",
+    "description": "Complete index and master sitemap of Pakistan Provincial Reform Institute: browse all 25 policy articles, 10 data observatories, cartographic maps, and constitutional models.",
+    "url": "/directory.html",
+    "tags": [
+      "directory",
+      "sitemap",
+      "index",
+      "all articles",
+      "policy directory",
+      "data directory",
+      "research sitemap"
+    ]
+  },
+  {
+    "title": "Subnational Governance Scenarios & Reform Models Suite",
+    "url": "/scenarios/",
+    "category": "Scenarios",
+    "keywords": [
+      "scenarios",
+      "subnational governance",
+      "reform models",
+      "four provinces",
+      "new provinces",
+      "local government",
+      "article 140a",
+      "article 239",
+      "comparative matrix",
+      "administrative scale",
+      "devolution"
+    ],
+    "description": "Evidence-based comparative suite evaluating Pakistan's 4-province baseline against territorial restructuring, municipal devolution under Article 140A, and global federal models."
+  },
+  {
+    "title": "PPRI Pakistan Knowledge Library",
+    "type": "Knowledge Library & Question Bank",
+    "description": "Verified official statistics for Pakistan competitive exams (CSS, PMS), academic research, and policy journalism with one-click copyable APA citations.",
+    "url": "/knowledge-library/",
+    "tags": [
+      "css",
+      "pms",
+      "css pakistan affairs",
+      "fast facts",
+      "exam facts",
+      "pakistan facts",
+      "css current affairs",
+      "cheat sheet",
+      "citations",
+      "official numbers"
+    ]
+  },
+  {
     "title": "Data Observatory & Interactive Knowledge Map",
     "type": "Data Observatory",
     "description": "Central empirical observatory: Interactive Knowledge Map of Pakistan's public data, Census 2023 baseline, NFC Reform Simulator, and district explorer.",
@@ -844,9 +810,9 @@
     ]
   },
   {
-    "title": "Pakistan Population, Demographics & Urbanization Data",
+    "title": "Pakistan Population 2023 Census: Total, Province-Wise & City Data",
     "type": "Data Observatory: Population",
-    "description": "Verified PBS 7th Census 2023 results: 241.49M national population, provincial breakdowns, urban-rural distributions, sex ratios, and top 22 city populations.",
+    "description": "Pakistan had 241,499,431 people in the 2023 Census. Explore official province-wise population, urban and rural shares, major city counts, and 16 population FAQs.",
     "url": "/data/population/",
     "tags": [
       "population",
@@ -863,7 +829,8 @@
       "demographics",
       "largest cities",
       "household size",
-      "mother tongues"
+      "mother tongues",
+      "population faqs"
     ]
   },
   {
@@ -892,7 +859,7 @@
   {
     "title": "Pakistan Living Standards, Poverty & Household Income Data",
     "type": "Data Observatory: Living Standards",
-    "description": "Findings from PBS Household Integrated Economic Survey (HIES) 2024–25: household income quintiles (mean PKR 63,450), monthly consumption, water access, and energy.",
+    "description": "PBS HIES 2024–25 household income and consumption: mean monthly household income PKR 82,179, mean consumption PKR 79,150, consumption-quintile comparisons, and living-standard indicators.",
     "url": "/data/living-standards/",
     "tags": [
       "living standards",
@@ -932,7 +899,7 @@
   {
     "title": "Pakistan Education, Literacy & Human Capital Data",
     "type": "Data Observatory: Education",
-    "description": "Educational statistics: national literacy rate (61%), provincial literacy comparison, gender literacy gap (71% M / 50% F), and 26.2M out-of-school children.",
+    "description": "PBS HIES 2024–25 education indicators: 63% literacy among people aged 10+, provincial literacy rates, sex and urban-rural breakdowns, and a 28% out-of-school rate for children aged 5–16.",
     "url": "/data/education/",
     "tags": [
       "education",
@@ -1001,24 +968,6 @@
     ]
   },
   {
-    "title": "CSS Aspirants & Researchers Fast-Fact Matrix",
-    "type": "Data Observatory: Fast Facts",
-    "description": "Verified official statistics for Pakistan competitive exams (CSS, PMS), academic research, and policy journalism with one-click copyable APA citations.",
-    "url": "/data/quick-facts/",
-    "tags": [
-      "css",
-      "pms",
-      "css pakistan affairs",
-      "fast facts",
-      "exam facts",
-      "pakistan facts",
-      "css current affairs",
-      "cheat sheet",
-      "citations",
-      "official numbers"
-    ]
-  },
-  {
     "title": "Open Public Data Downloads Hub",
     "type": "Data Observatory: Downloads",
     "description": "Download machine-readable CSV datasets: Census 2023 population, HIES 2024–25 income, inflation, and public debt under Creative Commons CC-BY 4.0.",
@@ -1047,53 +996,6 @@
       "definitions",
       "citations",
       "academic authority"
-    ]
-  },
-  {
-    "title": "164 Districts of Pakistan Database (2023 Census)",
-    "type": "Data Observatory: Districts",
-    "description": "Searchable database and reference table of Pakistan's 164 districts across Punjab, Sindh, KP, and Balochistan based on the 2023 PBS Census.",
-    "url": "/data/district-explorer.html",
-    "tags": [
-      "districts",
-      "164 districts",
-      "district database",
-      "pakistan districts",
-      "districts list",
-      "population by district",
-      "largest districts"
-    ]
-  },
-  {
-    "title": "Pakistan Fast Facts Matrix (CSS & PMS Reference Guide 2026)",
-    "type": "Data Observatory: Fast Facts",
-    "description": "Essential constitutional, demographic, and fiscal fast facts on Pakistan for CSS/PMS candidates and policy researchers: Census 2023, NFC formulas, and administrative tiers.",
-    "url": "/data/css-fast-facts-pakistan.html",
-    "tags": [
-      "css fast facts",
-      "pms",
-      "css pakistan affairs",
-      "competitive exams",
-      "cheat sheet",
-      "gk pakistan",
-      "nfc formula",
-      "article 239",
-      "article 140a"
-    ]
-  },
-  {
-    "title": "PPRI Master Research Directory & Policy Sitemap",
-    "type": "Institutional: Directory",
-    "description": "Complete index and master sitemap of Pakistan Provincial Reform Institute: browse all 25 policy articles, 10 data observatories, cartographic maps, and constitutional models.",
-    "url": "/directory.html",
-    "tags": [
-      "directory",
-      "sitemap",
-      "index",
-      "all articles",
-      "policy directory",
-      "data directory",
-      "research sitemap"
     ]
   }
 ]

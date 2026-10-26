@@ -8,7 +8,7 @@
     <lastBuildDate>Sun, 18 Oct 2026 12:00:00 GMT</lastBuildDate>
     <atom:link href="https://ppripakistan.github.io/feed.xml" rel="self" type="application/rss+xml" />
     <image>
-      <url>https://ppripakistan.github.io/assets/images/brand/ppri-logo.jpg</url>
+      <url>https://ppripakistan.github.io/assets/images/brand/ppri-logo.png</url>
       <title>Pakistan Provincial Reform Institute (PPRI)</title>
       <link>https://ppripakistan.github.io/</link>
     </image>
@@ -31,16 +31,16 @@
     </item>
     <item>
       <title>164-District Administrative Database &amp; Capital Distance Explorer Released</title>
-      <link>https://ppripakistan.github.io/data/district-explorer.html</link>
-      <guid isPermaLink="true">https://ppripakistan.github.io/data/district-explorer.html</guid>
+      <link>https://ppripakistan.github.io/data/quick-facts/#district-explorer</link>
+      <guid isPermaLink="true">https://ppripakistan.github.io/data/quick-facts/#district-explorer</guid>
       <pubDate>Fri, 16 Oct 2026 14:00:00 GMT</pubDate>
       <description>Comprehensive database of Pakistan's 164 districts with 2023 Census populations, land area, and travel distance to provincial secretariats and High Courts.</description>
       <category>Open Data</category>
     </item>
     <item>
       <title>Pakistan Fast Facts Matrix: 2026 CSS &amp; PMS Reference Guide</title>
-      <link>https://ppripakistan.github.io/data/css-fast-facts-pakistan.html</link>
-      <guid isPermaLink="true">https://ppripakistan.github.io/data/css-fast-facts-pakistan.html</guid>
+      <link>https://ppripakistan.github.io/data/quick-facts/</link>
+      <guid isPermaLink="true">https://ppripakistan.github.io/data/quick-facts/</guid>
       <pubDate>Fri, 16 Oct 2026 09:00:00 GMT</pubDate>
       <description>Official verified reference matrix of administrative hierarchy, constitutional articles, NFC formulas, and economic indicators for researchers and exam candidates.</description>
       <category>Reference Matrix</category>

@@ -1187,3 +1187,15 @@
   }
 }
 
+
+@media (max-width: 768px) {
+  .obs-section-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  .obs-section-title {
+    font-size: 1.25rem;
+    line-height: 1.35;
+  }
+}

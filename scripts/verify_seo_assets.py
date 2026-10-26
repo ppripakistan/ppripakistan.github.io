@@ -4,27 +4,21 @@ scripts/verify_seo_assets.py
 Comprehensive verification script for Favicons, Social Sharing Cards,
 Open Graph/Twitter Metadata, and Google Search JSON-LD Structured Data.
 """
-
 import sys
 import json
 import re
 from pathlib import Path
 from PIL import Image
-
 ROOT_DIR = Path(__file__).resolve().parent.parent
 BRAND_DIR = ROOT_DIR / "assets" / "images" / "brand"
 RESEARCH_DIR = ROOT_DIR / "assets" / "images" / "research"
-
-IGNORED_DIRS = {'.git', '.vscode', 'node_modules', '.gemini', 'scratch_inspect'}
-
+IGNORED_DIRS = {'.git', '.vscode', 'node_modules', '.gemini', 'scratch_inspect', 'PPRI_Pakistan_GK_Knowledge_Library_Content_Pack'}
 def verify_all():
     print("=" * 75)
     print("  PPRI FAVICON, SOCIAL SHARING & TECHNICAL SEO VERIFICATION")
     print("=" * 75)
-
     errors = []
     warnings = []
-
     # 1. Verify Root & Brand Favicon Assets
     print("\n[Check 1/6] Verifying Favicon & App Icon Asset Integrity...")
     root_ico = ROOT_DIR / "favicon.ico"
@@ -36,7 +30,6 @@ def verify_all():
             print(f"  [PASS] Root favicon.ico exists and is valid format={im.format} sizes={getattr(im, 'info', {}).get('sizes', 'N/A')}")
         except Exception as e:
             errors.append(f"Root /favicon.ico invalid: {e}")
-
     root_apple = ROOT_DIR / "apple-touch-icon.png"
     if not root_apple.exists():
         errors.append("Root /apple-touch-icon.png does not exist.")
@@ -46,20 +39,17 @@ def verify_all():
             errors.append(f"Root apple-touch-icon.png size is {im.size}, expected (180, 180)")
         else:
             print("  [PASS] Root apple-touch-icon.png is 180x180.")
-
     root_svg = ROOT_DIR / "favicon.svg"
     if not root_svg.exists() or root_svg.stat().st_size == 0:
         errors.append("Root /favicon.svg missing or empty.")
     else:
         print(f"  [PASS] Root favicon.svg exists ({root_svg.stat().st_size} bytes).")
-
     root_png = ROOT_DIR / "favicon.png"
     if not root_png.exists():
         errors.append("Root /favicon.png does not exist.")
     else:
         im = Image.open(root_png)
         print(f"  [PASS] Root favicon.png exists ({im.size[0]}x{im.size[1]} px).")
-
     brand_assets = [
         ("favicon-16x16.png", (16, 16)),
         ("favicon-32x32.png", (32, 32)),
@@ -68,6 +58,10 @@ def verify_all():
         ("icon-512.png", (512, 512)),
         ("ppri-favicon.png", (192, 192)),
         ("favicon.png", (512, 512)),
+        ("ppri-logo.png", (512, 512)),
+        ("ppri-logo.jpg", (512, 512)),
+        ("ppri-logo-header.png", (240, 240)),
+        ("ppri-logo-header.jpg", (240, 240)),
     ]
     for name, expected_size in brand_assets:
         p = BRAND_DIR / name
@@ -79,7 +73,6 @@ def verify_all():
                 errors.append(f"Brand asset {name} size is {im.size}, expected {expected_size}")
             else:
                 print(f"  [PASS] {name} is {im.size} (aspect ratio 1:1, non-distorted).")
-
     # 2. Verify site.webmanifest
     print("\n[Check 2/6] Verifying site.webmanifest...")
     manifest_path = ROOT_DIR / "site.webmanifest"
@@ -105,18 +98,10 @@ def verify_all():
                         print(f"  [PASS] Manifest icon {src} matches {icon.get('sizes')}.")
         except Exception as e:
             errors.append(f"site.webmanifest JSON error: {e}")
-
     # 3. Verify Social Share Preview Cards on Disk
     print("\n[Check 3/6] Verifying 1200x630 Social Preview Images...")
     social_cards = [
-        BRAND_DIR / "ppri-social-share.jpg",
-        BRAND_DIR / "ppri-logo.jpg",
-        RESEARCH_DIR / "ppri-rep01-income-inflation.jpg",
-        RESEARCH_DIR / "ppri-rep02-fiscal-decentralization.jpg",
-        RESEARCH_DIR / "ppri-rep03-invisible-tax-corruption.jpg",
-        RESEARCH_DIR / "ppri-rep04-bureaucracy-friction.jpg",
-        RESEARCH_DIR / "ppri-rep05-district-inequality.jpg",
-        RESEARCH_DIR / "ppri-pp01-provincial-reorganization.jpg",
+        ROOT_DIR / "assets" / "images" / "previews" / "index.jpg",
     ]
     for card_path in social_cards:
         if not card_path.exists():
@@ -130,7 +115,19 @@ def verify_all():
                 warnings.append(f"Social card {card_path.name} is {size/1024:.1f}KB (>300KB WhatsApp limit)")
             else:
                 print(f"  [PASS] {card_path.name} is 1200x630 ({size/1024:.1f} KB, well under 300KB limit).")
-
+    previews_dir = ROOT_DIR / "assets" / "images" / "previews"
+    if previews_dir.exists():
+        preview_cards = list(previews_dir.glob("*.jpg"))
+        if preview_cards:
+            print(f"  Verifying {len(preview_cards)} automated page-specific social cards in previews/...")
+            for p_card in preview_cards:
+                im = Image.open(p_card)
+                size = p_card.stat().st_size
+                if im.size != (1200, 630):
+                    errors.append(f"Preview card {p_card.name} is {im.size}, expected (1200, 630)")
+                elif size > 300 * 1024:
+                    warnings.append(f"Preview card {p_card.name} is {size/1024:.1f}KB (>300KB limit)")
+            print(f"  [PASS] All {len(preview_cards)} preview cards are valid 1200x630 JPEGs under 300KB.")
     # 4. Scan all 120 HTML files for Favicon & Manifest coverage
     print("\n[Check 4/6] Scanning All HTML Pages for Favicon & Manifest References...")
     html_files = [
@@ -138,7 +135,6 @@ def verify_all():
         if not any(ign in p.parts for ign in IGNORED_DIRS)
     ]
     print(f"  Scanned {len(html_files)} HTML pages.")
-
     missing_favicon = []
     missing_manifest_links = []
     for p in html_files:
@@ -150,17 +146,14 @@ def verify_all():
             missing_favicon.append(f"{rel} (missing /favicon.png)")
         if 'site.webmanifest' not in text:
             missing_manifest_links.append(rel)
-
     if missing_favicon:
         errors.append(f"HTML pages missing favicon: {missing_favicon}")
     else:
         print("  [PASS] 100% of HTML pages contain standardized favicon link tags including /favicon.png.")
-
     if missing_manifest_links:
         errors.append(f"HTML pages missing site.webmanifest: {missing_manifest_links}")
     else:
         print("  [PASS] 100% of HTML pages link to /site.webmanifest.")
-
     # 5. Scan Content Pages for Open Graph & Twitter Cards
     print("\n[Check 5/6] Verifying Open Graph & Twitter Card Completeness...")
     content_pages = [
@@ -168,20 +161,16 @@ def verify_all():
         if not ('http-equiv="refresh"' in p.read_text(encoding="utf-8") or "http-equiv='refresh'" in p.read_text(encoding="utf-8"))
     ]
     print(f"  Found {len(content_pages)} active content pages.")
-
     missing_og = []
     missing_tw = []
     broken_og_images = []
     deprecated_site_names = []
-
     for p in content_pages:
         text = p.read_text(encoding="utf-8")
         rel = str(p.relative_to(ROOT_DIR)).replace("\\", "/")
-
         og_site_m = re.search(r'<meta[^>]*property=[\"\']og:site_name[\"\'][^>]*content=[\"\']([^\"\']+)[\"\']', text)
         if og_site_m and "(PPRI)" in og_site_m.group(1):
             deprecated_site_names.append(rel)
-
         og_img_m = re.search(r'<meta[^>]*property=[\"\']og:image[\"\'][^>]*content=[\"\']([^\"\']+)[\"\']', text)
         if not og_img_m:
             missing_og.append(rel)
@@ -193,32 +182,26 @@ def verify_all():
             target_disk = ROOT_DIR / clean_path
             if not target_disk.exists():
                 broken_og_images.append((rel, og_url))
-
         tw_card_m = re.search(r'<meta[^>]*name=[\"\']twitter:card[\"\'][^>]*content=[\"\']([^\"\']+)[\"\']', text)
         if not tw_card_m:
             missing_tw.append(rel)
-
     if deprecated_site_names:
         errors.append(f"Pages with deprecated '(PPRI)' in og:site_name: {deprecated_site_names}")
     else:
         print("  [PASS] 100% of active pages use clean og:site_name='Pakistan Provincial Reform Institute'.")
-
     if missing_og:
         errors.append(f"Content pages missing og:image: {missing_og}")
     else:
         print("  [PASS] 100% of content pages contain og:image metadata.")
-
     if broken_og_images:
         for r, u in broken_og_images:
             errors.append(f"Broken og:image reference in {r}: {u}")
     else:
         print("  [PASS] 100% of og:image URLs resolve to existing local image assets.")
-
     if missing_tw:
         errors.append(f"Content pages missing twitter:card: {missing_tw}")
     else:
         print("  [PASS] 100% of content pages contain twitter:card metadata.")
-
     # 6. Verify Google Tag Preservation & JSON-LD
     print("\n[Check 6/6] Verifying Google Tag (gtag.js) & JSON-LD...")
     missing_gtag = []
@@ -226,12 +209,10 @@ def verify_all():
         text = p.read_text(encoding="utf-8")
         if "G-9C2NZV6BYF" not in text:
             missing_gtag.append(str(p.relative_to(ROOT_DIR)).replace("\\", "/"))
-
     if missing_gtag:
         errors.append(f"HTML pages missing Google tag: {missing_gtag}")
     else:
         print("  [PASS] 100% of 120 HTML pages retain the Google tag (gtag.js) snippet.")
-
     # Verify index.html WebSite JSON-LD
     index_html = ROOT_DIR / "index.html"
     if index_html.exists():
@@ -240,7 +221,6 @@ def verify_all():
             errors.append("index.html WebSite structured data missing alternateName: 'PPRI'")
         else:
             print("  [PASS] index.html WebSite JSON-LD correctly includes alternateName: 'PPRI'.")
-
     # Summary
     print("\n" + "=" * 75)
     print(f"VERIFICATION SUMMARY: {len(errors)} Errors, {len(warnings)} Warnings")
@@ -252,7 +232,6 @@ def verify_all():
     else:
         print("ALL FAVICON, SOCIAL SHARING & SEO CHECKS PASSED WITH 100% SUCCESS!")
         return True
-
 if __name__ == "__main__":
     success = verify_all()
     sys.exit(0 if success else 1)

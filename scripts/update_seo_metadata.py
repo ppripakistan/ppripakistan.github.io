@@ -13,12 +13,12 @@ ROOT_DIR = Path(__file__).resolve().parent.parent
 
 IGNORED_DIRS = {'.git', '.vscode', 'node_modules', '.gemini', 'scratch_inspect'}
 
-FAVICON_BLOCK = """    <link rel="icon" type="image/png" href="/favicon.png" />
-    <link rel="icon" href="/favicon.ico" sizes="48x48" />
-    <link rel="icon" href="/assets/images/brand/favicon.svg" type="image/svg+xml" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/brand/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/brand/favicon-16x16.png" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+FAVICON_BLOCK = """    <link rel="icon" type="image/png" href="/favicon.png?v=2" />
+    <link rel="icon" href="/favicon.ico?v=2" sizes="48x48" />
+    <link rel="icon" href="/assets/images/brand/favicon.svg?v=2" type="image/svg+xml" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/brand/favicon-32x32.png?v=2" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/brand/favicon-16x16.png?v=2" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=2" />
     <link rel="manifest" href="/site.webmanifest" />
     <meta name="theme-color" content="#073c3a" />"""
 
@@ -49,7 +49,7 @@ SPECIFIC_OG_IMAGES = {
     )
 }
 
-DEFAULT_OG_IMAGE = "https://ppripakistan.github.io/assets/images/brand/ppri-social-share.jpg?v=2"
+DEFAULT_OG_IMAGE = "https://ppripakistan.github.io/assets/images/previews/index.jpg"
 DEFAULT_OG_ALT = "Pakistan Provincial Reform Institute (PPRI)"
 
 def process_html_file(file_path):
@@ -138,10 +138,10 @@ def process_html_file(file_path):
         # No canonical, insert before </head>
         content = re.sub(r'[ \t]*</head>', f"{social_block}\n{FAVICON_BLOCK}\n  </head>", content, count=1)
 
-    # Also update any JSON-LD references to ppri-social-share.jpg or ppri-logo.jpg if width/height are specified
+    # Also update any JSON-LD references to ppri-logo.jpg if width/height are specified
     content = content.replace(
-        '"url": "https://ppripakistan.github.io/assets/images/brand/ppri-social-share.jpg"',
-        '"url": "https://ppripakistan.github.io/assets/images/brand/ppri-social-share.jpg?v=2"'
+        '"url": "https://ppripakistan.github.io/assets/images/previews/index.jpg"',
+        '"url": "https://ppripakistan.github.io/assets/images/previews/index.jpg"'
     )
 
     # For index.html, ensure WebSite JSON-LD contains alternateName

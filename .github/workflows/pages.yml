@@ -18,6 +18,22 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: |
+          pip install Pillow
+
+      - name: Generate Social Preview Images & Synchronize Metadata
+        run: |
+          python scripts/generate_social_previews.py
+          python scripts/sync_preview_metadata.py
+          python scripts/verify_seo_assets.py
+
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
