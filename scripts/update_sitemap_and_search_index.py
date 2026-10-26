@@ -27,7 +27,7 @@ CANONICAL_OBSERVATORY_HUBS = [
     ("https://ppripakistan.github.io/data/health/", "0.9", "weekly"),
     ("https://ppripakistan.github.io/data/digital-access/", "0.9", "weekly"),
     ("https://ppripakistan.github.io/data/compare/", "0.9", "weekly"),
-    ("https://ppripakistan.github.io/data/quick-facts/", "0.9", "weekly"),
+    ("https://ppripakistan.github.io/knowledge-library/", "0.95", "weekly"),
     ("https://ppripakistan.github.io/data/downloads/", "0.8", "monthly"),
     ("https://ppripakistan.github.io/data/methodology/", "0.8", "monthly"),
 ]
@@ -55,7 +55,7 @@ def clean_and_update_sitemap():
         "updates/index.html", "data/methodology.html", "data/economy.html", "data/population.html",
         "data/fiscal.html", "data/demographics.html", "data/governance.html", "data/data-notes.html",
         "data/index.html", "data/maps.html", "data/datasets.html", "data/provincial-comparison.html",
-         "404.html", "search.html"
+         "404.html", "search.html", "data/quick-facts/index.html"
     }
 
     for url_el in root.findall('sm:url', ns):
@@ -233,10 +233,10 @@ def clean_and_update_search_index():
             "tags": ["compare", "provinces comparator", "punjab vs sindh", "balochistan vs punjab", "kp vs sindh", "subnational comparison", "provincial comparison", "territorial scale", "provincial density"]
         },
         {
-            "title": "CSS Aspirants & Researchers Fast-Fact Matrix",
-            "type": "Data Observatory: Fast Facts",
+            "title": "PPRI Pakistan Knowledge Library",
+            "type": "Knowledge Library & Question Bank",
             "description": "Verified official statistics for Pakistan competitive exams (CSS, PMS), academic research, and policy journalism with one-click copyable APA citations.",
-            "url": "/data/quick-facts/",
+            "url": "/knowledge-library/",
             "tags": ["css", "pms", "css pakistan affairs", "fast facts", "exam facts", "pakistan facts", "css current affairs", "cheat sheet", "citations", "official numbers"]
         },
         {

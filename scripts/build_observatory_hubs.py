@@ -57,7 +57,7 @@ def get_common_footer():
             <li><a href="/data/health/">Public Health</a></li>
             <li><a href="/data/digital-access/">Digital Access</a></li>
             <li><a href="/data/compare/">Provinces Comparator</a></li>
-            <li><a href="/data/quick-facts/">Fast Facts Matrix</a></li>
+            <li><a href="/knowledge-library/">Knowledge Library</a></li>
             <li><a href="/data/downloads/">Open Data Downloads</a></li>
           </ul>
         </div>
@@ -98,7 +98,7 @@ def get_observatory_nav_rail(active_slug):
         ("health", "/data/health/", "🏥 Health"),
         ("digital-access", "/data/digital-access/", "🌐 Digital Access"),
         ("compare", "/data/compare/", "📊 Compare"),
-        ("quick-facts", "/data/quick-facts/", "★ Fast Facts")
+        ("knowledge-library", "/knowledge-library/", "★ Knowledge Library")
     ]
     pills = []
     for slug, url, label in rail_items:
