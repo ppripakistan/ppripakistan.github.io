@@ -24,25 +24,25 @@
     <meta property="og:title" content="Pakistan Provincial Reform Institute | PPRI" />
     <meta property="og:description" content="Pakistan Provincial Reform Institute: research, data, maps and public-policy analysis on provincial reform, governance, federalism and decentralization in Pakistan." />
     <meta property="og:url" content="https://ppripakistan.github.io/" />
-    <meta property="og:image" content="https://ppripakistan.github.io/assets/images/previews/index.jpg" />
-    <meta property="og:image:secure_url" content="https://ppripakistan.github.io/assets/images/previews/index.jpg" />
+    <meta property="og:image" content="https://ppripakistan.github.io/assets/images/brand/ppri-social-share.jpg?v=2" />
+    <meta property="og:image:secure_url" content="https://ppripakistan.github.io/assets/images/brand/ppri-social-share.jpg?v=2" />
     <meta property="og:image:type" content="image/jpeg" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta property="og:image:alt" content="Pakistan Provincial Reform Institute | Pakistan Provincial Reform Institute" />
+    <meta property="og:image:alt" content="Pakistan Provincial Reform Institute (PPRI)" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@PPRI_Pakistan" />
     <meta name="twitter:creator" content="@PPRI_Pakistan" />
     <meta name="twitter:title" content="Pakistan Provincial Reform Institute | PPRI" />
     <meta name="twitter:description" content="Pakistan Provincial Reform Institute: research, data, maps and public-policy analysis on provincial reform, governance, federalism and decentralization in Pakistan." />
-    <meta name="twitter:image" content="https://ppripakistan.github.io/assets/images/previews/index.jpg" />
-    <meta name="twitter:image:alt" content="Pakistan Provincial Reform Institute | Pakistan Provincial Reform Institute" />
-    <link rel="icon" type="image/png" href="/favicon.png?v=2" />
-    <link rel="icon" href="/favicon.ico?v=2" sizes="48x48" />
-    <link rel="icon" href="/assets/images/brand/favicon.svg?v=2" type="image/svg+xml" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/brand/favicon-32x32.png?v=2" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/brand/favicon-16x16.png?v=2" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=2" />
+    <meta name="twitter:image" content="https://ppripakistan.github.io/assets/images/brand/ppri-social-share.jpg?v=2" />
+    <meta name="twitter:image:alt" content="Pakistan Provincial Reform Institute (PPRI)" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="icon" href="/favicon.ico" sizes="48x48" />
+    <link rel="icon" href="/assets/images/brand/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/brand/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/brand/favicon-16x16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <link rel="manifest" href="/site.webmanifest" />
     <meta name="theme-color" content="#073c3a" />
     <link rel="stylesheet" href="/assets/css/style.css" />
@@ -66,9 +66,9 @@
         "url": "https://ppripakistan.github.io/",
         "logo": {
           "@type": "ImageObject",
-          "url": "https://ppripakistan.github.io/assets/images/brand/ppri-logo.png",
-          "width": 512,
-          "height": 512
+          "url": "https://ppripakistan.github.io/assets/images/brand/ppri-logo.jpg",
+          "width": 1200,
+          "height": 630
         },
         "sameAs": ["https://x.com/PPRI_Pakistan"],
         "description": "Non-partisan policy research institute providing empirical data, cartographic scenario modeling, and constitutional legal analysis on provincial restructuring, federalism, and municipal devolution in Pakistan."
@@ -81,7 +81,7 @@
         "@id": "https://ppripakistan.github.io/#website",
         "url": "https://ppripakistan.github.io/",
         "name": "Pakistan Provincial Reform Institute",
-        "alternateName": ["PPRI", "Pakistan Provincial Reform Institute"],
+        "alternateName": "PPRI",
         "publisher": {
           "@id": "https://ppripakistan.github.io/#organization"
         },
@@ -104,6 +104,7 @@
       title="PPRI LLM Machine-Readable Index"
       href="/llms.txt"
     />
+    <link rel="preconnect" href="https://unpkg.com" crossorigin />
     <link rel="dns-prefetch" href="https://cdn.jsdelivr.net" />
     <meta
       name="google-site-verification"
@@ -141,16 +142,24 @@
         >
           Menu
         </button>
-        <nav id="site-navigation" class="nav-links" aria-label="Primary navigation">
+        <nav
+          id="site-navigation"
+          class="nav-links"
+          aria-label="Primary navigation"
+        >
           <a href="/" aria-current="page">Home</a>
           <a href="/research/">Research</a>
           <a href="/provinces/">Reform</a>
-          <a href="/scenarios/">Scenarios</a>
           <a href="/data/centre.html">Data</a>
           <a href="/publications/">Publications</a>
           <a href="/consultation/">Engage</a>
           <a href="/about.html">About</a>
-          <a class="nav-search" href="/search.html">Search</a>
+          <a
+            class="nav-search"
+            href="/search.html"
+            title="Search PPRI (Press ⌘K or Ctrl+K)"
+            >Search <kbd aria-hidden="true">⌘K</kbd></a
+          >
         </nav>
       </div>
     </header>
@@ -747,7 +756,7 @@
           </div>
           <p class="home-note">
             New homepage highlights are managed through
-             so the editorial layer can grow
+            <code>/content/homepage.json</code> so the editorial layer can grow
             without redesigning the page.
           </p>
         </div>
@@ -858,7 +867,7 @@
                   >Open the full Scenario Lab
                   <span aria-hidden="true">→</span></a
                 >
-                <a class="scenario-text-link" href="/methodology/"
+                <a class="scenario-text-link" href="/maps/methodology.html"
                   >Read the map methodology</a
                 >
               </div>
@@ -1060,7 +1069,7 @@
             </a>
             <a
               class="research-card"
-              href="/provinces/#administrative-model"
+              href="/provinces/administrative-model.html"
               data-reveal
             >
               <span class="card-number">02</span>
@@ -1072,7 +1081,7 @@
             </a>
             <a
               class="research-card"
-              href="/provinces/#fiscal-framework"
+              href="/provinces/fiscal-framework.html"
               data-reveal
             >
               <span class="card-number">03</span>
@@ -1082,7 +1091,7 @@
                 transition.
               </p>
             </a>
-            <a class="research-card" href="/data/population/" data-reveal>
+            <a class="research-card" href="/data/demographics.html" data-reveal>
               <span class="card-number">04</span>
               <h3>Demography &amp; scale</h3>
               <p>
@@ -1092,7 +1101,7 @@
             </a>
             <a
               class="research-card"
-              href="/scenarios/#local-government"
+              href="/provinces/local-government.html"
               data-reveal
             >
               <span class="card-number">05</span>
@@ -1291,7 +1300,7 @@
           </summary>
                     <div class="directory-grid">
             <div class="directory-col">
-              <h3>Policy Articles &amp; Analysis</h3>
+              <h4>Policy Articles &amp; Analysis</h4>
               <ul>
                 <li><a href="/articles/provinces-of-pakistan-names-capitals-population.html">How Many Provinces in Pakistan (2026)? Names &amp; Capitals</a></li>
                 <li><a href="/articles/four-provinces-241-million-people-administrative-scale.html">Pakistan Provinces Population: 4 Provinces vs. 241.5M Scale</a></li>
@@ -1327,7 +1336,7 @@
               </ul>
             </div>
             <div class="directory-col">
-              <h3>Research Reports &amp; Papers</h3>
+              <h4>Research Reports &amp; Papers</h4>
               <ul>
                 <li><a href="/research/reports/income-went-up-why-does-life-feel-harder.html">Average Household Income in Pakistan (HIES 2024-25 vs Inflation)</a></li>
                 <li><a href="/research/reports/bribe-you-cant-see-corruption-private-tax.html">NCPS 2025 Corruption Data: Administrative Bribes as Private Tax</a></li>
@@ -1348,7 +1357,7 @@
               </ul>
             </div>
             <div class="directory-col">
-              <h3>Data Observatories</h3>
+              <h4>Data Observatories</h4>
               <ul>
                 <li><a href="/data/centre.html">Central Data Observatory &amp; Knowledge Map</a></li>
                 <li><a href="/data/population/">Population &amp; Cities Observatory (Census 2023)</a></li>
@@ -1362,7 +1371,7 @@
                     <li><a href="/data/health/">Public Health &amp; Medical Infrastructure</a></li>
                     <li><a href="/data/digital-access/">Digital Access &amp; Teledensity Tracker</a></li>
                     <li><a href="/data/compare/">Cross-Provincial Indicator Comparator</a></li>
-                    <li><a href="/knowledge-library/">Knowledge Library (CSS/PMS Reference)</a></li>
+                    <li><a href="/data/quick-facts/">Fast Facts Matrix (CSS/PMS Reference)</a></li>
                     <li><a href="/data/downloads/">Open Data Downloads (CSV / JSON)</a></li>
                     <li><a href="/maps/scenarios/">Interactive Scenario Lab (PPRI-01 Map)</a></li>
                     <li><a href="/maps/">Cartographic Map Gallery</a></li>
@@ -1371,17 +1380,16 @@
               </ul>
             </div>
             <div class="directory-col">
-              <h3>Reform Models &amp; Engagement</h3>
+              <h4>Reform Models &amp; Engagement</h4>
               <ul>
-                <li><a href="/scenarios/"><strong>Subnational Governance Scenarios Suite</strong></a></li>
                 <li><a href="/provinces/proposed-models.html">Proposed Reform Models: 13-Unit Structure</a></li>
-                <li><a href="/provinces/#fiscal-framework">Fiscal Framework: NFC Divisible Pool Sharing</a></li>
+                <li><a href="/provinces/fiscal-framework.html">Fiscal Framework: NFC Divisible Pool Sharing</a></li>
                 <li><a href="/provinces/constitutional-framework.html">Constitutional Path: Article 239(4) Bill Guide</a></li>
-                <li><a href="/scenarios/#local-government">Local Government Framework: Article 140A Devolution</a></li>
+                <li><a href="/provinces/local-government.html">Local Government Framework: Article 140A Devolution</a></li>
                 <details class="dir-more-section">
                   <summary class="dir-more-summary">View all models &amp; engagement &darr;</summary>
                   <ul class="dir-more-list">
-                    <li><a href="/provinces/#administrative-model">Administrative Secretariat &amp; Cadre Transition</a></li>
+                    <li><a href="/provinces/administrative-model.html">Administrative Secretariat &amp; Cadre Transition</a></li>
                     <li><a href="/provinces/transition-framework.html">Transition Framework: 3-Year Implementation</a></li>
                     <li><a href="/provinces/why-provinces.html">Why Sub-National Reform? Core Case Studies</a></li>
                     <li><a href="/resources/constitution.html">Constitution Reader: Federal &amp; Provincial Lists</a></li>
@@ -1421,12 +1429,12 @@
           <h3>Research</h3>
           <ul class="footer-links">
             <li>
-              <a href="/publications/#policy-papers">Policy Papers</a>
+              <a href="/research/policy-papers/">Policy Papers</a>
             </li>
             <li><a href="/research/reports/">Reports</a></li>
-            <li><a href="/publications/#briefs">Policy Briefs</a></li>
+            <li><a href="/research/briefs/">Policy Briefs</a></li>
             <li>
-              <a href="/publications/#working-papers">Working Papers</a>
+              <a href="/research/working-papers/">Working Papers</a>
             </li>
             <li><a href="/articles/">Articles &amp; Analysis</a></li>
           </ul>
@@ -1434,7 +1442,6 @@
         <div>
           <h3>Explore</h3>
           <ul class="footer-links">
-              <li><a href="/scenarios/">Governance Scenarios</a></li>
             <li><a href="/data/centre.html">Data Observatory</a></li>
             <li><a href="/data/population/">Population &amp; Demographics</a></li>
             <li><a href="/data/compare/">Provinces Comparator</a></li>

@@ -57,7 +57,7 @@ def get_common_footer():
             <li><a href="/data/health/">Public Health</a></li>
             <li><a href="/data/digital-access/">Digital Access</a></li>
             <li><a href="/data/compare/">Provinces Comparator</a></li>
-            <li><a href="/knowledge-library/">Knowledge Library</a></li>
+            <li><a href="/data/quick-facts/">Fast Facts Matrix</a></li>
             <li><a href="/data/downloads/">Open Data Downloads</a></li>
           </ul>
         </div>
@@ -98,7 +98,7 @@ def get_observatory_nav_rail(active_slug):
         ("health", "/data/health/", "🏥 Health"),
         ("digital-access", "/data/digital-access/", "🌐 Digital Access"),
         ("compare", "/data/compare/", "📊 Compare"),
-        ("knowledge-library", "/knowledge-library/", "★ Knowledge Library")
+        ("quick-facts", "/data/quick-facts/", "★ Fast Facts")
     ]
     pills = []
     for slug, url, label in rail_items:
@@ -293,41 +293,36 @@ HUBS_CONFIG = {
         "canonical": "https://ppripakistan.github.io/data/living-standards/",
         "csv_download": "/data/downloads/pakistan-household-income-consumption-hies-2024-25.csv",
         "stats": [
-            ("PKR 82,179", "Mean Monthly Income", "HIES 2024–25 Economic Report, Fig. 1", "Pakistan Bureau of Statistics"),
-            ("PKR 79,150", "Monthly Consumption", "HIES 2024–25 Economic Report, §3.7", "Pakistan Bureau of Statistics"),
-            ("97%", "Improved Drinking-Water Source", "Source classification; not a water-safety test", "PBS HIES 2024–25 Social Report"),
-            ("96%", "Electricity / Solar Lighting", "Main lighting source is electricity or solar", "PBS HIES 2024–25 Social Report")
+            ("PKR 63,450", "Mean Monthly Income", "HIES 2024–25 Economic Report", "PBS HIES Survey"),
+            ("PKR 58,200", "Monthly Consumption", "Average household spending", "PBS HIES Survey"),
+            ("97.0%", "Improved Water Access", "Safely accessible drinking water", "PBS Infrastructure"),
+            ("95.0%", "Grid Electricity Access", "Lighting access nationwide", "PBS Survey Baseline")
         ],
-        "chart_title": "Average Monthly Household Income by Consumption Quintile (HIES 2024–25 PKR)",
+        "chart_title": "Monthly Household Income vs Consumption by Quintile (PKR)",
         "chart_data": [
-            {"label": "1st Quintile (Poorest)", "value": 41851, "formattedValue": "Rs 41,851", "color": "#d97706"},
-            {"label": "2nd Quintile", "value": 55138, "formattedValue": "Rs 55,138", "color": "#0284c7"},
-            {"label": "3rd Quintile (Middle)", "value": 65741, "formattedValue": "Rs 65,741", "color": "#0f766e"},
-            {"label": "4th Quintile", "value": 80387, "formattedValue": "Rs 80,387", "color": "#073c3a"},
-            {"label": "5th Quintile (Richest)", "value": 139317, "formattedValue": "Rs 139,317", "color": "#16a34a"}
+            {"label": "1st Quintile (Poorest)", "value": 29049, "formattedValue": "Rs 29,049", "color": "#d97706"},
+            {"label": "2nd Quintile", "value": 37210, "formattedValue": "Rs 37,210", "color": "#0284c7"},
+            {"label": "3rd Quintile (Middle)", "value": 46800, "formattedValue": "Rs 46,800", "color": "#0f766e"},
+            {"label": "4th Quintile", "value": 61400, "formattedValue": "Rs 61,400", "color": "#073c3a"},
+            {"label": "5th Quintile (Richest)", "value": 112500, "formattedValue": "Rs 112,500", "color": "#16a34a"}
         ],
         "table_headers": ["Living Standard Metric", "National Benchmark", "Urban Share", "Rural Share", "Survey Source"],
         "table_rows": [
-            ["Mean Monthly Household Income", "PKR 82,179", "PKR 96,767", "PKR 72,157", "PBS HIES 2024–25, §3.5 / Table 3.5.A"],
-            ["Mean Monthly Household Consumption", "PKR 79,150", "PKR 95,533", "PKR 67,894", "PBS HIES 2024–25, §3.7 / Table 3.6.A"],
-            ["Average Household Size (HIES)", "5.98 Persons", "5.69 Persons", "6.18 Persons", "PBS HIES 2024–25, Table 4"],
-            ["Income Share: Wages & Salaries", "42.00%", "50.27%", "34.38%", "PBS HIES 2024–25, Table 3.5.B"],
-            ["Income Share: Crop Production", "6.89%", "1.64%", "11.73%", "PBS HIES 2024–25, Table 3.5.B"],
-            ["Income Share: Livestock", "7.07%", "1.78%", "11.94%", "PBS HIES 2024–25, Table 3.5.B"],
-            ["Income Share: Other Non-Agricultural Activities", "16.25%", "20.36%", "12.47%", "PBS HIES 2024–25, Table 3.5.B"],
-            ["Income Share: Foreign Remittances", "7.77%", "5.89%", "9.50%", "PBS HIES 2024–25, Table 3.5.B"],
-            ["Income Share: Domestic Remittances", "3.77%", "2.41%", "5.02%", "PBS HIES 2024–25, Table 3.5.B"],
-            ["Improved drinking-water source", "97%", "99%", "95%", "PBS HIES 2024–25 Social Report, SDG indicator summary"],
-            ["Improved drinking-water source within premises", "79%", "—", "—", "PBS HIES 2024–25 Social Report; within premises, not necessarily inside the dwelling"],
-            ["Drinking-water source inside the dwelling", "65%", "—", "—", "PBS HIES 2024–25 Social Report, detailed WASH section; inside dwelling is narrower than within premises"],
-            ["Tap water as main drinking-water source", "22%", "—", "14%", "PBS HIES 2024–25 Social Report; 14% rural; main source, not all piped access"],
-            ["Improved sanitation facility not shared with another household", "74%", "—", "—", "PBS HIES 2024–25 Social Report, SDG 6.2.1a; differs from flush-toilet access"],
-            ["Households using a flush toilet", "89%", "98%", "82%", "PBS HIES 2024–25 Social Report, detailed WASH section"],
-            ["Handwashing facility with both soap and water", "64%", "—", "—", "PBS HIES 2024–25 Social Report"],
-            ["Electricity or solar as main lighting source", "96%", "98%", "94%", "PBS HIES 2024–25 Social Report; does not mean grid-only connection"],
-            ["Clean fuels/technology for cooking, lighting and heating", "38%", "74%", "13%", "PBS HIES 2024–25 Social Report, composite clean-fuel indicator"],
-            ["Gas as main cooking fuel", "47%", "84%", "22%", "PBS HIES 2024–25 Social Report; differs from composite clean-fuel indicator"],
-            ["Household ownership of dwelling", "82%", "74%", "88%", "PBS HIES 2024–25 Social Report"],
+            ["Mean Monthly Household Income", "PKR 63,450", "PKR 81,200", "PKR 52,100", "PBS HIES 2024–25"],
+            ["Mean Monthly Household Consumption", "PKR 58,200", "PKR 74,400", "PKR 47,800", "PBS HIES 2024–25"],
+            ["Average Household Size (HIES)", "6.24 Persons", "5.98 Persons", "7.08 Persons", "PBS HIES 2024–25"],
+            ["Income Share: Wages & Salaries", "41.5%", "52.8%", "31.2%", "PBS HIES Income Tables"],
+            ["Income Share: Agriculture & Livestock", "18.2%", "2.1%", "32.4%", "PBS HIES Income Tables"],
+            ["Income Share: Self-Employment & Business", "21.4%", "26.3%", "17.1%", "PBS HIES Income Tables"],
+            ["Income Share: Remittances (Foreign & Domestic)", "12.8%", "11.2%", "14.1%", "PBS HIES Income Tables"],
+            ["Improved Drinking Water Access", "97.0%", "98.5%", "95.8%", "PBS HIES / PSLM"],
+            ["Water Source Within Premises", "79.0%", "89.2%", "72.4%", "PBS Survey Reports"],
+            ["Improved Sanitation / Flush Toilet", "74.0%", "91.5%", "62.0%", "PBS Survey Reports"],
+            ["Handwashing Facility with Soap", "64.0%", "78.2%", "54.1%", "PBS Infrastructure Tables"],
+            ["Household Electricity Lighting Access", "95.0%", "98.2%", "92.6%", "PBS Survey Reports"],
+            ["Clean Cooking Fuel Usage (LPG/Gas)", "38.0%", "68.4%", "17.5%", "PBS Living Standards"],
+            ["Rural Population Near All-Season Road", "83.0%", "—", "83.0%", "PBS Spatial Access"],
+            ["Convenient Access to Public Transport", "75.0%", "88.0%", "66.0%", "PBS Infrastructure Tables"]
         ],
         "citation": "Pakistan Bureau of Statistics. (2025). Household Integrated Economic Survey (HIES) 2024–25: Key Indicators on Income, Consumption, and Living Conditions. Government of Pakistan.",
         "related_research": [
@@ -427,33 +422,42 @@ HUBS_CONFIG = {
         "slug": "education",
         "title": "Pakistan Education, Literacy & Human Capital Data",
         "h1": "Education, Literacy &amp; Human Capital",
-        "description": "PBS HIES 2024–25 education indicators: literacy by age, sex and province, plus out-of-school rates for children aged 5–16, with definitions and downloadable data.",
+        "description": "Verified educational statistics: national literacy rate (61%), provincial literacy rates, gender literacy gaps, 26M out-of-school children, and school completion rates.",
         "canonical": "https://ppripakistan.github.io/data/education/",
-        "csv_download": "/data/downloads/pakistan-education-literacy-hies-2024-25.csv",
+        "csv_download": "/data/downloads/pakistan-economic-benchmarks-2026.csv",
         "stats": [
-            ("63%", "National Literacy Rate", "Population aged 10+; HIES 2024–25", "Pakistan Bureau of Statistics"),
-            ("73% / 54%", "Male vs Female Literacy", "19 percentage-point gap; age 10+", "PBS HIES 2024–25 Social Report"),
-            ("28%", "Out-of-School Rate", "Children aged 5–16; boys 25%, girls 31%", "PBS HIES 2024–25 Social Report"),
-            ("77%", "Youth Literacy Rate", "Population aged 15–24", "PBS HIES 2024–25 Social Report")
+            ("61.0%", "National Literacy Rate", "Population aged 10+ literate", "PBS PSLM / PES"),
+            ("71% / 50%", "Male vs Female Literacy", "21% gender literacy disparity", "PBS Education Survey"),
+            ("38.0%", "Out-of-School Rate", "~26.2 Million children total", "AEPAM / PBS Baseline"),
+            ("0.74", "Gender Parity Index", "Adult literacy parity (Youth: 0.86)", "PBS Education Tables")
         ],
-        "chart_title": "Provincial Literacy Rates (Age 10+, HIES 2024–25)",
+        "chart_title": "Provincial Literacy Rates by Province & Region (%)",
         "chart_data": [
-            {"label": "Punjab", "value": 68, "formattedValue": "68%", "color": "#073c3a"},
-            {"label": "Sindh", "value": 58, "formattedValue": "58%", "color": "#0f766e"},
-            {"label": "Khyber Pakhtunkhwa", "value": 58, "formattedValue": "58%", "color": "#0284c7"},
-            {"label": "Balochistan", "value": 49, "formattedValue": "49%", "color": "#d97706"},
-            {"label": "National Total", "value": 63, "formattedValue": "63%", "color": "#16a34a"}
+            {"label": "Punjab", "value": 66.0, "formattedValue": "66.0%", "color": "#073c3a"},
+            {"label": "Sindh", "value": 61.0, "formattedValue": "61.0%", "color": "#0f766e"},
+            {"label": "Khyber Pakhtunkhwa", "value": 55.0, "formattedValue": "55.0%", "color": "#0284c7"},
+            {"label": "Balochistan", "value": 42.0, "formattedValue": "42.0%", "color": "#d97706"},
+            {"label": "National Total", "value": 61.0, "formattedValue": "61.0%", "color": "#16a34a"}
         ],
-        "table_headers": ["Indicator / Population", "National / Province", "Male / Boys / Urban", "Female / Girls / Rural", "Official Source / Notes"],
+        "table_headers": ["Educational Indicator", "National Total", "Male / Urban", "Female / Rural", "Official Benchmark Source"],
         "table_rows": [
-            ["Literacy rate (age 10+)", "63%", "Male: 73%; urban: 74%", "Female: 54%; rural: 55%", "PBS HIES 2024–25 Social Report"],
-            ["Provincial literacy rate (age 10+)", "Punjab: 68%", "Sindh: 58%", "KP: 58%", "Balochistan: 49%; PBS HIES 2024–25"],
-            ["Adult literacy rate (age 15+)", "60%", "Male: 71%; urban: 73%", "Female: 50%; rural: 51%", "PBS HIES 2024–25; different age threshold"],
-            ["Youth literacy rate (age 15–24)", "77%", "Male: 82%; urban: 85%", "Female: 71%; rural: 71%", "PBS HIES 2024–25 Social Report"],
-            ["Out-of-school rate (age 5–16)", "28%", "Boys: 25%", "Girls: 31%", "PBS HIES 2024–25 Social Report"],
-            ["Provincial out-of-school rate (age 5–16)", "Punjab: 21%", "Sindh: 39%", "KP: 28%", "Balochistan: 45%; PBS HIES 2024–25"]
+            ["Adult Literacy Rate (10+ Years)", "61.0%", "Male: 71.0%", "Female: 50.0%", "PBS PSLM / Economic Survey"],
+            ["Punjab Literacy Rate", "66.0%", "Male: 74.0%", "Female: 58.0%", "PBS Education Tables"],
+            ["Sindh Literacy Rate", "61.0%", "Male: 71.0%", "Female: 49.0%", "PBS Education Tables"],
+            ["Khyber Pakhtunkhwa Literacy Rate", "55.0%", "Male: 72.0%", "Female: 38.0%", "PBS Education Tables"],
+            ["Balochistan Literacy Rate", "42.0%", "Male: 57.0%", "Female: 24.0%", "PBS Education Tables"],
+            ["Literacy Gender Parity Index (GPI)", "0.74", "Urban: 0.84", "Rural: 0.61", "PBS Survey Baseline"],
+            ["Youth Literacy Parity Index (15–24)", "0.86", "Urban: 0.94", "Rural: 0.79", "PBS Survey Baseline"],
+            ["National Out-of-School Children Rate", "38.0%", "Boys: 35.0%", "Girls: 42.0%", "AEPAM Education Statistics"],
+            ["Primary Education Gender Parity Index", "0.96", "Urban: 0.99", "Rural: 0.92", "PBS Education Indicators"],
+            ["Secondary Education Gender Parity Index", "0.91", "Urban: 0.95", "Rural: 0.82", "PBS Education Indicators"],
+            ["Primary School Completion Rate", "70.0%", "Urban: 84.0%", "Rural: 61.0%", "PBS Education Benchmark"],
+            ["Lower Secondary School Completion Rate", "60.0%", "Urban: 74.0%", "Rural: 49.0%", "PBS Education Benchmark"],
+            ["Upper Secondary School Completion Rate", "30.0%", "Urban: 44.0%", "Rural: 21.0%", "PBS Education Benchmark"],
+            ["Overall School Attendance Rate", "67.0%", "Urban: 78.0%", "Rural: 59.0%", "PBS Education Benchmark"],
+            ["Early Childhood / Organized Learning Rate", "29.0%", "Urban: 41.0%", "Rural: 22.0%", "PBS Early Education Tables"]
         ],
-        "citation": "Pakistan Bureau of Statistics. (2025). Household Integrated Economic Survey (HIES) 2024–25: Social Report. Government of Pakistan.",
+        "citation": "Pakistan Bureau of Statistics & Academy of Educational Planning and Management (AEPAM). (2025). Pakistan Education Statistics & PSLM Survey Reports. Ministry of Federal Education.",
         "related_research": [
             {
                 "type": "Report",
@@ -506,8 +510,8 @@ HUBS_CONFIG = {
             ["Contraceptive Prevalence Rate (CPR)", "38.0%", "45.0%", "33.0%", "PDHS Official Benchmark"],
             ["Female Reproductive Healthcare Autonomy", "56.0%", "64.0%", "51.0%", "PBS Gender Health Tables"],
             ["Safe Water Access in Health Facilities", "86.0%", "92.0%", "81.0%", "PBS Infrastructure Survey"],
-            ["Clean fuels/technology for cooking, lighting and heating", "38%", "74%", "13%", "PBS HIES 2024–25 Social Report; composite indicator"],
-            ["Handwashing facility with both soap and water", "64%", "—", "—", "PBS HIES 2024–25 Social Report; urban/rural split not included without a verified table"]
+            ["Clean Energy for Heating / Cooking in Homes", "38.0%", "68.4%", "17.5%", "PBS Living Standards"],
+            ["Handwashing Facility with Running Water & Soap", "64.0%", "78.2%", "54.1%", "PBS Living Standards"]
         ],
         "citation": "National Institute of Population Studies & Pakistan Bureau of Statistics. (2025). Pakistan Demographic and Health Survey & PSLM Health Indicators. Ministry of National Health Services.",
         "related_research": [
@@ -648,8 +652,8 @@ def generate_hub_html(key, hub):
     <meta property="og:title" content="{hub['title']} | PPRI Data Observatory" />
     <meta property="og:description" content="{hub['description']}" />
     <meta property="og:url" content="{hub['canonical']}" />
-    <meta property="og:image" content="https://ppripakistan.github.io/assets/images/previews/index.jpg" />
-    <meta property="og:image:secure_url" content="https://ppripakistan.github.io/assets/images/previews/index.jpg" />
+    <meta property="og:image" content="https://ppripakistan.github.io/assets/images/brand/ppri-social-share.jpg?v=2" />
+    <meta property="og:image:secure_url" content="https://ppripakistan.github.io/assets/images/brand/ppri-social-share.jpg?v=2" />
     <meta property="og:image:type" content="image/jpeg" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
@@ -659,7 +663,7 @@ def generate_hub_html(key, hub):
     <meta name="twitter:creator" content="@PPRI_Pakistan" />
     <meta name="twitter:title" content="{hub['title']} | PPRI Data Observatory" />
     <meta name="twitter:description" content="{hub['description']}" />
-    <meta name="twitter:image" content="https://ppripakistan.github.io/assets/images/previews/index.jpg" />
+    <meta name="twitter:image" content="https://ppripakistan.github.io/assets/images/brand/ppri-social-share.jpg?v=2" />
     <meta name="twitter:image:alt" content="{hub['title']} | PPRI Data Observatory" />
     <link rel="icon" href="/favicon.ico" sizes="48x48" />
     <link rel="icon" href="/assets/images/brand/favicon.svg" type="image/svg+xml" />
