@@ -562,7 +562,8 @@ img {
   color: #fff;
   padding: 55px 0 25px;
 }
-.footer-grid {
+.footer-grid,
+.footer-content {
   display: grid;
   grid-template-columns: 1.5fr 1fr 1fr 1fr;
   gap: 35px;
@@ -584,6 +585,10 @@ img {
 }
 .footer-links li {
   margin: 8px 0;
+}
+.footer-col {
+  display: flex;
+  flex-direction: column;
 }
 .footer-bottom {
   margin-top: 40px;
@@ -609,6 +614,29 @@ img {
 }
 .mt-4 {
   margin-top: 50px;
+}
+@media (max-width: 1180px) {
+  .nav-links {
+    gap: 15px;
+  }
+  .nav-links a,
+  .nav-trigger {
+    font-size: 0.84rem;
+  }
+}
+@media (max-width: 1040px) {
+  .nav-links {
+    gap: 10px;
+  }
+  .nav-links a,
+  .nav-trigger {
+    font-size: 0.81rem;
+    padding: 6px 0;
+  }
+  .nav-links .nav-search {
+    padding: 4px 10px;
+    font-size: 0.8rem;
+  }
 }
 @media (max-width: 900px) {
   .nav-links {
@@ -670,7 +698,8 @@ img {
   .stat:nth-child(2) {
     border-right: 0;
   }
-  .footer-grid {
+  .footer-grid,
+  .footer-content {
     grid-template-columns: 1fr 1fr;
   }
 }
@@ -696,7 +725,8 @@ img {
   .paper-header {
     padding: 62px 0;
   }
-  .footer-grid {
+  .footer-grid,
+  .footer-content {
     grid-template-columns: 1fr;
   }
   .footer-bottom {
@@ -1592,6 +1622,7 @@ img {
   grid-template-columns: repeat(4, 1fr);
   gap: 32px;
 }
+.site-directory .directory-col h3,
 .site-directory .directory-col h4 {
   color: #d4af37;
   font-size: 0.88rem;
