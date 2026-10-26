@@ -12,7 +12,7 @@ from PIL import Image
 ROOT_DIR = Path(__file__).resolve().parent.parent
 BRAND_DIR = ROOT_DIR / "assets" / "images" / "brand"
 RESEARCH_DIR = ROOT_DIR / "assets" / "images" / "research"
-IGNORED_DIRS = {'.git', '.vscode', 'node_modules', '.gemini', 'scratch_inspect'}
+IGNORED_DIRS = {'.git', '.vscode', 'node_modules', '.gemini', 'scratch_inspect', 'PPRI_Pakistan_GK_Knowledge_Library_Content_Pack'}
 def verify_all():
     print("=" * 75)
     print("  PPRI FAVICON, SOCIAL SHARING & TECHNICAL SEO VERIFICATION")

@@ -642,7 +642,7 @@ def generate_hub_html(key, hub):
     <title>{hub['title']} | PPRI Data Observatory</title>
     <meta name="description" content="{hub['description']}" />
     <link rel="canonical" href="{hub['canonical']}" />
-    <meta property="og:site_name" content="Pakistan Provincial Reform Institute (PPRI)" />
+    <meta property="og:site_name" content="Pakistan Provincial Reform Institute" />
     <meta property="og:locale" content="en_PK" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="{hub['title']} | PPRI Data Observatory" />
@@ -661,6 +661,7 @@ def generate_hub_html(key, hub):
     <meta name="twitter:description" content="{hub['description']}" />
     <meta name="twitter:image" content="https://ppripakistan.github.io/assets/images/previews/index.jpg" />
     <meta name="twitter:image:alt" content="{hub['title']} | PPRI Data Observatory" />
+    <link rel="icon" type="image/png" href="/favicon.png?v=2" />
     <link rel="icon" href="/favicon.ico" sizes="48x48" />
     <link rel="icon" href="/assets/images/brand/favicon.svg" type="image/svg+xml" />
     <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/brand/favicon-32x32.png" />
