@@ -793,6 +793,96 @@
     ]
   },
   {
+    "title": "Have Your Say: Pakistan Community Surveys",
+    "type": "Community Survey",
+    "description": "Participate in short 3–5 minute community surveys on provincial reform, local government, inflation, youth careers, and public services.",
+    "url": "/surveys/",
+    "tags": [
+      "surveys",
+      "consultation",
+      "public opinion",
+      "citizen feedback",
+      "governance"
+    ]
+  },
+  {
+    "title": "New Provinces & Local Representation Survey",
+    "type": "Community Survey",
+    "description": "Share your views on creating new provinces, regional representation and improving access to government.",
+    "url": "/surveys/new-provinces/",
+    "tags": [
+      "new provinces",
+      "boundaries",
+      "representation",
+      "survey"
+    ]
+  },
+  {
+    "title": "Stronger Local Government Survey",
+    "type": "Community Survey",
+    "description": "Tell us whether local governments need more power, funding and control over services in your area.",
+    "url": "/surveys/local-government/",
+    "tags": [
+      "local government",
+      "article 140a",
+      "municipal",
+      "elections",
+      "survey"
+    ]
+  },
+  {
+    "title": "Government Delays & Paperwork Survey",
+    "type": "Community Survey",
+    "description": "Tell us about delays, forms, waiting times and other problems when trying to use government services.",
+    "url": "/surveys/government-delays/",
+    "tags": [
+      "bureaucracy",
+      "paperwork",
+      "delays",
+      "public services",
+      "survey"
+    ]
+  },
+  {
+    "title": "Household Costs & Inflation Survey",
+    "type": "Community Survey",
+    "description": "Share how rising prices affect your household budget and ability to pay for basic needs.",
+    "url": "/surveys/household-costs-inflation/",
+    "tags": [
+      "inflation",
+      "economy",
+      "household budget",
+      "prices",
+      "survey"
+    ]
+  },
+  {
+    "title": "Youth Jobs & Career Opportunities Survey",
+    "type": "Community Survey",
+    "description": "Tell us about job opportunities, skills, pay and the challenges young people face when planning their future in Pakistan.",
+    "url": "/surveys/youth-jobs/",
+    "tags": [
+      "youth jobs",
+      "employment",
+      "careers",
+      "training",
+      "survey"
+    ]
+  },
+  {
+    "title": "Jobs Abroad & Moving for Work Survey",
+    "type": "Community Survey",
+    "description": "Share why people consider working abroad, what makes it difficult and what could help them find good work.",
+    "url": "/surveys/jobs-abroad/",
+    "tags": [
+      "jobs abroad",
+      "migration",
+      "overseas employment",
+      "visas",
+      "survey"
+    ]
+  },
+  {
     "title": "Data Observatory & Interactive Knowledge Map",
     "type": "Data Observatory",
     "description": "Central empirical observatory: Interactive Knowledge Map of Pakistan's public data, Census 2023 baseline, NFC Reform Simulator, and district explorer.",
