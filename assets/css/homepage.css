@@ -1095,3 +1095,29 @@
   .pf,.prov-name,.cap-node { opacity:1; }
 }
 
+
+/* Research Card Icon Container */
+.research-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+.research-card-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 9px;
+  background: #f0f7f4;
+  color: #1b5e39;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #d5e8de;
+  transition: all 0.2s ease;
+}
+.research-card:hover .research-card-icon {
+  background: #073c3a;
+  color: #a8e06a;
+  border-color: #073c3a;
+  transform: scale(1.05);
+}

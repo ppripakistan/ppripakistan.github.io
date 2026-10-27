@@ -236,6 +236,20 @@ function buildEnhancedNavigation(nav) {
   });
 
   if (search) {
+    if (!search.querySelector("svg")) {
+      const searchSvg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+      searchSvg.setAttribute("width", "13");
+      searchSvg.setAttribute("height", "13");
+      searchSvg.setAttribute("viewBox", "0 0 24 24");
+      searchSvg.setAttribute("fill", "none");
+      searchSvg.setAttribute("stroke", "currentColor");
+      searchSvg.setAttribute("stroke-width", "2.5");
+      searchSvg.setAttribute("stroke-linecap", "round");
+      searchSvg.setAttribute("stroke-linejoin", "round");
+      searchSvg.setAttribute("aria-hidden", "true");
+      searchSvg.innerHTML = '<circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line>';
+      search.prepend(searchSvg);
+    }
     search.addEventListener("click", () => {
       nav.classList.remove("is-open");
       const mb = document.querySelector(".menu-toggle");
@@ -275,6 +289,9 @@ document.addEventListener("DOMContentLoaded", () => {
   const nav = document.querySelector(".nav-links");
 
   if (menuButton && nav) {
+    if (!menuButton.querySelector("svg")) {
+      menuButton.innerHTML = '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg> <span>Menu</span>';
+    }
     menuButton.addEventListener("click", () => {
       const isOpen = nav.classList.toggle("is-open");
       menuButton.setAttribute("aria-expanded", String(isOpen));
