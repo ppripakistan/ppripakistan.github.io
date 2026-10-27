@@ -9,13 +9,14 @@ import os
 import json
 import xml.etree.ElementTree as ET
 from pathlib import Path
+from datetime import datetime
 
 ROOT_DIR = Path(__file__).resolve().parent.parent
 DATA_DIR = ROOT_DIR / "data"
 SITEMAP_PATH = ROOT_DIR / "sitemap.xml"
 SEARCH_INDEX_PATH = ROOT_DIR / "search-index.json"
 
-TODAY_STR = "2026-10-16"
+TODAY_STR = datetime.now().strftime("%Y-%m-%d")
 
 CANONICAL_OBSERVATORY_HUBS = [
     ("https://ppripakistan.github.io/data/centre.html", "1.0", "weekly"),
@@ -92,7 +93,8 @@ def clean_and_update_sitemap():
             freq_el = url_el.find('sm:changefreq', ns)
             prio_el = url_el.find('sm:priority', ns)
 
-            lastmod = lastmod_el.text if lastmod_el is not None else TODAY_STR
+            hub_locs = {h[0] for h in CANONICAL_OBSERVATORY_HUBS}
+            lastmod = TODAY_STR if loc in hub_locs else (lastmod_el.text if lastmod_el is not None else TODAY_STR)
             freq = freq_el.text if freq_el is not None else "monthly"
             prio = prio_el.text if prio_el is not None else "0.7"
 
