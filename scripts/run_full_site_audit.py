@@ -10,8 +10,8 @@ Audits:
 4. Internal Link Graph & Anchor Fragment (#hash) Integrity
 5. Asset Availability (CSS, JS, Fonts, Images)
 6. Security: 100% rel="noopener" on target="_blank" links
-7. Accessibility: lang, viewport, alt text, form controls
-8. Sitemap & Search Index Parity (zero redirects, zero orphaned URLs)
+7. Accessibility: lang (en/ur), dir (rtl for ur), viewport, alt text, form controls
+8. Sitemap & Search Index Parity (including search-index-ur.json)
 """
 
 import os
@@ -27,6 +27,7 @@ ROOT_DIR = Path(__file__).resolve().parent.parent
 MASTER_DIR = ROOT_DIR / "data" / "master"
 SITEMAP_PATH = ROOT_DIR / "sitemap.xml"
 SEARCH_INDEX_PATH = ROOT_DIR / "search-index.json"
+SEARCH_INDEX_UR_PATH = ROOT_DIR / "search-index-ur.json"
 
 class ComprehensivePageParser(HTMLParser):
     def __init__(self, file_path):
@@ -40,6 +41,7 @@ class ComprehensivePageParser(HTMLParser):
         self.canonical = None
         self.is_redirect = False
         self.html_lang = None
+        self.html_dir = None
         self.has_viewport = False
         
         self.json_ld = []
@@ -59,6 +61,7 @@ class ComprehensivePageParser(HTMLParser):
         self.scripts = [] # dict(src, type, line)
         self.stylesheets = [] # href
         self.inputs = [] # dict(tag, type, id, name, aria_label, line)
+        self.hreflangs = {} # lang -> href
 
     def handle_starttag(self, tag, attrs):
         ad = dict(attrs)
@@ -69,6 +72,7 @@ class ComprehensivePageParser(HTMLParser):
             
         if tag == 'html':
             self.html_lang = ad.get('lang')
+            self.html_dir = ad.get('dir')
             
         elif tag == 'title':
             self.in_title = True
@@ -90,6 +94,8 @@ class ComprehensivePageParser(HTMLParser):
                 self.canonical = href
             elif 'stylesheet' in rel:
                 self.stylesheets.append(href)
+            elif 'alternate' in rel and 'hreflang' in ad:
+                self.hreflangs[ad['hreflang']] = href
                 
         elif tag in ('h1', 'h2', 'h3', 'h4', 'h5', 'h6'):
             self.current_h_tag = tag
@@ -121,7 +127,7 @@ class ComprehensivePageParser(HTMLParser):
                 self.in_json_ld = True
                 self.json_ld_buffer = []
             elif src:
-                self.scripts.append({'src': src, 'line': line})
+                self.scripts.append({'src': src, 'type': script_type, 'line': line})
                 
         elif tag in ('input', 'select', 'textarea'):
             self.inputs.append({
@@ -130,150 +136,182 @@ class ComprehensivePageParser(HTMLParser):
                 'id': ad.get('id', ''),
                 'name': ad.get('name', ''),
                 'aria_label': ad.get('aria-label', ''),
-                'aria_labelledby': ad.get('aria-labelledby', ''),
                 'line': line
             })
 
     def handle_endtag(self, tag):
         if tag == 'title':
             self.in_title = False
-        elif tag in ('h1', 'h2', 'h3', 'h4', 'h5', 'h6') and self.current_h_tag == tag:
-            text = ' '.join(''.join(self.current_h_text).split())
-            self.headings.append((tag, text))
+            
+        elif tag == self.current_h_tag:
+            self.headings.append((self.current_h_tag, "".join(self.current_h_text).strip()))
             self.current_h_tag = None
-        elif tag == 'a' and self.current_link:
-            text = ' '.join(''.join(self.current_link_text).split())
-            self.current_link['text'] = text
+            self.current_h_text = []
+            
+        elif tag == 'a' and self.current_link is not None:
+            self.current_link['text'] = "".join(self.current_link_text).strip()
             self.links.append(self.current_link)
             self.current_link = None
+            self.current_link_text = []
+            
         elif tag == 'script' and self.in_json_ld:
-            self.in_json_ld = False
-            raw = ''.join(self.json_ld_buffer).strip()
+            raw = "".join(self.json_ld_buffer).strip()
             if raw:
                 self.json_ld.append(raw)
+            self.in_json_ld = False
+            self.json_ld_buffer = []
 
     def handle_data(self, data):
-        if self.in_title and self.title is None:
-            self.title = data.strip()
-        elif self.in_json_ld:
-            self.json_ld_buffer.append(data)
+        if self.in_title:
+            self.title = (self.title or "") + data
         elif self.current_h_tag:
             self.current_h_text.append(data)
         elif self.current_link:
             self.current_link_text.append(data)
+        elif self.in_json_ld:
+            self.json_ld_buffer.append(data)
 
-def resolve_local(current_path, url_str):
-    parsed = urlparse(url_str)
-    if parsed.scheme in ('http', 'https', 'mailto', 'tel', 'javascript') or url_str.startswith('data:'):
-        return None, True, parsed.fragment
-    path_part = unquote(parsed.path)
-    if not path_part:
-        return current_path, False, parsed.fragment
-    if path_part.startswith('/'):
-        clean = path_part.lstrip('/')
-        resolved = ROOT_DIR / clean
-    else:
-        resolved = (current_path.parent / path_part).resolve()
-    if path_part.endswith('/') or (resolved.is_dir() and not resolved.is_file()):
-        candidate = resolved / 'index.html'
-        if candidate.exists():
-            resolved = candidate
-    return resolved, False, parsed.fragment
 
 def run_suite():
     print("=" * 75)
     print("  PAKISTAN PROVINCIAL REFORM INSTITUTE (PPRI)")
     print("  COMPREHENSIVE END-TO-END AUDIT & VERIFICATION SUITE")
     print("=" * 75)
-
+    
     errors = []
     warnings = []
-
-    # 1. Master Dataset Integrity
+    
+    # 1. Audit Data Master Parity
     print("\n[Audit 1/8] Verifying Master Data Store Integrity & CSV/JSON Parity...")
-    try:
-        with open(MASTER_DIR / "observations.csv", encoding="utf-8-sig") as f:
-            obs_csv = list(csv.DictReader(f))
-        with open(MASTER_DIR / "observations.json", encoding="utf-8") as f:
-            obs_json = json.load(f)
-        if len(obs_csv) != len(obs_json):
-            errors.append(f"Observation count mismatch: CSV {len(obs_csv)} vs JSON {len(obs_json)}")
+    obs_csv = MASTER_DIR / "observations.csv"
+    obs_json = MASTER_DIR / "observations.json"
+    
+    if not obs_csv.exists() or not obs_json.exists():
+        errors.append("Missing master observation data files (observations.csv / json)")
+    else:
+        with open(obs_csv, encoding="utf-8") as f:
+            csv_records = list(csv.DictReader(f))
+        with open(obs_json, encoding="utf-8") as f:
+            json_records = json.load(f)
+            
+        if len(csv_records) != len(json_records):
+            errors.append(f"Parity mismatch: CSV has {len(csv_records)} rows, JSON has {len(json_records)} rows")
         else:
-            print(f"  [PASS] Observations: {len(obs_csv)} records in exact CSV/JSON parity.")
-    except Exception as e:
-        errors.append(f"Master dataset error: {e}")
+            print(f"  [PASS] Observations: {len(csv_records)} records in exact CSV/JSON parity.")
 
-    # 2. HTML Files & Parser
+    # 2. Collect and Parse HTML pages
     print("\n[Audit 2/8] Scanning and Parsing All Published HTML Pages...")
-    ignored = {'.git', '.vscode', 'node_modules', 'ppri_pakistan_search_data_observatory'}
-    html_files = [
-        Path(root) / f
-        for root, dirs, files in os.walk(ROOT_DIR)
-        if not any(ign in Path(root).parts for ign in ignored)
-        for f in files if f.endswith('.html')
+    all_html_files = [
+        p for p in ROOT_DIR.rglob("*.html")
+        if not any(part.startswith('.') or part in ('node_modules', 'scratch_inspect') for part in p.parts)
     ]
-    print(f"  Discovered {len(html_files)} HTML pages.")
+    print(f"  Discovered {len(all_html_files)} HTML pages.")
 
     parsed_pages = {}
-    for p in html_files:
+    for hf in all_html_files:
+        parser = ComprehensivePageParser(hf)
         try:
-            content = p.read_text(encoding='utf-8', errors='replace')
-            parser = ComprehensivePageParser(p)
+            content = hf.read_text(encoding="utf-8")
             parser.feed(content)
-            parsed_pages[p] = parser
+            parsed_pages[hf] = parser
         except Exception as e:
-            errors.append(f"HTML parse error in {p.relative_to(ROOT_DIR)}: {e}")
+            errors.append(f"HTML Parse Error in {hf.relative_to(ROOT_DIR)}: {e}")
 
-    # 3. Core Web Vitals & CLS Check (Zero missing width/height)
+    # 3. Core Web Vitals: Zero CLS (Image Width/Height check)
     print("\n[Audit 3/8] Auditing Core Web Vitals Image Dimensions (CLS Guard)...")
     cls_violations = []
     for p, parser in parsed_pages.items():
-        rel = parser.rel_path
         for img in parser.images:
-            if not img['width'] or not img['height']:
-                cls_violations.append((rel, img['src'], img['line']))
-
+            src = img['src']
+            if not src:
+                continue
+            if not (img['width'] and img['height']):
+                cls_violations.append((parser.rel_path, src, img['line']))
+                
     if cls_violations:
-        for rel, src, line in cls_violations[:5]:
-            errors.append(f"CLS violation (missing width/height) in {rel} (line {line}): {src}")
+        for r, s, l in cls_violations:
+            errors.append(f"CLS Hazard: Image missing width/height in {r} (line {l}): {s}")
     else:
-        print(f"  [PASS] Zero CLS violations: 100% of images have explicit width and height dimensions.")
+        print("  [PASS] Zero CLS violations: 100% of images have explicit width and height dimensions.")
 
-    # 4. Internal Link & Anchor Fragment Resolution
+    # 4. Internal Link Graph & Asset Verification
     print("\n[Audit 4/8] Validating Internal Links, Assets, & Anchor Fragments...")
     broken_links = []
     broken_assets = []
-    broken_anchors = []
-
-    file_to_parser = {parser.file_path: parser for parser in parsed_pages.values()}
+    broken_fragments = []
 
     for p, parser in parsed_pages.items():
-        rel = parser.rel_path
+        page_dir = p.parent
+        rel_page = parser.rel_path
+
+        # Stylesheets
+        for sheet in parser.stylesheets:
+            if sheet.startswith("http://") or sheet.startswith("https://"):
+                continue
+            sheet_clean = sheet.split("?")[0]
+            if sheet_clean.startswith("/"):
+                target = ROOT_DIR / sheet_clean.lstrip("/")
+            else:
+                target = page_dir / sheet_clean
+            if not target.exists():
+                broken_assets.append((rel_page, sheet, "stylesheet"))
+
+        # Scripts
+        for s in parser.scripts:
+            src = s['src']
+            if src.startswith("http://") or src.startswith("https://"):
+                continue
+            src_clean = src.split("?")[0]
+            if src_clean.startswith("/"):
+                target = ROOT_DIR / src_clean.lstrip("/")
+            else:
+                target = page_dir / src_clean
+            if not target.exists():
+                broken_assets.append((rel_page, src, "script"))
+
         # Links
         for lk in parser.links:
-            href = lk['href'].strip()
-            if not href or href.startswith(('javascript:', 'mailto:', 'tel:')):
+            href = lk['href']
+            if not href or href.startswith("mailto:") or href.startswith("tel:") or href.startswith("javascript:"):
                 continue
-            res, is_ext, frag = resolve_local(p, href)
-            if not is_ext:
-                if not res or not res.exists():
-                    broken_links.append((rel, href, lk['line']))
-                elif frag and res in file_to_parser:
-                    target_parser = file_to_parser[res]
-                    if frag not in target_parser.element_ids:
-                        broken_anchors.append((rel, href, frag, lk['line']))
+            if href.startswith("http://") or href.startswith("https://"):
+                continue
 
-        # Assets: Stylesheets
-        for sheet in parser.stylesheets:
-            res, is_ext, _ = resolve_local(p, sheet)
-            if not is_ext and (not res or not res.exists()):
-                broken_assets.append((rel, sheet, "stylesheet"))
+            parsed_url = urlparse(href)
+            path_part = parsed_url.path
+            fragment_part = parsed_url.fragment
 
-        # Assets: Scripts
-        for sc in parser.scripts:
-            res, is_ext, _ = resolve_local(p, sc['src'])
-            if not is_ext and (not res or not res.exists()):
-                broken_assets.append((rel, sc['src'], "script"))
+            if not path_part:
+                # Same page fragment
+                if fragment_part and fragment_part not in parser.element_ids:
+                    warnings.append(f"Unresolved in-page anchor fragment #{fragment_part} in {rel_page} (line {lk['line']})")
+                continue
+
+            # Determine target file
+            if path_part.startswith("/"):
+                target_file = ROOT_DIR / path_part.lstrip("/")
+            else:
+                target_file = page_dir / path_part
+
+            # Directory normalization
+            if target_file.is_dir():
+                target_file = target_file / "index.html"
+            elif not target_file.exists() and (target_file.parent / f"{target_file.name}.html").exists():
+                target_file = target_file.parent / f"{target_file.name}.html"
+
+            if not target_file.exists():
+                broken_links.append((rel_page, href, lk['line']))
+            else:
+                if fragment_part and target_file in parsed_pages:
+                    target_parser = parsed_pages[target_file]
+                    if fragment_part not in target_parser.element_ids:
+                        warnings.append(f"Unresolved anchor fragment #{fragment_part} in {rel_page} (line {lk['line']}): {href}")
+
+    if broken_assets:
+        for r, a, t in broken_assets:
+            errors.append(f"Broken {t} asset in {r}: {a}")
+    else:
+        print("  [PASS] Zero broken asset references (stylesheets & scripts).")
 
     if broken_links:
         for r, h, l in broken_links:
@@ -281,19 +319,7 @@ def run_suite():
     else:
         print("  [PASS] Zero broken internal links.")
 
-    if broken_assets:
-        for r, a, t in broken_assets:
-            errors.append(f"Broken asset reference in {r}: {a} ({t})")
-    else:
-        print("  [PASS] Zero broken asset references (stylesheets & scripts).")
-
-    if broken_anchors:
-        for r, h, f, l in broken_anchors:
-            warnings.append(f"Unresolved anchor fragment #{f} in {r} (line {l}): {h}")
-    else:
-        print("  [PASS] All anchor fragments (#hash) resolve to valid element IDs.")
-
-    # 5. Security: target="_blank"
+    # 5. Security: rel="noopener"
     print("\n[Audit 5/8] Security Audit: target='_blank' rel='noopener noreferrer'...")
     insecure_links = []
     for p, parser in parsed_pages.items():
@@ -336,16 +362,22 @@ def run_suite():
         for m in missing_seo:
             errors.append(m)
     else:
-        print("  [PASS] All 120 pages have valid <title>, <meta description>, and <link rel='canonical'> tags.")
+        print(f"  [PASS] All {len(parsed_pages)} pages have valid <title>, <meta description>, and <link rel='canonical'> tags.")
         print(f"  [PASS] Zero Schema.org JSON-LD errors across all structured data blocks.")
 
-    # 7. Accessibility
-    print("\n[Audit 7/8] Auditing Accessibility (HTML Lang, Viewport, Image Alt)...")
+    # 7. Accessibility & Localization
+    print("\n[Audit 7/8] Auditing Accessibility (HTML Lang, RTL Direction, Viewport, Image Alt)...")
     a11y_errs = []
     for p, parser in parsed_pages.items():
         rel = parser.rel_path
         if not parser.html_lang:
             a11y_errs.append(f"Missing lang attribute on <html> in {rel}")
+        elif parser.html_lang not in ('en', 'ur'):
+            a11y_errs.append(f"Unexpected lang attribute on <html> in {rel}: {parser.html_lang}")
+            
+        if parser.html_lang == 'ur' and parser.html_dir != 'rtl':
+            a11y_errs.append(f"Urdu page missing dir='rtl' attribute on <html> in {rel}")
+            
         if not parser.has_viewport:
             a11y_errs.append(f"Missing <meta name='viewport'> in {rel}")
         for img in parser.images:
@@ -356,7 +388,7 @@ def run_suite():
         for ae in a11y_errs[:5]:
             errors.append(ae)
     else:
-        print("  [PASS] 100% compliance on html lang, viewport metadata, and image alt attributes.")
+        print("  [PASS] 100% compliance on html lang (en/ur), dir='rtl' on Urdu pages, viewport metadata, and image alt attributes.")
 
     # 8. Sitemap & Search Index Parity
     print("\n[Audit 8/8] Verifying sitemap.xml & search-index.json Integrity...")
@@ -393,6 +425,11 @@ def run_suite():
         with open(SEARCH_INDEX_PATH, encoding="utf-8") as f:
             search_items = json.load(f)
         print(f"  [PASS] search-index.json contains {len(search_items)} validated, searchable records.")
+
+        if SEARCH_INDEX_UR_PATH.exists():
+            with open(SEARCH_INDEX_UR_PATH, encoding="utf-8") as f:
+                urdu_search_items = json.load(f)
+            print(f"  [PASS] search-index-ur.json contains {len(urdu_search_items)} validated, searchable Urdu records.")
 
     except Exception as e:
         errors.append(f"Sitemap / search-index error: {e}")

@@ -211,6 +211,33 @@ img {
   line-height: 1.2;
   color: #e6f4ec;
 }
+
+.lang-switch-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-weight: 700;
+  font-size: 0.84rem;
+  text-decoration: none;
+  background: rgba(168, 224, 106, 0.16);
+  border: 1px solid rgba(168, 224, 106, 0.45);
+  color: #c8ff54;
+  transition: background 200ms ease, border-color 200ms ease, color 200ms ease;
+  white-space: nowrap;
+  line-height: 1.4;
+  margin-inline-start: 6px;
+}
+.lang-switch-btn:hover,
+.lang-switch-btn:focus-visible {
+  background: #a8e06a;
+  color: #052217;
+  border-color: #a8e06a;
+}
+.lang-switch-btn::after {
+  display: none !important;
+}
 .menu-toggle {
   display: none;
   border: 1px solid rgba(168, 224, 106, 0.35);

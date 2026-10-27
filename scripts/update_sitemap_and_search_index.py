@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """
 scripts/update_sitemap_and_search_index.py
-Synchronizes canonical Data Observatory hubs, core pages, and high-volume queries
-into sitemap.xml and search-index.json, ensuring 0 broken links and 0 orphaned URLs.
+Synchronizes canonical Data Observatory hubs, Urdu portal pages, and core site assets
+into sitemap.xml, search-index.json, and search-index-ur.json.
 """
 
 import os
@@ -15,6 +15,7 @@ ROOT_DIR = Path(__file__).resolve().parent.parent
 DATA_DIR = ROOT_DIR / "data"
 SITEMAP_PATH = ROOT_DIR / "sitemap.xml"
 SEARCH_INDEX_PATH = ROOT_DIR / "search-index.json"
+SEARCH_INDEX_UR_PATH = ROOT_DIR / "search-index-ur.json"
 
 TODAY_STR = datetime.now().strftime("%Y-%m-%d")
 
@@ -31,6 +32,22 @@ CANONICAL_OBSERVATORY_HUBS = [
     ("https://ppripakistan.github.io/knowledge-library/", "0.95", "weekly"),
     ("https://ppripakistan.github.io/data/downloads/", "0.8", "monthly"),
     ("https://ppripakistan.github.io/data/methodology/", "0.8", "monthly"),
+]
+
+CANONICAL_URDU_PAGES = [
+    ("https://ppripakistan.github.io/ur/", "0.95", "weekly"),
+    ("https://ppripakistan.github.io/ur/about.html", "0.85", "monthly"),
+    ("https://ppripakistan.github.io/ur/consultation/index.html", "0.85", "weekly"),
+    ("https://ppripakistan.github.io/ur/consultation/survey.html", "0.95", "weekly"),
+    ("https://ppripakistan.github.io/ur/provinces/index.html", "0.9", "monthly"),
+    ("https://ppripakistan.github.io/ur/data/centre.html", "0.9", "weekly"),
+    ("https://ppripakistan.github.io/ur/research/index.html", "0.9", "weekly"),
+    ("https://ppripakistan.github.io/ur/research/reports/index.html", "0.9", "weekly"),
+    ("https://ppripakistan.github.io/ur/research/reports/income-went-up-why-does-life-feel-harder.html", "0.85", "monthly"),
+    ("https://ppripakistan.github.io/ur/research/reports/price-of-a-simple-task-pakistan-bureaucracy-cost.html", "0.85", "monthly"),
+    ("https://ppripakistan.github.io/ur/research/reports/same-country-different-life-district-access.html", "0.85", "monthly"),
+    ("https://ppripakistan.github.io/ur/research/reports/bribe-you-cant-see-corruption-private-tax.html", "0.85", "monthly"),
+    ("https://ppripakistan.github.io/ur/research/reports/does-money-work-better-spent-closer-to-people.html", "0.85", "monthly"),
 ]
 
 def clean_and_update_sitemap():
@@ -59,15 +76,16 @@ def clean_and_update_sitemap():
          "404.html", "search.html", "data/quick-facts/index.html"
     }
 
+    urdu_locs = {u[0] for u in CANONICAL_URDU_PAGES}
+
     for url_el in root.findall('sm:url', ns):
         loc_el = url_el.find('sm:loc', ns)
         if loc_el is None or not loc_el.text:
             continue
         loc = loc_el.text.strip()
         
-        # Check if this is an observatory URL
-        if "/data/" in loc:
-            # We will handle observatory URLs explicitly via CANONICAL_OBSERVATORY_HUBS
+        # Check if this is an observatory or urdu URL handled by canonical lists
+        if "/data/" in loc or loc in urdu_locs:
             continue
             
         # Check if root path or other page
@@ -107,6 +125,12 @@ def clean_and_update_sitemap():
             valid_entries.append((loc, prio, freq, TODAY_STR))
             seen_locs.add(loc)
 
+    # Add canonical Urdu portal pages
+    for loc, prio, freq in CANONICAL_URDU_PAGES:
+        if loc not in seen_locs:
+            valid_entries.append((loc, prio, freq, TODAY_STR))
+            seen_locs.add(loc)
+
     # Reconstruct XML
     new_root = ET.Element("urlset", xmlns="http://www.sitemaps.org/schemas/sitemap/0.9")
     for loc, prio, freq, lastmod in valid_entries:
@@ -121,12 +145,9 @@ def clean_and_update_sitemap():
         pr.text = prio
 
     xml_str = ET.tostring(new_root, encoding="utf-8").decode("utf-8")
-    # Pretty print with standard XML declaration
-    header = '<?xml version="1.0" encoding="UTF-8"?>\n'
     import xml.dom.minidom
     dom = xml.dom.minidom.parseString(xml_str)
     pretty_xml = dom.toprettyxml(indent="  ")
-    # Strip extra empty lines
     lines = [line for line in pretty_xml.splitlines() if line.strip()]
     SITEMAP_PATH.write_text("\n".join(lines) + "\n", encoding="utf-8")
     print(f"  sitemap.xml updated with {len(valid_entries)} canonical URLs.")
@@ -141,7 +162,6 @@ def clean_and_update_search_index():
     with open(SEARCH_INDEX_PATH, encoding="utf-8") as f:
         existing_items = json.load(f)
 
-    # Filter out dead links (only keep items whose file exists, or are valid hubs)
     clean_items = []
     seen_urls = set()
 
@@ -150,11 +170,9 @@ def clean_and_update_search_index():
         if not url:
             continue
             
-        # If it's a data url, only keep canonical hubs
-        if "/data/" in url:
+        if "/data/" in url or url.startswith("/ur/"):
             continue
             
-        # For non-data URLs, check file existence
         clean_path = url.lstrip("/")
         if clean_path == "" or clean_path == "index.html":
             target = ROOT_DIR / "index.html"
@@ -169,7 +187,6 @@ def clean_and_update_search_index():
             clean_items.append(item)
             seen_urls.add(url)
 
-    # Add the authoritative observatory hub entries with rich search tags
     observatory_search_records = [
         {
             "title": "Data Observatory & Interactive Knowledge Map",
@@ -266,6 +283,107 @@ def clean_and_update_search_index():
         json.dump(clean_items, f, indent=2, ensure_ascii=False)
 
     print(f"  search-index.json successfully updated with {len(clean_items)} verified entries.")
+
+    # Generate Urdu Search Index
+    print("\nGenerating search-index-ur.json...")
+    urdu_search_records = [
+        {
+            "title": "پاکستان پروونشل ریفارم انسٹیٹیوٹ (PPRI) - مرکزی صفحہ",
+            "type": "مرکزی پورٹل",
+            "description": "پاکستان میں صوبائی اصلاحات، بااختیار بلدیات، 13 انتظامی یونٹس ماڈل، اور اضلاعی تفریق پر غیر جانبدارانہ تحقیق و ڈیٹا مشاہدہ گاہ۔",
+            "url": "/ur/index.html",
+            "tags": ["مرکزی صفحہ", "ہوم", "پاکستان", "صوبائی اصلاحات", "بلدیات", "نئے صوبے", "پی پی آر آئی", "گورننس"]
+        },
+        {
+            "title": "ادارے کا تعارف و فکری منشور (About PPRI)",
+            "type": "ادارہ جاتی منشور",
+            "description": "پاکستان پروونشل ریفارم انسٹیٹیوٹ کا تعارف، فکری منشور، غیر جانبدارانہ تحقیقی اصول، اور وفاقی و بلدیاتی اصلاحات کا ایجنڈا۔",
+            "url": "/ur/about.html",
+            "tags": ["تعارف", "منشور", "مشن", "تحقیقی اصول", "غیر جانبدارانہ", "ادارہ"]
+        },
+        {
+            "title": "قومی حکمرانی سروے 2026 (National Governance Survey)",
+            "type": "عوامی مشاورت",
+            "description": "نئے صوبوں کی حد بندی، این ایف سی ایوارڈ، بااختیار بلدیات (آرٹیکل 140 اے)، اور بیوروکریسی کے بوجھ پر شہریوں کا تفصیلی سروے۔",
+            "url": "/ur/consultation/survey.html",
+            "tags": ["سروے", "عوامی مشاورت", "رائے شماری", "نئے صوبے", "این ایف سی", "آرٹیکل 140 اے", "بلدیاتی حکومتیں", "سوالنامہ"]
+        },
+        {
+            "title": "عوامی مشاورت کا مرکز (Public Consultation Hub)",
+            "type": "عوامی مشاورت",
+            "description": "پاکستان میں صوبائی اصلاحات اور مقامی حکومتوں پر عوامی آراء، تجاویز اور قانونی یادداشتیں جمع کرانے کا پورٹل۔",
+            "url": "/ur/consultation/index.html",
+            "tags": ["عوامی مشاورت", "مشاورتی مرکز", "تجاویز", "یادداشتیں", "سول سوسائٹی"]
+        },
+        {
+            "title": "صوبائی تنظیمِ نو اور 13 انتظامی یونٹس ماڈل (Reform Framework)",
+            "type": "صوبائی اصلاحات",
+            "description": "پاکستان کے لیے 13 خود مختار صوبائی یونٹس کا مجوزہ انتظامی و آئینی ماڈل، آرٹیکل 239 ترمیم اور سینیٹ میں مساوی نمائندگی۔",
+            "url": "/ur/provinces/index.html",
+            "tags": ["صوبائی اصلاحات", "13 یونٹس", "صوبائی تنظیم نو", "آرٹیکل 239", "انتظامی ڈویژن", "بہاولپور", "جنوبی پنجاب", "ہزارہ"]
+        },
+        {
+            "title": "مرکزی ڈیٹا آبزرویٹری (Data Observatory)",
+            "type": "ڈیٹا مشاہدہ گاہ",
+            "description": "پاکستان کی 7ویں مردم شماری 2023، 130 اضلاع کا موازنہ، صوبائی جی ڈی پی اور این ایف سی ایوارڈ کے مستند سرکاری اعداد و شمار۔",
+            "url": "/ur/data/centre.html",
+            "tags": ["ڈیٹا", "اعداد و شمار", "مردم شماری 2023", "شماریات", "اضلاعی موازنہ", "اوپن ڈیٹا"]
+        },
+        {
+            "title": "تحقیقاتی مرکز و ریسرچ رپورٹس (Research Hub)",
+            "type": "تحقیقاتی مرکز",
+            "description": "PPRI کا 2026 فلیگ شپ ریسرچ پروگرام: مہنگائی، بیوروکریسی، اضلاعی تفریق اور بلدیاتی فنانس پر 5 جامع رپورٹس۔",
+            "url": "/ur/research/index.html",
+            "tags": ["تحقیق", "ریسرچ رپورٹس", "پالیسی پیپرز", "علمی مقالے", "شواہد"]
+        },
+        {
+            "title": "تحقیقی رپورٹس ڈائریکٹری (Reports Index)",
+            "type": "تحقیقاتی مرکز",
+            "description": "تمام پانچوں فلیگ شپ پالیسی رپورٹس کے تفصیلی اردو خلاصہ جات اور اوپن ڈیٹا ڈاؤنلوڈز۔",
+            "url": "/ur/research/reports/index.html",
+            "tags": ["رپورٹس", "خلاصہ جات", "پالیسی رپورٹس", "ڈائریکٹری"]
+        },
+        {
+            "title": "آمدن بڑھی، تو زندگی مشکل کیوں ہوئی؟ (REP-01)",
+            "type": "تحقیقی رپورٹ 001",
+            "description": "HIES 2024-25 اور افراطِ زر کا تجزیہ: برائے نام تنخواہوں میں اضافے کے باوجود پاکستانی گھرانوں پر غذائی عدم تحفظ کا شدید دباؤ۔",
+            "url": "/ur/research/reports/income-went-up-why-does-life-feel-harder.html",
+            "tags": ["آمدن", "مہنگائی", "افراط زر", "خوراک", "غذائی عدم تحفظ", "HIES 2024", "قوت خرید"]
+        },
+        {
+            "title": "ایک معمولی کام کی قیمت: بیوروکریسی کا بوجھ (REP-02)",
+            "type": "تحقیقی رپورٹ 002",
+            "description": "66 لاکھ شکایات کا جائزہ: شناختی کارڈ، ڈومیسائل اور زمین کے فرد کے حصول پر عام شہری کے وقت اور روزگار کے زیاں کا تخمینہ۔",
+            "url": "/ur/research/reports/price-of-a-simple-task-pakistan-bureaucracy-cost.html",
+            "tags": ["بیوروکریسی", "انتظامی بوجھ", "شکایات", "محتسب", "شناختی کارڈ", "ڈومیسائل", "سرکاری دفاتر"]
+        },
+        {
+            "title": "ایک ہی ملک، مختلف زندگیاں: اضلاعی تفریق (REP-03)",
+            "type": "تحقیقی رپورٹ 003",
+            "description": "پاکستان کے 130 سے زائد اضلاع میں صاف پانی، پرائمری اسکولوں اور بنیادی صحت میں شدید علاقائی تفریق کا موازنہ۔",
+            "url": "/ur/research/reports/same-country-different-life-district-access.html",
+            "tags": ["اضلاعی تفریق", "صاف پانی", "تعلیم", "صحت", "پسماندگی", "بلوچستان", "جنوبی پنجاب", "تھرپارکر"]
+        },
+        {
+            "title": "وہ رشوت جو دکھائی نہیں دیتی: نجی ٹیکس (REP-04)",
+            "type": "تحقیقی رپورٹ 004",
+            "description": "بدعنوانی بطور غیر علانیہ رجعت پسند نجی ٹیکس: کم آمدن والے شہریوں پر پولیس، پٹوار خانے اور بلدیاتی عملے کی رشوت کا بوجھ۔",
+            "url": "/ur/research/reports/bribe-you-cant-see-corruption-private-tax.html",
+            "tags": ["رشوت", "بدعنوانی", "نجی ٹیکس", "پٹوار خانہ", "پولیس", "کرپشن سروے"]
+        },
+        {
+            "title": "کیا پیسہ عوام کے قریب خرچ ہو تو بہتر نتائج دیتا ہے؟ (REP-05)",
+            "type": "تحقیقی رپورٹ 005",
+            "description": "مقامی حکومتوں کی مالیات، ترقیاتی اخراجات کی صوبائی مرکزیت بمقابلہ بلدیاتی اختیارات کی تفویض پر بین الاقوامی و ملکی شواہد۔",
+            "url": "/ur/research/reports/does-money-work-better-spent-closer-to-people.html",
+            "tags": ["بلدیاتی فنانس", "مقامی حکومتیں", "آرٹیکل 140 اے", "ترقیاتی بجٹ", "این ایف سی", "پی ایف سی"]
+        }
+    ]
+
+    with open(SEARCH_INDEX_UR_PATH, "w", encoding="utf-8") as f:
+        json.dump(urdu_search_records, f, indent=2, ensure_ascii=False)
+
+    print(f"  search-index-ur.json successfully generated with {len(urdu_search_records)} validated Urdu entries.")
 
 def main():
     clean_and_update_sitemap()
