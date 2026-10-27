@@ -2,7 +2,7 @@
 """
 scripts/sync_preview_metadata.py
 Synchronizes Open Graph and X (Twitter) Card preview metadata across all
-publication pages, observatory hubs, maps, scenarios, and articles.
+publication pages, observatory hubs, maps, scenarios, Urdu translations, and articles.
 
 Ensures every page points to its bespoke 1200x630 preview card in
 assets/images/previews/ with standardized tags for Threads, X, Facebook, and LinkedIn.
@@ -27,13 +27,24 @@ def sync_page(file_path):
     rel = file_path.relative_to(ROOT_DIR).as_posix()
     content = file_path.read_text(encoding='utf-8')
 
+    # Skip redirect stubs
+    if 'http-equiv="refresh"' in content or "http-equiv='refresh'" in content:
+        return False
+
     slug = get_page_slug(file_path)
     preview_filename = f"{slug}.jpg"
     preview_disk_path = PREVIEWS_DIR / preview_filename
 
-    # Fallback to master card if bespoke image not generated
+    # Fallback to English counterpart card or master card if bespoke image not generated
     if preview_disk_path.exists():
         img_url = f"{BASE_URL}/assets/images/previews/{preview_filename}"
+    elif slug.startswith("ur-"):
+        en_slug = slug[3:]
+        en_preview = PREVIEWS_DIR / f"{en_slug}.jpg"
+        if en_preview.exists():
+            img_url = f"{BASE_URL}/assets/images/previews/{en_slug}.jpg"
+        else:
+            img_url = f"{BASE_URL}/assets/images/previews/index.jpg"
     else:
         img_url = f"{BASE_URL}/assets/images/previews/index.jpg"
 
@@ -79,7 +90,27 @@ def sync_page(file_path):
             content
         )
 
-    # 4. Update twitter:image
+    # 4. Update twitter:card if missing
+    if 'name="twitter:card"' not in content and "name='twitter:card'" not in content:
+        tw_block = (
+            '    <meta name="twitter:card" content="summary_large_image" />\n'
+            '    <meta name="twitter:site" content="@PPRI_Pakistan" />\n'
+            '    <meta name="twitter:creator" content="@PPRI_Pakistan" />'
+        )
+        if 'property="og:image:alt"' in content:
+            content = re.sub(
+                r'(<meta property="og:image:alt" content="[^"]*" />)',
+                r'\1\n' + tw_block,
+                content
+            )
+        elif 'property="og:image"' in content:
+            content = re.sub(
+                r'(<meta property="og:image" content="[^"]*" />)',
+                r'\1\n' + tw_block,
+                content
+            )
+
+    # 5. Update twitter:image
     if 'name="twitter:image"' in content or "name='twitter:image'" in content:
         content = re.sub(
             r'<meta\s+name=[\'"]twitter:image[\'"]\s+content=[\'"][^\'"]+[\'"]\s*/?>',
@@ -89,7 +120,7 @@ def sync_page(file_path):
     else:
         content = content.replace('</head>', f'    <meta name="twitter:image" content="{img_url}" />\n  </head>')
 
-    # 5. Update twitter:image:alt
+    # 6. Update twitter:image:alt
     if 'name="twitter:image:alt"' in content or "name='twitter:image:alt'" in content:
         content = re.sub(
             r'<meta\s+name=[\'"]twitter:image:alt[\'"]\s+content=[\'"][^\'"]+[\'"]\s*/?>',
@@ -106,20 +137,24 @@ def sync_all():
     print("=" * 70)
 
     target_patterns = [
-        'index.html',
+        '*.html',
         'articles/*.html',
         'research/**/*.html',
         'data/centre.html',
         'data/*/index.html',
         'maps/**/*.html',
         'scenarios/**/*.html',
+        'consultation/**/*.html',
+        'provinces/**/*.html',
+        'media/**/*.html',
+        'ur/**/*.html',
     ]
 
     all_files = []
     for pat in target_patterns:
         for p in ROOT_DIR.glob(pat):
             rel = p.relative_to(ROOT_DIR).as_posix()
-            if any(ign in rel for ign in ['archive/', 'node_modules/', 'scratch']):
+            if any(ign in rel for ign in ['archive/', 'node_modules/', 'scratch', '.git']):
                 continue
             all_files.append(p)
 
@@ -132,8 +167,8 @@ def sync_all():
 
     updated = 0
     for p in pages:
-        sync_page(p)
-        updated += 1
+        if sync_page(p):
+            updated += 1
 
     print(f"Successfully synchronized Open Graph & X metadata across {updated} pages.")
     print("=" * 70)
