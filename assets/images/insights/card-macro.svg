@@ -1,0 +1,152 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1040" height="680" viewBox="0 0 1040 680">
+  <defs>
+    <style>
+      text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+    </style>
+  </defs>
+
+  <rect width="1040" height="680" fill="#ffffff" rx="10" stroke="#cbd5e1" stroke-width="1"/>
+  <rect width="1040" height="6" fill="#0f766e" rx="4"/>
+
+  <!-- Top Header with Number Badge -->
+  <text x="40" y="38" font-size="11" font-weight="700" fill="#0f766e" letter-spacing="1">PAKISTAN PROVINCIAL REFORM INSTITUTE (PPRI) • INFOGRAPHIC 15 / 16 • MACROECONOMIC HISTORY • 4 STRUCTURAL TENURES</text>
+  <text x="40" y="66" font-size="20" font-weight="800" fill="#073c3a">35-Year Macroeconomic Trajectory (4 Regimes &amp; Crisis Shocks)</text>
+  <text x="40" y="88" font-size="12" fill="#64748b">Demarcated across four distinct economic regimes: Structural Adjustment, Consumption Boom, BoP Shocks &amp; CPEC, and Stagflation/Stabilization</text>
+  <line x1="40" y1="102" x2="1000" y2="102" stroke="#e2e8f0" stroke-width="1.5"/>
+
+  <!-- Core Visual Graphics -->
+  <g transform="translate(40.00000000000006, 115) scale(1.0212765957446808)">
+    
+            <rect x="60" y="62" width="216" height="298" fill="#0284c7" fill-opacity="0.08"></rect>
+            <rect x="276" y="62" width="215.99999999999994" height="298" fill="#15803d" fill-opacity="0.08"></rect>
+            <rect x="491.99999999999994" y="62" width="240.00000000000006" height="298" fill="#d97706" fill-opacity="0.08"></rect>
+            <rect x="732" y="62" width="168" height="298" fill="#e11d48" fill-opacity="0.08"></rect>
+
+            <!-- Vertical Dividing Boundaries between Tenures -->
+            <line x1="276" y1="62" x2="276" y2="360" stroke="#cbd5e1" stroke-width="1" stroke-dasharray="2,2"></line>
+            <line x1="491.99999999999994" y1="62" x2="491.99999999999994" y2="360" stroke="#cbd5e1" stroke-width="1" stroke-dasharray="2,2"></line>
+            <line x1="732" y1="62" x2="732" y2="360" stroke="#cbd5e1" stroke-width="1" stroke-dasharray="2,2"></line>
+          
+            <!-- Tenure I (1990–99) -->
+            <g transform="translate(93, 12)">
+              <rect x="0" y="0" width="150" height="32" rx="4" fill="#ffffff" stroke="#94a3b8" stroke-width="1"></rect>
+              <text x="75" y="14" text-anchor="middle" font-size="9.5" font-weight="700" fill="#334155">TENURE I (1990–99)</text>
+              <text x="75" y="26" text-anchor="middle" font-size="8" font-weight="600" fill="#64748b">Democracy &amp; Sanctions</text>
+            </g>
+
+            <!-- Tenure II (1999–08) -->
+            <g transform="translate(309, 12)">
+              <rect x="0" y="0" width="150" height="32" rx="4" fill="#ffffff" stroke="#15803d" stroke-width="1"></rect>
+              <text x="75" y="14" text-anchor="middle" font-size="9.5" font-weight="700" fill="#15803d">TENURE II (1999–08)</text>
+              <text x="75" y="26" text-anchor="middle" font-size="8" font-weight="600" fill="#166534">Consumption Boom</text>
+            </g>
+
+            <!-- Tenure III (2008–18) -->
+            <g transform="translate(532, 12)">
+              <rect x="0" y="0" width="160" height="32" rx="4" fill="#ffffff" stroke="#d97706" stroke-width="1"></rect>
+              <text x="80" y="14" text-anchor="middle" font-size="9.5" font-weight="700" fill="#b45309">TENURE III (2008–18)</text>
+              <text x="80" y="26" text-anchor="middle" font-size="8" font-weight="600" fill="#92400e">Energy &amp; CPEC Inflows</text>
+            </g>
+
+            <!-- Tenure IV (2018–25) -->
+            <g transform="translate(741, 12)">
+              <rect x="0" y="0" width="150" height="32" rx="4" fill="#ffffff" stroke="#e11d48" stroke-width="1"></rect>
+              <text x="75" y="14" text-anchor="middle" font-size="9.5" font-weight="700" fill="#be123c">TENURE IV (2018–25)</text>
+              <text x="75" y="26" text-anchor="middle" font-size="8" font-weight="600" fill="#9f1239">Stagflation &amp; Reform</text>
+            </g>
+          
+              <line x1="60" y1="397.25" x2="900" y2="397.25" stroke="#e2e8f0" stroke-width="1" stroke-dasharray="3,3"></line>
+              <text x="50" y="401.25" text-anchor="end" font-size="10" font-weight="600" fill="#64748b">-10%</text>
+            
+              <line x1="60" y1="322.75" x2="900" y2="322.75" stroke="#64748b" stroke-width="1.5" stroke-dasharray="none"></line>
+              <text x="50" y="326.75" text-anchor="end" font-size="10" font-weight="600" fill="#0f172a">0%</text>
+            
+              <line x1="60" y1="248.25" x2="900" y2="248.25" stroke="#e2e8f0" stroke-width="1" stroke-dasharray="3,3"></line>
+              <text x="50" y="252.25" text-anchor="end" font-size="10" font-weight="600" fill="#64748b">+10%</text>
+            
+              <line x1="60" y1="173.75" x2="900" y2="173.75" stroke="#e2e8f0" stroke-width="1" stroke-dasharray="3,3"></line>
+              <text x="50" y="177.75" text-anchor="end" font-size="10" font-weight="600" fill="#64748b">+20%</text>
+            
+              <line x1="60" y1="99.25" x2="900" y2="99.25" stroke="#e2e8f0" stroke-width="1" stroke-dasharray="3,3"></line>
+              <text x="50" y="103.25" text-anchor="end" font-size="10" font-weight="600" fill="#64748b">+30%</text>
+            
+              <line x1="60" y1="24.75" x2="900" y2="24.75" stroke="#e2e8f0" stroke-width="1" stroke-dasharray="3,3"></line>
+              <text x="50" y="28.75" text-anchor="end" font-size="10" font-weight="600" fill="#64748b">+40%</text>
+            
+                <line x1="60" y1="360" x2="60" y2="366" stroke="#64748b" stroke-width="1"></line>
+                <text x="60" y="378" text-anchor="middle" font-size="10.5" font-weight="600" fill="#475569">1990</text>
+              
+                <line x1="180" y1="360" x2="180" y2="366" stroke="#64748b" stroke-width="1"></line>
+                <text x="180" y="378" text-anchor="middle" font-size="10.5" font-weight="600" fill="#475569">1995</text>
+              
+                <line x1="300" y1="360" x2="300" y2="366" stroke="#64748b" stroke-width="1"></line>
+                <text x="300" y="378" text-anchor="middle" font-size="10.5" font-weight="600" fill="#475569">2000</text>
+              
+                <line x1="420" y1="360" x2="420" y2="366" stroke="#64748b" stroke-width="1"></line>
+                <text x="420" y="378" text-anchor="middle" font-size="10.5" font-weight="600" fill="#475569">2005</text>
+              
+                <line x1="540" y1="360" x2="540" y2="366" stroke="#64748b" stroke-width="1"></line>
+                <text x="540" y="378" text-anchor="middle" font-size="10.5" font-weight="600" fill="#475569">2010</text>
+              
+                <line x1="660" y1="360" x2="660" y2="366" stroke="#64748b" stroke-width="1"></line>
+                <text x="660" y="378" text-anchor="middle" font-size="10.5" font-weight="600" fill="#475569">2015</text>
+              
+                <line x1="780" y1="360" x2="780" y2="366" stroke="#64748b" stroke-width="1"></line>
+                <text x="780" y="378" text-anchor="middle" font-size="10.5" font-weight="600" fill="#475569">2020</text>
+              
+                <line x1="900" y1="360" x2="900" y2="366" stroke="#64748b" stroke-width="1"></line>
+                <text x="900" y="378" text-anchor="middle" font-size="10.5" font-weight="600" fill="#475569">2025</text>
+              
+              <path d="M 60 289.523 L 84 285.053 L 108 265.3105 L 132 309.63800000000003 L 156 294.887 L 180 285.798 L 204 286.6175 L 228 315.2255 L 252 303.7525 L 276 295.483 L 300 291.01300000000003 L 324 295.5575 L 348 303.4545 L 372 282.52 L 396 264.4165 L 420 268.514 L 444 277.6775 L 468 289.67199999999997 L 491.99999999999994 306.956 L 516 296.8985 L 540 311.575 L 564 302.784 L 588 300.17650000000003 L 612 290.1935 L 636 292.056 L 660 291.31100000000004 L 684 273.8035 L 708 289.74649999999997 L 732 276.9325 L 756 304.125 L 780 332.2115 L 804 274.2505 L 828 287.139 L 852 325.8045 L 876 299.804 L 900 295.185" fill="none" stroke="#0f766e" stroke-width="3"></path>
+              <path d="M 60 255.3275 L 84 234.91450000000003 L 108 251.9005 L 132 248.4735 L 156 230.59350000000003 L 180 230.817 L 204 245.4935 L 228 237.969 L 252 276.3365 L 276 291.907 L 300 290.1935 L 324 299.2825 L 348 298.2395 L 372 301.0705 L 396 267.322 L 420 255.253 L 444 263.746 L 468 266.13 L 491.99999999999994 171.58950000000002 L 516 221.0575 L 540 226.347 L 564 233.94599999999997 L 588 250.63400000000001 L 612 265.4595 L 636 269.1845 L 660 303.9015 L 684 294.6635 L 708 292.2795 L 732 284.904 L 756 243.929 L 780 250.187 L 804 251.97500000000002 L 828 174.7185 L 852 93.51350000000002 L 876 228.65649999999997 L 900 296.3025" fill="none" stroke="#e11d48" stroke-width="3"></path>
+            
+                <line x1="252" y1="62" x2="252" y2="360" stroke="#e11d48" stroke-width="1.5" stroke-dasharray="2,2" opacity="0.6"></line>
+                <circle cx="252" cy="142" r="3.5" fill="#e11d48"></circle>
+                <g transform="translate(184.5, 131)">
+                  <rect x="0" y="0" width="135" height="20" fill="#ffffff" fill-opacity="0.95" rx="3" stroke="#e11d48" stroke-width="1"></rect>
+                  <text x="67.5" y="14" text-anchor="middle" font-size="9" font-weight="700" fill="#be123c">1998 Nuclear Sanctions</text>
+                </g>
+              
+                <line x1="491.99999999999994" y1="62" x2="491.99999999999994" y2="360" stroke="#e11d48" stroke-width="1.5" stroke-dasharray="2,2" opacity="0.6"></line>
+                <circle cx="491.99999999999994" cy="157" r="3.5" fill="#e11d48"></circle>
+                <g transform="translate(426.99999999999994, 146)">
+                  <rect x="0" y="0" width="130" height="20" fill="#ffffff" fill-opacity="0.95" rx="3" stroke="#e11d48" stroke-width="1"></rect>
+                  <text x="65" y="14" text-anchor="middle" font-size="9" font-weight="700" fill="#be123c">2008 Commodity Shock</text>
+                </g>
+              
+                <line x1="780" y1="62" x2="780" y2="360" stroke="#e11d48" stroke-width="1.5" stroke-dasharray="2,2" opacity="0.6"></line>
+                <circle cx="780" cy="342" r="3.5" fill="#e11d48"></circle>
+                <g transform="translate(702.5, 331)">
+                  <rect x="0" y="0" width="155" height="20" fill="#ffffff" fill-opacity="0.95" rx="3" stroke="#e11d48" stroke-width="1"></rect>
+                  <text x="77.5" y="14" text-anchor="middle" font-size="9" font-weight="700" fill="#be123c">2020 COVID Contraction (-0.9%)</text>
+                </g>
+              
+                <line x1="852" y1="62" x2="852" y2="360" stroke="#e11d48" stroke-width="1.5" stroke-dasharray="2,2" opacity="0.6"></line>
+                <circle cx="852" cy="80" r="3.5" fill="#e11d48"></circle>
+                <g transform="translate(782, 69)">
+                  <rect x="0" y="0" width="140" height="20" fill="#ffffff" fill-opacity="0.95" rx="3" stroke="#e11d48" stroke-width="1"></rect>
+                  <text x="70" y="14" text-anchor="middle" font-size="9" font-weight="700" fill="#be123c">2023 Peak Inflation (38%)</text>
+                </g>
+              
+              <g transform="translate(80, 398)">
+                <line x1="0" y1="8" x2="20" y2="8" stroke="#0f766e" stroke-width="3"></line>
+                <text x="26" y="12" font-size="11" font-weight="700" fill="#0f766e">GDP Growth Rate (%)</text>
+                <line x1="170" y1="8" x2="190" y2="8" stroke="#e11d48" stroke-width="3"></line>
+                <text x="196" y="12" font-size="11" font-weight="700" fill="#e11d48">CPI Inflation Rate (%) • Peaked at 38% Monthly / 30.8% Annual (2023)</text>
+              </g>
+            
+  </g>
+
+  <!-- Key Insight Box -->
+  <rect x="40" y="570" width="960" height="48" fill="#f8fafc" rx="6" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="54" y="587" font-size="10" font-weight="800" fill="#073c3a">KEY POLICY INSIGHT:</text>
+  <text x="54" y="603" font-size="11" fill="#334155">Key Policy Takeaway: Pakistan experiences a recurring balance of payments crisis every 4 to 6 years. Inflation reached a historic 50-year peak of 30.8% in 2023 following post-COVID supply chain disruptions, currency d...</text>
+
+  <!-- Watermark Footer Banner (Two-Line Stacked: Zero Overlap) -->
+  <rect x="0" y="628" width="1040" height="52" fill="#073c3a" rx="0"/>
+  <!-- Line 1: Primary Data Source (Full Canvas Width) -->
+  <text x="40" y="649" font-size="10.5" font-weight="500" fill="#99f6e4">Source: World Bank WDI &amp; Ministry of Finance, Economic Surveys (1990–2024)</text>
+  <!-- Line 2: Institution Branding &amp; Canonical Domain -->
+  <text x="40" y="666" font-size="10.5" font-weight="700" fill="#ffffff">Pakistan Provincial Reform Institute (PPRI)</text>
+  <text x="1000" y="666" font-size="10.5" font-weight="600" fill="#5eead4" text-anchor="end">ppripakistan.github.io</text>
+</svg>

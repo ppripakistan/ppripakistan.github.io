@@ -1,0 +1,19 @@
+# Raw data caches & archives
+data/raw/
+*.zip
+*.tar.gz
+*.rar
+*.7z
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+env/
+
+# OS and Editor
+.DS_Store
+Thumbs.db
+.idea/

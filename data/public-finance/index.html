@@ -97,6 +97,7 @@
       ]
     }
     </script>
+    <link rel="stylesheet" href="/assets/css/visual-insights.css" />
   </head>
   <body>
     <a class="skip-link" href="#main-content">Skip to content</a>
@@ -111,6 +112,7 @@
           <a href="/index.html">Home</a>
           <a href="/research/index.html">Research</a>
           <a href="/provinces/index.html">Reform</a>
+          <a href="/insights/">Insights</a>
           <a href="/data/centre.html" aria-current="page">Data</a>
           <a href="/publications/index.html">Publications</a>
           <a href="/consultation/index.html">Engage</a>
@@ -197,6 +199,176 @@
         </section>
 
         <!-- Searchable & Sortable Comprehensive Data Table -->
+        
+        <!-- ================= EMPIRICAL INFOGRAPHICS & VISUAL ANALYTICS ================= -->
+        <section class="obs-section" id="observatory-infographics">
+          <div class="obs-section-header">
+            <div>
+              <span class="obs-badge obs-badge-official">&check; Interactive Visual Analytics</span>
+              <h2 class="obs-section-title" style="margin-top:6px;">Empirical Infographics &amp; Fiscal Solvency Analytics</h2>
+              <p class="obs-lead" style="font-size:0.95rem;color:var(--obs-text-muted);margin-top:4px;">
+                Interactive vector charts analyzing federal budgetary outlays, sovereign debt servicing burdens, tax concession losses, and cross-provincial resource allocations.
+              </p>
+            </div>
+            <div style="display:flex;align-items:center;">
+              <a href="/insights/" class="obs-badge" style="background:#0f766e;color:#fff;text-decoration:none;padding:6px 12px;font-weight:600;display:inline-flex;align-items:center;gap:4px;">
+                <span>View Full 16-Infographic Lab &rarr;</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="vi-grid">
+<div class="vi-card col-6" id="card-fiscal" data-category="fiscal">
+          <div class="vi-card-accent"></div>
+          <div class="vi-card-header">
+            <div>
+              <div class="vi-header-meta">
+                <span class="vi-number-badge">INFOGRAPHIC 01 / 16</span>
+                <span class="vi-card-tag">Federal Fiscal &bull; Debt Servicing Monopoly</span>
+              </div>
+              <h3 class="vi-card-title">Federal Budget Allocation &amp; Sovereign Debt Servicing</h3>
+              <p class="vi-card-subtitle">Expenditure distribution across sovereign debt markup, defence, civil government, PSDP, and federal grants</p>
+            </div>
+            <div class="vi-card-controls">
+              <button type="button" class="vi-ctrl-btn active" onclick="updateFiscalFY('2025-26')">FY 2025-26</button>
+              <button type="button" class="vi-ctrl-btn" onclick="updateFiscalFY('2024-25')">FY 2024-25</button>
+              <button type="button" class="vi-ctrl-btn" onclick="updateFiscalFY('2023-24')">FY 2023-24</button>
+            </div>
+          </div>
+          <div class="vi-chart-container">
+            <svg id="svg-card-fiscal" class="vi-chart-svg" viewBox="0 0 600 360"></svg>
+          </div>
+          <div class="vi-callout" id="callout-card-fiscal">
+            <strong>Key Policy Takeaway:</strong> Sovereign debt servicing absorbs <strong>51.8% of the federal budget (PKR 9,775B)</strong>, consuming <strong>76.0% of net FBR tax collection</strong> and leaving only <strong>7.4% (PKR 1,400B)</strong> for national development (PSDP).
+            <div class="vi-kpis">
+              <span class="vi-kpi-pill">Markup Share: <strong>51.8%</strong></span>
+              <span class="vi-kpi-pill">Defence Share: <strong>11.2%</strong></span>
+              <span class="vi-kpi-pill">PSDP Share: <strong>7.4%</strong></span>
+              <span class="vi-kpi-pill">Grants &amp; Other: <strong>12.5%</strong></span>
+            </div>
+          </div>
+          <div class="vi-card-footer">
+            <div class="vi-source">Source: <strong>Ministry of Finance</strong>, Annual Budget Statement (Federal Budget) &bull; <strong>PPRI</strong></div>
+            <div class="vi-actions">
+              <button type="button" class="vi-btn vi-btn-primary" onclick="exportCard('card-fiscal', 'png')">&#x1F4F7; Download Image (PNG)</button>
+              <button type="button" class="vi-btn" onclick="exportCard('card-fiscal', 'svg')">&#x1F4D0; SVG</button>
+              <button type="button" class="vi-btn" onclick="exportCSV('federal_fiscal_summary')">&#x1F4CA; CSV</button>
+            </div>
+          </div>
+        </div>
+
+<div class="vi-card col-6" id="card-debt" data-category="fiscal">
+          <div class="vi-card-accent"></div>
+          <div class="vi-card-header">
+            <div>
+              <div class="vi-header-meta">
+                <span class="vi-number-badge">INFOGRAPHIC 02 / 16</span>
+                <span class="vi-card-tag">Public Debt &bull; Solvency Pressure</span>
+              </div>
+              <h3 class="vi-card-title">The 8-Year Sovereign Public Debt Trajectory (FY18–FY26)</h3>
+              <p class="vi-card-subtitle">Escalation of domestic debt, external obligations, and annual debt servicing burden across all 9 fiscal years</p>
+            </div>
+            <div class="vi-card-controls">
+              <button type="button" class="vi-ctrl-btn active" onclick="updateDebtView('stacked')">Debt Stock (PKR B)</button>
+              <button type="button" class="vi-ctrl-btn" onclick="updateDebtView('servicing')">Interest Servicing</button>
+            </div>
+          </div>
+          <div class="vi-chart-container">
+            <svg id="svg-card-debt" class="vi-chart-svg" viewBox="0 0 600 360"></svg>
+          </div>
+          <div class="vi-callout" id="callout-card-debt">
+            <strong>Key Policy Takeaway:</strong> Pakistan's total public debt surged from <strong>PKR 24,953B in FY18</strong> to <strong>PKR 83,285B in FY26 (+233.8%)</strong>, while annual markup servicing expanded 6.5-fold from PKR 1,499B to PKR 9,775B.
+            <div class="vi-kpis">
+              <span class="vi-kpi-pill">Total Debt: <strong>PKR 83,285B</strong></span>
+              <span class="vi-kpi-pill">Domestic Share: <strong>69.1%</strong></span>
+              <span class="vi-kpi-pill">External Share: <strong>30.9%</strong></span>
+            </div>
+          </div>
+          <div class="vi-card-footer">
+            <div class="vi-source">Source: <strong>Ministry of Finance &amp; SBP</strong>, Debt Bulletins (FY18–FY26) &bull; <strong>PPRI</strong></div>
+            <div class="vi-actions">
+              <button type="button" class="vi-btn vi-btn-primary" onclick="exportCard('card-debt', 'png')">&#x1F4F7; Download Image (PNG)</button>
+              <button type="button" class="vi-btn" onclick="exportCard('card-debt', 'svg')">&#x1F4D0; SVG</button>
+              <button type="button" class="vi-btn" onclick="exportCSV('public_debt_timeseries')">&#x1F4CA; CSV</button>
+            </div>
+          </div>
+        </div>
+
+<div class="vi-card col-6" id="card-tax-exp" data-category="fiscal">
+          <div class="vi-card-accent"></div>
+          <div class="vi-card-header">
+            <div>
+              <div class="vi-header-meta">
+                <span class="vi-number-badge">INFOGRAPHIC 03 / 16</span>
+                <span class="vi-card-tag">Tax Policy &bull; Revenue Concessions</span>
+              </div>
+              <h3 class="vi-card-title">Federal Tax Concessions &amp; Revenue Foregone</h3>
+              <p class="vi-card-subtitle">FBR revenue foregone across Sales Tax, Customs duties, and Income Tax concessions</p>
+            </div>
+          </div>
+          <div class="vi-chart-container">
+            <svg id="svg-card-tax-exp" class="vi-chart-svg" viewBox="0 0 600 360"></svg>
+          </div>
+          <div class="vi-callout" id="callout-card-tax-exp">
+            <strong>Key Policy Takeaway:</strong> Total federal tax concessions reach <strong>PKR 2,434.7B (2.32% of GDP)</strong>, equivalent to <strong>26.2% of actual tax collection</strong>. Sales tax exemptions under 6th Schedule represent over half of all foregone revenues.
+            <div class="vi-kpis">
+              <span class="vi-kpi-pill">Foregone Revenue: <strong>PKR 2,434.7B</strong></span>
+              <span class="vi-kpi-pill">Sales Tax Loss: <strong>50.8%</strong></span>
+              <span class="vi-kpi-pill">Tax-to-GDP Ratio: <strong>9.2%</strong></span>
+            </div>
+          </div>
+          <div class="vi-card-footer">
+            <div class="vi-source">Source: <strong>Federal Board of Revenue (FBR)</strong>, Tax Expenditure Report 2025 &bull; <strong>PPRI</strong></div>
+            <div class="vi-actions">
+              <button type="button" class="vi-btn vi-btn-primary" onclick="exportCard('card-tax-exp', 'png')">&#x1F4F7; Download Image (PNG)</button>
+              <button type="button" class="vi-btn" onclick="exportCard('card-tax-exp', 'svg')">&#x1F4D0; SVG</button>
+              <button type="button" class="vi-btn" onclick="exportCSV('tax_expenditures_2025')">&#x1F4CA; CSV</button>
+            </div>
+          </div>
+        </div>
+
+<div class="vi-card col-12" id="card-prov-matrix" data-category="fiscal">
+          <div class="vi-card-accent"></div>
+          <div class="vi-card-header">
+            <div>
+              <div class="vi-header-meta">
+                <span class="vi-number-badge">INFOGRAPHIC 16 / 16</span>
+                <span class="vi-card-tag">Provincial Fiscal &amp; Security Disparities &bull; 4 Provinces Multi-Dimensional Comparison</span>
+              </div>
+              <h3 class="vi-card-title">Provincial Resource Allocation, Debt Stock &amp; Conflict Exposure Matrix</h3>
+              <p class="vi-card-subtitle">Cross-provincial comparison of total budgetary outlay, Annual Development Programmes (ADP), outstanding public debt, per capita allocations, and regional terrorism burden</p>
+            </div>
+            <div class="vi-card-controls">
+              <button type="button" class="vi-ctrl-btn active" onclick="updateProvMatrixView('budget_dev')">Total Budget vs Development ADP</button>
+              <button type="button" class="vi-ctrl-btn" onclick="updateProvMatrixView('debt_stock')">Public Debt &amp; Borrowing Stock</button>
+              <button type="button" class="vi-ctrl-btn" onclick="updateProvMatrixView('conflict_burden')">Conflict &amp; Terrorism Burden (CRSS)</button>
+              <button type="button" class="vi-ctrl-btn" onclick="updateProvMatrixView('per_capita')">Per Capita vs Territorial Density (km²)</button>
+            </div>
+          </div>
+          <div class="vi-chart-container" style="min-height: 440px;">
+            <svg id="svg-card-prov-matrix" class="vi-chart-svg" viewBox="0 0 940 440" style="max-height: 480px;"></svg>
+          </div>
+          <div class="vi-callout" id="callout-card-prov-matrix">
+            <strong>Key Policy Takeaway:</strong> Severe structural disparities exist between fiscal concentration and conflict exposure: <strong>Punjab and Sindh command 75.9%</strong> of all provincial budget spending, while <strong>Khyber Pakhtunkhwa (63.1%) and Balochistan (29.1%) bear 92.2% of Pakistan's terrorism fatalities</strong>. Furthermore, while Balochistan receives the highest nominal budget per person (PKR 64,158), its infrastructure allocation per km² (PKR 0.92M/km²) is less than one-seventh of Sindh's (PKR 6.81M/km²), reflecting severe territorial underdevelopment.
+            <div class="vi-kpis">
+              <span class="vi-kpi-pill">National Total Outlay: <strong>PKR 11.21 Trillion</strong></span>
+              <span class="vi-kpi-pill">Total Prov Development: <strong>PKR 2.54 Trillion</strong></span>
+              <span class="vi-kpi-pill">KP + Balochistan Conflict Share: <strong>92.2% Fatalities</strong></span>
+              <span class="vi-kpi-pill">Highest Debt Stock: <strong>Punjab (PKR 1.685T)</strong></span>
+            </div>
+          </div>
+          <div class="vi-card-footer">
+            <div class="vi-source">Source: <strong>Provincial Finance Departments</strong> (White Papers FY25), <strong>DMU Debt Bulletins</strong>, <strong>CRSS Annual Security Reports (2023–24)</strong> &bull; <strong>PPRI</strong></div>
+            <div class="vi-actions">
+              <button type="button" class="vi-btn vi-btn-primary" onclick="exportCard('card-prov-matrix', 'png')">&#x1F4F7; Download Image (PNG)</button>
+              <button type="button" class="vi-btn" onclick="exportCard('card-prov-matrix', 'svg')">&#x1F4D0; SVG</button>
+              <button type="button" class="vi-btn" onclick="exportCSV('provincial_fiscal_conflict_matrix')">&#x1F4CA; CSV</button>
+            </div>
+          </div>
+        </div>
+          </div>
+        </section>
+
         <section class="obs-section">
           <div class="obs-section-header">
             <div>
@@ -380,5 +552,10 @@
         }
       });
     </script>
-  </body>
+      <!-- Visual Analytics Runtime & Offscreen Canvas -->
+    <div id="vi-tooltip" class="vi-tooltip" role="tooltip" aria-hidden="true" style="display:none;"></div>
+    <div id="vi-toast" role="status" aria-live="polite"></div>
+    <canvas id="vi-export-canvas" width="2080" height="1360" style="display:none;"></canvas>
+    <script src="/assets/js/modules/visual-insights.js" defer></script>
+</body>
 </html>

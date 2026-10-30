@@ -1,0 +1,57 @@
+[
+  {
+    "geography_id": "PK",
+    "geography_name": "Pakistan",
+    "mean_monthly_expenditure_pkr": 62850,
+    "food_pct": 39.2,
+    "housing_utilities_pct": 24.6,
+    "health_pct": 5.8,
+    "education_pct": 4.2,
+    "transport_comm_pct": 11.4,
+    "clothing_other_pct": 14.8
+  },
+  {
+    "geography_id": "PK-PB",
+    "geography_name": "Punjab",
+    "mean_monthly_expenditure_pkr": 65200,
+    "food_pct": 38.5,
+    "housing_utilities_pct": 25.1,
+    "health_pct": 5.6,
+    "education_pct": 4.6,
+    "transport_comm_pct": 11.6,
+    "clothing_other_pct": 14.6
+  },
+  {
+    "geography_id": "PK-SD",
+    "geography_name": "Sindh",
+    "mean_monthly_expenditure_pkr": 64800,
+    "food_pct": 39.1,
+    "housing_utilities_pct": 25.8,
+    "health_pct": 5.5,
+    "education_pct": 4.1,
+    "transport_comm_pct": 11.2,
+    "clothing_other_pct": 14.3
+  },
+  {
+    "geography_id": "PK-KP",
+    "geography_name": "Khyber Pakhtunkhwa",
+    "mean_monthly_expenditure_pkr": 58400,
+    "food_pct": 41.2,
+    "housing_utilities_pct": 22.9,
+    "health_pct": 6.3,
+    "education_pct": 4.0,
+    "transport_comm_pct": 10.8,
+    "clothing_other_pct": 14.8
+  },
+  {
+    "geography_id": "PK-BA",
+    "geography_name": "Balochistan",
+    "mean_monthly_expenditure_pkr": 53100,
+    "food_pct": 44.6,
+    "housing_utilities_pct": 21.4,
+    "health_pct": 6.7,
+    "education_pct": 2.8,
+    "transport_comm_pct": 9.8,
+    "clothing_other_pct": 14.7
+  }
+]

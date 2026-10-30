@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="620" viewBox="0 0 800 620">
+  <defs>
+    <style>
+      text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+    </style>
+  </defs>
+
+  <rect width="800" height="620" fill="#ffffff" rx="10" stroke="#cbd5e1" stroke-width="1"/>
+  <rect width="800" height="6" fill="#0f766e" rx="4"/>
+
+  <!-- Top Header with Number Badge -->
+  <text x="40" y="38" font-size="11" font-weight="700" fill="#0f766e" letter-spacing="1">PAKISTAN PROVINCIAL REFORM INSTITUTE (PPRI) • INFOGRAPHIC 05 / 16 • LIVING STANDARDS • ENGEL&apos;S LAW</text>
+  <text x="40" y="66" font-size="20" font-weight="800" fill="#073c3a">Household Food Engel Burden Divide (HIES 2024–25)</text>
+  <text x="40" y="88" font-size="12" fill="#64748b">Share of household consumption absorbed by food staples across provinces and rural/urban divide</text>
+  <line x1="40" y1="102" x2="760" y2="102" stroke="#e2e8f0" stroke-width="1.5"/>
+
+  <!-- Core Visual Graphics -->
+  <g transform="translate(83.33333333333331, 115) scale(1.0555555555555556)">
+    
+              <text x="133" y="54" text-anchor="end" font-size="12" font-weight="700" fill="#1e293b">Balochistan</text>
+              <rect x="145" y="40" width="370" height="20" fill="#f1f5f9" rx="4"></rect>
+              <rect x="145" y="40" width="330.04" height="20" fill="#e11d48" rx="4" onmouseenter="showTooltip(event, '&lt;strong&gt;Balochistan (Total)&lt;/strong&gt;&lt;br/&gt;Food Share: 44.6%&lt;br/&gt;Avg Monthly Household Spend: PKR 53,100')" onmousemove="showTooltip(event, '&lt;strong&gt;Balochistan (Total)&lt;/strong&gt;&lt;br/&gt;Food Share: 44.6%&lt;br/&gt;Avg Monthly Household Spend: PKR 53,100')" onmouseleave="hideTooltip()" style="cursor:pointer;"></rect>
+              <text x="483.04" y="54" font-size="12" font-weight="800" fill="#e11d48">44.6%</text>
+            
+              <text x="133" y="102" text-anchor="end" font-size="12" font-weight="700" fill="#1e293b">Khyber Pakhtunkhwa</text>
+              <rect x="145" y="88" width="370" height="20" fill="#f1f5f9" rx="4"></rect>
+              <rect x="145" y="88" width="304.88000000000005" height="20" fill="#d97706" rx="4" onmouseenter="showTooltip(event, '&lt;strong&gt;Khyber Pakhtunkhwa (Total)&lt;/strong&gt;&lt;br/&gt;Food Share: 41.2%&lt;br/&gt;Avg Monthly Household Spend: PKR 58,400')" onmousemove="showTooltip(event, '&lt;strong&gt;Khyber Pakhtunkhwa (Total)&lt;/strong&gt;&lt;br/&gt;Food Share: 41.2%&lt;br/&gt;Avg Monthly Household Spend: PKR 58,400')" onmouseleave="hideTooltip()" style="cursor:pointer;"></rect>
+              <text x="457.88000000000005" y="102" font-size="12" font-weight="800" fill="#d97706">41.2%</text>
+            
+              <text x="133" y="150" text-anchor="end" font-size="12" font-weight="700" fill="#1e293b">Pakistan</text>
+              <rect x="145" y="136" width="370" height="20" fill="#f1f5f9" rx="4"></rect>
+              <rect x="145" y="136" width="290.08" height="20" fill="#d97706" rx="4" onmouseenter="showTooltip(event, '&lt;strong&gt;Pakistan (Total)&lt;/strong&gt;&lt;br/&gt;Food Share: 39.2%&lt;br/&gt;Avg Monthly Household Spend: PKR 62,850')" onmousemove="showTooltip(event, '&lt;strong&gt;Pakistan (Total)&lt;/strong&gt;&lt;br/&gt;Food Share: 39.2%&lt;br/&gt;Avg Monthly Household Spend: PKR 62,850')" onmouseleave="hideTooltip()" style="cursor:pointer;"></rect>
+              <text x="443.08" y="150" font-size="12" font-weight="800" fill="#d97706">39.2%</text>
+            
+              <text x="133" y="198" text-anchor="end" font-size="12" font-weight="700" fill="#1e293b">Sindh</text>
+              <rect x="145" y="184" width="370" height="20" fill="#f1f5f9" rx="4"></rect>
+              <rect x="145" y="184" width="289.34000000000003" height="20" fill="#d97706" rx="4" onmouseenter="showTooltip(event, '&lt;strong&gt;Sindh (Total)&lt;/strong&gt;&lt;br/&gt;Food Share: 39.1%&lt;br/&gt;Avg Monthly Household Spend: PKR 64,800')" onmousemove="showTooltip(event, '&lt;strong&gt;Sindh (Total)&lt;/strong&gt;&lt;br/&gt;Food Share: 39.1%&lt;br/&gt;Avg Monthly Household Spend: PKR 64,800')" onmouseleave="hideTooltip()" style="cursor:pointer;"></rect>
+              <text x="442.34000000000003" y="198" font-size="12" font-weight="800" fill="#d97706">39.1%</text>
+            
+              <text x="133" y="246" text-anchor="end" font-size="12" font-weight="700" fill="#1e293b">Punjab</text>
+              <rect x="145" y="232" width="370" height="20" fill="#f1f5f9" rx="4"></rect>
+              <rect x="145" y="232" width="284.90000000000003" height="20" fill="#d97706" rx="4" onmouseenter="showTooltip(event, '&lt;strong&gt;Punjab (Total)&lt;/strong&gt;&lt;br/&gt;Food Share: 38.5%&lt;br/&gt;Avg Monthly Household Spend: PKR 65,200')" onmousemove="showTooltip(event, '&lt;strong&gt;Punjab (Total)&lt;/strong&gt;&lt;br/&gt;Food Share: 38.5%&lt;br/&gt;Avg Monthly Household Spend: PKR 65,200')" onmouseleave="hideTooltip()" style="cursor:pointer;"></rect>
+              <text x="437.90000000000003" y="246" font-size="12" font-weight="800" fill="#d97706">38.5%</text>
+            
+            <line x1="404" y1="25" x2="404" y2="280" stroke="#94a3b8" stroke-dasharray="4,4" stroke-width="1.5"></line>
+            <text x="404" y="20" text-anchor="middle" font-size="10" font-weight="700" fill="#64748b">Engel's 35% Vulnerability Threshold</text>
+          
+  </g>
+
+  <!-- Key Insight Box -->
+  <rect x="40" y="510" width="720" height="48" fill="#f8fafc" rx="6" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="54" y="527" font-size="10" font-weight="800" fill="#073c3a">KEY POLICY INSIGHT:</text>
+  <text x="54" y="543" font-size="11" fill="#334155">Key Policy Takeaway: Severe living standards divide: Rural Balochistan households spend 47.3% of their entire budget on basic food, compared to 28.2% in urban Islamabad. Rural families nationwide allocate an average o...</text>
+
+  <!-- Watermark Footer Banner (Two-Line Stacked: Zero Overlap) -->
+  <rect x="0" y="568" width="800" height="52" fill="#073c3a" rx="0"/>
+  <!-- Line 1: Primary Data Source (Full Canvas Width) -->
+  <text x="40" y="589" font-size="10.5" font-weight="500" fill="#99f6e4">Source: Pakistan Bureau of Statistics, HIES 2024–25</text>
+  <!-- Line 2: Institution Branding &amp; Canonical Domain -->
+  <text x="40" y="606" font-size="10.5" font-weight="700" fill="#ffffff">Pakistan Provincial Reform Institute (PPRI)</text>
+  <text x="760" y="606" font-size="10.5" font-weight="600" fill="#5eead4" text-anchor="end">ppripakistan.github.io</text>
+</svg>

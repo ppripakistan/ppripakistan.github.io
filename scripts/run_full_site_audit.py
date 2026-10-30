@@ -203,7 +203,7 @@ def run_suite():
     print("\n[Audit 2/8] Scanning and Parsing All Published HTML Pages...")
     all_html_files = [
         p for p in ROOT_DIR.rglob("*.html")
-        if not any(part.startswith('.') or part in ('node_modules', 'scratch_inspect') for part in p.parts)
+        if not any(part.startswith('.') or part in ('node_modules', 'scratch_inspect', 'raw', 'build library', 'Build Library', 'unintegrated_staging') for part in p.parts)
     ]
     print(f"  Discovered {len(all_html_files)} HTML pages.")
 

@@ -1,0 +1,42 @@
+[
+  {
+    "province_name": "Punjab",
+    "farms_2010": 5249400,
+    "farms_2024": 6842100,
+    "farms_change_pct": 30.3,
+    "cultivated_acres_2010": 28640100,
+    "cultivated_acres_2024": 33120400,
+    "cultivated_change_pct": 15.6,
+    "avg_farm_size_2024": 4.8
+  },
+  {
+    "province_name": "Sindh",
+    "farms_2010": 1115300,
+    "farms_2024": 1598400,
+    "farms_change_pct": 43.3,
+    "cultivated_acres_2010": 7940200,
+    "cultivated_acres_2024": 9480100,
+    "cultivated_change_pct": 19.4,
+    "avg_farm_size_2024": 5.9
+  },
+  {
+    "province_name": "Khyber Pakhtunkhwa",
+    "farms_2010": 1618200,
+    "farms_2024": 2241500,
+    "farms_change_pct": 38.5,
+    "cultivated_acres_2010": 3980100,
+    "cultivated_acres_2024": 4920200,
+    "cultivated_change_pct": 23.6,
+    "avg_farm_size_2024": 2.2
+  },
+  {
+    "province_name": "Balochistan",
+    "farms_2010": 281580,
+    "farms_2024": 421697,
+    "farms_change_pct": 49.8,
+    "cultivated_acres_2010": 2062073,
+    "cultivated_acres_2024": 5266964,
+    "cultivated_change_pct": 155.4,
+    "avg_farm_size_2024": 12.5
+  }
+]

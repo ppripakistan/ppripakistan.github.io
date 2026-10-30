@@ -1,0 +1,132 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="620" viewBox="0 0 800 620">
+  <defs>
+    <style>
+      text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+    </style>
+  </defs>
+
+  <rect width="800" height="620" fill="#ffffff" rx="10" stroke="#cbd5e1" stroke-width="1"/>
+  <rect width="800" height="6" fill="#0f766e" rx="4"/>
+
+  <!-- Top Header with Number Badge -->
+  <text x="40" y="38" font-size="11" font-weight="700" fill="#0f766e" letter-spacing="1">PAKISTAN PROVINCIAL REFORM INSTITUTE (PPRI) • INFOGRAPHIC 04 / 16 • DEMOGRAPHICS • GENDER &amp; TERRITORY ASYMMETRY</text>
+  <text x="40" y="66" font-size="20" font-weight="800" fill="#073c3a">Female Gender Ratios &amp; Agrarian Landholding Asymmetry</text>
+  <text x="40" y="88" font-size="12" fill="#64748b">Male, female, and transgender distribution in relation to provincial land area shares</text>
+  <line x1="40" y1="102" x2="760" y2="102" stroke="#e2e8f0" stroke-width="1.5"/>
+
+  <!-- Core Visual Graphics -->
+  <g transform="translate(83.33333333333331, 115) scale(1.0555555555555556)">
+    
+            <path d="M 125 70 A 90 90 0 1 1 116.64285386469493 249.61114946519297 L 120.1714266773793 211.7753308021115 A 52 52 0 1 0 125 108 Z" fill="#073c3a" stroke="#ffffff" stroke-width="2" onmouseenter="showTooltip(event, '&lt;strong&gt;Male (Pakistan)&lt;/strong&gt;&lt;br/&gt;Headcount: 124,324,294&lt;br/&gt;Share: 51.48%')" onmousemove="showTooltip(event, '&lt;strong&gt;Male (Pakistan)&lt;/strong&gt;&lt;br/&gt;Headcount: 124,324,294&lt;br/&gt;Share: 51.48%')" onmouseleave="hideTooltip()" style="cursor:pointer;"></path><path d="M 116.64285386469493 249.61114946519297 A 90 90 0 0 1 124.94345133595603 70.00001776528734 L 124.96732743855237 108.00001026438824 A 52 52 0 0 0 120.1714266773793 211.7753308021115 Z" fill="#0f766e" stroke="#ffffff" stroke-width="2" onmouseenter="showTooltip(event, '&lt;strong&gt;Female (Pakistan)&lt;/strong&gt;&lt;br/&gt;Headcount: 117,154,947&lt;br/&gt;Share: 48.51%')" onmousemove="showTooltip(event, '&lt;strong&gt;Female (Pakistan)&lt;/strong&gt;&lt;br/&gt;Headcount: 117,154,947&lt;br/&gt;Share: 48.51%')" onmouseleave="hideTooltip()" style="cursor:pointer;"></path><path d="M 124.94345133595603 70.00001776528734 A 90 90 0 0 1 124.9999999999999 70 L 124.99999999999994 108 A 52 52 0 0 0 124.96732743855237 108.00001026438824 Z" fill="#7c3aed" stroke="#ffffff" stroke-width="2" onmouseenter="showTooltip(event, '&lt;strong&gt;Transgender (Pakistan)&lt;/strong&gt;&lt;br/&gt;Headcount: 20,190&lt;br/&gt;Share: 0.01%')" onmousemove="showTooltip(event, '&lt;strong&gt;Transgender (Pakistan)&lt;/strong&gt;&lt;br/&gt;Headcount: 20,190&lt;br/&gt;Share: 0.01%')" onmouseleave="hideTooltip()" style="cursor:pointer;"></path>
+            <circle cx="125" cy="160" r="52" fill="#ffffff"></circle>
+            <text x="125" y="148" text-anchor="middle" font-size="9" font-weight="700" fill="#64748b">PAKISTAN</text>
+            <text x="125" y="164" text-anchor="middle" font-size="13" font-weight="800" fill="#073c3a">241.5M</text>
+            <text x="125" y="178" text-anchor="middle" font-size="9" font-weight="600" fill="#0f766e">Ratio: 106.12</text>
+
+            <g transform="translate(10, 285)">
+              <rect x="0" y="0" width="9" height="9" fill="#073c3a" rx="2"></rect>
+              <text x="12" y="8" font-size="9.5" fill="#334155">M: 51.5%</text>
+              <rect x="75" y="0" width="9" height="9" fill="#0f766e" rx="2"></rect>
+              <text x="87" y="8" font-size="9.5" fill="#334155">F: 48.5%</text>
+              <rect x="150" y="0" width="9" height="9" fill="#7c3aed" rx="2"></rect>
+              <text x="162" y="8" font-size="9.5" fill="#334155">Trans: 20,190</text>
+            </g>
+
+            
+            <g transform="translate(250, 25)">
+              <text x="0" y="0" font-size="12" font-weight="700" fill="#073c3a">Territorial Land Area vs Population Share Asymmetry</text>
+              <text x="0" y="15" font-size="10.5" fill="#64748b">Comparison across 4 Provinces &amp; ICT (Census 2023)</text>
+          
+              <!-- Province Name with Density placed cleanly underneath to prevent collisions -->
+              <text x="0" y="41" font-size="11" font-weight="700" fill="#1e293b">Punjab</text>
+              <text x="0" y="52" font-size="9" font-weight="600" fill="#64748b">621.83 / km²</text>
+
+              <!-- Land Area Bar -->
+              <rect x="135" y="32" width="125" height="8" fill="#f1f5f9" rx="2"></rect>
+              <rect x="135" y="32" width="64.47500000000001" height="8" fill="#d97706" rx="2" onmouseenter="showTooltip(event, '&lt;strong&gt;Punjab Land Area&lt;/strong&gt;&lt;br/&gt;205,345 km² (25.79%)')" onmousemove="showTooltip(event, '&lt;strong&gt;Punjab Land Area&lt;/strong&gt;&lt;br/&gt;205,345 km² (25.79%)')" onmouseleave="hideTooltip()" style="cursor:pointer;"></rect>
+              <text x="205.47500000000002" y="39" font-size="8.5" font-weight="700" fill="#d97706">25.79% Land</text>
+
+              <!-- Population Bar -->
+              <rect x="135" y="43" width="125" height="8" fill="#f1f5f9" rx="2"></rect>
+              <rect x="135" y="43" width="120.1590909090909" height="8" fill="#0f766e" rx="2" onmouseenter="showTooltip(event, '&lt;strong&gt;Punjab Population&lt;/strong&gt;&lt;br/&gt;127,688,922 (52.87%)')" onmousemove="showTooltip(event, '&lt;strong&gt;Punjab Population&lt;/strong&gt;&lt;br/&gt;127,688,922 (52.87%)')" onmouseleave="hideTooltip()" style="cursor:pointer;"></rect>
+              <text x="261.1590909090909" y="50" font-size="8.5" font-weight="700" fill="#0f766e">52.87% Pop</text>
+            
+              <!-- Province Name with Density placed cleanly underneath to prevent collisions -->
+              <text x="0" y="89" font-size="11" font-weight="700" fill="#1e293b">Sindh</text>
+              <text x="0" y="100" font-size="9" font-weight="600" fill="#64748b">395.25 / km²</text>
+
+              <!-- Land Area Bar -->
+              <rect x="135" y="80" width="125" height="8" fill="#f1f5f9" rx="2"></rect>
+              <rect x="135" y="80" width="44.25" height="8" fill="#d97706" rx="2" onmouseenter="showTooltip(event, '&lt;strong&gt;Sindh Land Area&lt;/strong&gt;&lt;br/&gt;140,914 km² (17.7%)')" onmousemove="showTooltip(event, '&lt;strong&gt;Sindh Land Area&lt;/strong&gt;&lt;br/&gt;140,914 km² (17.7%)')" onmouseleave="hideTooltip()" style="cursor:pointer;"></rect>
+              <text x="185.25" y="87" font-size="8.5" font-weight="700" fill="#d97706">17.7% Land</text>
+
+              <!-- Population Bar -->
+              <rect x="135" y="91" width="125" height="8" fill="#f1f5f9" rx="2"></rect>
+              <rect x="135" y="91" width="52.40909090909091" height="8" fill="#0f766e" rx="2" onmouseenter="showTooltip(event, '&lt;strong&gt;Sindh Population&lt;/strong&gt;&lt;br/&gt;55,696,147 (23.06%)')" onmousemove="showTooltip(event, '&lt;strong&gt;Sindh Population&lt;/strong&gt;&lt;br/&gt;55,696,147 (23.06%)')" onmouseleave="hideTooltip()" style="cursor:pointer;"></rect>
+              <text x="193.4090909090909" y="98" font-size="8.5" font-weight="700" fill="#0f766e">23.06% Pop</text>
+            
+              <!-- Province Name with Density placed cleanly underneath to prevent collisions -->
+              <text x="0" y="137" font-size="11" font-weight="700" fill="#1e293b">Khyber Pakhtunkhwa</text>
+              <text x="0" y="148" font-size="9" font-weight="600" fill="#64748b">401.57 / km²</text>
+
+              <!-- Land Area Bar -->
+              <rect x="135" y="128" width="125" height="8" fill="#f1f5f9" rx="2"></rect>
+              <rect x="135" y="128" width="31.95" height="8" fill="#d97706" rx="2" onmouseenter="showTooltip(event, '&lt;strong&gt;Khyber Pakhtunkhwa Land Area&lt;/strong&gt;&lt;br/&gt;101,741 km² (12.78%)')" onmousemove="showTooltip(event, '&lt;strong&gt;Khyber Pakhtunkhwa Land Area&lt;/strong&gt;&lt;br/&gt;101,741 km² (12.78%)')" onmouseleave="hideTooltip()" style="cursor:pointer;"></rect>
+              <text x="172.95" y="135" font-size="8.5" font-weight="700" fill="#d97706">12.78% Land</text>
+
+              <!-- Population Bar -->
+              <rect x="135" y="139" width="125" height="8" fill="#f1f5f9" rx="2"></rect>
+              <rect x="135" y="139" width="38.45454545454545" height="8" fill="#0f766e" rx="2" onmouseenter="showTooltip(event, '&lt;strong&gt;Khyber Pakhtunkhwa Population&lt;/strong&gt;&lt;br/&gt;40,856,097 (16.92%)')" onmousemove="showTooltip(event, '&lt;strong&gt;Khyber Pakhtunkhwa Population&lt;/strong&gt;&lt;br/&gt;40,856,097 (16.92%)')" onmouseleave="hideTooltip()" style="cursor:pointer;"></rect>
+              <text x="179.45454545454544" y="146" font-size="8.5" font-weight="700" fill="#0f766e">16.92% Pop</text>
+            
+              <!-- Province Name with Density placed cleanly underneath to prevent collisions -->
+              <text x="0" y="185" font-size="11" font-weight="700" fill="#1e293b">Balochistan</text>
+              <text x="0" y="196" font-size="9" font-weight="600" fill="#64748b">42.9 / km²</text>
+
+              <!-- Land Area Bar -->
+              <rect x="135" y="176" width="125" height="8" fill="#f1f5f9" rx="2"></rect>
+              <rect x="135" y="176" width="109.02499999999999" height="8" fill="#d97706" rx="2" onmouseenter="showTooltip(event, '&lt;strong&gt;Balochistan Land Area&lt;/strong&gt;&lt;br/&gt;347,190 km² (43.61%)')" onmousemove="showTooltip(event, '&lt;strong&gt;Balochistan Land Area&lt;/strong&gt;&lt;br/&gt;347,190 km² (43.61%)')" onmouseleave="hideTooltip()" style="cursor:pointer;"></rect>
+              <text x="250.02499999999998" y="183" font-size="8.5" font-weight="700" fill="#d97706">43.61% Land</text>
+
+              <!-- Population Bar -->
+              <rect x="135" y="187" width="125" height="8" fill="#f1f5f9" rx="2"></rect>
+              <rect x="135" y="187" width="14.022727272727272" height="8" fill="#0f766e" rx="2" onmouseenter="showTooltip(event, '&lt;strong&gt;Balochistan Population&lt;/strong&gt;&lt;br/&gt;14,894,402 (6.17%)')" onmousemove="showTooltip(event, '&lt;strong&gt;Balochistan Population&lt;/strong&gt;&lt;br/&gt;14,894,402 (6.17%)')" onmouseleave="hideTooltip()" style="cursor:pointer;"></rect>
+              <text x="155.02272727272728" y="194" font-size="8.5" font-weight="700" fill="#0f766e">6.17% Pop</text>
+            
+              <!-- Province Name with Density placed cleanly underneath to prevent collisions -->
+              <text x="0" y="233" font-size="11" font-weight="700" fill="#1e293b">Islamabad</text>
+              <text x="0" y="244" font-size="9" font-weight="600" fill="#64748b">2609.12 / km²</text>
+
+              <!-- Land Area Bar -->
+              <rect x="135" y="224" width="125" height="8" fill="#f1f5f9" rx="2"></rect>
+              <rect x="135" y="224" width="0.275" height="8" fill="#d97706" rx="2" onmouseenter="showTooltip(event, '&lt;strong&gt;Islamabad Land Area&lt;/strong&gt;&lt;br/&gt;906 km² (0.11%)')" onmousemove="showTooltip(event, '&lt;strong&gt;Islamabad Land Area&lt;/strong&gt;&lt;br/&gt;906 km² (0.11%)')" onmouseleave="hideTooltip()" style="cursor:pointer;"></rect>
+              <text x="141.275" y="231" font-size="8.5" font-weight="700" fill="#d97706">0.11% Land</text>
+
+              <!-- Population Bar -->
+              <rect x="135" y="235" width="125" height="8" fill="#f1f5f9" rx="2"></rect>
+              <rect x="135" y="235" width="2.227272727272727" height="8" fill="#0f766e" rx="2" onmouseenter="showTooltip(event, '&lt;strong&gt;Islamabad Population&lt;/strong&gt;&lt;br/&gt;2,363,863 (0.98%)')" onmousemove="showTooltip(event, '&lt;strong&gt;Islamabad Population&lt;/strong&gt;&lt;br/&gt;2,363,863 (0.98%)')" onmouseleave="hideTooltip()" style="cursor:pointer;"></rect>
+              <text x="143.22727272727272" y="242" font-size="8.5" font-weight="700" fill="#0f766e">0.98% Pop</text>
+            
+            <g transform="translate(60, 280)">
+              <rect x="0" y="0" width="10" height="10" fill="#d97706" rx="2"></rect>
+              <text x="14" y="9" font-size="10.5" font-weight="600" fill="#334155">Land Share (%)</text>
+              <rect x="125" y="0" width="10" height="10" fill="#0f766e" rx="2"></rect>
+              <text x="139" y="9" font-size="10.5" font-weight="600" fill="#334155">Pop Share (%)</text>
+            </g>
+          </g>
+          
+  </g>
+
+  <!-- Key Insight Box -->
+  <rect x="40" y="510" width="720" height="48" fill="#f8fafc" rx="6" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="54" y="527" font-size="10" font-weight="800" fill="#073c3a">KEY POLICY INSIGHT:</text>
+  <text x="54" y="543" font-size="11" fill="#334155">Key Policy Takeaway: Balochistan spans 43.6% of Pakistan&apos;s territory (347,190 km²) but carries only 6.2% of the population (14.89M) at 42.9 people/km². Conversely, Punjab concentrates 52.9% of citizens (127.69M) on 25...</text>
+
+  <!-- Watermark Footer Banner (Two-Line Stacked: Zero Overlap) -->
+  <rect x="0" y="568" width="800" height="52" fill="#073c3a" rx="0"/>
+  <!-- Line 1: Primary Data Source (Full Canvas Width) -->
+  <text x="40" y="589" font-size="10.5" font-weight="500" fill="#99f6e4">Source: Pakistan Bureau of Statistics, 7th Population &amp; Housing Census 2023 Table 1</text>
+  <!-- Line 2: Institution Branding &amp; Canonical Domain -->
+  <text x="40" y="606" font-size="10.5" font-weight="700" fill="#ffffff">Pakistan Provincial Reform Institute (PPRI)</text>
+  <text x="760" y="606" font-size="10.5" font-weight="600" fill="#5eead4" text-anchor="end">ppripakistan.github.io</text>
+</svg>

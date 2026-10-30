@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="620" viewBox="0 0 800 620">
+  <defs>
+    <style>
+      text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+    </style>
+  </defs>
+
+  <rect width="800" height="620" fill="#ffffff" rx="10" stroke="#cbd5e1" stroke-width="1"/>
+  <rect width="800" height="6" fill="#0f766e" rx="4"/>
+
+  <!-- Top Header with Number Badge -->
+  <text x="40" y="38" font-size="11" font-weight="700" fill="#0f766e" letter-spacing="1">PAKISTAN PROVINCIAL REFORM INSTITUTE (PPRI) • INFOGRAPHIC 03 / 16 • TAX POLICY • REVENUE CONCESSIONS</text>
+  <text x="40" y="66" font-size="20" font-weight="800" fill="#073c3a">Federal Tax Concessions &amp; Revenue Foregone</text>
+  <text x="40" y="88" font-size="12" fill="#64748b">FBR revenue foregone across Sales Tax, Customs duties, and Income Tax concessions</text>
+  <line x1="40" y1="102" x2="760" y2="102" stroke="#e2e8f0" stroke-width="1.5"/>
+
+  <!-- Core Visual Graphics -->
+  <g transform="translate(83.33333333333331, 115) scale(1.0555555555555556)">
+    
+            <path d="M 145 70 A 110 110 0 1 1 139.39738300597944 289.85722863252244 L 141.68936268535148 244.915635101036 A 65 65 0 1 0 145 115 Z" fill="#0f766e" stroke="#ffffff" stroke-width="2" onmouseenter="showTooltip(event, '&lt;strong&gt;Sales Tax Exemptions&lt;/strong&gt;&lt;br/&gt;PKR 1,237.11 Billion (50.81%)')" onmousemove="showTooltip(event, '&lt;strong&gt;Sales Tax Exemptions&lt;/strong&gt;&lt;br/&gt;PKR 1,237.11 Billion (50.81%)')" onmouseleave="hideTooltip()" style="cursor:pointer;"></path><path d="M 139.39738300597944 289.85722863252244 A 110 110 0 0 1 36.47145726372656 162.06803380716795 L 80.86949747402025 169.40383815878107 A 65 65 0 0 0 141.68936268535148 244.915635101036 Z" fill="#d97706" stroke="#ffffff" stroke-width="2" onmouseenter="showTooltip(event, '&lt;strong&gt;Customs Concessions&lt;/strong&gt;&lt;br/&gt;PKR 652.39 Billion (26.8%)')" onmousemove="showTooltip(event, '&lt;strong&gt;Customs Concessions&lt;/strong&gt;&lt;br/&gt;PKR 652.39 Billion (26.8%)')" onmouseleave="hideTooltip()" style="cursor:pointer;"></path><path d="M 36.47145726372656 162.06803380716795 A 110 110 0 0 1 144.99999999999997 70 L 145 115 A 65 65 0 0 0 80.86949747402025 169.40383815878107 Z" fill="#e11d48" stroke="#ffffff" stroke-width="2" onmouseenter="showTooltip(event, '&lt;strong&gt;Income Tax Relief&lt;/strong&gt;&lt;br/&gt;PKR 545.23 Billion (22.39%)')" onmousemove="showTooltip(event, '&lt;strong&gt;Income Tax Relief&lt;/strong&gt;&lt;br/&gt;PKR 545.23 Billion (22.39%)')" onmouseleave="hideTooltip()" style="cursor:pointer;"></path>
+            <circle cx="145" cy="180" r="65" fill="#ffffff"></circle>
+            <text x="145" y="172" text-anchor="middle" font-size="10.5" font-weight="600" fill="#64748b">TAX REVENUE FOREGONE</text>
+            <text x="145" y="194" text-anchor="middle" font-size="15" font-weight="800" fill="#e11d48">PKR 2.43T</text>
+            <text x="145" y="208" text-anchor="middle" font-size="10" font-weight="600" fill="#073c3a">2.32% OF GDP</text>
+            
+            <g transform="translate(300, 45)">
+              <text x="0" y="0" font-size="13" font-weight="700" fill="#073c3a">Revenue Foregone vs Collection</text>
+
+              <text x="0" y="30" font-size="11.5" font-weight="600" fill="#334155">Total Foregone Tax (PKR 2,435B)</text>
+              <rect x="0" y="38" width="245" height="18" fill="#e11d48" rx="4"></rect>
+              <text x="250" y="52" font-size="11" font-weight="700" fill="#e11d48">26.2%</text>
+
+              <text x="0" y="84" font-size="11.5" font-weight="600" fill="#334155">Net Tax Collected (PKR 9,300B)</text>
+              <rect x="0" y="92" width="245" height="18" fill="#0f766e" rx="4"></rect>
+              <text x="250" y="106" font-size="11" font-weight="700" fill="#0f766e">100%</text>
+
+              <text x="0" y="142" font-size="12" font-weight="700" fill="#073c3a">Breakdown of Tax Concessions</text>
+
+              <!-- Entry 1: Sales Tax (Green) -->
+              <rect x="0" y="156" width="12" height="12" fill="#0f766e" rx="2"></rect>
+              <text x="18" y="166" font-size="11" fill="#475569">Sales Tax (6th Sched): <tspan font-weight="700" fill="#0f766e">PKR 1,237.1B (50.8%)</tspan></text>
+
+              <!-- Entry 2: Customs (Yellow) -->
+              <rect x="0" y="186" width="12" height="12" fill="#d97706" rx="2"></rect>
+              <text x="18" y="196" font-size="11" fill="#475569">Customs (5th Sched): <tspan font-weight="700" fill="#d97706">PKR 652.4B (26.8%)</tspan></text>
+
+              <!-- Entry 3: Income Tax (Red) -->
+              <rect x="0" y="216" width="12" height="12" fill="#e11d48" rx="2"></rect>
+              <text x="18" y="226" font-size="11" fill="#475569">Income Tax (2nd Sched): <tspan font-weight="700" fill="#e11d48">PKR 545.2B (22.4%)</tspan></text>
+            </g>
+          
+          
+  </g>
+
+  <!-- Key Insight Box -->
+  <rect x="40" y="510" width="720" height="48" fill="#f8fafc" rx="6" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="54" y="527" font-size="10" font-weight="800" fill="#073c3a">KEY POLICY INSIGHT:</text>
+  <text x="54" y="543" font-size="11" fill="#334155">Key Policy Takeaway: Total federal tax concessions reach PKR 2,434.7B (2.32% of GDP), equivalent to 26.2% of actual tax collection. Sales tax exemptions under 6th Schedule represent over half of all foregone revenues....</text>
+
+  <!-- Watermark Footer Banner (Two-Line Stacked: Zero Overlap) -->
+  <rect x="0" y="568" width="800" height="52" fill="#073c3a" rx="0"/>
+  <!-- Line 1: Primary Data Source (Full Canvas Width) -->
+  <text x="40" y="589" font-size="10.5" font-weight="500" fill="#99f6e4">Source: Federal Board of Revenue (FBR), Tax Expenditure Report 2025</text>
+  <!-- Line 2: Institution Branding &amp; Canonical Domain -->
+  <text x="40" y="606" font-size="10.5" font-weight="700" fill="#ffffff">Pakistan Provincial Reform Institute (PPRI)</text>
+  <text x="760" y="606" font-size="10.5" font-weight="600" fill="#5eead4" text-anchor="end">ppripakistan.github.io</text>
+</svg>

@@ -1,0 +1,7 @@
+﻿geography_id,geography_name,population_2023,population_male,population_female,population_transgender,male_share_pct,female_share_pct,transgender_share_pct,sex_ratio,area_sqkm,land_area_share_pct,population_share_pct,density_per_sqkm,source_citation
+PK,Pakistan,241499431,124324294,117154947,20190,51.48,48.51,0.01,106.12,796096.0,100.0,100.0,303.35,PBS Digital Census 2023 Table 1
+PK-PB,Punjab,127688922,64306472,63371460,10990,50.36,49.63,0.01,101.48,205345.0,25.79,52.87,621.83,PBS Digital Census 2023 Table 1
+PK-SD,Sindh,55696147,28849271,26842476,4400,51.8,48.19,0.01,107.48,140914.0,17.7,23.06,395.25,PBS Digital Census 2023 Table 1
+PK-KP,Khyber Pakhtunkhwa,40856097,20637458,20215823,2816,50.51,49.48,0.01,102.09,101741.0,12.78,16.92,401.57,PBS Digital Census 2023 Table 1
+PK-BA,Balochistan,14894402,7752385,7141180,837,52.05,47.95,0.01,108.56,347190.0,43.61,6.17,42.9,PBS Digital Census 2023 Table 1
+PK-IS,Islamabad,2363863,1228891,1134679,293,51.99,48.0,0.01,108.3,906.0,0.11,0.98,2609.12,PBS Digital Census 2023 Table 1

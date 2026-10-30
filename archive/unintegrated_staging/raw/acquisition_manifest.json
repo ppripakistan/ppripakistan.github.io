@@ -1,0 +1,1004 @@
+{
+  "Q-29": {
+    "resource_id": "Q-29",
+    "title": "World Bank Indicators API: Pakistan Macroeconomic Series",
+    "grade": "A2",
+    "topic": "Macroeconomics / API",
+    "landing_page": "https://data.worldbank.org/country/pakistan",
+    "status": "DOWNLOADED",
+    "last_run": "2026-10-29T00:26:21Z",
+    "files": [
+      {
+        "label": "Direct Link",
+        "format": "API",
+        "url": "https://api.worldbank.org/v2/country/PAK/indicator/NY.GDP.MKTP.CD?format=json",
+        "filename": "NY.GDP.MKTP.CD",
+        "relative_path": "data/raw/Q-29/NY.GDP.MKTP.CD",
+        "bytes": 10486,
+        "sha256": "53eba8a54cce1abc1386148ba08fb6e8822e176966168c3dd06669261cc4c5e6",
+        "timestamp": "2026-10-28T23:48:05Z",
+        "status": "DOWNLOADED"
+      },
+      {
+        "label": "GDP Growth Annual %",
+        "format": "API",
+        "url": "https://api.worldbank.org/v2/country/PAK/indicator/NY.GDP.MKTP.KD.ZG?format=json",
+        "filename": "NY.GDP.MKTP.KD.ZG",
+        "relative_path": "data/raw/Q-29/NY.GDP.MKTP.KD.ZG",
+        "bytes": 10838,
+        "sha256": "6f8a54bfd5fdf1658656e3ecad57a7c0f85aea17385b6ffca6257d95f411d037",
+        "timestamp": "2026-10-29T00:26:15Z",
+        "status": "DOWNLOADED"
+      },
+      {
+        "label": "Inflation Consumer Prices %",
+        "format": "API",
+        "url": "https://api.worldbank.org/v2/country/PAK/indicator/FP.CPI.TOTL.ZG?format=json",
+        "filename": "FP.CPI.TOTL.ZG",
+        "relative_path": "data/raw/Q-29/FP.CPI.TOTL.ZG",
+        "bytes": 11488,
+        "sha256": "c91665af532cf563a14bedc75ff79ad9d060ac10271533cd71f31377ecd73300",
+        "timestamp": "2026-10-29T00:26:18Z",
+        "status": "DOWNLOADED"
+      },
+      {
+        "label": "Population Total",
+        "format": "API",
+        "url": "https://api.worldbank.org/v2/country/PAK/indicator/SP.POP.TOTL?format=json",
+        "filename": "SP.POP.TOTL",
+        "relative_path": "data/raw/Q-29/SP.POP.TOTL",
+        "bytes": 9981,
+        "sha256": "c87319c21f1375652d414d8f74e887b40708ecb64978acafbca0dc9087d205bc",
+        "timestamp": "2026-10-29T00:26:19Z",
+        "status": "DOWNLOADED"
+      },
+      {
+        "label": "Exports of Goods & Services % of GDP",
+        "format": "API",
+        "url": "https://api.worldbank.org/v2/country/PAK/indicator/NE.EXP.GNFS.ZS?format=json",
+        "filename": "NE.EXP.GNFS.ZS",
+        "relative_path": "data/raw/Q-29/NE.EXP.GNFS.ZS",
+        "bytes": 11633,
+        "sha256": "7e1605a8d715c4b92c0423fd5c787df5816c7724a87b6f9c40514e1fbd67cfca",
+        "timestamp": "2026-10-29T00:26:21Z",
+        "status": "DOWNLOADED"
+      }
+    ]
+  },
+  "Q-03": {
+    "resource_id": "Q-03",
+    "title": "PBS Population & Housing Census 2023 Table 1 District Workbooks",
+    "grade": "A1",
+    "topic": "Population / Census",
+    "landing_page": "https://www.pbs.gov.pk/census/",
+    "status": "DOWNLOADED",
+    "last_run": "2026-10-29T00:26:06Z",
+    "files": [
+      {
+        "label": "National Table 1",
+        "format": "Excel",
+        "url": "https://www.pbs.gov.pk/wp-content/uploads/2020/07/table_1_national.xlsx",
+        "filename": "table_1_national.xlsx",
+        "relative_path": "data/raw/Q-03/table_1_national.xlsx",
+        "bytes": 12843,
+        "sha256": "a15954fb456881e7cdb3cd02692183f949a6b46085a9ca8a0df18bb970b62fc6",
+        "timestamp": "2026-10-29T00:25:51Z",
+        "status": "DOWNLOADED"
+      },
+      {
+        "label": "Punjab Districts Table 1",
+        "format": "Excel",
+        "url": "https://www.pbs.gov.pk/wp-content/uploads/2020/07/table_1_punjab_districts.xlsx",
+        "filename": "table_1_punjab_districts.xlsx",
+        "relative_path": "data/raw/Q-03/table_1_punjab_districts.xlsx",
+        "bytes": 69003,
+        "sha256": "e082a05c5485908a3fba22392ae222db084458842e26704b4193352ed768a074",
+        "timestamp": "2026-10-29T00:25:52Z",
+        "status": "DOWNLOADED"
+      },
+      {
+        "label": "Sindh Districts Table 1",
+        "format": "Excel",
+        "url": "https://www.pbs.gov.pk/wp-content/uploads/2020/07/table_1_sindh_districts.xlsx",
+        "filename": "table_1_sindh_districts.xlsx",
+        "relative_path": "data/raw/Q-03/table_1_sindh_districts.xlsx",
+        "bytes": 62483,
+        "sha256": "082e7a735e782ece2380d50f204ee29b1b0222fddbcd772b3d80c073b1757734",
+        "timestamp": "2026-10-29T00:25:53Z",
+        "status": "DOWNLOADED"
+      },
+      {
+        "label": "Khyber Pakhtunkhwa Districts Table 1",
+        "format": "Excel",
+        "url": "https://www.pbs.gov.pk/wp-content/uploads/2020/07/table_1_kp_districts.xlsx",
+        "filename": "table_1_kp_districts.xlsx",
+        "relative_path": "data/raw/Q-03/table_1_kp_districts.xlsx",
+        "bytes": 62461,
+        "sha256": "8c869da97389e7dd4b58ff59b9fc249acab4578197125ce66f028c8a72e4c432",
+        "timestamp": "2026-10-29T00:25:55Z",
+        "status": "DOWNLOADED"
+      },
+      {
+        "label": "Balochistan Districts Table 1",
+        "format": "Excel",
+        "url": "https://www.pbs.gov.pk/wp-content/uploads/2020/07/table_1_balochistan_districts.xlsx",
+        "filename": "table_1_balochistan_districts.xlsx",
+        "relative_path": "data/raw/Q-03/table_1_balochistan_districts.xlsx",
+        "bytes": 61693,
+        "sha256": "318c7182f180b83aa272a9087ed8f62cb3712f85e2f2958c14291ad9a7b797db",
+        "timestamp": "2026-10-29T00:25:56Z",
+        "status": "DOWNLOADED"
+      },
+      {
+        "label": "Islamabad Table 1",
+        "format": "Excel",
+        "url": "https://www.pbs.gov.pk/wp-content/uploads/2020/07/table_1_islamabad.xlsx",
+        "filename": "table_1_islamabad.xlsx",
+        "relative_path": "data/raw/Q-03/table_1_islamabad.xlsx",
+        "bytes": 15913,
+        "sha256": "99faf74186fd0c7699ba5df008ed927f5cb4533383715785aad0e23d5e1b22b5",
+        "timestamp": "2026-10-29T00:25:56Z",
+        "status": "DOWNLOADED"
+      }
+    ]
+  },
+  "Q-11": {
+    "resource_id": "Q-11",
+    "title": "Pakistan Economic Survey 2025–26 Full Report",
+    "grade": "A1",
+    "topic": "Macroeconomics / Annual report",
+    "landing_page": "https://www.finance.gov.pk/survey_2026.html",
+    "status": "DOWNLOADED",
+    "last_run": "2026-10-29T00:26:27Z",
+    "files": [
+      {
+        "label": "Complete PES 2025-26 PDF",
+        "format": "PDF",
+        "url": "https://finance.gov.pk/survey/chapter_26/Complete_PES2025_26.pdf",
+        "filename": "Complete_PES2025_26.pdf",
+        "relative_path": "data/raw/Q-11/Complete_PES2025_26.pdf",
+        "bytes": 56123901,
+        "sha256": "d327196503b22c18cb3001717c4e23ec8a327eea8f8c10fbf3f8f0180457cf6b",
+        "timestamp": "2026-10-29T00:26:27Z",
+        "status": "DOWNLOADED"
+      }
+    ]
+  },
+  "Q-01": {
+    "resource_id": "Q-01",
+    "title": "HIES 2024–25: microdata, questionnaires, manuals and reports",
+    "grade": "A1",
+    "topic": "Households / Poverty",
+    "landing_page": "https://www.pbs.gov.pk/hies/",
+    "status": "DOWNLOADED",
+    "last_run": "2026-10-29T03:11:42Z",
+    "files": [
+      {
+        "label": "SPSS ZIP",
+        "format": "ZIP",
+        "url": "https://www.pbs.gov.pk/wp-content/uploads/2020/07/SPSS-data-2.zip",
+        "filename": "SPSS-data-2.zip",
+        "relative_path": "data/raw/Q-01/SPSS-data-2.zip",
+        "bytes": 46095824,
+        "sha256": "90d25be614280f841e3d5d03cdff3b169ceb1c54cbac906ce3bc83b34a617545",
+        "timestamp": "2026-10-29T03:11:09Z",
+        "status": "DOWNLOADED"
+      },
+      {
+        "label": "Stata ZIP",
+        "format": "ZIP",
+        "url": "https://www.pbs.gov.pk/wp-content/uploads/2020/07/Stata-data-1.zip",
+        "filename": "Stata-data-1.zip",
+        "relative_path": "data/raw/Q-01/Stata-data-1.zip",
+        "bytes": 30707090,
+        "sha256": "cf1286dc00cfc325df7a51fab64b8baecc4f6b62e015742e229bf299760898cc",
+        "timestamp": "2026-10-29T03:11:29Z",
+        "status": "DOWNLOADED"
+      },
+      {
+        "label": "Full report PDF",
+        "format": "PDF",
+        "url": "https://www.pbs.gov.pk/wp-content/uploads/2020/07/HIES-2024-25-Report-Final-2.pdf",
+        "filename": "HIES-2024-25-Report-Final-2.pdf",
+        "relative_path": "data/raw/Q-01/HIES-2024-25-Report-Final-2.pdf",
+        "bytes": 803344,
+        "sha256": "02d2f4f3feeecd25e2aee15bf6f90fde5997904548764fc12679a78729409885",
+        "timestamp": "2026-10-29T03:11:32Z",
+        "status": "DOWNLOADED"
+      },
+      {
+        "label": "Social indicators PDF",
+        "format": "PDF",
+        "url": "https://www.pbs.gov.pk/wp-content/uploads/2020/07/HIES_Report_2024-25-Social-indicators-Reportupdated.pdf",
+        "filename": "HIES_Report_2024-25-Social-indicators-Reportupdated.pdf",
+        "relative_path": "data/raw/Q-01/HIES_Report_2024-25-Social-indicators-Reportupdated.pdf",
+        "bytes": 12879554,
+        "sha256": "824e61f4b7c1c83460565a1986108b228e8cb727efc39307b618ab66788c57bf",
+        "timestamp": "2026-10-29T03:11:42Z",
+        "status": "DOWNLOADED"
+      }
+    ]
+  },
+  "Q-02": {
+    "resource_id": "Q-02",
+    "title": "Labour Force Survey 2024–25 microdata, report and documentation",
+    "grade": "A1",
+    "topic": "Labour / Jobs",
+    "landing_page": "https://www.pbs.gov.pk/labour-force-statistics/",
+    "status": "DOWNLOADED",
+    "last_run": "2026-10-29T03:12:03Z",
+    "files": [
+      {
+        "label": "Stata ZIP",
+        "format": "ZIP",
+        "url": "https://www.pbs.gov.pk/wp-content/uploads/2020/07/LFS-2024-25-STATA.zip",
+        "filename": "LFS-2024-25-STATA.zip",
+        "relative_path": "data/raw/Q-02/LFS-2024-25-STATA.zip",
+        "bytes": 9243553,
+        "sha256": "9757b798cdf8d7bc8322e28c9452fb1f7825b3e547410cbd53c6089a5ae7c363",
+        "timestamp": "2026-10-29T03:11:51Z",
+        "status": "DOWNLOADED"
+      },
+      {
+        "label": "SPSS ZIP",
+        "format": "ZIP",
+        "url": "https://www.pbs.gov.pk/wp-content/uploads/2020/07/LFS-2024-25-SPSS.zip",
+        "filename": "LFS-2024-25-SPSS.zip",
+        "relative_path": "data/raw/Q-02/LFS-2024-25-SPSS.zip",
+        "bytes": 5018790,
+        "sha256": "cae820de237f3ba970c9d7ff106775f6784562d68a187f0cdc237842c8bc2376",
+        "timestamp": "2026-10-29T03:12:02Z",
+        "status": "DOWNLOADED"
+      },
+      {
+        "label": "Report, questionnaire, codebook and classifications",
+        "format": "Web",
+        "url": "https://www.pbs.gov.pk/labour-force-publications/",
+        "filename": "labour-force-publications.html",
+        "relative_path": "data/raw/Q-02/labour-force-publications.html",
+        "bytes": 237121,
+        "sha256": "40d555d6ae6799babda63825d88cd6fdb74217214c7954ec74b1b476fa6a7116",
+        "timestamp": "2026-10-29T03:12:03Z",
+        "status": "DOWNLOADED"
+      }
+    ]
+  },
+  "Q-04": {
+    "resource_id": "Q-04",
+    "title": "Agricultural Census 2024 report and national Excel tables",
+    "grade": "A1",
+    "topic": "Agriculture / Land",
+    "landing_page": "https://www.pbs.gov.pk/agriculture-census/",
+    "status": "DOWNLOADED",
+    "last_run": "2026-10-29T03:12:08Z",
+    "files": [
+      {
+        "label": "Country report PDF",
+        "format": "PDF",
+        "url": "https://www.pbs.gov.pk/wp-content/uploads/2020/07/IAC-Country-Report-02-06-2026-2.pdf",
+        "filename": "IAC-Country-Report-02-06-2026-2.pdf",
+        "relative_path": "data/raw/Q-04/IAC-Country-Report-02-06-2026-2.pdf",
+        "bytes": 6344155,
+        "sha256": "4cf1c3a23cb11acde4bb7bc20d05435d193500bee384576e17742e3cc686c902",
+        "timestamp": "2026-10-29T03:12:06Z",
+        "status": "DOWNLOADED"
+      },
+      {
+        "label": "Official table index",
+        "format": "Web",
+        "url": "https://www.pbs.gov.pk/agriculture-census/",
+        "filename": "agriculture-census.html",
+        "relative_path": "data/raw/Q-04/agriculture-census.html",
+        "bytes": 1658475,
+        "sha256": "af038f13d3d5587541c46b2ae718ca3eff03a3ea09b41efd6e0c0b4e8965e6e1",
+        "timestamp": "2026-10-29T03:12:08Z",
+        "status": "DOWNLOADED"
+      }
+    ]
+  },
+  "Q-05": {
+    "resource_id": "Q-05",
+    "title": "Economic Census 2023: establishments and workforce tables",
+    "grade": "A1",
+    "topic": "Business / Firms / Jobs",
+    "landing_page": "https://www.pbs.gov.pk/pakistan-bureau-of-statistics-economic-statistics-production/",
+    "status": "DOWNLOADED",
+    "last_run": "2026-10-29T03:12:10Z",
+    "files": [
+      {
+        "label": "Official results/table landing page",
+        "format": "Web",
+        "url": "https://www.pbs.gov.pk/pakistan-bureau-of-statistics-economic-statistics-production/",
+        "filename": "pakistan-bureau-of-statistics-economic-statistics-production.html",
+        "relative_path": "data/raw/Q-05/pakistan-bureau-of-statistics-economic-statistics-production.html",
+        "bytes": 274957,
+        "sha256": "a4829bd269f0dd87b2dc77e87dba3166093fe7d5ff97b87639e7a3f051806e5e",
+        "timestamp": "2026-10-29T03:12:10Z",
+        "status": "DOWNLOADED"
+      }
+    ]
+  },
+  "Q-06": {
+    "resource_id": "Q-06",
+    "title": "PBS annual and quarterly national accounts tables",
+    "grade": "A1",
+    "topic": "National accounts / GDP",
+    "landing_page": "https://www.pbs.gov.pk/national-accounts-2/",
+    "status": "DOWNLOADED",
+    "last_run": "2026-10-29T03:12:11Z",
+    "files": [
+      {
+        "label": "Official National Accounts tables",
+        "format": "Web",
+        "url": "https://www.pbs.gov.pk/national-accounts-2/",
+        "filename": "national-accounts-2.html",
+        "relative_path": "data/raw/Q-06/national-accounts-2.html",
+        "bytes": 393388,
+        "sha256": "dff33cde05235dbbe925d46bb86b343e3a46857e9b246dcd53737aebea64e262",
+        "timestamp": "2026-10-29T03:12:11Z",
+        "status": "DOWNLOADED"
+      }
+    ]
+  },
+  "Q-07": {
+    "resource_id": "Q-07",
+    "title": "PBS monthly Consumer Price Index (CPI) releases and annexures",
+    "grade": "A1",
+    "topic": "Prices / Inflation",
+    "landing_page": "https://www.pbs.gov.pk/price-statistics/",
+    "status": "DOWNLOADED",
+    "last_run": "2026-10-29T03:12:12Z",
+    "files": [
+      {
+        "label": "CPI releases, annexures and tables",
+        "format": "Web",
+        "url": "https://www.pbs.gov.pk/price-statistics/",
+        "filename": "price-statistics.html",
+        "relative_path": "data/raw/Q-07/price-statistics.html",
+        "bytes": 342419,
+        "sha256": "040bd39c7cebe970977aaf8f6b90eb5956ebe37f4d7709d5fbe660aff72f7a9f",
+        "timestamp": "2026-10-29T03:12:12Z",
+        "status": "DOWNLOADED"
+      }
+    ]
+  },
+  "Q-08": {
+    "resource_id": "Q-08",
+    "title": "PBS weekly Sensitive Price Indicator (SPI)",
+    "grade": "A1",
+    "topic": "Prices / Inflation",
+    "landing_page": "https://www.pbs.gov.pk/price-statistics/",
+    "status": "DOWNLOADED",
+    "last_run": "2026-10-29T03:12:14Z",
+    "files": [
+      {
+        "label": "Weekly SPI releases and tables",
+        "format": "Web",
+        "url": "https://www.pbs.gov.pk/price-statistics/",
+        "filename": "price-statistics.html",
+        "relative_path": "data/raw/Q-08/price-statistics.html",
+        "bytes": 342419,
+        "sha256": "765ecf8b692afcd376e1f147aec8e12d89d2a5e54a7e9ff9be0c18e2af24ec35",
+        "timestamp": "2026-10-29T03:12:14Z",
+        "status": "DOWNLOADED"
+      }
+    ]
+  },
+  "Q-09": {
+    "resource_id": "Q-09",
+    "title": "PBS Wholesale Price Index (WPI)",
+    "grade": "A1",
+    "topic": "Prices / Inflation",
+    "landing_page": "https://www.pbs.gov.pk/price-statistics/",
+    "status": "DOWNLOADED",
+    "last_run": "2026-10-29T03:12:16Z",
+    "files": [
+      {
+        "label": "WPI releases and tables",
+        "format": "Web",
+        "url": "https://www.pbs.gov.pk/price-statistics/",
+        "filename": "price-statistics.html",
+        "relative_path": "data/raw/Q-09/price-statistics.html",
+        "bytes": 342419,
+        "sha256": "c2c2af7bfac8eec140fbc6a335173a95fb97fd7b687268e7eb770911d3aa13a1",
+        "timestamp": "2026-10-29T03:12:16Z",
+        "status": "DOWNLOADED"
+      }
+    ]
+  },
+  "Q-10": {
+    "resource_id": "Q-10",
+    "title": "PBS external trade statistics and monthly commodity files",
+    "grade": "A1",
+    "topic": "Trade / Industry",
+    "landing_page": "https://www.pbs.gov.pk/external-trade-statistics/",
+    "status": "DOWNLOADED",
+    "last_run": "2026-10-29T03:12:17Z",
+    "files": [
+      {
+        "label": "Monthly import/export XLSX and archive",
+        "format": "Web",
+        "url": "https://www.pbs.gov.pk/external-trade-statistics/",
+        "filename": "external-trade-statistics.html",
+        "relative_path": "data/raw/Q-10/external-trade-statistics.html",
+        "bytes": 646870,
+        "sha256": "2c49099c73ac3dcf5377847ee052b1d80addd27c541afb51776b1ed345ad0ea2",
+        "timestamp": "2026-10-29T03:12:17Z",
+        "status": "DOWNLOADED"
+      }
+    ]
+  },
+  "Q-12": {
+    "resource_id": "Q-12",
+    "title": "Pakistan Economy Dashboard",
+    "grade": "A1",
+    "topic": "Macroeconomics / Interactive dashboard",
+    "landing_page": "https://economy.finance.gov.pk/",
+    "status": "DOWNLOADED",
+    "last_run": "2026-10-29T03:12:18Z",
+    "files": [
+      {
+        "label": "Interactive dashboard",
+        "format": "Web",
+        "url": "https://economy.finance.gov.pk/",
+        "filename": "Interactive dashboard.html",
+        "relative_path": "data/raw/Q-12/Interactive dashboard.html",
+        "bytes": 1593,
+        "sha256": "cb20e3725a6055622e2b3af97f88a121f0eca6654b0c98d39d1d38f219369ccb",
+        "timestamp": "2026-10-29T03:12:18Z",
+        "status": "DOWNLOADED"
+      }
+    ]
+  },
+  "Q-13": {
+    "resource_id": "Q-13",
+    "title": "SBP EasyData economic time-series portal",
+    "grade": "A1",
+    "topic": "Official finance / Monetary",
+    "landing_page": "https://easydata.sbp.org.pk/",
+    "status": "PARTIAL_OR_ERROR",
+    "last_run": "2026-10-29T03:12:18Z",
+    "files": [
+      {
+        "label": "Portal",
+        "format": "Web",
+        "url": "https://easydata.sbp.org.pk/",
+        "filename": "Portal.html",
+        "status": "ERROR",
+        "error": "HTTP Error 403: Forbidden",
+        "timestamp": "2026-10-29T03:12:18Z"
+      },
+      {
+        "label": "Series browser/catalog",
+        "format": "Web",
+        "url": "https://easydata.sbp.org.pk/apex/f?p=10:210",
+        "filename": "f.html",
+        "status": "ERROR",
+        "error": "HTTP Error 403: Forbidden",
+        "timestamp": "2026-10-29T03:12:18Z"
+      }
+    ]
+  },
+  "Q-14": {
+    "resource_id": "Q-14",
+    "title": "Pakistan Demographic Survey 2020 microdata",
+    "grade": "A1",
+    "topic": "Population / Vital statistics",
+    "landing_page": "https://www.pbs.gov.pk/pds/",
+    "status": "DOWNLOADED",
+    "last_run": "2026-10-29T03:12:20Z",
+    "files": [
+      {
+        "label": "Microdata/report/questions",
+        "format": "Web",
+        "url": "https://www.pbs.gov.pk/pds/",
+        "filename": "pds.html",
+        "relative_path": "data/raw/Q-14/pds.html",
+        "bytes": 245373,
+        "sha256": "f62f7f51d6676ae764491f4bccdf182bbb9401fb248ed08407a7f9006439a12b",
+        "timestamp": "2026-10-29T03:12:20Z",
+        "status": "DOWNLOADED"
+      }
+    ]
+  },
+  "Q-15": {
+    "resource_id": "Q-15",
+    "title": "NIPS public microdata catalogue",
+    "grade": "A1",
+    "topic": "Population / Health",
+    "landing_page": "https://www.nips.org.pk/viewpublicdata",
+    "status": "DOWNLOADED",
+    "last_run": "2026-10-29T03:12:21Z",
+    "files": [
+      {
+        "label": "Direct Link",
+        "format": "Web",
+        "url": "https://www.nips.org.pk/viewpublicdata",
+        "filename": "viewpublicdata.html",
+        "relative_path": "data/raw/Q-15/viewpublicdata.html",
+        "bytes": 34732,
+        "sha256": "51465096bdc74b7c6500ad2a8dd5d458bcdb117b9fafd905c20ba025cbcaa2bb",
+        "timestamp": "2026-10-29T03:12:21Z",
+        "status": "DOWNLOADED"
+      }
+    ]
+  },
+  "Q-16": {
+    "resource_id": "Q-16",
+    "title": "Punjab Publications and Datasets catalogue",
+    "grade": "A1",
+    "topic": "Provincial / Multi-sector",
+    "landing_page": "https://bos.punjab.gov.pk/dataset",
+    "status": "DOWNLOADED",
+    "last_run": "2026-10-29T03:12:25Z",
+    "files": [
+      {
+        "label": "Dataset catalogue",
+        "format": "Web",
+        "url": "https://bos.punjab.gov.pk/dataset",
+        "filename": "dataset.html",
+        "relative_path": "data/raw/Q-16/dataset.html",
+        "bytes": 94937,
+        "sha256": "ede603633aa3343e41800107a42c2b63288a3af910efc9512905d05f04d585ac",
+        "timestamp": "2026-10-29T03:12:22Z",
+        "status": "DOWNLOADED"
+      },
+      {
+        "label": "MICS survey page",
+        "format": "Web",
+        "url": "https://bos.punjab.gov.pk/index.php/mics",
+        "filename": "mics.html",
+        "relative_path": "data/raw/Q-16/mics.html",
+        "bytes": 86151,
+        "sha256": "5342547b10cb0f860e1d89b31dfeae129c5436b72d4e10a76319a929883e3e30",
+        "timestamp": "2026-10-29T03:12:25Z",
+        "status": "DOWNLOADED"
+      }
+    ]
+  },
+  "Q-17": {
+    "resource_id": "Q-17",
+    "title": "Punjab Multiple Indicator Cluster Survey (MICS) 2024 and older waves",
+    "grade": "A1",
+    "topic": "Child / Gender / Health",
+    "landing_page": "https://bos.punjab.gov.pk/index.php/mics",
+    "status": "PARTIAL_OR_ERROR",
+    "last_run": "2026-10-29T03:12:26Z",
+    "files": [
+      {
+        "label": "Direct Link",
+        "format": "PDF",
+        "url": "https://mics.unicef.org/sites/mics/files/2025-01/Pakistan%202024%20MICS%20%28Punjab%29%20KFR.pdf",
+        "filename": "Pakistan_202024_20MICS_20_28Punjab_29_20KFR.pdf",
+        "status": "ERROR",
+        "error": "HTTP Error 403: Forbidden",
+        "timestamp": "2026-10-29T03:12:26Z"
+      }
+    ]
+  },
+  "Q-18": {
+    "resource_id": "Q-18",
+    "title": "Pakistan Education Statistics 2023–24 and archives",
+    "grade": "A1",
+    "topic": "Education / Schools",
+    "landing_page": "https://pie.gov.pk/Publications",
+    "status": "DOWNLOADED",
+    "last_run": "2026-10-29T03:12:49Z",
+    "files": [
+      {
+        "label": "Direct Link",
+        "format": "Web",
+        "url": "https://pie.gov.pk/Publications",
+        "filename": "Publications.html",
+        "relative_path": "data/raw/Q-18/Publications.html",
+        "bytes": 187840,
+        "sha256": "7798761cf65c4c0be835234cfb4c0597491d526a70f7c963fb146b552cfde2d0",
+        "timestamp": "2026-10-29T03:12:49Z",
+        "status": "DOWNLOADED"
+      }
+    ]
+  },
+  "Q-19": {
+    "resource_id": "Q-19",
+    "title": "School and student profiles / Education Management Information System (EMIS)",
+    "grade": "A1",
+    "topic": "Education / School administration",
+    "landing_page": "https://www.emis.gob.pk/website/CensusProfiles.aspx",
+    "status": "DOWNLOADED",
+    "last_run": "2026-10-29T03:12:50Z",
+    "files": [
+      {
+        "label": "Direct Link",
+        "format": "Web",
+        "url": "https://www.emis.gob.pk/website/CensusProfiles.aspx",
+        "filename": "CensusProfiles.aspx",
+        "relative_path": "data/raw/Q-19/CensusProfiles.aspx",
+        "bytes": 67671,
+        "sha256": "4342bc2ad02a19629abe7306d716f07ad58508d9b783933a407c372e4cffbb6a",
+        "timestamp": "2026-10-29T03:12:50Z",
+        "status": "DOWNLOADED"
+      }
+    ]
+  },
+  "Q-20": {
+    "resource_id": "Q-20",
+    "title": "Pakistan poverty estimation 2024–25",
+    "grade": "A1",
+    "topic": "Poverty / Official estimate",
+    "landing_page": "https://pc.gov.pk/web/sdgreport",
+    "status": "DOWNLOADED",
+    "last_run": "2026-10-29T03:13:33Z",
+    "files": [
+      {
+        "label": "Official report library",
+        "format": "Web",
+        "url": "https://pc.gov.pk/web/sdgreport",
+        "filename": "sdgreport.html",
+        "relative_path": "data/raw/Q-20/sdgreport.html",
+        "bytes": 142631,
+        "sha256": "cef862ed1808c97fbbdb08925a8038928ba9c8517194c40e680066e1e9e44309",
+        "timestamp": "2026-10-29T03:13:11Z",
+        "status": "DOWNLOADED"
+      },
+      {
+        "label": "Other publications",
+        "format": "Web",
+        "url": "https://pc.gov.pk/web/publication",
+        "filename": "publication.html",
+        "relative_path": "data/raw/Q-20/publication.html",
+        "bytes": 335076,
+        "sha256": "c0e358a1153488b0e09f0175ec0512317fd803f8e733084b39208904f57ce088",
+        "timestamp": "2026-10-29T03:13:33Z",
+        "status": "DOWNLOADED"
+      }
+    ]
+  },
+  "Q-21": {
+    "resource_id": "Q-21",
+    "title": "World Bank Enterprise Survey 2022 — Pakistan firm-level dataset",
+    "grade": "A2",
+    "topic": "Business / Jobs",
+    "landing_page": "https://microdata.worldbank.org/catalog/6461",
+    "status": "DOWNLOADED",
+    "last_run": "2026-10-29T03:13:34Z",
+    "files": [
+      {
+        "label": "Direct Link",
+        "format": "Web",
+        "url": "https://www.enterprisesurveys.org/en/data",
+        "filename": "data.html",
+        "relative_path": "data/raw/Q-21/data.html",
+        "bytes": 128270,
+        "sha256": "3fba28d507da6842a229298ebd672f1322408a350aa3fc513c752223700721b5",
+        "timestamp": "2026-10-29T03:13:34Z",
+        "status": "DOWNLOADED"
+      }
+    ]
+  },
+  "Q-22": {
+    "resource_id": "Q-22",
+    "title": "Global Findex Database 2025 — downloadable data",
+    "grade": "A2",
+    "topic": "Digitalization / Gender / Finance",
+    "landing_page": "https://www.worldbank.org/en/publication/globalfindex/download-data",
+    "status": "DOWNLOADED",
+    "last_run": "2026-10-29T03:13:34Z",
+    "files": [
+      {
+        "label": "Direct Link",
+        "format": "Web",
+        "url": "https://www.worldbank.org/en/publication/globalfindex/download-data",
+        "filename": "download-data.html",
+        "relative_path": "data/raw/Q-22/download-data.html",
+        "bytes": 42052,
+        "sha256": "164c033d864184f9428d9342a9363fa43543566c32bb29f3fe15dcab16cb39dd",
+        "timestamp": "2026-10-29T03:13:34Z",
+        "status": "DOWNLOADED"
+      }
+    ]
+  },
+  "Q-23": {
+    "resource_id": "Q-23",
+    "title": "ILOSTAT bulk data download",
+    "grade": "A2",
+    "topic": "Labour / Jobs / Bulk files",
+    "landing_page": "https://ilostat.ilo.org/data/bulk/",
+    "status": "PARTIAL_OR_ERROR",
+    "last_run": "2026-10-29T03:13:35Z",
+    "files": [
+      {
+        "label": "Direct Link",
+        "format": "Web",
+        "url": "https://ilostat.ilo.org/data/bulk/",
+        "filename": "bulk.html",
+        "status": "ERROR",
+        "error": "HTTP Error 403: Forbidden",
+        "timestamp": "2026-10-29T03:13:35Z"
+      }
+    ]
+  },
+  "Q-24": {
+    "resource_id": "Q-24",
+    "title": "World Bank Microdata Library — Pakistan study catalogue",
+    "grade": "A2",
+    "topic": "Microdata catalogue / Surveys",
+    "landing_page": "https://microdata.worldbank.org/catalog/?country%5B%5D=pakistan&page=1",
+    "status": "DOWNLOADED",
+    "last_run": "2026-10-29T03:13:38Z",
+    "files": [
+      {
+        "label": "Direct Link",
+        "format": "Web",
+        "url": "https://microdata.worldbank.org/catalog/?country%5B%5D=pakistan&page=1",
+        "filename": "catalog.html",
+        "relative_path": "data/raw/Q-24/catalog.html",
+        "bytes": 374402,
+        "sha256": "545e77acf0e3330b5bdb107e99ac7a3b7c489e3776d2a12a9a359a9654d8c972",
+        "timestamp": "2026-10-29T03:13:38Z",
+        "status": "DOWNLOADED"
+      }
+    ]
+  },
+  "Q-25": {
+    "resource_id": "Q-25",
+    "title": "UNICEF Multiple Indicator Cluster Surveys (MICS) data portal",
+    "grade": "A2",
+    "topic": "Children / Household survey",
+    "landing_page": "https://mics.unicef.org/",
+    "status": "DOWNLOADED",
+    "last_run": "2026-10-29T03:13:40Z",
+    "files": [
+      {
+        "label": "Direct Link",
+        "format": "Web",
+        "url": "https://mics.unicef.org/",
+        "filename": "Direct Link.html",
+        "relative_path": "data/raw/Q-25/Direct Link.html",
+        "bytes": 172690,
+        "sha256": "d04c65d80391a01f2f88c4395a757f9967a308432969da44a493cd51fc73aed6",
+        "timestamp": "2026-10-29T03:13:40Z",
+        "status": "DOWNLOADED"
+      }
+    ]
+  },
+  "Q-26": {
+    "resource_id": "Q-26",
+    "title": "WHO/UNICEF Joint Monitoring Programme (JMP) Pakistan",
+    "grade": "A2",
+    "topic": "Water / Sanitation / Hygiene",
+    "landing_page": "https://washdata.org/countries/pakistan",
+    "status": "DOWNLOADED",
+    "last_run": "2026-10-29T03:14:03Z",
+    "files": [
+      {
+        "label": "Direct Link",
+        "format": "Web",
+        "url": "https://washdata.org/countries/pakistan",
+        "filename": "pakistan.html",
+        "relative_path": "data/raw/Q-26/pakistan.html",
+        "bytes": 79102,
+        "sha256": "7e8442fa183a7d92851c0cdb89671a0a0ea650c77e3721437b46297640e88b54",
+        "timestamp": "2026-10-29T03:14:03Z",
+        "status": "DOWNLOADED"
+      }
+    ]
+  },
+  "Q-27": {
+    "resource_id": "Q-27",
+    "title": "World Bank Poverty and Inequality Platform (PIP)",
+    "grade": "A2",
+    "topic": "Poverty / Inequality",
+    "landing_page": "https://pip.worldbank.org/",
+    "status": "DOWNLOADED",
+    "last_run": "2026-10-29T03:14:04Z",
+    "files": [
+      {
+        "label": "Direct Link",
+        "format": "Web",
+        "url": "https://pip.worldbank.org/",
+        "filename": "Direct Link.html",
+        "relative_path": "data/raw/Q-27/Direct Link.html",
+        "bytes": 30963,
+        "sha256": "32d551a80f13a9c6443b3ecd417e57a1d3b9570d9b5525dc149a22bdd413e904",
+        "timestamp": "2026-10-29T03:14:04Z",
+        "status": "DOWNLOADED"
+      }
+    ]
+  },
+  "Q-28": {
+    "resource_id": "Q-28",
+    "title": "UN Comtrade Plus",
+    "grade": "A2",
+    "topic": "Trade / Commodity-level",
+    "landing_page": "https://comtradeplus.un.org/",
+    "status": "DOWNLOADED",
+    "last_run": "2026-10-29T03:14:05Z",
+    "files": [
+      {
+        "label": "Direct Link",
+        "format": "Web",
+        "url": "https://comtradeplus.un.org/",
+        "filename": "Direct Link.html",
+        "relative_path": "data/raw/Q-28/Direct Link.html",
+        "bytes": 3302,
+        "sha256": "bbd512c510634e10c84a37aa6e06c71dcb7e2563b1e63b03a2319e2a72c93492",
+        "timestamp": "2026-10-29T03:14:05Z",
+        "status": "DOWNLOADED"
+      }
+    ]
+  },
+  "Q-30": {
+    "resource_id": "Q-30",
+    "title": "Pakistan Single Window Trade Insights",
+    "grade": "A1",
+    "topic": "Trade / Interactive",
+    "landing_page": "https://psw.gov.pk/trading-insights",
+    "status": "DOWNLOADED",
+    "last_run": "2026-10-29T03:14:05Z",
+    "files": [
+      {
+        "label": "Direct Link",
+        "format": "Web",
+        "url": "https://psw.gov.pk/trading-insights",
+        "filename": "trading-insights.html",
+        "relative_path": "data/raw/Q-30/trading-insights.html",
+        "bytes": 107780,
+        "sha256": "b4d8670ed8aa68794671723bc3e132ee70cd6c3df75c117d263d2000dfe194df",
+        "timestamp": "2026-10-29T03:14:05Z",
+        "status": "DOWNLOADED"
+      }
+    ]
+  },
+  "Q-31": {
+    "resource_id": "Q-31",
+    "title": "PBS GIS and administrative-unit tables",
+    "grade": "A1",
+    "topic": "Geospatial / Boundaries",
+    "landing_page": "https://www.pbs.gov.pk/gis/",
+    "status": "DOWNLOADED",
+    "last_run": "2026-10-29T03:14:06Z",
+    "files": [
+      {
+        "label": "Direct Link",
+        "format": "Web",
+        "url": "https://www.pbs.gov.pk/gis/",
+        "filename": "gis.html",
+        "relative_path": "data/raw/Q-31/gis.html",
+        "bytes": 263226,
+        "sha256": "ba7f275a7d4eadadc3a0fec5f08f5a5062decd75ff8b4c2b5737ca87d672c216",
+        "timestamp": "2026-10-29T03:14:06Z",
+        "status": "DOWNLOADED"
+      }
+    ]
+  },
+  "Q-32": {
+    "resource_id": "Q-32",
+    "title": "Mouza Census 2020 microdata and dashboard",
+    "grade": "A1",
+    "topic": "Rural infrastructure / Agriculture",
+    "landing_page": "https://www.pbs.gov.pk/mouza-census/",
+    "status": "DOWNLOADED",
+    "last_run": "2026-10-29T03:14:09Z",
+    "files": [
+      {
+        "label": "Direct Link",
+        "format": "Web",
+        "url": "https://www.pbs.gov.pk/mouza-census/",
+        "filename": "mouza-census.html",
+        "relative_path": "data/raw/Q-32/mouza-census.html",
+        "bytes": 1019907,
+        "sha256": "b8dc5526639f5e03fe9475073d748409ed97c4fe6148ee636a6d5a02ccb2576f",
+        "timestamp": "2026-10-29T03:14:09Z",
+        "status": "DOWNLOADED"
+      }
+    ]
+  },
+  "Q-33": {
+    "resource_id": "Q-33",
+    "title": "Diaspora Database Dashboard: overseas Pakistani employment",
+    "grade": "A1",
+    "topic": "Migration / Jobs",
+    "landing_page": "https://dashboards.data.gov.pk/Diaspora/Migration",
+    "status": "PARTIAL_OR_ERROR",
+    "last_run": "2026-10-29T03:14:10Z",
+    "files": [
+      {
+        "label": "Direct Link",
+        "format": "Web",
+        "url": "https://dashboards.data.gov.pk/Diaspora/Migration",
+        "filename": "Migration.html",
+        "status": "ERROR",
+        "error": "HTTP Error 503: Service Unavailable",
+        "timestamp": "2026-10-29T03:14:10Z"
+      }
+    ]
+  },
+  "Q-34": {
+    "resource_id": "Q-34",
+    "title": "Public debt bulletins, debt strategy and debt reports",
+    "grade": "A1",
+    "topic": "Public debt",
+    "landing_page": "https://www.finance.gov.pk/dpco_publications.html",
+    "status": "DOWNLOADED",
+    "last_run": "2026-10-29T03:14:11Z",
+    "files": [
+      {
+        "label": "Direct Link",
+        "format": "PDF",
+        "url": "https://www.finance.gov.pk/dpco/debt_bulletin_1hy_2026.pdf",
+        "filename": "debt_bulletin_1hy_2026.pdf",
+        "relative_path": "data/raw/Q-34/debt_bulletin_1hy_2026.pdf",
+        "bytes": 3838731,
+        "sha256": "ee780c9ad53ca8d892177ce0a166062f80721cd8de57abf3c1913cf7e6dd8959",
+        "timestamp": "2026-10-29T03:14:11Z",
+        "status": "DOWNLOADED"
+      }
+    ]
+  },
+  "Q-35": {
+    "resource_id": "Q-35",
+    "title": "Federal Budget Documents 2026–27",
+    "grade": "A1",
+    "topic": "Public finance / Federal budget",
+    "landing_page": "https://www.finance.gov.pk/fb_2026_27.html",
+    "status": "DOWNLOADED",
+    "last_run": "2026-10-29T03:14:12Z",
+    "files": [
+      {
+        "label": "Direct Link",
+        "format": "Web",
+        "url": "https://www.finance.gov.pk/fb_2026_27.html",
+        "filename": "fb_2026_27.html",
+        "relative_path": "data/raw/Q-35/fb_2026_27.html",
+        "bytes": 46982,
+        "sha256": "c78b177d534b81b174b642dc51a25abac386d9f80d0b78bb6bfb744a8c528624",
+        "timestamp": "2026-10-29T03:14:12Z",
+        "status": "DOWNLOADED"
+      }
+    ]
+  },
+  "Q-36": {
+    "resource_id": "Q-36",
+    "title": "Federal Budget in Brief 2026–27",
+    "grade": "A1",
+    "topic": "Public finance / Federal budget",
+    "landing_page": "https://www.finance.gov.pk/fb_2026_27.html",
+    "status": "DOWNLOADED",
+    "last_run": "2026-10-29T03:14:13Z",
+    "files": [
+      {
+        "label": "Direct Link",
+        "format": "PDF",
+        "url": "https://www.finance.gov.pk/budget/budget_2026_27/Budget_in_Brief.pdf",
+        "filename": "Budget_in_Brief.pdf",
+        "relative_path": "data/raw/Q-36/Budget_in_Brief.pdf",
+        "bytes": 2193862,
+        "sha256": "f8aaabe08955d342dcec2b1da0cc69f3f6184a40284a8ab52e6bbb7f870425d6",
+        "timestamp": "2026-10-29T03:14:13Z",
+        "status": "DOWNLOADED"
+      }
+    ]
+  },
+  "Q-37": {
+    "resource_id": "Q-37",
+    "title": "FBR Tax Expenditure Report 2025",
+    "grade": "A1",
+    "topic": "Tax / Public finance",
+    "landing_page": "https://www.fbr.gov.pk/",
+    "status": "DOWNLOADED",
+    "last_run": "2026-10-29T03:14:14Z",
+    "files": [
+      {
+        "label": "Direct Link",
+        "format": "PDF",
+        "url": "https://download1.fbr.gov.pk/Docs/202595159423458TaxExpenditureReport2025.pdf",
+        "filename": "202595159423458TaxExpenditureReport2025.pdf",
+        "relative_path": "data/raw/Q-37/202595159423458TaxExpenditureReport2025.pdf",
+        "bytes": 1574415,
+        "sha256": "cfa1e2c718fdd41a429b4dbeeedaac4cf961abe4ccdd8a0ff2897c10561ae9e8",
+        "timestamp": "2026-10-29T03:14:14Z",
+        "status": "DOWNLOADED"
+      }
+    ]
+  }
+}

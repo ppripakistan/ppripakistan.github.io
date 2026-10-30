@@ -1,0 +1,52 @@
+[
+  {
+    "geography_id": "PK",
+    "geography_name": "Pakistan",
+    "electricity_access_pct": 94.2,
+    "piped_water_inside_pct": 28.5,
+    "underground_sewerage_toilet_pct": 71.2,
+    "clean_cooking_fuel_pct": 42.1,
+    "solid_biomass_firewood_pct": 57.9,
+    "sample_households": 30123
+  },
+  {
+    "geography_id": "PK-PB",
+    "geography_name": "Punjab",
+    "electricity_access_pct": 98.4,
+    "piped_water_inside_pct": 24.2,
+    "underground_sewerage_toilet_pct": 78.5,
+    "clean_cooking_fuel_pct": 46.8,
+    "solid_biomass_firewood_pct": 53.2,
+    "sample_households": 14210
+  },
+  {
+    "geography_id": "PK-SD",
+    "geography_name": "Sindh",
+    "electricity_access_pct": 93.1,
+    "piped_water_inside_pct": 42.6,
+    "underground_sewerage_toilet_pct": 74.2,
+    "clean_cooking_fuel_pct": 48.5,
+    "solid_biomass_firewood_pct": 51.5,
+    "sample_households": 7840
+  },
+  {
+    "geography_id": "PK-KP",
+    "geography_name": "Khyber Pakhtunkhwa",
+    "electricity_access_pct": 92.4,
+    "piped_water_inside_pct": 26.8,
+    "underground_sewerage_toilet_pct": 65.4,
+    "clean_cooking_fuel_pct": 28.6,
+    "solid_biomass_firewood_pct": 71.4,
+    "sample_households": 4980
+  },
+  {
+    "geography_id": "PK-BA",
+    "geography_name": "Balochistan",
+    "electricity_access_pct": 74.8,
+    "piped_water_inside_pct": 19.4,
+    "underground_sewerage_toilet_pct": 41.2,
+    "clean_cooking_fuel_pct": 18.2,
+    "solid_biomass_firewood_pct": 81.8,
+    "sample_households": 3093
+  }
+]

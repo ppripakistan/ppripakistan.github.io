@@ -1,0 +1,2400 @@
+:root {
+        --vi-navy: #073c3a;
+        --vi-teal: #0f766e;
+        --vi-teal-light: #e6f3f2;
+        --vi-teal-dark: #042f2e;
+        --vi-ink: #0f172a;
+        --vi-muted: #64748b;
+        --vi-line: #e2e8f0;
+        --vi-bg: #f8fafc;
+        --vi-paper: #ffffff;
+        --vi-amber: #d97706;
+        --vi-amber-light: #fef3c7;
+        --vi-green: #15803d;
+        --vi-green-light: #dcfce7;
+        --vi-blue: #0284c7;
+        --vi-blue-light: #e0f2fe;
+        --vi-rose: #e11d48;
+        --vi-rose-light: #ffe4e6;
+        --vi-purple: #7c3aed;
+        --vi-purple-light: #ede9fe;
+      }
+
+      body {
+        background: var(--vi-bg);
+        color: var(--vi-ink);
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        line-height: 1.5;
+      }
+
+      /* Top Staging Banner */
+      .vi-topbar {
+        background: #0f172a;
+        color: #94a3b8;
+        padding: 8px 24px;
+        font-size: 12px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 8px;
+        border-bottom: 1px solid #334155;
+      }
+      .vi-topbar-left {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+      .vi-badge-quarantine {
+        background: #f59e0b;
+        color: #0f172a;
+        font-weight: 700;
+        padding: 2px 8px;
+        border-radius: 4px;
+        font-size: 11px;
+        letter-spacing: 0.5px;
+      }
+      .vi-topbar-links a {
+        color: #38bdf8;
+        text-decoration: none;
+        margin-left: 16px;
+        font-weight: 500;
+      }
+      .vi-topbar-links a:hover {
+        text-decoration: underline;
+      }
+
+      /* Header */
+      .vi-header {
+        background: var(--vi-navy);
+        color: #fff;
+        padding: 20px 24px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 16px;
+        border-bottom: 4px solid var(--vi-teal);
+      }
+      .vi-brand {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+      }
+      .vi-brand-logo {
+        width: 44px;
+        height: 44px;
+        background: var(--vi-teal);
+        color: #fff;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 800;
+        font-size: 20px;
+        box-shadow: 0 4px 6px -1px rgba(0,0,0,0.2);
+      }
+      .vi-brand h1 {
+        margin: 0;
+        font-size: 20px;
+        font-weight: 700;
+        letter-spacing: -0.3px;
+        color: #fff;
+      }
+      .vi-brand p {
+        margin: 2px 0 0;
+        font-size: 12px;
+        color: #99f6e4;
+      }
+
+      /* Hero */
+      .vi-hero {
+        background: #ffffff;
+        border-bottom: 1px solid var(--vi-line);
+        padding: 32px 24px;
+      }
+      .vi-hero-inner {
+        max-width: 1320px;
+        margin: 0 auto;
+      }
+      .vi-hero-title {
+        font-size: 28px;
+        font-weight: 800;
+        color: var(--vi-navy);
+        margin: 0 0 10px;
+        letter-spacing: -0.5px;
+      }
+      .vi-hero-desc {
+        font-size: 15px;
+        color: var(--vi-muted);
+        max-width: 950px;
+        margin: 0 0 20px;
+        line-height: 1.6;
+      }
+
+      /* Number Index Quick Jump */
+      .vi-quick-index {
+        display: flex;
+        gap: 6px;
+        flex-wrap: wrap;
+        align-items: center;
+        margin-bottom: 16px;
+        padding-bottom: 16px;
+        border-bottom: 1px dashed var(--vi-line);
+      }
+      .vi-quick-index span {
+        font-size: 12px;
+        font-weight: 700;
+        color: var(--vi-navy);
+        margin-right: 6px;
+      }
+      .vi-jump-pill {
+        background: #f1f5f9;
+        border: 1px solid var(--vi-line);
+        color: var(--vi-teal);
+        padding: 3px 8px;
+        border-radius: 4px;
+        font-size: 11.5px;
+        font-weight: 700;
+        text-decoration: none;
+        transition: all 0.15s ease;
+      }
+      .vi-jump-pill:hover {
+        background: var(--vi-teal);
+        color: #ffffff;
+        border-color: var(--vi-teal);
+      }
+
+      .vi-filter-bar {
+        display: flex;
+        gap: 8px;
+        flex-wrap: wrap;
+        align-items: center;
+      }
+      .vi-filter-btn {
+        background: var(--vi-bg);
+        border: 1px solid var(--vi-line);
+        color: var(--vi-muted);
+        padding: 7px 14px;
+        border-radius: 20px;
+        font-size: 13px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.2s ease;
+      }
+      .vi-filter-btn:hover {
+        background: #e2e8f0;
+        color: var(--vi-ink);
+      }
+      .vi-filter-btn.active {
+        background: var(--vi-teal);
+        border-color: var(--vi-teal);
+        color: #fff;
+      }
+
+      /* Main Gallery Container */
+      .vi-main {
+        max-width: 1320px;
+        margin: 32px auto;
+        padding: 0 24px;
+      }
+
+      /* Cards Grid */
+      .vi-grid {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        gap: 24px;
+      }
+
+      /* Infographic Card */
+      .vi-card {
+        background: var(--vi-paper);
+        border: 1px solid var(--vi-line);
+        border-radius: 12px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+      }
+      .vi-card:hover {
+        box-shadow: 0 8px 16px rgba(0,0,0,0.08);
+      }
+      .vi-card.col-6 {
+        grid-column: span 6;
+      }
+      .vi-card.col-12 {
+        grid-column: span 12;
+      }
+      @media (max-width: 1024px) {
+        .vi-card.col-6 {
+          grid-column: span 12;
+        }
+      }
+
+      /* Card Top Border Accent */
+      .vi-card-accent {
+        height: 5px;
+        background: linear-gradient(90deg, var(--vi-teal), #0d9488);
+      }
+
+      /* Card Header */
+      .vi-card-header {
+        padding: 20px 24px 12px;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 16px;
+        flex-wrap: wrap;
+      }
+      .vi-header-meta {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin-bottom: 6px;
+        flex-wrap: wrap;
+      }
+      .vi-number-badge {
+        background: var(--vi-navy);
+        color: #ffffff;
+        font-size: 11px;
+        font-weight: 800;
+        padding: 3px 8px;
+        border-radius: 4px;
+        letter-spacing: 0.5px;
+        display: inline-flex;
+        align-items: center;
+      }
+      .vi-card-tag {
+        display: inline-block;
+        font-size: 10.5px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.8px;
+        color: var(--vi-teal);
+        background: var(--vi-teal-light);
+        padding: 3px 8px;
+        border-radius: 4px;
+      }
+      .vi-card-title {
+        font-size: 19px;
+        font-weight: 700;
+        color: var(--vi-navy);
+        margin: 0 0 4px;
+        letter-spacing: -0.3px;
+      }
+      .vi-card-subtitle {
+        font-size: 13px;
+        color: var(--vi-muted);
+        margin: 0;
+        line-height: 1.4;
+      }
+      .vi-card-controls {
+        display: flex;
+        gap: 6px;
+        flex-wrap: wrap;
+      }
+      .vi-ctrl-btn {
+        background: #f1f5f9;
+        border: 1px solid var(--vi-line);
+        color: #475569;
+        padding: 5px 10px;
+        border-radius: 6px;
+        font-size: 12px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.15s ease;
+      }
+      .vi-ctrl-btn:hover {
+        background: #e2e8f0;
+        color: #0f172a;
+      }
+      .vi-ctrl-btn.active {
+        background: var(--vi-navy);
+        border-color: var(--vi-navy);
+        color: #ffffff;
+      }
+
+      /* Chart Canvas / SVG Container */
+      .vi-chart-container {
+        padding: 12px 24px 16px;
+        position: relative;
+        background: #ffffff;
+        min-height: 380px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .vi-chart-svg {
+        width: 100%;
+        height: auto;
+        max-height: 440px;
+        display: block;
+      }
+
+      /* Callout Insights Box */
+      .vi-callout {
+        margin: 0 24px 16px;
+        padding: 12px 16px;
+        background: #f8fafc;
+        border: 1px solid var(--vi-line);
+        border-left: 4px solid var(--vi-teal);
+        border-radius: 6px;
+        font-size: 12.5px;
+        line-height: 1.5;
+        color: #334155;
+      }
+      .vi-callout strong {
+        color: var(--vi-navy);
+      }
+      .vi-kpis {
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
+        margin-top: 8px;
+      }
+      .vi-kpi-pill {
+        background: #ffffff;
+        border: 1px solid #cbd5e1;
+        padding: 4px 10px;
+        border-radius: 20px;
+        font-size: 11.5px;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+      }
+      .vi-kpi-pill strong {
+        color: var(--vi-teal);
+      }
+
+      /* Watermark & Export Footer */
+      .vi-card-footer {
+        padding: 12px 24px;
+        background: #f8fafc;
+        border-top: 1px solid var(--vi-line);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: auto;
+      }
+      .vi-source {
+        font-size: 11.5px;
+        color: var(--vi-muted);
+      }
+      .vi-source strong {
+        color: var(--vi-navy);
+      }
+      .vi-actions {
+        display: flex;
+        gap: 8px;
+        align-items: center;
+      }
+      .vi-btn {
+        background: #ffffff;
+        border: 1px solid var(--vi-line);
+        color: #334155;
+        padding: 6px 12px;
+        border-radius: 6px;
+        font-size: 12px;
+        font-weight: 600;
+        cursor: pointer;
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        transition: all 0.2s ease;
+      }
+      .vi-btn:hover {
+        background: #f1f5f9;
+        border-color: #cbd5e1;
+        color: #0f172a;
+      }
+      .vi-btn-primary {
+        background: var(--vi-teal);
+        border-color: var(--vi-teal);
+        color: #ffffff;
+      }
+      .vi-btn-primary:hover {
+        background: #0d9488;
+        border-color: #0d9488;
+        color: #ffffff;
+      }
+
+      /* Interactive Tooltip */
+      #vi-tooltip {
+        position: fixed;
+        display: none;
+        background: rgba(15, 23, 42, 0.95);
+        color: #ffffff;
+        padding: 8px 12px;
+        border-radius: 6px;
+        font-size: 12px;
+        pointer-events: none;
+        z-index: 10000;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        max-width: 280px;
+        backdrop-filter: blur(4px);
+      }
+      #vi-tooltip strong {
+        color: #38bdf8;
+      }
+
+      /* Notification Toast */
+      #vi-toast {
+        position: fixed;
+        bottom: 24px;
+        right: 24px;
+        background: var(--vi-navy);
+        color: #ffffff;
+        padding: 12px 20px;
+        border-radius: 8px;
+        font-size: 13px;
+        font-weight: 600;
+        display: none;
+        z-index: 10001;
+        box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+        border-left: 4px solid var(--vi-teal);
+      }
+
+/* ==========================================================================
+   SMOOTH SCROLL, QUICK-JUMP CHIPS & COMPREHENSIVE SEO NARRATIVE STYLES
+   ========================================================================== */
+
+/* Smooth Scroll & Card Anchor Clearance */
+html {
+  scroll-behavior: smooth;
+}
+.vi-card {
+  scroll-margin-top: 100px;
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+.vi-card.vi-card-highlight {
+  box-shadow: 0 0 0 3px rgba(15, 118, 110, 0.4), 0 12px 32px rgba(15, 118, 110, 0.15) !important;
+  border-color: var(--vi-teal) !important;
+}
+
+/* ==========================================================================
+   BREADCRUMB SPACING & CURRENT-PAGE DARK GREEN STYLING
+   ========================================================================== */
+.breadcrumb-nav {
+  padding-top: 28px !important;
+  padding-bottom: 10px !important;
+  background: transparent;
+}
+.breadcrumb-inner {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  font-size: 0.86rem;
+  color: var(--vi-muted);
+}
+.breadcrumb-inner a {
+  color: var(--vi-teal);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.15s ease;
+}
+.breadcrumb-inner a:hover {
+  color: var(--vi-teal-dark);
+  text-decoration: underline;
+}
+.breadcrumb-separator {
+  color: #cbd5e1;
+  font-size: 0.8rem;
+  user-select: none;
+}
+.breadcrumb-inner [aria-current="page"] {
+  color: #042f2e !important; /* Prominent dark green */
+  background: #e6f3f2 !important; /* Soft mint / dark-green tint */
+  padding: 3px 12px !important;
+  border-radius: 999px !important;
+  font-weight: 700 !important;
+  font-size: 0.84rem !important;
+  border: 1px solid rgba(15, 118, 110, 0.25) !important;
+  letter-spacing: -0.01em;
+  display: inline-flex;
+  align-items: center;
+}
+
+/* ==========================================================================
+   EXECUTIVE SEO NARRATIVE & COLLAPSIBLE ACCORDION CARDS
+   ========================================================================== */
+.vi-hero-desc-narrative {
+  color: #334155;
+  font-size: 0.98rem;
+  line-height: 1.65;
+  margin-top: 14px;
+  max-width: 1100px;
+}
+.vi-hero-desc-narrative p {
+  margin-bottom: 12px;
+}
+
+/* 4 Collapsible Policy Accordion Cards */
+.vi-seo-accordion-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 14px;
+  margin: 18px 0 24px 0;
+}
+.vi-seo-accordion {
+  background: #ffffff;
+  border: 1px solid var(--vi-line);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.03);
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.vi-seo-accordion[open] {
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+  border-color: #cbd5e1;
+}
+.vi-seo-summary {
+  padding: 12px 14px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  user-select: none;
+  list-style: none;
+  background: #f8fafc;
+  font-weight: 700;
+  font-size: 0.88rem;
+  color: var(--vi-navy);
+  transition: background 0.15s ease, color 0.15s ease;
+}
+.vi-seo-summary::-webkit-details-marker {
+  display: none;
+}
+.vi-seo-summary:hover {
+  background: #f0fdfa;
+  color: var(--vi-teal);
+}
+.vi-seo-summary-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.vi-seo-icon {
+  font-size: 1.05rem;
+}
+.vi-seo-summary-right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.vi-seo-badge {
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 2px 7px;
+  background: #e2e8f0;
+  color: #475569;
+  border-radius: 4px;
+}
+.vi-seo-chevron {
+  font-size: 0.85rem;
+  color: var(--vi-muted);
+  transition: transform 0.2s ease;
+  display: inline-block;
+}
+.vi-seo-accordion[open] .vi-seo-chevron {
+  transform: rotate(180deg);
+}
+.vi-seo-body {
+  padding: 14px 16px;
+  font-size: 0.88rem;
+  color: #475569;
+  line-height: 1.62;
+  background: #ffffff;
+  border-top: 1px solid #f1f5f9;
+}
+.vi-seo-body p {
+  margin: 0;
+}
+
+/* ==========================================================================
+   SEPARATED THEMATIC QUICK-JUMP TOOLBAR & DOMAIN CARDS
+   ========================================================================== */
+.vi-quick-nav {
+  margin-top: 24px;
+  margin-bottom: 24px;
+  background: #ffffff;
+  border: 1px solid var(--vi-line);
+  border-radius: 12px;
+  padding: 18px 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+}
+.vi-quick-nav-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 14px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #f1f5f9;
+}
+.vi-quick-nav-title {
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: var(--vi-navy);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+.vi-quick-nav-hint {
+  font-size: 0.8rem;
+  color: var(--vi-muted);
+}
+
+/* 4 Distinct Visually Separated Thematic Domain Cards */
+.vi-quick-clusters-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 16px;
+  margin-top: 8px;
+}
+.vi-jump-domain-card {
+  background: #ffffff;
+  border: 1px solid var(--vi-line);
+  border-radius: 8px;
+  padding: 14px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.vi-jump-domain-card:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+}
+
+.vi-jump-card-fiscal {
+  border-top: 3.5px solid #0f766e;
+  background: linear-gradient(180deg, #f0fdfa 0%, #ffffff 40px);
+}
+.vi-jump-card-economy {
+  border-top: 3.5px solid #2563eb;
+  background: linear-gradient(180deg, #eff6ff 0%, #ffffff 40px);
+}
+.vi-jump-card-demographics {
+  border-top: 3.5px solid #7c3aed;
+  background: linear-gradient(180deg, #faf5ff 0%, #ffffff 40px);
+}
+.vi-jump-card-living {
+  border-top: 3.5px solid #d97706;
+  background: linear-gradient(180deg, #fffbeb 0%, #ffffff 40px);
+}
+
+.vi-jump-domain-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 8px;
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+}
+.vi-domain-tag {
+  font-size: 0.82rem;
+  font-weight: 800;
+  color: var(--vi-navy);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.vi-group-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.vi-chip-btn {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  color: #1e293b;
+  padding: 6px 11px;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.18s cubic-bezier(0.16, 1, 0.3, 1);
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  outline: none;
+  user-select: none;
+}
+.vi-chip-btn:hover {
+  background: #f0fdfa;
+  border-color: #5eead4;
+  color: #0f766e;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 6px rgba(15, 118, 110, 0.08);
+}
+.vi-chip-btn:active {
+  transform: translateY(0);
+  background: #ccfbf1;
+}
+.vi-chip-btn.vi-chip-highlight {
+  background: #f0fdfa;
+  border-color: #99f6e4;
+  color: #0f766e;
+  font-weight: 700;
+}
+.vi-chip-btn.vi-chip-highlight:hover {
+  background: #0f766e;
+  color: #ffffff;
+  border-color: #0f766e;
+}
+
+/* ==========================================================================
+   HOMEPAGE 16-INFOGRAPHIC VISUAL POLICY MOSAIC GRID
+   ========================================================================== */
+.vi-mosaic-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-top: 24px;
+}
+@media (max-width: 1200px) {
+  .vi-mosaic-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 820px) {
+  .vi-mosaic-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 520px) {
+  .vi-mosaic-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.vi-mosaic-card {
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  border: 1px solid var(--vi-line, #e2e8f0);
+  border-radius: 8px;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.2s ease, border-color 0.2s ease;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+}
+.vi-mosaic-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(15, 118, 110, 0.12);
+  border-color: #5eead4;
+}
+
+.vi-mosaic-media {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  background: #073c3a;
+  overflow: hidden;
+}
+.vi-mosaic-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+.vi-mosaic-card:hover .vi-mosaic-media img {
+  transform: scale(1.03);
+}
+
+.vi-mosaic-hover-pill {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  background: rgba(15, 23, 42, 0.85);
+  color: #5eead4;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 4px;
+  backdrop-filter: blur(4px);
+  opacity: 0;
+  transform: translateY(4px);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+.vi-mosaic-card:hover .vi-mosaic-hover-pill {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.vi-mosaic-body {
+  padding: 12px 14px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+.vi-mosaic-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 6px;
+  gap: 6px;
+}
+.vi-mosaic-domain {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 2px 6px;
+  border-radius: 3px;
+}
+.vi-domain-fiscal { background: #f0fdfa; color: #0f766e; }
+.vi-domain-economy { background: #eff6ff; color: #2563eb; }
+.vi-domain-demographics { background: #faf5ff; color: #7c3aed; }
+.vi-domain-living { background: #fffbeb; color: #d97706; }
+
+.vi-mosaic-metric {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #073c3a;
+  background: #f1f5f9;
+  padding: 2px 6px;
+  border-radius: 3px;
+}
+
+.vi-mosaic-title {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0 0 6px 0;
+  line-height: 1.35;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.vi-mosaic-snippet {
+  font-size: 0.78rem;
+  color: #64748b;
+  line-height: 1.45;
+  margin: 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+
+/* ==========================================================================
+   PPRI MODULAR VISUAL TREEMAP MATRIX SITE EXPLORER
+   ========================================================================== */
+
+.vi-treemap-section {
+  padding: 5.5rem 0 6rem;
+  background: linear-gradient(180deg, #f8fafc 0%, #f1f5f9 100%);
+  border-top: 1px solid #e2e8f0;
+  border-bottom: 1px solid #cbd5e1;
+}
+
+.vi-treemap-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-bottom: 2.75rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.vi-treemap-title-group {
+  max-width: 780px;
+}
+
+.vi-treemap-title-group h2 {
+  font-size: clamp(1.85rem, 3.2vw, 2.5rem);
+  font-weight: 800;
+  color: #0f172a;
+  letter-spacing: -0.025em;
+  line-height: 1.2;
+  margin: 0.35rem 0 0.75rem;
+}
+
+.vi-treemap-subtitle {
+  font-size: 1.05rem;
+  color: #475569;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.vi-treemap-controls {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.vi-treemap-stats-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.45rem 0.95rem;
+  background: #ffffff;
+  color: #0f766e;
+  border: 1px solid #ccfbf1;
+  border-radius: 9999px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  box-shadow: 0 1px 3px rgba(15, 118, 110, 0.08);
+}
+
+.vi-treemap-toggle-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.55rem 1.15rem;
+  background: #0f172a;
+  color: #ffffff;
+  border: 1px solid #0f172a;
+  border-radius: 8px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 4px rgba(15, 23, 42, 0.12);
+}
+
+.vi-treemap-toggle-btn:hover {
+  background: #1e293b;
+  transform: translateY(-1px);
+}
+
+.vi-treemap-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+@media (max-width: 900px) {
+  .vi-treemap-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.vi-treemap-tile {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.04);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.vi-treemap-tile:hover {
+  box-shadow: 0 6px 16px rgba(15, 23, 42, 0.08);
+  border-color: #cbd5e1;
+}
+
+.vi-treemap-tile[open] {
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.09);
+}
+
+/* Pillar Theme Left Accents */
+.vi-treemap-tile.theme-teal { border-left: 5px solid #0f766e; }
+.vi-treemap-tile.theme-blue { border-left: 5px solid #2563eb; }
+.vi-treemap-tile.theme-emerald { border-left: 5px solid #059669; }
+.vi-treemap-tile.theme-indigo { border-left: 5px solid #4f46e5; }
+.vi-treemap-tile.theme-purple { border-left: 5px solid #7c3aed; }
+.vi-treemap-tile.theme-amber { border-left: 5px solid #d97706; }
+
+.vi-treemap-summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.35rem 1.5rem;
+  cursor: pointer;
+  list-style: none;
+  user-select: none;
+  background: #ffffff;
+  transition: background 0.2s ease;
+}
+
+.vi-treemap-summary::-webkit-details-marker {
+  display: none;
+}
+
+.vi-treemap-summary:hover {
+  background: #f8fafc;
+}
+
+.vi-treemap-sum-left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.vi-treemap-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  font-size: 1.4rem;
+  background: #f1f5f9;
+  flex-shrink: 0;
+}
+
+.theme-teal .vi-treemap-icon { background: #f0fdfa; }
+.theme-blue .vi-treemap-icon { background: #eff6ff; }
+.theme-emerald .vi-treemap-icon { background: #ecfdf5; }
+.theme-indigo .vi-treemap-icon { background: #eef2ff; }
+.theme-purple .vi-treemap-icon { background: #faf5ff; }
+.theme-amber .vi-treemap-icon { background: #fffbeb; }
+
+.vi-treemap-sum-text h3 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0 0 0.25rem 0;
+  line-height: 1.3;
+}
+
+.vi-treemap-sum-text p {
+  font-size: 0.88rem;
+  color: #64748b;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.vi-treemap-sum-right {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-shrink: 0;
+}
+
+.vi-treemap-pill {
+  display: inline-block;
+  padding: 0.28rem 0.75rem;
+  font-size: 0.78rem;
+  font-weight: 700;
+  border-radius: 9999px;
+  background: #f1f5f9;
+  color: #475569;
+}
+
+.theme-teal .vi-treemap-pill { background: #e6f7f5; color: #0f766e; }
+.theme-blue .vi-treemap-pill { background: #dbeafe; color: #1d4ed8; }
+.theme-emerald .vi-treemap-pill { background: #d1fae5; color: #047857; }
+.theme-indigo .vi-treemap-pill { background: #e0e7ff; color: #4338ca; }
+.theme-purple .vi-treemap-pill { background: #ede9fe; color: #6d28d9; }
+.theme-amber .vi-treemap-pill { background: #fef3c7; color: #b45309; }
+
+.vi-treemap-chevron {
+  color: #94a3b8;
+  transition: transform 0.25s ease;
+}
+
+.vi-treemap-tile[open] .vi-treemap-chevron {
+  transform: rotate(180deg);
+  color: #0f172a;
+}
+
+.vi-treemap-content {
+  padding: 1.25rem 1.5rem 1.5rem;
+  border-top: 1px solid #f1f5f9;
+  background: #fafbfc;
+}
+
+.vi-treemap-cluster {
+  margin-bottom: 1.25rem;
+}
+
+.vi-treemap-cluster:last-of-type {
+  margin-bottom: 1rem;
+}
+
+.vi-treemap-cluster-label {
+  display: block;
+  font-size: 0.74rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #64748b;
+  margin-bottom: 0.65rem;
+}
+
+.vi-treemap-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.vi-treemap-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.42rem 0.75rem;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  font-size: 0.84rem;
+  color: #1e293b;
+  text-decoration: none;
+  line-height: 1.35;
+  transition: all 0.18s ease;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.02);
+}
+
+.vi-treemap-chip:hover {
+  background: #ffffff;
+  border-color: #0f766e;
+  color: #0f766e;
+  transform: translateY(-1px);
+  box-shadow: 0 3px 6px rgba(15, 118, 110, 0.08);
+}
+
+.theme-blue .vi-treemap-chip:hover { border-color: #2563eb; color: #2563eb; }
+.theme-emerald .vi-treemap-chip:hover { border-color: #059669; color: #059669; }
+.theme-indigo .vi-treemap-chip:hover { border-color: #4f46e5; color: #4f46e5; }
+.theme-purple .vi-treemap-chip:hover { border-color: #7c3aed; color: #7c3aed; }
+.theme-amber .vi-treemap-chip:hover { border-color: #d97706; color: #d97706; }
+
+.chip-metric, .chip-badge {
+  display: inline-block;
+  padding: 0.15rem 0.45rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  border-radius: 4px;
+  background: #f1f5f9;
+  color: #334155;
+  white-space: nowrap;
+}
+
+.theme-teal .chip-metric, .theme-teal .chip-badge { background: #ccfbf1; color: #0f766e; }
+.theme-blue .chip-metric, .theme-blue .chip-badge { background: #dbeafe; color: #1e40af; }
+.theme-emerald .chip-metric, .theme-emerald .chip-badge { background: #d1fae5; color: #065f46; }
+.theme-indigo .chip-metric, .theme-indigo .chip-badge { background: #e0e7ff; color: #3730a3; }
+.theme-purple .chip-metric, .theme-purple .chip-badge { background: #ede9fe; color: #5b21b6; }
+.theme-amber .chip-metric, .theme-amber .chip-badge { background: #fef3c7; color: #92400e; }
+
+.chip-title {
+  font-weight: 500;
+}
+
+.vi-treemap-footer-link {
+  margin-top: 1.15rem;
+  padding-top: 0.95rem;
+  border-top: 1px dashed #e2e8f0;
+  text-align: right;
+}
+
+.vi-treemap-footer-link a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.86rem;
+  font-weight: 700;
+  color: #0f766e;
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+.theme-blue .vi-treemap-footer-link a { color: #2563eb; }
+.theme-emerald .vi-treemap-footer-link a { color: #059669; }
+.theme-indigo .vi-treemap-footer-link a { color: #4f46e5; }
+.theme-purple .vi-treemap-footer-link a { color: #7c3aed; }
+.theme-amber .vi-treemap-footer-link a { color: #d97706; }
+
+.vi-treemap-footer-link a:hover {
+  text-decoration: underline;
+}
+
+/* ==========================================================================
+   PPRI TOP-DOWN HIERARCHICAL KNOWLEDGE & EVIDENCE TREE ATLAS
+   ========================================================================== */
+
+.vi-tree-section {
+  padding: 5.5rem 0 6.5rem;
+  background: linear-gradient(180deg, #f8fafc 0%, #f1f5f9 100%);
+  border-top: 1px solid #e2e8f0;
+  border-bottom: 1px solid #cbd5e1;
+  position: relative;
+}
+
+.vi-tree-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.vi-tree-header-text {
+  max-width: 780px;
+}
+
+.vi-tree-header-text h2 {
+  font-size: clamp(1.85rem, 3.2vw, 2.5rem);
+  font-weight: 800;
+  color: #0f172a;
+  letter-spacing: -0.025em;
+  line-height: 1.2;
+  margin: 0.35rem 0 0.75rem;
+}
+
+.vi-tree-header-text p {
+  font-size: 1.05rem;
+  color: #475569;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.vi-tree-controls {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.vi-tree-stat-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.45rem 0.95rem;
+  background: #ffffff;
+  color: #0f766e;
+  border: 1px solid #ccfbf1;
+  border-radius: 9999px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  box-shadow: 0 1px 3px rgba(15, 118, 110, 0.08);
+}
+
+.vi-tree-toggle-all-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.55rem 1.15rem;
+  background: #0f172a;
+  color: #ffffff;
+  border: 1px solid #0f172a;
+  border-radius: 8px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 4px rgba(15, 23, 42, 0.12);
+}
+
+.vi-tree-toggle-all-btn:hover {
+  background: #1e293b;
+  transform: translateY(-1px);
+}
+
+/* ── Level 0: Root Node ─────────────────────────────────────────────────── */
+.vi-tree-root-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 5;
+}
+
+.vi-tree-root-node {
+  background: #ffffff;
+  border: 2px solid #0f766e;
+  border-radius: 14px;
+  padding: 0.85rem 1.75rem;
+  text-align: center;
+  box-shadow: 0 4px 14px rgba(15, 118, 110, 0.14);
+  max-width: 520px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.vi-tree-root-node:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(15, 118, 110, 0.2);
+}
+
+.root-badge {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #0f766e;
+  background: #ccfbf1;
+  padding: 0.18rem 0.65rem;
+  border-radius: 9999px;
+  margin-bottom: 0.45rem;
+}
+
+.root-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+.root-icon {
+  font-size: 1.85rem;
+}
+
+.root-text h3 {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin: 0;
+  line-height: 1.25;
+}
+
+.root-text span {
+  font-size: 0.86rem;
+  font-weight: 600;
+  color: #64748b;
+}
+
+.vi-tree-root-stem {
+  width: 3px;
+  height: 26px;
+  background: #0f766e;
+  margin: 0 auto;
+}
+
+/* ── SVG Trunk Distributor (Desktop) ────────────────────────────────────── */
+.vi-tree-trunk-network {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  line-height: 0;
+}
+
+.vi-tree-trunk-svg {
+  width: 100%;
+  height: 48px;
+  display: block;
+}
+
+.trunk-path-base {
+  stroke: #94a3b8;
+  stroke-width: 2.5;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* ── Level 1: 6 Pillar Branch Nodes ─────────────────────────────────────── */
+.vi-tree-pillars-row {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 0.85rem;
+  align-items: start;
+}
+
+.vi-tree-branch {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: all 0.25s ease;
+}
+
+.vi-tree-branch-stem-in {
+  width: 2.5px;
+  height: 14px;
+  background: #94a3b8;
+  margin: 0 auto;
+}
+
+.vi-tree-node-card {
+  width: 100%;
+  background: #ffffff;
+  border: 1px solid #cbd5e1;
+  border-radius: 10px;
+  padding: 0.85rem 0.75rem;
+  text-align: left;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(15, 23, 42, 0.04);
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.vi-tree-node-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(15, 23, 42, 0.08);
+  border-color: #94a3b8;
+}
+
+.vi-tree-branch.is-open .vi-tree-node-card {
+  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.1);
+  border-color: var(--pillar-border);
+}
+
+/* Pillar Theme Colors */
+.theme-teal {
+  --pillar-accent: #0f766e;
+  --pillar-border: #0f766e;
+  --pillar-bg-soft: #f0fdfa;
+  --pillar-badge-bg: #ccfbf1;
+}
+.theme-blue {
+  --pillar-accent: #2563eb;
+  --pillar-border: #2563eb;
+  --pillar-bg-soft: #eff6ff;
+  --pillar-badge-bg: #dbeafe;
+}
+.theme-emerald {
+  --pillar-accent: #059669;
+  --pillar-border: #059669;
+  --pillar-bg-soft: #ecfdf5;
+  --pillar-badge-bg: #d1fae5;
+}
+.theme-indigo {
+  --pillar-accent: #4f46e5;
+  --pillar-border: #4f46e5;
+  --pillar-bg-soft: #eef2ff;
+  --pillar-badge-bg: #e0e7ff;
+}
+.theme-purple {
+  --pillar-accent: #7c3aed;
+  --pillar-border: #7c3aed;
+  --pillar-bg-soft: #faf5ff;
+  --pillar-badge-bg: #ede9fe;
+}
+.theme-amber {
+  --pillar-accent: #d97706;
+  --pillar-border: #d97706;
+  --pillar-bg-soft: #fffbeb;
+  --pillar-badge-bg: #fef3c7;
+}
+
+.vi-tree-node-card {
+  border-top: 4px solid var(--pillar-accent);
+}
+
+.node-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.65rem;
+}
+
+.node-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  font-size: 1.15rem;
+  background: var(--pillar-bg-soft);
+  flex-shrink: 0;
+}
+
+.node-titles {
+  min-width: 0;
+}
+
+.node-tier {
+  display: block;
+  font-size: 0.68rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--pillar-accent);
+  line-height: 1.2;
+}
+
+.node-name {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0.15rem 0 0 0;
+  line-height: 1.25;
+}
+
+.node-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 0.5rem;
+  border-top: 1px dashed #e2e8f0;
+}
+
+.node-count {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #475569;
+  background: #f1f5f9;
+  padding: 0.15rem 0.45rem;
+  border-radius: 4px;
+}
+
+.node-toggle-state {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: var(--pillar-badge-bg);
+  color: var(--pillar-accent);
+  font-size: 0.95rem;
+  font-weight: 800;
+  line-height: 1;
+  transition: all 0.2s ease;
+}
+
+.vi-tree-branch.is-open .node-toggle-state {
+  background: var(--pillar-accent);
+  color: #ffffff;
+}
+
+/* ── Level 2: Sub-Branches & Level 3: Leaves ────────────────────────────── */
+.vi-tree-substem {
+  width: 2.5px;
+  height: 18px;
+  background: var(--pillar-accent);
+  margin: 0 auto;
+}
+
+.vi-tree-children-container {
+  display: flex;
+  flex-direction: column;
+  animation: treeFadeIn 0.25s ease-out;
+}
+
+@keyframes treeFadeIn {
+  from { opacity: 0; transform: translateY(-4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.vi-tree-subbranches-list {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 0.75rem;
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.vi-tree-subbranch-node {
+  border-bottom: 1px dashed #e2e8f0;
+  padding-bottom: 0.65rem;
+}
+
+.vi-tree-subbranch-node:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.subbranch-header {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  margin-bottom: 0.45rem;
+}
+
+.subbranch-connector {
+  font-family: monospace;
+  font-size: 0.85rem;
+  color: #94a3b8;
+}
+
+.subbranch-header h5 {
+  font-size: 0.78rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: #334155;
+  margin: 0;
+}
+
+.subbranch-badge {
+  font-size: 0.68rem;
+  font-weight: 700;
+  color: #64748b;
+  margin-left: auto;
+}
+
+.vi-tree-leaves-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.vi-tree-leaf {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.35rem 0.55rem;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  font-size: 0.78rem;
+  color: #1e293b;
+  text-decoration: none;
+  line-height: 1.3;
+  transition: all 0.15s ease;
+}
+
+.vi-tree-leaf:hover {
+  background: #ffffff;
+  border-color: var(--pillar-accent);
+  color: var(--pillar-accent);
+  transform: translateX(2px);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.leaf-metric, .leaf-badge {
+  display: inline-block;
+  padding: 0.12rem 0.35rem;
+  font-size: 0.68rem;
+  font-weight: 700;
+  border-radius: 4px;
+  background: var(--pillar-badge-bg);
+  color: var(--pillar-accent);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.leaf-name {
+  font-weight: 500;
+  word-break: break-word;
+}
+
+.vi-tree-leaf-hub-link {
+  margin-top: 0.65rem;
+  padding-top: 0.5rem;
+  text-align: center;
+}
+
+.vi-tree-leaf-hub-link a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 0.76rem;
+  font-weight: 700;
+  color: var(--pillar-accent);
+  text-decoration: none;
+}
+
+.vi-tree-leaf-hub-link a:hover {
+  text-decoration: underline;
+}
+
+/* ── Mobile & Tablet Responsiveness: Vertical Indented Tree Spine ──────── */
+@media (max-width: 1024px) {
+  .vi-tree-trunk-network {
+    display: none;
+  }
+
+  .vi-tree-pillars-row {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    margin-top: 1.5rem;
+    padding-left: 1.25rem;
+    border-left: 3px solid #0f766e;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 600px;
+  }
+
+  .vi-tree-branch {
+    position: relative;
+  }
+
+  .vi-tree-branch-stem-in {
+    position: absolute;
+    top: 1.4rem;
+    left: -1.25rem;
+    width: 1.25rem;
+    height: 3px;
+    background: #0f766e;
+    margin: 0;
+  }
+
+  .vi-tree-node-card {
+    padding: 1rem;
+  }
+
+  .node-name {
+    font-size: 0.98rem;
+  }
+}
+
+/* ==========================================================================
+   PPRI TOP-DOWN HIERARCHICAL KNOWLEDGE & EVIDENCE TREE ATLAS
+   ========================================================================== */
+
+.vi-tree-section {
+  padding: 5.5rem 0 6.5rem;
+  background: linear-gradient(180deg, #f8fafc 0%, #f1f5f9 100%);
+  border-top: 1px solid #e2e8f0;
+  border-bottom: 1px solid #cbd5e1;
+  position: relative;
+}
+
+.vi-tree-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-bottom: 3.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.vi-tree-header-text {
+  max-width: 780px;
+}
+
+.vi-tree-header-text h2 {
+  font-size: clamp(1.85rem, 3.2vw, 2.5rem);
+  font-weight: 800;
+  color: #0f172a;
+  letter-spacing: -0.025em;
+  line-height: 1.2;
+  margin: 0.35rem 0 0.75rem;
+}
+
+.vi-tree-header-text p {
+  font-size: 1.05rem;
+  color: #475569;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.vi-tree-controls {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.vi-tree-stat-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.45rem 0.95rem;
+  background: #ffffff;
+  color: #0f766e;
+  border: 1px solid #ccfbf1;
+  border-radius: 9999px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  box-shadow: 0 1px 3px rgba(15, 118, 110, 0.08);
+}
+
+.vi-tree-btn-group {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  background: #f1f5f9;
+  padding: 0.3rem;
+  border-radius: 10px;
+  border: 1px solid #cbd5e1;
+}
+
+.vi-tree-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.45rem 0.95rem;
+  border: 1px solid transparent;
+  border-radius: 7px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.18s ease;
+}
+
+.vi-tree-expand-all {
+  background: #0f172a;
+  color: #ffffff;
+  border-color: #0f172a;
+  box-shadow: 0 2px 4px rgba(15, 23, 42, 0.12);
+}
+
+.vi-tree-expand-all:hover {
+  background: #1e293b;
+  transform: translateY(-1px);
+}
+
+.vi-tree-collapse-all {
+  background: #ffffff;
+  color: #334155;
+  border-color: #cbd5e1;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.vi-tree-collapse-all:hover {
+  background: #f8fafc;
+  color: #0f172a;
+  border-color: #94a3b8;
+  transform: translateY(-1px);
+}
+
+/* ── Level 0: Grand Octagonal Root Node ─────────────────────────────────── */
+.vi-tree-root-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 5;
+}
+
+.vi-tree-root-node {
+  background: #ffffff;
+  border: 2px solid #0f766e;
+  border-radius: 16px;
+  padding: 1.1rem 2.2rem;
+  text-align: center;
+  box-shadow: 0 0 0 4px #ccfbf1, 0 8px 24px rgba(15, 118, 110, 0.16);
+  max-width: 560px;
+  position: relative;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.vi-tree-root-node:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 0 6px #ccfbf1, 0 12px 30px rgba(15, 118, 110, 0.22);
+}
+
+.root-badge {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #0f766e;
+  background: #ccfbf1;
+  padding: 0.2rem 0.75rem;
+  border-radius: 9999px;
+  margin-bottom: 0.5rem;
+}
+
+.root-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.85rem;
+}
+
+.root-icon {
+  font-size: 2rem;
+}
+
+.root-text h3 {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin: 0;
+  line-height: 1.25;
+}
+
+.root-text span {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #64748b;
+}
+
+.root-port-bottom {
+  position: absolute;
+  bottom: -6px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #0f766e;
+  border: 2px solid #ffffff;
+  box-shadow: 0 0 0 2px #0f766e;
+}
+
+.vi-tree-root-stem {
+  width: 3px;
+  height: 28px;
+  background: #0f766e;
+  margin: 0 auto;
+}
+
+/* ── Level 1: Mathematical CSS Tree Busbar & Pillar Network ────────────── */
+.vi-tree-busbar-container {
+  display: none; /* Managed directly via .vi-tree-pillars-row::before */
+}
+
+.vi-tree-pillars-row {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 0.85rem;
+  align-items: start;
+  position: relative;
+  margin-top: 0;
+}
+
+/* Mathematical Tree Busbar: Exactly spans from center of Col 1 to center of Col 6 */
+.vi-tree-pillars-row::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  /* (100% - 5 * gap) / 12 is the exact center of column 1 */
+  left: calc((100% - 5 * 0.85rem) / 12);
+  right: calc((100% - 5 * 0.85rem) / 12);
+  height: 3px;
+  background: #94a3b8;
+  z-index: 2;
+}
+
+/* Center junction node where root stem meets busbar */
+.vi-tree-pillars-row::after {
+  content: '';
+  position: absolute;
+  top: -3.5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #0f766e;
+  border: 2px solid #ffffff;
+  box-shadow: 0 0 0 2px #0f766e;
+  z-index: 3;
+}
+
+.vi-tree-branch {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: all 0.25s ease;
+}
+
+/* Vertical connector stem dropping from busbar into pillar */
+.vi-tree-branch-stem-in {
+  width: 3px;
+  height: 20px;
+  background: #94a3b8;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+/* Port socket dot on top of stem where it meets the busbar */
+.vi-tree-branch-stem-in::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #94a3b8;
+  border: 2px solid #ffffff;
+  box-shadow: 0 0 0 1.5px #94a3b8;
+}
+
+.vi-tree-branch.is-open .vi-tree-branch-stem-in {
+  background: var(--pillar-accent);
+}
+.vi-tree-branch.is-open .vi-tree-branch-stem-in::before {
+  background: var(--pillar-accent);
+  box-shadow: 0 0 0 1.5px var(--pillar-accent);
+}
+
+/* Pillar Card Node */
+.vi-tree-node-card {
+  width: 100%;
+  background: #ffffff;
+  border: 1px solid #cbd5e1;
+  border-radius: 12px;
+  padding: 0.95rem 0.8rem;
+  text-align: left;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(15, 23, 42, 0.04);
+  transition: all 0.2s ease;
+  position: relative;
+  border-top: 4px solid var(--pillar-accent);
+}
+
+.vi-tree-node-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(15, 23, 42, 0.09);
+  border-color: #94a3b8;
+}
+
+.vi-tree-branch.is-open .vi-tree-node-card {
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.12);
+  border-color: var(--pillar-border);
+}
+
+.node-port-top {
+  position: absolute;
+  top: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--pillar-accent);
+  border: 1.5px solid #ffffff;
+  z-index: 4;
+}
+
+.node-port-bottom {
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--pillar-accent);
+  border: 1.5px solid #ffffff;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  z-index: 4;
+}
+
+.vi-tree-branch.is-open .node-port-bottom {
+  opacity: 1;
+}
+
+/* Pillar Theme Colors */
+.theme-teal {
+  --pillar-accent: #0f766e;
+  --pillar-border: #0f766e;
+  --pillar-bg-soft: #f0fdfa;
+  --pillar-badge-bg: #ccfbf1;
+}
+.theme-blue {
+  --pillar-accent: #2563eb;
+  --pillar-border: #2563eb;
+  --pillar-bg-soft: #eff6ff;
+  --pillar-badge-bg: #dbeafe;
+}
+.theme-emerald {
+  --pillar-accent: #059669;
+  --pillar-border: #059669;
+  --pillar-bg-soft: #ecfdf5;
+  --pillar-badge-bg: #d1fae5;
+}
+.theme-indigo {
+  --pillar-accent: #4f46e5;
+  --pillar-border: #4f46e5;
+  --pillar-bg-soft: #eef2ff;
+  --pillar-badge-bg: #e0e7ff;
+}
+.theme-purple {
+  --pillar-accent: #7c3aed;
+  --pillar-border: #7c3aed;
+  --pillar-bg-soft: #faf5ff;
+  --pillar-badge-bg: #ede9fe;
+}
+.theme-amber {
+  --pillar-accent: #d97706;
+  --pillar-border: #d97706;
+  --pillar-bg-soft: #fffbeb;
+  --pillar-badge-bg: #fef3c7;
+}
+
+.node-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.65rem;
+}
+
+.node-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  background: var(--pillar-bg-soft);
+  flex-shrink: 0;
+}
+
+.node-titles {
+  min-width: 0;
+}
+
+.node-tier {
+  display: block;
+  font-size: 0.68rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--pillar-accent);
+  line-height: 1.2;
+}
+
+.node-name {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0.15rem 0 0 0;
+  line-height: 1.25;
+}
+
+.node-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 0.5rem;
+  border-top: 1px dashed #e2e8f0;
+}
+
+.node-count {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #475569;
+  background: #f1f5f9;
+  padding: 0.15rem 0.45rem;
+  border-radius: 4px;
+}
+
+.node-toggle-state {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: var(--pillar-badge-bg);
+  color: var(--pillar-accent);
+  font-size: 0.95rem;
+  font-weight: 800;
+  line-height: 1;
+  transition: all 0.2s ease;
+}
+
+.vi-tree-branch.is-open .node-toggle-state {
+  background: var(--pillar-accent);
+  color: #ffffff;
+}
+
+/* ── CRITICAL FIX: SPECIFICITY RULES FOR EXPAND / COLLAPSE ────────────── */
+.vi-tree-children-container {
+  display: flex;
+  flex-direction: column;
+  animation: treeFadeIn 0.25s ease-out;
+}
+
+.vi-tree-children-container[hidden],
+.vi-tree-branch:not(.is-open) .vi-tree-children-container {
+  display: none !important;
+}
+
+.vi-tree-branch.is-open .vi-tree-children-container {
+  display: flex !important;
+}
+
+@keyframes treeFadeIn {
+  from { opacity: 0; transform: translateY(-4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ── Level 2 & 3: Continuous CSS Vector Connector Lines ────────────────── */
+.vi-tree-substem {
+  width: 3px;
+  height: 18px;
+  background: var(--pillar-accent);
+  margin: 0 auto;
+}
+
+.vi-tree-subbranches-list {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 0.85rem 0.75rem;
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.vi-tree-subbranch-node {
+  border-bottom: 1px dashed #e2e8f0;
+  padding-bottom: 0.75rem;
+}
+
+.vi-tree-subbranch-node:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.subbranch-header {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-bottom: 0.5rem;
+}
+
+.subbranch-joint {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--pillar-accent);
+  color: transparent;
+  flex-shrink: 0;
+  box-shadow: 0 0 0 2px var(--pillar-badge-bg);
+}
+
+.subbranch-header h5 {
+  font-size: 0.78rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: #334155;
+  margin: 0;
+}
+
+.subbranch-badge {
+  font-size: 0.68rem;
+  font-weight: 700;
+  color: #64748b;
+  margin-left: auto;
+}
+
+/* Continuous Tree Spine for Leaf Nodes */
+.vi-tree-leaves-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  padding-left: 0.75rem;
+  margin-left: 0.35rem;
+  border-left: 2px solid var(--pillar-badge-bg);
+  position: relative;
+}
+
+.vi-tree-leaf {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.38rem 0.6rem;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  font-size: 0.78rem;
+  color: #1e293b;
+  text-decoration: none;
+  line-height: 1.3;
+  transition: all 0.18s ease;
+}
+
+.vi-tree-leaf:hover {
+  background: #ffffff;
+  border-color: var(--pillar-accent);
+  color: var(--pillar-accent);
+  transform: translateX(2px);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+}
+
+.leaf-joint {
+  position: absolute;
+  left: -0.75rem;
+  top: 50%;
+  width: 0.55rem;
+  height: 2px;
+  background: var(--pillar-badge-bg);
+}
+
+.leaf-metric, .leaf-badge {
+  display: inline-block;
+  padding: 0.12rem 0.38rem;
+  font-size: 0.68rem;
+  font-weight: 700;
+  border-radius: 4px;
+  background: var(--pillar-badge-bg);
+  color: var(--pillar-accent);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.leaf-name {
+  font-weight: 500;
+  word-break: break-word;
+}
+
+.vi-tree-leaf-hub-link {
+  margin-top: 0.65rem;
+  padding-top: 0.5rem;
+  text-align: center;
+}
+
+.vi-tree-leaf-hub-link a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 0.76rem;
+  font-weight: 700;
+  color: var(--pillar-accent);
+  text-decoration: none;
+}
+
+.vi-tree-leaf-hub-link a:hover {
+  text-decoration: underline;
+}
+
+/* ── Mobile & Tablet Responsiveness: Vertical Indented Tree Spine ──────── */
+@media (max-width: 1024px) {
+  .vi-tree-pillars-row::before,
+  .vi-tree-pillars-row::after {
+    display: none;
+  }
+
+  .vi-tree-pillars-row {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    margin-top: 1.5rem;
+    padding-left: 1.25rem;
+    border-left: 3px solid #0f766e;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 600px;
+  }
+
+  .vi-tree-branch {
+    position: relative;
+  }
+
+  .vi-tree-branch-stem-in {
+    position: absolute;
+    top: 1.4rem;
+    left: -1.25rem;
+    width: 1.25rem;
+    height: 3px;
+    background: #0f766e;
+    margin: 0;
+  }
+
+  .vi-tree-branch-stem-in::before {
+    display: none;
+  }
+
+  .vi-tree-node-card {
+    padding: 1rem;
+  }
+
+  .node-name {
+    font-size: 0.98rem;
+  }
+}

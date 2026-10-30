@@ -1,0 +1,362 @@
+[
+  {
+    "year": 2025,
+    "country": "Pakistan",
+    "country_code": "PK",
+    "gdp_current_usd": 407307214476.22,
+    "gdp_growth_pct": 3.7,
+    "inflation_cpi_pct": 3.55,
+    "population_total": 255219554.0,
+    "exports_pct_gdp": 9.99
+  },
+  {
+    "year": 2024,
+    "country": "Pakistan",
+    "country_code": "PK",
+    "gdp_current_usd": 371747087751.31,
+    "gdp_growth_pct": 3.08,
+    "inflation_cpi_pct": 12.63,
+    "population_total": 251269164.0,
+    "exports_pct_gdp": 10.39
+  },
+  {
+    "year": 2023,
+    "country": "Pakistan",
+    "country_code": "PK",
+    "gdp_current_usd": 336686348609.27,
+    "gdp_growth_pct": -0.41,
+    "inflation_cpi_pct": 30.77,
+    "population_total": 247504495.0,
+    "exports_pct_gdp": 10.49
+  },
+  {
+    "year": 2022,
+    "country": "Pakistan",
+    "country_code": "PK",
+    "gdp_current_usd": 374890295666.69,
+    "gdp_growth_pct": 4.78,
+    "inflation_cpi_pct": 19.87,
+    "population_total": 243700667.0,
+    "exports_pct_gdp": 10.54
+  },
+  {
+    "year": 2021,
+    "country": "Pakistan",
+    "country_code": "PK",
+    "gdp_current_usd": 348516647445.15,
+    "gdp_growth_pct": 6.51,
+    "inflation_cpi_pct": 9.5,
+    "population_total": 239477801.0,
+    "exports_pct_gdp": 9.05
+  },
+  {
+    "year": 2020,
+    "country": "Pakistan",
+    "country_code": "PK",
+    "gdp_current_usd": 300425609817.98,
+    "gdp_growth_pct": -1.27,
+    "inflation_cpi_pct": 9.74,
+    "population_total": 235001746.0,
+    "exports_pct_gdp": 9.3
+  },
+  {
+    "year": 2019,
+    "country": "Pakistan",
+    "country_code": "PK",
+    "gdp_current_usd": 320909472770.67,
+    "gdp_growth_pct": 2.5,
+    "inflation_cpi_pct": 10.58,
+    "population_total": 230800899.0,
+    "exports_pct_gdp": 9.39
+  },
+  {
+    "year": 2018,
+    "country": "Pakistan",
+    "country_code": "PK",
+    "gdp_current_usd": 356128166704.92,
+    "gdp_growth_pct": 6.15,
+    "inflation_cpi_pct": 5.08,
+    "population_total": 226928892.0,
+    "exports_pct_gdp": 8.58
+  },
+  {
+    "year": 2017,
+    "country": "Pakistan",
+    "country_code": "PK",
+    "gdp_current_usd": 339205534861.1,
+    "gdp_growth_pct": 4.43,
+    "inflation_cpi_pct": 4.09,
+    "population_total": 223273967.0,
+    "exports_pct_gdp": 8.22
+  },
+  {
+    "year": 2016,
+    "country": "Pakistan",
+    "country_code": "PK",
+    "gdp_current_usd": 313630000130.43,
+    "gdp_growth_pct": 6.57,
+    "inflation_cpi_pct": 3.77,
+    "population_total": 220138869.0,
+    "exports_pct_gdp": 8.74
+  },
+  {
+    "year": 2015,
+    "country": "Pakistan",
+    "country_code": "PK",
+    "gdp_current_usd": 299963590534.77,
+    "gdp_growth_pct": 4.22,
+    "inflation_cpi_pct": 2.53,
+    "population_total": 217290883.0,
+    "exports_pct_gdp": 9.97
+  },
+  {
+    "year": 2014,
+    "country": "Pakistan",
+    "country_code": "PK",
+    "gdp_current_usd": 271390474857.63,
+    "gdp_growth_pct": 4.12,
+    "inflation_cpi_pct": 7.19,
+    "population_total": 214264647.0,
+    "exports_pct_gdp": 11.19
+  },
+  {
+    "year": 2013,
+    "country": "Pakistan",
+    "country_code": "PK",
+    "gdp_current_usd": 258657231672.41,
+    "gdp_growth_pct": 4.37,
+    "inflation_cpi_pct": 7.69,
+    "population_total": 211073978.0,
+    "exports_pct_gdp": 12.18
+  },
+  {
+    "year": 2012,
+    "country": "Pakistan",
+    "country_code": "PK",
+    "gdp_current_usd": 250106966104.7,
+    "gdp_growth_pct": 3.03,
+    "inflation_cpi_pct": 9.68,
+    "population_total": 207667125.0,
+    "exports_pct_gdp": 11.87
+  },
+  {
+    "year": 2011,
+    "country": "Pakistan",
+    "country_code": "PK",
+    "gdp_current_usd": 230586581059.67,
+    "gdp_growth_pct": 2.68,
+    "inflation_cpi_pct": 11.92,
+    "population_total": 203746065.0,
+    "exports_pct_gdp": 13.48
+  },
+  {
+    "year": 2010,
+    "country": "Pakistan",
+    "country_code": "PK",
+    "gdp_current_usd": 196709621849.59,
+    "gdp_growth_pct": 1.5,
+    "inflation_cpi_pct": 12.94,
+    "population_total": 199239047.0,
+    "exports_pct_gdp": 12.64
+  },
+  {
+    "year": 2009,
+    "country": "Pakistan",
+    "country_code": "PK",
+    "gdp_current_usd": 187337783856.47,
+    "gdp_growth_pct": 3.47,
+    "inflation_cpi_pct": 13.65,
+    "population_total": 194376534.0,
+    "exports_pct_gdp": 12.39
+  },
+  {
+    "year": 2008,
+    "country": "Pakistan",
+    "country_code": "PK",
+    "gdp_current_usd": 202203748583.85,
+    "gdp_growth_pct": 2.12,
+    "inflation_cpi_pct": 20.29,
+    "population_total": 189499113.0,
+    "exports_pct_gdp": 11.88
+  },
+  {
+    "year": 2007,
+    "country": "Pakistan",
+    "country_code": "PK",
+    "gdp_current_usd": 184140869997.46,
+    "gdp_growth_pct": 4.44,
+    "inflation_cpi_pct": 7.6,
+    "population_total": 184493231.0,
+    "exports_pct_gdp": 11.63
+  },
+  {
+    "year": 2006,
+    "country": "Pakistan",
+    "country_code": "PK",
+    "gdp_current_usd": 161871385506.36,
+    "gdp_growth_pct": 6.05,
+    "inflation_cpi_pct": 7.92,
+    "population_total": 179682690.0,
+    "exports_pct_gdp": 12.55
+  },
+  {
+    "year": 2005,
+    "country": "Pakistan",
+    "country_code": "PK",
+    "gdp_current_usd": 145208562960.77,
+    "gdp_growth_pct": 7.28,
+    "inflation_cpi_pct": 9.06,
+    "population_total": 175453212.0,
+    "exports_pct_gdp": 12.25
+  },
+  {
+    "year": 2004,
+    "country": "Pakistan",
+    "country_code": "PK",
+    "gdp_current_usd": 132216048339.41,
+    "gdp_growth_pct": 7.83,
+    "inflation_cpi_pct": 7.44,
+    "population_total": 171286000.0,
+    "exports_pct_gdp": 11.42
+  },
+  {
+    "year": 2003,
+    "country": "Pakistan",
+    "country_code": "PK",
+    "gdp_current_usd": 112371913740.82,
+    "gdp_growth_pct": 5.4,
+    "inflation_cpi_pct": 2.91,
+    "population_total": 167110248.0,
+    "exports_pct_gdp": 12.16
+  },
+  {
+    "year": 2002,
+    "country": "Pakistan",
+    "country_code": "PK",
+    "gdp_current_usd": 97923302809.35,
+    "gdp_growth_pct": 2.59,
+    "inflation_cpi_pct": 3.29,
+    "population_total": 163222549.0,
+    "exports_pct_gdp": 11.26
+  },
+  {
+    "year": 2001,
+    "country": "Pakistan",
+    "country_code": "PK",
+    "gdp_current_usd": 97145618479.9,
+    "gdp_growth_pct": 3.65,
+    "inflation_cpi_pct": 3.15,
+    "population_total": 159270907.0,
+    "exports_pct_gdp": 10.63
+  },
+  {
+    "year": 2000,
+    "country": "Pakistan",
+    "country_code": "PK",
+    "gdp_current_usd": 99484802344.53,
+    "gdp_growth_pct": 4.26,
+    "inflation_cpi_pct": 4.37,
+    "population_total": 154879127.0,
+    "exports_pct_gdp": 9.63
+  },
+  {
+    "year": 1999,
+    "country": "Pakistan",
+    "country_code": "PK",
+    "gdp_current_usd": 62973857068.51,
+    "gdp_growth_pct": 3.66,
+    "inflation_cpi_pct": 4.14,
+    "population_total": 150565377.0,
+    "exports_pct_gdp": 15.35
+  },
+  {
+    "year": 1998,
+    "country": "Pakistan",
+    "country_code": "PK",
+    "gdp_current_usd": 62191955814.35,
+    "gdp_growth_pct": 2.55,
+    "inflation_cpi_pct": 6.23,
+    "population_total": 146522356.0,
+    "exports_pct_gdp": 16.48
+  },
+  {
+    "year": 1997,
+    "country": "Pakistan",
+    "country_code": "PK",
+    "gdp_current_usd": 62433340468.02,
+    "gdp_growth_pct": 1.01,
+    "inflation_cpi_pct": 11.38,
+    "population_total": 142531804.0,
+    "exports_pct_gdp": 16.08
+  },
+  {
+    "year": 1996,
+    "country": "Pakistan",
+    "country_code": "PK",
+    "gdp_current_usd": 63320170084.41,
+    "gdp_growth_pct": 4.85,
+    "inflation_cpi_pct": 10.37,
+    "population_total": 138557092.0,
+    "exports_pct_gdp": 16.9
+  },
+  {
+    "year": 1995,
+    "country": "Pakistan",
+    "country_code": "PK",
+    "gdp_current_usd": 60636071684.19,
+    "gdp_growth_pct": 4.96,
+    "inflation_cpi_pct": 12.34,
+    "population_total": 134582253.0,
+    "exports_pct_gdp": 16.71
+  },
+  {
+    "year": 1994,
+    "country": "Pakistan",
+    "country_code": "PK",
+    "gdp_current_usd": 52293470813.13,
+    "gdp_growth_pct": 3.74,
+    "inflation_cpi_pct": 12.37,
+    "population_total": 130748083.0,
+    "exports_pct_gdp": 16.16
+  },
+  {
+    "year": 1993,
+    "country": "Pakistan",
+    "country_code": "PK",
+    "gdp_current_usd": 51809999353.16,
+    "gdp_growth_pct": 1.76,
+    "inflation_cpi_pct": 9.97,
+    "population_total": 127020117.0,
+    "exports_pct_gdp": 16.2
+  },
+  {
+    "year": 1992,
+    "country": "Pakistan",
+    "country_code": "PK",
+    "gdp_current_usd": 48884671947.47,
+    "gdp_growth_pct": 7.71,
+    "inflation_cpi_pct": 9.51,
+    "population_total": 123546848.0,
+    "exports_pct_gdp": 17.27
+  },
+  {
+    "year": 1991,
+    "country": "Pakistan",
+    "country_code": "PK",
+    "gdp_current_usd": 45625336680.2,
+    "gdp_growth_pct": 5.06,
+    "inflation_cpi_pct": 11.79,
+    "population_total": 120060406.0,
+    "exports_pct_gdp": 16.93
+  },
+  {
+    "year": 1990,
+    "country": "Pakistan",
+    "country_code": "PK",
+    "gdp_current_usd": 40010423970.46,
+    "gdp_growth_pct": 4.46,
+    "inflation_cpi_pct": 9.05,
+    "population_total": 116155576.0,
+    "exports_pct_gdp": 14.79
+  }
+]

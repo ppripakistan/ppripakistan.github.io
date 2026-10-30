@@ -97,6 +97,7 @@
       ]
     }
     </script>
+    <link rel="stylesheet" href="/assets/css/visual-insights.css" />
   </head>
   <body>
     <a class="skip-link" href="#main-content">Skip to content</a>
@@ -111,6 +112,7 @@
           <a href="/index.html">Home</a>
           <a href="/research/index.html">Research</a>
           <a href="/provinces/index.html">Reform</a>
+          <a href="/insights/">Insights</a>
           <a href="/data/centre.html" aria-current="page">Data</a>
           <a href="/publications/index.html">Publications</a>
           <a href="/consultation/index.html">Engage</a>
@@ -197,6 +199,182 @@
         </section>
 
         <!-- Searchable & Sortable Comprehensive Data Table -->
+        
+        <!-- ================= EMPIRICAL INFOGRAPHICS & VISUAL ANALYTICS ================= -->
+        <section class="obs-section" id="observatory-infographics">
+          <div class="obs-section-header">
+            <div>
+              <span class="obs-badge obs-badge-official">&check; Interactive Visual Analytics</span>
+              <h2 class="obs-section-title" style="margin-top:6px;">Demographic Architecture &amp; Urbanization Visual Analytics</h2>
+              <p class="obs-lead" style="font-size:0.95rem;color:var(--obs-text-muted);margin-top:4px;">
+                Interactive vector visualizations tracking female landholding ratios, 4-decade census growth shifts, 135-district urbanization quadrants, and 70-year intercensal growth trajectories.
+              </p>
+            </div>
+            <div style="display:flex;align-items:center;">
+              <a href="/insights/" class="obs-badge" style="background:#0f766e;color:#fff;text-decoration:none;padding:6px 12px;font-weight:600;display:inline-flex;align-items:center;gap:4px;">
+                <span>View Full 16-Infographic Lab &rarr;</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="vi-grid">
+<div class="vi-card col-6" id="card-gender-land" data-category="demographics">
+          <div class="vi-card-accent"></div>
+          <div class="vi-card-header">
+            <div>
+              <div class="vi-header-meta">
+                <span class="vi-number-badge">INFOGRAPHIC 04 / 16</span>
+                <span class="vi-card-tag">Demographics &bull; Gender &amp; Territory Asymmetry</span>
+              </div>
+              <h3 class="vi-card-title">Female Gender Ratios &amp; Agrarian Landholding Asymmetry</h3>
+              <p class="vi-card-subtitle">Male, female, and transgender distribution in relation to provincial land area shares</p>
+            </div>
+            <div class="vi-card-controls">
+              <button type="button" class="vi-ctrl-btn active" onclick="updateGenderLandProv('PK')">National</button>
+              <button type="button" class="vi-ctrl-btn" onclick="updateGenderLandProv('PK-PB')">Punjab</button>
+              <button type="button" class="vi-ctrl-btn" onclick="updateGenderLandProv('PK-SN')">Sindh</button>
+              <button type="button" class="vi-ctrl-btn" onclick="updateGenderLandProv('PK-KP')">KP</button>
+              <button type="button" class="vi-ctrl-btn" onclick="updateGenderLandProv('PK-BA')">Balochistan</button>
+            </div>
+          </div>
+          <div class="vi-chart-container">
+            <svg id="svg-card-gender-land" class="vi-chart-svg" viewBox="0 0 600 360"></svg>
+          </div>
+          <div class="vi-callout" id="callout-card-gender-land">
+            <strong>Key Policy Takeaway:</strong> Balochistan spans <strong>43.6% of Pakistan's territory (347,190 km²)</strong> but carries only <strong>6.2% of the population (14.89M)</strong> at 42.9 people/km². Conversely, Punjab concentrates <strong>52.9% of citizens (127.69M)</strong> on 25.8% of land area (621.8 people/km²). Nationally, 20,190 transgender citizens were recorded.
+            <div class="vi-kpis">
+              <span class="vi-kpi-pill">Male: <strong>51.48%</strong></span>
+              <span class="vi-kpi-pill">Female: <strong>48.51%</strong></span>
+              <span class="vi-kpi-pill">Transgender: <strong>20,190</strong></span>
+              <span class="vi-kpi-pill">Sex Ratio: <strong>106.1</strong></span>
+            </div>
+          </div>
+          <div class="vi-card-footer">
+            <div class="vi-source">Source: <strong>Pakistan Bureau of Statistics</strong>, 7th Population &amp; Housing Census 2023 Table 1 &bull; <strong>PPRI</strong></div>
+            <div class="vi-actions">
+              <button type="button" class="vi-btn vi-btn-primary" onclick="exportCard('card-gender-land', 'png')">&#x1F4F7; Download Image (PNG)</button>
+              <button type="button" class="vi-btn" onclick="exportCard('card-gender-land', 'svg')">&#x1F4D0; SVG</button>
+              <button type="button" class="vi-btn" onclick="exportCSV('provincial_gender_demographics')">&#x1F4CA; CSV</button>
+            </div>
+          </div>
+        </div>
+
+<div class="vi-card col-6" id="card-census-shifts" data-category="demographics">
+          <div class="vi-card-accent"></div>
+          <div class="vi-card-header">
+            <div>
+              <div class="vi-header-meta">
+                <span class="vi-number-badge">INFOGRAPHIC 10 / 16</span>
+                <span class="vi-card-tag">Federal Demographics &bull; 4-Decade Census Shifts</span>
+              </div>
+              <h3 class="vi-card-title">Multi-Census Provincial Demographic Shifts (1981–2023)</h3>
+              <p class="vi-card-subtitle">Decadal shifts in provincial demographic shares across 1981, 1998, 2017, and 2023 censuses</p>
+            </div>
+            <div class="vi-card-controls">
+              <button type="button" class="vi-ctrl-btn active" onclick="updateCensusShiftYear('2023')">2023</button>
+              <button type="button" class="vi-ctrl-btn" onclick="updateCensusShiftYear('2017')">2017</button>
+              <button type="button" class="vi-ctrl-btn" onclick="updateCensusShiftYear('1998')">1998</button>
+              <button type="button" class="vi-ctrl-btn" onclick="updateCensusShiftYear('1981')">1981</button>
+            </div>
+          </div>
+          <div class="vi-chart-container">
+            <svg id="svg-card-census-shifts" class="vi-chart-svg" viewBox="0 0 600 360"></svg>
+          </div>
+          <div class="vi-callout" id="callout-card-census-shifts">
+            <strong>Key Policy Takeaway:</strong> Significant federal rebalancing: <strong>Punjab's demographic share contracted by -3.2%</strong> (56.1% in 1981 to 52.9% in 2023), while <strong>Balochistan grew from 5.1% to 6.2% (14.89M)</strong> and KP reached 16.9% following the FATA merger.
+            <div class="vi-kpis">
+              <span class="vi-kpi-pill">Punjab Shift: <strong>56.1% &rarr; 52.9%</strong></span>
+              <span class="vi-kpi-pill">Balochistan: <strong>5.1% &rarr; 6.2%</strong></span>
+              <span class="vi-kpi-pill">KP + FATA: <strong>13.1% &rarr; 16.9%</strong></span>
+            </div>
+          </div>
+          <div class="vi-card-footer">
+            <div class="vi-source">Source: <strong>Pakistan Bureau of Statistics</strong>, Censuses of Pakistan (1981, 1998, 2017, 2023) &bull; <strong>PPRI</strong></div>
+            <div class="vi-actions">
+              <button type="button" class="vi-btn vi-btn-primary" onclick="exportCard('card-census-shifts', 'png')">&#x1F4F7; Download Image (PNG)</button>
+              <button type="button" class="vi-btn" onclick="exportCard('card-census-shifts', 'svg')">&#x1F4D0; SVG</button>
+              <button type="button" class="vi-btn" onclick="exportCSV('provincial_census_shifts')">&#x1F4CA; CSV</button>
+            </div>
+          </div>
+        </div>
+
+<div class="vi-card col-12" id="card-districts-scatter" data-category="demographics">
+          <div class="vi-card-accent"></div>
+          <div class="vi-card-header">
+            <div>
+              <div class="vi-header-meta">
+                <span class="vi-number-badge">INFOGRAPHIC 11 / 16</span>
+                <span class="vi-card-tag">Spatial Transition &bull; 135 Districts Scatter Matrix</span>
+              </div>
+              <h3 class="vi-card-title">135-District Urbanization &amp; Population Density Quadrant Matrix</h3>
+              <p class="vi-card-subtitle">2D coordinate matrix: Urbanization Share (%) vs Density (people/km² on log scale) &bull; Bubble radius sized by total population</p>
+            </div>
+            <div class="vi-card-controls" style="align-items: center;">
+              <input type="text" id="scatter-search-input" placeholder="Search District (e.g. Lahore, Quetta)..." oninput="filterScatterMap()" style="padding: 5px 10px; border: 1px solid var(--vi-line); border-radius: 6px; font-size: 12px; width: 220px;" />
+              <button type="button" class="vi-ctrl-btn active" onclick="updateScatterProv('all')">All Districts</button>
+              <button type="button" class="vi-ctrl-btn" onclick="updateScatterProv('Punjab')">Punjab</button>
+              <button type="button" class="vi-ctrl-btn" onclick="updateScatterProv('Sindh')">Sindh</button>
+              <button type="button" class="vi-ctrl-btn" onclick="updateScatterProv('Khyber Pakhtunkhwa')">KP</button>
+              <button type="button" class="vi-ctrl-btn" onclick="updateScatterProv('Balochistan')">Balochistan</button>
+            </div>
+          </div>
+          <div class="vi-chart-container" style="min-height: 440px;">
+            <svg id="svg-card-districts-scatter" class="vi-chart-svg" viewBox="0 0 940 440" style="max-height: 480px;"></svg>
+          </div>
+          <div class="vi-callout" id="callout-card-districts-scatter">
+            <strong>Key Policy Takeaway:</strong> Resolves the 0.0% data key bug and maps all 141 districts into four structural archetypes: <strong>Dense Metros</strong> (Karachi &gt;43,000/km², Lahore 7,294/km²), <strong>Dense Agrarian Hubs</strong> (Charsadda, Gujranwala peri-urban), <strong>Vast Arid Periphery</strong> (Chaghi 5.2/km², Washuk, Awaran), and <strong>Urbanized Frontier Outposts</strong> (Quetta 61.2% urban, Gwadar).
+            <div class="vi-kpis">
+              <span class="vi-kpi-pill">Total Districts Plotted: <strong>141</strong></span>
+              <span class="vi-kpi-pill">Dense Metros (&gt;70% Urban): <strong>14 Districts</strong></span>
+              <span class="vi-kpi-pill">Deep Agrarian (&lt;15% Urban): <strong>42 Districts</strong></span>
+              <span class="vi-kpi-pill">Hyper-Sparse (&lt;50/km²): <strong>26 Districts</strong></span>
+            </div>
+          </div>
+          <div class="vi-card-footer">
+            <div class="vi-source">Source: <strong>Pakistan Bureau of Statistics</strong>, 7th Population &amp; Housing Census 2023 Table 1 (141 Districts) &bull; <strong>PPRI</strong></div>
+            <div class="vi-actions">
+              <button type="button" class="vi-btn vi-btn-primary" onclick="exportCard('card-districts-scatter', 'png')">&#x1F4F7; Download Image (PNG)</button>
+              <button type="button" class="vi-btn" onclick="exportCard('card-districts-scatter', 'svg')">&#x1F4D0; SVG</button>
+              <button type="button" class="vi-btn" onclick="exportCSV('census_2023_districts')">&#x1F4CA; CSV</button>
+            </div>
+          </div>
+        </div>
+
+<div class="vi-card col-6" id="card-census-hist" data-category="demographics">
+          <div class="vi-card-accent"></div>
+          <div class="vi-card-header">
+            <div>
+              <div class="vi-header-meta">
+                <span class="vi-number-badge">INFOGRAPHIC 14 / 16</span>
+                <span class="vi-card-tag">Demographic Trajectory &bull; 70-Year Census</span>
+              </div>
+              <h3 class="vi-card-title">70-Year Intercensal Demographic Growth Trajectory (1951–2023)</h3>
+              <p class="vi-card-subtitle">Seven census milestones and intercensal annual growth rate trajectory</p>
+            </div>
+          </div>
+          <div class="vi-chart-container">
+            <svg id="svg-card-census-hist" class="vi-chart-svg" viewBox="0 0 600 360"></svg>
+          </div>
+          <div class="vi-callout" id="callout-card-census-hist">
+            <strong>Key Policy Takeaway:</strong> Pakistan multiplied <strong>7.2-fold in 72 years</strong> from 33.7 million in 1951 to 241.5 million in 2023. Annual growth currently stands at <strong>2.55%</strong>, adding over 6.1 million people annually.
+            <div class="vi-kpis">
+              <span class="vi-kpi-pill">1951 Population: <strong>33.7M</strong></span>
+              <span class="vi-kpi-pill">2023 Population: <strong>241.5M</strong></span>
+              <span class="vi-kpi-pill">Intercensal Growth: <strong>2.55% p.a.</strong></span>
+            </div>
+          </div>
+          <div class="vi-card-footer">
+            <div class="vi-source">Source: <strong>Pakistan Bureau of Statistics</strong>, Censuses of Pakistan (1951–2023) &bull; <strong>PPRI</strong></div>
+            <div class="vi-actions">
+              <button type="button" class="vi-btn vi-btn-primary" onclick="exportCard('card-census-hist', 'png')">&#x1F4F7; Download Image (PNG)</button>
+              <button type="button" class="vi-btn" onclick="exportCard('card-census-hist', 'svg')">&#x1F4D0; SVG</button>
+              <button type="button" class="vi-btn" onclick="exportCSV('census_historical_growth')">&#x1F4CA; CSV</button>
+            </div>
+          </div>
+        </div>
+          </div>
+        </section>
+
         <section class="obs-section">
           <div class="obs-section-header">
             <div>
@@ -380,5 +558,10 @@
         }
       });
     </script>
-  </body>
+      <!-- Visual Analytics Runtime & Offscreen Canvas -->
+    <div id="vi-tooltip" class="vi-tooltip" role="tooltip" aria-hidden="true" style="display:none;"></div>
+    <div id="vi-toast" role="status" aria-live="polite"></div>
+    <canvas id="vi-export-canvas" width="2080" height="1360" style="display:none;"></canvas>
+    <script src="/assets/js/modules/visual-insights.js" defer></script>
+</body>
 </html>

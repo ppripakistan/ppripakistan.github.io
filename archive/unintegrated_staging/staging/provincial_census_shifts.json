@@ -1,0 +1,58 @@
+[
+  {
+    "census_year": 1981,
+    "punjab_pop_m": 47.29,
+    "punjab_share_pct": 56.13,
+    "sindh_pop_m": 19.03,
+    "sindh_share_pct": 22.59,
+    "kp_pop_m": 13.25,
+    "kp_share_pct": 15.73,
+    "balochistan_pop_m": 4.33,
+    "balochistan_share_pct": 5.14,
+    "ict_pop_m": 0.34,
+    "ict_share_pct": 0.4,
+    "total_pakistan_pop_m": 84.25
+  },
+  {
+    "census_year": 1998,
+    "punjab_pop_m": 73.62,
+    "punjab_share_pct": 55.63,
+    "sindh_pop_m": 30.44,
+    "sindh_share_pct": 23.0,
+    "kp_pop_m": 20.96,
+    "kp_share_pct": 15.84,
+    "balochistan_pop_m": 6.57,
+    "balochistan_share_pct": 4.96,
+    "ict_pop_m": 0.81,
+    "ict_share_pct": 0.61,
+    "total_pakistan_pop_m": 132.35
+  },
+  {
+    "census_year": 2017,
+    "punjab_pop_m": 110.01,
+    "punjab_share_pct": 52.97,
+    "sindh_pop_m": 47.89,
+    "sindh_share_pct": 23.06,
+    "kp_pop_m": 35.53,
+    "kp_share_pct": 17.11,
+    "balochistan_pop_m": 12.34,
+    "balochistan_share_pct": 5.94,
+    "ict_pop_m": 2.01,
+    "ict_share_pct": 0.97,
+    "total_pakistan_pop_m": 207.68
+  },
+  {
+    "census_year": 2023,
+    "punjab_pop_m": 127.69,
+    "punjab_share_pct": 52.87,
+    "sindh_pop_m": 55.7,
+    "sindh_share_pct": 23.06,
+    "kp_pop_m": 40.86,
+    "kp_share_pct": 16.92,
+    "balochistan_pop_m": 14.89,
+    "balochistan_share_pct": 6.17,
+    "ict_pop_m": 2.36,
+    "ict_share_pct": 0.98,
+    "total_pakistan_pop_m": 241.5
+  }
+]

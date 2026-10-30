@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="620" viewBox="0 0 800 620">
+  <defs>
+    <style>
+      text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+    </style>
+  </defs>
+
+  <rect width="800" height="620" fill="#ffffff" rx="10" stroke="#cbd5e1" stroke-width="1"/>
+  <rect width="800" height="6" fill="#0f766e" rx="4"/>
+
+  <!-- Top Header with Number Badge -->
+  <text x="40" y="38" font-size="11" font-weight="700" fill="#0f766e" letter-spacing="1">PAKISTAN PROVINCIAL REFORM INSTITUTE (PPRI) • INFOGRAPHIC 01 / 16 • FEDERAL FISCAL • DEBT SERVICING MONOPOLY</text>
+  <text x="40" y="66" font-size="20" font-weight="800" fill="#073c3a">Federal Budget Allocation &amp; Sovereign Debt Servicing</text>
+  <text x="40" y="88" font-size="12" fill="#64748b">Expenditure distribution across sovereign debt markup, defence, civil government, PSDP, and federal grants</text>
+  <line x1="40" y1="102" x2="760" y2="102" stroke="#e2e8f0" stroke-width="1.5"/>
+
+  <!-- Core Visual Graphics -->
+  <g transform="translate(83.33333333333331, 115) scale(1.0555555555555556)">
+    
+            <path d="M 145 70 A 110 110 0 1 1 132.70534793134874 289.3107567008426 L 137.73497832306973 244.59271986867975 A 65 65 0 1 0 145 115 Z" fill="#e11d48" stroke="#ffffff" stroke-width="2" onmouseenter="showTooltip(event, '&lt;strong&gt;Debt Markup&lt;/strong&gt;&lt;br/&gt;PKR 9,775 Billion (51.8%)')" onmousemove="showTooltip(event, '&lt;strong&gt;Debt Markup&lt;/strong&gt;&lt;br/&gt;PKR 9,775 Billion (51.8%)')" onmouseleave="hideTooltip()" style="cursor:pointer; transition: opacity 0.2s;"></path><path d="M 132.70534793134874 289.3107567008426 A 110 110 0 0 1 64.70100514843642 255.18025954882415 L 97.55059395134879 224.42469882430518 A 65 65 0 0 0 137.73497832306973 244.59271986867975 Z" fill="#0f766e" stroke="#ffffff" stroke-width="2" onmouseenter="showTooltip(event, '&lt;strong&gt;Defence&lt;/strong&gt;&lt;br/&gt;PKR 2,122 Billion (11.2%)')" onmousemove="showTooltip(event, '&lt;strong&gt;Defence&lt;/strong&gt;&lt;br/&gt;PKR 2,122 Billion (11.2%)')" onmouseleave="hideTooltip()" style="cursor:pointer; transition: opacity 0.2s;"></path><path d="M 64.70100514843642 255.18025954882415 A 110 110 0 0 1 39.483713524037086 211.0855800705492 L 82.64946708238554 198.36875185986997 A 65 65 0 0 0 97.55059395134879 224.42469882430518 Z" fill="#0284c7" stroke="#ffffff" stroke-width="2" onmouseenter="showTooltip(event, '&lt;strong&gt;PSDP Dev&lt;/strong&gt;&lt;br/&gt;PKR 1,400 Billion (7.4%)')" onmousemove="showTooltip(event, '&lt;strong&gt;PSDP Dev&lt;/strong&gt;&lt;br/&gt;PKR 1,400 Billion (7.4%)')" onmouseleave="hideTooltip()" style="cursor:pointer; transition: opacity 0.2s;"></path><path d="M 39.483713524037086 211.0855800705492 A 110 110 0 0 1 35.00288252511798 180.79633360911492 L 80.00170331029699 180.47056076902246 A 65 65 0 0 0 82.64946708238554 198.36875185986997 Z" fill="#d97706" stroke="#ffffff" stroke-width="2" onmouseenter="showTooltip(event, '&lt;strong&gt;Civil Admin&lt;/strong&gt;&lt;br/&gt;PKR 839 Billion (4.4%)')" onmousemove="showTooltip(event, '&lt;strong&gt;Civil Admin&lt;/strong&gt;&lt;br/&gt;PKR 839 Billion (4.4%)')" onmouseleave="hideTooltip()" style="cursor:pointer; transition: opacity 0.2s;"></path><path d="M 35.00288252511798 180.79633360911492 A 110 110 0 0 1 45.78079828622309 132.507368873889 L 86.37047171458636 151.93617251638895 A 65 65 0 0 0 80.00170331029699 180.47056076902246 Z" fill="#15803d" stroke="#ffffff" stroke-width="2" onmouseenter="showTooltip(event, '&lt;strong&gt;Subsidies&lt;/strong&gt;&lt;br/&gt;PKR 1,363 Billion (7.2%)')" onmousemove="showTooltip(event, '&lt;strong&gt;Subsidies&lt;/strong&gt;&lt;br/&gt;PKR 1,363 Billion (7.2%)')" onmouseleave="hideTooltip()" style="cursor:pointer; transition: opacity 0.2s;"></path><path d="M 45.78079828622309 132.507368873889 A 110 110 0 0 1 67.10506977819 102.33160330134689 L 98.97117759620318 134.10503831443225 A 65 65 0 0 0 86.37047171458636 151.93617251638895 Z" fill="#7c3aed" stroke="#ffffff" stroke-width="2" onmouseenter="showTooltip(event, '&lt;strong&gt;Pensions&lt;/strong&gt;&lt;br/&gt;PKR 1,014 Billion (5.4%)')" onmousemove="showTooltip(event, '&lt;strong&gt;Pensions&lt;/strong&gt;&lt;br/&gt;PKR 1,014 Billion (5.4%)')" onmouseleave="hideTooltip()" style="cursor:pointer; transition: opacity 0.2s;"></path><path d="M 67.10506977819 102.33160330134689 A 110 110 0 0 1 144.9999999999999 70 L 144.99999999999994 115 A 65 65 0 0 0 98.97117759620318 134.10503831443225 Z" fill="#64748b" stroke="#ffffff" stroke-width="2" onmouseenter="showTooltip(event, '&lt;strong&gt;Grants &amp; Other&lt;/strong&gt;&lt;br/&gt;PKR 2,364 Billion (12.5%)')" onmousemove="showTooltip(event, '&lt;strong&gt;Grants &amp; Other&lt;/strong&gt;&lt;br/&gt;PKR 2,364 Billion (12.5%)')" onmouseleave="hideTooltip()" style="cursor:pointer; transition: opacity 0.2s;"></path>
+            <circle cx="145" cy="180" r="65" fill="#ffffff"></circle>
+            <text x="145" y="172" text-anchor="middle" font-size="10.5" font-weight="700" fill="#64748b">TOTAL 100%</text>
+            <text x="145" y="193" text-anchor="middle" font-size="14" font-weight="800" fill="#073c3a">PKR 19T</text>
+            <text x="145" y="206" text-anchor="middle" font-size="9.5" font-weight="600" fill="#0f766e">2025-26</text>
+            
+              <text x="295" y="32" font-size="11.5" font-weight="700" fill="#0f172a">Debt Markup</text>
+              <text x="560" y="32" font-size="11.5" font-weight="700" fill="#e11d48" text-anchor="end">PKR 9,775B (51.8%)</text>
+              <rect x="295" y="37" width="265" height="12" fill="#f1f5f9" rx="3"></rect>
+              <rect x="295" y="37" width="137.22387031837684" height="12" fill="#e11d48" rx="3"></rect>
+            
+              <text x="295" y="75" font-size="11.5" font-weight="700" fill="#0f172a">Defence</text>
+              <text x="560" y="75" font-size="11.5" font-weight="700" fill="#0f766e" text-anchor="end">PKR 2,122B (11.2%)</text>
+              <rect x="295" y="80" width="265" height="12" fill="#f1f5f9" rx="3"></rect>
+              <rect x="295" y="80" width="29.789161413360176" height="12" fill="#0f766e" rx="3"></rect>
+            
+              <text x="295" y="118" font-size="11.5" font-weight="700" fill="#0f172a">PSDP Dev</text>
+              <text x="560" y="118" font-size="11.5" font-weight="700" fill="#0284c7" text-anchor="end">PKR 1,400B (7.4%)</text>
+              <rect x="295" y="123" width="265" height="12" fill="#f1f5f9" rx="3"></rect>
+              <rect x="295" y="123" width="19.653546644064203" height="12" fill="#0284c7" rx="3"></rect>
+            
+              <text x="295" y="161" font-size="11.5" font-weight="700" fill="#0f172a">Civil Admin</text>
+              <text x="560" y="161" font-size="11.5" font-weight="700" fill="#d97706" text-anchor="end">PKR 839B (4.4%)</text>
+              <rect x="295" y="166" width="265" height="12" fill="#f1f5f9" rx="3"></rect>
+              <rect x="295" y="166" width="11.77808973883562" height="12" fill="#d97706" rx="3"></rect>
+            
+              <text x="295" y="204" font-size="11.5" font-weight="700" fill="#0f172a">Subsidies</text>
+              <text x="560" y="204" font-size="11.5" font-weight="700" fill="#15803d" text-anchor="end">PKR 1,363B (7.2%)</text>
+              <rect x="295" y="209" width="265" height="12" fill="#f1f5f9" rx="3"></rect>
+              <rect x="295" y="209" width="19.134131482756793" height="12" fill="#15803d" rx="3"></rect>
+            
+              <text x="295" y="247" font-size="11.5" font-weight="700" fill="#0f172a">Pensions</text>
+              <text x="560" y="247" font-size="11.5" font-weight="700" fill="#7c3aed" text-anchor="end">PKR 1,014B (5.4%)</text>
+              <rect x="295" y="252" width="265" height="12" fill="#f1f5f9" rx="3"></rect>
+              <rect x="295" y="252" width="14.234783069343646" height="12" fill="#7c3aed" rx="3"></rect>
+            
+              <text x="295" y="290" font-size="11.5" font-weight="700" fill="#0f172a">Grants &amp; Other</text>
+              <text x="560" y="290" font-size="11.5" font-weight="700" fill="#64748b" text-anchor="end">PKR 2,364B (12.5%)</text>
+              <rect x="295" y="295" width="265" height="12" fill="#f1f5f9" rx="3"></rect>
+              <rect x="295" y="295" width="33.186417333262696" height="12" fill="#64748b" rx="3"></rect>
+            
+          
+  </g>
+
+  <!-- Key Insight Box -->
+  <rect x="40" y="510" width="720" height="48" fill="#f8fafc" rx="6" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="54" y="527" font-size="10" font-weight="800" fill="#073c3a">KEY POLICY INSIGHT:</text>
+  <text x="54" y="543" font-size="11" fill="#334155">Key Policy Takeaway: Sovereign debt servicing absorbs 51.8% of the federal budget (PKR 9,775B), consuming 76.0% of net FBR tax collection and leaving only 7.4% (PKR 1,400B) for national development (PSDP). Markup Shar...</text>
+
+  <!-- Watermark Footer Banner (Two-Line Stacked: Zero Overlap) -->
+  <rect x="0" y="568" width="800" height="52" fill="#073c3a" rx="0"/>
+  <!-- Line 1: Primary Data Source (Full Canvas Width) -->
+  <text x="40" y="589" font-size="10.5" font-weight="500" fill="#99f6e4">Source: Ministry of Finance, Annual Budget Statement (Federal Budget)</text>
+  <!-- Line 2: Institution Branding &amp; Canonical Domain -->
+  <text x="40" y="606" font-size="10.5" font-weight="700" fill="#ffffff">Pakistan Provincial Reform Institute (PPRI)</text>
+  <text x="760" y="606" font-size="10.5" font-weight="600" fill="#5eead4" text-anchor="end">ppripakistan.github.io</text>
+</svg>

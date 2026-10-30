@@ -192,18 +192,6 @@
     ]
   },
   {
-    "title": "Interactive Provincial Reform Survey",
-    "type": "Consultation",
-    "description": "Interactive multi-step questionnaire collecting citizen views on provincial structure and local government.",
-    "url": "/consultation/survey.html",
-    "tags": [
-      "survey",
-      "consultation",
-      "feedback",
-      "questionnaire"
-    ]
-  },
-  {
     "title": "Mission & Research Charter",
     "type": "About",
     "description": "The founding mission, non-partisanship charter, and 5 analytical pillars of PPRI.",
@@ -1086,6 +1074,83 @@
       "definitions",
       "citations",
       "academic authority"
+    ]
+  },
+  {
+    "title": "Visual Policy Analytics & Infographics Lab",
+    "type": "Interactive Visual Analytics",
+    "description": "16 publication-grade interactive infographics analyzing sovereign debt, provincial budget allocations, tax expenditures, district urbanization, and 35-year macroeconomic history.",
+    "url": "/insights/",
+    "tags": [
+      "visual analytics",
+      "infographics",
+      "debt",
+      "budget",
+      "provinces",
+      "macroeconomics",
+      "demographics",
+      "living standards"
+    ]
+  },
+  {
+    "title": "Provincial Resource Allocation, Debt Stock & Conflict Exposure Matrix",
+    "type": "Infographic #16",
+    "description": "Comparative 4-view matrix of Punjab, Sindh, Khyber Pakhtunkhwa, and Balochistan analyzing total budgets, ADP, public debt, per capita allocations, and regional conflict incidents.",
+    "url": "/insights/#card-prov-matrix",
+    "tags": [
+      "provincial budget",
+      "ADP",
+      "provincial debt",
+      "conflict",
+      "terrorism",
+      "per capita spending",
+      "Balochistan",
+      "KPK",
+      "Sindh",
+      "Punjab"
+    ]
+  },
+  {
+    "title": "Federal Budget Allocation & Sovereign Debt Servicing Monopoly",
+    "type": "Infographic #01",
+    "description": "Interactive vector chart visualizing how sovereign debt markup interest absorbs over 51% of Pakistan's federal budget and 76% of net tax revenues.",
+    "url": "/insights/#card-fiscal",
+    "tags": [
+      "federal budget",
+      "debt servicing",
+      "defence",
+      "PSDP",
+      "fiscal policy",
+      "subsidies"
+    ]
+  },
+  {
+    "title": "135 Districts Urbanization vs Population Density Quadrant Scale",
+    "type": "Infographic #11",
+    "description": "Interactive 2D quadrant scatter matrix plotting all 135 districts across Pakistan by urbanization percentage and population density.",
+    "url": "/insights/#card-districts-scatter",
+    "tags": [
+      "districts",
+      "urbanization",
+      "density",
+      "census 2023",
+      "quadrants",
+      "spatial"
+    ]
+  },
+  {
+    "title": "35-Year Macroeconomic Trajectory Across 4 Regimes (FY90–FY24)",
+    "type": "Infographic #15",
+    "description": "Longitudinal vector trajectory tracking real GDP growth, CPI inflation, current account balances, and public debt ratios across 35 years and 4 political regimes.",
+    "url": "/insights/#card-macro",
+    "tags": [
+      "macroeconomics",
+      "GDP growth",
+      "inflation",
+      "debt to GDP",
+      "current account",
+      "regimes",
+      "history"
     ]
   }
 ]

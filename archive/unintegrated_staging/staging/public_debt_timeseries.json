@@ -1,0 +1,92 @@
+[
+  {
+    "fiscal_year": "FY2017-18",
+    "reference_date": "End-June 2018",
+    "domestic_debt_pkr_b": 16416,
+    "external_debt_pkr_b": 8537,
+    "total_public_debt_pkr_b": 24953,
+    "debt_to_gdp_pct": 72.1,
+    "debt_servicing_markup_pkr_b": 1499,
+    "source_citation": "MoF Public Debt Bulletin / PES 2025-26"
+  },
+  {
+    "fiscal_year": "FY2018-19",
+    "reference_date": "End-June 2019",
+    "domestic_debt_pkr_b": 20732,
+    "external_debt_pkr_b": 11977,
+    "total_public_debt_pkr_b": 32709,
+    "debt_to_gdp_pct": 86.1,
+    "debt_servicing_markup_pkr_b": 2091,
+    "source_citation": "MoF Public Debt Bulletin / PES 2025-26"
+  },
+  {
+    "fiscal_year": "FY2019-20",
+    "reference_date": "End-June 2020",
+    "domestic_debt_pkr_b": 23283,
+    "external_debt_pkr_b": 13116,
+    "total_public_debt_pkr_b": 36399,
+    "debt_to_gdp_pct": 76.6,
+    "debt_servicing_markup_pkr_b": 2709,
+    "source_citation": "MoF Public Debt Bulletin / PES 2025-26"
+  },
+  {
+    "fiscal_year": "FY2020-21",
+    "reference_date": "End-June 2021",
+    "domestic_debt_pkr_b": 26265,
+    "external_debt_pkr_b": 13601,
+    "total_public_debt_pkr_b": 39866,
+    "debt_to_gdp_pct": 71.5,
+    "debt_servicing_markup_pkr_b": 2749,
+    "source_citation": "MoF Public Debt Bulletin / PES 2025-26"
+  },
+  {
+    "fiscal_year": "FY2021-22",
+    "reference_date": "End-June 2022",
+    "domestic_debt_pkr_b": 31037,
+    "external_debt_pkr_b": 18205,
+    "total_public_debt_pkr_b": 49242,
+    "debt_to_gdp_pct": 73.5,
+    "debt_servicing_markup_pkr_b": 3182,
+    "source_citation": "MoF Public Debt Bulletin / PES 2025-26"
+  },
+  {
+    "fiscal_year": "FY2022-23",
+    "reference_date": "End-June 2023",
+    "domestic_debt_pkr_b": 38810,
+    "external_debt_pkr_b": 24024,
+    "total_public_debt_pkr_b": 62834,
+    "debt_to_gdp_pct": 74.3,
+    "debt_servicing_markup_pkr_b": 5831,
+    "source_citation": "MoF Public Debt Bulletin / PES 2025-26"
+  },
+  {
+    "fiscal_year": "FY2023-24",
+    "reference_date": "End-June 2024",
+    "domestic_debt_pkr_b": 47160,
+    "external_debt_pkr_b": 24084,
+    "total_public_debt_pkr_b": 71244,
+    "debt_to_gdp_pct": 67.2,
+    "debt_servicing_markup_pkr_b": 7302,
+    "source_citation": "MoF Public Debt Bulletin / PES 2025-26"
+  },
+  {
+    "fiscal_year": "FY2024-25",
+    "reference_date": "End-June 2025 (Revised)",
+    "domestic_debt_pkr_b": 53210,
+    "external_debt_pkr_b": 24940,
+    "total_public_debt_pkr_b": 78150,
+    "debt_to_gdp_pct": 66.0,
+    "debt_servicing_markup_pkr_b": 8750,
+    "source_citation": "MoF Public Debt Bulletin / PES 2025-26"
+  },
+  {
+    "fiscal_year": "FY2025-26",
+    "reference_date": "End-March 2026 (Provisional)",
+    "domestic_debt_pkr_b": 57566,
+    "external_debt_pkr_b": 25720,
+    "total_public_debt_pkr_b": 83285,
+    "debt_to_gdp_pct": 65.6,
+    "debt_servicing_markup_pkr_b": 9775,
+    "source_citation": "MoF Public Debt Bulletin / PES 2025-26"
+  }
+]

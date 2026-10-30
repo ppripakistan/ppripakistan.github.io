@@ -201,7 +201,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     if (districtCountEl) {
-      districtCountEl.textContent = `Showing ${currentFilteredDistricts.length} of ${districtData.length} baseline units`;
+      districtCountEl.textContent = `Showing ${currentFilteredDistricts.length} of ${districtData.length} districts (key sample)`;
     }
 
     if (currentFilteredDistricts.length === 0) {
@@ -272,326 +272,32 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // --- INTERACTIVE DATA OBSERVATORY ATLAS ---
-  function initDataAtlas() {
-    const atlasMenu = document.getElementById("atlasMenu");
-    const atlasStage = document.getElementById("atlasStage");
-    if (!atlasMenu || !atlasStage) return;
-
-    const domains = [
-      {
-        id: "population",
-        title: "Population & Cities",
-        icon: "👥",
-        badge: "Census 2023",
-        metric: "241.49M",
-        metricSub: "National Population (+2.55%/yr)",
-        url: "/data/population/",
-        csvUrl: "/data/downloads/pakistan-population-census-2023.csv",
-        chartTitle: "Provincial Population Breakdown (Census 2023 Millions)",
-        chartData: [
-          { label: "Punjab", value: 127.69, formattedValue: "127.7M (52.9%)", color: "#073c3a" },
-          { label: "Sindh", value: 55.70, formattedValue: "55.7M (23.1%)", color: "#0f766e" },
-          { label: "KP", value: 40.86, formattedValue: "40.9M (16.9%)", color: "#0284c7" },
-          { label: "Balochistan", value: 14.89, formattedValue: "14.9M (6.2%)", color: "#d97706" },
-          { label: "ICT", value: 2.36, formattedValue: "2.4M (1.0%)", color: "#64748b" }
-        ],
-        topics: ["National Census Population (241.5M)", "Intercensal Growth (+2.55%/yr)", "Urban vs Rural Distribution (38.8%)", "Household Size (6.30)", "Sex Ratio (106M:100F)", "Top 22 Urban Centers (Karachi 20.4M, Lahore 13.0M)"],
-        researchTitle: "Four Provinces, 241M People: Has Pakistan Outgrown Its Administrative Structure?",
-        researchUrl: "/articles/four-provinces-241-million-people-administrative-scale.html",
-        keywords: ["population", "census", "karachi", "lahore", "faisalabad", "demographics", "urban", "rural", "gender", "growth", "cities", "household", "languages"]
-      },
-      {
-        id: "economy",
-        title: "Economy & Inflation",
-        icon: "📈",
-        badge: "PBS / SBP / PES",
-        metric: "10.26%",
-        metricSub: "National CPI YoY Inflation Benchmark",
-        url: "/data/economy/",
-        csvUrl: "/data/downloads/pakistan-economic-benchmarks-2026.csv",
-        chartTitle: "Sectoral GDP Contributions & Economic Growth Rates (%)",
-        chartData: [
-          { label: "Services", value: 4.09, formattedValue: "4.09%", color: "#073c3a" },
-          { label: "Industry", value: 3.51, formattedValue: "3.51%", color: "#0f766e" },
-          { label: "Agriculture", value: 2.89, formattedValue: "2.89%", color: "#0284c7" },
-          { label: "Overall GDP", value: 3.70, formattedValue: "3.70%", color: "#d97706" },
-          { label: "LSM Growth", value: 10.37, formattedValue: "10.37%", color: "#16a34a" }
-        ],
-        topics: ["CPI Inflation (10.26%)", "SPI Weekly Food Index (8.4%)", "Real GDP Growth (3.70%)", "GDP Per Capita ($1,680)", "LSM Industrial Output (+10.37%)", "Software & IT Exports ($3.39B)", "Mean Monthly Wage (Rs 39,042)"],
-        researchTitle: "Income Went Up. So Why Does Life Feel Harder? Analyzing Inflation & Real Wages",
-        researchUrl: "/research/reports/income-went-up-why-does-life-feel-harder.html",
-        keywords: ["economy", "inflation", "cpi", "spi", "food prices", "gdp", "growth", "prices", "remittances", "trade", "wages", "lsm", "dollar", "rupee", "petrol"]
-      },
-      {
-        id: "living-standards",
-        title: "Living Standards & Income",
-        icon: "🏠",
-        badge: "HIES 2024–25",
-        metric: "PKR 82,179",
-        metricSub: "Mean Monthly Household Income (PBS)",
-        url: "/data/living-standards/",
-        csvUrl: "/data/downloads/pakistan-household-income-consumption-hies-2024-25.csv",
-        chartTitle: "Average Monthly Household Income by Consumption Quintile (HIES 2024–25 PKR)",
-        chartData: [
-          { label: "Q1 (Lowest consumption)", value: 41851, formattedValue: "Rs 41,851", color: "#d97706" },
-          { label: "Q2", value: 55138, formattedValue: "Rs 55,138", color: "#0284c7" },
-          { label: "Q3", value: 65741, formattedValue: "Rs 65,741", color: "#0f766e" },
-          { label: "Q4", value: 80387, formattedValue: "Rs 80,387", color: "#073c3a" },
-          { label: "Q5 (Highest consumption)", value: 139317, formattedValue: "Rs 139,317", color: "#16a34a" }
-        ],
-        topics: ["Monthly Household Income (Rs 82,179)", "Monthly Consumption Spending (Rs 79,150)", "Income Quintile Disparities", "Improved drinking-water source (97%; not a water-safety test)", "Flush toilet use (89%; 98% urban / 82% rural)", "Electricity or solar lighting (96%)", "Clean fuels for cooking, lighting and heating (38%)"],
-        researchTitle: "Same Country, Different Life: Spatial Inequality Across Pakistan's Districts",
-        researchUrl: "/research/reports/same-country-different-life-district-access.html",
-        keywords: ["living standards", "income", "household", "hies", "consumption", "poverty", "water", "sanitation", "electricity", "energy", "welfare", "wages"]
-      },
-      {
-        id: "public-finance",
-        title: "Public Finance & NFC",
-        icon: "⚖️",
-        badge: "Finance Division",
-        metric: "Rs 5.5T+",
-        metricSub: "Federal Divisible Pool Baseline",
-        url: "/data/public-finance/",
-        csvUrl: "/data/downloads/province_baseline_2023.csv",
-        chartTitle: "7th NFC Award Divisible Pool Formula Weights (%)",
-        chartData: [
-          { label: "Population", value: 82.0, formattedValue: "82.0%", color: "#073c3a" },
-          { label: "Poverty", value: 10.3, formattedValue: "10.3%", color: "#0f766e" },
-          { label: "Revenue Collection", value: 5.0, formattedValue: "5.0%", color: "#0284c7" },
-          { label: "Inverse Density", value: 2.7, formattedValue: "2.7%", color: "#d97706" }
-        ],
-        topics: ["7th NFC Formula Distribution Weights", "Provincial Divisible Pool Shares", "Total Public Debt (Rs 83.3T)", "Domestic Debt Time to Maturity (3.86 Yrs)", "Public Education & Health Outlays (Rs 962B)"],
-        researchTitle: "Does Money Work Better When Spent Closer to the People? Fiscal Decentralization",
-        researchUrl: "/research/reports/does-money-work-better-spent-closer-to-people.html",
-        keywords: ["public finance", "nfc", "divisible pool", "budget", "debt", "tax", "fbr", "revenue", "transfers", "fiscal", "spending", "provinces"]
-      },
-      {
-        id: "education",
-        title: "Education & Literacy",
-        icon: "🎓",
-        badge: "PBS HIES 2024–25",
-        metric: "63%",
-        metricSub: "Literacy rate, population age 10+",
-        url: "/data/education/",
-        csvUrl: "/data/downloads/pakistan-education-literacy-hies-2024-25.csv",
-        chartTitle: "Provincial Literacy Rates (Age 10+, HIES 2024–25)",
-        chartData: [
-          { label: "Punjab", value: 68, formattedValue: "68%", color: "#073c3a" },
-          { label: "Sindh", value: 58, formattedValue: "58%", color: "#0f766e" },
-          { label: "KP", value: 58, formattedValue: "58%", color: "#0284c7" },
-          { label: "Balochistan", value: 49, formattedValue: "49%", color: "#d97706" },
-          { label: "National Total", value: 63, formattedValue: "63%", color: "#16a34a" }
-        ],
-        topics: ["Literacy rate age 10+ (63%)", "Literacy gap (73% male / 54% female)", "Out-of-school rate ages 5–16 (28%)", "Youth literacy ages 15–24 (77%)", "Out-of-school rate in Balochistan (45%)"],
-        researchTitle: "Out-of-School Children in Pakistan: Spatial District Analysis",
-        researchUrl: "/research/reports/same-country-different-life-district-access.html",
-        keywords: ["education", "literacy", "schools", "out of school", "completion", "gender gap", "parity", "children", "attendance", "teachers"]
-      },
-      {
-        id: "health",
-        title: "Public Health",
-        icon: "🏥",
-        badge: "PDHS / PBS",
-        metric: "73.0%",
-        metricSub: "Child Immunization Coverage Rate",
-        url: "/data/health/",
-        csvUrl: "/data/downloads/pakistan-economic-benchmarks-2026.csv",
-        chartTitle: "Core Public Health Coverage Benchmarks (%)",
-        chartData: [
-          { label: "Prenatal Care", value: 88.0, formattedValue: "88.0%", color: "#073c3a" },
-          { label: "Child Vaccines", value: 73.0, formattedValue: "73.0%", color: "#0f766e" },
-          { label: "Female Autonomy", value: 56.0, formattedValue: "56.0%", color: "#0284c7" },
-          { label: "Contraceptive Use", value: 38.0, formattedValue: "38.0%", color: "#d97706" }
-        ],
-        topics: ["Child Immunization Coverage (73%)", "Total Fertility Rate (3.6 Births/Woman)", "Skilled Prenatal Consultation (88%)", "Contraceptive Prevalence (38%)", "Female Health Autonomy (56%)"],
-        researchTitle: "How Far Is Government? The Hidden Cost of Administrative Distance for Healthcare",
-        researchUrl: "/articles/how-far-is-government-administrative-distance.html",
-        keywords: ["health", "immunization", "vaccine", "fertility", "prenatal", "maternal", "hospital", "contraceptive", "doctors", "clinics"]
-      },
-      {
-        id: "digital-access",
-        title: "Digital Access & Tech",
-        icon: "🌐",
-        badge: "HIES / PTA",
-        metric: "95.0%",
-        metricSub: "Household Mobile Ownership",
-        url: "/data/digital-access/",
-        csvUrl: "/data/downloads/pakistan-digital-access-hies-2024-25.csv",
-        chartTitle: "Household & Individual Mobile / Internet Access (%)",
-        chartData: [
-          { label: "HH Mobile", value: 95.0, formattedValue: "95.0%", color: "#073c3a" },
-          { label: "Internet Users", value: 57.0, formattedValue: "57.0%", color: "#0f766e" },
-          { label: "Male Mobile", value: 69.0, formattedValue: "69.0%", color: "#0284c7" },
-          { label: "Female Mobile", value: 39.0, formattedValue: "39.0%", color: "#d97706" },
-          { label: "Broadband", value: 34.0, formattedValue: "34.0%", color: "#16a34a" }
-        ],
-        topics: ["Household Mobile Ownership (95%)", "Individual Gender Gap (69% Male / 39% Female)", "Household Broadband Access (34%)", "Internet Penetration (57%)", "Software & IT Exports ($3.39B)"],
-        researchTitle: "The Price of a Simple Task: Bureaucratic Friction & Digital Governance",
-        researchUrl: "/research/reports/price-of-a-simple-task-pakistan-bureaucracy-cost.html",
-        keywords: ["digital", "internet", "broadband", "mobile", "smartphone", "telecom", "gender gap", "technology", "it exports", "computer"]
-      },
-      {
-        id: "compare",
-        title: "Provinces Comparator",
-        icon: "📊",
-        badge: "Multi-Domain",
-        metric: "5 Units",
-        metricSub: "Punjab, Sindh, KP, Balochistan, ICT",
-        url: "/data/compare/",
-        csvUrl: "/data/downloads/pakistan-provinces-census-2023.csv",
-        chartTitle: "Territorial Land Area (Thousand km²)",
-        chartData: [
-          { label: "Balochistan", value: 347.19, formattedValue: "347K km² (43.6%)", color: "#d97706" },
-          { label: "Punjab", value: 205.34, formattedValue: "205K km² (25.8%)", color: "#073c3a" },
-          { label: "Sindh", value: 140.91, formattedValue: "141K km² (17.7%)", color: "#0f766e" },
-          { label: "KP", value: 101.74, formattedValue: "102K km² (12.8%)", color: "#0284c7" },
-          { label: "Islamabad", value: 0.91, formattedValue: "0.9K km² (0.1%)", color: "#64748b" }
-        ],
-        topics: ["Census 2023 Population Distribution", "Territorial Land Area Shares", "Population Density per km²", "Urbanization Rates", "Mean Household Incomes", "7th NFC Divisible Pool Shares"],
-        researchTitle: "The Provincial Reorganization of Pakistan: Flagship Institutional Proposal",
-        researchUrl: "/research/policy-papers/provincial-reorganization-of-pakistan.html",
-        keywords: ["compare", "provinces", "punjab", "sindh", "kp", "balochistan", "ict", "islamabad", "subnational", "regions", "density", "area"]
-      }
-    ];
-
-    // Render Atlas Menu Items
-    atlasMenu.innerHTML = domains.map(d => `
-      <div class="atlas-item${d.id === 'population' ? ' active' : ''}" data-domain="${d.id}" role="button" tabindex="0">
-        <div class="atlas-item-left">
-          <div class="atlas-item-icon">${d.icon}</div>
-          <div class="atlas-item-info">
-            <h4 class="atlas-item-title">${d.title}</h4>
-            <div class="atlas-item-sub">${d.metricSub}</div>
-          </div>
-        </div>
-        <span class="atlas-item-badge">${d.metric}</span>
-      </div>
-    `).join("");
-
-    function selectAtlasDomain(domainId) {
-      const d = domains.find(item => item.id === domainId);
-      if (!d) return;
-
-      document.querySelectorAll(".atlas-item").forEach(item => {
-        item.classList.toggle("active", item.getAttribute("data-domain") === domainId);
-      });
-
-      const topicPills = d.topics.map(t => `<div class="atlas-topic-pill">${t}</div>`).join("");
-
-      atlasStage.innerHTML = `
-        <div class="atlas-stage-header">
-          <div class="atlas-stage-title-wrap">
-            <div class="atlas-stage-icon">${d.icon}</div>
-            <div>
-              <h3 class="atlas-stage-title">${d.title}</h3>
-              <span class="obs-badge obs-badge-official">&check; ${d.badge} Verified</span>
-            </div>
-          </div>
-          <div class="atlas-headline-box">
-            <div class="atlas-headline-val">${d.metric}</div>
-            <div class="atlas-headline-sub">${d.metricSub}</div>
-          </div>
-        </div>
-
-        <div class="atlas-chart-card">
-          <div class="atlas-chart-header">
-            <h4 class="atlas-chart-title">${d.chartTitle}</h4>
-            <span class="obs-badge obs-badge-census">&bull; Interactive Preview</span>
-          </div>
-          <div class="obs-chart-wrapper" id="atlasMiniChart"></div>
-        </div>
-
-        <div class="atlas-topics-wrap">
-          <div class="atlas-topics-label">Verified Topics &amp; Indicators Tracked:</div>
-          <div class="atlas-topics-grid">
-            ${topicPills}
-          </div>
-        </div>
-
-        <div class="atlas-policy-card">
-          <div class="atlas-policy-left">
-            <strong>Context &amp; Policy Analysis:</strong>
-            <a href="${d.researchUrl}">${d.researchTitle} &rarr;</a>
-          </div>
-          <a href="${d.researchUrl}" class="obs-btn obs-btn-outline" style="font-size:0.82rem;padding:6px 14px;">Read Analysis &rarr;</a>
-        </div>
-
-        <div class="atlas-actions-bar">
-          <a href="${d.url}" class="obs-btn obs-btn-primary" style="padding:10px 22px; font-size:0.95rem;">
-            Explore Full ${d.title} Hub &rarr;
-          </a>
-          <a href="${d.csvUrl}" class="obs-btn obs-btn-outline" download>
-            &darr; Download Domain CSV
-          </a>
-          <a href="/data/quick-facts/" class="obs-btn obs-btn-outline">
-            ★ CSS Fast Facts
-          </a>
-        </div>
-      `;
-
-      // Render interactive chart into the mini chart container
-      if (typeof PPRIObservatory !== "undefined" && PPRIObservatory.renderBarChart) {
-        PPRIObservatory.renderBarChart("#atlasMiniChart", d.chartData, {
-          title: d.chartTitle,
-          height: 260
-        });
-      }
-    }
-
-    // Attach click listeners to menu items
-    document.querySelectorAll(".atlas-item").forEach(item => {
-      item.addEventListener("click", function () {
-        selectAtlasDomain(this.getAttribute("data-domain"));
-      });
-      item.addEventListener("keydown", function (e) {
-        if (e.key === "Enter" || e.key === " ") {
-          e.preventDefault();
-          selectAtlasDomain(this.getAttribute("data-domain"));
-        }
-      });
-    });
-
-    // Initial render with first domain
-    selectAtlasDomain("population");
-
-    // Command Search in Hero
+  // --- THEMATIC DOMAIN SEARCH & FILTER ---
+  function initThematicSearch() {
     const heroInput = document.getElementById("heroCommandInput");
     const heroChips = document.querySelectorAll(".dc-command-chip");
+    const domainCards = document.querySelectorAll(".domain-group-card");
 
     function executeSearch(query) {
       query = (query || "").toLowerCase().trim();
-      let firstMatch = null;
 
-      domains.forEach(d => {
-        const item = document.querySelector(`.atlas-item[data-domain="${d.id}"]`);
-        if (!item) return;
-
-        const isMatch = !query ||
-          d.title.toLowerCase().includes(query) ||
-          d.metric.toLowerCase().includes(query) ||
-          d.topics.some(t => t.toLowerCase().includes(query)) ||
-          d.keywords.some(k => k.toLowerCase().includes(query));
+      domainCards.forEach(card => {
+        const text = card.textContent.toLowerCase();
+        const keywords = (card.getAttribute("data-keywords") || "").toLowerCase();
+        const isMatch = !query || text.includes(query) || keywords.includes(query);
 
         if (isMatch) {
-          item.style.display = "flex";
+          card.style.display = "";
           if (query) {
-            item.classList.add("highlight");
-            if (!firstMatch) firstMatch = d.id;
+            card.style.boxShadow = "0 0 0 2px #073c3a, 0 8px 24px rgba(7, 60, 58, 0.12)";
           } else {
-            item.classList.remove("highlight");
+            card.style.boxShadow = "";
           }
         } else {
-          item.style.display = "none";
-          item.classList.remove("highlight");
+          card.style.display = "none";
+          card.style.boxShadow = "";
         }
       });
-
-      if (firstMatch) {
-        selectAtlasDomain(firstMatch);
-      } else if (!query) {
-        selectAtlasDomain("population");
-      }
     }
 
     if (heroInput) {
@@ -614,5 +320,5 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   renderDistricts();
-  initDataAtlas();
+  initThematicSearch();
 });

@@ -60,11 +60,12 @@
         --kl-shadow: 0 4px 16px rgba(7, 60, 58, 0.06);
       }
 
+      /* 2-Pane Workspace Grid (Option A) */
       .kl-workspace {
         display: grid;
-        grid-template-columns: minmax(220px, 0.85fr) minmax(290px, 1.25fr) minmax(420px, 1.9fr);
-        gap: 16px;
-        margin: 20px auto 36px;
+        grid-template-columns: minmax(320px, 380px) minmax(0, 1fr);
+        gap: 20px;
+        margin: 16px auto 36px;
         align-items: start;
       }
 
@@ -99,107 +100,110 @@
         font-weight: 600;
       }
 
-      /* Left: Topic Navigation */
-      .kl-topic-list {
-        padding: 8px;
-        max-height: calc(100vh - 290px);
-        min-height: 380px;
-        overflow-y: auto;
+      /* Top Topic Ribbon Bar */
+      .kl-topic-ribbon-bar {
+        background: var(--kl-paper);
+        border: 1px solid var(--kl-line);
+        border-radius: 12px;
+        padding: 14px 18px;
+        margin: 18px auto 16px;
+        box-shadow: var(--kl-shadow);
+      }
+
+      .kl-topic-ribbon-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 10px;
+      }
+
+      .kl-ribbon-title {
+        font-size: 0.8rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+        color: var(--kl-navy);
+      }
+
+      .kl-topic-ribbon {
+        display: flex;
+        gap: 8px;
+        overflow-x: auto;
+        padding-bottom: 4px;
+        scrollbar-width: thin;
+        -webkit-overflow-scrolling: touch;
+      }
+
+      .kl-topic-ribbon::-webkit-scrollbar {
+        height: 5px;
+      }
+
+      .kl-topic-ribbon::-webkit-scrollbar-track {
+        background: #f1f5f9;
+        border-radius: 4px;
+      }
+
+      .kl-topic-ribbon::-webkit-scrollbar-thumb {
+        background: #cbd5e1;
+        border-radius: 4px;
+      }
+
+      .kl-topic-ribbon::-webkit-scrollbar-thumb:hover {
+        background: #94a3b8;
       }
 
       .kl-topic-btn {
-        display: grid;
-        grid-template-columns: 24px minmax(0, 1fr) auto;
+        display: inline-flex;
         align-items: center;
-        gap: 10px;
-        width: 100%;
-        text-align: left;
-        padding: 10px 12px;
-        border: 0;
-        border-radius: 8px;
-        background: transparent;
+        gap: 8px;
+        padding: 8px 15px;
+        border-radius: 20px;
+        border: 1px solid var(--kl-line);
+        background: #f8fafc;
         color: #24445d;
-        font-size: 0.86rem;
-        font-weight: 500;
-        margin: 2px 0;
+        font-size: 0.84rem;
+        font-weight: 600;
+        white-space: nowrap;
         cursor: pointer;
-        transition: background 0.15s, color 0.15s;
+        transition: all 0.18s ease;
+        flex-shrink: 0;
       }
 
       .kl-topic-btn:hover {
-        background: #f1f8f7;
-        color: var(--kl-teal-dark);
+        background: #e6f3f2;
+        border-color: var(--kl-teal);
+        color: var(--kl-navy);
       }
 
       .kl-topic-btn.active {
-        background: var(--kl-mint);
-        color: var(--kl-teal-dark);
-        font-weight: 700;
-        box-shadow: inset 3px 0 var(--kl-teal);
+        background: var(--kl-navy);
+        border-color: #042423;
+        color: #ffffff;
+        box-shadow: 0 2px 8px rgba(7, 60, 58, 0.2);
+      }
+
+      .kl-topic-btn.active .kl-topic-icon {
+        color: #ffffff;
+      }
+
+      .kl-topic-btn.active .kl-topic-count {
+        background: rgba(255, 255, 255, 0.25);
+        color: #ffffff;
       }
 
       .kl-topic-icon {
-        font-size: 1rem;
+        font-size: 0.95rem;
         color: var(--kl-teal);
         text-align: center;
       }
 
       .kl-topic-count {
-        font-size: 0.75rem;
+        font-size: 0.74rem;
         color: #627d8d;
         background: #eef4f5;
         border-radius: 12px;
-        padding: 2px 8px;
-        font-weight: 600;
-      }
-
-      .kl-mobile-topic-select-wrap {
-        display: none;
-        padding: 10px;
-      }
-
-      .kl-mobile-topic-select {
-        width: 100%;
-        padding: 10px 12px;
-        border: 1px solid var(--kl-line);
-        border-radius: 8px;
-        background: #fff;
-        color: var(--kl-ink);
-        font-size: 0.9rem;
-        font-weight: 600;
-      }
-
-      .kl-side-help {
-        margin: 12px;
-        padding: 14px;
-        border: 1px solid #e2ece9;
-        background: #fbfdfc;
-        border-radius: 10px;
-        font-size: 0.82rem;
-      }
-
-      .kl-side-help strong {
-        display: block;
-        color: var(--kl-navy);
-        margin-bottom: 4px;
-      }
-
-      .kl-side-help button {
-        margin-top: 10px;
-        border: 1px solid #c7deda;
-        background: #fff;
-        border-radius: 6px;
-        padding: 7px 12px;
-        color: var(--kl-teal-dark);
-        font-size: 0.78rem;
-        font-weight: 600;
-        cursor: pointer;
-        width: 100%;
-        transition: background 0.15s;
-      }
-
-      .kl-side-help button:hover {
-        background: #f0f7f6;
+        padding: 1px 7px;
+        font-weight: 700;
       }
 
       /* Middle: Questions Pane */
@@ -774,57 +778,46 @@
         padding: 24px;
       }
 
-      /* Responsive Breakpoints */
-      @media (max-width: 1120px) {
-        .kl-workspace {
-          grid-template-columns: 210px minmax(280px, 1fr);
-        }
-        .kl-answer-panel-wrap {
-          grid-column: 1 / -1;
-        }
-        .kl-answer-panel {
-          padding: 0 20px 20px;
-        }
-        .kl-question-list,
-        .kl-topic-list {
-          max-height: 440px;
-        }
-      }
-
-      @media (max-width: 768px) {
+      /* Responsive Breakpoints: 2-Panel Clean Flow */
+      @media (max-width: 960px) {
         .kl-workspace {
           display: flex;
           flex-direction: column;
+          gap: 16px;
           margin-top: 14px;
-          gap: 14px;
         }
-        .kl-topic-panel,
+
         .kl-question-panel,
         .kl-answer-panel-wrap {
           width: 100%;
         }
-        .kl-topic-list {
-          display: none;
-        }
-        .kl-topic-panel .kl-panel-head {
-          padding: 12px 14px;
-          border-bottom: 0;
-        }
-        .kl-mobile-topic-select-wrap {
-          display: block;
-        }
-        .kl-side-help {
-          display: none;
-        }
+
         .kl-question-list {
-          max-height: 480px;
-          min-height: 0;
+          max-height: 440px;
         }
+
         .kl-answer-panel {
-          padding: 0 16px 18px;
+          padding: 0 18px 20px;
         }
+
         .kl-floating-back {
           display: inline-block;
+        }
+      }
+
+      @media (max-width: 640px) {
+        .kl-topic-ribbon-bar {
+          padding: 10px 14px;
+          border-radius: 8px;
+        }
+
+        .kl-topic-btn {
+          padding: 6px 12px;
+          font-size: 0.8rem;
+        }
+
+        .kl-answer-panel {
+          padding: 0 14px 16px;
         }
       }
     </style>
@@ -961,26 +954,18 @@
           </div>
         </div>
 
-        <!-- 3-Pane Interactive Workspace -->
-        <div class="kl-workspace" id="knowledge-workspace" aria-label="PPRI Interactive Knowledge Explorer">
-          <!-- Left Sidebar: Topics -->
-          <section class="kl-panel kl-topic-panel" aria-label="Topic Selector">
-            <div class="kl-panel-head">
-              <h2>Topics <span class="kl-count" id="topic-total"></span></h2>
-            </div>
-            <div id="topic-list" class="kl-topic-list" role="tablist" aria-label="Thematic Topics"></div>
-            <div class="kl-mobile-topic-select-wrap">
-              <label class="sr-only" for="mobile-topic-select">Select a topic</label>
-              <select id="mobile-topic-select" class="kl-mobile-topic-select" aria-label="Select topic on mobile"></select>
-            </div>
-            <div class="kl-side-help">
-              <strong>Need a specific indicator?</strong>
-              <span style="color:#516d7c;">Filter by Fast Facts Matrix or search across all 290+ questions.</span>
-              <button id="all-topics-btn" type="button">⌕ &nbsp; Browse All Questions &rarr;</button>
-            </div>
-          </section>
+        <!-- Top Topic Ribbon Bar (Horizontal Thematic Navigator) -->
+        <div class="kl-topic-ribbon-bar" aria-label="Topic Navigation">
+          <div class="kl-topic-ribbon-header">
+            <span class="kl-ribbon-title">Thematic Topic Explorer:</span>
+            <span class="kl-count" id="topic-total"></span>
+          </div>
+          <div class="kl-topic-ribbon" id="topic-list" role="tablist" aria-label="Thematic Topics"></div>
+        </div>
 
-          <!-- Middle Pane: Questions List -->
+        <!-- 2-Pane Interactive Workspace: Left = Questions List, Right = Answer Reader -->
+        <div class="kl-workspace" id="knowledge-workspace" aria-label="PPRI Interactive Knowledge Explorer">
+          <!-- Left Pane: Questions List -->
           <section class="kl-panel kl-question-panel" id="questions-pane" aria-label="Questions List">
             <div class="kl-question-toolbar">
               <label class="kl-searchbox">
@@ -1284,7 +1269,7 @@
                     <li><a href="/resources/constitution.html">Constitution Reader: Federal &amp; Provincial Lists</a></li>
                     <li><a href="/resources/legislation.html">Provincial Local Government Acts &amp; Statutes</a></li>
                     <li><a href="/consultation/">Public Consultation Portal</a></li>
-                    <li><a href="/consultation/survey.html">Participate in National Governance Survey</a></li>
+                    <li><a href="/surveys/">Participate in National Governance Survey</a></li>
                     <li><a href="/consultation/submissions.html">Submit Policy Memoranda &amp; Feedback</a></li>
                     <li><a href="/about.html">About Pakistan Provincial Reform Institute</a></li>
                   </ul>
@@ -1394,11 +1379,17 @@
       function renderTopics() {
         const counts = getTopicCounts();
         const totalEl = $('topic-total');
-        if (totalEl) totalEl.textContent = '(' + qs.length + ')';
+        if (totalEl) totalEl.textContent = '(' + qs.length + ' questions)';
 
         const listEl = $('topic-list');
         if (listEl) {
-          listEl.innerHTML = topics.map(function(t) {
+          const allBtn = '<button type="button" class="kl-topic-btn ' + (activeTopic === 'all' && !query ? 'active' : '') + '" data-topic="all">' +
+            '<span class="kl-topic-icon">📚</span>' +
+            '<span>All Topics</span>' +
+            '<span class="kl-topic-count">' + qs.length + '</span>' +
+            '</button>';
+
+          const topicBtns = topics.map(function(t) {
             const isActive = (t.id === activeTopic && !query);
             return '<button type="button" class="kl-topic-btn ' + (isActive ? 'active' : '') + '" data-topic="' + esc(t.id) + '">' +
               '<span class="kl-topic-icon">' + iconFor(t.id) + '</span>' +
@@ -1406,15 +1397,18 @@
               '<span class="kl-topic-count">' + (counts[t.id] || 0) + '</span>' +
               '</button>';
           }).join('');
+
+          listEl.innerHTML = allBtn + topicBtns;
         }
 
         const selectEl = $('mobile-topic-select');
         if (selectEl) {
-          selectEl.innerHTML = topics.map(function(t) {
-            return '<option value="' + esc(t.id) + '" ' + (t.id === activeTopic ? 'selected' : '') + '>' +
-              esc(t.label) + ' (' + (counts[t.id] || 0) + ')' +
-              '</option>';
-          }).join('');
+          selectEl.innerHTML = '<option value="all" ' + (activeTopic === 'all' ? 'selected' : '') + '>All Topics (' + qs.length + ')</option>' +
+            topics.map(function(t) {
+              return '<option value="' + esc(t.id) + '" ' + (t.id === activeTopic ? 'selected' : '') + '>' +
+                esc(t.label) + ' (' + (counts[t.id] || 0) + ')' +
+                '</option>';
+            }).join('');
         }
       }
 
@@ -1448,7 +1442,7 @@
             const tags = (x.tags || []).join(' ').toLowerCase();
             return sText.includes(q) || title.includes(q) || sub.includes(q) || tags.includes(q);
           });
-        } else if (!collectionFilter) {
+        } else if (!collectionFilter && activeTopic !== 'all') {
           list = list.filter(function(x) { return x.topic_id === activeTopic; });
         }
 
@@ -1478,6 +1472,8 @@
               'quick-recall': 'Quick Recall Collection'
             };
             headingEl.textContent = filterLabels[collectionFilter] || 'Filtered Collection';
+          } else if (activeTopic === 'all') {
+            headingEl.textContent = 'All Topics';
           } else {
             const curTopic = topics.find(function(t) { return t.id === activeTopic; });
             headingEl.textContent = curTopic ? curTopic.label : 'Questions';
@@ -1685,7 +1681,7 @@
           history.replaceState(null, '', '#' + hash);
         }
 
-        if (shouldScroll && window.matchMedia('(max-width: 1120px)').matches) {
+        if (shouldScroll && window.matchMedia('(max-width: 960px)').matches) {
           const panel = $('answer-pane');
           if (panel) {
             panel.scrollIntoView({ behavior: 'smooth', block: 'start' });

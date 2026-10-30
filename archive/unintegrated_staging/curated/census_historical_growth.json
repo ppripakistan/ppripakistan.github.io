@@ -1,0 +1,65 @@
+[
+  {
+    "census_year": 1951,
+    "population_millions": 33.74,
+    "intercensal_increase_pct": 0.0,
+    "annual_growth_rate_pct": 0.0,
+    "household_size_avg": 5.6,
+    "urban_share_pct": 17.8,
+    "source_citation": "PBS Population Census Records (1951-2023)"
+  },
+  {
+    "census_year": 1961,
+    "population_millions": 42.88,
+    "intercensal_increase_pct": 27.1,
+    "annual_growth_rate_pct": 2.45,
+    "household_size_avg": 5.7,
+    "urban_share_pct": 22.5,
+    "source_citation": "PBS Population Census Records (1951-2023)"
+  },
+  {
+    "census_year": 1972,
+    "population_millions": 65.31,
+    "intercensal_increase_pct": 52.3,
+    "annual_growth_rate_pct": 3.67,
+    "household_size_avg": 6.1,
+    "urban_share_pct": 25.4,
+    "source_citation": "PBS Population Census Records (1951-2023)"
+  },
+  {
+    "census_year": 1981,
+    "population_millions": 84.25,
+    "intercensal_increase_pct": 29.0,
+    "annual_growth_rate_pct": 3.1,
+    "household_size_avg": 6.7,
+    "urban_share_pct": 28.3,
+    "source_citation": "PBS Population Census Records (1951-2023)"
+  },
+  {
+    "census_year": 1998,
+    "population_millions": 132.35,
+    "intercensal_increase_pct": 57.1,
+    "annual_growth_rate_pct": 2.69,
+    "household_size_avg": 6.8,
+    "urban_share_pct": 32.5,
+    "source_citation": "PBS Population Census Records (1951-2023)"
+  },
+  {
+    "census_year": 2017,
+    "population_millions": 207.68,
+    "intercensal_increase_pct": 56.9,
+    "annual_growth_rate_pct": 2.4,
+    "household_size_avg": 6.4,
+    "urban_share_pct": 36.4,
+    "source_citation": "PBS Population Census Records (1951-2023)"
+  },
+  {
+    "census_year": 2023,
+    "population_millions": 241.5,
+    "intercensal_increase_pct": 16.3,
+    "annual_growth_rate_pct": 2.55,
+    "household_size_avg": 6.3,
+    "urban_share_pct": 38.8,
+    "source_citation": "PBS 7th Digital Population & Housing Census 2023 Table 1"
+  }
+]
