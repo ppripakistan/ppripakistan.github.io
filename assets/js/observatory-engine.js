@@ -353,9 +353,14 @@
   /**
    * Instant Client-side Table Search/Filter
    */
-  engine.setupTableSearch = function (inputId, tableId) {
-    var input = document.getElementById(inputId);
-    var table = document.getElementById(tableId);
+  // Helper: Search filter across table rows (Supports both selector string & raw ID)
+  engine.initSearchFilter = function (inputSelector, tableSelector) {
+    var input = typeof inputSelector === 'string' && inputSelector.charAt(0) === '#'
+      ? document.querySelector(inputSelector)
+      : (document.getElementById(inputSelector) || document.querySelector(inputSelector));
+    var table = typeof tableSelector === 'string' && tableSelector.charAt(0) === '#'
+      ? document.querySelector(tableSelector)
+      : (document.getElementById(tableSelector) || document.querySelector(tableSelector));
     if (!input || !table) return;
 
     input.addEventListener('input', function () {
@@ -367,6 +372,8 @@
       });
     });
   };
+
+  engine.setupTableSearch = engine.initSearchFilter;
 
   /**
    * One-click Copy Citation to Clipboard

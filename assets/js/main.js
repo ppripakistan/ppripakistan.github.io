@@ -465,3 +465,80 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+
+
+// Global One-Click Article Citation Copy Function
+window.copyArticleCitation = function (artCode, artTitle, pubYear) {
+  var url = window.location.href.split('#')[0];
+  var year = pubYear || '2026';
+  var citationText = 'Pakistan Provincial Reform Institute (PPRI). (' + year + '). ' + artTitle + ' (PPRI Policy Article No. ' + artCode + '). ' + url;
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(citationText).then(function () {
+      showCitationToast('Citation copied to clipboard!');
+    }).catch(function () {
+      fallbackCopyText(citationText);
+    });
+  } else {
+    fallbackCopyText(citationText);
+  }
+};
+
+// Global One-Click Report Citation Copy Function
+window.copyReportCitation = function (repCode, repTitle, pubYear) {
+  var url = window.location.href.split('#')[0];
+  var year = pubYear || '2026';
+  var citationText = 'Pakistan Provincial Reform Institute (PPRI). (' + year + '). ' + repTitle + ' (PPRI Research Report No. ' + repCode + '). ' + url;
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(citationText).then(function () {
+      showCitationToast('Report citation copied to clipboard!');
+    }).catch(function () {
+      fallbackCopyText(citationText);
+    });
+  } else {
+    fallbackCopyText(citationText);
+  }
+};
+
+function fallbackCopyText(text) {
+  var textarea = document.createElement('textarea');
+  textarea.value = text;
+  textarea.style.position = 'fixed';
+  textarea.style.opacity = '0';
+  document.body.appendChild(textarea);
+  textarea.select();
+  try {
+    document.execCommand('copy');
+    showCitationToast('Citation copied to clipboard!');
+  } catch (err) {
+    prompt('Copy citation manually:', text);
+  }
+  document.body.removeChild(textarea);
+}
+
+function showCitationToast(msg) {
+  var toast = document.getElementById('citation-toast');
+  if (!toast) {
+    toast = document.createElement('div');
+    toast.id = 'citation-toast';
+    toast.style.position = 'fixed';
+    toast.style.bottom = '24px';
+    toast.style.right = '24px';
+    toast.style.background = '#073c3a';
+    toast.style.color = '#ffffff';
+    toast.style.padding = '10px 18px';
+    toast.style.borderRadius = '6px';
+    toast.style.boxShadow = '0 4px 12px rgba(0,0,0,0.15)';
+    toast.style.fontSize = '0.85rem';
+    toast.style.fontWeight = '600';
+    toast.style.zIndex = '99999';
+    toast.style.transition = 'opacity 0.25s ease, transform 0.25s ease';
+    document.body.appendChild(toast);
+  }
+  toast.textContent = msg;
+  toast.style.opacity = '1';
+  toast.style.transform = 'translateY(0)';
+  setTimeout(function () {
+    toast.style.opacity = '0';
+    toast.style.transform = 'translateY(10px)';
+  }, 2500);
+}
