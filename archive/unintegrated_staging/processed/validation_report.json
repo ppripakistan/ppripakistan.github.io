@@ -1,8 +1,0 @@
-{
-  "timestamp": "2026-10-28T23:49:22Z",
-  "geographies_loaded": 315,
-  "new_observations_extracted": 50,
-  "total_observations_in_store": 325,
-  "total_indicators_in_catalog": 93,
-  "qa_status": "PASSED_ZERO_DATA_FABRICATION"
-}
