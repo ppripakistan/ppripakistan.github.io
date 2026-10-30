@@ -1534,3 +1534,505 @@ html {
   overflow: hidden;
   text-overflow: ellipsis;
 }
+
+
+/* ==========================================================================
+   INSIGHTS 4 PRIMARY DOMAINS & FLAGSHIP INFOGRAPHICS STYLES
+   ========================================================================== */
+
+/* 1. Hero Domain Showcase Grid */
+.vi-domain-showcase-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 16px;
+  margin: 24px 0 16px 0;
+}
+
+.vi-domain-showcase-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 18px 20px;
+  box-shadow: 0 2px 6px rgba(15, 23, 42, 0.04);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+
+.vi-domain-showcase-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+}
+
+.vi-showcase-fiscal::before { background: linear-gradient(90deg, #0f766e, #14b8a6); }
+.vi-showcase-economy::before { background: linear-gradient(90deg, #1d4ed8, #3b82f6); }
+.vi-showcase-demographics::before { background: linear-gradient(90deg, #6d28d9, #8b5cf6); }
+.vi-showcase-living::before { background: linear-gradient(90deg, #b45309, #f59e0b); }
+
+.vi-domain-showcase-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
+  border-color: #cbd5e1;
+}
+
+.vi-showcase-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.vi-domain-badge {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 3px 8px;
+  border-radius: 20px;
+}
+
+.vi-badge-fiscal { background: #ccfbf1; color: #0f766e; }
+.vi-badge-economy { background: #dbeafe; color: #1e40af; }
+.vi-badge-demographics { background: #ede9fe; color: #6b21a8; }
+.vi-badge-living { background: #fef3c7; color: #92400e; }
+
+.vi-showcase-count {
+  font-size: 0.75rem;
+  color: #64748b;
+  font-weight: 600;
+}
+
+.vi-showcase-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0 0 8px 0;
+  line-height: 1.35;
+}
+
+.vi-showcase-desc {
+  font-size: 0.85rem;
+  color: #475569;
+  line-height: 1.55;
+  margin: 0 0 14px 0;
+  flex-grow: 1;
+}
+
+.vi-showcase-kpi {
+  background: #f8fafc;
+  border-radius: 8px;
+  padding: 8px 12px;
+  margin-bottom: 14px;
+  border: 1px solid #f1f5f9;
+}
+
+.vi-showcase-kpi .vi-kpi-label {
+  display: block;
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #94a3b8;
+  font-weight: 700;
+  margin-bottom: 2px;
+}
+
+.vi-showcase-kpi .vi-kpi-val {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.vi-showcase-link {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #0f766e;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  transition: color 0.15s ease, transform 0.15s ease;
+}
+
+.vi-showcase-link:hover {
+  color: #042f2e;
+  text-decoration: underline;
+}
+
+/* 2. Semantic Domain Section & Banner */
+.vi-domain-section {
+  margin-bottom: 4rem;
+  scroll-margin-top: 80px;
+}
+
+.vi-domain-banner {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  padding: 24px 28px;
+  margin-bottom: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.03);
+}
+
+.vi-domain-banner::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 6px;
+}
+
+.vi-domain-banner-fiscal::before { background: #0f766e; }
+.vi-domain-banner-economy::before { background: #2563eb; }
+.vi-domain-banner-demographics::before { background: #7c3aed; }
+.vi-domain-banner-living::before { background: #d97706; }
+
+.vi-domain-banner-main {
+  max-width: 680px;
+}
+
+.vi-domain-badge-wrap {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.vi-domain-pill {
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  padding: 3px 10px;
+  border-radius: 9999px;
+}
+
+.vi-domain-pill-fiscal { background: #ccfbf1; color: #0f766e; }
+.vi-domain-pill-economy { background: #dbeafe; color: #1e40af; }
+.vi-domain-pill-demographics { background: #ede9fe; color: #6b21a8; }
+.vi-domain-pill-living { background: #fef3c7; color: #92400e; }
+
+.vi-domain-theme-label {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.vi-domain-heading {
+  font-size: 1.45rem;
+  font-weight: 800;
+  color: #073c3a;
+  margin: 0 0 8px 0;
+  letter-spacing: -0.02em;
+  line-height: 1.25;
+}
+
+.vi-domain-lead {
+  font-size: 0.92rem;
+  color: #475569;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.vi-domain-kpis {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.vi-kpi-block {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 10px 16px;
+  min-width: 130px;
+  text-align: center;
+}
+
+.vi-kpi-block .vi-kpi-num {
+  display: block;
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #0f172a;
+  line-height: 1.15;
+}
+
+.vi-kpi-block .vi-kpi-desc {
+  display: block;
+  font-size: 0.72rem;
+  color: #64748b;
+  font-weight: 600;
+  margin-top: 4px;
+}
+
+/* 3. Domain Grid & Flagship Showcase Cards */
+.vi-domain-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 24px;
+}
+
+.vi-domain-grid > .col-6 {
+  grid-column: span 6;
+}
+
+.vi-domain-grid > .col-12 {
+  grid-column: span 12;
+}
+
+.vi-card.vi-card-flagship {
+  grid-column: span 12;
+  border-width: 2px;
+  border-color: #cbd5e1;
+  box-shadow: 0 4px 20px rgba(15, 23, 42, 0.06);
+  background: #ffffff;
+}
+
+.vi-card.vi-card-flagship .vi-card-title {
+  font-size: 1.35rem;
+}
+
+.vi-card.vi-card-flagship .vi-chart-container {
+  min-height: 380px;
+}
+
+/* Polished Card Hover & Controls */
+.vi-card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.vi-card:hover {
+  box-shadow: 0 10px 28px rgba(15, 23, 42, 0.08);
+}
+
+.vi-ctrl-btn {
+  font-weight: 600;
+  letter-spacing: 0.2px;
+  transition: all 0.15s ease;
+}
+
+.vi-ctrl-btn.active {
+  background: var(--vi-teal);
+  color: #ffffff;
+  border-color: var(--vi-teal);
+  box-shadow: 0 2px 6px rgba(15, 118, 110, 0.25);
+}
+
+.vi-ctrl-btn:hover:not(.active) {
+  background: #f1f5f9;
+  color: #0f172a;
+}
+
+/* Clean Action Buttons */
+.vi-actions {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.vi-btn {
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.vi-btn-primary {
+  background: #0f766e;
+  color: #ffffff;
+  border: 1px solid #0f766e;
+}
+
+.vi-btn-primary:hover {
+  background: #042f2e;
+  border-color: #042f2e;
+}
+
+@media (max-width: 900px) {
+  .vi-domain-banner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .vi-domain-kpis {
+    width: 100%;
+    justify-content: flex-start;
+  }
+  .vi-domain-grid {
+    grid-template-columns: 1fr;
+  }
+  .vi-domain-grid > .col-6,
+  .vi-domain-grid > .col-12,
+  .vi-card.vi-card-flagship {
+    grid-column: span 1;
+  }
+}
+
+
+/* ==========================================================================
+   MINIMALIST INSIGHTS: COLLAPSIBLE SEO CARD & MINIMALIST FAST JUMP
+   ========================================================================== */
+
+/* Single Collapsible SEO Card */
+.vi-seo-collapsible {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  margin: 18px 0 22px 0;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.vi-seo-collapsible[open] {
+  border-color: #cbd5e1;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+}
+
+.vi-seo-collapsible-summary {
+  padding: 12px 18px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  user-select: none;
+  list-style: none;
+  background: #f8fafc;
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: #073c3a;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.vi-seo-collapsible-summary::-webkit-details-marker {
+  display: none;
+}
+
+.vi-seo-collapsible-summary:hover {
+  background: #f0fdfa;
+  color: #0f766e;
+}
+
+.vi-seo-summary-text {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.vi-seo-summary-badge {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  padding: 2px 8px;
+  background: #e2e8f0;
+  color: #475569;
+  border-radius: 4px;
+}
+
+.vi-seo-chevron {
+  font-size: 0.85rem;
+  color: #64748b;
+  transition: transform 0.2s ease;
+  display: inline-block;
+  margin-left: auto;
+  padding-left: 10px;
+}
+
+.vi-seo-collapsible[open] .vi-seo-chevron {
+  transform: rotate(180deg);
+}
+
+.vi-seo-collapsible-body {
+  padding: 16px 20px;
+  font-size: 0.88rem;
+  color: #475569;
+  line-height: 1.65;
+  background: #ffffff;
+  border-top: 1px solid #f1f5f9;
+}
+
+.vi-seo-collapsible-body p {
+  margin: 0 0 10px 0;
+}
+
+.vi-seo-collapsible-body p:last-child {
+  margin-bottom: 0;
+}
+
+.vi-seo-collapsible-body strong {
+  color: #0f172a;
+}
+
+/* Minimalist Fast Jump Navigation */
+.vi-quick-nav-minimal {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 14px 18px;
+  margin: 16px 0 20px 0;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
+}
+
+.vi-quick-nav-inner {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.vi-quick-nav-label {
+  font-size: 0.82rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #073c3a;
+  white-space: nowrap;
+}
+
+.vi-quick-chips-stream {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+  flex: 1;
+}
+
+.vi-quick-chips-stream .vi-chip-btn {
+  background: #f1f5f9;
+  color: #334155;
+  border: 1px solid #e2e8f0;
+  border-radius: 9999px;
+  padding: 5px 12px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  white-space: nowrap;
+}
+
+.vi-quick-chips-stream .vi-chip-btn:hover {
+  background: #0f766e;
+  color: #ffffff;
+  border-color: #0f766e;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 6px rgba(15, 118, 110, 0.2);
+}
