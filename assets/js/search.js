@@ -22,13 +22,14 @@
       .trim();
   }
 
-  // Load primary search index, and merge with Urdu index if available
+  // Load primary search index, and merge with Urdu index
   Promise.all([
     fetch("/search-index.json").then((r) => r.json()).catch(() => []),
     fetch("/search-index-ur.json").then((r) => r.json()).catch(() => [])
   ])
     .then(([mainIndex, urduIndex]) => {
-      idx = [...urduIndex, ...mainIndex];
+      // Put language-relevant index first
+      idx = isUrdu ? [...urduIndex, ...mainIndex] : [...mainIndex, ...urduIndex];
       render(i.value || "");
     })
     .catch((err) => {
@@ -51,22 +52,65 @@
   function render(q) {
     const rawQ = q.trim();
     const hasUrdu = /[\u0600-\u06FF]/.test(rawQ);
-    const normalizedQ = hasUrdu ? normalizeUrdu(rawQ) : rawQ.toLowerCase();
 
-    const rows = rawQ
-      ? idx.filter((x) => {
-          const searchable = [
-            x.title || "",
-            x.type || "",
-            x.description || "",
-            x.text || "",
-            (x.tags || []).join(" ")
-          ].join(" ");
+    let rows = [];
 
-          const target = hasUrdu ? normalizeUrdu(searchable) : searchable.toLowerCase();
-          return target.includes(normalizedQ);
-        })
-      : (isUrdu ? idx.filter(x => (x.url || "").startsWith("/ur/")).slice(0, 12) : idx.slice(0, 12));
+    if (!rawQ) {
+      // Default initial display (empty query)
+      rows = isUrdu
+        ? idx.filter((x) => (x.url || "").startsWith("/ur/")).slice(0, 12)
+        : idx.filter((x) => !(x.url || "").startsWith("/ur/")).slice(0, 12);
+    } else {
+      // Tokenize search terms for multi-word matching
+      const normalizedQuery = hasUrdu ? normalizeUrdu(rawQ) : rawQ.toLowerCase();
+      const terms = normalizedQuery.split(/\s+/).filter(Boolean);
+
+      // On English pages without Urdu query, exclude /ur/ cards to keep results clean
+      const candidateList = (!isUrdu && !hasUrdu)
+        ? idx.filter((x) => !(x.url || "").startsWith("/ur/"))
+        : (isUrdu && hasUrdu ? idx.filter((x) => (x.url || "").startsWith("/ur/")) : idx);
+
+      const scored = [];
+
+      for (const item of candidateList) {
+        const title = hasUrdu ? normalizeUrdu(item.title || "") : (item.title || "").toLowerCase();
+        const type = hasUrdu ? normalizeUrdu(item.type || "") : (item.type || "").toLowerCase();
+        const tags = hasUrdu ? normalizeUrdu((item.tags || []).join(" ")) : (item.tags || []).join(" ").toLowerCase();
+        const desc = hasUrdu ? normalizeUrdu(item.description || item.text || "") : (item.description || item.text || "").toLowerCase();
+        const fullHaystack = `${title} ${type} ${tags} ${desc}`;
+
+        // Every search term must match somewhere in the entry
+        const allTermsMatch = terms.every((t) => fullHaystack.includes(t));
+        if (!allTermsMatch) continue;
+
+        // Calculate relevance score
+        let score = 0;
+
+        // Exact phrase match in title
+        if (title.includes(normalizedQuery)) score += 100;
+        // Exact phrase match in tags or type
+        if (tags.includes(normalizedQuery)) score += 40;
+        if (type.includes(normalizedQuery)) score += 30;
+        if (desc.includes(normalizedQuery)) score += 20;
+
+        // Individual term occurrences
+        for (const t of terms) {
+          if (title.includes(t)) score += 25;
+          if (tags.includes(t)) score += 15;
+          if (type.includes(t)) score += 10;
+          if (desc.includes(t)) score += 5;
+        }
+
+        // Title begins with first query term boost
+        if (terms.length > 0 && title.startsWith(terms[0])) score += 15;
+
+        scored.push({ item, score });
+      }
+
+      // Sort descending by score
+      scored.sort((a, b) => b.score - a.score);
+      rows = scored.map((s) => s.item);
+    }
 
     const noResultsMsg = isUrdu
       ? "<div class='callout'>اس تلاش سے مطابقت رکھنے والا کوئی مواد دستیاب نہیں ہے۔</div>"

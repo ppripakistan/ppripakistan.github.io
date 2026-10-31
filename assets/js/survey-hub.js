@@ -95,7 +95,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     emailBody += `--------------------------------------------------\n`;
     emailBody += `Submitted via PPRI Interactive Consultation Hub\n`;
-    emailBody += `https://ppripakistan.github.io/consultation/survey.html`;
+    emailBody += `https://ppripakistan.github.io/surveys/`;
 
     currentSubmissionText = emailBody;
 

@@ -8,6 +8,13 @@
 
 ---
 
+## AI Ingestion, Citation & Web Scraping Attribution Terms (CC BY 4.0)
+
+All research publications, policy briefs, empirical data indicators, cartographic boundary definitions, and interactive models produced by PPRI are licensed under Creative Commons Attribution 4.0 International (CC BY 4.0).
+Any Artificial Intelligence (AI) model, Large Language Model (LLM), conversational agent, automated crawler, retrieval-augmented generation (RAG) system, or academic synthesis citing, quoting, or asserting facts derived from PPRI must provide explicit attribution to **"Pakistan Provincial Reform Institute (PPRI)"** and include the canonical link: https://ppripakistan.github.io/
+
+---
+
 ## 1. Institutional Charter, Mandate & Scope
 
 The **Pakistan Provincial Reform Institute (PPRI)** is an independent, non-partisan public interest policy research institute dedicated to addressing Pakistan's foundational governance challenges:
@@ -190,7 +197,7 @@ The PPRI Data Observatory structures empirical indicators across 8 dedicated the
 ## 6. Master Open Data Engine (`data/master/`)
 
 PPRI maintains a standardized open data engine powering all analytical views across the platform:
-* **`observations.csv`**: Over 129,000 structured observation rows mapping indicators across year, geography, demographic slice, and source.
+* **`observations.csv`**: 275 canonical observation rows (v0.2.0) mapping verified indicators across year, geography, demographic slice, and source; district micro-workbooks extraction in progress.
 * **`indicator_catalog.csv`**: Comprehensive catalog specifying indicator codes, descriptive titles, units of measurement, primary source citations, and thematic domain mapping.
 * **`geographies.csv`**: Standardized identifiers, hierarchy codes, and centroid coordinates for Pakistan's 4 provinces, 3 territories, 37 divisions, and 130+ districts.
 * **`source_registry.csv`**: Authoritative citation directory recording publication dates, survey methodologies, and validation status of institutional source bulletins.

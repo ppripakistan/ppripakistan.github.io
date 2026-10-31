@@ -1,0 +1,29 @@
+# Raw data caches & archives
+data/raw/
+archive/unintegrated_staging/
+Build Library/
+*.zip
+*.tar.gz
+*.rar
+*.7z
+
+# Scratch, Debug, and Test Scripts
+scripts/debug_*.py
+scripts/test_*.py
+scripts/inspect_*.py
+scripts/check_*.py
+scripts/verify_*.py
+!scripts/verify_seo_assets.py
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+env/
+
+# OS and Editor
+.DS_Store
+Thumbs.db
+.idea/

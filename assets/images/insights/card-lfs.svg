@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="620" viewBox="0 0 800 620">
+  <defs>
+    <style>
+      text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+    </style>
+  </defs>
+
+  <rect width="800" height="620" fill="#ffffff" rx="10" stroke="#cbd5e1" stroke-width="1"/>
+  <rect width="800" height="6" fill="#0f766e" rx="4"/>
+
+  <!-- Top Header with Number Badge -->
+  <text x="40" y="38" font-size="11" font-weight="700" fill="#0f766e" letter-spacing="1">PAKISTAN PROVINCIAL REFORM INSTITUTE (PPRI) • INFOGRAPHIC 09 / 16 • LABOUR MARKET • GENDER &amp; YOUTH DEFICIT</text>
+  <text x="40" y="66" font-size="20" font-weight="800" fill="#073c3a">Labour Force Participation &amp; Gender/Rural Wage Disparities</text>
+  <text x="40" y="88" font-size="12" fill="#64748b">Economic participation gap, youth unemployment, and provincial wage differentials</text>
+  <line x1="40" y1="102" x2="760" y2="102" stroke="#e2e8f0" stroke-width="1.5"/>
+
+  <!-- Core Visual Graphics -->
+  <g transform="translate(83.33333333333331, 115) scale(1.0555555555555556)">
+    
+                <text x="138" y="65" text-anchor="end" font-size="11.5" font-weight="700" fill="#1e293b">Pakistan</text>
+                <rect x="150" y="50" width="300" height="10" fill="#f1f5f9" rx="2"></rect>
+                <rect x="150" y="50" width="256.5" height="10" fill="#073c3a" rx="2" onmouseenter="showTooltip(event, '&lt;strong&gt;Pakistan Male LFPR&lt;/strong&gt;&lt;br/&gt;68.4%')" onmouseleave="hideTooltip()" style="cursor:pointer;"></rect>
+                <text x="412.5" y="59" font-size="9" font-weight="700" fill="#073c3a">68.4% M</text>
+
+                <rect x="150" y="63" width="300" height="10" fill="#f1f5f9" rx="2"></rect>
+                <rect x="150" y="63" width="86.625" height="10" fill="#0f766e" rx="2" onmouseenter="showTooltip(event, '&lt;strong&gt;Pakistan Female LFPR&lt;/strong&gt;&lt;br/&gt;23.1%')" onmouseleave="hideTooltip()" style="cursor:pointer;"></rect>
+                <text x="242.625" y="72" font-size="9" font-weight="700" fill="#0f766e">23.1% F</text>
+              
+                <text x="138" y="117" text-anchor="end" font-size="11.5" font-weight="700" fill="#1e293b">Punjab</text>
+                <rect x="150" y="102" width="300" height="10" fill="#f1f5f9" rx="2"></rect>
+                <rect x="150" y="102" width="259.125" height="10" fill="#073c3a" rx="2" onmouseenter="showTooltip(event, '&lt;strong&gt;Punjab Male LFPR&lt;/strong&gt;&lt;br/&gt;69.1%')" onmouseleave="hideTooltip()" style="cursor:pointer;"></rect>
+                <text x="415.125" y="111" font-size="9" font-weight="700" fill="#073c3a">69.1% M</text>
+
+                <rect x="150" y="115" width="300" height="10" fill="#f1f5f9" rx="2"></rect>
+                <rect x="150" y="115" width="99.375" height="10" fill="#0f766e" rx="2" onmouseenter="showTooltip(event, '&lt;strong&gt;Punjab Female LFPR&lt;/strong&gt;&lt;br/&gt;26.5%')" onmouseleave="hideTooltip()" style="cursor:pointer;"></rect>
+                <text x="255.375" y="124" font-size="9" font-weight="700" fill="#0f766e">26.5% F</text>
+              
+                <text x="138" y="169" text-anchor="end" font-size="11.5" font-weight="700" fill="#1e293b">Sindh</text>
+                <rect x="150" y="154" width="300" height="10" fill="#f1f5f9" rx="2"></rect>
+                <rect x="150" y="154" width="258" height="10" fill="#073c3a" rx="2" onmouseenter="showTooltip(event, '&lt;strong&gt;Sindh Male LFPR&lt;/strong&gt;&lt;br/&gt;68.8%')" onmouseleave="hideTooltip()" style="cursor:pointer;"></rect>
+                <text x="414" y="163" font-size="9" font-weight="700" fill="#073c3a">68.8% M</text>
+
+                <rect x="150" y="167" width="300" height="10" fill="#f1f5f9" rx="2"></rect>
+                <rect x="150" y="167" width="79.5" height="10" fill="#0f766e" rx="2" onmouseenter="showTooltip(event, '&lt;strong&gt;Sindh Female LFPR&lt;/strong&gt;&lt;br/&gt;21.2%')" onmouseleave="hideTooltip()" style="cursor:pointer;"></rect>
+                <text x="235.5" y="176" font-size="9" font-weight="700" fill="#0f766e">21.2% F</text>
+              
+                <text x="138" y="221" text-anchor="end" font-size="11.5" font-weight="700" fill="#1e293b">Khyber Pakhtunkhwa</text>
+                <rect x="150" y="206" width="300" height="10" fill="#f1f5f9" rx="2"></rect>
+                <rect x="150" y="206" width="246.375" height="10" fill="#073c3a" rx="2" onmouseenter="showTooltip(event, '&lt;strong&gt;Khyber Pakhtunkhwa Male LFPR&lt;/strong&gt;&lt;br/&gt;65.7%')" onmouseleave="hideTooltip()" style="cursor:pointer;"></rect>
+                <text x="402.375" y="215" font-size="9" font-weight="700" fill="#073c3a">65.7% M</text>
+
+                <rect x="150" y="219" width="300" height="10" fill="#f1f5f9" rx="2"></rect>
+                <rect x="150" y="219" width="63.00000000000001" height="10" fill="#0f766e" rx="2" onmouseenter="showTooltip(event, '&lt;strong&gt;Khyber Pakhtunkhwa Female LFPR&lt;/strong&gt;&lt;br/&gt;16.8%')" onmouseleave="hideTooltip()" style="cursor:pointer;"></rect>
+                <text x="219" y="228" font-size="9" font-weight="700" fill="#0f766e">16.8% F</text>
+              
+                <text x="138" y="273" text-anchor="end" font-size="11.5" font-weight="700" fill="#1e293b">Balochistan</text>
+                <rect x="150" y="258" width="300" height="10" fill="#f1f5f9" rx="2"></rect>
+                <rect x="150" y="258" width="252.00000000000003" height="10" fill="#073c3a" rx="2" onmouseenter="showTooltip(event, '&lt;strong&gt;Balochistan Male LFPR&lt;/strong&gt;&lt;br/&gt;67.2%')" onmouseleave="hideTooltip()" style="cursor:pointer;"></rect>
+                <text x="408" y="267" font-size="9" font-weight="700" fill="#073c3a">67.2% M</text>
+
+                <rect x="150" y="271" width="300" height="10" fill="#f1f5f9" rx="2"></rect>
+                <rect x="150" y="271" width="65.625" height="10" fill="#0f766e" rx="2" onmouseenter="showTooltip(event, '&lt;strong&gt;Balochistan Female LFPR&lt;/strong&gt;&lt;br/&gt;17.5%')" onmouseleave="hideTooltip()" style="cursor:pointer;"></rect>
+                <text x="221.625" y="280" font-size="9" font-weight="700" fill="#0f766e">17.5% F</text>
+              
+              <g transform="translate(180, 15)">
+                <rect x="0" y="0" width="10" height="10" fill="#073c3a" rx="2"></rect>
+                <text x="14" y="9" font-size="11" font-weight="600" fill="#334155">Male LFPR (68.4% National)</text>
+                <rect x="180" y="0" width="10" height="10" fill="#0f766e" rx="2"></rect>
+                <text x="194" y="9" font-size="11" font-weight="600" fill="#334155">Female LFPR (21.6% National)</text>
+              </g>
+            
+  </g>
+
+  <!-- Key Insight Box -->
+  <rect x="40" y="510" width="720" height="48" fill="#f8fafc" rx="6" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="54" y="527" font-size="10" font-weight="800" fill="#073c3a">KEY POLICY INSIGHT:</text>
+  <text x="54" y="543" font-size="11" fill="#334155">Key Policy Takeaway: Severe gender chasm: Male labor force participation stands at 68.4% compared to only 21.6% for women (46.8% gap). Youth unemployment (age 15–24) reaches 18.6% (24.3% for young women). Male LFPR: 6...</text>
+
+  <!-- Watermark Footer Banner (Two-Line Stacked: Zero Overlap) -->
+  <rect x="0" y="568" width="800" height="52" fill="#073c3a" rx="0"/>
+  <!-- Line 1: Primary Data Source (Full Canvas Width) -->
+  <text x="40" y="589" font-size="10.5" font-weight="500" fill="#99f6e4">Source: Pakistan Bureau of Statistics, Labour Force Survey (LFS 2024–25)</text>
+  <!-- Line 2: Institution Branding &amp; Canonical Domain -->
+  <text x="40" y="606" font-size="10.5" font-weight="700" fill="#ffffff">Pakistan Provincial Reform Institute (PPRI)</text>
+  <text x="760" y="606" font-size="10.5" font-weight="600" fill="#5eead4" text-anchor="end">ppripakistan.github.io</text>
+</svg>

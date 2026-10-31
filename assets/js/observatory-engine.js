@@ -353,20 +353,38 @@
   /**
    * Instant Client-side Table Search/Filter
    */
-  engine.setupTableSearch = function (inputId, tableId) {
-    var input = document.getElementById(inputId);
-    var table = document.getElementById(tableId);
-    if (!input || !table) return;
+  // Helper: Search filter across table rows (Supports both selector string & raw ID)
+  engine.initSearchFilter = function (inputSelector, tableSelector) {
+    function bindFilter() {
+      var input = typeof inputSelector === 'string' && inputSelector.charAt(0) === '#'
+        ? document.querySelector(inputSelector)
+        : (document.getElementById(inputSelector) || document.querySelector(inputSelector));
+      var table = typeof tableSelector === 'string' && tableSelector.charAt(0) === '#'
+        ? document.querySelector(tableSelector)
+        : (document.getElementById(tableSelector) || document.querySelector(tableSelector));
+      if (!input || !table) return;
 
-    input.addEventListener('input', function () {
-      var query = input.value.toLowerCase().trim();
-      var rows = table.querySelectorAll('tbody tr');
-      rows.forEach(function (row) {
-        var text = row.textContent.toLowerCase();
-        row.style.display = text.indexOf(query) !== -1 ? '' : 'none';
+      input.addEventListener('input', function () {
+        var query = input.value.toLowerCase().trim();
+        var rows = table.querySelectorAll('tbody tr');
+        if (!rows || rows.length === 0) {
+          rows = table.querySelectorAll('tr:not(:first-child)');
+        }
+        rows.forEach(function (row) {
+          var text = row.textContent.toLowerCase();
+          row.style.display = text.indexOf(query) !== -1 ? '' : 'none';
+        });
       });
-    });
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', bindFilter);
+    } else {
+      bindFilter();
+    }
   };
+
+  engine.setupTableSearch = engine.initSearchFilter;
 
   /**
    * One-click Copy Citation to Clipboard

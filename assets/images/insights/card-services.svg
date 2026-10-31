@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="620" viewBox="0 0 800 620">
+  <defs>
+    <style>
+      text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+    </style>
+  </defs>
+
+  <rect width="800" height="620" fill="#ffffff" rx="10" stroke="#cbd5e1" stroke-width="1"/>
+  <rect width="800" height="6" fill="#0f766e" rx="4"/>
+
+  <!-- Top Header with Number Badge -->
+  <text x="40" y="38" font-size="11" font-weight="700" fill="#0f766e" letter-spacing="1">PAKISTAN PROVINCIAL REFORM INSTITUTE (PPRI) • INFOGRAPHIC 08 / 16 • HOUSING CENSUS • BASIC INFRASTRUCTURE</text>
+  <text x="40" y="66" font-size="20" font-weight="800" fill="#073c3a">Household Basic Housing Characteristics &amp; Utilities Deficit</text>
+  <text x="40" y="88" font-size="12" fill="#64748b">Provincial access rates for piped water, flush sanitation, grid electricity, and natural gas</text>
+  <line x1="40" y1="102" x2="760" y2="102" stroke="#e2e8f0" stroke-width="1.5"/>
+
+  <!-- Core Visual Graphics -->
+  <g transform="translate(83.33333333333331, 115) scale(1.0555555555555556)">
+    
+              <text x="166" y="66" text-anchor="end" font-size="12" font-weight="700" fill="#1e293b">Electricity Grid Access</text>
+              <rect x="180" y="50" width="340" height="24" fill="#f1f5f9" rx="4"></rect>
+              <rect x="180" y="50" width="320.28000000000003" height="24" fill="#15803d" rx="4" onmouseenter="showTooltip(event, '&lt;strong&gt;Electricity Grid Access (Pakistan)&lt;/strong&gt;&lt;br/&gt;Household Access: 94.2%')" onmousemove="showTooltip(event, '&lt;strong&gt;Electricity Grid Access (Pakistan)&lt;/strong&gt;&lt;br/&gt;Household Access: 94.2%')" onmouseleave="hideTooltip()" style="cursor:pointer;"></rect>
+              <text x="510.28000000000003" y="67" font-size="13" font-weight="800" fill="#15803d">94.2%</text>
+            
+              <text x="166" y="126" text-anchor="end" font-size="12" font-weight="700" fill="#1e293b">Underground Sewerage Flush</text>
+              <rect x="180" y="110" width="340" height="24" fill="#f1f5f9" rx="4"></rect>
+              <rect x="180" y="110" width="242.08" height="24" fill="#0284c7" rx="4" onmouseenter="showTooltip(event, '&lt;strong&gt;Underground Sewerage Flush (Pakistan)&lt;/strong&gt;&lt;br/&gt;Household Access: 71.2%')" onmousemove="showTooltip(event, '&lt;strong&gt;Underground Sewerage Flush (Pakistan)&lt;/strong&gt;&lt;br/&gt;Household Access: 71.2%')" onmouseleave="hideTooltip()" style="cursor:pointer;"></rect>
+              <text x="432.08000000000004" y="127" font-size="13" font-weight="800" fill="#0284c7">71.2%</text>
+            
+              <text x="166" y="186" text-anchor="end" font-size="12" font-weight="700" fill="#1e293b">Piped Water Inside Dwelling</text>
+              <rect x="180" y="170" width="340" height="24" fill="#f1f5f9" rx="4"></rect>
+              <rect x="180" y="170" width="96.89999999999999" height="24" fill="#0f766e" rx="4" onmouseenter="showTooltip(event, '&lt;strong&gt;Piped Water Inside Dwelling (Pakistan)&lt;/strong&gt;&lt;br/&gt;Household Access: 28.5%')" onmousemove="showTooltip(event, '&lt;strong&gt;Piped Water Inside Dwelling (Pakistan)&lt;/strong&gt;&lt;br/&gt;Household Access: 28.5%')" onmouseleave="hideTooltip()" style="cursor:pointer;"></rect>
+              <text x="286.9" y="187" font-size="13" font-weight="800" fill="#0f766e">28.5%</text>
+            
+              <text x="166" y="246" text-anchor="end" font-size="12" font-weight="700" fill="#1e293b">Clean Cooking Fuel Access</text>
+              <rect x="180" y="230" width="340" height="24" fill="#f1f5f9" rx="4"></rect>
+              <rect x="180" y="230" width="143.14000000000001" height="24" fill="#d97706" rx="4" onmouseenter="showTooltip(event, '&lt;strong&gt;Clean Cooking Fuel Access (Pakistan)&lt;/strong&gt;&lt;br/&gt;Household Access: 42.1%')" onmousemove="showTooltip(event, '&lt;strong&gt;Clean Cooking Fuel Access (Pakistan)&lt;/strong&gt;&lt;br/&gt;Household Access: 42.1%')" onmouseleave="hideTooltip()" style="cursor:pointer;"></rect>
+              <text x="333.14" y="247" font-size="13" font-weight="800" fill="#d97706">42.1%</text>
+            
+            <text x="300" y="25" text-anchor="middle" font-size="13" font-weight="700" fill="#073c3a">
+              Household Infrastructure Access Profile: Pakistan
+            </text>
+          
+  </g>
+
+  <!-- Key Insight Box -->
+  <rect x="40" y="510" width="720" height="48" fill="#f8fafc" rx="6" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="54" y="527" font-size="10" font-weight="800" fill="#073c3a">KEY POLICY INSIGHT:</text>
+  <text x="54" y="543" font-size="11" fill="#334155">Key Policy Takeaway: Severe infrastructure disparities persist: only 14.8% of Balochistan homes have piped water and 11.2% have piped gas, compared to national grid electricity access of 91.4% and flush toilet coverag...</text>
+
+  <!-- Watermark Footer Banner (Two-Line Stacked: Zero Overlap) -->
+  <rect x="0" y="568" width="800" height="52" fill="#073c3a" rx="0"/>
+  <!-- Line 1: Primary Data Source (Full Canvas Width) -->
+  <text x="40" y="589" font-size="10.5" font-weight="500" fill="#99f6e4">Source: Pakistan Bureau of Statistics, Housing Census 2023</text>
+  <!-- Line 2: Institution Branding &amp; Canonical Domain -->
+  <text x="40" y="606" font-size="10.5" font-weight="700" fill="#ffffff">Pakistan Provincial Reform Institute (PPRI)</text>
+  <text x="760" y="606" font-size="10.5" font-weight="600" fill="#5eead4" text-anchor="end">ppripakistan.github.io</text>
+</svg>

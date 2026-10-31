@@ -97,6 +97,7 @@
       ]
     }
     </script>
+    <link rel="stylesheet" href="/assets/css/visual-insights.css" />
   </head>
   <body>
     <a class="skip-link" href="#main-content">Skip to content</a>
@@ -104,13 +105,14 @@
       <div class="container navbar">
         <a class="brand" href="/index.html">
           <img src="/assets/images/brand/ppri-logo-header.jpg" alt="PPRI logo" width="38" height="38" loading="eager" decoding="async" />
-          <span class="brand-text"><strong>PPRI</strong><span>Pakistan Provincial Reform Institute</span></span>
+          <span class="brand-text"><strong>PPRI</strong> <span class="brand-sub">Pakistan Provincial Reform Institute</span></span>
         </a>
         <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-navigation">Menu</button>
         <nav id="site-navigation" class="nav-links" aria-label="Primary navigation">
           <a href="/index.html">Home</a>
           <a href="/research/index.html">Research</a>
           <a href="/provinces/index.html">Reform</a>
+          <a href="/insights/">Insights</a>
           <a href="/data/centre.html" aria-current="page">Data</a>
           <a href="/publications/index.html">Publications</a>
           <a href="/consultation/index.html">Engage</a>
@@ -197,6 +199,183 @@
         </section>
 
         <!-- Searchable & Sortable Comprehensive Data Table -->
+        
+        <!-- ================= EMPIRICAL INFOGRAPHICS & VISUAL ANALYTICS ================= -->
+        <section class="obs-section" id="observatory-infographics">
+          <div class="obs-section-header">
+            <div>
+              <span class="obs-badge obs-badge-official">&check; Interactive Visual Analytics</span>
+              <h2 class="obs-section-title" style="margin-top:6px;">Living Standards, Household Budgets &amp; Labour Disparity Analytics</h2>
+              <p class="obs-lead" style="font-size:0.95rem;color:var(--obs-text-muted);margin-top:4px;">
+                Interactive vector analytics illustrating household Engel food ratios, provincial food vs non-food consumption baskets, housing infrastructure deficits, and gender wage disparities.
+              </p>
+            </div>
+            <div style="display:flex;align-items:center;">
+              <a href="/insights/" class="obs-badge" style="background:#0f766e;color:#fff;text-decoration:none;padding:6px 12px;font-weight:600;display:inline-flex;align-items:center;gap:4px;">
+                <span>View Full 16-Infographic Lab &rarr;</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="vi-grid">
+<div class="vi-card col-6" id="card-hies" data-category="living">
+          <div class="vi-card-accent"></div>
+          <div class="vi-card-header">
+            <div>
+              <div class="vi-header-meta">
+                <span class="vi-number-badge">INFOGRAPHIC 05 / 16</span>
+                <span class="vi-card-tag">Living Standards &bull; Engel's Law</span>
+              </div>
+              <h3 class="vi-card-title">Household Food Engel Burden Divide (HIES 2024–25)</h3>
+              <p class="vi-card-subtitle">Share of household consumption absorbed by food staples across provinces and rural/urban divide</p>
+            </div>
+            <div class="vi-card-controls">
+              <button type="button" class="vi-ctrl-btn active" onclick="updateHiesDomain('Total')">Total</button>
+              <button type="button" class="vi-ctrl-btn" onclick="updateHiesDomain('Urban')">Urban</button>
+              <button type="button" class="vi-ctrl-btn" onclick="updateHiesDomain('Rural')">Rural</button>
+            </div>
+          </div>
+          <div class="vi-chart-container">
+            <svg id="svg-card-hies" class="vi-chart-svg" viewBox="0 0 600 360"></svg>
+          </div>
+          <div class="vi-callout" id="callout-card-hies">
+            <strong>Key Policy Takeaway:</strong> Severe living standards divide: <strong>Rural Balochistan households spend 47.3% of their entire budget on basic food</strong>, compared to <strong>28.2% in urban Islamabad</strong>. Rural families nationwide allocate an average of 7.6% more income to basic nutrition.
+            <div class="vi-kpis">
+              <span class="vi-kpi-pill">Balochistan Rural: <strong>47.3% Food</strong></span>
+              <span class="vi-kpi-pill">National Rural: <strong>41.6% Food</strong></span>
+              <span class="vi-kpi-pill">Islamabad Urban: <strong>28.2% Food</strong></span>
+            </div>
+          </div>
+          <div class="vi-card-footer">
+            <div class="vi-source">Source: <strong>Pakistan Bureau of Statistics</strong>, HIES 2024–25 &bull; <strong>PPRI</strong></div>
+            <div class="vi-actions">
+              <button type="button" class="vi-btn vi-btn-primary" onclick="exportCard('card-hies', 'png')">&#x1F4F7; Download Image (PNG)</button>
+              <button type="button" class="vi-btn" onclick="exportCard('card-hies', 'svg')">&#x1F4D0; SVG</button>
+              <button type="button" class="vi-btn" onclick="exportCSV('hies_household_expenditures')">&#x1F4CA; CSV</button>
+            </div>
+          </div>
+        </div>
+
+<div class="vi-card col-6" id="card-consumption-pie" data-category="living">
+          <div class="vi-card-accent"></div>
+          <div class="vi-card-header">
+            <div>
+              <div class="vi-header-meta">
+                <span class="vi-number-badge">INFOGRAPHIC 06 / 16</span>
+                <span class="vi-card-tag">Living Standards &bull; Budget Slices</span>
+              </div>
+              <h3 class="vi-card-title">Provincial Food vs Non-Food Household Consumption Baskets</h3>
+              <p class="vi-card-subtitle">Distribution of monthly household spending across food, housing, energy, health, and education</p>
+            </div>
+            <div class="vi-card-controls">
+              <button type="button" class="vi-ctrl-btn active" onclick="updateConsumptionProv('PK')">Pakistan</button>
+              <button type="button" class="vi-ctrl-btn" onclick="updateConsumptionProv('PK-PB')">Punjab</button>
+              <button type="button" class="vi-ctrl-btn" onclick="updateConsumptionProv('PK-SN')">Sindh</button>
+              <button type="button" class="vi-ctrl-btn" onclick="updateConsumptionProv('PK-KP')">KP</button>
+              <button type="button" class="vi-ctrl-btn" onclick="updateConsumptionProv('PK-BA')">Balochistan</button>
+            </div>
+          </div>
+          <div class="vi-chart-container">
+            <svg id="svg-card-consumption-pie" class="vi-chart-svg" viewBox="0 0 600 360"></svg>
+          </div>
+          <div class="vi-callout" id="callout-card-consumption-pie">
+            <strong>Key Policy Takeaway:</strong> Non-discretionary survival essentials (Food 36.8% + Housing/Energy 22.4%) consume <strong>59.2% of household budgets</strong>, leaving only <strong>12.2% for Health &amp; Education combined</strong>. Mean monthly expenditure ranges from PKR 112,400 in ICT to PKR 58,100 in Balochistan.
+            <div class="vi-kpis">
+              <span class="vi-kpi-pill">Food &amp; Utilities: <strong>59.2%</strong></span>
+              <span class="vi-kpi-pill">Health: <strong>6.8%</strong></span>
+              <span class="vi-kpi-pill">Education: <strong>5.4%</strong></span>
+            </div>
+          </div>
+          <div class="vi-card-footer">
+            <div class="vi-source">Source: <strong>Pakistan Bureau of Statistics</strong>, HIES 2024–25 &bull; <strong>PPRI</strong></div>
+            <div class="vi-actions">
+              <button type="button" class="vi-btn vi-btn-primary" onclick="exportCard('card-consumption-pie', 'png')">&#x1F4F7; Download Image (PNG)</button>
+              <button type="button" class="vi-btn" onclick="exportCard('card-consumption-pie', 'svg')">&#x1F4D0; SVG</button>
+              <button type="button" class="vi-btn" onclick="exportCSV('provincial_consumption_pies')">&#x1F4CA; CSV</button>
+            </div>
+          </div>
+        </div>
+
+<div class="vi-card col-6" id="card-services" data-category="living">
+          <div class="vi-card-accent"></div>
+          <div class="vi-card-header">
+            <div>
+              <div class="vi-header-meta">
+                <span class="vi-number-badge">INFOGRAPHIC 08 / 16</span>
+                <span class="vi-card-tag">Housing Census &bull; Basic Infrastructure</span>
+              </div>
+              <h3 class="vi-card-title">Household Basic Housing Characteristics &amp; Utilities Deficit</h3>
+              <p class="vi-card-subtitle">Provincial access rates for piped water, flush sanitation, grid electricity, and natural gas</p>
+            </div>
+            <div class="vi-card-controls">
+              <button type="button" class="vi-ctrl-btn active" onclick="updateServicesProv('PK')">National</button>
+              <button type="button" class="vi-ctrl-btn" onclick="updateServicesProv('PK-PB')">Punjab</button>
+              <button type="button" class="vi-ctrl-btn" onclick="updateServicesProv('PK-SN')">Sindh</button>
+              <button type="button" class="vi-ctrl-btn" onclick="updateServicesProv('PK-KP')">KP</button>
+              <button type="button" class="vi-ctrl-btn" onclick="updateServicesProv('PK-BA')">Balochistan</button>
+            </div>
+          </div>
+          <div class="vi-chart-container">
+            <svg id="svg-card-services" class="vi-chart-svg" viewBox="0 0 600 360"></svg>
+          </div>
+          <div class="vi-callout" id="callout-card-services">
+            <strong>Key Policy Takeaway:</strong> Severe infrastructure disparities persist: only <strong>14.8% of Balochistan homes have piped water</strong> and <strong>11.2% have piped gas</strong>, compared to national grid electricity access of 91.4% and flush toilet coverage of 59.6%.
+            <div class="vi-kpis">
+              <span class="vi-kpi-pill">Piped Water: <strong>29.8% PK / 14.8% BA</strong></span>
+              <span class="vi-kpi-pill">Flush Toilet: <strong>59.6% PK / 31.4% BA</strong></span>
+              <span class="vi-kpi-pill">Piped Gas: <strong>36.2% PK / 11.2% BA</strong></span>
+            </div>
+          </div>
+          <div class="vi-card-footer">
+            <div class="vi-source">Source: <strong>Pakistan Bureau of Statistics</strong>, Housing Census 2023 &bull; <strong>PPRI</strong></div>
+            <div class="vi-actions">
+              <button type="button" class="vi-btn vi-btn-primary" onclick="exportCard('card-services', 'png')">&#x1F4F7; Download Image (PNG)</button>
+              <button type="button" class="vi-btn" onclick="exportCard('card-services', 'svg')">&#x1F4D0; SVG</button>
+              <button type="button" class="vi-btn" onclick="exportCSV('housing_basic_services')">&#x1F4CA; CSV</button>
+            </div>
+          </div>
+        </div>
+
+<div class="vi-card col-6" id="card-lfs" data-category="living">
+          <div class="vi-card-accent"></div>
+          <div class="vi-card-header">
+            <div>
+              <div class="vi-header-meta">
+                <span class="vi-number-badge">INFOGRAPHIC 09 / 16</span>
+                <span class="vi-card-tag">Labour Market &bull; Gender &amp; Youth Deficit</span>
+              </div>
+              <h3 class="vi-card-title">Labour Force Participation &amp; Gender/Rural Wage Disparities</h3>
+              <p class="vi-card-subtitle">Economic participation gap, youth unemployment, and provincial wage differentials</p>
+            </div>
+            <div class="vi-card-controls">
+              <button type="button" class="vi-ctrl-btn active" onclick="updateLfsMetric('participation')">Participation Gap</button>
+              <button type="button" class="vi-ctrl-btn" onclick="updateLfsMetric('unemployment')">Youth Joblessness</button>
+              <button type="button" class="vi-ctrl-btn" onclick="updateLfsMetric('wages')">Mean Wages</button>
+            </div>
+          </div>
+          <div class="vi-chart-container">
+            <svg id="svg-card-lfs" class="vi-chart-svg" viewBox="0 0 600 360"></svg>
+          </div>
+          <div class="vi-callout" id="callout-card-lfs">
+            <strong>Key Policy Takeaway:</strong> Severe gender chasm: Male labor force participation stands at <strong>68.4% compared to only 21.6% for women</strong> (46.8% gap). Youth unemployment (age 15–24) reaches <strong>18.6% (24.3% for young women)</strong>.
+            <div class="vi-kpis">
+              <span class="vi-kpi-pill">Male LFPR: <strong>68.4%</strong></span>
+              <span class="vi-kpi-pill">Female LFPR: <strong>21.6%</strong></span>
+              <span class="vi-kpi-pill">Youth Unemp: <strong>18.6%</strong></span>
+            </div>
+          </div>
+          <div class="vi-card-footer">
+            <div class="vi-source">Source: <strong>Pakistan Bureau of Statistics</strong>, Labour Force Survey (LFS 2024–25) &bull; <strong>PPRI</strong></div>
+            <div class="vi-actions">
+              <button type="button" class="vi-btn vi-btn-primary" onclick="exportCard('card-lfs', 'png')">&#x1F4F7; Download Image (PNG)</button>
+              <button type="button" class="vi-btn" onclick="exportCard('card-lfs', 'svg')">&#x1F4D0; SVG</button>
+              <button type="button" class="vi-btn" onclick="exportCSV('lfs_employment_wages')">&#x1F4CA; CSV</button>
+            </div>
+          </div>
+        </div>
+          </div>
+        </section>
+
         <section class="obs-section">
           <div class="obs-section-header">
             <div>
@@ -204,7 +383,8 @@
               <h2 class="obs-section-title" style="margin-top:6px;">Comprehensive Indicator Catalog &amp; Provincial Breakdowns</h2>
             </div>
             <div style="display:flex;gap:10px;align-items:center;">
-              <input type="text" id="filterInput" placeholder="Filter indicators..." style="padding:7px 12px;border:1px solid var(--obs-border);border-radius:var(--obs-radius-sm);font-size:0.88rem;width:200px;" />
+              <label for="filterInput" class="visually-hidden">Filter indicators</label>
+              <input type="text" id="filterInput" placeholder="Filter indicators..." aria-label="Filter indicators" style="padding:7px 12px;border:1px solid var(--obs-border);border-radius:var(--obs-radius-sm);font-size:0.88rem;width:200px;" />
               <button class="obs-btn obs-btn-primary" onclick="PPRIObservatory.exportTableToCSV('table_living_standards', 'living-standards_indicators.csv')">&darr; Export CSV</button>
             </div>
           </div>
@@ -368,5 +548,10 @@
         }
       });
     </script>
-  </body>
+      <!-- Visual Analytics Runtime & Offscreen Canvas -->
+    <div id="vi-tooltip" class="vi-tooltip" role="tooltip" aria-hidden="true" style="display:none;"></div>
+    <div id="vi-toast" role="status" aria-live="polite"></div>
+    <canvas id="vi-export-canvas" width="2080" height="1360" style="display:none;"></canvas>
+    <script src="/assets/js/modules/visual-insights.js" defer></script>
+</body>
 </html>

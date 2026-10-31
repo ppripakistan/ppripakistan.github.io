@@ -49,7 +49,7 @@
     {
       "@context": "https://schema.org",
       "@type": "Dataset",
-      "name": "Pakistan Macroeconomy, Inflation &amp; Markets",
+      "name": "Pakistan Macroeconomy, Inflation & Markets",
       "description": "Verified economic indicators: CPI & SPI inflation indices, real GDP growth rates, sector contributions, foreign exchange rates, workers remittances, and wage rates.",
       "url": "https://ppripakistan.github.io/data/economy/",
       "license": "https://creativecommons.org/licenses/by/4.0/",
@@ -91,12 +91,13 @@
         {
           "@type": "ListItem",
           "position": 3,
-          "name": "Pakistan Macroeconomy, Inflation &amp; Markets",
+          "name": "Pakistan Macroeconomy, Inflation & Markets",
           "item": "https://ppripakistan.github.io/data/economy/"
         }
       ]
     }
     </script>
+    <link rel="stylesheet" href="/assets/css/visual-insights.css" />
   </head>
   <body>
     <a class="skip-link" href="#main-content">Skip to content</a>
@@ -104,13 +105,14 @@
       <div class="container navbar">
         <a class="brand" href="/index.html">
           <img src="/assets/images/brand/ppri-logo-header.jpg" alt="PPRI logo" width="38" height="38" loading="eager" decoding="async" />
-          <span class="brand-text"><strong>PPRI</strong><span>Pakistan Provincial Reform Institute</span></span>
+          <span class="brand-text"><strong>PPRI</strong> <span class="brand-sub">Pakistan Provincial Reform Institute</span></span>
         </a>
         <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-navigation">Menu</button>
         <nav id="site-navigation" class="nav-links" aria-label="Primary navigation">
           <a href="/index.html">Home</a>
           <a href="/research/index.html">Research</a>
           <a href="/provinces/index.html">Reform</a>
+          <a href="/insights/">Insights</a>
           <a href="/data/centre.html" aria-current="page">Data</a>
           <a href="/publications/index.html">Publications</a>
           <a href="/consultation/index.html">Engage</a>
@@ -197,6 +199,165 @@
         </section>
 
         <!-- Searchable & Sortable Comprehensive Data Table -->
+        
+        <!-- ================= EMPIRICAL INFOGRAPHICS & VISUAL ANALYTICS ================= -->
+        <section class="obs-section" id="observatory-infographics">
+          <div class="obs-section-header">
+            <div>
+              <span class="obs-badge obs-badge-official">&check; Interactive Visual Analytics</span>
+              <h2 class="obs-section-title" style="margin-top:6px;">Economic Dynamics &amp; Structural Trajectory Visual Analytics</h2>
+              <p class="obs-lead" style="font-size:0.95rem;color:var(--obs-text-muted);margin-top:4px;">
+                Interactive vector visualizations exploring purchasing power erosion, sectoral employment shifts, agricultural landholding fragmentation, and 35 years of macroeconomic regime cycles.
+              </p>
+            </div>
+            <div style="display:flex;align-items:center;">
+              <a href="/insights/" class="obs-badge" style="background:#0f766e;color:#fff;text-decoration:none;padding:6px 12px;font-weight:600;display:inline-flex;align-items:center;gap:4px;">
+                <span>View Full 16-Infographic Lab &rarr;</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="vi-grid">
+<div class="vi-card col-6" id="card-wage-infl" data-category="living">
+          <div class="vi-card-accent"></div>
+          <div class="vi-card-header">
+            <div>
+              <div class="vi-header-meta">
+                <span class="vi-number-badge">INFOGRAPHIC 07 / 16</span>
+                <span class="vi-card-tag">Purchasing Power &bull; Inflation Squeeze</span>
+              </div>
+              <h3 class="vi-card-title">Purchasing Power Erosion: Real Wages vs Inflation</h3>
+              <p class="vi-card-subtitle">Cumulative CPI price inflation vs nominal wage index adjustments (2020–2024)</p>
+            </div>
+          </div>
+          <div class="vi-chart-container">
+            <svg id="svg-card-wage-infl" class="vi-chart-svg" viewBox="0 0 600 360"></svg>
+          </div>
+          <div class="vi-callout" id="callout-card-wage-infl">
+            <strong>Key Policy Takeaway:</strong> Cumulative consumer prices skyrocketed by <strong>+118.4% between 2020 and 2024</strong>, while nominal wages adjusted by only <strong>+64.2%</strong>, inflicting a severe <strong>-24.8% contraction in real household purchasing power</strong>.
+            <div class="vi-kpis">
+              <span class="vi-kpi-pill">Cumulative CPI: <strong>+118.4%</strong></span>
+              <span class="vi-kpi-pill">Nominal Wage: <strong>+64.2%</strong></span>
+              <span class="vi-kpi-pill">Real Wage Deficit: <strong>-24.8%</strong></span>
+            </div>
+          </div>
+          <div class="vi-card-footer">
+            <div class="vi-source">Source: <strong>PBS CPI Bulletins &amp; Labour Force Surveys</strong> (2020–2024) &bull; <strong>PPRI</strong></div>
+            <div class="vi-actions">
+              <button type="button" class="vi-btn vi-btn-primary" onclick="exportCard('card-wage-infl', 'png')">&#x1F4F7; Download Image (PNG)</button>
+              <button type="button" class="vi-btn" onclick="exportCard('card-wage-infl', 'svg')">&#x1F4D0; SVG</button>
+              <button type="button" class="vi-btn" onclick="exportCSV('inflation_wage_growth')">&#x1F4CA; CSV</button>
+            </div>
+          </div>
+        </div>
+
+<div class="vi-card col-6" id="card-sector-employment" data-category="living">
+          <div class="vi-card-accent"></div>
+          <div class="vi-card-header">
+            <div>
+              <div class="vi-header-meta">
+                <span class="vi-number-badge">INFOGRAPHIC 12 / 16</span>
+                <span class="vi-card-tag">Structural Transformation &bull; Sectoral Jobs</span>
+              </div>
+              <h3 class="vi-card-title">Sectoral Labour Force Absorption Dynamics</h3>
+              <p class="vi-card-subtitle">Proportional workforce allocation across Agriculture, Industry &amp; Manufacturing, and Services</p>
+            </div>
+          </div>
+          <div class="vi-chart-container">
+            <svg id="svg-card-sector-employment" class="vi-chart-svg" viewBox="0 0 600 360"></svg>
+          </div>
+          <div class="vi-callout" id="callout-card-sector-employment">
+            <strong>Key Policy Takeaway:</strong> Structural stagnation: <strong>Agriculture absorbs 37.4% of all employment nationwide (46.2% in Balochistan)</strong> while generating under 23% of GDP. Manufacturing and construction employ barely 25.4%, highlighting premature deindustrialization.
+            <div class="vi-kpis">
+              <span class="vi-kpi-pill">Agriculture: <strong>37.4% PK / 46.2% BA</strong></span>
+              <span class="vi-kpi-pill">Industry: <strong>25.4% PK / 26.8% PB</strong></span>
+              <span class="vi-kpi-pill">Services: <strong>37.2% PK / 41.4% SN</strong></span>
+            </div>
+          </div>
+          <div class="vi-card-footer">
+            <div class="vi-source">Source: <strong>Pakistan Bureau of Statistics</strong>, Labour Force Survey (LFS 2024–25) &bull; <strong>PPRI</strong></div>
+            <div class="vi-actions">
+              <button type="button" class="vi-btn vi-btn-primary" onclick="exportCard('card-sector-employment', 'png')">&#x1F4F7; Download Image (PNG)</button>
+              <button type="button" class="vi-btn" onclick="exportCard('card-sector-employment', 'svg')">&#x1F4D0; SVG</button>
+              <button type="button" class="vi-btn" onclick="exportCSV('lfs_employment_wages')">&#x1F4CA; CSV</button>
+            </div>
+          </div>
+        </div>
+
+<div class="vi-card col-6" id="card-agri-shifts" data-category="agri">
+          <div class="vi-card-accent"></div>
+          <div class="vi-card-header">
+            <div>
+              <div class="vi-header-meta">
+                <span class="vi-number-badge">INFOGRAPHIC 13 / 16</span>
+                <span class="vi-card-tag">Agrarian Structure &bull; 2010 vs 2024 Census</span>
+              </div>
+              <h3 class="vi-card-title">Smallholder Landholding &amp; Cultivated Acreage Fragmentation</h3>
+              <p class="vi-card-subtitle">Farm fragmentation, provincial cultivated shares, and structural acreage changes</p>
+            </div>
+          </div>
+          <div class="vi-chart-container">
+            <svg id="svg-card-agri-shifts" class="vi-chart-svg" viewBox="0 0 600 360"></svg>
+          </div>
+          <div class="vi-callout" id="callout-card-agri-shifts">
+            <strong>Key Policy Takeaway:</strong> Farm fragmentation crisis: <strong>Total farms surged +34.4% to 11.10 million</strong> while <strong>average farm size shrank from 6.4 to 5.3 acres</strong>. Punjab contains 64.2% of all cultivated land, followed by Sindh (21.8%), KP (8.6%), and Balochistan (5.4%).
+            <div class="vi-kpis">
+              <span class="vi-kpi-pill">Total Farms: <strong>11.10 Million (+34.4%)</strong></span>
+              <span class="vi-kpi-pill">Avg Farm Size: <strong>5.3 Acres (-17.2%)</strong></span>
+              <span class="vi-kpi-pill">Fragmented Farms: <strong>+76.2%</strong></span>
+            </div>
+          </div>
+          <div class="vi-card-footer">
+            <div class="vi-source">Source: <strong>Pakistan Bureau of Statistics</strong>, 7th Agricultural Census 2024 &bull; <strong>PPRI</strong></div>
+            <div class="vi-actions">
+              <button type="button" class="vi-btn vi-btn-primary" onclick="exportCard('card-agri-shifts', 'png')">&#x1F4F7; Download Image (PNG)</button>
+              <button type="button" class="vi-btn" onclick="exportCard('card-agri-shifts', 'svg')">&#x1F4D0; SVG</button>
+              <button type="button" class="vi-btn" onclick="exportCSV('provincial_agri_shifts')">&#x1F4CA; CSV</button>
+            </div>
+          </div>
+        </div>
+
+<div class="vi-card col-12" id="card-macro" data-category="macro">
+          <div class="vi-card-accent"></div>
+          <div class="vi-card-header">
+            <div>
+              <div class="vi-header-meta">
+                <span class="vi-number-badge">INFOGRAPHIC 15 / 16</span>
+                <span class="vi-card-tag">Macroeconomic History &bull; 4 Structural Tenures</span>
+              </div>
+              <h3 class="vi-card-title">35-Year Macroeconomic Trajectory (4 Regimes &amp; Crisis Shocks)</h3>
+              <p class="vi-card-subtitle">Demarcated across four distinct economic regimes: Structural Adjustment, Consumption Boom, BoP Shocks &amp; CPEC, and Stagflation/Stabilization</p>
+            </div>
+            <div class="vi-card-controls">
+              <button type="button" class="vi-ctrl-btn active" onclick="updateMacroMetric('growth_infl')">GDP Growth vs Inflation</button>
+              <button type="button" class="vi-ctrl-btn" onclick="updateMacroMetric('deficits')">Fiscal vs Current Account</button>
+              <button type="button" class="vi-ctrl-btn" onclick="updateMacroMetric('debt_gdp')">Total Debt-to-GDP (%)</button>
+            </div>
+          </div>
+          <div class="vi-chart-container" style="min-height: 420px;">
+            <svg id="svg-card-macro" class="vi-chart-svg" viewBox="0 0 940 420" style="max-height: 460px;"></svg>
+          </div>
+          <div class="vi-callout" id="callout-card-macro">
+            <strong>Key Policy Takeaway:</strong> Pakistan experiences a recurring balance of payments crisis every 4 to 6 years. Inflation reached a historic <strong>50-year peak of 30.8% in 2023</strong> following post-COVID supply chain disruptions, currency depreciation, and the devastating 2022 super floods.
+            <div class="vi-kpis">
+              <span class="vi-kpi-pill">Peak Inflation: <strong>30.8% (2023)</strong></span>
+              <span class="vi-kpi-pill">COVID Contraction: <strong>-0.94% (2020)</strong></span>
+              <span class="vi-kpi-pill">Peak Growth: <strong>7.7% (2005)</strong></span>
+              <span class="vi-kpi-pill">Current Debt/GDP: <strong>74.8%</strong></span>
+            </div>
+          </div>
+          <div class="vi-card-footer">
+            <div class="vi-source">Source: <strong>World Bank WDI &amp; Ministry of Finance</strong>, Economic Surveys (1990–2024) &bull; <strong>PPRI</strong></div>
+            <div class="vi-actions">
+              <button type="button" class="vi-btn vi-btn-primary" onclick="exportCard('card-macro', 'png')">&#x1F4F7; Download Image (PNG)</button>
+              <button type="button" class="vi-btn" onclick="exportCard('card-macro', 'svg')">&#x1F4D0; SVG</button>
+              <button type="button" class="vi-btn" onclick="exportCSV('macro_indicators_timeseries')">&#x1F4CA; CSV</button>
+            </div>
+          </div>
+        </div>
+          </div>
+        </section>
+
         <section class="obs-section">
           <div class="obs-section-header">
             <div>
@@ -204,7 +365,8 @@
               <h2 class="obs-section-title" style="margin-top:6px;">Comprehensive Indicator Catalog &amp; Provincial Breakdowns</h2>
             </div>
             <div style="display:flex;gap:10px;align-items:center;">
-              <input type="text" id="filterInput" placeholder="Filter indicators..." style="padding:7px 12px;border:1px solid var(--obs-border);border-radius:var(--obs-radius-sm);font-size:0.88rem;width:200px;" />
+              <label for="filterInput" class="visually-hidden">Filter indicators</label>
+              <input type="text" id="filterInput" placeholder="Filter indicators..." aria-label="Filter indicators" style="padding:7px 12px;border:1px solid var(--obs-border);border-radius:var(--obs-radius-sm);font-size:0.88rem;width:200px;" />
               <button class="obs-btn obs-btn-primary" onclick="PPRIObservatory.exportTableToCSV('table_economy', 'economy_indicators.csv')">&darr; Export CSV</button>
             </div>
           </div>
@@ -368,5 +530,10 @@
         }
       });
     </script>
-  </body>
+      <!-- Visual Analytics Runtime & Offscreen Canvas -->
+    <div id="vi-tooltip" class="vi-tooltip" role="tooltip" aria-hidden="true" style="display:none;"></div>
+    <div id="vi-toast" role="status" aria-live="polite"></div>
+    <canvas id="vi-export-canvas" width="2080" height="1360" style="display:none;"></canvas>
+    <script src="/assets/js/modules/visual-insights.js" defer></script>
+</body>
 </html>

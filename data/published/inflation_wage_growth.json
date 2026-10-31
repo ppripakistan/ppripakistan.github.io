@@ -1,0 +1,47 @@
+[
+  {
+    "year": 2020,
+    "cpi_index_base2016": 133.8,
+    "cpi_inflation_annual_pct": 10.7,
+    "cumulative_inflation_pct": 0.0,
+    "avg_monthly_wage_pkr": 25250,
+    "cumulative_wage_growth_pct": 0.0,
+    "real_wage_index": 100.0
+  },
+  {
+    "year": 2021,
+    "cpi_index_base2016": 145.7,
+    "cpi_inflation_annual_pct": 8.9,
+    "cumulative_inflation_pct": 8.9,
+    "avg_monthly_wage_pkr": 27400,
+    "cumulative_wage_growth_pct": 8.5,
+    "real_wage_index": 99.6
+  },
+  {
+    "year": 2022,
+    "cpi_index_base2016": 163.4,
+    "cpi_inflation_annual_pct": 12.2,
+    "cumulative_inflation_pct": 22.1,
+    "avg_monthly_wage_pkr": 30200,
+    "cumulative_wage_growth_pct": 19.6,
+    "real_wage_index": 97.9
+  },
+  {
+    "year": 2023,
+    "cpi_index_base2016": 213.7,
+    "cpi_inflation_annual_pct": 30.8,
+    "cumulative_inflation_pct": 59.7,
+    "avg_monthly_wage_pkr": 34800,
+    "cumulative_wage_growth_pct": 37.8,
+    "real_wage_index": 86.3
+  },
+  {
+    "year": 2024,
+    "cpi_index_base2016": 252.2,
+    "cpi_inflation_annual_pct": 18.0,
+    "cumulative_inflation_pct": 88.4,
+    "avg_monthly_wage_pkr": 39042,
+    "cumulative_wage_growth_pct": 54.6,
+    "real_wage_index": 82.1
+  }
+]

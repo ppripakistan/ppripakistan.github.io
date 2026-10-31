@@ -100,7 +100,7 @@
       <div class="container navbar">
         <a class="brand" href="/">
           <img src="/assets/images/brand/ppri-logo-header.jpg" alt="PPRI logo" width="44" height="44" loading="eager" />
-          <span class="brand-text"><strong>PPRI</strong><span>Pakistan Provincial Reform Institute</span></span>
+          <span class="brand-text"><strong>PPRI</strong> <span class="brand-sub">Pakistan Provincial Reform Institute</span></span>
         </a>
         <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-navigation">Menu</button>
         <nav id="site-navigation" class="nav-links" aria-label="Primary navigation">
@@ -108,6 +108,7 @@
           <a href="/research/">Research</a>
           <a href="/provinces/">Reform</a>
           <a href="/scenarios/">Scenarios</a>
+          <a href="/insights/">Insights</a>
           <a href="/data/centre.html">Data</a>
           <a href="/publications/">Publications</a>
           <a href="/consultation/">Engage</a>
@@ -132,6 +133,234 @@
       </div>
 
       <div class="container">
+        
+        <!-- ================= PUBLISHED VISUAL ANALYTICS DATASETS ================= -->
+        <section class="obs-section" id="visual-analytics-datasets" style="margin-top:32px;">
+          <div class="obs-section-header">
+            <div>
+              <span class="obs-badge obs-badge-official">&check; Production Data Stores</span>
+              <h2 class="obs-section-title" style="margin-top:6px;">PPRI Visual Analytics &amp; Empirical Baseline Stores (2024–2026)</h2>
+              <p class="obs-lead" style="font-size:0.95rem;color:var(--obs-text-muted);margin-top:4px;">
+                The 15 curated, machine-readable datasets powering PPRI's 16 interactive policy infographics. Formatted with Excel UTF-8 BOM encoding and validated JSON schemas.
+              </p>
+            </div>
+          </div>
+
+          <div style="margin-top:16px;">
+          <div class="obs-stat-card" style="margin-bottom:16px;">
+            <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:12px;">
+              <div style="max-width:760px;">
+                <span class="obs-badge obs-badge-official">Ministry of Finance &bull; Annual Budget Statement</span>
+                <span class="obs-badge obs-badge-period">3 records</span>
+                <h3 style="margin:8px 0 4px 0;font-size:1.12rem;color:var(--obs-dark);">Federal Budget Outlays & Sovereign Debt Servicing Monopoly</h3>
+                <p style="font-size:0.9rem;color:var(--obs-text);margin:0 0 8px 0;line-height:1.5;">Detailed expenditure breakdown of sovereign debt markup, defence, federal PSDP, civil administration, pensions, and subsidies across FY24, FY25, and FY26.</p>
+              </div>
+              <div style="display:flex;gap:8px;align-items:center;flex-shrink:0;">
+                <a href="/data/published/federal_fiscal_summary.csv" download="PPRI_federal_fiscal_summary.csv" class="obs-btn obs-btn-primary" style="padding:6px 14px;font-size:0.85rem;text-decoration:none;">Download CSV</a>
+                <a href="/data/published/federal_fiscal_summary.json" download="PPRI_federal_fiscal_summary.json" class="obs-btn" style="padding:6px 12px;font-size:0.85rem;text-decoration:none;">JSON</a>
+              </div>
+            </div>
+          </div>
+          <div class="obs-stat-card" style="margin-bottom:16px;">
+            <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:12px;">
+              <div style="max-width:760px;">
+                <span class="obs-badge obs-badge-official">State Bank of Pakistan &bull; Debt Bulletin</span>
+                <span class="obs-badge obs-badge-period">9 records</span>
+                <h3 style="margin:8px 0 4px 0;font-size:1.12rem;color:var(--obs-dark);">8-Year Sovereign Public Debt Surge & Markup Trajectory (FY18–FY26)</h3>
+                <p style="font-size:0.9rem;color:var(--obs-text);margin:0 0 8px 0;line-height:1.5;">Historical series of total sovereign debt stock (PKR Billion) and annual debt markup interest servicing payments.</p>
+              </div>
+              <div style="display:flex;gap:8px;align-items:center;flex-shrink:0;">
+                <a href="/data/published/public_debt_timeseries.csv" download="PPRI_public_debt_timeseries.csv" class="obs-btn obs-btn-primary" style="padding:6px 14px;font-size:0.85rem;text-decoration:none;">Download CSV</a>
+                <a href="/data/published/public_debt_timeseries.json" download="PPRI_public_debt_timeseries.json" class="obs-btn" style="padding:6px 12px;font-size:0.85rem;text-decoration:none;">JSON</a>
+              </div>
+            </div>
+          </div>
+          <div class="obs-stat-card" style="margin-bottom:16px;">
+            <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:12px;">
+              <div style="max-width:760px;">
+                <span class="obs-badge obs-badge-official">Federal Board of Revenue &bull; Tax Expenditure Report</span>
+                <span class="obs-badge obs-badge-period">4 records</span>
+                <h3 style="margin:8px 0 4px 0;font-size:1.12rem;color:var(--obs-dark);">Federal Tax Concessions, Exemptions & Zero-Rating (Tax Expenditure)</h3>
+                <p style="font-size:0.9rem;color:var(--obs-text);margin:0 0 8px 0;line-height:1.5;">Corporate and sectoral revenue foregone across Sales Tax exemptions, Income Tax concessions, Customs exemptions, and FTR privileges.</p>
+              </div>
+              <div style="display:flex;gap:8px;align-items:center;flex-shrink:0;">
+                <a href="/data/published/tax_expenditures_2025.csv" download="PPRI_tax_expenditures_2025.csv" class="obs-btn obs-btn-primary" style="padding:6px 14px;font-size:0.85rem;text-decoration:none;">Download CSV</a>
+                <a href="/data/published/tax_expenditures_2025.json" download="PPRI_tax_expenditures_2025.json" class="obs-btn" style="padding:6px 12px;font-size:0.85rem;text-decoration:none;">JSON</a>
+              </div>
+            </div>
+          </div>
+          <div class="obs-stat-card" style="margin-bottom:16px;">
+            <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:12px;">
+              <div style="max-width:760px;">
+                <span class="obs-badge obs-badge-official">Provincial Finance Depts, SBP, NACTA</span>
+                <span class="obs-badge obs-badge-period">4 records</span>
+                <h3 style="margin:8px 0 4px 0;font-size:1.12rem;color:var(--obs-dark);">Provincial Resource Allocation, Debt Stock & Conflict Exposure Matrix</h3>
+                <p style="font-size:0.9rem;color:var(--obs-text);margin:0 0 8px 0;line-height:1.5;">Comparative multi-dimensional matrix of Punjab, Sindh, KP, and Balochistan covering total budgets, ADP allocations, public debt, per capita spends, and regional conflict incidents.</p>
+              </div>
+              <div style="display:flex;gap:8px;align-items:center;flex-shrink:0;">
+                <a href="/data/published/provincial_fiscal_conflict_matrix.csv" download="PPRI_provincial_fiscal_conflict_matrix.csv" class="obs-btn obs-btn-primary" style="padding:6px 14px;font-size:0.85rem;text-decoration:none;">Download CSV</a>
+                <a href="/data/published/provincial_fiscal_conflict_matrix.json" download="PPRI_provincial_fiscal_conflict_matrix.json" class="obs-btn" style="padding:6px 12px;font-size:0.85rem;text-decoration:none;">JSON</a>
+              </div>
+            </div>
+          </div>
+          <div class="obs-stat-card" style="margin-bottom:16px;">
+            <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:12px;">
+              <div style="max-width:760px;">
+                <span class="obs-badge obs-badge-official">PBS, SBP & World Bank</span>
+                <span class="obs-badge obs-badge-period">36 records</span>
+                <h3 style="margin:8px 0 4px 0;font-size:1.12rem;color:var(--obs-dark);">35-Year Macroeconomic Trajectory Across 4 Political Regimes (FY90–FY24)</h3>
+                <p style="font-size:0.9rem;color:var(--obs-text);margin:0 0 8px 0;line-height:1.5;">Annual timeseries of real GDP growth, CPI inflation, external current account balance (% GDP), and total public debt (% GDP).</p>
+              </div>
+              <div style="display:flex;gap:8px;align-items:center;flex-shrink:0;">
+                <a href="/data/published/macro_indicators_timeseries.csv" download="PPRI_macro_indicators_timeseries.csv" class="obs-btn obs-btn-primary" style="padding:6px 14px;font-size:0.85rem;text-decoration:none;">Download CSV</a>
+                <a href="/data/published/macro_indicators_timeseries.json" download="PPRI_macro_indicators_timeseries.json" class="obs-btn" style="padding:6px 12px;font-size:0.85rem;text-decoration:none;">JSON</a>
+              </div>
+            </div>
+          </div>
+          <div class="obs-stat-card" style="margin-bottom:16px;">
+            <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:12px;">
+              <div style="max-width:760px;">
+                <span class="obs-badge obs-badge-official">PBS CPI / Ministry of Labour</span>
+                <span class="obs-badge obs-badge-period">5 records</span>
+                <h3 style="margin:8px 0 4px 0;font-size:1.12rem;color:var(--obs-dark);">Real Purchasing Power Erosion, Minimum Wage & CPI Squeeze</h3>
+                <p style="font-size:0.9rem;color:var(--obs-text);margin:0 0 8px 0;line-height:1.5;">Tracking headline consumer price inflation against statutory minimum wage adjustments and cumulative purchasing power degradation.</p>
+              </div>
+              <div style="display:flex;gap:8px;align-items:center;flex-shrink:0;">
+                <a href="/data/published/inflation_wage_growth.csv" download="PPRI_inflation_wage_growth.csv" class="obs-btn obs-btn-primary" style="padding:6px 14px;font-size:0.85rem;text-decoration:none;">Download CSV</a>
+                <a href="/data/published/inflation_wage_growth.json" download="PPRI_inflation_wage_growth.json" class="obs-btn" style="padding:6px 12px;font-size:0.85rem;text-decoration:none;">JSON</a>
+              </div>
+            </div>
+          </div>
+          <div class="obs-stat-card" style="margin-bottom:16px;">
+            <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:12px;">
+              <div style="max-width:760px;">
+                <span class="obs-badge obs-badge-official">PBS Census 2023 & Agricultural Census</span>
+                <span class="obs-badge obs-badge-period">6 records</span>
+                <h3 style="margin:8px 0 4px 0;font-size:1.12rem;color:var(--obs-dark);">Female Gender Ratios & Agrarian Landholding Asymmetry</h3>
+                <p style="font-size:0.9rem;color:var(--obs-text);margin:0 0 8px 0;line-height:1.5;">Cross-provincial metrics comparing female sex ratios (females per 1,000 males) against female agricultural landownership percentages.</p>
+              </div>
+              <div style="display:flex;gap:8px;align-items:center;flex-shrink:0;">
+                <a href="/data/published/provincial_gender_demographics.csv" download="PPRI_provincial_gender_demographics.csv" class="obs-btn obs-btn-primary" style="padding:6px 14px;font-size:0.85rem;text-decoration:none;">Download CSV</a>
+                <a href="/data/published/provincial_gender_demographics.json" download="PPRI_provincial_gender_demographics.json" class="obs-btn" style="padding:6px 12px;font-size:0.85rem;text-decoration:none;">JSON</a>
+              </div>
+            </div>
+          </div>
+          <div class="obs-stat-card" style="margin-bottom:16px;">
+            <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:12px;">
+              <div style="max-width:760px;">
+                <span class="obs-badge obs-badge-official">PBS HIES 2024–25</span>
+                <span class="obs-badge obs-badge-period">15 records</span>
+                <h3 style="margin:8px 0 4px 0;font-size:1.12rem;color:var(--obs-dark);">Household Income & Regressive Food Engel Ratios (HIES 2024–25)</h3>
+                <p style="font-size:0.9rem;color:var(--obs-text);margin:0 0 8px 0;line-height:1.5;">Average monthly household income, consumption outlays, and food spending shares across income quintiles Q1 through Q5.</p>
+              </div>
+              <div style="display:flex;gap:8px;align-items:center;flex-shrink:0;">
+                <a href="/data/published/hies_household_expenditures.csv" download="PPRI_hies_household_expenditures.csv" class="obs-btn obs-btn-primary" style="padding:6px 14px;font-size:0.85rem;text-decoration:none;">Download CSV</a>
+                <a href="/data/published/hies_household_expenditures.json" download="PPRI_hies_household_expenditures.json" class="obs-btn" style="padding:6px 12px;font-size:0.85rem;text-decoration:none;">JSON</a>
+              </div>
+            </div>
+          </div>
+          <div class="obs-stat-card" style="margin-bottom:16px;">
+            <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:12px;">
+              <div style="max-width:760px;">
+                <span class="obs-badge obs-badge-official">PBS HIES 2024–25</span>
+                <span class="obs-badge obs-badge-period">5 records</span>
+                <h3 style="margin:8px 0 4px 0;font-size:1.12rem;color:var(--obs-dark);">Provincial Food vs Non-Food Household Consumption Baskets</h3>
+                <p style="font-size:0.9rem;color:var(--obs-text);margin:0 0 8px 0;line-height:1.5;">Provincial food expenditure budget percentages versus essential non-food requirements (housing, health, utilities, transport).</p>
+              </div>
+              <div style="display:flex;gap:8px;align-items:center;flex-shrink:0;">
+                <a href="/data/published/provincial_consumption_pies.csv" download="PPRI_provincial_consumption_pies.csv" class="obs-btn obs-btn-primary" style="padding:6px 14px;font-size:0.85rem;text-decoration:none;">Download CSV</a>
+                <a href="/data/published/provincial_consumption_pies.json" download="PPRI_provincial_consumption_pies.json" class="obs-btn" style="padding:6px 12px;font-size:0.85rem;text-decoration:none;">JSON</a>
+              </div>
+            </div>
+          </div>
+          <div class="obs-stat-card" style="margin-bottom:16px;">
+            <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:12px;">
+              <div style="max-width:760px;">
+                <span class="obs-badge obs-badge-official">PBS 7th Housing Census 2023</span>
+                <span class="obs-badge obs-badge-period">5 records</span>
+                <h3 style="margin:8px 0 4px 0;font-size:1.12rem;color:var(--obs-dark);">Basic Housing Characteristics & Clean Water Access Deficits</h3>
+                <p style="font-size:0.9rem;color:var(--obs-text);margin:0 0 8px 0;line-height:1.5;">Provincial coverage rates for piped drinking water, grid electricity access, flush sanitation, and clean cooking fuel.</p>
+              </div>
+              <div style="display:flex;gap:8px;align-items:center;flex-shrink:0;">
+                <a href="/data/published/housing_basic_services.csv" download="PPRI_housing_basic_services.csv" class="obs-btn obs-btn-primary" style="padding:6px 14px;font-size:0.85rem;text-decoration:none;">Download CSV</a>
+                <a href="/data/published/housing_basic_services.json" download="PPRI_housing_basic_services.json" class="obs-btn" style="padding:6px 12px;font-size:0.85rem;text-decoration:none;">JSON</a>
+              </div>
+            </div>
+          </div>
+          <div class="obs-stat-card" style="margin-bottom:16px;">
+            <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:12px;">
+              <div style="max-width:760px;">
+                <span class="obs-badge obs-badge-official">PBS Labour Force Survey (LFS)</span>
+                <span class="obs-badge obs-badge-period">5 records</span>
+                <h3 style="margin:8px 0 4px 0;font-size:1.12rem;color:var(--obs-dark);">Labour Force Gender Employment & Urban/Rural Wage Disparities</h3>
+                <p style="font-size:0.9rem;color:var(--obs-text);margin:0 0 8px 0;line-height:1.5;">Cross-provincial comparison of female labour force participation, male vs female average wages, and rural wage discounts.</p>
+              </div>
+              <div style="display:flex;gap:8px;align-items:center;flex-shrink:0;">
+                <a href="/data/published/lfs_employment_wages.csv" download="PPRI_lfs_employment_wages.csv" class="obs-btn obs-btn-primary" style="padding:6px 14px;font-size:0.85rem;text-decoration:none;">Download CSV</a>
+                <a href="/data/published/lfs_employment_wages.json" download="PPRI_lfs_employment_wages.json" class="obs-btn" style="padding:6px 12px;font-size:0.85rem;text-decoration:none;">JSON</a>
+              </div>
+            </div>
+          </div>
+          <div class="obs-stat-card" style="margin-bottom:16px;">
+            <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:12px;">
+              <div style="max-width:760px;">
+                <span class="obs-badge obs-badge-official">PBS Historical Censuses</span>
+                <span class="obs-badge obs-badge-period">4 records</span>
+                <h3 style="margin:8px 0 4px 0;font-size:1.12rem;color:var(--obs-dark);">4-Decade Provincial Demographic Growth Trajectories (1981–2023)</h3>
+                <p style="font-size:0.9rem;color:var(--obs-text);margin:0 0 8px 0;line-height:1.5;">Provincial population headcounts and annual intercensal compound annual growth rates across the 1981, 1998, 2017, and 2023 censuses.</p>
+              </div>
+              <div style="display:flex;gap:8px;align-items:center;flex-shrink:0;">
+                <a href="/data/published/provincial_census_shifts.csv" download="PPRI_provincial_census_shifts.csv" class="obs-btn obs-btn-primary" style="padding:6px 14px;font-size:0.85rem;text-decoration:none;">Download CSV</a>
+                <a href="/data/published/provincial_census_shifts.json" download="PPRI_provincial_census_shifts.json" class="obs-btn" style="padding:6px 12px;font-size:0.85rem;text-decoration:none;">JSON</a>
+              </div>
+            </div>
+          </div>
+          <div class="obs-stat-card" style="margin-bottom:16px;">
+            <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:12px;">
+              <div style="max-width:760px;">
+                <span class="obs-badge obs-badge-official">PBS 7th Population Census 2023</span>
+                <span class="obs-badge obs-badge-period">141 records</span>
+                <h3 style="margin:8px 0 4px 0;font-size:1.12rem;color:var(--obs-dark);">135 Districts Urbanization vs Density Quadrant Scale</h3>
+                <p style="font-size:0.9rem;color:var(--obs-text);margin:0 0 8px 0;line-height:1.5;">Complete microdata of 135 districts across Pakistan with population headcount, urbanization share (%), density (persons/sq km), and province tagging.</p>
+              </div>
+              <div style="display:flex;gap:8px;align-items:center;flex-shrink:0;">
+                <a href="/data/published/census_2023_districts.csv" download="PPRI_census_2023_districts.csv" class="obs-btn obs-btn-primary" style="padding:6px 14px;font-size:0.85rem;text-decoration:none;">Download CSV</a>
+                <a href="/data/published/census_2023_districts.json" download="PPRI_census_2023_districts.json" class="obs-btn" style="padding:6px 12px;font-size:0.85rem;text-decoration:none;">JSON</a>
+              </div>
+            </div>
+          </div>
+          <div class="obs-stat-card" style="margin-bottom:16px;">
+            <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:12px;">
+              <div style="max-width:760px;">
+                <span class="obs-badge obs-badge-official">PBS Agriculture Census</span>
+                <span class="obs-badge obs-badge-period">4 records</span>
+                <h3 style="margin:8px 0 4px 0;font-size:1.12rem;color:var(--obs-dark);">Smallholder Landholding Fragmentation Dynamics</h3>
+                <p style="font-size:0.9rem;color:var(--obs-text);margin:0 0 8px 0;line-height:1.5;">Farms and cultivated acreage distributions across subsistence (<5 acres), small (5–12.5 acres), medium (12.5–50 acres), and large (>50 acres) landholdings.</p>
+              </div>
+              <div style="display:flex;gap:8px;align-items:center;flex-shrink:0;">
+                <a href="/data/published/provincial_agri_shifts.csv" download="PPRI_provincial_agri_shifts.csv" class="obs-btn obs-btn-primary" style="padding:6px 14px;font-size:0.85rem;text-decoration:none;">Download CSV</a>
+                <a href="/data/published/provincial_agri_shifts.json" download="PPRI_provincial_agri_shifts.json" class="obs-btn" style="padding:6px 12px;font-size:0.85rem;text-decoration:none;">JSON</a>
+              </div>
+            </div>
+          </div>
+          <div class="obs-stat-card" style="margin-bottom:16px;">
+            <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:12px;">
+              <div style="max-width:760px;">
+                <span class="obs-badge obs-badge-official">PBS Historical Censuses (1951–2023)</span>
+                <span class="obs-badge obs-badge-period">7 records</span>
+                <h3 style="margin:8px 0 4px 0;font-size:1.12rem;color:var(--obs-dark);">70-Year Intercensal Demographic Trajectory (1951–2023)</h3>
+                <p style="font-size:0.9rem;color:var(--obs-text);margin:0 0 8px 0;line-height:1.5;">National headcount growth milestones, intercensal growth rates, and urbanization expansion over seven decades of statehood.</p>
+              </div>
+              <div style="display:flex;gap:8px;align-items:center;flex-shrink:0;">
+                <a href="/data/published/census_historical_growth.csv" download="PPRI_census_historical_growth.csv" class="obs-btn obs-btn-primary" style="padding:6px 14px;font-size:0.85rem;text-decoration:none;">Download CSV</a>
+                <a href="/data/published/census_historical_growth.json" download="PPRI_census_historical_growth.json" class="obs-btn" style="padding:6px 12px;font-size:0.85rem;text-decoration:none;">JSON</a>
+              </div>
+            </div>
+          </div>
+          </div>
+        </section>
+
+
         <section class="obs-section">
           <h2 class="obs-section-title" style="margin-bottom:20px;">Available Datasets (CSV Format)</h2>
                     <div class="obs-stat-card" style="margin-bottom:16px;">
@@ -216,9 +445,9 @@
         </div>
       </div>
     </main>
-    
-    <!-- Global Research Directory: Complete PPRI Policy & Data Index -->
-    <section class="site-directory" aria-label="Complete PPRI Policy &amp; Data Index">
+    <footer class="site-footer">
+      <div data-nosnippet class="global-directory-nosnippet">
+<section class="site-directory" data-nosnippet aria-label="Complete PPRI Policy &amp; Data Index">
       <div class="container">
         <details class="directory-details">
                     <summary class="directory-summary">
@@ -330,7 +559,7 @@
                     <li><a href="/resources/constitution.html">Constitution Reader: Federal &amp; Provincial Lists</a></li>
                     <li><a href="/resources/legislation.html">Provincial Local Government Acts &amp; Statutes</a></li>
                     <li><a href="/consultation/">Public Consultation Portal</a></li>
-                    <li><a href="/consultation/survey.html">Participate in National Governance Survey</a></li>
+                    <li><a href="/surveys/">Participate in National Governance Survey</a></li>
                     <li><a href="/consultation/submissions.html">Submit Policy Memoranda &amp; Feedback</a></li>
                     <li><a href="/about.html">About Pakistan Provincial Reform Institute</a></li>
                   </ul>
@@ -341,13 +570,12 @@
         </details>
       </div>
     </section>
-
-    <footer class="site-footer">
+      </div>
       <div class="container footer-grid">
         <div class="footer-about">
           <div class="brand footer-brand">
             <img src="/assets/images/brand/ppri-logo-header.jpg" alt="PPRI logo" width="36" height="36" loading="lazy" decoding="async" />
-            <span class="brand-text"><strong>PPRI</strong><span>Pakistan Provincial Reform Institute</span></span>
+            <span class="brand-text"><strong>PPRI</strong> <span class="brand-sub">Pakistan Provincial Reform Institute</span></span>
           </div>
           <p>Non-partisan research, empirical data observatories, and cartographic analysis on governance, provincial reform, and decentralization in Pakistan.</p>
         </div>

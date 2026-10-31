@@ -51,6 +51,7 @@
     <link rel="stylesheet" href="/assets/css/style.css" />
 
     <link rel="stylesheet" href="/assets/css/homepage.css" />
+    <link rel="stylesheet" href="/assets/css/visual-insights.css" />
     <link rel="preconnect" href="https://unpkg.com" crossorigin />
     <link
       rel="stylesheet"
@@ -131,10 +132,7 @@
               loading="eager"
             />
           </span>
-          <span class="brand-text">
-            <strong>PPRI</strong>
-            <span>Pakistan Provincial Reform Institute</span>
-          </span>
+          <span class="brand-text"><strong>PPRI</strong> <span class="brand-sub">Pakistan Provincial Reform Institute</span></span>
         </a>
         <button
           class="menu-toggle"
@@ -149,6 +147,7 @@
           <a href="/research/">Research</a>
           <a href="/provinces/">Reform</a>
           <a href="/scenarios/">Scenarios</a>
+          <a href="/insights/">Insights</a>
           <a href="/data/centre.html">Data</a>
           <a href="/publications/">Publications</a>
           <a href="/consultation/">Engage</a>
@@ -173,6 +172,7 @@
         <div
           id="hero-map-container"
           class="hero-leaflet-map"
+          role="region"
           aria-label="Interactive map of Pakistan administrative boundaries"
         >
           <!-- Atmospheric Cartographic Telemetry Loader -->
@@ -234,93 +234,8 @@
           </div>
         </div>
 
-        <!-- Research Desk HUD — #hudWrapper provides buffer zone to prevent jitter -->
-        <div id="hudWrapper">
-          <div
-            class="hud-dock"
-            id="hudDock"
-            role="complementary"
-            aria-label="Research desk"
-          >
-            <!-- Minimized sleek horizontal pill tab -->
-            <button
-              type="button"
-              class="hud-pill-trigger"
-              id="hudTrigger"
-              aria-label="Open Research Desk"
-              aria-expanded="false"
-              aria-controls="hudDock"
-            >
-              <span class="hud-pill-text">Research Desk</span>
-              <span class="hud-pill-arrow" aria-hidden="true">←</span>
-            </button>
-
-            <!-- Close button (visible when expanded) -->
-            <button
-              class="hud-close"
-              id="hudClose"
-              aria-label="Collapse research desk"
-            >
-              &#215;
-            </button>
-
-            <!-- Expanded card content (Modern Light Theme) -->
-            <div class="hud-card">
-              <div class="hud-card-header">
-                <span class="hud-card-title">On the research desk</span>
-                <span class="hud-live-badge"
-                  ><i aria-hidden="true"></i> Active work</span
-                >
-              </div>
-              <a class="hud-item" href="/maps/scenarios/">
-                <span class="hud-item-num">01</span>
-                <span class="hud-item-copy">
-                  <strong>PPRI-01 Scenario Lab</strong>
-                  <small
-                    >Explore a first-pass administrative model and move from
-                    viewing to experimentation.</small
-                  >
-                </span>
-                <span class="hud-item-arrow">&#8599;</span>
-              </a>
-              <a class="hud-item" href="/data/centre.html">
-                <span class="hud-item-num">02</span>
-                <span class="hud-item-copy">
-                  <strong>Data Observatory</strong>
-                  <small
-                    >Population, geography, scale and source-linked evidence for
-                    the research programme.</small
-                  >
-                </span>
-                <span class="hud-item-arrow">&#8599;</span>
-              </a>
-              <a
-                class="hud-item"
-                href="/research/policy-papers/provincial-reorganization-of-pakistan.html"
-              >
-                <span class="hud-item-num">03</span>
-                <span class="hud-item-copy">
-                  <strong>Flagship policy paper</strong>
-                  <small
-                    >Constitutional, administrative, fiscal, demographic and
-                    local-government questions.</small
-                  >
-                </span>
-                <span class="hud-item-arrow">&#8599;</span>
-              </a>
-              <div class="hud-foot">
-                <span>PPRI / Research Desk</span>
-                <span>2026</span>
-              </div>
-            </div>
-            <!-- /.hud-card -->
-          </div>
-          <!-- /.hud-dock -->
-        </div>
-        <!-- /#hudWrapper -->
-
         <!-- Cursor-following tooltip (populated by hero-map.js) -->
-        <div id="pak-tooltip" role="tooltip" aria-live="polite">
+        <div id="pak-tooltip" role="tooltip">
           <span class="tt-name"></span>
           <span class="tt-province"></span>
           <div class="tt-meta"></div>
@@ -750,11 +665,7 @@
               <div class="feed-fade-bottom" aria-hidden="true"></div>
             </div>
           </div>
-          <p class="home-note">
-            New homepage highlights are managed through
-             so the editorial layer can grow
-            without redesigning the page.
-          </p>
+          <p class="home-note">Editorial highlights are curated from verified empirical datasets and subnational policy evaluations across all four provinces.</p>
         </div>
       </section>
 
@@ -852,11 +763,7 @@
             <div class="scenario-preview-bottom">
               <div class="scenario-explanation">
                 <span class="scenario-mini-label">What you're seeing</span>
-                <p data-preview-copy>
-                  The live PPRI-01 preview uses the same scenario map that
-                  powers the full Scenario Lab. It is illustrative, editable and
-                  separate from enacted administrative boundaries.
-                </p>
+                <p data-preview-copy>The interactive scenario preview visualizes provincial boundary simulations and sub-provincial resource decentralization models for public policy deliberation.</p>
               </div>
               <div class="scenario-actions">
                 <a class="btn btn-primary" href="/maps/scenarios/"
@@ -1153,112 +1060,389 @@
         </div>
       </section>
 
+      
+            <!-- ================= VISUAL POLICY ANALYTICS & INFOGRAPHICS SHOWCASE ================= -->
       <section
-        class="home-section home-platform-section"
-        id="section-platform"
-        aria-labelledby="platform-title"
-      >
-        <div class="container">
-          <div class="platform-shell" data-reveal>
-            <div class="platform-intro">
-              <span class="home-section-label">Explore the platform</span>
-              <h2 id="platform-title">
-                Move between the evidence, the map and the argument.
-              </h2>
-              <p>
-                PPRI is designed as a connected research environment rather than
-                a stack of unrelated pages.
-              </p>
-            </div>
-            <div class="platform-grid">
-              <a class="platform-card" href="/data/centre.html"
-                ><span>Data Observatory</span
-                ><small>Evidence, indicators and source notes</small><b>↗</b></a
-              >
-              <a class="platform-card" href="/maps/current/administrative.html"
-                ><span>Current geography</span
-                ><small
-                  >Reference map for the existing administrative
-                  structure</small
-                ><b>↗</b></a
-              >
-              <a class="platform-card" href="/sources/"
-                ><span>Source library</span
-                ><small
-                  >Institutional, academic and independent source
-                  pathways</small
-                ><b>↗</b></a
-              >
-              <a
-                class="platform-card"
-                href="/methodology/research-standards.html"
-                ><span>Research standards</span
-                ><small>Evidence, interpretation and scenario boundaries</small
-                ><b>↗</b></a
-              >
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section
-        class="home-section home-evidence-section"
-        id="section-evidence"
-        aria-labelledby="evidence-title"
+        class="home-section home-visual-insights-section"
+        id="section-visual-analytics"
+        aria-labelledby="visual-analytics-title"
       >
         <div class="container">
           <div class="home-section-head" data-reveal>
             <div>
-              <span class="home-section-label">How to read PPRI</span>
-              <h2 id="evidence-title">
-                Evidence, interpretation and scenarios stay distinct.
+              <span class="home-section-label">Empirical Evidence Lab</span>
+              <h2 id="visual-analytics-title">
+                Visual Policy Analytics &amp; Empirical Infographics
               </h2>
             </div>
+            <p>
+              High-efficiency vector visualizations translating sovereign debt trajectories, provincial budgetary allocations, district disparities, and household living standards into actionable policy evidence.
+            </p>
           </div>
-          <div class="evidence-process" data-reveal>
-            <div class="evidence-step">
-              <span>01</span><strong>Source</strong>
-              <p>
-                Start with an identified document, dataset or institutional
-                source.
-              </p>
-            </div>
-            <div class="evidence-connector" aria-hidden="true"></div>
-            <div class="evidence-step">
-              <span>02</span><strong>Analysis</strong>
-              <p>
-                Separate calculation and interpretation from the underlying
-                record.
-              </p>
-            </div>
-            <div class="evidence-connector" aria-hidden="true"></div>
-            <div class="evidence-step">
-              <span>03</span><strong>Scenario</strong>
-              <p>
-                Label illustrative models clearly instead of presenting them as
-                enacted facts.
-              </p>
-            </div>
-            <div class="evidence-connector" aria-hidden="true"></div>
-            <div class="evidence-step">
-              <span>04</span><strong>Public discussion</strong>
-              <p>
-                Bring questions, reservations and alternative ideas back into
-                the research cycle.
-              </p>
-            </div>
+
+          <!-- 16-Infographic Visual Policy Mosaic Grid -->
+          <div class="vi-mosaic-grid">
+            <!-- Micro-Card: card-fiscal -->
+            <a href="/insights/#card-fiscal" class="vi-mosaic-card" aria-label="Explore Federal Budget Allocation &amp; Sovereign Debt Servicing">
+              <div class="vi-mosaic-media">
+                <img
+                  src="/assets/images/insights/card-fiscal.svg"
+                  alt="Federal Budget Allocation &amp; Sovereign Debt Servicing"
+                  width="800"
+                  height="620"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <span class="vi-mosaic-hover-pill">Launch Interactive Visual &rarr;</span>
+              </div>
+              <div class="vi-mosaic-body">
+                <div class="vi-mosaic-meta">
+                  <span class="vi-mosaic-domain vi-domain-fiscal">Fiscal Solvency</span>
+                  <span class="vi-mosaic-metric">51.8% Markup</span>
+                </div>
+                <h3 class="vi-mosaic-title">Federal Budget Allocation &amp; Sovereign Debt Servicing</h3>
+                <p class="vi-mosaic-snippet">Sovereign debt markup absorbs PKR 9,775B, leaving only 7.4% for national development (PSDP).</p>
+              </div>
+            </a>
+            <!-- Micro-Card: card-debt -->
+            <a href="/insights/#card-debt" class="vi-mosaic-card" aria-label="Explore The 8-Year Sovereign Public Debt Trajectory (FY18–FY26)">
+              <div class="vi-mosaic-media">
+                <img
+                  src="/assets/images/insights/card-debt.svg"
+                  alt="The 8-Year Sovereign Public Debt Trajectory (FY18–FY26)"
+                  width="800"
+                  height="620"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <span class="vi-mosaic-hover-pill">Launch Interactive Visual &rarr;</span>
+              </div>
+              <div class="vi-mosaic-body">
+                <div class="vi-mosaic-meta">
+                  <span class="vi-mosaic-domain vi-domain-fiscal">Public Debt</span>
+                  <span class="vi-mosaic-metric">PKR 86.4T Debt</span>
+                </div>
+                <h3 class="vi-mosaic-title">The 8-Year Sovereign Public Debt Trajectory (FY18–FY26)</h3>
+                <p class="vi-mosaic-snippet">Total public debt expanded from PKR 25.0T to PKR 86.4T, compounding sovereign markup velocity.</p>
+              </div>
+            </a>
+            <!-- Micro-Card: card-tax-exp -->
+            <a href="/insights/#card-tax-exp" class="vi-mosaic-card" aria-label="Explore Federal Tax Concessions &amp; Revenue Foregone">
+              <div class="vi-mosaic-media">
+                <img
+                  src="/assets/images/insights/card-tax-exp.svg"
+                  alt="Federal Tax Concessions &amp; Revenue Foregone"
+                  width="800"
+                  height="620"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <span class="vi-mosaic-hover-pill">Launch Interactive Visual &rarr;</span>
+              </div>
+              <div class="vi-mosaic-body">
+                <div class="vi-mosaic-meta">
+                  <span class="vi-mosaic-domain vi-domain-fiscal">Tax Policy</span>
+                  <span class="vi-mosaic-metric">PKR 3.98T Exempt</span>
+                </div>
+                <h3 class="vi-mosaic-title">Federal Tax Concessions &amp; Revenue Foregone</h3>
+                <p class="vi-mosaic-snippet">Corporate exemptions and zero-rating concessions equal 43% of total FBR tax revenue.</p>
+              </div>
+            </a>
+            <!-- Micro-Card: card-prov-matrix -->
+            <a href="/insights/#card-prov-matrix" class="vi-mosaic-card" aria-label="Explore Provincial Resource Allocation, Debt Stock &amp; Conflict Matrix">
+              <div class="vi-mosaic-media">
+                <img
+                  src="/assets/images/insights/card-prov-matrix.svg"
+                  alt="Provincial Resource Allocation, Debt Stock &amp; Conflict Matrix"
+                  width="1040"
+                  height="680"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <span class="vi-mosaic-hover-pill">Launch Interactive Visual &rarr;</span>
+              </div>
+              <div class="vi-mosaic-body">
+                <div class="vi-mosaic-meta">
+                  <span class="vi-mosaic-domain vi-domain-fiscal">Provincial Matrix</span>
+                  <span class="vi-mosaic-metric">4 Provinces</span>
+                </div>
+                <h3 class="vi-mosaic-title">Provincial Resource Allocation, Debt Stock &amp; Conflict Matrix</h3>
+                <p class="vi-mosaic-snippet">Comparing budgetary outlay, ADP allocations, debt stock, per capita spend, and regional conflict incidents.</p>
+              </div>
+            </a>
+            <!-- Micro-Card: card-wage-infl -->
+            <a href="/insights/#card-wage-infl" class="vi-mosaic-card" aria-label="Explore Purchasing Power Erosion: Real Wages vs Inflation">
+              <div class="vi-mosaic-media">
+                <img
+                  src="/assets/images/insights/card-wage-infl.svg"
+                  alt="Purchasing Power Erosion: Real Wages vs Inflation"
+                  width="800"
+                  height="620"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <span class="vi-mosaic-hover-pill">Launch Interactive Visual &rarr;</span>
+              </div>
+              <div class="vi-mosaic-body">
+                <div class="vi-mosaic-meta">
+                  <span class="vi-mosaic-domain vi-domain-economy">Purchasing Power</span>
+                  <span class="vi-mosaic-metric">-42% Real Wage</span>
+                </div>
+                <h3 class="vi-mosaic-title">Purchasing Power Erosion: Real Wages vs Inflation</h3>
+                <p class="vi-mosaic-snippet">Cumulative CPI inflation (+205%) heavily outpaced statutory minimum wage adjustments since FY10.</p>
+              </div>
+            </a>
+            <!-- Micro-Card: card-sector-employment -->
+            <a href="/insights/#card-sector-employment" class="vi-mosaic-card" aria-label="Explore Sectoral Labour Force Absorption Dynamics">
+              <div class="vi-mosaic-media">
+                <img
+                  src="/assets/images/insights/card-sector-employment.svg"
+                  alt="Sectoral Labour Force Absorption Dynamics"
+                  width="800"
+                  height="620"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <span class="vi-mosaic-hover-pill">Launch Interactive Visual &rarr;</span>
+              </div>
+              <div class="vi-mosaic-body">
+                <div class="vi-mosaic-meta">
+                  <span class="vi-mosaic-domain vi-domain-economy">Labour Markets</span>
+                  <span class="vi-mosaic-metric">37.4% Agri Share</span>
+                </div>
+                <h3 class="vi-mosaic-title">Sectoral Labour Force Absorption Dynamics</h3>
+                <p class="vi-mosaic-snippet">Agriculture absorbs 37.4% of total labour force despite contributing only 24% to gross value added.</p>
+              </div>
+            </a>
+            <!-- Micro-Card: card-agri-shifts -->
+            <a href="/insights/#card-agri-shifts" class="vi-mosaic-card" aria-label="Explore Smallholder Landholding &amp; Acreage Fragmentation">
+              <div class="vi-mosaic-media">
+                <img
+                  src="/assets/images/insights/card-agri-shifts.svg"
+                  alt="Smallholder Landholding &amp; Acreage Fragmentation"
+                  width="800"
+                  height="620"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <span class="vi-mosaic-hover-pill">Launch Interactive Visual &rarr;</span>
+              </div>
+              <div class="vi-mosaic-body">
+                <div class="vi-mosaic-meta">
+                  <span class="vi-mosaic-domain vi-domain-economy">Agrarian Economy</span>
+                  <span class="vi-mosaic-metric">64% Farms &lt;5 Acres</span>
+                </div>
+                <h3 class="vi-mosaic-title">Smallholder Landholding &amp; Acreage Fragmentation</h3>
+                <p class="vi-mosaic-snippet">Rapid subdivision into sub-subsistence holdings constrains agricultural mechanization and yield.</p>
+              </div>
+            </a>
+            <!-- Micro-Card: card-macro -->
+            <a href="/insights/#card-macro" class="vi-mosaic-card" aria-label="Explore 35-Year Macroeconomic Trajectory (4 Regimes &amp; Crisis Shocks)">
+              <div class="vi-mosaic-media">
+                <img
+                  src="/assets/images/insights/card-macro.svg"
+                  alt="35-Year Macroeconomic Trajectory (4 Regimes &amp; Crisis Shocks)"
+                  width="1040"
+                  height="680"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <span class="vi-mosaic-hover-pill">Launch Interactive Visual &rarr;</span>
+              </div>
+              <div class="vi-mosaic-body">
+                <div class="vi-mosaic-meta">
+                  <span class="vi-mosaic-domain vi-domain-economy">Macro History</span>
+                  <span class="vi-mosaic-metric">35-Year Trajectory</span>
+                </div>
+                <h3 class="vi-mosaic-title">35-Year Macroeconomic Trajectory (4 Regimes &amp; Crisis Shocks)</h3>
+                <p class="vi-mosaic-snippet">Tracking real GDP growth, CPI inflation, current account deficits, and debt over 35 years.</p>
+              </div>
+            </a>
+            <!-- Micro-Card: card-gender-land -->
+            <a href="/insights/#card-gender-land" class="vi-mosaic-card" aria-label="Explore Female Gender Ratios &amp; Agrarian Landholding Asymmetry">
+              <div class="vi-mosaic-media">
+                <img
+                  src="/assets/images/insights/card-gender-land.svg"
+                  alt="Female Gender Ratios &amp; Agrarian Landholding Asymmetry"
+                  width="800"
+                  height="620"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <span class="vi-mosaic-hover-pill">Launch Interactive Visual &rarr;</span>
+              </div>
+              <div class="vi-mosaic-body">
+                <div class="vi-mosaic-meta">
+                  <span class="vi-mosaic-domain vi-domain-demographics">Gender &amp; Property</span>
+                  <span class="vi-mosaic-metric">2.9% Female Owners</span>
+                </div>
+                <h3 class="vi-mosaic-title">Female Gender Ratios &amp; Agrarian Landholding Asymmetry</h3>
+                <p class="vi-mosaic-snippet">Stark divide between female demographic population share and formal land ownership.</p>
+              </div>
+            </a>
+            <!-- Micro-Card: card-census-shifts -->
+            <a href="/insights/#card-census-shifts" class="vi-mosaic-card" aria-label="Explore Multi-Census Provincial Demographic Shifts (1981–2023)">
+              <div class="vi-mosaic-media">
+                <img
+                  src="/assets/images/insights/card-census-shifts.svg"
+                  alt="Multi-Census Provincial Demographic Shifts (1981–2023)"
+                  width="800"
+                  height="620"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <span class="vi-mosaic-hover-pill">Launch Interactive Visual &rarr;</span>
+              </div>
+              <div class="vi-mosaic-body">
+                <div class="vi-mosaic-meta">
+                  <span class="vi-mosaic-domain vi-domain-demographics">Demographics</span>
+                  <span class="vi-mosaic-metric">+2.55% Annual Growth</span>
+                </div>
+                <h3 class="vi-mosaic-title">Multi-Census Provincial Demographic Shifts (1981–2023)</h3>
+                <p class="vi-mosaic-snippet">Differential compound annual growth rates reshaping provincial demographic weights across 4 decades.</p>
+              </div>
+            </a>
+            <!-- Micro-Card: card-districts-scatter -->
+            <a href="/insights/#card-districts-scatter" class="vi-mosaic-card" aria-label="Explore 135-District Urbanization &amp; Density Quadrant Matrix">
+              <div class="vi-mosaic-media">
+                <img
+                  src="/assets/images/insights/card-districts-scatter.svg"
+                  alt="135-District Urbanization &amp; Density Quadrant Matrix"
+                  width="1040"
+                  height="680"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <span class="vi-mosaic-hover-pill">Launch Interactive Visual &rarr;</span>
+              </div>
+              <div class="vi-mosaic-body">
+                <div class="vi-mosaic-meta">
+                  <span class="vi-mosaic-domain vi-domain-demographics">Spatial Atlas</span>
+                  <span class="vi-mosaic-metric">135 Districts</span>
+                </div>
+                <h3 class="vi-mosaic-title">135-District Urbanization &amp; Density Quadrant Matrix</h3>
+                <p class="vi-mosaic-snippet">Spatial clustering across mega-urban hubs, dense agrarian belts, and sparse peripheries.</p>
+              </div>
+            </a>
+            <!-- Micro-Card: card-census-hist -->
+            <a href="/insights/#card-census-hist" class="vi-mosaic-card" aria-label="Explore 70-Year Intercensal Demographic Growth Trajectory">
+              <div class="vi-mosaic-media">
+                <img
+                  src="/assets/images/insights/card-census-hist.svg"
+                  alt="70-Year Intercensal Demographic Growth Trajectory"
+                  width="800"
+                  height="620"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <span class="vi-mosaic-hover-pill">Launch Interactive Visual &rarr;</span>
+              </div>
+              <div class="vi-mosaic-body">
+                <div class="vi-mosaic-meta">
+                  <span class="vi-mosaic-domain vi-domain-demographics">Demographic History</span>
+                  <span class="vi-mosaic-metric">33.7M &rarr; 241.5M</span>
+                </div>
+                <h3 class="vi-mosaic-title">70-Year Intercensal Demographic Growth Trajectory</h3>
+                <p class="vi-mosaic-snippet">Seven-fold population expansion over seven decades of statehood since the 1951 baseline.</p>
+              </div>
+            </a>
+            <!-- Micro-Card: card-hies -->
+            <a href="/insights/#card-hies" class="vi-mosaic-card" aria-label="Explore Household Food Engel Burden Divide (HIES 2024–25)">
+              <div class="vi-mosaic-media">
+                <img
+                  src="/assets/images/insights/card-hies.svg"
+                  alt="Household Food Engel Burden Divide (HIES 2024–25)"
+                  width="800"
+                  height="620"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <span class="vi-mosaic-hover-pill">Launch Interactive Visual &rarr;</span>
+              </div>
+              <div class="vi-mosaic-body">
+                <div class="vi-mosaic-meta">
+                  <span class="vi-mosaic-domain vi-domain-living">Living Standards</span>
+                  <span class="vi-mosaic-metric">52.4% Food Engel</span>
+                </div>
+                <h3 class="vi-mosaic-title">Household Food Engel Burden Divide (HIES 2024–25)</h3>
+                <p class="vi-mosaic-snippet">Lowest-income quintiles commit over half of total consumption exclusively to basic food.</p>
+              </div>
+            </a>
+            <!-- Micro-Card: card-consumption-pie -->
+            <a href="/insights/#card-consumption-pie" class="vi-mosaic-card" aria-label="Explore Provincial Food vs Non-Food Household Consumption Baskets">
+              <div class="vi-mosaic-media">
+                <img
+                  src="/assets/images/insights/card-consumption-pie.svg"
+                  alt="Provincial Food vs Non-Food Household Consumption Baskets"
+                  width="800"
+                  height="620"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <span class="vi-mosaic-hover-pill">Launch Interactive Visual &rarr;</span>
+              </div>
+              <div class="vi-mosaic-body">
+                <div class="vi-mosaic-meta">
+                  <span class="vi-mosaic-domain vi-domain-living">Household Baskets</span>
+                  <span class="vi-mosaic-metric">Food vs Non-Food</span>
+                </div>
+                <h3 class="vi-mosaic-title">Provincial Food vs Non-Food Household Consumption Baskets</h3>
+                <p class="vi-mosaic-snippet">Disparities between provincial spending on basic food vs housing, utilities, and healthcare.</p>
+              </div>
+            </a>
+            <!-- Micro-Card: card-services -->
+            <a href="/insights/#card-services" class="vi-mosaic-card" aria-label="Explore Household Basic Housing Characteristics &amp; Utilities Deficit">
+              <div class="vi-mosaic-media">
+                <img
+                  src="/assets/images/insights/card-services.svg"
+                  alt="Household Basic Housing Characteristics &amp; Utilities Deficit"
+                  width="800"
+                  height="620"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <span class="vi-mosaic-hover-pill">Launch Interactive Visual &rarr;</span>
+              </div>
+              <div class="vi-mosaic-body">
+                <div class="vi-mosaic-meta">
+                  <span class="vi-mosaic-domain vi-domain-living">Basic Amenities</span>
+                  <span class="vi-mosaic-metric">38% Piped Water</span>
+                </div>
+                <h3 class="vi-mosaic-title">Household Basic Housing Characteristics &amp; Utilities Deficit</h3>
+                <p class="vi-mosaic-snippet">Critical deficits in piped drinking water, flush sanitation, and clean cooking fuel access.</p>
+              </div>
+            </a>
+            <!-- Micro-Card: card-lfs -->
+            <a href="/insights/#card-lfs" class="vi-mosaic-card" aria-label="Explore Labour Force Participation &amp; Gender/Rural Wage Disparities">
+              <div class="vi-mosaic-media">
+                <img
+                  src="/assets/images/insights/card-lfs.svg"
+                  alt="Labour Force Participation &amp; Gender/Rural Wage Disparities"
+                  width="800"
+                  height="620"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <span class="vi-mosaic-hover-pill">Launch Interactive Visual &rarr;</span>
+              </div>
+              <div class="vi-mosaic-body">
+                <div class="vi-mosaic-meta">
+                  <span class="vi-mosaic-domain vi-domain-living">Labour &amp; Wages</span>
+                  <span class="vi-mosaic-metric">-34% Rural Wage</span>
+                </div>
+                <h3 class="vi-mosaic-title">Labour Force Participation &amp; Gender/Rural Wage Disparities</h3>
+                <p class="vi-mosaic-snippet">Significant female wage discounts and rural-urban earnings gap across provinces.</p>
+              </div>
+            </a>
           </div>
-          <div class="trust-strip" data-reveal>
-            <span>Official data</span>
-            <span>Academic research</span>
-            <span>Think tanks</span>
-            <span>International research</span>
-            <a href="/methodology/research-standards.html"
-              >Read the standards →</a
-            >
-          </div>
+
+          
         </div>
       </section>
+
+      
+
+      
 
       <section
         class="home-section home-participation-section"
@@ -1278,7 +1462,7 @@
                 prepare an idea for the public research record.
               </p>
               <div class="home-actions">
-                <a class="btn btn-primary" href="/consultation/survey.html"
+                <a class="btn btn-primary" href="/surveys/"
                   >Take the survey →</a
                 >
                 <a class="btn btn-ghost" href="/consultation/submissions.html"
@@ -1297,149 +1481,512 @@
         </div>
       </section>
 
-      <section class="section section-dark home-follow-section">
-        <div class="container center">
-          <span class="eyebrow">Follow PPRI</span>
-          <h2>Research, evidence and the public debate as it develops.</h2>
-          <p>
-            Follow <strong>@PPRI_Pakistan</strong> on X for publication notices,
-            research updates and consultation announcements.
-          </p>
-          <div class="actions" style="justify-content: center">
-            <a class="btn btn-primary" href="https://x.com/PPRI_Pakistan"
-              >Follow on X</a
-            >
-            <a class="btn btn-outline" href="/about.html">About PPRI</a>
-          </div>
-        </div>
-      </section>
+      
     </main>
 
     
     <!-- Global Research Directory: Complete PPRI Policy & Data Index -->
-    <section class="site-directory" aria-label="Complete PPRI Policy &amp; Data Index">
+    
+    <!-- ================= PPRI ORGANIC HIERARCHICAL PYRAMID TREE ATLAS ================= -->
+    <section class="vi-tree-section" id="section-site-treemap" aria-labelledby="tree-atlas-title">
       <div class="container">
-        <details class="directory-details">
-                    <summary class="directory-summary">
-            <div class="directory-summary-text">
-              <span class="directory-title">Complete PPRI Policy, Data &amp; Research Index</span>
-              <span class="directory-hint">Explore all 25 Policy Articles, 5 Research Reports, 10 Data Observatories, and Reform Frameworks</span>
-            </div>
-            <div class="directory-toggle-badge" aria-live="polite">
-              <span class="dir-toggle-closed">Show Research Directory (60+ Pages)</span>
-              <span class="dir-toggle-open">Hide Directory</span>
-              <svg class="directory-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
-            </div>
-          </summary>
-                    <div class="directory-grid">
-            <div class="directory-col">
-              <h3><svg class="dir-col-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg> Policy Articles &amp; Analysis</h3>
-              <ul>
-                <li><a href="/articles/provinces-of-pakistan-names-capitals-population.html">How Many Provinces in Pakistan (2026)? Names &amp; Capitals</a></li>
-                <li><a href="/articles/four-provinces-241-million-people-administrative-scale.html">Pakistan Provinces Population: 4 Provinces vs. 241.5M Scale</a></li>
-                <li><a href="/articles/south-punjab-why-does-the-province-demand-keep-returning.html">South Punjab Province: Population, 11 Districts Map &amp; Budget</a></li>
-                <li><a href="/articles/hazara-province-why-has-the-demand-survived.html">Hazara Province Movement: History, 8 Districts Map &amp; KP Fiscal Share</a></li>
-                <details class="dir-more-articles dir-more-section">
-                  <summary class="dir-more-summary">View all 25 policy articles &darr;</summary>
-                  <ul class="dir-more-list">
-                    <li><a href="/articles/karachi-urban-sindh-representation-revenue-administration.html">Karachi Administrative Structure: 7 Districts &amp; 25 Towns</a></li>
-                    <li><a href="/articles/new-administrative-units-pakistan-2026.html">New Provinces in Pakistan: PPRI-01 Map &amp; 13 Units Model</a></li>
-                    <li><a href="/articles/south-punjab-saraiki-bahawalpur-difference.html">South Punjab vs. Bahawalpur vs. Saraiki Suba Differences</a></li>
-                    <li><a href="/articles/bahawalpur-province-restoration-2026.html">Bahawalpur Province Restoration: 1955 Merger &amp; History</a></li>
-                    <li><a href="/articles/what-would-a-new-province-actually-change.html">What Would a New Province Actually Change in Pakistan?</a></li>
-                    <li><a href="/articles/why-is-pakistan-debating-new-provinces-again.html">Why Is Pakistan Debating New Provinces Again? (2026 Analysis)</a></li>
-                    <li><a href="/articles/more-provinces-or-stronger-local-governments.html">More Provinces vs. Stronger Local Governments Dilemma</a></li>
-                    <li><a href="/articles/can-pakistan-grow-beyond-provincial-capitals-secondary-cities.html">Secondary Cities in Pakistan: Urbanization &amp; Decentralization</a></li>
-                    <li><a href="/articles/new-province-can-move-capital-can-it-move-power.html">New Provinces: Secretariat Scale vs. Municipal Devolution</a></li>
-                    <li><a href="/articles/where-did-development-money-go-district-government.html">Where Did Development Money Go? PFC Awards &amp; 2001 Devolution</a></li>
-                    <li><a href="/articles/where-does-pakistans-development-money-go.html">Where Does Pakistan's Development Money Go? NFC &amp; ADP Breakdown</a></li>
-                    <li><a href="/articles/18th-amendment-did-devolution-stop-at-provincial-capital.html">18th Amendment: Provincial Devolution vs. Article 140A</a></li>
-                    <li><a href="/articles/is-gilgit-baltistan-a-province-of-pakistan.html">Is Gilgit-Baltistan a Province of Pakistan? Legal Status</a></li>
-                    <li><a href="/articles/how-far-is-government-administrative-distance.html">Administrative Distance: Travel Times to Secretariats</a></li>
-                    <li><a href="/articles/how-should-pakistan-evaluate-a-new-province.html">PPRI 12-Point Empirical Rubric for New Sub-Units</a></li>
-                    <li><a href="/articles/before-local-government-faded-citizen-perceptions.html">Citizen Perceptions: 2004/05 National Social Audit</a></li>
-                    <li><a href="/articles/did-2001-devolution-improve-services-evidence.html">Did 2001 Devolution Improve Services? Empirical Evidence</a></li>
-                    <li><a href="/articles/one-province-many-needs-development-budget-priority.html">Provincial ADP Spending: Capital Bias &amp; Regional Inequity</a></li>
-                    <li><a href="/articles/pakistan-keeps-reinventing-local-government-history.html">History of Local Government in Pakistan (1959–2026)</a></li>
-                    <li><a href="/articles/when-development-follows-the-capital-people-follow.html">Capital City Migration &amp; Urban Congestion Cycles</a></li>
-                    <li><a href="/articles/why-is-local-government-always-the-last-tier-to-get-power.html">Why Local Government Fails to Get Power in Pakistan</a></li>
-                    <li><a href="/articles/"><strong>View All 25 Analytical Articles &rarr;</strong></a></li>
-                  </ul>
-                </details>
-              </ul>
-            </div>
-            <div class="directory-col">
-              <h3><svg class="dir-col-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg> Research Reports &amp; Papers</h3>
-              <ul>
-                <li><a href="/research/reports/income-went-up-why-does-life-feel-harder.html">Average Household Income in Pakistan (HIES 2024-25 vs Inflation)</a></li>
-                <li><a href="/research/reports/bribe-you-cant-see-corruption-private-tax.html">NCPS 2025 Corruption Data: Administrative Bribes as Private Tax</a></li>
-                <li><a href="/research/reports/price-of-a-simple-task-pakistan-bureaucracy-cost.html">Price of a Simple Task: Pakistan Bureaucracy Cost Index</a></li>
-                <li><a href="/research/reports/same-country-different-life-district-access.html">District Inequality in Pakistan: HIES 2024-25 Basic Services</a></li>
-                <details class="dir-more-section">
-                  <summary class="dir-more-summary">View all reports &amp; papers &darr;</summary>
-                  <ul class="dir-more-list">
-                    <li><a href="/research/reports/does-money-work-better-spent-closer-to-people.html">Fiscal Decentralization: Local Government vs Centralized ADP</a></li>
-                    <li><a href="/research/policy-papers/provincial-reorganization-of-pakistan.html">Flagship Paper: Provincial Reorganization of Pakistan</a></li>
-                    <li><a href="/research/working-papers/provinces-local-government.html">Working Paper: Provinces and Local Governments</a></li>
-                    <li><a href="/research/briefs/administrative-scale.html">Research Brief: Administrative Scale &amp; Governance Ratios</a></li>
-                    <li><a href="/research/comparative-governance.html">Comparative Subnational Governance: Global Federations</a></li>
-                    <li><a href="/research/legal-library.html">Constitutional Legal Library: Article 239 &amp; Article 140A</a></li>
-                    <li><a href="/research/reports/"><strong>View All Research Reports &rarr;</strong></a></li>
-                  </ul>
-                </details>
-              </ul>
-            </div>
-            <div class="directory-col">
-              <h3><svg class="dir-col-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path></svg> Data Observatories</h3>
-              <ul>
-                <li><a href="/data/centre.html">Central Data Observatory &amp; Knowledge Map</a></li>
-                <li><a href="/data/population/">Population &amp; Cities Observatory (Census 2023)</a></li>
-                <li><a href="/data/economy/">Economy, Inflation &amp; Markets Benchmarks</a></li>
-                <li><a href="/data/public-finance/">Public Finance &amp; 7th NFC Simulator</a></li>
-                <details class="dir-more-section">
-                  <summary class="dir-more-summary">View all data observatories &darr;</summary>
-                  <ul class="dir-more-list">
-                    <li><a href="/data/living-standards/">Living Standards &amp; HIES 2024–25 Income</a></li>
-                    <li><a href="/data/education/">Education &amp; Literacy Benchmarks</a></li>
-                    <li><a href="/data/health/">Public Health &amp; Medical Infrastructure</a></li>
-                    <li><a href="/data/digital-access/">Digital Access &amp; Teledensity Tracker</a></li>
-                    <li><a href="/data/compare/">Cross-Provincial Indicator Comparator</a></li>
-                    <li><a href="/knowledge-library/">Knowledge Library (CSS/PMS Reference)</a></li>
-                    <li><a href="/data/downloads/">Open Data Downloads (CSV / JSON)</a></li>
-                    <li><a href="/maps/scenarios/">Interactive Scenario Lab (PPRI-01 Map)</a></li>
-                    <li><a href="/maps/">Cartographic Map Gallery</a></li>
-                  </ul>
-                </details>
-              </ul>
-            </div>
-            <div class="directory-col">
-              <h3><svg class="dir-col-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg> Reform Models &amp; Engagement</h3>
-              <ul>
-                <li><a href="/scenarios/"><strong>Subnational Governance Scenarios Suite</strong></a></li>
-                <li><a href="/provinces/proposed-models.html">Proposed Reform Models: 13-Unit Structure</a></li>
-                <li><a href="/provinces/#fiscal-framework">Fiscal Framework: NFC Divisible Pool Sharing</a></li>
-                <li><a href="/provinces/constitutional-framework.html">Constitutional Path: Article 239(4) Bill Guide</a></li>
-                <li><a href="/scenarios/#local-government">Local Government Framework: Article 140A Devolution</a></li>
-                <details class="dir-more-section">
-                  <summary class="dir-more-summary">View all models &amp; engagement &darr;</summary>
-                  <ul class="dir-more-list">
-                    <li><a href="/provinces/#administrative-model">Administrative Secretariat &amp; Cadre Transition</a></li>
-                    <li><a href="/provinces/transition-framework.html">Transition Framework: 3-Year Implementation</a></li>
-                    <li><a href="/provinces/why-provinces.html">Why Sub-National Reform? Core Case Studies</a></li>
-                    <li><a href="/resources/constitution.html">Constitution Reader: Federal &amp; Provincial Lists</a></li>
-                    <li><a href="/resources/legislation.html">Provincial Local Government Acts &amp; Statutes</a></li>
-                    <li><a href="/consultation/">Public Consultation Portal</a></li>
-                    <li><a href="/consultation/survey.html">Participate in National Governance Survey</a></li>
-                    <li><a href="/consultation/submissions.html">Submit Policy Memoranda &amp; Feedback</a></li>
-                    <li><a href="/about.html">About Pakistan Provincial Reform Institute</a></li>
-                  </ul>
-                </details>
-              </ul>
+        <!-- Section Header -->
+        <div class="vi-tree-header">
+          <div class="vi-tree-header-text">
+            <h2 id="tree-atlas-title">Pakistan Provincial Reform and Evidence Site Overview</h2>
+            <p>
+              A comprehensive hierarchical overview of Pakistan's provincial data, economic benchmarks, census figures, and governance research organized by domain.
+            </p>
+          </div>
+        </div>
+
+        <!-- The Interactive Tree Canvas -->
+        <div class="vi-tree-canvas" id="viTreeCanvas">
+          <!-- Dynamic SVG Curved Branch Connectors Overlay -->
+          <svg class="vi-tree-svg-branches" id="viTreeSvgBranches" aria-hidden="true">
+            <!-- Tier 1 Paths: Root (1) ➔ Pillars (6) -->
+            <g id="viTreeTier1Paths"></g>
+            <!-- Tier 2 Paths: Pillars (6) ➔ Subdivisions (14) -->
+            <g id="viTreeTier2Paths"></g>
+          </svg>
+
+          <!-- Level 0: Central Apex Root Node (1 Node) -->
+          <div class="vi-tree-root-container" id="viTreeRootContainer">
+            <div class="vi-tree-root-node" id="viTreeRootNode">
+              <div class="root-top-row">
+                <span class="root-crown-badge">Level 0 · Central Apex Node</span>
+                <!-- Integrated Root Toggle Button -->
+                <button type="button" class="root-toggle-pill" id="viTreeRootToggle" aria-expanded="true" title="Click to collapse or expand all tree branches">
+                  <span class="toggle-icon" id="viTreeToggleIcon" aria-hidden="true">⊟</span>
+                  <span class="toggle-text" id="viTreeToggleText">Collapse All</span>
+                </button>
+              </div>
+              <div class="root-card-body">
+                <div class="root-emblem" aria-hidden="true">🌲</div>
+                <div class="root-info">
+                  <h3 class="root-title">Pakistan Provincial Reform Institute</h3>
+                  <p class="root-tagline">Public Knowledge &amp; Evidence Base</p>
+                </div>
+              </div>
+              <!-- Bottom dock port where Tier 1 curved branches begin -->
+              <div class="root-dock-port" id="rootPortBottom" aria-hidden="true"></div>
             </div>
           </div>
-        </details>
+
+          <!-- Level 1: Middle Tier of 6 Pillars (Compact Center Width: ~760px) -->
+          <div class="vi-tree-level1-container">
+            <div class="vi-tree-pillars-pyramid-wrap" id="viTreePillarsRow">
+              <!-- Pillar 1: Visual Analytics -->
+              <div class="vi-tree-pillar-col theme-teal" data-pillar="insights" id="pillarCol-insights">
+                <!-- Top dock intake port from Root -->
+                <div class="pillar-dock-top" id="pillarPortTop-insights" aria-hidden="true"></div>
+                
+                <div class="vi-tree-pillar-card" id="pillarCard-insights">
+                  <span class="pillar-icon" aria-hidden="true">📊</span>
+                  <h4 class="pillar-title">Visual Analytics</h4>
+                  <span class="pillar-count">4 Branches</span>
+                </div>
+                
+                <!-- Bottom dock outflow port to Subdivisions -->
+                <div class="pillar-dock-bottom" id="pillarPortBottom-insights" aria-hidden="true"></div>
+              </div>
+              <!-- Pillar 2: Observatories -->
+              <div class="vi-tree-pillar-col theme-blue" data-pillar="data" id="pillarCol-data">
+                <!-- Top dock intake port from Root -->
+                <div class="pillar-dock-top" id="pillarPortTop-data" aria-hidden="true"></div>
+                
+                <div class="vi-tree-pillar-card" id="pillarCard-data">
+                  <span class="pillar-icon" aria-hidden="true">🏛️</span>
+                  <h4 class="pillar-title">Observatories</h4>
+                  <span class="pillar-count">2 Branches</span>
+                </div>
+                
+                <!-- Bottom dock outflow port to Subdivisions -->
+                <div class="pillar-dock-bottom" id="pillarPortBottom-data" aria-hidden="true"></div>
+              </div>
+              <!-- Pillar 3: Territorial Maps -->
+              <div class="vi-tree-pillar-col theme-emerald" data-pillar="maps" id="pillarCol-maps">
+                <!-- Top dock intake port from Root -->
+                <div class="pillar-dock-top" id="pillarPortTop-maps" aria-hidden="true"></div>
+                
+                <div class="vi-tree-pillar-card" id="pillarCard-maps">
+                  <span class="pillar-icon" aria-hidden="true">🗺️</span>
+                  <h4 class="pillar-title">Territorial Maps</h4>
+                  <span class="pillar-count">2 Branches</span>
+                </div>
+                
+                <!-- Bottom dock outflow port to Subdivisions -->
+                <div class="pillar-dock-bottom" id="pillarPortBottom-maps" aria-hidden="true"></div>
+              </div>
+              <!-- Pillar 4: Policy Research -->
+              <div class="vi-tree-pillar-col theme-indigo" data-pillar="research" id="pillarCol-research">
+                <!-- Top dock intake port from Root -->
+                <div class="pillar-dock-top" id="pillarPortTop-research" aria-hidden="true"></div>
+                
+                <div class="vi-tree-pillar-card" id="pillarCard-research">
+                  <span class="pillar-icon" aria-hidden="true">📚</span>
+                  <h4 class="pillar-title">Policy Research</h4>
+                  <span class="pillar-count">2 Branches</span>
+                </div>
+                
+                <!-- Bottom dock outflow port to Subdivisions -->
+                <div class="pillar-dock-bottom" id="pillarPortBottom-research" aria-hidden="true"></div>
+              </div>
+              <!-- Pillar 5: Policy Analysis -->
+              <div class="vi-tree-pillar-col theme-purple" data-pillar="articles" id="pillarCol-articles">
+                <!-- Top dock intake port from Root -->
+                <div class="pillar-dock-top" id="pillarPortTop-articles" aria-hidden="true"></div>
+                
+                <div class="vi-tree-pillar-card" id="pillarCard-articles">
+                  <span class="pillar-icon" aria-hidden="true">📰</span>
+                  <h4 class="pillar-title">Policy Analysis</h4>
+                  <span class="pillar-count">2 Branches</span>
+                </div>
+                
+                <!-- Bottom dock outflow port to Subdivisions -->
+                <div class="pillar-dock-bottom" id="pillarPortBottom-articles" aria-hidden="true"></div>
+              </div>
+              <!-- Pillar 6: Reform & Surveys -->
+              <div class="vi-tree-pillar-col theme-amber" data-pillar="reform" id="pillarCol-reform">
+                <!-- Top dock intake port from Root -->
+                <div class="pillar-dock-top" id="pillarPortTop-reform" aria-hidden="true"></div>
+                
+                <div class="vi-tree-pillar-card" id="pillarCard-reform">
+                  <span class="pillar-icon" aria-hidden="true">⚖️</span>
+                  <h4 class="pillar-title">Reform & Surveys</h4>
+                  <span class="pillar-count">2 Branches</span>
+                </div>
+                
+                <!-- Bottom dock outflow port to Subdivisions -->
+                <div class="pillar-dock-bottom" id="pillarPortBottom-reform" aria-hidden="true"></div>
+              </div>
+            </div>
+          </div>
+          <!-- /.vi-tree-level1-container -->
+
+          <!-- Level 2: Wide Base Tier of 14 Subdivisions (Full Width: ~1320px, All in 1 Line) -->
+          <div class="vi-tree-level2-container" id="viTreeLevel2Container">
+            <div class="vi-tree-subdivisions-pyramid-wrap" id="viTreeSubdivisionsRow">
+              <!-- Subdivision: Fiscal & Debt (under Visual Analytics) -->
+              <div class="vi-tree-subdivision-node theme-teal" data-pillar="insights" id="sub-fiscal">
+                <!-- Top dock port intake from Pillar -->
+                <div class="subdivision-dock-top" id="subPortTop-sub-fiscal" aria-hidden="true"></div>
+                
+                <div class="subdivision-mini-card">
+                  <div class="subdivision-header">
+                    <span class="subdivision-icon" aria-hidden="true">💰</span>
+                    <h5 class="subdivision-title">Fiscal & Debt</h5>
+                  </div>
+                  
+                  <!-- Level 3: Curated Headings Under Subdivision -->
+                  <div class="subdivision-leaves-wrap">
+                    <a href="/insights/#card-fiscal" class="vi-tree-leaf-mini" data-summary="51.8% Net Revenue Markup" data-pillar="insights">
+                      <span class="leaf-dot" aria-hidden="true"></span>
+                      <span class="leaf-name">Federal Budget & Markup</span>
+                    </a>
+                    <a href="/insights/#card-debt" class="vi-tree-leaf-mini" data-summary="PKR 86.4T Accumulation" data-pillar="insights">
+                      <span class="leaf-dot" aria-hidden="true"></span>
+                      <span class="leaf-name">Public Debt Stock</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <!-- Subdivision: Labour & Wages (under Visual Analytics) -->
+              <div class="vi-tree-subdivision-node theme-teal" data-pillar="insights" id="sub-labour">
+                <!-- Top dock port intake from Pillar -->
+                <div class="subdivision-dock-top" id="subPortTop-sub-labour" aria-hidden="true"></div>
+                
+                <div class="subdivision-mini-card">
+                  <div class="subdivision-header">
+                    <span class="subdivision-icon" aria-hidden="true">📈</span>
+                    <h5 class="subdivision-title">Labour & Wages</h5>
+                  </div>
+                  
+                  <!-- Level 3: Curated Headings Under Subdivision -->
+                  <div class="subdivision-leaves-wrap">
+                    <a href="/insights/#card-wage-infl" class="vi-tree-leaf-mini" data-summary="Wage Growth vs CPI (2020–24)" data-pillar="insights">
+                      <span class="leaf-dot" aria-hidden="true"></span>
+                      <span class="leaf-name">Real Wage Index</span>
+                    </a>
+                    <a href="/insights/#card-macro" class="vi-tree-leaf-mini" data-summary="35-Year Economic Timeseries" data-pillar="insights">
+                      <span class="leaf-dot" aria-hidden="true"></span>
+                      <span class="leaf-name">Macro Indicators</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <!-- Subdivision: Demographics (under Visual Analytics) -->
+              <div class="vi-tree-subdivision-node theme-teal" data-pillar="insights" id="sub-demographics">
+                <!-- Top dock port intake from Pillar -->
+                <div class="subdivision-dock-top" id="subPortTop-sub-demographics" aria-hidden="true"></div>
+                
+                <div class="subdivision-mini-card">
+                  <div class="subdivision-header">
+                    <span class="subdivision-icon" aria-hidden="true">👥</span>
+                    <h5 class="subdivision-title">Demographics</h5>
+                  </div>
+                  
+                  <!-- Level 3: Curated Headings Under Subdivision -->
+                  <div class="subdivision-leaves-wrap">
+                    <a href="/insights/#card-census-shifts" class="vi-tree-leaf-mini" data-summary="1951–2023 Provincial Shares" data-pillar="insights">
+                      <span class="leaf-dot" aria-hidden="true"></span>
+                      <span class="leaf-name">Population Shifts</span>
+                    </a>
+                    <a href="/insights/#card-districts-scatter" class="vi-tree-leaf-mini" data-summary="141 Districts Population Model" data-pillar="insights">
+                      <span class="leaf-dot" aria-hidden="true"></span>
+                      <span class="leaf-name">District Imbalance</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <!-- Subdivision: Living Standards (under Visual Analytics) -->
+              <div class="vi-tree-subdivision-node theme-teal" data-pillar="insights" id="sub-living">
+                <!-- Top dock port intake from Pillar -->
+                <div class="subdivision-dock-top" id="subPortTop-sub-living" aria-hidden="true"></div>
+                
+                <div class="subdivision-mini-card">
+                  <div class="subdivision-header">
+                    <span class="subdivision-icon" aria-hidden="true">🏠</span>
+                    <h5 class="subdivision-title">Living Standards</h5>
+                  </div>
+                  
+                  <!-- Level 3: Curated Headings Under Subdivision -->
+                  <div class="subdivision-leaves-wrap">
+                    <a href="/insights/#card-hies" class="vi-tree-leaf-mini" data-summary="HIES Consumption Quintiles" data-pillar="insights">
+                      <span class="leaf-dot" aria-hidden="true"></span>
+                      <span class="leaf-name">Household Income</span>
+                    </a>
+                    <a href="/insights/#card-services" class="vi-tree-leaf-mini" data-summary="Water & Sanitation Disparities" data-pillar="insights">
+                      <span class="leaf-dot" aria-hidden="true"></span>
+                      <span class="leaf-name">Basic Utilities</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <!-- Subdivision: Data Hubs (under Observatories) -->
+              <div class="vi-tree-subdivision-node theme-blue" data-pillar="data" id="sub-data-hubs">
+                <!-- Top dock port intake from Pillar -->
+                <div class="subdivision-dock-top" id="subPortTop-sub-data-hubs" aria-hidden="true"></div>
+                
+                <div class="subdivision-mini-card">
+                  <div class="subdivision-header">
+                    <span class="subdivision-icon" aria-hidden="true">🌐</span>
+                    <h5 class="subdivision-title">Data Hubs</h5>
+                  </div>
+                  
+                  <!-- Level 3: Curated Headings Under Subdivision -->
+                  <div class="subdivision-leaves-wrap">
+                    <a href="/data/centre.html" class="vi-tree-leaf-mini" data-summary="Unified Master Catalog" data-pillar="data">
+                      <span class="leaf-dot" aria-hidden="true"></span>
+                      <span class="leaf-name">Open Data Centre</span>
+                    </a>
+                    <a href="/data/public-finance/" class="vi-tree-leaf-mini" data-summary="Fiscal & Revenue Data" data-pillar="data">
+                      <span class="leaf-dot" aria-hidden="true"></span>
+                      <span class="leaf-name">Public Finance Hub</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <!-- Subdivision: Data Tools (under Observatories) -->
+              <div class="vi-tree-subdivision-node theme-blue" data-pillar="data" id="sub-data-tools">
+                <!-- Top dock port intake from Pillar -->
+                <div class="subdivision-dock-top" id="subPortTop-sub-data-tools" aria-hidden="true"></div>
+                
+                <div class="subdivision-mini-card">
+                  <div class="subdivision-header">
+                    <span class="subdivision-icon" aria-hidden="true">⚙️</span>
+                    <h5 class="subdivision-title">Data Tools</h5>
+                  </div>
+                  
+                  <!-- Level 3: Curated Headings Under Subdivision -->
+                  <div class="subdivision-leaves-wrap">
+                    <a href="/data/compare/" class="vi-tree-leaf-mini" data-summary="Cross-Provincial Indicators" data-pillar="data">
+                      <span class="leaf-dot" aria-hidden="true"></span>
+                      <span class="leaf-name">Compare Engine</span>
+                    </a>
+                    <a href="/data/downloads/" class="vi-tree-leaf-mini" data-summary="CSV & JSON Data Stores" data-pillar="data">
+                      <span class="leaf-dot" aria-hidden="true"></span>
+                      <span class="leaf-name">Download Catalog</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <!-- Subdivision: Cartography (under Territorial Maps) -->
+              <div class="vi-tree-subdivision-node theme-emerald" data-pillar="maps" id="sub-maps-carto">
+                <!-- Top dock port intake from Pillar -->
+                <div class="subdivision-dock-top" id="subPortTop-sub-maps-carto" aria-hidden="true"></div>
+                
+                <div class="subdivision-mini-card">
+                  <div class="subdivision-header">
+                    <span class="subdivision-icon" aria-hidden="true">🧭</span>
+                    <h5 class="subdivision-title">Cartography</h5>
+                  </div>
+                  
+                  <!-- Level 3: Curated Headings Under Subdivision -->
+                  <div class="subdivision-leaves-wrap">
+                    <a href="/maps/current/administrative.html" class="vi-tree-leaf-mini" data-summary="4-Province Baseline Geography" data-pillar="maps">
+                      <span class="leaf-dot" aria-hidden="true"></span>
+                      <span class="leaf-name">Reference Map</span>
+                    </a>
+                    <a href="/maps/" class="vi-tree-leaf-mini" data-summary="High-Res GIS Spatial Map" data-pillar="maps">
+                      <span class="leaf-dot" aria-hidden="true"></span>
+                      <span class="leaf-name">Interactive Studio</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <!-- Subdivision: Scenarios (under Territorial Maps) -->
+              <div class="vi-tree-subdivision-node theme-emerald" data-pillar="maps" id="sub-maps-scenarios">
+                <!-- Top dock port intake from Pillar -->
+                <div class="subdivision-dock-top" id="subPortTop-sub-maps-scenarios" aria-hidden="true"></div>
+                
+                <div class="subdivision-mini-card">
+                  <div class="subdivision-header">
+                    <span class="subdivision-icon" aria-hidden="true">📐</span>
+                    <h5 class="subdivision-title">Scenarios</h5>
+                  </div>
+                  
+                  <!-- Level 3: Curated Headings Under Subdivision -->
+                  <div class="subdivision-leaves-wrap">
+                    <a href="/maps/scenarios/index.html" class="vi-tree-leaf-mini" data-summary="Decentralized Provincial Restructuring" data-pillar="maps">
+                      <span class="leaf-dot" aria-hidden="true"></span>
+                      <span class="leaf-name">13-Unit Model</span>
+                    </a>
+                    <a href="/scenarios/" class="vi-tree-leaf-mini" data-summary="Multi-Province Boundary Models" data-pillar="maps">
+                      <span class="leaf-dot" aria-hidden="true"></span>
+                      <span class="leaf-name">Territorial Scenarios</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <!-- Subdivision: Major Reports (under Policy Research) -->
+              <div class="vi-tree-subdivision-node theme-indigo" data-pillar="research" id="sub-research-reports">
+                <!-- Top dock port intake from Pillar -->
+                <div class="subdivision-dock-top" id="subPortTop-sub-research-reports" aria-hidden="true"></div>
+                
+                <div class="subdivision-mini-card">
+                  <div class="subdivision-header">
+                    <span class="subdivision-icon" aria-hidden="true">📑</span>
+                    <h5 class="subdivision-title">Major Reports</h5>
+                  </div>
+                  
+                  <!-- Level 3: Curated Headings Under Subdivision -->
+                  <div class="subdivision-leaves-wrap">
+                    <a href="/research/reports/price-of-a-simple-task-pakistan-bureaucracy-cost.html" class="vi-tree-leaf-mini" data-summary="Overhead of Simple Administrative Tasks" data-pillar="research">
+                      <span class="leaf-dot" aria-hidden="true"></span>
+                      <span class="leaf-name">Bureaucracy Cost</span>
+                    </a>
+                    <a href="/research/reports/same-country-different-life-district-access.html" class="vi-tree-leaf-mini" data-summary="Spatial Access & Service Gaps" data-pillar="research">
+                      <span class="leaf-dot" aria-hidden="true"></span>
+                      <span class="leaf-name">District Inequality</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <!-- Subdivision: Working Papers (under Policy Research) -->
+              <div class="vi-tree-subdivision-node theme-indigo" data-pillar="research" id="sub-research-papers">
+                <!-- Top dock port intake from Pillar -->
+                <div class="subdivision-dock-top" id="subPortTop-sub-research-papers" aria-hidden="true"></div>
+                
+                <div class="subdivision-mini-card">
+                  <div class="subdivision-header">
+                    <span class="subdivision-icon" aria-hidden="true">⚖️</span>
+                    <h5 class="subdivision-title">Working Papers</h5>
+                  </div>
+                  
+                  <!-- Level 3: Curated Headings Under Subdivision -->
+                  <div class="subdivision-leaves-wrap">
+                    <a href="/research/working-papers/provinces-local-government.html" class="vi-tree-leaf-mini" data-summary="Constitutional Devolution Evidence" data-pillar="research">
+                      <span class="leaf-dot" aria-hidden="true"></span>
+                      <span class="leaf-name">Local Government</span>
+                    </a>
+                    <a href="/research/legal-library.html" class="vi-tree-leaf-mini" data-summary="Constitutional & Administrative Law" data-pillar="research">
+                      <span class="leaf-dot" aria-hidden="true"></span>
+                      <span class="leaf-name">Legal Library</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <!-- Subdivision: Provincial Debates (under Policy Analysis) -->
+              <div class="vi-tree-subdivision-node theme-purple" data-pillar="articles" id="sub-articles-provinces">
+                <!-- Top dock port intake from Pillar -->
+                <div class="subdivision-dock-top" id="subPortTop-sub-articles-provinces" aria-hidden="true"></div>
+                
+                <div class="subdivision-mini-card">
+                  <div class="subdivision-header">
+                    <span class="subdivision-icon" aria-hidden="true">🏛️</span>
+                    <h5 class="subdivision-title">Provincial Debates</h5>
+                  </div>
+                  
+                  <!-- Level 3: Curated Headings Under Subdivision -->
+                  <div class="subdivision-leaves-wrap">
+                    <a href="/articles/four-provinces-241-million-people-administrative-scale.html" class="vi-tree-leaf-mini" data-summary="Scale & Administrative Strain" data-pillar="articles">
+                      <span class="leaf-dot" aria-hidden="true"></span>
+                      <span class="leaf-name">Four Provinces, 241M</span>
+                    </a>
+                    <a href="/articles/south-punjab-why-does-the-province-demand-keep-returning.html" class="vi-tree-leaf-mini" data-summary="Saraiki vs Bahawalpur Questions" data-pillar="articles">
+                      <span class="leaf-dot" aria-hidden="true"></span>
+                      <span class="leaf-name">South Punjab Debate</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <!-- Subdivision: Governance (under Policy Analysis) -->
+              <div class="vi-tree-subdivision-node theme-purple" data-pillar="articles" id="sub-articles-governance">
+                <!-- Top dock port intake from Pillar -->
+                <div class="subdivision-dock-top" id="subPortTop-sub-articles-governance" aria-hidden="true"></div>
+                
+                <div class="subdivision-mini-card">
+                  <div class="subdivision-header">
+                    <span class="subdivision-icon" aria-hidden="true">🗳️</span>
+                    <h5 class="subdivision-title">Governance</h5>
+                  </div>
+                  
+                  <!-- Level 3: Curated Headings Under Subdivision -->
+                  <div class="subdivision-leaves-wrap">
+                    <a href="/articles/where-does-pakistans-development-money-go.html" class="vi-tree-leaf-mini" data-summary="Capital Bias in Infrastructure Spending" data-pillar="articles">
+                      <span class="leaf-dot" aria-hidden="true"></span>
+                      <span class="leaf-name">Development Money</span>
+                    </a>
+                    <a href="/articles/18th-amendment-did-devolution-stop-at-provincial-capital.html" class="vi-tree-leaf-mini" data-summary="Did Devolution Reach Districts?" data-pillar="articles">
+                      <span class="leaf-dot" aria-hidden="true"></span>
+                      <span class="leaf-name">18th Amendment Limits</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <!-- Subdivision: Reform Models (under Reform & Surveys) -->
+              <div class="vi-tree-subdivision-node theme-amber" data-pillar="reform" id="sub-reform-models">
+                <!-- Top dock port intake from Pillar -->
+                <div class="subdivision-dock-top" id="subPortTop-sub-reform-models" aria-hidden="true"></div>
+                
+                <div class="subdivision-mini-card">
+                  <div class="subdivision-header">
+                    <span class="subdivision-icon" aria-hidden="true">📜</span>
+                    <h5 class="subdivision-title">Reform Models</h5>
+                  </div>
+                  
+                  <!-- Level 3: Curated Headings Under Subdivision -->
+                  <div class="subdivision-leaves-wrap">
+                    <a href="/provinces/proposed-models.html" class="vi-tree-leaf-mini" data-summary="13 & 16-Unit Reorganization Framework" data-pillar="reform">
+                      <span class="leaf-dot" aria-hidden="true"></span>
+                      <span class="leaf-name">Proposed Models</span>
+                    </a>
+                    <a href="/provinces/constitutional-framework.html" class="vi-tree-leaf-mini" data-summary="Article 239 Amendment Procedures" data-pillar="reform">
+                      <span class="leaf-dot" aria-hidden="true"></span>
+                      <span class="leaf-name">Constitutional Path</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <!-- Subdivision: Public Surveys (under Reform & Surveys) -->
+              <div class="vi-tree-subdivision-node theme-amber" data-pillar="reform" id="sub-reform-surveys">
+                <!-- Top dock port intake from Pillar -->
+                <div class="subdivision-dock-top" id="subPortTop-sub-reform-surveys" aria-hidden="true"></div>
+                
+                <div class="subdivision-mini-card">
+                  <div class="subdivision-header">
+                    <span class="subdivision-icon" aria-hidden="true">📊</span>
+                    <h5 class="subdivision-title">Public Surveys</h5>
+                  </div>
+                  
+                  <!-- Level 3: Curated Headings Under Subdivision -->
+                  <div class="subdivision-leaves-wrap">
+                    <a href="/surveys/new-provinces/" class="vi-tree-leaf-mini" data-summary="National Public Sentiment Poll" data-pillar="reform">
+                      <span class="leaf-dot" aria-hidden="true"></span>
+                      <span class="leaf-name">Provincial Survey</span>
+                    </a>
+                    <a href="/surveys/local-government/" class="vi-tree-leaf-mini" data-summary="Municipal & District Opinions" data-pillar="reform">
+                      <span class="leaf-dot" aria-hidden="true"></span>
+                      <span class="leaf-name">Local Gov Survey</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- /.vi-tree-level2-container -->
+
+          <!-- Floating Glassmorphic Micro-Tooltip Container -->
+          <div class="vi-tree-tooltip" id="viTreeTooltip" role="tooltip" aria-hidden="true">
+            <span class="tooltip-badge" id="viTooltipBadge">Resource</span>
+            <div class="tooltip-title" id="viTooltipTitle">Node Title</div>
+            <div class="tooltip-summary" id="viTooltipSummary">Summary preview</div>
+            <div class="tooltip-url">
+              <span>Open Document / Observatory</span>
+              <span class="arrow" aria-hidden="true">→</span>
+            </div>
+          </div>
+
+        </div>
+        <!-- /.vi-tree-canvas -->
       </div>
+      <!-- /.container -->
     </section>
+    <!-- ================= END PPRI ORGANIC HIERARCHICAL TREE ATLAS ================= -->
+
+
+
 
     <footer class="site-footer">
       <div class="container footer-grid">
@@ -1522,5 +2069,8 @@
     <script src="/assets/js/main.js" defer></script>
     <script src="/assets/js/hero-map.js" defer></script>
     <script src="/assets/js/homepage.js" defer></script>
+      
+        
+      <script src="/assets/js/modules/tree-atlas.js" defer></script>
   </body>
 </html>

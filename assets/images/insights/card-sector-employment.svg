@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="620" viewBox="0 0 800 620">
+  <defs>
+    <style>
+      text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+    </style>
+  </defs>
+
+  <rect width="800" height="620" fill="#ffffff" rx="10" stroke="#cbd5e1" stroke-width="1"/>
+  <rect width="800" height="6" fill="#0f766e" rx="4"/>
+
+  <!-- Top Header with Number Badge -->
+  <text x="40" y="38" font-size="11" font-weight="700" fill="#0f766e" letter-spacing="1">PAKISTAN PROVINCIAL REFORM INSTITUTE (PPRI) • INFOGRAPHIC 12 / 16 • STRUCTURAL TRANSFORMATION • SECTORAL JOBS</text>
+  <text x="40" y="66" font-size="20" font-weight="800" fill="#073c3a">Sectoral Labour Force Absorption Dynamics</text>
+  <text x="40" y="88" font-size="12" fill="#64748b">Proportional workforce allocation across Agriculture, Industry &amp; Manufacturing, and Services</text>
+  <line x1="40" y1="102" x2="760" y2="102" stroke="#e2e8f0" stroke-width="1.5"/>
+
+  <!-- Core Visual Graphics -->
+  <g transform="translate(83.33333333333331, 115) scale(1.0555555555555556)">
+    
+              <text x="128" y="66" text-anchor="end" font-size="12" font-weight="700" fill="#1e293b">Pakistan</text>
+              <rect x="140" y="50" width="125.12" height="22" fill="#0f766e" rx="2" onmouseenter="showTooltip(event, '&lt;strong&gt;Pakistan Agriculture&lt;/strong&gt;&lt;br/&gt;Employment Share: 36.8%')" onmouseleave="hideTooltip()" style="cursor:pointer;"></rect>
+              <rect x="265.12" y="50" width="82.96" height="22" fill="#d97706" rx="0" onmouseenter="showTooltip(event, '&lt;strong&gt;Pakistan Industry&lt;/strong&gt;&lt;br/&gt;Employment Share: 24.4%')" onmouseleave="hideTooltip()" style="cursor:pointer;"></rect>
+              <rect x="348.08" y="50" width="131.92" height="22" fill="#0284c7" rx="2" onmouseenter="showTooltip(event, '&lt;strong&gt;Pakistan Services&lt;/strong&gt;&lt;br/&gt;Employment Share: 38.8%')" onmouseleave="hideTooltip()" style="cursor:pointer;"></rect>
+
+              <text x="202.56" y="65" text-anchor="middle" font-size="10" font-weight="700" fill="#ffffff">36.8%</text>
+              <text x="306.6" y="65" text-anchor="middle" font-size="10" font-weight="700" fill="#ffffff">24.4%</text>
+              <text x="414.03999999999996" y="65" text-anchor="middle" font-size="10" font-weight="700" fill="#ffffff">38.8%</text>
+            
+              <text x="128" y="118" text-anchor="end" font-size="12" font-weight="700" fill="#1e293b">Punjab</text>
+              <rect x="140" y="102" width="129.88" height="22" fill="#0f766e" rx="2" onmouseenter="showTooltip(event, '&lt;strong&gt;Punjab Agriculture&lt;/strong&gt;&lt;br/&gt;Employment Share: 38.2%')" onmouseleave="hideTooltip()" style="cursor:pointer;"></rect>
+              <rect x="269.88" y="102" width="85.34" height="22" fill="#d97706" rx="0" onmouseenter="showTooltip(event, '&lt;strong&gt;Punjab Industry&lt;/strong&gt;&lt;br/&gt;Employment Share: 25.1%')" onmouseleave="hideTooltip()" style="cursor:pointer;"></rect>
+              <rect x="355.22" y="102" width="124.78000000000002" height="22" fill="#0284c7" rx="2" onmouseenter="showTooltip(event, '&lt;strong&gt;Punjab Services&lt;/strong&gt;&lt;br/&gt;Employment Share: 36.7%')" onmouseleave="hideTooltip()" style="cursor:pointer;"></rect>
+
+              <text x="204.94" y="117" text-anchor="middle" font-size="10" font-weight="700" fill="#ffffff">38.2%</text>
+              <text x="312.55" y="117" text-anchor="middle" font-size="10" font-weight="700" fill="#ffffff">25.1%</text>
+              <text x="417.61" y="117" text-anchor="middle" font-size="10" font-weight="700" fill="#ffffff">36.7%</text>
+            
+              <text x="128" y="170" text-anchor="end" font-size="12" font-weight="700" fill="#1e293b">Sindh</text>
+              <rect x="140" y="154" width="117.64000000000001" height="22" fill="#0f766e" rx="2" onmouseenter="showTooltip(event, '&lt;strong&gt;Sindh Agriculture&lt;/strong&gt;&lt;br/&gt;Employment Share: 34.6%')" onmouseleave="hideTooltip()" style="cursor:pointer;"></rect>
+              <rect x="257.64" y="154" width="81.6" height="22" fill="#d97706" rx="0" onmouseenter="showTooltip(event, '&lt;strong&gt;Sindh Industry&lt;/strong&gt;&lt;br/&gt;Employment Share: 24%')" onmouseleave="hideTooltip()" style="cursor:pointer;"></rect>
+              <rect x="339.24" y="154" width="140.76" height="22" fill="#0284c7" rx="2" onmouseenter="showTooltip(event, '&lt;strong&gt;Sindh Services&lt;/strong&gt;&lt;br/&gt;Employment Share: 41.4%')" onmouseleave="hideTooltip()" style="cursor:pointer;"></rect>
+
+              <text x="198.82" y="169" text-anchor="middle" font-size="10" font-weight="700" fill="#ffffff">34.6%</text>
+              <text x="298.44" y="169" text-anchor="middle" font-size="10" font-weight="700" fill="#ffffff">24%</text>
+              <text x="409.62" y="169" text-anchor="middle" font-size="10" font-weight="700" fill="#ffffff">41.4%</text>
+            
+              <text x="128" y="222" text-anchor="end" font-size="12" font-weight="700" fill="#1e293b">Khyber Pakhtunkhwa</text>
+              <rect x="140" y="206" width="122.74" height="22" fill="#0f766e" rx="2" onmouseenter="showTooltip(event, '&lt;strong&gt;Khyber Pakhtunkhwa Agriculture&lt;/strong&gt;&lt;br/&gt;Employment Share: 36.1%')" onmouseleave="hideTooltip()" style="cursor:pointer;"></rect>
+              <rect x="262.74" y="206" width="78.88" height="22" fill="#d97706" rx="0" onmouseenter="showTooltip(event, '&lt;strong&gt;Khyber Pakhtunkhwa Industry&lt;/strong&gt;&lt;br/&gt;Employment Share: 23.2%')" onmouseleave="hideTooltip()" style="cursor:pointer;"></rect>
+              <rect x="341.62" y="206" width="138.38" height="22" fill="#0284c7" rx="2" onmouseenter="showTooltip(event, '&lt;strong&gt;Khyber Pakhtunkhwa Services&lt;/strong&gt;&lt;br/&gt;Employment Share: 40.7%')" onmouseleave="hideTooltip()" style="cursor:pointer;"></rect>
+
+              <text x="201.37" y="221" text-anchor="middle" font-size="10" font-weight="700" fill="#ffffff">36.1%</text>
+              <text x="302.18" y="221" text-anchor="middle" font-size="10" font-weight="700" fill="#ffffff">23.2%</text>
+              <text x="410.81" y="221" text-anchor="middle" font-size="10" font-weight="700" fill="#ffffff">40.7%</text>
+            
+              <text x="128" y="274" text-anchor="end" font-size="12" font-weight="700" fill="#1e293b">Balochistan</text>
+              <rect x="140" y="258" width="141.1" height="22" fill="#0f766e" rx="2" onmouseenter="showTooltip(event, '&lt;strong&gt;Balochistan Agriculture&lt;/strong&gt;&lt;br/&gt;Employment Share: 41.5%')" onmouseleave="hideTooltip()" style="cursor:pointer;"></rect>
+              <rect x="281.1" y="258" width="71.39999999999999" height="22" fill="#d97706" rx="0" onmouseenter="showTooltip(event, '&lt;strong&gt;Balochistan Industry&lt;/strong&gt;&lt;br/&gt;Employment Share: 21%')" onmouseleave="hideTooltip()" style="cursor:pointer;"></rect>
+              <rect x="352.5" y="258" width="127.5" height="22" fill="#0284c7" rx="2" onmouseenter="showTooltip(event, '&lt;strong&gt;Balochistan Services&lt;/strong&gt;&lt;br/&gt;Employment Share: 37.5%')" onmouseleave="hideTooltip()" style="cursor:pointer;"></rect>
+
+              <text x="210.55" y="273" text-anchor="middle" font-size="10" font-weight="700" fill="#ffffff">41.5%</text>
+              <text x="316.8" y="273" text-anchor="middle" font-size="10" font-weight="700" fill="#ffffff">21%</text>
+              <text x="416.25" y="273" text-anchor="middle" font-size="10" font-weight="700" fill="#ffffff">37.5%</text>
+            
+            <g transform="translate(140, 16)">
+              <rect x="0" y="0" width="12" height="12" fill="#0f766e" rx="2"></rect>
+              <text x="16" y="10" font-size="11" font-weight="600" fill="#334155">Agriculture (37.4% PK)</text>
+              <rect x="170" y="0" width="12" height="12" fill="#d97706" rx="2"></rect>
+              <text x="186" y="10" font-size="11" font-weight="600" fill="#334155">Industry &amp; Const (25.4%)</text>
+              <rect x="340" y="0" width="12" height="12" fill="#0284c7" rx="2"></rect>
+              <text x="356" y="10" font-size="11" font-weight="600" fill="#334155">Services &amp; Trade (37.2%)</text>
+            </g>
+          
+  </g>
+
+  <!-- Key Insight Box -->
+  <rect x="40" y="510" width="720" height="48" fill="#f8fafc" rx="6" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="54" y="527" font-size="10" font-weight="800" fill="#073c3a">KEY POLICY INSIGHT:</text>
+  <text x="54" y="543" font-size="11" fill="#334155">Key Policy Takeaway: Structural stagnation: Agriculture absorbs 37.4% of all employment nationwide (46.2% in Balochistan) while generating under 23% of GDP. Manufacturing and construction employ barely 25.4%, highligh...</text>
+
+  <!-- Watermark Footer Banner (Two-Line Stacked: Zero Overlap) -->
+  <rect x="0" y="568" width="800" height="52" fill="#073c3a" rx="0"/>
+  <!-- Line 1: Primary Data Source (Full Canvas Width) -->
+  <text x="40" y="589" font-size="10.5" font-weight="500" fill="#99f6e4">Source: Pakistan Bureau of Statistics, Labour Force Survey (LFS 2024–25)</text>
+  <!-- Line 2: Institution Branding &amp; Canonical Domain -->
+  <text x="40" y="606" font-size="10.5" font-weight="700" fill="#ffffff">Pakistan Provincial Reform Institute (PPRI)</text>
+  <text x="760" y="606" font-size="10.5" font-weight="600" fill="#5eead4" text-anchor="end">ppripakistan.github.io</text>
+</svg>

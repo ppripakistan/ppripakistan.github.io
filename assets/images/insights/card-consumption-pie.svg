@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="620" viewBox="0 0 800 620">
+  <defs>
+    <style>
+      text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+    </style>
+  </defs>
+
+  <rect width="800" height="620" fill="#ffffff" rx="10" stroke="#cbd5e1" stroke-width="1"/>
+  <rect width="800" height="6" fill="#0f766e" rx="4"/>
+
+  <!-- Top Header with Number Badge -->
+  <text x="40" y="38" font-size="11" font-weight="700" fill="#0f766e" letter-spacing="1">PAKISTAN PROVINCIAL REFORM INSTITUTE (PPRI) • INFOGRAPHIC 06 / 16 • LIVING STANDARDS • BUDGET SLICES</text>
+  <text x="40" y="66" font-size="20" font-weight="800" fill="#073c3a">Provincial Food vs Non-Food Household Consumption Baskets</text>
+  <text x="40" y="88" font-size="12" fill="#64748b">Distribution of monthly household spending across food, housing, energy, health, and education</text>
+  <line x1="40" y1="102" x2="760" y2="102" stroke="#e2e8f0" stroke-width="1.5"/>
+
+  <!-- Core Visual Graphics -->
+  <g transform="translate(83.33333333333331, 115) scale(1.0555555555555556)">
+    
+            <path d="M 135 65 A 95 95 0 0 1 194.63067932261654 233.95391864886722 L 169.52302487098854 202.81542658618628 A 55 55 0 0 0 135 105 Z" fill="#0f766e" stroke="#ffffff" stroke-width="2" onmouseenter="showTooltip(event, '&lt;strong&gt;Food &amp; Staples (Pakistan)&lt;/strong&gt;&lt;br/&gt;Budget Allocation: 39.2%')" onmousemove="showTooltip(event, '&lt;strong&gt;Food &amp; Staples (Pakistan)&lt;/strong&gt;&lt;br/&gt;Budget Allocation: 39.2%')" onmouseleave="hideTooltip()" style="cursor:pointer;"></path><path d="M 194.63067932261654 233.95391864886722 A 95 95 0 0 1 62.567961453912446 221.4703163490972 L 93.06566189437035 195.58807788631944 A 55 55 0 0 0 169.52302487098854 202.81542658618628 Z" fill="#d97706" stroke="#ffffff" stroke-width="2" onmouseenter="showTooltip(event, '&lt;strong&gt;Housing &amp; Energy (Pakistan)&lt;/strong&gt;&lt;br/&gt;Budget Allocation: 24.6%')" onmousemove="showTooltip(event, '&lt;strong&gt;Housing &amp; Energy (Pakistan)&lt;/strong&gt;&lt;br/&gt;Budget Allocation: 24.6%')" onmouseleave="hideTooltip()" style="cursor:pointer;"></path><path d="M 62.567961453912446 221.4703163490972 A 95 95 0 0 1 42.41994708527517 138.69427770980877 L 81.40102199673825 147.66510814778403 A 55 55 0 0 0 93.06566189437035 195.58807788631944 Z" fill="#64748b" stroke="#ffffff" stroke-width="2" onmouseenter="showTooltip(event, '&lt;strong&gt;Clothing &amp; Footwear (Pakistan)&lt;/strong&gt;&lt;br/&gt;Budget Allocation: 14.8%')" onmousemove="showTooltip(event, '&lt;strong&gt;Clothing &amp; Footwear (Pakistan)&lt;/strong&gt;&lt;br/&gt;Budget Allocation: 14.8%')" onmouseleave="hideTooltip()" style="cursor:pointer;"></path><path d="M 42.41994708527517 138.69427770980877 A 95 95 0 0 1 79.16040103221505 83.14338553438 L 102.67181112391397 115.50406530937789 A 55 55 0 0 0 81.40102199673825 147.66510814778403 Z" fill="#0284c7" stroke="#ffffff" stroke-width="2" onmouseenter="showTooltip(event, '&lt;strong&gt;Transport &amp; Comm (Pakistan)&lt;/strong&gt;&lt;br/&gt;Budget Allocation: 11.4%')" onmousemove="showTooltip(event, '&lt;strong&gt;Transport &amp; Comm (Pakistan)&lt;/strong&gt;&lt;br/&gt;Budget Allocation: 11.4%')" onmouseleave="hideTooltip()" style="cursor:pointer;"></path><path d="M 79.16040103221505 83.14338553438 A 95 95 0 0 1 110.22005690245982 68.28874431083896 L 120.65371715405568 106.90400986416992 A 55 55 0 0 0 102.67181112391397 115.50406530937789 Z" fill="#e11d48" stroke="#ffffff" stroke-width="2" onmouseenter="showTooltip(event, '&lt;strong&gt;Health Care (Pakistan)&lt;/strong&gt;&lt;br/&gt;Budget Allocation: 5.8%')" onmousemove="showTooltip(event, '&lt;strong&gt;Health Care (Pakistan)&lt;/strong&gt;&lt;br/&gt;Budget Allocation: 5.8%')" onmouseleave="hideTooltip()" style="cursor:pointer;"></path><path d="M 110.22005690245982 68.28874431083896 A 95 95 0 0 1 134.99999999999997 65 L 135 105 A 55 55 0 0 0 120.65371715405568 106.90400986416992 Z" fill="#7c3aed" stroke="#ffffff" stroke-width="2" onmouseenter="showTooltip(event, '&lt;strong&gt;Education (Pakistan)&lt;/strong&gt;&lt;br/&gt;Budget Allocation: 4.2%')" onmousemove="showTooltip(event, '&lt;strong&gt;Education (Pakistan)&lt;/strong&gt;&lt;br/&gt;Budget Allocation: 4.2%')" onmouseleave="hideTooltip()" style="cursor:pointer;"></path>
+            <circle cx="135" cy="160" r="55" fill="#ffffff"></circle>
+            <text x="135" y="152" text-anchor="middle" font-size="9.5" font-weight="700" fill="#64748b">PAKISTAN</text>
+            <text x="135" y="168" text-anchor="middle" font-size="13" font-weight="800" fill="#073c3a">PKR 63k</text>
+            <text x="135" y="182" text-anchor="middle" font-size="9" font-weight="600" fill="#0f766e">Monthly Spend</text>
+            
+            <g transform="translate(265, 30)">
+              <text x="0" y="0" font-size="12" font-weight="700" fill="#073c3a">Mean Monthly Household Spending by Province</text>
+              <text x="0" y="16" font-size="10.5" fill="#64748b">Average household budget in PKR (HIES 2024–25)</text>
+          
+              <text x="0" y="47" font-size="11" font-weight="600" fill="#334155">Punjab</text>
+              <rect x="135" y="35" width="125" height="16" fill="#f1f5f9" rx="3"></rect>
+              <rect x="135" y="35" width="67.91666666666667" height="16" fill="#94a3b8" rx="3"></rect>
+              <text x="208.91666666666669" y="47" font-size="10" font-weight="700" fill="#1e293b">PKR 65,200</text>
+            
+              <text x="0" y="87" font-size="11" font-weight="600" fill="#334155">Sindh</text>
+              <rect x="135" y="75" width="125" height="16" fill="#f1f5f9" rx="3"></rect>
+              <rect x="135" y="75" width="67.5" height="16" fill="#94a3b8" rx="3"></rect>
+              <text x="208.5" y="87" font-size="10" font-weight="700" fill="#1e293b">PKR 64,800</text>
+            
+              <text x="0" y="127" font-size="11" font-weight="800" fill="#0f766e">Pakistan</text>
+              <rect x="135" y="115" width="125" height="16" fill="#f1f5f9" rx="3"></rect>
+              <rect x="135" y="115" width="65.46875" height="16" fill="#0f766e" rx="3"></rect>
+              <text x="206.46875" y="127" font-size="10" font-weight="700" fill="#1e293b">PKR 62,850</text>
+            
+              <text x="0" y="167" font-size="11" font-weight="600" fill="#334155">Khyber Pakhtunkhwa</text>
+              <rect x="135" y="155" width="125" height="16" fill="#f1f5f9" rx="3"></rect>
+              <rect x="135" y="155" width="60.833333333333336" height="16" fill="#94a3b8" rx="3"></rect>
+              <text x="201.83333333333334" y="167" font-size="10" font-weight="700" fill="#1e293b">PKR 58,400</text>
+            
+              <text x="0" y="207" font-size="11" font-weight="600" fill="#334155">Balochistan</text>
+              <rect x="135" y="195" width="125" height="16" fill="#f1f5f9" rx="3"></rect>
+              <rect x="135" y="195" width="55.3125" height="16" fill="#94a3b8" rx="3"></rect>
+              <text x="196.3125" y="207" font-size="10" font-weight="700" fill="#1e293b">PKR 53,100</text>
+            
+            <g transform="translate(0, 225)">
+              <rect x="0" y="0" width="9" height="9" fill="#0f766e" rx="2"></rect>
+              <text x="12" y="8" font-size="10" fill="#334155">Food (39.2%)</text>
+              <rect x="110" y="0" width="9" height="9" fill="#d97706" rx="2"></rect>
+              <text x="122" y="8" font-size="10" fill="#334155">Housing (24.6%)</text>
+              <rect x="220" y="0" width="9" height="9" fill="#0284c7" rx="2"></rect>
+              <text x="232" y="8" font-size="10" fill="#334155">Transport (11.4%)</text>
+
+              <rect x="0" y="16" width="9" height="9" fill="#e11d48" rx="2"></rect>
+              <text x="12" y="24" font-size="10" fill="#334155">Health (5.8%)</text>
+              <rect x="110" y="16" width="9" height="9" fill="#7c3aed" rx="2"></rect>
+              <text x="122" y="24" font-size="10" fill="#334155">Education (4.2%)</text>
+              <rect x="220" y="16" width="9" height="9" fill="#64748b" rx="2"></rect>
+              <text x="232" y="24" font-size="10" fill="#334155">Other (14.8%)</text>
+            </g>
+          </g>
+          
+  </g>
+
+  <!-- Key Insight Box -->
+  <rect x="40" y="510" width="720" height="48" fill="#f8fafc" rx="6" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="54" y="527" font-size="10" font-weight="800" fill="#073c3a">KEY POLICY INSIGHT:</text>
+  <text x="54" y="543" font-size="11" fill="#334155">Key Policy Takeaway: Non-discretionary survival essentials (Food 36.8% + Housing/Energy 22.4%) consume 59.2% of household budgets, leaving only 12.2% for Health &amp; Education combined. Mean monthly expenditure ranges fr...</text>
+
+  <!-- Watermark Footer Banner (Two-Line Stacked: Zero Overlap) -->
+  <rect x="0" y="568" width="800" height="52" fill="#073c3a" rx="0"/>
+  <!-- Line 1: Primary Data Source (Full Canvas Width) -->
+  <text x="40" y="589" font-size="10.5" font-weight="500" fill="#99f6e4">Source: Pakistan Bureau of Statistics, HIES 2024–25</text>
+  <!-- Line 2: Institution Branding &amp; Canonical Domain -->
+  <text x="40" y="606" font-size="10.5" font-weight="700" fill="#ffffff">Pakistan Provincial Reform Institute (PPRI)</text>
+  <text x="760" y="606" font-size="10.5" font-weight="600" fill="#5eead4" text-anchor="end">ppripakistan.github.io</text>
+</svg>

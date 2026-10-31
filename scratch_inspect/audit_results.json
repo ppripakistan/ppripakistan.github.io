@@ -1,0 +1,24 @@
+{
+  "total_pages": 127,
+  "broken_internal_links": [],
+  "broken_anchor_links": [],
+  "broken_assets": [],
+  "seo_issues": {
+    "missing_title": [],
+    "missing_description": [],
+    "missing_canonical": [],
+    "canonical_mismatches": [],
+    "missing_og_image": [],
+    "broken_og_image": [],
+    "missing_twitter_card": [],
+    "deprecated_site_name": []
+  },
+  "accessibility_issues": {
+    "images_missing_alt": [],
+    "duplicate_ids": [],
+    "inputs_missing_label": []
+  },
+  "redirect_stubs_in_sitemap": [],
+  "sitemap_status": {},
+  "build_scripts_status": {}
+}

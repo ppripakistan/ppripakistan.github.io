@@ -3,11 +3,19 @@
 scripts/update_sitemap_and_search_index.py
 Synchronizes canonical Data Observatory hubs, Urdu portal pages, and core site assets
 into sitemap.xml, search-index.json, and search-index-ur.json.
+Strictly compliant with Google Search Central XML Sitemap guidelines:
+- UTF-8 XML declaration and xhtml namespace
+- Content-aware lastmod extraction
+- Bidirectional hreflang alternates for English and Urdu counterparts
+- Canonical trailing slash normalization for directory pages
+- Elimination of ignored changefreq and priority tags
 """
 
 import os
 import json
+import subprocess
 import xml.etree.ElementTree as ET
+import xml.dom.minidom
 from pathlib import Path
 from datetime import datetime
 
@@ -20,35 +28,122 @@ SEARCH_INDEX_UR_PATH = ROOT_DIR / "search-index-ur.json"
 TODAY_STR = datetime.now().strftime("%Y-%m-%d")
 
 CANONICAL_OBSERVATORY_HUBS = [
-    ("https://ppripakistan.github.io/data/centre.html", "1.0", "weekly"),
-    ("https://ppripakistan.github.io/data/population/", "0.9", "weekly"),
-    ("https://ppripakistan.github.io/data/economy/", "0.9", "weekly"),
-    ("https://ppripakistan.github.io/data/living-standards/", "0.9", "weekly"),
-    ("https://ppripakistan.github.io/data/public-finance/", "0.9", "weekly"),
-    ("https://ppripakistan.github.io/data/education/", "0.9", "weekly"),
-    ("https://ppripakistan.github.io/data/health/", "0.9", "weekly"),
-    ("https://ppripakistan.github.io/data/digital-access/", "0.9", "weekly"),
-    ("https://ppripakistan.github.io/data/compare/", "0.9", "weekly"),
-    ("https://ppripakistan.github.io/knowledge-library/", "0.95", "weekly"),
-    ("https://ppripakistan.github.io/data/downloads/", "0.8", "monthly"),
-    ("https://ppripakistan.github.io/data/methodology/", "0.8", "monthly"),
+    "https://ppripakistan.github.io/data/centre.html",
+    "https://ppripakistan.github.io/data/population/",
+    "https://ppripakistan.github.io/data/economy/",
+    "https://ppripakistan.github.io/data/living-standards/",
+    "https://ppripakistan.github.io/data/public-finance/",
+    "https://ppripakistan.github.io/data/education/",
+    "https://ppripakistan.github.io/data/health/",
+    "https://ppripakistan.github.io/data/digital-access/",
+    "https://ppripakistan.github.io/data/compare/",
+    "https://ppripakistan.github.io/knowledge-library/",
+    "https://ppripakistan.github.io/data/downloads/",
+    "https://ppripakistan.github.io/data/methodology/",
 ]
 
 CANONICAL_URDU_PAGES = [
-    ("https://ppripakistan.github.io/ur/", "0.95", "weekly"),
-    ("https://ppripakistan.github.io/ur/about.html", "0.85", "monthly"),
-    ("https://ppripakistan.github.io/ur/consultation/index.html", "0.85", "weekly"),
-    ("https://ppripakistan.github.io/ur/consultation/survey.html", "0.95", "weekly"),
-    ("https://ppripakistan.github.io/ur/provinces/index.html", "0.9", "monthly"),
-    ("https://ppripakistan.github.io/ur/data/centre.html", "0.9", "weekly"),
-    ("https://ppripakistan.github.io/ur/research/index.html", "0.9", "weekly"),
-    ("https://ppripakistan.github.io/ur/research/reports/index.html", "0.9", "weekly"),
-    ("https://ppripakistan.github.io/ur/research/reports/income-went-up-why-does-life-feel-harder.html", "0.85", "monthly"),
-    ("https://ppripakistan.github.io/ur/research/reports/price-of-a-simple-task-pakistan-bureaucracy-cost.html", "0.85", "monthly"),
-    ("https://ppripakistan.github.io/ur/research/reports/same-country-different-life-district-access.html", "0.85", "monthly"),
-    ("https://ppripakistan.github.io/ur/research/reports/bribe-you-cant-see-corruption-private-tax.html", "0.85", "monthly"),
-    ("https://ppripakistan.github.io/ur/research/reports/does-money-work-better-spent-closer-to-people.html", "0.85", "monthly"),
+    "https://ppripakistan.github.io/ur/",
+    "https://ppripakistan.github.io/ur/about.html",
+    "https://ppripakistan.github.io/ur/consultation/",
+    "https://ppripakistan.github.io/ur/consultation/survey.html",
+    "https://ppripakistan.github.io/ur/provinces/",
+    "https://ppripakistan.github.io/ur/data/centre.html",
+    "https://ppripakistan.github.io/ur/research/",
+    "https://ppripakistan.github.io/ur/research/reports/",
+    "https://ppripakistan.github.io/ur/research/reports/income-went-up-why-does-life-feel-harder.html",
+    "https://ppripakistan.github.io/ur/research/reports/price-of-a-simple-task-pakistan-bureaucracy-cost.html",
+    "https://ppripakistan.github.io/ur/research/reports/same-country-different-life-district-access.html",
+    "https://ppripakistan.github.io/ur/research/reports/bribe-you-cant-see-corruption-private-tax.html",
+    "https://ppripakistan.github.io/ur/research/reports/does-money-work-better-spent-closer-to-people.html",
 ]
+
+HREFLANG_PAIRS = [
+    ("https://ppripakistan.github.io/", "https://ppripakistan.github.io/ur/"),
+    ("https://ppripakistan.github.io/about.html", "https://ppripakistan.github.io/ur/about.html"),
+    ("https://ppripakistan.github.io/consultation/", "https://ppripakistan.github.io/ur/consultation/"),
+    ("https://ppripakistan.github.io/provinces/", "https://ppripakistan.github.io/ur/provinces/"),
+    ("https://ppripakistan.github.io/data/centre.html", "https://ppripakistan.github.io/ur/data/centre.html"),
+    ("https://ppripakistan.github.io/research/", "https://ppripakistan.github.io/ur/research/"),
+    ("https://ppripakistan.github.io/research/reports/", "https://ppripakistan.github.io/ur/research/reports/"),
+    ("https://ppripakistan.github.io/research/reports/income-went-up-why-does-life-feel-harder.html", "https://ppripakistan.github.io/ur/research/reports/income-went-up-why-does-life-feel-harder.html"),
+    ("https://ppripakistan.github.io/research/reports/price-of-a-simple-task-pakistan-bureaucracy-cost.html", "https://ppripakistan.github.io/ur/research/reports/price-of-a-simple-task-pakistan-bureaucracy-cost.html"),
+    ("https://ppripakistan.github.io/research/reports/same-country-different-life-district-access.html", "https://ppripakistan.github.io/ur/research/reports/same-country-different-life-district-access.html"),
+    ("https://ppripakistan.github.io/research/reports/bribe-you-cant-see-corruption-private-tax.html", "https://ppripakistan.github.io/ur/research/reports/bribe-you-cant-see-corruption-private-tax.html"),
+    ("https://ppripakistan.github.io/research/reports/does-money-work-better-spent-closer-to-people.html", "https://ppripakistan.github.io/ur/research/reports/does-money-work-better-spent-closer-to-people.html"),
+    ("https://ppripakistan.github.io/surveys/", "https://ppripakistan.github.io/ur/consultation/survey.html"),
+]
+
+HREFLANG_LOOKUP = {}
+for en_url, ur_url in HREFLANG_PAIRS:
+    alternates = [
+        {"rel": "alternate", "hreflang": "en", "href": en_url},
+        {"rel": "alternate", "hreflang": "ur", "href": ur_url},
+        {"rel": "alternate", "hreflang": "x-default", "href": en_url},
+    ]
+    HREFLANG_LOOKUP[en_url] = alternates
+    HREFLANG_LOOKUP[ur_url] = alternates
+
+
+def get_content_lastmod_map():
+    """
+    Extracts organic content lastmod dates using git numstat history,
+    filtering out bulk repository-wide boilerplate sweeps (e.g. style, footer, or link sweeps).
+    """
+    BULK_COMMITS = {"phase-20f", "phase-20e", "Phase 18", "Phase 17", "Revert \"Phase 17\""}
+    cmd = ["git", "log", "--numstat", "--date=short", "--format=COMMIT|%ad|%s"]
+    try:
+        proc = subprocess.run(cmd, cwd=ROOT_DIR, capture_output=True, check=True)
+        raw = proc.stdout.decode("utf-8", errors="replace")
+    except Exception:
+        return {}
+
+    file_dates = {}
+    commits = raw.split("COMMIT|")
+    for block in commits:
+        if not block.strip():
+            continue
+        lines = [l.strip() for l in block.splitlines() if l.strip()]
+        if not lines:
+            continue
+        header = lines[0]
+        parts = header.split("|", 1)
+        date_str = parts[0].strip()
+        msg = parts[1].strip() if len(parts) > 1 else ""
+
+        if msg in BULK_COMMITS or any(msg.startswith(p) for p in ["phase-20e", "phase-20f"]):
+            continue
+
+        for line in lines[1:]:
+            parts = line.split("\t")
+            if len(parts) != 3:
+                continue
+            added, deleted, fname = parts
+            norm_f = fname.replace("\\", "/")
+            try:
+                a_cnt = int(added)
+                d_cnt = int(deleted)
+            except ValueError:
+                a_cnt, d_cnt = 0, 0
+
+            if a_cnt + d_cnt >= 4:
+                if norm_f not in file_dates:
+                    file_dates[norm_f] = date_str
+
+    return file_dates
+
+
+def resolve_file_for_loc(loc):
+    path_part = loc.replace("https://ppripakistan.github.io/", "").strip("/")
+    if not path_part:
+        return ROOT_DIR / "index.html", "index.html"
+    if (ROOT_DIR / path_part / "index.html").is_file():
+        return ROOT_DIR / path_part / "index.html", f"{path_part}/index.html"
+    if (ROOT_DIR / f"{path_part}.html").is_file():
+        return ROOT_DIR / f"{path_part}.html", f"{path_part}.html"
+    p = ROOT_DIR / path_part
+    return p, path_part
+
 
 def clean_and_update_sitemap():
     print("Synchronizing sitemap.xml...")
@@ -56,14 +151,12 @@ def clean_and_update_sitemap():
         print("  sitemap.xml not found!")
         return
 
+    content_lastmod_map = get_content_lastmod_map()
+
     content = SITEMAP_PATH.read_text(encoding="utf-8")
-    
-    # Parse existing XML
     root = ET.fromstring(content)
     ns = {"sm": "http://www.sitemaps.org/schemas/sitemap/0.9"}
-    ET.register_namespace('', "http://www.sitemaps.org/schemas/sitemap/0.9")
 
-    # Collect existing valid non-observatory URLs, or keep track
     valid_entries = []
     seen_locs = set()
 
@@ -73,10 +166,10 @@ def clean_and_update_sitemap():
         "updates/index.html", "data/methodology.html", "data/economy.html", "data/population.html",
         "data/fiscal.html", "data/demographics.html", "data/governance.html", "data/data-notes.html",
         "data/index.html", "data/maps.html", "data/datasets.html", "data/provincial-comparison.html",
-         "404.html", "search.html", "data/quick-facts/index.html"
+        "404.html", "search.html", "data/quick-facts/index.html"
     }
 
-    urdu_locs = {u[0] for u in CANONICAL_URDU_PAGES}
+    urdu_locs = set(CANONICAL_URDU_PAGES)
 
     for url_el in root.findall('sm:url', ns):
         loc_el = url_el.find('sm:loc', ns)
@@ -84,70 +177,66 @@ def clean_and_update_sitemap():
             continue
         loc = loc_el.text.strip()
         
-        # Check if this is an observatory or urdu URL handled by canonical lists
-        if "/data/" in loc or loc in urdu_locs:
+        # Urdu pages or observatory hubs handled by canonical lists
+        if "/data/" in loc or loc in urdu_locs or loc.startswith("https://ppripakistan.github.io/ur/"):
             continue
-            
-        # Check if root path or other page
-        path_part = loc.replace("https://ppripakistan.github.io/", "")
-        if path_part == "" or path_part == "index.html":
-            file_path = ROOT_DIR / "index.html"
-            rel_str = "index.html"
-        else:
-            file_path = ROOT_DIR / path_part
-            rel_str = path_part
-            if not file_path.exists() and (ROOT_DIR / f"{path_part}.html").exists():
-                file_path = ROOT_DIR / f"{path_part}.html"
-                rel_str = f"{path_part}.html"
-            elif not file_path.exists() and (ROOT_DIR / path_part / "index.html").exists():
-                file_path = ROOT_DIR / path_part / "index.html"
-                rel_str = f"{path_part}/index.html"
+
+        file_path, rel_str = resolve_file_for_loc(loc)
+        path_part = loc.replace("https://ppripakistan.github.io/", "").strip("/")
 
         if rel_str in REDIRECT_STUBS or path_part in REDIRECT_STUBS:
             continue
 
         if file_path.exists() and loc not in seen_locs:
-            lastmod_el = url_el.find('sm:lastmod', ns)
-            freq_el = url_el.find('sm:changefreq', ns)
-            prio_el = url_el.find('sm:priority', ns)
+            norm_rel = rel_str.replace("\\", "/")
+            lastmod = content_lastmod_map.get(norm_rel)
+            if not lastmod:
+                lastmod_el = url_el.find('sm:lastmod', ns)
+                lastmod = lastmod_el.text if lastmod_el is not None else "2026-10-18"
 
-            hub_locs = {h[0] for h in CANONICAL_OBSERVATORY_HUBS}
-            lastmod = TODAY_STR if loc in hub_locs else (lastmod_el.text if lastmod_el is not None else TODAY_STR)
-            freq = freq_el.text if freq_el is not None else "monthly"
-            prio = prio_el.text if prio_el is not None else "0.7"
-
-            valid_entries.append((loc, prio, freq, lastmod))
+            valid_entries.append((loc, lastmod))
             seen_locs.add(loc)
 
     # Add canonical observatory hubs
-    for loc, prio, freq in CANONICAL_OBSERVATORY_HUBS:
+    for loc in CANONICAL_OBSERVATORY_HUBS:
         if loc not in seen_locs:
-            valid_entries.append((loc, prio, freq, TODAY_STR))
+            file_path, rel_str = resolve_file_for_loc(loc)
+            norm_rel = rel_str.replace("\\", "/")
+            lastmod = content_lastmod_map.get(norm_rel, "2026-10-30")
+            valid_entries.append((loc, lastmod))
             seen_locs.add(loc)
 
     # Add canonical Urdu portal pages
-    for loc, prio, freq in CANONICAL_URDU_PAGES:
+    for loc in CANONICAL_URDU_PAGES:
         if loc not in seen_locs:
-            valid_entries.append((loc, prio, freq, TODAY_STR))
+            file_path, rel_str = resolve_file_for_loc(loc)
+            norm_rel = rel_str.replace("\\", "/")
+            lastmod = content_lastmod_map.get(norm_rel, "2026-10-28")
+            valid_entries.append((loc, lastmod))
             seen_locs.add(loc)
 
-    # Reconstruct XML
-    new_root = ET.Element("urlset", xmlns="http://www.sitemaps.org/schemas/sitemap/0.9")
-    for loc, prio, freq, lastmod in valid_entries:
-        u = ET.SubElement(new_root, "url")
-        l = ET.SubElement(u, "loc")
+    # Reconstruct XML with strict UTF-8 header and xhtml namespace
+    ET.register_namespace('', "http://www.sitemaps.org/schemas/sitemap/0.9")
+    ET.register_namespace('xhtml', "http://www.w3.org/1999/xhtml")
+    new_root = ET.Element("{http://www.sitemaps.org/schemas/sitemap/0.9}urlset")
+
+    for loc, lastmod in valid_entries:
+        u = ET.SubElement(new_root, "{http://www.sitemaps.org/schemas/sitemap/0.9}url")
+        l = ET.SubElement(u, "{http://www.sitemaps.org/schemas/sitemap/0.9}loc")
         l.text = loc
-        lm = ET.SubElement(u, "lastmod")
+        lm = ET.SubElement(u, "{http://www.sitemaps.org/schemas/sitemap/0.9}lastmod")
         lm.text = lastmod
-        cf = ET.SubElement(u, "changefreq")
-        cf.text = freq
-        pr = ET.SubElement(u, "priority")
-        pr.text = prio
+
+        if loc in HREFLANG_LOOKUP:
+            for alt in HREFLANG_LOOKUP[loc]:
+                xhtml_link = ET.SubElement(u, "{http://www.w3.org/1999/xhtml}link")
+                xhtml_link.set("rel", alt["rel"])
+                xhtml_link.set("hreflang", alt["hreflang"])
+                xhtml_link.set("href", alt["href"])
 
     xml_str = ET.tostring(new_root, encoding="utf-8").decode("utf-8")
-    import xml.dom.minidom
     dom = xml.dom.minidom.parseString(xml_str)
-    pretty_xml = dom.toprettyxml(indent="  ")
+    pretty_xml = dom.toprettyxml(indent="  ", encoding="UTF-8").decode("utf-8")
     lines = [line for line in pretty_xml.splitlines() if line.strip()]
     SITEMAP_PATH.write_text("\n".join(lines) + "\n", encoding="utf-8")
     print(f"  sitemap.xml updated with {len(valid_entries)} canonical URLs.")
@@ -291,7 +380,7 @@ def clean_and_update_search_index():
             "title": "پاکستان پروونشل ریفارم انسٹیٹیوٹ (PPRI) - مرکزی صفحہ",
             "type": "مرکزی پورٹل",
             "description": "پاکستان میں صوبائی اصلاحات، بااختیار بلدیات، 13 انتظامی یونٹس ماڈل، اور اضلاعی تفریق پر غیر جانبدارانہ تحقیق و ڈیٹا مشاہدہ گاہ۔",
-            "url": "/ur/index.html",
+            "url": "/ur/",
             "tags": ["مرکزی صفحہ", "ہوم", "پاکستان", "صوبائی اصلاحات", "بلدیات", "نئے صوبے", "پی پی آر آئی", "گورننس"]
         },
         {
@@ -312,14 +401,14 @@ def clean_and_update_search_index():
             "title": "عوامی مشاورت کا مرکز (Public Consultation Hub)",
             "type": "عوامی مشاورت",
             "description": "پاکستان میں صوبائی اصلاحات اور مقامی حکومتوں پر عوامی آراء، تجاویز اور قانونی یادداشتیں جمع کرانے کا پورٹل۔",
-            "url": "/ur/consultation/index.html",
+            "url": "/ur/consultation/",
             "tags": ["عوامی مشاورت", "مشاورتی مرکز", "تجاویز", "یادداشتیں", "سول سوسائٹی"]
         },
         {
             "title": "صوبائی تنظیمِ نو اور 13 انتظامی یونٹس ماڈل (Reform Framework)",
             "type": "صوبائی اصلاحات",
             "description": "پاکستان کے لیے 13 خود مختار صوبائی یونٹس کا مجوزہ انتظامی و آئینی ماڈل، آرٹیکل 239 ترمیم اور سینیٹ میں مساوی نمائندگی۔",
-            "url": "/ur/provinces/index.html",
+            "url": "/ur/provinces/",
             "tags": ["صوبائی اصلاحات", "13 یونٹس", "صوبائی تنظیم نو", "آرٹیکل 239", "انتظامی ڈویژن", "بہاولپور", "جنوبی پنجاب", "ہزارہ"]
         },
         {
@@ -333,14 +422,14 @@ def clean_and_update_search_index():
             "title": "تحقیقاتی مرکز و ریسرچ رپورٹس (Research Hub)",
             "type": "تحقیقاتی مرکز",
             "description": "PPRI کا 2026 فلیگ شپ ریسرچ پروگرام: مہنگائی، بیوروکریسی، اضلاعی تفریق اور بلدیاتی فنانس پر 5 جامع رپورٹس۔",
-            "url": "/ur/research/index.html",
+            "url": "/ur/research/",
             "tags": ["تحقیق", "ریسرچ رپورٹس", "پالیسی پیپرز", "علمی مقالے", "شواہد"]
         },
         {
             "title": "تحقیقی رپورٹس ڈائریکٹری (Reports Index)",
             "type": "تحقیقاتی مرکز",
             "description": "تمام پانچوں فلیگ شپ پالیسی رپورٹس کے تفصیلی اردو خلاصہ جات اور اوپن ڈیٹا ڈاؤنلوڈز۔",
-            "url": "/ur/research/reports/index.html",
+            "url": "/ur/research/reports/",
             "tags": ["رپورٹس", "خلاصہ جات", "پالیسی رپورٹس", "ڈائریکٹری"]
         },
         {
@@ -385,9 +474,11 @@ def clean_and_update_search_index():
 
     print(f"  search-index-ur.json successfully generated with {len(urdu_search_records)} validated Urdu entries.")
 
+
 def main():
     clean_and_update_sitemap()
     clean_and_update_search_index()
+
 
 if __name__ == "__main__":
     main()

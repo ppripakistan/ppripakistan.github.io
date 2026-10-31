@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="620" viewBox="0 0 800 620">
+  <defs>
+    <style>
+      text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+    </style>
+  </defs>
+
+  <rect width="800" height="620" fill="#ffffff" rx="10" stroke="#cbd5e1" stroke-width="1"/>
+  <rect width="800" height="6" fill="#0f766e" rx="4"/>
+
+  <!-- Top Header with Number Badge -->
+  <text x="40" y="38" font-size="11" font-weight="700" fill="#0f766e" letter-spacing="1">PAKISTAN PROVINCIAL REFORM INSTITUTE (PPRI) • INFOGRAPHIC 14 / 16 • DEMOGRAPHIC TRAJECTORY • 70-YEAR CENSUS</text>
+  <text x="40" y="66" font-size="20" font-weight="800" fill="#073c3a">70-Year Intercensal Demographic Growth Trajectory (1951–2023)</text>
+  <text x="40" y="88" font-size="12" fill="#64748b">Seven census milestones and intercensal annual growth rate trajectory</text>
+  <line x1="40" y1="102" x2="760" y2="102" stroke="#e2e8f0" stroke-width="1.5"/>
+
+  <!-- Core Visual Graphics -->
+  <g transform="translate(83.33333333333331, 115) scale(1.0555555555555556)">
+    <line x1="50" y1="280" x2="560" y2="280" stroke="#cbd5e1" stroke-width="1.5"></line>
+              <rect x="60.714285714285715" y="248.85538461538462" width="50" height="31.144615384615385" fill="#0f766e" rx="3" onmouseenter="showTooltip(event, '&lt;strong&gt;1951 Census of Pakistan&lt;/strong&gt;&lt;br/&gt;Population: 33.74 Million&lt;br/&gt;Intercensal Growth: 0% p.a.')" onmouseleave="hideTooltip()" style="cursor:pointer;"></rect>
+              <text x="85.71428571428572" y="242.85538461538462" text-anchor="middle" font-size="10.5" font-weight="800" fill="#073c3a">33.74M</text>
+              <text x="85.71428571428572" y="296" text-anchor="middle" font-size="11" font-weight="700" fill="#475569">1951</text>
+            
+              <rect x="132.14285714285714" y="240.41846153846154" width="50" height="39.581538461538464" fill="#0f766e" rx="3" onmouseenter="showTooltip(event, '&lt;strong&gt;1961 Census of Pakistan&lt;/strong&gt;&lt;br/&gt;Population: 42.88 Million&lt;br/&gt;Intercensal Growth: 2.45% p.a.')" onmouseleave="hideTooltip()" style="cursor:pointer;"></rect>
+              <text x="157.14285714285714" y="234.41846153846154" text-anchor="middle" font-size="10.5" font-weight="800" fill="#073c3a">42.88M</text>
+              <text x="157.14285714285714" y="296" text-anchor="middle" font-size="11" font-weight="700" fill="#475569">1961</text>
+            <text x="157.14285714285714" y="256.41846153846154" text-anchor="middle" font-size="9" font-weight="700" fill="#ffffff">2.45%</text>
+              <rect x="203.57142857142858" y="219.71384615384613" width="50" height="60.28615384615385" fill="#0f766e" rx="3" onmouseenter="showTooltip(event, '&lt;strong&gt;1972 Census of Pakistan&lt;/strong&gt;&lt;br/&gt;Population: 65.31 Million&lt;br/&gt;Intercensal Growth: 3.67% p.a.')" onmouseleave="hideTooltip()" style="cursor:pointer;"></rect>
+              <text x="228.57142857142858" y="213.71384615384613" text-anchor="middle" font-size="10.5" font-weight="800" fill="#073c3a">65.31M</text>
+              <text x="228.57142857142858" y="296" text-anchor="middle" font-size="11" font-weight="700" fill="#475569">1972</text>
+            <text x="228.57142857142858" y="235.71384615384613" text-anchor="middle" font-size="9" font-weight="700" fill="#ffffff">3.67%</text>
+              <rect x="275" y="202.23076923076923" width="50" height="77.76923076923077" fill="#0f766e" rx="3" onmouseenter="showTooltip(event, '&lt;strong&gt;1981 Census of Pakistan&lt;/strong&gt;&lt;br/&gt;Population: 84.25 Million&lt;br/&gt;Intercensal Growth: 3.1% p.a.')" onmouseleave="hideTooltip()" style="cursor:pointer;"></rect>
+              <text x="300" y="196.23076923076923" text-anchor="middle" font-size="10.5" font-weight="800" fill="#073c3a">84.25M</text>
+              <text x="300" y="296" text-anchor="middle" font-size="11" font-weight="700" fill="#475569">1981</text>
+            <text x="300" y="218.23076923076923" text-anchor="middle" font-size="9" font-weight="700" fill="#ffffff">3.1%</text>
+              <rect x="346.42857142857144" y="157.83076923076922" width="50" height="122.16923076923078" fill="#0f766e" rx="3" onmouseenter="showTooltip(event, '&lt;strong&gt;1998 Census of Pakistan&lt;/strong&gt;&lt;br/&gt;Population: 132.35 Million&lt;br/&gt;Intercensal Growth: 2.69% p.a.')" onmouseleave="hideTooltip()" style="cursor:pointer;"></rect>
+              <text x="371.42857142857144" y="151.83076923076922" text-anchor="middle" font-size="10.5" font-weight="800" fill="#073c3a">132.35M</text>
+              <text x="371.42857142857144" y="296" text-anchor="middle" font-size="11" font-weight="700" fill="#475569">1998</text>
+            <text x="371.42857142857144" y="173.83076923076922" text-anchor="middle" font-size="9" font-weight="700" fill="#ffffff">2.69%</text>
+              <rect x="417.8571428571429" y="88.29538461538462" width="50" height="191.70461538461538" fill="#0f766e" rx="3" onmouseenter="showTooltip(event, '&lt;strong&gt;2017 Census of Pakistan&lt;/strong&gt;&lt;br/&gt;Population: 207.68 Million&lt;br/&gt;Intercensal Growth: 2.4% p.a.')" onmouseleave="hideTooltip()" style="cursor:pointer;"></rect>
+              <text x="442.8571428571429" y="82.29538461538462" text-anchor="middle" font-size="10.5" font-weight="800" fill="#073c3a">207.68M</text>
+              <text x="442.8571428571429" y="296" text-anchor="middle" font-size="11" font-weight="700" fill="#475569">2017</text>
+            <text x="442.8571428571429" y="104.29538461538462" text-anchor="middle" font-size="9" font-weight="700" fill="#ffffff">2.4%</text>
+              <rect x="489.2857142857143" y="57.076923076923066" width="50" height="222.92307692307693" fill="#0f766e" rx="3" onmouseenter="showTooltip(event, '&lt;strong&gt;2023 Census of Pakistan&lt;/strong&gt;&lt;br/&gt;Population: 241.5 Million&lt;br/&gt;Intercensal Growth: 2.55% p.a.')" onmouseleave="hideTooltip()" style="cursor:pointer;"></rect>
+              <text x="514.2857142857142" y="51.076923076923066" text-anchor="middle" font-size="10.5" font-weight="800" fill="#073c3a">241.5M</text>
+              <text x="514.2857142857142" y="296" text-anchor="middle" font-size="11" font-weight="700" fill="#475569">2023</text>
+            <text x="514.2857142857142" y="73.07692307692307" text-anchor="middle" font-size="9" font-weight="700" fill="#ffffff">2.55%</text>
+            <text x="300" y="25" text-anchor="middle" font-size="12" font-weight="700" fill="#073c3a">
+              7.2-Fold Expansion in 72 Years (33.7M in 1951 → 241.5M in 2023)
+            </text>
+          
+  </g>
+
+  <!-- Key Insight Box -->
+  <rect x="40" y="510" width="720" height="48" fill="#f8fafc" rx="6" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="54" y="527" font-size="10" font-weight="800" fill="#073c3a">KEY POLICY INSIGHT:</text>
+  <text x="54" y="543" font-size="11" fill="#334155">Key Policy Takeaway: Pakistan multiplied 7.2-fold in 72 years from 33.7 million in 1951 to 241.5 million in 2023. Annual growth currently stands at 2.55%, adding over 6.1 million people annually. 1951 Population: 33.7...</text>
+
+  <!-- Watermark Footer Banner (Two-Line Stacked: Zero Overlap) -->
+  <rect x="0" y="568" width="800" height="52" fill="#073c3a" rx="0"/>
+  <!-- Line 1: Primary Data Source (Full Canvas Width) -->
+  <text x="40" y="589" font-size="10.5" font-weight="500" fill="#99f6e4">Source: Pakistan Bureau of Statistics, Censuses of Pakistan (1951–2023)</text>
+  <!-- Line 2: Institution Branding &amp; Canonical Domain -->
+  <text x="40" y="606" font-size="10.5" font-weight="700" fill="#ffffff">Pakistan Provincial Reform Institute (PPRI)</text>
+  <text x="760" y="606" font-size="10.5" font-weight="600" fill="#5eead4" text-anchor="end">ppripakistan.github.io</text>
+</svg>

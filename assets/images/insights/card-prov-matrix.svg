@@ -1,0 +1,118 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1040" height="680" viewBox="0 0 1040 680">
+  <defs>
+    <style>
+      text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+    </style>
+  </defs>
+
+  <rect width="1040" height="680" fill="#ffffff" rx="10" stroke="#cbd5e1" stroke-width="1"/>
+  <rect width="1040" height="6" fill="#0f766e" rx="4"/>
+
+  <!-- Top Header with Number Badge -->
+  <text x="40" y="38" font-size="11" font-weight="700" fill="#0f766e" letter-spacing="1">PAKISTAN PROVINCIAL REFORM INSTITUTE (PPRI) • INFOGRAPHIC 16 / 16 • PROVINCIAL FISCAL &amp; SECURITY DISPARITIES • 4 PROVINCES MULTI-DIMENSIONAL COMPARISON</text>
+  <text x="40" y="66" font-size="20" font-weight="800" fill="#073c3a">Provincial Resource Allocation, Debt Stock &amp; Conflict Exposure Matrix</text>
+  <text x="40" y="88" font-size="12" fill="#64748b">Cross-provincial comparison of total budgetary outlay, Annual Development Programmes (ADP), outstanding public debt, per capita allocations, and regional terrorism burden</text>
+  <line x1="40" y1="102" x2="1000" y2="102" stroke="#e2e8f0" stroke-width="1.5"/>
+
+  <!-- Core Visual Graphics -->
+  <g transform="translate(50, 115) scale(1)">
+    
+              <text x="285" y="25" text-anchor="middle" font-size="13" font-weight="700" fill="#073c3a">Provincial Budget Outlays vs Development Allocations (FY 2024–25)</text>
+              <g transform="translate(145, 36)">
+                <rect x="0" y="0" width="12" height="12" fill="#0f766e" rx="2"></rect>
+                <text x="16" y="10" font-size="11" font-weight="600" fill="#334155">Total Outlay (PKR Billion)</text>
+                <rect x="200" y="0" width="12" height="12" fill="#d97706" rx="2"></rect>
+                <text x="216" y="10" font-size="11" font-weight="600" fill="#334155">Development ADP (PKR Billion)</text>
+              </g>
+            
+                <!-- Province Title -->
+                <text x="133" y="71" text-anchor="end" font-size="12" font-weight="700" fill="#1e293b">Punjab</text>
+                <text x="133" y="85" text-anchor="end" font-size="9.5" font-weight="600" fill="#64748b">15.46% for Dev</text>
+
+                <!-- Total Outlay Bar -->
+                <rect x="145" y="55" width="280" height="22" fill="#f1f5f9" rx="3"></rect>
+                <rect x="145" y="55" width="254.14666666666665" height="22" fill="#0f766e" rx="3" onmouseenter="showTooltip(event, '&lt;strong&gt;Punjab Total Budget&lt;/strong&gt;&lt;br/&gt;Total Outlay: PKR 5,446 Billion&lt;br/&gt;National Share: 48.6%')" onmousemove="showTooltip(event, '&lt;strong&gt;Punjab Total Budget&lt;/strong&gt;&lt;br/&gt;Total Outlay: PKR 5,446 Billion&lt;br/&gt;National Share: 48.6%')" onmouseleave="hideTooltip()" style="cursor:pointer;"></rect>
+                <text x="407.14666666666665" y="70" font-size="11" font-weight="800" fill="#0f766e">PKR 5,446B</text>
+
+                <!-- Development ADP Bar -->
+                <rect x="145" y="81" width="280" height="18" fill="#f1f5f9" rx="2"></rect>
+                <rect x="145" y="81" width="39.29333333333334" height="18" fill="#d97706" rx="2" onmouseenter="showTooltip(event, '&lt;strong&gt;Punjab Development ADP&lt;/strong&gt;&lt;br/&gt;ADP Allocation: PKR 842 Billion&lt;br/&gt;Dev Share of Budget: 15.46%')" onmousemove="showTooltip(event, '&lt;strong&gt;Punjab Development ADP&lt;/strong&gt;&lt;br/&gt;ADP Allocation: PKR 842 Billion&lt;br/&gt;Dev Share of Budget: 15.46%')" onmouseleave="hideTooltip()" style="cursor:pointer;"></rect>
+                <text x="192.29333333333335" y="94" font-size="10.5" font-weight="700" fill="#d97706">ADP: PKR 842B</text>
+              
+                <!-- Province Title -->
+                <text x="133" y="143" text-anchor="end" font-size="12" font-weight="700" fill="#1e293b">Sindh</text>
+                <text x="133" y="157" text-anchor="end" font-size="9.5" font-weight="600" fill="#64748b">31.38% for Dev</text>
+
+                <!-- Total Outlay Bar -->
+                <rect x="145" y="127" width="280" height="22" fill="#f1f5f9" rx="3"></rect>
+                <rect x="145" y="127" width="142.61333333333332" height="22" fill="#0f766e" rx="3" onmouseenter="showTooltip(event, '&lt;strong&gt;Sindh Total Budget&lt;/strong&gt;&lt;br/&gt;Total Outlay: PKR 3,056 Billion&lt;br/&gt;National Share: 27.3%')" onmousemove="showTooltip(event, '&lt;strong&gt;Sindh Total Budget&lt;/strong&gt;&lt;br/&gt;Total Outlay: PKR 3,056 Billion&lt;br/&gt;National Share: 27.3%')" onmouseleave="hideTooltip()" style="cursor:pointer;"></rect>
+                <text x="295.61333333333334" y="142" font-size="11" font-weight="800" fill="#0f766e">PKR 3,056B</text>
+
+                <!-- Development ADP Bar -->
+                <rect x="145" y="153" width="280" height="18" fill="#f1f5f9" rx="2"></rect>
+                <rect x="145" y="153" width="44.757999999999996" height="18" fill="#d97706" rx="2" onmouseenter="showTooltip(event, '&lt;strong&gt;Sindh Development ADP&lt;/strong&gt;&lt;br/&gt;ADP Allocation: PKR 959.1 Billion&lt;br/&gt;Dev Share of Budget: 31.38%')" onmousemove="showTooltip(event, '&lt;strong&gt;Sindh Development ADP&lt;/strong&gt;&lt;br/&gt;ADP Allocation: PKR 959.1 Billion&lt;br/&gt;Dev Share of Budget: 31.38%')" onmouseleave="hideTooltip()" style="cursor:pointer;"></rect>
+                <text x="197.75799999999998" y="166" font-size="10.5" font-weight="700" fill="#d97706">ADP: PKR 959.1B</text>
+              
+                <!-- Province Title -->
+                <text x="133" y="215" text-anchor="end" font-size="12" font-weight="700" fill="#1e293b">Khyber Pakhtunkhwa</text>
+                <text x="133" y="229" text-anchor="end" font-size="9.5" font-weight="600" fill="#64748b">23.73% for Dev</text>
+
+                <!-- Total Outlay Bar -->
+                <rect x="145" y="199" width="280" height="22" fill="#f1f5f9" rx="3"></rect>
+                <rect x="145" y="199" width="81.85333333333334" height="22" fill="#0f766e" rx="3" onmouseenter="showTooltip(event, '&lt;strong&gt;Khyber Pakhtunkhwa Total Budget&lt;/strong&gt;&lt;br/&gt;Total Outlay: PKR 1,754 Billion&lt;br/&gt;National Share: 15.6%')" onmousemove="showTooltip(event, '&lt;strong&gt;Khyber Pakhtunkhwa Total Budget&lt;/strong&gt;&lt;br/&gt;Total Outlay: PKR 1,754 Billion&lt;br/&gt;National Share: 15.6%')" onmouseleave="hideTooltip()" style="cursor:pointer;"></rect>
+                <text x="234.85333333333335" y="214" font-size="11" font-weight="800" fill="#0f766e">PKR 1,754B</text>
+
+                <!-- Development ADP Bar -->
+                <rect x="145" y="225" width="280" height="18" fill="#f1f5f9" rx="2"></rect>
+                <rect x="145" y="225" width="19.427333333333333" height="18" fill="#d97706" rx="2" onmouseenter="showTooltip(event, '&lt;strong&gt;Khyber Pakhtunkhwa Development ADP&lt;/strong&gt;&lt;br/&gt;ADP Allocation: PKR 416.3 Billion&lt;br/&gt;Dev Share of Budget: 23.73%')" onmousemove="showTooltip(event, '&lt;strong&gt;Khyber Pakhtunkhwa Development ADP&lt;/strong&gt;&lt;br/&gt;ADP Allocation: PKR 416.3 Billion&lt;br/&gt;Dev Share of Budget: 23.73%')" onmouseleave="hideTooltip()" style="cursor:pointer;"></rect>
+                <text x="172.42733333333334" y="238" font-size="10.5" font-weight="700" fill="#d97706">ADP: PKR 416.3B</text>
+              
+                <!-- Province Title -->
+                <text x="133" y="287" text-anchor="end" font-size="12" font-weight="700" fill="#1e293b">Balochistan</text>
+                <text x="133" y="301" text-anchor="end" font-size="9.5" font-weight="600" fill="#64748b">33.61% for Dev</text>
+
+                <!-- Total Outlay Bar -->
+                <rect x="145" y="271" width="280" height="22" fill="#f1f5f9" rx="3"></rect>
+                <rect x="145" y="271" width="44.59466666666667" height="22" fill="#0f766e" rx="3" onmouseenter="showTooltip(event, '&lt;strong&gt;Balochistan Total Budget&lt;/strong&gt;&lt;br/&gt;Total Outlay: PKR 955.6 Billion&lt;br/&gt;National Share: 8.5%')" onmousemove="showTooltip(event, '&lt;strong&gt;Balochistan Total Budget&lt;/strong&gt;&lt;br/&gt;Total Outlay: PKR 955.6 Billion&lt;br/&gt;National Share: 8.5%')" onmouseleave="hideTooltip()" style="cursor:pointer;"></rect>
+                <text x="197.59466666666668" y="286" font-size="11" font-weight="800" fill="#0f766e">PKR 955.6B</text>
+
+                <!-- Development ADP Bar -->
+                <rect x="145" y="297" width="280" height="18" fill="#f1f5f9" rx="2"></rect>
+                <rect x="145" y="297" width="14.986999999999998" height="18" fill="#d97706" rx="2" onmouseenter="showTooltip(event, '&lt;strong&gt;Balochistan Development ADP&lt;/strong&gt;&lt;br/&gt;ADP Allocation: PKR 321.15 Billion&lt;br/&gt;Dev Share of Budget: 33.61%')" onmousemove="showTooltip(event, '&lt;strong&gt;Balochistan Development ADP&lt;/strong&gt;&lt;br/&gt;ADP Allocation: PKR 321.15 Billion&lt;br/&gt;Dev Share of Budget: 33.61%')" onmouseleave="hideTooltip()" style="cursor:pointer;"></rect>
+                <text x="167.987" y="310" font-size="10.5" font-weight="700" fill="#d97706">ADP: PKR 321.15B</text>
+              
+              <g>
+                <text x="740" y="45" text-anchor="middle" font-size="12" font-weight="700" fill="#073c3a">Share of National Provincial ADP (PKR 2.54T)</text>
+                <path d="M 740 100 A 95 95 0 0 1 805.9769448097771 263.3523427072373 L 778.1971785740815 234.57240893576895 A 55 55 0 0 0 740 140 Z" fill="#0f766e" stroke="#ffffff" stroke-width="2" onmouseenter="showTooltip(event, '&lt;strong&gt;Sindh ADP Share&lt;/strong&gt;&lt;br/&gt;PKR 959.1 Billion (37.8%)')" onmousemove="showTooltip(event, '&lt;strong&gt;Sindh ADP Share&lt;/strong&gt;&lt;br/&gt;PKR 959.1 Billion (37.8%)')" onmouseleave="hideTooltip()" style="cursor:pointer;"></path><path d="M 805.9769448097771 263.3523427072373 A 95 95 0 0 1 648.059347978109 218.91477588834056 L 686.7712014610105 208.845396566934 A 55 55 0 0 0 778.1971785740815 234.57240893576895 Z" fill="#0284c7" stroke="#ffffff" stroke-width="2" onmouseenter="showTooltip(event, '&lt;strong&gt;Punjab ADP Share&lt;/strong&gt;&lt;br/&gt;PKR 842 Billion (33.2%)')" onmousemove="showTooltip(event, '&lt;strong&gt;Punjab ADP Share&lt;/strong&gt;&lt;br/&gt;PKR 842 Billion (33.2%)')" onmouseleave="hideTooltip()" style="cursor:pointer;"></path><path d="M 648.059347978109 218.91477588834056 A 95 95 0 0 1 672.1908800027126 128.46487209606136 L 700.742088422623 156.47966279245657 A 55 55 0 0 0 686.7712014610105 208.845396566934 Z" fill="#d97706" stroke="#ffffff" stroke-width="2" onmouseenter="showTooltip(event, '&lt;strong&gt;KP ADP Share&lt;/strong&gt;&lt;br/&gt;PKR 416.3 Billion (16.4%)')" onmousemove="showTooltip(event, '&lt;strong&gt;KP ADP Share&lt;/strong&gt;&lt;br/&gt;PKR 416.3 Billion (16.4%)')" onmouseleave="hideTooltip()" style="cursor:pointer;"></path><path d="M 672.1908800027126 128.46487209606136 A 95 95 0 0 1 740 100 L 740 140 A 55 55 0 0 0 700.742088422623 156.47966279245657 Z" fill="#e11d48" stroke="#ffffff" stroke-width="2" onmouseenter="showTooltip(event, '&lt;strong&gt;Balochistan ADP Share&lt;/strong&gt;&lt;br/&gt;PKR 321.15 Billion (12.6%)')" onmousemove="showTooltip(event, '&lt;strong&gt;Balochistan ADP Share&lt;/strong&gt;&lt;br/&gt;PKR 321.15 Billion (12.6%)')" onmouseleave="hideTooltip()" style="cursor:pointer;"></path>
+                <circle cx="740" cy="195" r="55" fill="#ffffff"></circle>
+                <text x="740" y="188" text-anchor="middle" font-size="10" font-weight="700" fill="#64748b">TOTAL ADP</text>
+                <text x="740" y="207" text-anchor="middle" font-size="14" font-weight="800" fill="#073c3a">PKR 2.54T</text>
+                <text x="740" y="220" text-anchor="middle" font-size="9" font-weight="600" fill="#0f766e">FY 2024–25</text>
+
+                <g transform="translate(615, 318)">
+                  <rect x="0" y="0" width="10" height="10" fill="#0f766e" rx="2"></rect>
+                  <text x="14" y="9" font-size="10.5" font-weight="600" fill="#334155">Sindh: 37.8% (PKR 959B)</text>
+                  <rect x="150" y="0" width="10" height="10" fill="#0284c7" rx="2"></rect>
+                  <text x="164" y="9" font-size="10.5" font-weight="600" fill="#334155">Punjab: 33.2% (PKR 842B)</text>
+                  <rect x="0" y="18" width="10" height="10" fill="#d97706" rx="2"></rect>
+                  <text x="14" y="27" font-size="10.5" font-weight="600" fill="#334155">KP: 16.4% (PKR 416B)</text>
+                  <rect x="150" y="18" width="10" height="10" fill="#e11d48" rx="2"></rect>
+                  <text x="164" y="27" font-size="10.5" font-weight="600" fill="#334155">Balochistan: 12.6% (PKR 321B)</text>
+                </g>
+              </g>
+            
+  </g>
+
+  <!-- Key Insight Box -->
+  <rect x="40" y="570" width="960" height="48" fill="#f8fafc" rx="6" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="54" y="587" font-size="10" font-weight="800" fill="#073c3a">KEY POLICY INSIGHT:</text>
+  <text x="54" y="603" font-size="11" fill="#334155">Key Policy Takeaway: Severe structural disparities exist between fiscal concentration and conflict exposure: Punjab and Sindh command 75.9% of all provincial budget spending, while Khyber Pakhtunkhwa (63.1%) and Baloc...</text>
+
+  <!-- Watermark Footer Banner (Two-Line Stacked: Zero Overlap) -->
+  <rect x="0" y="628" width="1040" height="52" fill="#073c3a" rx="0"/>
+  <!-- Line 1: Primary Data Source (Full Canvas Width) -->
+  <text x="40" y="649" font-size="10.5" font-weight="500" fill="#99f6e4">Source: Provincial Finance Departments (White Papers FY25), DMU Debt Bulletins, CRSS Annual Security Reports (2023–24)</text>
+  <!-- Line 2: Institution Branding &amp; Canonical Domain -->
+  <text x="40" y="666" font-size="10.5" font-weight="700" fill="#ffffff">Pakistan Provincial Reform Institute (PPRI)</text>
+  <text x="1000" y="666" font-size="10.5" font-weight="600" fill="#5eead4" text-anchor="end">ppripakistan.github.io</text>
+</svg>

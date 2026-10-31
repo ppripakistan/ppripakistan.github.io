@@ -1,7 +1,7 @@
 /**
  * PPRI — Interactive Map Hero  |  hero-map.js  v4
  * Authentic Pakistan borders (Leaflet.js) · 16-unit dissolve ·
- * Magnetic unit hover with metadata tooltip · Jitter-free HUD dock
+ * Magnetic unit hover with metadata tooltip
  */
 
 (function () {
@@ -10,10 +10,6 @@
   /* ── DOM References ────────────────────────────────────────────────────── */
   const section      = document.querySelector(".hero-map-section");
   const mapContainer = document.getElementById("hero-map-container");
-  const hudWrapper   = document.getElementById("hudWrapper");
-  const hudDock      = document.getElementById("hudDock");
-  const hudTrigger   = document.getElementById("hudTrigger");
-  const hudClose     = document.getElementById("hudClose");
   const tooltip      = document.getElementById("pak-tooltip");
   const mapLoader    = document.getElementById("hero-map-loader");
   const telemetryStatus = document.getElementById("telemetryStatus");
@@ -36,12 +32,6 @@
   let tooltipVisible   = false;
   let tooltipAnimFrame = null;
   let animationTriggered = false;
-
-  // Jitter-free HUD debounce timers
-  let hudExpandTimer   = null;
-  let hudCollapseTimer = null;
-  const HUD_EXPAND_DELAY   = 160;
-  const HUD_COLLAPSE_DELAY = 220;
 
   const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
@@ -344,85 +334,11 @@
     });
   }
 
-  if (hudDock) {
-    hudDock.addEventListener("mouseenter", () => {
-      hideTooltip();
-      clearAllHoverHighlights();
-    });
-  }
 
   window.addEventListener("blur", () => {
     hideTooltip();
     clearAllHoverHighlights();
   });
-
-  /* ── Jitter-Free Collapsible HUD Dock ──────────────────────────────────── */
-  function cancelExpand() {
-    if (hudExpandTimer) { clearTimeout(hudExpandTimer); hudExpandTimer = null; }
-  }
-  function cancelCollapse() {
-    if (hudCollapseTimer) { clearTimeout(hudCollapseTimer); hudCollapseTimer = null; }
-  }
-
-  function expandHUD() {
-    cancelCollapse();
-    if (!hudDock || hudDock.classList.contains("is-expanded")) return;
-    cancelExpand();
-    hudExpandTimer = setTimeout(() => {
-      hudDock.classList.add("is-expanded");
-      if (hudTrigger) hudTrigger.setAttribute("aria-expanded", "true");
-      section.classList.add("hud-open");
-      hudExpandTimer = null;
-    }, HUD_EXPAND_DELAY);
-  }
-
-  function collapseHUD() {
-    cancelExpand();
-    if (!hudDock || !hudDock.classList.contains("is-expanded")) return;
-    cancelCollapse();
-    hudCollapseTimer = setTimeout(() => {
-      hudDock.classList.remove("is-expanded");
-      if (hudTrigger) hudTrigger.setAttribute("aria-expanded", "false");
-      section.classList.remove("hud-open");
-      hudCollapseTimer = null;
-    }, HUD_COLLAPSE_DELAY);
-  }
-
-  const hudTarget = hudWrapper || hudDock;
-  if (hudTarget) {
-    hudTarget.addEventListener("mouseenter", () => {
-      cancelCollapse();
-      expandHUD();
-    });
-
-    hudTarget.addEventListener("mouseleave", (e) => {
-      const related = e.relatedTarget;
-      if (hudTarget.contains(related) || (hudDock && hudDock.contains(related))) return;
-      collapseHUD();
-    });
-  }
-
-  if (hudTrigger) {
-    hudTrigger.addEventListener("click", (e) => {
-      e.stopPropagation();
-      expandHUD();
-    });
-  }
-
-  if (hudClose) {
-    hudClose.addEventListener("click", (e) => {
-      e.stopPropagation();
-      cancelExpand();
-      cancelCollapse();
-      if (hudDock) {
-        hudDock.classList.remove("is-expanded");
-      }
-      if (hudTrigger) {
-        hudTrigger.setAttribute("aria-expanded", "false");
-      }
-      section.classList.remove("hud-open");
-    });
-  }
 
   /* ── Boot ──────────────────────────────────────────────────────────────── */
   const boot = () => {

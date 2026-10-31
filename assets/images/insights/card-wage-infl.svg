@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="620" viewBox="0 0 800 620">
+  <defs>
+    <style>
+      text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+    </style>
+  </defs>
+
+  <rect width="800" height="620" fill="#ffffff" rx="10" stroke="#cbd5e1" stroke-width="1"/>
+  <rect width="800" height="6" fill="#0f766e" rx="4"/>
+
+  <!-- Top Header with Number Badge -->
+  <text x="40" y="38" font-size="11" font-weight="700" fill="#0f766e" letter-spacing="1">PAKISTAN PROVINCIAL REFORM INSTITUTE (PPRI) • INFOGRAPHIC 07 / 16 • PURCHASING POWER • INFLATION SQUEEZE</text>
+  <text x="40" y="66" font-size="20" font-weight="800" fill="#073c3a">Purchasing Power Erosion: Real Wages vs Inflation</text>
+  <text x="40" y="88" font-size="12" fill="#64748b">Cumulative CPI price inflation vs nominal wage index adjustments (2020–2024)</text>
+  <line x1="40" y1="102" x2="760" y2="102" stroke="#e2e8f0" stroke-width="1.5"/>
+
+  <!-- Core Visual Graphics -->
+  <g transform="translate(83.33333333333331, 115) scale(1.0555555555555556)">
+    <line x1="60" y1="280" x2="550" y2="280" stroke="#cbd5e1" stroke-width="1.5"></line>
+              <line x1="60" y1="232" x2="540" y2="232" stroke="#f1f5f9" stroke-width="1"></line>
+              <text x="52" y="236" text-anchor="end" font-size="9.5" fill="#94a3b8">50</text>
+            
+              <line x1="60" y1="184" x2="540" y2="184" stroke="#f1f5f9" stroke-width="1"></line>
+              <text x="52" y="188" text-anchor="end" font-size="9.5" fill="#94a3b8">100</text>
+            
+              <line x1="60" y1="136" x2="540" y2="136" stroke="#f1f5f9" stroke-width="1"></line>
+              <text x="52" y="140" text-anchor="end" font-size="9.5" fill="#94a3b8">150</text>
+            
+              <line x1="60" y1="88" x2="540" y2="88" stroke="#f1f5f9" stroke-width="1"></line>
+              <text x="52" y="92" text-anchor="end" font-size="9.5" fill="#94a3b8">200</text>
+            
+              <line x1="60" y1="40" x2="540" y2="40" stroke="#f1f5f9" stroke-width="1"></line>
+              <text x="52" y="44" text-anchor="end" font-size="9.5" fill="#94a3b8">250</text>
+            
+              <rect x="75" y="151.552" width="30" height="128.448" fill="#e11d48" rx="2" onmouseenter="showTooltip(event, '&lt;strong&gt;2020 Consumer Price Index&lt;/strong&gt;&lt;br/&gt;CPI Index (Base 2016): 133.8&lt;br/&gt;Annual Inflation: 10.7%&lt;br/&gt;Cumulative Inflation: +0%')" onmousemove="showTooltip(event, '&lt;strong&gt;2020 Consumer Price Index&lt;/strong&gt;&lt;br/&gt;CPI Index (Base 2016): 133.8&lt;br/&gt;Annual Inflation: 10.7%&lt;br/&gt;Cumulative Inflation: +0%')" onmouseleave="hideTooltip()" style="cursor:pointer;"></rect>
+
+              <rect x="109" y="184" width="30" height="96" fill="#0f766e" rx="2" onmouseenter="showTooltip(event, '&lt;strong&gt;2020 Nominal Wage Index&lt;/strong&gt;&lt;br/&gt;Wage Index: 100&lt;br/&gt;Monthly Mean Wage: PKR 25,250&lt;br/&gt;Real Wage Index: 100')" onmousemove="showTooltip(event, '&lt;strong&gt;2020 Nominal Wage Index&lt;/strong&gt;&lt;br/&gt;Wage Index: 100&lt;br/&gt;Monthly Mean Wage: PKR 25,250&lt;br/&gt;Real Wage Index: 100')" onmouseleave="hideTooltip()" style="cursor:pointer;"></rect>
+
+              <text x="107" y="296" text-anchor="middle" font-size="11" font-weight="700" fill="#334155">2020</text>
+            
+              <rect x="171" y="140.12800000000001" width="30" height="139.87199999999999" fill="#e11d48" rx="2" onmouseenter="showTooltip(event, '&lt;strong&gt;2021 Consumer Price Index&lt;/strong&gt;&lt;br/&gt;CPI Index (Base 2016): 145.7&lt;br/&gt;Annual Inflation: 8.9%&lt;br/&gt;Cumulative Inflation: +8.9%')" onmousemove="showTooltip(event, '&lt;strong&gt;2021 Consumer Price Index&lt;/strong&gt;&lt;br/&gt;CPI Index (Base 2016): 145.7&lt;br/&gt;Annual Inflation: 8.9%&lt;br/&gt;Cumulative Inflation: +8.9%')" onmouseleave="hideTooltip()" style="cursor:pointer;"></rect>
+
+              <rect x="205" y="175.36" width="30" height="104.64" fill="#0f766e" rx="2" onmouseenter="showTooltip(event, '&lt;strong&gt;2021 Nominal Wage Index&lt;/strong&gt;&lt;br/&gt;Wage Index: 109&lt;br/&gt;Monthly Mean Wage: PKR 27,400&lt;br/&gt;Real Wage Index: 99.6')" onmousemove="showTooltip(event, '&lt;strong&gt;2021 Nominal Wage Index&lt;/strong&gt;&lt;br/&gt;Wage Index: 109&lt;br/&gt;Monthly Mean Wage: PKR 27,400&lt;br/&gt;Real Wage Index: 99.6')" onmouseleave="hideTooltip()" style="cursor:pointer;"></rect>
+
+              <text x="203" y="296" text-anchor="middle" font-size="11" font-weight="700" fill="#334155">2021</text>
+            
+              <rect x="267" y="123.136" width="30" height="156.864" fill="#e11d48" rx="2" onmouseenter="showTooltip(event, '&lt;strong&gt;2022 Consumer Price Index&lt;/strong&gt;&lt;br/&gt;CPI Index (Base 2016): 163.4&lt;br/&gt;Annual Inflation: 12.2%&lt;br/&gt;Cumulative Inflation: +22.1%')" onmousemove="showTooltip(event, '&lt;strong&gt;2022 Consumer Price Index&lt;/strong&gt;&lt;br/&gt;CPI Index (Base 2016): 163.4&lt;br/&gt;Annual Inflation: 12.2%&lt;br/&gt;Cumulative Inflation: +22.1%')" onmouseleave="hideTooltip()" style="cursor:pointer;"></rect>
+
+              <rect x="301" y="164.8" width="30" height="115.19999999999999" fill="#0f766e" rx="2" onmouseenter="showTooltip(event, '&lt;strong&gt;2022 Nominal Wage Index&lt;/strong&gt;&lt;br/&gt;Wage Index: 120&lt;br/&gt;Monthly Mean Wage: PKR 30,200&lt;br/&gt;Real Wage Index: 97.9')" onmousemove="showTooltip(event, '&lt;strong&gt;2022 Nominal Wage Index&lt;/strong&gt;&lt;br/&gt;Wage Index: 120&lt;br/&gt;Monthly Mean Wage: PKR 30,200&lt;br/&gt;Real Wage Index: 97.9')" onmouseleave="hideTooltip()" style="cursor:pointer;"></rect>
+
+              <text x="299" y="296" text-anchor="middle" font-size="11" font-weight="700" fill="#334155">2022</text>
+            
+              <rect x="363" y="74.84800000000001" width="30" height="205.152" fill="#e11d48" rx="2" onmouseenter="showTooltip(event, '&lt;strong&gt;2023 Consumer Price Index&lt;/strong&gt;&lt;br/&gt;CPI Index (Base 2016): 213.7&lt;br/&gt;Annual Inflation: 30.8%&lt;br/&gt;Cumulative Inflation: +59.7%')" onmousemove="showTooltip(event, '&lt;strong&gt;2023 Consumer Price Index&lt;/strong&gt;&lt;br/&gt;CPI Index (Base 2016): 213.7&lt;br/&gt;Annual Inflation: 30.8%&lt;br/&gt;Cumulative Inflation: +59.7%')" onmouseleave="hideTooltip()" style="cursor:pointer;"></rect>
+
+              <rect x="397" y="147.51999999999998" width="30" height="132.48000000000002" fill="#0f766e" rx="2" onmouseenter="showTooltip(event, '&lt;strong&gt;2023 Nominal Wage Index&lt;/strong&gt;&lt;br/&gt;Wage Index: 138&lt;br/&gt;Monthly Mean Wage: PKR 34,800&lt;br/&gt;Real Wage Index: 86.3')" onmousemove="showTooltip(event, '&lt;strong&gt;2023 Nominal Wage Index&lt;/strong&gt;&lt;br/&gt;Wage Index: 138&lt;br/&gt;Monthly Mean Wage: PKR 34,800&lt;br/&gt;Real Wage Index: 86.3')" onmouseleave="hideTooltip()" style="cursor:pointer;"></rect>
+
+              <text x="395" y="296" text-anchor="middle" font-size="11" font-weight="700" fill="#334155">2023</text>
+            
+              <rect x="459" y="37.888000000000034" width="30" height="242.11199999999997" fill="#e11d48" rx="2" onmouseenter="showTooltip(event, '&lt;strong&gt;2024 Consumer Price Index&lt;/strong&gt;&lt;br/&gt;CPI Index (Base 2016): 252.2&lt;br/&gt;Annual Inflation: 18%&lt;br/&gt;Cumulative Inflation: +88.4%')" onmousemove="showTooltip(event, '&lt;strong&gt;2024 Consumer Price Index&lt;/strong&gt;&lt;br/&gt;CPI Index (Base 2016): 252.2&lt;br/&gt;Annual Inflation: 18%&lt;br/&gt;Cumulative Inflation: +88.4%')" onmouseleave="hideTooltip()" style="cursor:pointer;"></rect>
+
+              <rect x="493" y="131.2" width="30" height="148.8" fill="#0f766e" rx="2" onmouseenter="showTooltip(event, '&lt;strong&gt;2024 Nominal Wage Index&lt;/strong&gt;&lt;br/&gt;Wage Index: 155&lt;br/&gt;Monthly Mean Wage: PKR 39,042&lt;br/&gt;Real Wage Index: 82.1')" onmousemove="showTooltip(event, '&lt;strong&gt;2024 Nominal Wage Index&lt;/strong&gt;&lt;br/&gt;Wage Index: 155&lt;br/&gt;Monthly Mean Wage: PKR 39,042&lt;br/&gt;Real Wage Index: 82.1')" onmouseleave="hideTooltip()" style="cursor:pointer;"></rect>
+
+              <text x="491" y="296" text-anchor="middle" font-size="11" font-weight="700" fill="#334155">2024</text>
+            
+                <text x="474" y="30.888000000000034" text-anchor="middle" font-size="9.5" font-weight="800" fill="#e11d48">+88.4%</text>
+                <text x="508" y="124.19999999999999" text-anchor="middle" font-size="9.5" font-weight="800" fill="#0f766e">+54.6%</text>
+              
+            <g transform="translate(110, 15)">
+              <rect x="0" y="0" width="12" height="12" fill="#e11d48" rx="2"></rect>
+              <text x="16" y="10" font-size="11" font-weight="600" fill="#334155">CPI Prices (+118.4%)</text>
+              <rect x="200" y="0" width="12" height="12" fill="#0f766e" rx="2"></rect>
+              <text x="216" y="10" font-size="11" font-weight="600" fill="#334155">Nominal Wages (+64.2%)</text>
+            </g>
+          
+  </g>
+
+  <!-- Key Insight Box -->
+  <rect x="40" y="510" width="720" height="48" fill="#f8fafc" rx="6" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="54" y="527" font-size="10" font-weight="800" fill="#073c3a">KEY POLICY INSIGHT:</text>
+  <text x="54" y="543" font-size="11" fill="#334155">Key Policy Takeaway: Cumulative consumer prices skyrocketed by +118.4% between 2020 and 2024, while nominal wages adjusted by only +64.2%, inflicting a severe -24.8% contraction in real household purchasing power. Cum...</text>
+
+  <!-- Watermark Footer Banner (Two-Line Stacked: Zero Overlap) -->
+  <rect x="0" y="568" width="800" height="52" fill="#073c3a" rx="0"/>
+  <!-- Line 1: Primary Data Source (Full Canvas Width) -->
+  <text x="40" y="589" font-size="10.5" font-weight="500" fill="#99f6e4">Source: PBS CPI Bulletins &amp; Labour Force Surveys (2020–2024)</text>
+  <!-- Line 2: Institution Branding &amp; Canonical Domain -->
+  <text x="40" y="606" font-size="10.5" font-weight="700" fill="#ffffff">Pakistan Provincial Reform Institute (PPRI)</text>
+  <text x="760" y="606" font-size="10.5" font-weight="600" fill="#5eead4" text-anchor="end">ppripakistan.github.io</text>
+</svg>

@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="620" viewBox="0 0 800 620">
+  <defs>
+    <style>
+      text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+    </style>
+  </defs>
+
+  <rect width="800" height="620" fill="#ffffff" rx="10" stroke="#cbd5e1" stroke-width="1"/>
+  <rect width="800" height="6" fill="#0f766e" rx="4"/>
+
+  <!-- Top Header with Number Badge -->
+  <text x="40" y="38" font-size="11" font-weight="700" fill="#0f766e" letter-spacing="1">PAKISTAN PROVINCIAL REFORM INSTITUTE (PPRI) • INFOGRAPHIC 10 / 16 • FEDERAL DEMOGRAPHICS • 4-DECADE CENSUS SHIFTS</text>
+  <text x="40" y="66" font-size="20" font-weight="800" fill="#073c3a">Multi-Census Provincial Demographic Shifts (1981–2023)</text>
+  <text x="40" y="88" font-size="12" fill="#64748b">Decadal shifts in provincial demographic shares across 1981, 1998, 2017, and 2023 censuses</text>
+  <line x1="40" y1="102" x2="760" y2="102" stroke="#e2e8f0" stroke-width="1.5"/>
+
+  <!-- Core Visual Graphics -->
+  <g transform="translate(83.33333333333331, 115) scale(1.0555555555555556)">
+    
+            <path d="M 135 60 A 100 100 0 1 1 117.064830773101 258.37850224923375 L 124.2388984638606 219.02710134954026 A 60 60 0 1 0 135 100 Z" fill="#15803d" stroke="#ffffff" stroke-width="2" onmouseenter="showTooltip(event, '&lt;strong&gt;Punjab (2023)&lt;/strong&gt;&lt;br/&gt;Population: 127.69 Million&lt;br/&gt;National Share: 52.87%')" onmousemove="showTooltip(event, '&lt;strong&gt;Punjab (2023)&lt;/strong&gt;&lt;br/&gt;Population: 127.69 Million&lt;br/&gt;National Share: 52.87%')" onmouseleave="hideTooltip()" style="cursor:pointer;"></path><path d="M 117.064830773101 258.37850224923375 A 100 100 0 0 1 35.17067584441445 154.15996244540986 L 75.10240550664867 156.49597746724592 A 60 60 0 0 0 124.2388984638606 219.02710134954026 Z" fill="#0284c7" stroke="#ffffff" stroke-width="2" onmouseenter="showTooltip(event, '&lt;strong&gt;Sindh (2023)&lt;/strong&gt;&lt;br/&gt;Population: 55.7 Million&lt;br/&gt;National Share: 23.06%')" onmousemove="showTooltip(event, '&lt;strong&gt;Sindh (2023)&lt;/strong&gt;&lt;br/&gt;Population: 55.7 Million&lt;br/&gt;National Share: 23.06%')" onmouseleave="hideTooltip()" style="cursor:pointer;"></path><path d="M 35.17067584441445 154.15996244540986 A 100 100 0 0 1 91.57119507101947 69.92259493946021 L 108.94271704261169 105.95355696367614 A 60 60 0 0 0 75.10240550664867 156.49597746724592 Z" fill="#d97706" stroke="#ffffff" stroke-width="2" onmouseenter="showTooltip(event, '&lt;strong&gt;KP (2023)&lt;/strong&gt;&lt;br/&gt;Population: 40.86 Million&lt;br/&gt;National Share: 16.92%')" onmousemove="showTooltip(event, '&lt;strong&gt;KP (2023)&lt;/strong&gt;&lt;br/&gt;Population: 40.86 Million&lt;br/&gt;National Share: 16.92%')" onmouseleave="hideTooltip()" style="cursor:pointer;"></path><path d="M 91.57119507101947 69.92259493946021 A 100 100 0 0 1 128.84636870932525 60.18951547087637 L 131.30782122559515 100.11370928252582 A 60 60 0 0 0 108.94271704261169 105.95355696367614 Z" fill="#e11d48" stroke="#ffffff" stroke-width="2" onmouseenter="showTooltip(event, '&lt;strong&gt;Balochistan (2023)&lt;/strong&gt;&lt;br/&gt;Population: 14.89 Million&lt;br/&gt;National Share: 6.17%')" onmousemove="showTooltip(event, '&lt;strong&gt;Balochistan (2023)&lt;/strong&gt;&lt;br/&gt;Population: 14.89 Million&lt;br/&gt;National Share: 6.17%')" onmouseleave="hideTooltip()" style="cursor:pointer;"></path><path d="M 128.84636870932525 60.18951547087637 A 100 100 0 0 1 134.99999999999997 60 L 135 100 A 60 60 0 0 0 131.30782122559515 100.11370928252582 Z" fill="#7c3aed" stroke="#ffffff" stroke-width="2" onmouseenter="showTooltip(event, '&lt;strong&gt;ICT (2023)&lt;/strong&gt;&lt;br/&gt;Population: 2.36 Million&lt;br/&gt;National Share: 0.98%')" onmousemove="showTooltip(event, '&lt;strong&gt;ICT (2023)&lt;/strong&gt;&lt;br/&gt;Population: 2.36 Million&lt;br/&gt;National Share: 0.98%')" onmouseleave="hideTooltip()" style="cursor:pointer;"></path>
+            <circle cx="135" cy="160" r="60" fill="#ffffff"></circle>
+            <text x="135" y="152" text-anchor="middle" font-size="10" font-weight="700" fill="#64748b">CENSUS YEAR</text>
+            <text x="135" y="170" text-anchor="middle" font-size="16" font-weight="800" fill="#073c3a">2023</text>
+            <text x="135" y="184" text-anchor="middle" font-size="10" font-weight="600" fill="#0f766e">241.5M Pop</text>
+            
+            <g transform="translate(290, 25)">
+              <text x="0" y="0" font-size="12" font-weight="700" fill="#073c3a">4-Decade Demographic Share Trajectory (1981–2023)</text>
+              <text x="0" y="16" font-size="10.5" fill="#64748b">Comparison across 1981, 1998, 2017, and 2023 Censuses</text>
+          
+              <text x="0" y="46" font-size="11.5" font-weight="700" fill="#1e293b">Punjab</text>
+              <rect x="80" y="35" width="200" height="14" fill="#f1f5f9" rx="3"></rect>
+              <rect x="80" y="35" width="176.23333333333332" height="14" fill="#15803d" rx="3"></rect>
+              <text x="264.23333333333335" y="46" font-size="11" font-weight="800" fill="#15803d">52.87% (127.69M)</text>
+            
+              <text x="0" y="90" font-size="11.5" font-weight="700" fill="#1e293b">Sindh</text>
+              <rect x="80" y="79" width="200" height="14" fill="#f1f5f9" rx="3"></rect>
+              <rect x="80" y="79" width="76.86666666666666" height="14" fill="#0284c7" rx="3"></rect>
+              <text x="164.86666666666667" y="90" font-size="11" font-weight="800" fill="#0284c7">23.06% (55.7M)</text>
+            
+              <text x="0" y="134" font-size="11.5" font-weight="700" fill="#1e293b">KP</text>
+              <rect x="80" y="123" width="200" height="14" fill="#f1f5f9" rx="3"></rect>
+              <rect x="80" y="123" width="56.400000000000006" height="14" fill="#d97706" rx="3"></rect>
+              <text x="144.4" y="134" font-size="11" font-weight="800" fill="#d97706">16.92% (40.86M)</text>
+            
+              <text x="0" y="178" font-size="11.5" font-weight="700" fill="#1e293b">Balochistan</text>
+              <rect x="80" y="167" width="200" height="14" fill="#f1f5f9" rx="3"></rect>
+              <rect x="80" y="167" width="20.566666666666666" height="14" fill="#e11d48" rx="3"></rect>
+              <text x="108.56666666666666" y="178" font-size="11" font-weight="800" fill="#e11d48">6.17% (14.89M)</text>
+            
+              <text x="0" y="222" font-size="11.5" font-weight="700" fill="#1e293b">ICT</text>
+              <rect x="80" y="211" width="200" height="14" fill="#f1f5f9" rx="3"></rect>
+              <rect x="80" y="211" width="3.266666666666666" height="14" fill="#7c3aed" rx="3"></rect>
+              <text x="91.26666666666667" y="222" font-size="11" font-weight="800" fill="#7c3aed">0.98% (2.36M)</text>
+            
+            <g transform="translate(0, 260)">
+              <text x="0" y="0" font-size="10.5" font-weight="700" fill="#073c3a">Historical Trends Summary:</text>
+              <text x="0" y="15" font-size="10" fill="#475569">• Punjab contracted -3.2% (56.1% in 1981 → 52.9% in 2023)</text>
+              <text x="0" y="28" font-size="10" fill="#475569">• Balochistan expanded +1.1% (5.1% in 1981 → 6.2% in 2023)</text>
+              <text x="0" y="41" font-size="10" fill="#475569">• KP gained +3.8% (13.1% in 1981 → 16.9% in 2023 with FATA merger)</text>
+            </g>
+          </g>
+          
+  </g>
+
+  <!-- Key Insight Box -->
+  <rect x="40" y="510" width="720" height="48" fill="#f8fafc" rx="6" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="54" y="527" font-size="10" font-weight="800" fill="#073c3a">KEY POLICY INSIGHT:</text>
+  <text x="54" y="543" font-size="11" fill="#334155">Key Policy Takeaway: Significant federal rebalancing: Punjab&apos;s demographic share contracted by -3.2% (56.1% in 1981 to 52.9% in 2023), while Balochistan grew from 5.1% to 6.2% (14.89M) and KP reached 16.9% following t...</text>
+
+  <!-- Watermark Footer Banner (Two-Line Stacked: Zero Overlap) -->
+  <rect x="0" y="568" width="800" height="52" fill="#073c3a" rx="0"/>
+  <!-- Line 1: Primary Data Source (Full Canvas Width) -->
+  <text x="40" y="589" font-size="10.5" font-weight="500" fill="#99f6e4">Source: Pakistan Bureau of Statistics, Censuses of Pakistan (1981, 1998, 2017, 2023)</text>
+  <!-- Line 2: Institution Branding &amp; Canonical Domain -->
+  <text x="40" y="606" font-size="10.5" font-weight="700" fill="#ffffff">Pakistan Provincial Reform Institute (PPRI)</text>
+  <text x="760" y="606" font-size="10.5" font-weight="600" fill="#5eead4" text-anchor="end">ppripakistan.github.io</text>
+</svg>

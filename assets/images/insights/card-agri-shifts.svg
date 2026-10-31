@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="620" viewBox="0 0 800 620">
+  <defs>
+    <style>
+      text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+    </style>
+  </defs>
+
+  <rect width="800" height="620" fill="#ffffff" rx="10" stroke="#cbd5e1" stroke-width="1"/>
+  <rect width="800" height="6" fill="#0f766e" rx="4"/>
+
+  <!-- Top Header with Number Badge -->
+  <text x="40" y="38" font-size="11" font-weight="700" fill="#0f766e" letter-spacing="1">PAKISTAN PROVINCIAL REFORM INSTITUTE (PPRI) • INFOGRAPHIC 13 / 16 • AGRARIAN STRUCTURE • 2010 VS 2024 CENSUS</text>
+  <text x="40" y="66" font-size="20" font-weight="800" fill="#073c3a">Smallholder Landholding &amp; Cultivated Acreage Fragmentation</text>
+  <text x="40" y="88" font-size="12" fill="#64748b">Farm fragmentation, provincial cultivated shares, and structural acreage changes</text>
+  <line x1="40" y1="102" x2="760" y2="102" stroke="#e2e8f0" stroke-width="1.5"/>
+
+  <!-- Core Visual Graphics -->
+  <g transform="translate(83.33333333333331, 115) scale(1.0555555555555556)">
+    
+            <text x="160" y="20" text-anchor="middle" font-size="12" font-weight="700" fill="#073c3a">Farms Count Surge (+34.4% Nationwide)</text>
+          
+              <text x="100" y="54" text-anchor="end" font-size="11" font-weight="700" fill="#1e293b">Punjab</text>
+              <rect x="110" y="40" width="139.984" height="10" fill="#94a3b8" rx="2"></rect>
+              <text x="255.984" y="49" font-size="9" fill="#64748b">5.25M (2010)</text>
+
+              <rect x="110" y="53" width="182.456" height="10" fill="#0f766e" rx="2" onmouseenter="showTooltip(event, '&lt;strong&gt;Punjab Farm Fragmentation&lt;/strong&gt;&lt;br/&gt;2010: 5,249,400 farms&lt;br/&gt;2024: 6,842,100 farms&lt;br/&gt;Growth: +30.3%&lt;br/&gt;Avg Farm Size: 4.8 Acres')" onmouseleave="hideTooltip()" style="cursor:pointer;"></rect>
+              <text x="298.456" y="62" font-size="9" font-weight="800" fill="#0f766e">6.84M (+30.3%)</text>
+            
+              <text x="100" y="110" text-anchor="end" font-size="11" font-weight="700" fill="#1e293b">Sindh</text>
+              <rect x="110" y="96" width="29.741333333333337" height="10" fill="#94a3b8" rx="2"></rect>
+              <text x="145.74133333333333" y="105" font-size="9" fill="#64748b">1.12M (2010)</text>
+
+              <rect x="110" y="109" width="42.624" height="10" fill="#0f766e" rx="2" onmouseenter="showTooltip(event, '&lt;strong&gt;Sindh Farm Fragmentation&lt;/strong&gt;&lt;br/&gt;2010: 1,115,300 farms&lt;br/&gt;2024: 1,598,400 farms&lt;br/&gt;Growth: +43.3%&lt;br/&gt;Avg Farm Size: 5.9 Acres')" onmouseleave="hideTooltip()" style="cursor:pointer;"></rect>
+              <text x="158.624" y="118" font-size="9" font-weight="800" fill="#0f766e">1.60M (+43.3%)</text>
+            
+              <text x="100" y="166" text-anchor="end" font-size="11" font-weight="700" fill="#1e293b">Khyber Pakhtunkhwa</text>
+              <rect x="110" y="152" width="43.152" height="10" fill="#94a3b8" rx="2"></rect>
+              <text x="159.152" y="161" font-size="9" fill="#64748b">1.62M (2010)</text>
+
+              <rect x="110" y="165" width="59.77333333333333" height="10" fill="#0f766e" rx="2" onmouseenter="showTooltip(event, '&lt;strong&gt;Khyber Pakhtunkhwa Farm Fragmentation&lt;/strong&gt;&lt;br/&gt;2010: 1,618,200 farms&lt;br/&gt;2024: 2,241,500 farms&lt;br/&gt;Growth: +38.5%&lt;br/&gt;Avg Farm Size: 2.2 Acres')" onmouseleave="hideTooltip()" style="cursor:pointer;"></rect>
+              <text x="175.77333333333334" y="174" font-size="9" font-weight="800" fill="#0f766e">2.24M (+38.5%)</text>
+            
+              <text x="100" y="222" text-anchor="end" font-size="11" font-weight="700" fill="#1e293b">Balochistan</text>
+              <rect x="110" y="208" width="7.5088" height="10" fill="#94a3b8" rx="2"></rect>
+              <text x="123.5088" y="217" font-size="9" fill="#64748b">0.28M (2010)</text>
+
+              <rect x="110" y="221" width="11.245253333333334" height="10" fill="#0f766e" rx="2" onmouseenter="showTooltip(event, '&lt;strong&gt;Balochistan Farm Fragmentation&lt;/strong&gt;&lt;br/&gt;2010: 281,580 farms&lt;br/&gt;2024: 421,697 farms&lt;br/&gt;Growth: +49.8%&lt;br/&gt;Avg Farm Size: 12.5 Acres')" onmouseleave="hideTooltip()" style="cursor:pointer;"></rect>
+              <text x="127.24525333333334" y="230" font-size="9" font-weight="800" fill="#0f766e">0.42M (+49.8%)</text>
+            <path d="M 450 70 A 90 90 0 1 1 379.93839285896786 216.49222251616303 L 411.0768849216488 191.38456806453502 A 50 50 0 1 0 450 110 Z" fill="#15803d" stroke="#ffffff" stroke-width="2" onmouseenter="showTooltip(event, '&lt;strong&gt;Punjab Cultivated Acreage&lt;/strong&gt;&lt;br/&gt;38.07 Million Acres (64.2%)')" onmouseleave="hideTooltip()" style="cursor:pointer;"></path><path d="M 379.93839285896786 216.49222251616303 A 90 90 0 0 1 380.653808150179 102.6318409226179 L 411.47433786121053 128.1288005125655 A 50 50 0 0 0 411.0768849216488 191.38456806453502 Z" fill="#0284c7" stroke="#ffffff" stroke-width="2" onmouseenter="showTooltip(event, '&lt;strong&gt;Sindh Cultivated Acreage&lt;/strong&gt;&lt;br/&gt;12.93 Million Acres (21.8%)')" onmouseleave="hideTooltip()" style="cursor:pointer;"></path><path d="M 380.653808150179 102.6318409226179 A 90 90 0 0 1 420.04624099293125 75.13085176964218 L 433.3590227738507 112.85047320535676 A 50 50 0 0 0 411.47433786121053 128.1288005125655 Z" fill="#d97706" stroke="#ffffff" stroke-width="2" onmouseenter="showTooltip(event, '&lt;strong&gt;KP Cultivated Acreage&lt;/strong&gt;&lt;br/&gt;5.1 Million Acres (8.6%)')" onmouseleave="hideTooltip()" style="cursor:pointer;"></path><path d="M 420.04624099293125 75.13085176964218 A 90 90 0 0 1 450.00000000000006 70 L 450.00000000000006 110 A 50 50 0 0 0 433.3590227738507 112.85047320535676 Z" fill="#e11d48" stroke="#ffffff" stroke-width="2" onmouseenter="showTooltip(event, '&lt;strong&gt;Balochistan Cultivated Acreage&lt;/strong&gt;&lt;br/&gt;3.2 Million Acres (5.4%)')" onmouseleave="hideTooltip()" style="cursor:pointer;"></path>
+            <circle cx="450" cy="160" r="50" fill="#ffffff"></circle>
+            <text x="450" y="154" text-anchor="middle" font-size="9" font-weight="700" fill="#64748b">CULTIVATED LAND</text>
+            <text x="450" y="170" text-anchor="middle" font-size="13" font-weight="800" fill="#073c3a">59.3M Acres</text>
+
+            <g transform="translate(350, 275)">
+              <rect x="0" y="0" width="8" height="8" fill="#15803d" rx="2"></rect>
+              <text x="12" y="8" font-size="9.5" fill="#334155">Punjab 64%</text>
+              <rect x="85" y="0" width="8" height="8" fill="#0284c7" rx="2"></rect>
+              <text x="97" y="8" font-size="9.5" fill="#334155">Sindh 22%</text>
+              <rect x="165" y="0" width="8" height="8" fill="#d97706" rx="2"></rect>
+              <text x="177" y="8" font-size="9.5" fill="#334155">KP 9%</text>
+              <rect x="230" y="0" width="8" height="8" fill="#e11d48" rx="2"></rect>
+              <text x="242" y="8" font-size="9.5" fill="#334155">BA 5%</text>
+            </g>
+          
+  </g>
+
+  <!-- Key Insight Box -->
+  <rect x="40" y="510" width="720" height="48" fill="#f8fafc" rx="6" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="54" y="527" font-size="10" font-weight="800" fill="#073c3a">KEY POLICY INSIGHT:</text>
+  <text x="54" y="543" font-size="11" fill="#334155">Key Policy Takeaway: Farm fragmentation crisis: Total farms surged +34.4% to 11.10 million while average farm size shrank from 6.4 to 5.3 acres. Punjab contains 64.2% of all cultivated land, followed by Sindh (21.8%),...</text>
+
+  <!-- Watermark Footer Banner (Two-Line Stacked: Zero Overlap) -->
+  <rect x="0" y="568" width="800" height="52" fill="#073c3a" rx="0"/>
+  <!-- Line 1: Primary Data Source (Full Canvas Width) -->
+  <text x="40" y="589" font-size="10.5" font-weight="500" fill="#99f6e4">Source: Pakistan Bureau of Statistics, 7th Agricultural Census 2024</text>
+  <!-- Line 2: Institution Branding &amp; Canonical Domain -->
+  <text x="40" y="606" font-size="10.5" font-weight="700" fill="#ffffff">Pakistan Provincial Reform Institute (PPRI)</text>
+  <text x="760" y="606" font-size="10.5" font-weight="600" fill="#5eead4" text-anchor="end">ppripakistan.github.io</text>
+</svg>

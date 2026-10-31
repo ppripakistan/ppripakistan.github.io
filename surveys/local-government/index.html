@@ -26,14 +26,14 @@
     <meta property="og:image:type" content="image/jpeg" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta property="og:image:alt" content="Stronger Local Government Survey - PPRI" />
+    <meta property="og:image:alt" content="Stronger Local Government Survey | Pakistan Provincial Reform Institute" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@PPRI_Pakistan" />
     <meta name="twitter:creator" content="@PPRI_Pakistan" />
     <meta name="twitter:title" content="Stronger Local Government Survey | PPRI" />
     <meta name="twitter:description" content="Tell us whether local governments need more power, funding and control over services in your area. Share your view with PPRI." />
     <meta name="twitter:image" content="https://ppripakistan.github.io/assets/images/previews/index.jpg" />
-    <meta name="twitter:image:alt" content="Stronger Local Government Survey - PPRI" />
+    <meta name="twitter:image:alt" content="Stronger Local Government Survey | Pakistan Provincial Reform Institute" />
     <link rel="icon" type="image/png" href="/favicon.png?v=2" />
     <link rel="icon" href="/favicon.ico?v=2" sizes="48x48" />
     <link rel="icon" href="/assets/images/brand/favicon.svg?v=2" type="image/svg+xml" />
@@ -80,10 +80,7 @@
       <div class="container navbar">
         <a class="brand" href="/">
           <img src="/assets/images/brand/ppri-logo-header.jpg" alt="PPRI logo" width="44" height="44" loading="eager" decoding="async" />
-          <span class="brand-text">
-            <strong>PPRI</strong>
-            <span>Pakistan Provincial Reform Institute</span>
-          </span>
+          <span class="brand-text"><strong>PPRI</strong> <span class="brand-sub">Pakistan Provincial Reform Institute</span></span>
         </a>
         <button
           class="menu-toggle"
@@ -116,15 +113,290 @@
         </nav>
 
         <div class="survey-flow-container">
-          <div id="surveyEngine" data-survey-engine data-survey-slug="local-government">
+                    <div id="surveyEngine" data-survey-engine data-survey-slug="local-government">
+            <div class="survey-step-card survey-intro-box">
+              <div class="survey-intro-icon">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="10" width="18" height="11" rx="1"></rect><path d="M12 2l9 6H3l9-6z"></path><path d="M7 14v4"></path><path d="M12 14v4"></path><path d="M17 14v4"></path></svg>
+              </div>
+              <h1>Stronger Local Government</h1>
+              <p class="desc">How effective is local government in your neighborhood? Share your experience with municipal services, local elections, and decision-making closer to citizens.</p>
+              
+              <div class="survey-intro-badges">
+                <span class="survey-intro-badge">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                  3–5 minutes
+                </span>
+                <span class="survey-intro-badge">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                  5 simple questions
+                </span>
+                <span class="survey-intro-badge">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                  No account required
+                </span>
+              </div>
+
+              <div>
+                <button type="button" class="survey-intro-btn" id="btnStartSurvey">
+                  Start survey &rarr;
+                </button>
+              </div>
+            </div>
+
             <noscript>
-              <div class="survey-step-card">
-                <h2>JavaScript Required</h2>
-                <p>Please enable JavaScript in your browser to complete this community questionnaire.</p>
+              <div class="survey-step-card" style="margin-top: 24px;">
+                <h2 style="color: #073c3a; margin-top: 0;">Community Questionnaire (Offline / Non-JS Form)</h2>
+                <p style="color: #475569; margin-bottom: 24px;">JavaScript is not enabled. You can review all questions below or email your answers directly to <a href="mailto:ppripakistan@gmail.com">ppripakistan@gmail.com</a>.</p>
+                <form action="mailto:ppripakistan@gmail.com" method="post" enctype="text/plain">
+
+              <fieldset style="border: 1px solid #e2e8f0; border-radius: 8px; padding: 18px 20px; margin-bottom: 20px; background: #ffffff;">
+                <legend style="font-weight: 700; color: #073c3a; padding: 0 8px; font-size: 1.05rem;">1. How easy is it to get help from your local government?</legend>
+                <div style="margin-top: 8px;">
+                  <div style="margin: 8px 0;">
+                    <label for="static_q1_0" style="cursor: pointer; display: flex; align-items: baseline; gap: 8px;">
+                      <input type="radio" id="static_q1_0" name="q1" value="Very easy" style="margin-top: 2px;" />
+                      <span>Very easy</span>
+                    </label>
+                  </div>
+                  <div style="margin: 8px 0;">
+                    <label for="static_q1_1" style="cursor: pointer; display: flex; align-items: baseline; gap: 8px;">
+                      <input type="radio" id="static_q1_1" name="q1" value="Somewhat easy" style="margin-top: 2px;" />
+                      <span>Somewhat easy</span>
+                    </label>
+                  </div>
+                  <div style="margin: 8px 0;">
+                    <label for="static_q1_2" style="cursor: pointer; display: flex; align-items: baseline; gap: 8px;">
+                      <input type="radio" id="static_q1_2" name="q1" value="Somewhat difficult" style="margin-top: 2px;" />
+                      <span>Somewhat difficult</span>
+                    </label>
+                  </div>
+                  <div style="margin: 8px 0;">
+                    <label for="static_q1_3" style="cursor: pointer; display: flex; align-items: baseline; gap: 8px;">
+                      <input type="radio" id="static_q1_3" name="q1" value="Very difficult" style="margin-top: 2px;" />
+                      <span>Very difficult</span>
+                    </label>
+                  </div>
+                  <div style="margin: 8px 0;">
+                    <label for="static_q1_4" style="cursor: pointer; display: flex; align-items: baseline; gap: 8px;">
+                      <input type="radio" id="static_q1_4" name="q1" value="I have not used local government services" style="margin-top: 2px;" />
+                      <span>I have not used local government services</span>
+                    </label>
+                  </div>
+                  <div style="margin: 8px 0;">
+                    <label for="static_q1_5" style="cursor: pointer; display: flex; align-items: baseline; gap: 8px;">
+                      <input type="radio" id="static_q1_5" name="q1" value="Not sure" style="margin-top: 2px;" />
+                      <span>Not sure</span>
+                    </label>
+                  </div>
+                  <div style="margin: 8px 0;">
+                    <label for="static_q1_6" style="cursor: pointer; display: flex; align-items: baseline; gap: 8px;">
+                      <input type="radio" id="static_q1_6" name="q1" value="Other (please specify)" style="margin-top: 2px;" />
+                      <span>Other (please specify)</span>
+                    </label>
+                  </div>
+                </div>
+              </fieldset>
+              <fieldset style="border: 1px solid #e2e8f0; border-radius: 8px; padding: 18px 20px; margin-bottom: 20px; background: #ffffff;">
+                <legend style="font-weight: 700; color: #073c3a; padding: 0 8px; font-size: 1.05rem;">2. Should local governments have more control over decisions affecting their areas?</legend>
+                <div style="margin-top: 8px;">
+                  <div style="margin: 8px 0;">
+                    <label for="static_q2_0" style="cursor: pointer; display: flex; align-items: baseline; gap: 8px;">
+                      <input type="radio" id="static_q2_0" name="q2" value="Yes, much more control" style="margin-top: 2px;" />
+                      <span>Yes, much more control</span>
+                    </label>
+                  </div>
+                  <div style="margin: 8px 0;">
+                    <label for="static_q2_1" style="cursor: pointer; display: flex; align-items: baseline; gap: 8px;">
+                      <input type="radio" id="static_q2_1" name="q2" value="Yes, a little more control" style="margin-top: 2px;" />
+                      <span>Yes, a little more control</span>
+                    </label>
+                  </div>
+                  <div style="margin: 8px 0;">
+                    <label for="static_q2_2" style="cursor: pointer; display: flex; align-items: baseline; gap: 8px;">
+                      <input type="radio" id="static_q2_2" name="q2" value="The current level is about right" style="margin-top: 2px;" />
+                      <span>The current level is about right</span>
+                    </label>
+                  </div>
+                  <div style="margin: 8px 0;">
+                    <label for="static_q2_3" style="cursor: pointer; display: flex; align-items: baseline; gap: 8px;">
+                      <input type="radio" id="static_q2_3" name="q2" value="No, less control" style="margin-top: 2px;" />
+                      <span>No, less control</span>
+                    </label>
+                  </div>
+                  <div style="margin: 8px 0;">
+                    <label for="static_q2_4" style="cursor: pointer; display: flex; align-items: baseline; gap: 8px;">
+                      <input type="radio" id="static_q2_4" name="q2" value="Not sure" style="margin-top: 2px;" />
+                      <span>Not sure</span>
+                    </label>
+                  </div>
+                  <div style="margin: 8px 0;">
+                    <label for="static_q2_5" style="cursor: pointer; display: flex; align-items: baseline; gap: 8px;">
+                      <input type="radio" id="static_q2_5" name="q2" value="Other (please specify)" style="margin-top: 2px;" />
+                      <span>Other (please specify)</span>
+                    </label>
+                  </div>
+                </div>
+              </fieldset>
+              <fieldset style="border: 1px solid #e2e8f0; border-radius: 8px; padding: 18px 20px; margin-bottom: 20px; background: #ffffff;">
+                <legend style="font-weight: 700; color: #073c3a; padding: 0 8px; font-size: 1.05rem;">3. Which service should local government manage more directly?</legend>
+                <div style="margin-top: 8px;">
+                  <div style="margin: 8px 0;">
+                    <label for="static_q3_0" style="cursor: pointer; display: flex; align-items: baseline; gap: 8px;">
+                      <input type="radio" id="static_q3_0" name="q3" value="Street repairs and local roads" style="margin-top: 2px;" />
+                      <span>Street repairs and local roads</span>
+                    </label>
+                  </div>
+                  <div style="margin: 8px 0;">
+                    <label for="static_q3_1" style="cursor: pointer; display: flex; align-items: baseline; gap: 8px;">
+                      <input type="radio" id="static_q3_1" name="q3" value="Waste collection and cleanliness" style="margin-top: 2px;" />
+                      <span>Waste collection and cleanliness</span>
+                    </label>
+                  </div>
+                  <div style="margin: 8px 0;">
+                    <label for="static_q3_2" style="cursor: pointer; display: flex; align-items: baseline; gap: 8px;">
+                      <input type="radio" id="static_q3_2" name="q3" value="Water supply and sanitation" style="margin-top: 2px;" />
+                      <span>Water supply and sanitation</span>
+                    </label>
+                  </div>
+                  <div style="margin: 8px 0;">
+                    <label for="static_q3_3" style="cursor: pointer; display: flex; align-items: baseline; gap: 8px;">
+                      <input type="radio" id="static_q3_3" name="q3" value="Local transport and traffic" style="margin-top: 2px;" />
+                      <span>Local transport and traffic</span>
+                    </label>
+                  </div>
+                  <div style="margin: 8px 0;">
+                    <label for="static_q3_4" style="cursor: pointer; display: flex; align-items: baseline; gap: 8px;">
+                      <input type="radio" id="static_q3_4" name="q3" value="Parks and public spaces" style="margin-top: 2px;" />
+                      <span>Parks and public spaces</span>
+                    </label>
+                  </div>
+                  <div style="margin: 8px 0;">
+                    <label for="static_q3_5" style="cursor: pointer; display: flex; align-items: baseline; gap: 8px;">
+                      <input type="radio" id="static_q3_5" name="q3" value="Local permits and building approvals" style="margin-top: 2px;" />
+                      <span>Local permits and building approvals</span>
+                    </label>
+                  </div>
+                  <div style="margin: 8px 0;">
+                    <label for="static_q3_6" style="cursor: pointer; display: flex; align-items: baseline; gap: 8px;">
+                      <input type="radio" id="static_q3_6" name="q3" value="Basic health or education services" style="margin-top: 2px;" />
+                      <span>Basic health or education services</span>
+                    </label>
+                  </div>
+                  <div style="margin: 8px 0;">
+                    <label for="static_q3_7" style="cursor: pointer; display: flex; align-items: baseline; gap: 8px;">
+                      <input type="radio" id="static_q3_7" name="q3" value="Other (please specify)" style="margin-top: 2px;" />
+                      <span>Other (please specify)</span>
+                    </label>
+                  </div>
+                </div>
+              </fieldset>
+              <fieldset style="border: 1px solid #e2e8f0; border-radius: 8px; padding: 18px 20px; margin-bottom: 20px; background: #ffffff;">
+                <legend style="font-weight: 700; color: #073c3a; padding: 0 8px; font-size: 1.05rem;">4. What most often stops local government from solving local problems?</legend>
+                <div style="margin-top: 8px;">
+                  <div style="margin: 8px 0;">
+                    <label for="static_q4_0" style="cursor: pointer; display: flex; align-items: baseline; gap: 8px;">
+                      <input type="radio" id="static_q4_0" name="q4" value="Not enough money" style="margin-top: 2px;" />
+                      <span>Not enough money</span>
+                    </label>
+                  </div>
+                  <div style="margin: 8px 0;">
+                    <label for="static_q4_1" style="cursor: pointer; display: flex; align-items: baseline; gap: 8px;">
+                      <input type="radio" id="static_q4_1" name="q4" value="Not enough decision-making power" style="margin-top: 2px;" />
+                      <span>Not enough decision-making power</span>
+                    </label>
+                  </div>
+                  <div style="margin: 8px 0;">
+                    <label for="static_q4_2" style="cursor: pointer; display: flex; align-items: baseline; gap: 8px;">
+                      <input type="radio" id="static_q4_2" name="q4" value="Not enough staff" style="margin-top: 2px;" />
+                      <span>Not enough staff</span>
+                    </label>
+                  </div>
+                  <div style="margin: 8px 0;">
+                    <label for="static_q4_3" style="cursor: pointer; display: flex; align-items: baseline; gap: 8px;">
+                      <input type="radio" id="static_q4_3" name="q4" value="Delays in getting approval from higher offices" style="margin-top: 2px;" />
+                      <span>Delays in getting approval from higher offices</span>
+                    </label>
+                  </div>
+                  <div style="margin: 8px 0;">
+                    <label for="static_q4_4" style="cursor: pointer; display: flex; align-items: baseline; gap: 8px;">
+                      <input type="radio" id="static_q4_4" name="q4" value="Political interference" style="margin-top: 2px;" />
+                      <span>Political interference</span>
+                    </label>
+                  </div>
+                  <div style="margin: 8px 0;">
+                    <label for="static_q4_5" style="cursor: pointer; display: flex; align-items: baseline; gap: 8px;">
+                      <input type="radio" id="static_q4_5" name="q4" value="Weak public oversight" style="margin-top: 2px;" />
+                      <span>Weak public oversight</span>
+                    </label>
+                  </div>
+                  <div style="margin: 8px 0;">
+                    <label for="static_q4_6" style="cursor: pointer; display: flex; align-items: baseline; gap: 8px;">
+                      <input type="radio" id="static_q4_6" name="q4" value="Not sure" style="margin-top: 2px;" />
+                      <span>Not sure</span>
+                    </label>
+                  </div>
+                  <div style="margin: 8px 0;">
+                    <label for="static_q4_7" style="cursor: pointer; display: flex; align-items: baseline; gap: 8px;">
+                      <input type="radio" id="static_q4_7" name="q4" value="Other (please specify)" style="margin-top: 2px;" />
+                      <span>Other (please specify)</span>
+                    </label>
+                  </div>
+                </div>
+              </fieldset>
+              <fieldset style="border: 1px solid #e2e8f0; border-radius: 8px; padding: 18px 20px; margin-bottom: 20px; background: #ffffff;">
+                <legend style="font-weight: 700; color: #073c3a; padding: 0 8px; font-size: 1.05rem;">5. What change would improve local government the most?</legend>
+                <div style="margin-top: 8px;">
+                  <div style="margin: 8px 0;">
+                    <label for="static_q5_0" style="cursor: pointer; display: flex; align-items: baseline; gap: 8px;">
+                      <input type="radio" id="static_q5_0" name="q5" value="Regular local elections" style="margin-top: 2px;" />
+                      <span>Regular local elections</span>
+                    </label>
+                  </div>
+                  <div style="margin: 8px 0;">
+                    <label for="static_q5_1" style="cursor: pointer; display: flex; align-items: baseline; gap: 8px;">
+                      <input type="radio" id="static_q5_1" name="q5" value="More reliable funding" style="margin-top: 2px;" />
+                      <span>More reliable funding</span>
+                    </label>
+                  </div>
+                  <div style="margin: 8px 0;">
+                    <label for="static_q5_2" style="cursor: pointer; display: flex; align-items: baseline; gap: 8px;">
+                      <input type="radio" id="static_q5_2" name="q5" value="More control over staff and services" style="margin-top: 2px;" />
+                      <span>More control over staff and services</span>
+                    </label>
+                  </div>
+                  <div style="margin: 8px 0;">
+                    <label for="static_q5_3" style="cursor: pointer; display: flex; align-items: baseline; gap: 8px;">
+                      <input type="radio" id="static_q5_3" name="q5" value="Better ways for people to report problems" style="margin-top: 2px;" />
+                      <span>Better ways for people to report problems</span>
+                    </label>
+                  </div>
+                  <div style="margin: 8px 0;">
+                    <label for="static_q5_4" style="cursor: pointer; display: flex; align-items: baseline; gap: 8px;">
+                      <input type="radio" id="static_q5_4" name="q5" value="Clear public reporting on spending and performance" style="margin-top: 2px;" />
+                      <span>Clear public reporting on spending and performance</span>
+                    </label>
+                  </div>
+                  <div style="margin: 8px 0;">
+                    <label for="static_q5_5" style="cursor: pointer; display: flex; align-items: baseline; gap: 8px;">
+                      <input type="radio" id="static_q5_5" name="q5" value="Not sure" style="margin-top: 2px;" />
+                      <span>Not sure</span>
+                    </label>
+                  </div>
+                  <div style="margin: 8px 0;">
+                    <label for="static_q5_6" style="cursor: pointer; display: flex; align-items: baseline; gap: 8px;">
+                      <input type="radio" id="static_q5_6" name="q5" value="Other (please specify)" style="margin-top: 2px;" />
+                      <span>Other (please specify)</span>
+                    </label>
+                  </div>
+                </div>
+              </fieldset>
+                  <div style="margin-top: 20px;">
+                    <button type="submit" class="survey-btn survey-btn-primary">Submit via Email</button>
+                  </div>
+                </form>
               </div>
             </noscript>
-          </div>
-        </div>
+          </div></div>
       </div>
     </main>
 
@@ -162,7 +434,7 @@
           <ul class="footer-links">
             <li><a href="/publications/#policy-papers">Policy Papers</a></li>
             <li><a href="/research/reports/">Reports</a></li>
-            <li><a href="/data/centre.html">Data Centre</a></li>
+            <li><a href="/data/centre.html">Data Observatory</a></li>
             <li><a href="/scenarios/">Governance Scenarios</a></li>
           </ul>
         </div>

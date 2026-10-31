@@ -192,18 +192,6 @@
     ]
   },
   {
-    "title": "Interactive Provincial Reform Survey",
-    "type": "Consultation",
-    "description": "Interactive multi-step questionnaire collecting citizen views on provincial structure and local government.",
-    "url": "/consultation/survey.html",
-    "tags": [
-      "survey",
-      "consultation",
-      "feedback",
-      "questionnaire"
-    ]
-  },
-  {
     "title": "Mission & Research Charter",
     "type": "About",
     "description": "The founding mission, non-partisanship charter, and 5 analytical pillars of PPRI.",
@@ -880,6 +868,337 @@
       "overseas employment",
       "visas",
       "survey"
+    ]
+  },
+  {
+    "title": "Visual Policy Analytics & Infographics Lab",
+    "type": "Interactive Visual Analytics",
+    "description": "16 publication-grade interactive infographics analyzing sovereign debt, provincial budget allocations, tax expenditures, district urbanization, and 35-year macroeconomic history.",
+    "url": "/insights/",
+    "tags": [
+      "visual analytics",
+      "infographics",
+      "debt",
+      "budget",
+      "provinces",
+      "macroeconomics",
+      "demographics",
+      "living standards"
+    ]
+  },
+  {
+    "title": "Pakistan Provincial Reform Institute (PPRI)",
+    "type": "Institutional Portal",
+    "description": "Non-partisan public policy research institute providing empirical data, cartographic scenario modeling, and constitutional legal analysis on provincial restructuring, federalism, public finance, and municipal devolution in Pakistan.",
+    "url": "/",
+    "tags": [
+      "ppri",
+      "pakistan",
+      "provincial reform",
+      "homepage",
+      "home",
+      "governance",
+      "federalism",
+      "data observatory",
+      "policy research"
+    ]
+  },
+  {
+    "title": "About PPRI — Pakistan Provincial Reform Institute",
+    "type": "Institutional",
+    "description": "Mission, methodology, governance structure, and institutional ethics of the Pakistan Provincial Reform Institute.",
+    "url": "/about.html",
+    "tags": [
+      "about",
+      "about ppri",
+      "mission",
+      "governance",
+      "ethics",
+      "independence",
+      "research team",
+      "institute"
+    ]
+  },
+  {
+    "title": "Contact PPRI — Inquiries & Institutional Desk",
+    "type": "Institutional",
+    "description": "Direct institutional contact desk for research inquiries, parliamentary briefings, media requests, and data partnerships with PPRI.",
+    "url": "/contact.html",
+    "tags": [
+      "contact",
+      "contact us",
+      "email",
+      "inquiries",
+      "media contact",
+      "desk",
+      "address"
+    ]
+  },
+  {
+    "title": "Privacy Policy",
+    "type": "Legal & Governance",
+    "description": "PPRI privacy policy regarding data collection, cookies, analytics, and user protections under CC-BY 4.0 open access guidelines.",
+    "url": "/privacy.html",
+    "tags": [
+      "privacy",
+      "privacy policy",
+      "data protection",
+      "cookies",
+      "terms",
+      "gdpr",
+      "legal"
+    ]
+  },
+  {
+    "title": "Terms of Use & Open Data License",
+    "type": "Legal & Governance",
+    "description": "Terms of use, Creative Commons Attribution 4.0 International (CC BY 4.0) licensing, and academic citation requirements for PPRI data and publications.",
+    "url": "/terms.html",
+    "tags": [
+      "terms",
+      "terms of use",
+      "licensing",
+      "cc-by",
+      "copyright",
+      "citation",
+      "legal"
+    ]
+  },
+  {
+    "title": "Pakistan Provinces Reform Hub: Administrative Units & Devolution",
+    "type": "Reform Framework",
+    "description": "Subnational governance reform framework: administrative scale analysis, 13-unit provincial structure, Article 239 constitutional process, and municipal devolution.",
+    "url": "/provinces/",
+    "tags": [
+      "provinces",
+      "provincial reform",
+      "13 provinces",
+      "devolution",
+      "administrative scale",
+      "article 239",
+      "nfc award",
+      "governance reform"
+    ]
+  },
+  {
+    "title": "Why Does Pakistan Need New Provinces? Administrative Scale & Evidence",
+    "type": "Reform Framework",
+    "description": "Empirical case for provincial restructuring: population density, administrative distance, citizen-to-government ratios, and service delivery bottlenecks.",
+    "url": "/provinces/why-provinces.html",
+    "tags": [
+      "why provinces",
+      "administrative scale",
+      "distance",
+      "service delivery",
+      "representation",
+      "governance",
+      "reform rationale"
+    ]
+  },
+  {
+    "title": "13-Province Model for Pakistan (PPRI-01): Proposed Administrative Boundaries",
+    "type": "Reform Framework",
+    "description": "Detailed division-by-division boundary and demographic framework for restructuring Pakistan into 13 balanced subnational administrative units.",
+    "url": "/provinces/proposed-models.html",
+    "tags": [
+      "13 province model",
+      "proposed models",
+      "boundaries",
+      "divisions",
+      "south punjab",
+      "bahawalpur",
+      "hazara",
+      "restructuring"
+    ]
+  },
+  {
+    "title": "Transition Framework: Administrative Cadres & 3-Year Implementation",
+    "type": "Reform Framework",
+    "description": "Three-year legal and administrative implementation roadmap: civil service cadring (PAS/PSP), High Court jurisdiction, and secretariat budget phasing.",
+    "url": "/provinces/transition-framework.html",
+    "tags": [
+      "transition framework",
+      "implementation",
+      "cost",
+      "civil service",
+      "secretariat",
+      "high court",
+      "timeline",
+      "budget"
+    ]
+  },
+  {
+    "title": "Policy Papers, Briefs & Research Publications",
+    "type": "Publications",
+    "description": "Complete catalog of PPRI flagship policy papers, technical working papers, research briefs, and empirical reports on Pakistan governance.",
+    "url": "/publications/",
+    "tags": [
+      "publications",
+      "policy papers",
+      "research briefs",
+      "working papers",
+      "reports",
+      "downloads",
+      "library"
+    ]
+  },
+  {
+    "title": "Subnational Governance Research Programme",
+    "type": "Research Programme",
+    "description": "Overview of PPRI's core research pillars: fiscal federalism, spatial inequality, administrative burden, and local council empowerment.",
+    "url": "/research/",
+    "tags": [
+      "research",
+      "research programme",
+      "pillars",
+      "methodology",
+      "working papers",
+      "policy research"
+    ]
+  },
+  {
+    "title": "Researchers, Fellows & Academic Contributors",
+    "type": "Institutional",
+    "description": "Profiles of research fellows, legal analysts, cartographers, and academic contributors guiding PPRI's empirical policy publications.",
+    "url": "/researchers/",
+    "tags": [
+      "researchers",
+      "fellows",
+      "contributors",
+      "faculty",
+      "authors",
+      "team",
+      "scholars"
+    ]
+  },
+  {
+    "title": "Policy, Constitutional & Statutory Resources",
+    "type": "Resources Hub",
+    "description": "Official statutory repository: Constitution of Pakistan, Provincial Local Government Acts, National Finance Commission (NFC) presidential orders, and legal texts.",
+    "url": "/resources/",
+    "tags": [
+      "resources",
+      "constitution",
+      "statutes",
+      "local government acts",
+      "nfc orders",
+      "legislation",
+      "laws"
+    ]
+  },
+  {
+    "title": "External Research & Official Statistical Repositories",
+    "type": "Resources Hub",
+    "description": "Curated bibliography of official national statistics (PBS, SBP, Ministry of Finance) and international multilateral governance datasets.",
+    "url": "/resources/external-resources.html",
+    "tags": [
+      "external resources",
+      "repositories",
+      "pbs",
+      "world bank",
+      "imf",
+      "state bank",
+      "data sources"
+    ]
+  },
+  {
+    "title": "Pakistan Governance Evidence & Primary Data Sources",
+    "type": "Data Observatory: Sources",
+    "description": "Documentation of primary official authorities, data hygiene protocols, and verification methodology across all PPRI data hubs.",
+    "url": "/sources/",
+    "tags": [
+      "sources",
+      "data sources",
+      "methodology",
+      "pbs census",
+      "official data",
+      "authorities",
+      "evidence"
+    ]
+  },
+  {
+    "title": "Research & Empirical Data Methodology",
+    "type": "Methodology",
+    "description": "Scientific standards, econometric models, cartographic GIS methods, and index formulation rules powering PPRI research.",
+    "url": "/methodology/",
+    "tags": [
+      "methodology",
+      "research standards",
+      "data hygiene",
+      "gis",
+      "econometrics",
+      "reproducibility"
+    ]
+  },
+  {
+    "title": "Press Releases & Media Statements",
+    "type": "Media",
+    "description": "Official PPRI press releases, policy commentaries, interview transcripts, and media statements on governance and provincial reform.",
+    "url": "/media/press.html",
+    "tags": [
+      "press",
+      "media",
+      "news",
+      "press releases",
+      "statements",
+      "briefings"
+    ]
+  },
+  {
+    "title": "Cartographic Maps & Territorial Analysis",
+    "type": "Cartography & GIS",
+    "description": "Interactive GIS portal mapping Pakistan's 130+ districts, division borders, population density heatmaps, and administrative travel distance isochrones.",
+    "url": "/maps/",
+    "tags": [
+      "maps",
+      "gis",
+      "cartography",
+      "interactive map",
+      "districts",
+      "divisions",
+      "travel distance"
+    ]
+  },
+  {
+    "title": "Administrative Map of Pakistan: Districts & Divisions",
+    "type": "Cartography & GIS",
+    "description": "Detailed vector map of Pakistan's current 4 provinces, 36 divisions, 130+ districts, and administrative boundaries.",
+    "url": "/maps/current/administrative.html",
+    "tags": [
+      "administrative map",
+      "pakistan map",
+      "divisions map",
+      "districts map",
+      "vector map"
+    ]
+  },
+  {
+    "title": "Interactive Scenario Lab — 13-Unit Administrative Reorganization",
+    "type": "Interactive Scenario Tool",
+    "description": "Simulate and test subnational reorganization scenarios: calculate Senate seat distributions, NFC divisible pool shares, and provincial population parity.",
+    "url": "/maps/scenarios/",
+    "tags": [
+      "scenario lab",
+      "simulator",
+      "nfc simulator",
+      "scenarios",
+      "13 units",
+      "senate",
+      "provinces"
+    ]
+  },
+  {
+    "title": "Frequently Asked Questions — Public Consultation & Reform",
+    "type": "Public Consultation",
+    "description": "Comprehensive answers to 20 key questions on provincial creation, Article 239 feasibility, NFC formula revisions, and local government empowerment.",
+    "url": "/consultation/frequently-asked-questions.html",
+    "tags": [
+      "faq",
+      "frequently asked questions",
+      "consultation",
+      "questions",
+      "answers",
+      "reform faq"
     ]
   },
   {
