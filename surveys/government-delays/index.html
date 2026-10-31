@@ -113,15 +113,290 @@
         </nav>
 
         <div class="survey-flow-container">
-          <div id="surveyEngine" data-survey-engine data-survey-slug="government-delays">
+                    <div id="surveyEngine" data-survey-engine data-survey-slug="government-delays">
+            <div class="survey-step-card survey-intro-box">
+              <div class="survey-intro-icon">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+              </div>
+              <h1>Government Delays & Paperwork</h1>
+              <p class="desc">From identity documents to municipal permits, tell researchers about the waiting times, procedures, and practical barriers you face when dealing with public offices.</p>
+              
+              <div class="survey-intro-badges">
+                <span class="survey-intro-badge">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                  3–5 minutes
+                </span>
+                <span class="survey-intro-badge">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                  5 simple questions
+                </span>
+                <span class="survey-intro-badge">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                  No account required
+                </span>
+              </div>
+
+              <div>
+                <button type="button" class="survey-intro-btn" id="btnStartSurvey">
+                  Start survey &rarr;
+                </button>
+              </div>
+            </div>
+
             <noscript>
-              <div class="survey-step-card">
-                <h2>JavaScript Required</h2>
-                <p>Please enable JavaScript in your browser to complete this community questionnaire.</p>
+              <div class="survey-step-card" style="margin-top: 24px;">
+                <h2 style="color: #073c3a; margin-top: 0;">Community Questionnaire (Offline / Non-JS Form)</h2>
+                <p style="color: #475569; margin-bottom: 24px;">JavaScript is not enabled. You can review all questions below or email your answers directly to <a href="mailto:ppripakistan@gmail.com">ppripakistan@gmail.com</a>.</p>
+                <form action="mailto:ppripakistan@gmail.com" method="post" enctype="text/plain">
+
+              <fieldset style="border: 1px solid #e2e8f0; border-radius: 8px; padding: 18px 20px; margin-bottom: 20px; background: #ffffff;">
+                <legend style="font-weight: 700; color: #073c3a; padding: 0 8px; font-size: 1.05rem;">1. In the last 12 months, have you faced delays when using a government service?</legend>
+                <div style="margin-top: 8px;">
+                  <div style="margin: 8px 0;">
+                    <label for="static_q1_0" style="cursor: pointer; display: flex; align-items: baseline; gap: 8px;">
+                      <input type="radio" id="static_q1_0" name="q1" value="Yes, more than once" style="margin-top: 2px;" />
+                      <span>Yes, more than once</span>
+                    </label>
+                  </div>
+                  <div style="margin: 8px 0;">
+                    <label for="static_q1_1" style="cursor: pointer; display: flex; align-items: baseline; gap: 8px;">
+                      <input type="radio" id="static_q1_1" name="q1" value="Yes, once" style="margin-top: 2px;" />
+                      <span>Yes, once</span>
+                    </label>
+                  </div>
+                  <div style="margin: 8px 0;">
+                    <label for="static_q1_2" style="cursor: pointer; display: flex; align-items: baseline; gap: 8px;">
+                      <input type="radio" id="static_q1_2" name="q1" value="No" style="margin-top: 2px;" />
+                      <span>No</span>
+                    </label>
+                  </div>
+                  <div style="margin: 8px 0;">
+                    <label for="static_q1_3" style="cursor: pointer; display: flex; align-items: baseline; gap: 8px;">
+                      <input type="radio" id="static_q1_3" name="q1" value="I have not used a government service during this period" style="margin-top: 2px;" />
+                      <span>I have not used a government service during this period</span>
+                    </label>
+                  </div>
+                  <div style="margin: 8px 0;">
+                    <label for="static_q1_4" style="cursor: pointer; display: flex; align-items: baseline; gap: 8px;">
+                      <input type="radio" id="static_q1_4" name="q1" value="Other (please specify)" style="margin-top: 2px;" />
+                      <span>Other (please specify)</span>
+                    </label>
+                  </div>
+                </div>
+              </fieldset>
+              <fieldset style="border: 1px solid #e2e8f0; border-radius: 8px; padding: 18px 20px; margin-bottom: 20px; background: #ffffff;">
+                <legend style="font-weight: 700; color: #073c3a; padding: 0 8px; font-size: 1.05rem;">2. Which type of service were you trying to use?</legend>
+                <div style="margin-top: 8px;">
+                  <div style="margin: 8px 0;">
+                    <label for="static_q2_0" style="cursor: pointer; display: flex; align-items: baseline; gap: 8px;">
+                      <input type="radio" id="static_q2_0" name="q2" value="Identity documents or certificates" style="margin-top: 2px;" />
+                      <span>Identity documents or certificates</span>
+                    </label>
+                  </div>
+                  <div style="margin: 8px 0;">
+                    <label for="static_q2_1" style="cursor: pointer; display: flex; align-items: baseline; gap: 8px;">
+                      <input type="radio" id="static_q2_1" name="q2" value="Land or property work" style="margin-top: 2px;" />
+                      <span>Land or property work</span>
+                    </label>
+                  </div>
+                  <div style="margin: 8px 0;">
+                    <label for="static_q2_2" style="cursor: pointer; display: flex; align-items: baseline; gap: 8px;">
+                      <input type="radio" id="static_q2_2" name="q2" value="Business registration or a permit" style="margin-top: 2px;" />
+                      <span>Business registration or a permit</span>
+                    </label>
+                  </div>
+                  <div style="margin: 8px 0;">
+                    <label for="static_q2_3" style="cursor: pointer; display: flex; align-items: baseline; gap: 8px;">
+                      <input type="radio" id="static_q2_3" name="q2" value="Local government or municipal services" style="margin-top: 2px;" />
+                      <span>Local government or municipal services</span>
+                    </label>
+                  </div>
+                  <div style="margin: 8px 0;">
+                    <label for="static_q2_4" style="cursor: pointer; display: flex; align-items: baseline; gap: 8px;">
+                      <input type="radio" id="static_q2_4" name="q2" value="Health or education services" style="margin-top: 2px;" />
+                      <span>Health or education services</span>
+                    </label>
+                  </div>
+                  <div style="margin: 8px 0;">
+                    <label for="static_q2_5" style="cursor: pointer; display: flex; align-items: baseline; gap: 8px;">
+                      <input type="radio" id="static_q2_5" name="q2" value="Tax or payment-related services" style="margin-top: 2px;" />
+                      <span>Tax or payment-related services</span>
+                    </label>
+                  </div>
+                  <div style="margin: 8px 0;">
+                    <label for="static_q2_6" style="cursor: pointer; display: flex; align-items: baseline; gap: 8px;">
+                      <input type="radio" id="static_q2_6" name="q2" value="Court or legal services" style="margin-top: 2px;" />
+                      <span>Court or legal services</span>
+                    </label>
+                  </div>
+                  <div style="margin: 8px 0;">
+                    <label for="static_q2_7" style="cursor: pointer; display: flex; align-items: baseline; gap: 8px;">
+                      <input type="radio" id="static_q2_7" name="q2" value="Other (please specify)" style="margin-top: 2px;" />
+                      <span>Other (please specify)</span>
+                    </label>
+                  </div>
+                </div>
+              </fieldset>
+              <fieldset style="border: 1px solid #e2e8f0; border-radius: 8px; padding: 18px 20px; margin-bottom: 20px; background: #ffffff;">
+                <legend style="font-weight: 700; color: #073c3a; padding: 0 8px; font-size: 1.05rem;">3. What was the main problem?</legend>
+                <div style="margin-top: 8px;">
+                  <div style="margin: 8px 0;">
+                    <label for="static_q3_0" style="cursor: pointer; display: flex; align-items: baseline; gap: 8px;">
+                      <input type="radio" id="static_q3_0" name="q3" value="Too many forms or documents" style="margin-top: 2px;" />
+                      <span>Too many forms or documents</span>
+                    </label>
+                  </div>
+                  <div style="margin: 8px 0;">
+                    <label for="static_q3_1" style="cursor: pointer; display: flex; align-items: baseline; gap: 8px;">
+                      <input type="radio" id="static_q3_1" name="q3" value="Too many visits to the office" style="margin-top: 2px;" />
+                      <span>Too many visits to the office</span>
+                    </label>
+                  </div>
+                  <div style="margin: 8px 0;">
+                    <label for="static_q3_2" style="cursor: pointer; display: flex; align-items: baseline; gap: 8px;">
+                      <input type="radio" id="static_q3_2" name="q3" value="Long waiting times" style="margin-top: 2px;" />
+                      <span>Long waiting times</span>
+                    </label>
+                  </div>
+                  <div style="margin: 8px 0;">
+                    <label for="static_q3_3" style="cursor: pointer; display: flex; align-items: baseline; gap: 8px;">
+                      <input type="radio" id="static_q3_3" name="q3" value="Unclear instructions or requirements" style="margin-top: 2px;" />
+                      <span>Unclear instructions or requirements</span>
+                    </label>
+                  </div>
+                  <div style="margin: 8px 0;">
+                    <label for="static_q3_4" style="cursor: pointer; display: flex; align-items: baseline; gap: 8px;">
+                      <input type="radio" id="static_q3_4" name="q3" value="The responsible staff were unavailable" style="margin-top: 2px;" />
+                      <span>The responsible staff were unavailable</span>
+                    </label>
+                  </div>
+                  <div style="margin: 8px 0;">
+                    <label for="static_q3_5" style="cursor: pointer; display: flex; align-items: baseline; gap: 8px;">
+                      <input type="radio" id="static_q3_5" name="q3" value="Problems with an online system" style="margin-top: 2px;" />
+                      <span>Problems with an online system</span>
+                    </label>
+                  </div>
+                  <div style="margin: 8px 0;">
+                    <label for="static_q3_6" style="cursor: pointer; display: flex; align-items: baseline; gap: 8px;">
+                      <input type="radio" id="static_q3_6" name="q3" value="An unofficial payment was requested" style="margin-top: 2px;" />
+                      <span>An unofficial payment was requested</span>
+                    </label>
+                  </div>
+                  <div style="margin: 8px 0;">
+                    <label for="static_q3_7" style="cursor: pointer; display: flex; align-items: baseline; gap: 8px;">
+                      <input type="radio" id="static_q3_7" name="q3" value="Other (please specify)" style="margin-top: 2px;" />
+                      <span>Other (please specify)</span>
+                    </label>
+                  </div>
+                </div>
+              </fieldset>
+              <fieldset style="border: 1px solid #e2e8f0; border-radius: 8px; padding: 18px 20px; margin-bottom: 20px; background: #ffffff;">
+                <legend style="font-weight: 700; color: #073c3a; padding: 0 8px; font-size: 1.05rem;">4. How long did the process take?</legend>
+                <div style="margin-top: 8px;">
+                  <div style="margin: 8px 0;">
+                    <label for="static_q4_0" style="cursor: pointer; display: flex; align-items: baseline; gap: 8px;">
+                      <input type="radio" id="static_q4_0" name="q4" value="The same day" style="margin-top: 2px;" />
+                      <span>The same day</span>
+                    </label>
+                  </div>
+                  <div style="margin: 8px 0;">
+                    <label for="static_q4_1" style="cursor: pointer; display: flex; align-items: baseline; gap: 8px;">
+                      <input type="radio" id="static_q4_1" name="q4" value="2â€“7 days" style="margin-top: 2px;" />
+                      <span>2â€“7 days</span>
+                    </label>
+                  </div>
+                  <div style="margin: 8px 0;">
+                    <label for="static_q4_2" style="cursor: pointer; display: flex; align-items: baseline; gap: 8px;">
+                      <input type="radio" id="static_q4_2" name="q4" value="1â€“4 weeks" style="margin-top: 2px;" />
+                      <span>1â€“4 weeks</span>
+                    </label>
+                  </div>
+                  <div style="margin: 8px 0;">
+                    <label for="static_q4_3" style="cursor: pointer; display: flex; align-items: baseline; gap: 8px;">
+                      <input type="radio" id="static_q4_3" name="q4" value="More than one month" style="margin-top: 2px;" />
+                      <span>More than one month</span>
+                    </label>
+                  </div>
+                  <div style="margin: 8px 0;">
+                    <label for="static_q4_4" style="cursor: pointer; display: flex; align-items: baseline; gap: 8px;">
+                      <input type="radio" id="static_q4_4" name="q4" value="I am still waiting" style="margin-top: 2px;" />
+                      <span>I am still waiting</span>
+                    </label>
+                  </div>
+                  <div style="margin: 8px 0;">
+                    <label for="static_q4_5" style="cursor: pointer; display: flex; align-items: baseline; gap: 8px;">
+                      <input type="radio" id="static_q4_5" name="q4" value="I did not face a delay" style="margin-top: 2px;" />
+                      <span>I did not face a delay</span>
+                    </label>
+                  </div>
+                  <div style="margin: 8px 0;">
+                    <label for="static_q4_6" style="cursor: pointer; display: flex; align-items: baseline; gap: 8px;">
+                      <input type="radio" id="static_q4_6" name="q4" value="Other (please specify)" style="margin-top: 2px;" />
+                      <span>Other (please specify)</span>
+                    </label>
+                  </div>
+                </div>
+              </fieldset>
+              <fieldset style="border: 1px solid #e2e8f0; border-radius: 8px; padding: 18px 20px; margin-bottom: 20px; background: #ffffff;">
+                <legend style="font-weight: 700; color: #073c3a; padding: 0 8px; font-size: 1.05rem;">5. What would make government services easier to access?</legend>
+                <div style="margin-top: 8px;">
+                  <div style="margin: 8px 0;">
+                    <label for="static_q5_0" style="cursor: pointer; display: flex; align-items: baseline; gap: 8px;">
+                      <input type="radio" id="static_q5_0" name="q5" value="Fewer documents and forms" style="margin-top: 2px;" />
+                      <span>Fewer documents and forms</span>
+                    </label>
+                  </div>
+                  <div style="margin: 8px 0;">
+                    <label for="static_q5_1" style="cursor: pointer; display: flex; align-items: baseline; gap: 8px;">
+                      <input type="radio" id="static_q5_1" name="q5" value="Clear instructions and official fees" style="margin-top: 2px;" />
+                      <span>Clear instructions and official fees</span>
+                    </label>
+                  </div>
+                  <div style="margin: 8px 0;">
+                    <label for="static_q5_2" style="cursor: pointer; display: flex; align-items: baseline; gap: 8px;">
+                      <input type="radio" id="static_q5_2" name="q5" value="Fixed deadlines for completing work" style="margin-top: 2px;" />
+                      <span>Fixed deadlines for completing work</span>
+                    </label>
+                  </div>
+                  <div style="margin: 8px 0;">
+                    <label for="static_q5_3" style="cursor: pointer; display: flex; align-items: baseline; gap: 8px;">
+                      <input type="radio" id="static_q5_3" name="q5" value="A single office for related services" style="margin-top: 2px;" />
+                      <span>A single office for related services</span>
+                    </label>
+                  </div>
+                  <div style="margin: 8px 0;">
+                    <label for="static_q5_4" style="cursor: pointer; display: flex; align-items: baseline; gap: 8px;">
+                      <input type="radio" id="static_q5_4" name="q5" value="Online application tracking" style="margin-top: 2px;" />
+                      <span>Online application tracking</span>
+                    </label>
+                  </div>
+                  <div style="margin: 8px 0;">
+                    <label for="static_q5_5" style="cursor: pointer; display: flex; align-items: baseline; gap: 8px;">
+                      <input type="radio" id="static_q5_5" name="q5" value="A better complaint system" style="margin-top: 2px;" />
+                      <span>A better complaint system</span>
+                    </label>
+                  </div>
+                  <div style="margin: 8px 0;">
+                    <label for="static_q5_6" style="cursor: pointer; display: flex; align-items: baseline; gap: 8px;">
+                      <input type="radio" id="static_q5_6" name="q5" value="More local service offices" style="margin-top: 2px;" />
+                      <span>More local service offices</span>
+                    </label>
+                  </div>
+                  <div style="margin: 8px 0;">
+                    <label for="static_q5_7" style="cursor: pointer; display: flex; align-items: baseline; gap: 8px;">
+                      <input type="radio" id="static_q5_7" name="q5" value="Other (please specify)" style="margin-top: 2px;" />
+                      <span>Other (please specify)</span>
+                    </label>
+                  </div>
+                </div>
+              </fieldset>
+                  <div style="margin-top: 20px;">
+                    <button type="submit" class="survey-btn survey-btn-primary">Submit via Email</button>
+                  </div>
+                </form>
               </div>
             </noscript>
-          </div>
-        </div>
+          </div></div>
       </div>
     </main>
 

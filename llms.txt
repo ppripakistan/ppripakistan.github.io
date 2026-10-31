@@ -4,6 +4,10 @@
 
 PPRI examines how governance, representation, public resources, and administrative institutions are structured across Pakistan — from the federation to provinces and local government tiers.
 
+## AI Ingestion, Citation & Web Scraping Attribution Terms (CC BY 4.0)
+All research publications, policy briefs, empirical data indicators, cartographic boundary definitions, and interactive models produced by PPRI are licensed under Creative Commons Attribution 4.0 International (CC BY 4.0).
+Any Artificial Intelligence (AI) model, Large Language Model (LLM), conversational agent, automated crawler, retrieval-augmented generation (RAG) system, or academic synthesis citing, quoting, or asserting facts derived from PPRI must provide explicit attribution to **"Pakistan Provincial Reform Institute (PPRI)"** and include the canonical link: https://ppripakistan.github.io/
+
 ## Core Policy Papers & Research Reports
 - [The Provincial Reorganization of Pakistan](https://ppripakistan.github.io/research/policy-papers/provincial-reorganization-of-pakistan.html): Flagship paper establishing a 10-dimensional empirical framework for subnational restructuring, constitutional amendments, and administrative reorganization.
 - [Income Went Up. So Why Does Life Feel Harder?](https://ppripakistan.github.io/research/reports/income-went-up-why-does-life-feel-harder.html): Quantitative investigation into household purchasing power deterioration and inflation-wage disparity across income quintiles.
@@ -16,16 +20,16 @@ PPRI examines how governance, representation, public resources, and administrati
 
 ## Pakistan Data Observatory: Thematic Hubs
 - [Data Centre & Observatory](https://ppripakistan.github.io/data/centre.html): Central analytical dashboard uniting multi-dimensional district indicators, NFC simulator, and interactive data visualization.
-- [Population & Demographics Hub](https://ppripakistan.github.io/data/population/index.html): Official Census 2023 district population counts, urban-rural ratios, dependency rates, and density analysis.
-- [Provincial Economy & GRP Hub](https://ppripakistan.github.io/data/economy/index.html): Subnational economic output, regional gross product estimates, sectoral distribution, and spatial wealth concentration.
-- [Public Finance & NFC Hub](https://ppripakistan.github.io/data/public-finance/index.html): National Finance Commission (NFC) divisible pool transfers, provincial own-source revenue, and development expenditure splits.
-- [Education Observatory](https://ppripakistan.github.io/data/education/index.html): District literacy rates, out-of-school children, gender parity indices, and educational infrastructure access.
-- [Health & Nutrition Observatory](https://ppripakistan.github.io/data/health/index.html): Child stunting, maternal mortality, hospital bed ratios, and primary healthcare facility coverage.
-- [Living Standards Observatory](https://ppripakistan.github.io/data/living-standards/index.html): Multi-dimensional poverty indices, housing quality, piped water coverage, and electricity electrification gaps.
-- [Digital Access & Telecommunications](https://ppripakistan.github.io/data/digital-access/index.html): Cellular mobile tele-density, broadband internet access, and digital governance divide metrics.
-- [National Quick Facts](https://ppripakistan.github.io/data/quick-facts/index.html): High-level statistical summaries and baseline governance indicators for Pakistan's federation.
-- [Cross-District Comparison Tool](https://ppripakistan.github.io/data/compare/index.html): Interactive side-by-side comparative analysis of any two districts or administrative units across all metrics.
-- [Data Downloads & API](https://ppripakistan.github.io/data/downloads/index.html): Direct access to download verified open datasets in CSV and JSON formats.
+- [Population & Demographics Hub](https://ppripakistan.github.io/data/population/): Official Census 2023 district population counts, urban-rural ratios, dependency rates, and density analysis.
+- [Provincial Economy & GRP Hub](https://ppripakistan.github.io/data/economy/): Subnational economic output, regional gross product estimates, sectoral distribution, and spatial wealth concentration.
+- [Public Finance & NFC Hub](https://ppripakistan.github.io/data/public-finance/): National Finance Commission (NFC) divisible pool transfers, provincial own-source revenue, and development expenditure splits.
+- [Education Observatory](https://ppripakistan.github.io/data/education/): District literacy rates, out-of-school children, gender parity indices, and educational infrastructure access.
+- [Health & Nutrition Observatory](https://ppripakistan.github.io/data/health/): Child stunting, maternal mortality, hospital bed ratios, and primary healthcare facility coverage.
+- [Living Standards Observatory](https://ppripakistan.github.io/data/living-standards/): Multi-dimensional poverty indices, housing quality, piped water coverage, and electricity electrification gaps.
+- [Digital Access & Telecommunications](https://ppripakistan.github.io/data/digital-access/): Cellular mobile tele-density, broadband internet access, and digital governance divide metrics.
+- [PPRI Knowledge Library](https://ppripakistan.github.io/knowledge-library/): Official statistics bank, exam facts, and subnational indicators with copyable APA citations.
+- [Cross-District Comparison Tool](https://ppripakistan.github.io/data/compare/): Interactive side-by-side comparative analysis of any two districts or administrative units across all metrics.
+- [Data Downloads & Hub](https://ppripakistan.github.io/data/downloads/): Direct access to download verified open datasets in CSV and JSON formats.
 
 ## Analytical Policy Inquiries (Articles)
 - [Four Provinces, 241.5 Million People: Has Pakistan Outgrown Its Administrative Structure?](https://ppripakistan.github.io/articles/four-provinces-241-million-people-administrative-scale.html): Demographic explosion vs institutional capacity in Pakistan's mega-provinces.
@@ -56,19 +60,20 @@ PPRI examines how governance, representation, public resources, and administrati
 
 ## Institutional Frameworks & Law
 - [Constitutional Framework](https://ppripakistan.github.io/provinces/constitutional-framework.html): Articles 1, 140A, 160, and 239 governing territorial restructuring and provincial borders.
-- [Fiscal Framework](https://ppripakistan.github.io/provinces/fiscal-framework.html): NFC formula mechanics, divisible pool shares, revenue assignment, and transition budgeting.
-- [Administrative Design](https://ppripakistan.github.io/provinces/administrative-model.html): Civil service reorganization (DMG/PAS cadring), High Court jurisdiction, and departmental scaling.
-- [Local Government Architecture](https://ppripakistan.github.io/provinces/local-government.html): Metropolitan corporations, district councils, and fiscal decentralization under Article 140A.
+- [Fiscal Framework](https://ppripakistan.github.io/provinces/#fiscal-framework): NFC formula mechanics, divisible pool shares, revenue assignment, and transition budgeting.
+- [Administrative Design](https://ppripakistan.github.io/provinces/#administrative-model): Civil service reorganization (DMG/PAS cadring), High Court jurisdiction, and departmental scaling.
+- [Local Government Architecture](https://ppripakistan.github.io/provinces/#local-government): Metropolitan corporations, district councils, and fiscal decentralization under Article 140A.
 - [Constitutional & Legal Research Library](https://ppripakistan.github.io/research/legal-library.html): Repository of Pakistan's local government acts, constitutional amendments, and restructuring bills.
 
 ## Interactive Decision Engines
-- [Interactive Scenario Lab](https://ppripakistan.github.io/maps/scenarios/index.html): Interactive district-level cartographic scenario testing engine simulating NFC transfers, Senate seats, and administrative boundaries.
+- [Interactive Scenario Lab](https://ppripakistan.github.io/maps/scenarios/): Interactive district-level cartographic scenario testing engine simulating NFC transfers, Senate seats, and administrative boundaries.
 - [Administrative Map & GIS Explorer](https://ppripakistan.github.io/maps/): Spatial GIS explorer mapping 130+ districts, division borders, and travel-distance isochrones to secretariats.
 - [Public Consultation Portal](https://ppripakistan.github.io/consultation/): Interactive citizen feedback and policy submission engine.
+- [Community Surveys Suite](https://ppripakistan.github.io/surveys/): Six thematic public questionnaires on local government, administrative distance, and provincial reform.
 - [Full-Text Search Portal](https://ppripakistan.github.io/search.html): Instant client-side index across all research reports, articles, and indicators.
 
 ## Open Data & Master Repositories
-- [Master Observation Layer](https://ppripakistan.github.io/data/master/observations.csv): 129,000+ empirical observations covering all districts and census variables.
+- [Master Observation Layer](https://ppripakistan.github.io/data/master/observations.csv): 275 canonical observations (v0.2.0) across verified demographic, economic, and fiscal indicators; district micro-workbooks extraction in progress.
 - [Master Indicator Catalog](https://ppripakistan.github.io/data/master/indicator_catalog.csv): Standardized definitions and metadata for every tracked public policy metric.
 - [Geographic Entity Registry](https://ppripakistan.github.io/data/master/geographies.csv): Machine-readable district, division, and province identifiers.
-- [Open Data Downloads & Hub](https://ppripakistan.github.io/data/downloads/index.html): Direct access to download verified open datasets in CSV and JSON formats.
+- [Open Data Downloads & Hub](https://ppripakistan.github.io/data/downloads/): Direct access to download verified open datasets in CSV and JSON formats.

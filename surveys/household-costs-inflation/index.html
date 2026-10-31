@@ -113,15 +113,314 @@
         </nav>
 
         <div class="survey-flow-container">
-          <div id="surveyEngine" data-survey-engine data-survey-slug="household-costs-inflation">
+                    <div id="surveyEngine" data-survey-engine data-survey-slug="household-costs-inflation">
+            <div class="survey-step-card survey-intro-box">
+              <div class="survey-intro-icon">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+              </div>
+              <h1>Household Costs & Inflation</h1>
+              <p class="desc">How are grocery prices, utility bills, and transport costs affecting family budgets? Share how your household manages expenses and what relief would help most.</p>
+              
+              <div class="survey-intro-badges">
+                <span class="survey-intro-badge">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                  3–5 minutes
+                </span>
+                <span class="survey-intro-badge">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                  5 simple questions
+                </span>
+                <span class="survey-intro-badge">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                  No account required
+                </span>
+              </div>
+
+              <div>
+                <button type="button" class="survey-intro-btn" id="btnStartSurvey">
+                  Start survey &rarr;
+                </button>
+              </div>
+            </div>
+
             <noscript>
-              <div class="survey-step-card">
-                <h2>JavaScript Required</h2>
-                <p>Please enable JavaScript in your browser to complete this community questionnaire.</p>
+              <div class="survey-step-card" style="margin-top: 24px;">
+                <h2 style="color: #073c3a; margin-top: 0;">Community Questionnaire (Offline / Non-JS Form)</h2>
+                <p style="color: #475569; margin-bottom: 24px;">JavaScript is not enabled. You can review all questions below or email your answers directly to <a href="mailto:ppripakistan@gmail.com">ppripakistan@gmail.com</a>.</p>
+                <form action="mailto:ppripakistan@gmail.com" method="post" enctype="text/plain">
+
+              <fieldset style="border: 1px solid #e2e8f0; border-radius: 8px; padding: 18px 20px; margin-bottom: 20px; background: #ffffff;">
+                <legend style="font-weight: 700; color: #073c3a; padding: 0 8px; font-size: 1.05rem;">1. Over the last three months, how easy or difficult has it been to pay for your household's basic needs?</legend>
+                <div style="margin-top: 8px;">
+                  <div style="margin: 8px 0;">
+                    <label for="static_q1_0" style="cursor: pointer; display: flex; align-items: baseline; gap: 8px;">
+                      <input type="radio" id="static_q1_0" name="q1" value="Very easy" style="margin-top: 2px;" />
+                      <span>Very easy</span>
+                    </label>
+                  </div>
+                  <div style="margin: 8px 0;">
+                    <label for="static_q1_1" style="cursor: pointer; display: flex; align-items: baseline; gap: 8px;">
+                      <input type="radio" id="static_q1_1" name="q1" value="Somewhat easy" style="margin-top: 2px;" />
+                      <span>Somewhat easy</span>
+                    </label>
+                  </div>
+                  <div style="margin: 8px 0;">
+                    <label for="static_q1_2" style="cursor: pointer; display: flex; align-items: baseline; gap: 8px;">
+                      <input type="radio" id="static_q1_2" name="q1" value="Neither easy nor difficult" style="margin-top: 2px;" />
+                      <span>Neither easy nor difficult</span>
+                    </label>
+                  </div>
+                  <div style="margin: 8px 0;">
+                    <label for="static_q1_3" style="cursor: pointer; display: flex; align-items: baseline; gap: 8px;">
+                      <input type="radio" id="static_q1_3" name="q1" value="Somewhat difficult" style="margin-top: 2px;" />
+                      <span>Somewhat difficult</span>
+                    </label>
+                  </div>
+                  <div style="margin: 8px 0;">
+                    <label for="static_q1_4" style="cursor: pointer; display: flex; align-items: baseline; gap: 8px;">
+                      <input type="radio" id="static_q1_4" name="q1" value="Very difficult" style="margin-top: 2px;" />
+                      <span>Very difficult</span>
+                    </label>
+                  </div>
+                  <div style="margin: 8px 0;">
+                    <label for="static_q1_5" style="cursor: pointer; display: flex; align-items: baseline; gap: 8px;">
+                      <input type="radio" id="static_q1_5" name="q1" value="Prefer not to say" style="margin-top: 2px;" />
+                      <span>Prefer not to say</span>
+                    </label>
+                  </div>
+                  <div style="margin: 8px 0;">
+                    <label for="static_q1_6" style="cursor: pointer; display: flex; align-items: baseline; gap: 8px;">
+                      <input type="radio" id="static_q1_6" name="q1" value="Other (please specify)" style="margin-top: 2px;" />
+                      <span>Other (please specify)</span>
+                    </label>
+                  </div>
+                </div>
+              </fieldset>
+              <fieldset style="border: 1px solid #e2e8f0; border-radius: 8px; padding: 18px 20px; margin-bottom: 20px; background: #ffffff;">
+                <legend style="font-weight: 700; color: #073c3a; padding: 0 8px; font-size: 1.05rem;">2. Which expense puts the most pressure on your household budget?</legend>
+                <div style="margin-top: 8px;">
+                  <div style="margin: 8px 0;">
+                    <label for="static_q2_0" style="cursor: pointer; display: flex; align-items: baseline; gap: 8px;">
+                      <input type="radio" id="static_q2_0" name="q2" value="Food and groceries" style="margin-top: 2px;" />
+                      <span>Food and groceries</span>
+                    </label>
+                  </div>
+                  <div style="margin: 8px 0;">
+                    <label for="static_q2_1" style="cursor: pointer; display: flex; align-items: baseline; gap: 8px;">
+                      <input type="radio" id="static_q2_1" name="q2" value="Electricity or gas bills" style="margin-top: 2px;" />
+                      <span>Electricity or gas bills</span>
+                    </label>
+                  </div>
+                  <div style="margin: 8px 0;">
+                    <label for="static_q2_2" style="cursor: pointer; display: flex; align-items: baseline; gap: 8px;">
+                      <input type="radio" id="static_q2_2" name="q2" value="Rent or housing costs" style="margin-top: 2px;" />
+                      <span>Rent or housing costs</span>
+                    </label>
+                  </div>
+                  <div style="margin: 8px 0;">
+                    <label for="static_q2_3" style="cursor: pointer; display: flex; align-items: baseline; gap: 8px;">
+                      <input type="radio" id="static_q2_3" name="q2" value="Transport or fuel" style="margin-top: 2px;" />
+                      <span>Transport or fuel</span>
+                    </label>
+                  </div>
+                  <div style="margin: 8px 0;">
+                    <label for="static_q2_4" style="cursor: pointer; display: flex; align-items: baseline; gap: 8px;">
+                      <input type="radio" id="static_q2_4" name="q2" value="Health care and medicines" style="margin-top: 2px;" />
+                      <span>Health care and medicines</span>
+                    </label>
+                  </div>
+                  <div style="margin: 8px 0;">
+                    <label for="static_q2_5" style="cursor: pointer; display: flex; align-items: baseline; gap: 8px;">
+                      <input type="radio" id="static_q2_5" name="q2" value="Education and school costs" style="margin-top: 2px;" />
+                      <span>Education and school costs</span>
+                    </label>
+                  </div>
+                  <div style="margin: 8px 0;">
+                    <label for="static_q2_6" style="cursor: pointer; display: flex; align-items: baseline; gap: 8px;">
+                      <input type="radio" id="static_q2_6" name="q2" value="Water and other utility bills" style="margin-top: 2px;" />
+                      <span>Water and other utility bills</span>
+                    </label>
+                  </div>
+                  <div style="margin: 8px 0;">
+                    <label for="static_q2_7" style="cursor: pointer; display: flex; align-items: baseline; gap: 8px;">
+                      <input type="radio" id="static_q2_7" name="q2" value="Other (please specify)" style="margin-top: 2px;" />
+                      <span>Other (please specify)</span>
+                    </label>
+                  </div>
+                </div>
+              </fieldset>
+              <fieldset style="border: 1px solid #e2e8f0; border-radius: 8px; padding: 18px 20px; margin-bottom: 20px; background: #ffffff;">
+                <legend style="font-weight: 700; color: #073c3a; padding: 0 8px; font-size: 1.05rem;">3. Compared with three months ago, how much money is left after paying for basic needs?</legend>
+                <div style="margin-top: 8px;">
+                  <div style="margin: 8px 0;">
+                    <label for="static_q3_0" style="cursor: pointer; display: flex; align-items: baseline; gap: 8px;">
+                      <input type="radio" id="static_q3_0" name="q3" value="Much less" style="margin-top: 2px;" />
+                      <span>Much less</span>
+                    </label>
+                  </div>
+                  <div style="margin: 8px 0;">
+                    <label for="static_q3_1" style="cursor: pointer; display: flex; align-items: baseline; gap: 8px;">
+                      <input type="radio" id="static_q3_1" name="q3" value="A little less" style="margin-top: 2px;" />
+                      <span>A little less</span>
+                    </label>
+                  </div>
+                  <div style="margin: 8px 0;">
+                    <label for="static_q3_2" style="cursor: pointer; display: flex; align-items: baseline; gap: 8px;">
+                      <input type="radio" id="static_q3_2" name="q3" value="About the same" style="margin-top: 2px;" />
+                      <span>About the same</span>
+                    </label>
+                  </div>
+                  <div style="margin: 8px 0;">
+                    <label for="static_q3_3" style="cursor: pointer; display: flex; align-items: baseline; gap: 8px;">
+                      <input type="radio" id="static_q3_3" name="q3" value="More than before" style="margin-top: 2px;" />
+                      <span>More than before</span>
+                    </label>
+                  </div>
+                  <div style="margin: 8px 0;">
+                    <label for="static_q3_4" style="cursor: pointer; display: flex; align-items: baseline; gap: 8px;">
+                      <input type="radio" id="static_q3_4" name="q3" value="Not sure" style="margin-top: 2px;" />
+                      <span>Not sure</span>
+                    </label>
+                  </div>
+                  <div style="margin: 8px 0;">
+                    <label for="static_q3_5" style="cursor: pointer; display: flex; align-items: baseline; gap: 8px;">
+                      <input type="radio" id="static_q3_5" name="q3" value="Prefer not to say" style="margin-top: 2px;" />
+                      <span>Prefer not to say</span>
+                    </label>
+                  </div>
+                  <div style="margin: 8px 0;">
+                    <label for="static_q3_6" style="cursor: pointer; display: flex; align-items: baseline; gap: 8px;">
+                      <input type="radio" id="static_q3_6" name="q3" value="Other (please specify)" style="margin-top: 2px;" />
+                      <span>Other (please specify)</span>
+                    </label>
+                  </div>
+                </div>
+              </fieldset>
+              <fieldset style="border: 1px solid #e2e8f0; border-radius: 8px; padding: 18px 20px; margin-bottom: 20px; background: #ffffff;">
+                <legend style="font-weight: 700; color: #073c3a; padding: 0 8px; font-size: 1.05rem;">4. What have you had to do because of higher living costs?</legend>
+                <div style="margin-top: 8px;">
+                  <div style="margin: 8px 0;">
+                    <label for="static_q4_0" style="cursor: pointer; display: flex; align-items: baseline; gap: 8px;">
+                      <input type="radio" id="static_q4_0" name="q4" value="Buy less or choose cheaper products" style="margin-top: 2px;" />
+                      <span>Buy less or choose cheaper products</span>
+                    </label>
+                  </div>
+                  <div style="margin: 8px 0;">
+                    <label for="static_q4_1" style="cursor: pointer; display: flex; align-items: baseline; gap: 8px;">
+                      <input type="radio" id="static_q4_1" name="q4" value="Use savings" style="margin-top: 2px;" />
+                      <span>Use savings</span>
+                    </label>
+                  </div>
+                  <div style="margin: 8px 0;">
+                    <label for="static_q4_2" style="cursor: pointer; display: flex; align-items: baseline; gap: 8px;">
+                      <input type="radio" id="static_q4_2" name="q4" value="Borrow money" style="margin-top: 2px;" />
+                      <span>Borrow money</span>
+                    </label>
+                  </div>
+                  <div style="margin: 8px 0;">
+                    <label for="static_q4_3" style="cursor: pointer; display: flex; align-items: baseline; gap: 8px;">
+                      <input type="radio" id="static_q4_3" name="q4" value="Delay paying bills" style="margin-top: 2px;" />
+                      <span>Delay paying bills</span>
+                    </label>
+                  </div>
+                  <div style="margin: 8px 0;">
+                    <label for="static_q4_4" style="cursor: pointer; display: flex; align-items: baseline; gap: 8px;">
+                      <input type="radio" id="static_q4_4" name="q4" value="Reduce travel" style="margin-top: 2px;" />
+                      <span>Reduce travel</span>
+                    </label>
+                  </div>
+                  <div style="margin: 8px 0;">
+                    <label for="static_q4_5" style="cursor: pointer; display: flex; align-items: baseline; gap: 8px;">
+                      <input type="radio" id="static_q4_5" name="q4" value="Delay health care or education expenses" style="margin-top: 2px;" />
+                      <span>Delay health care or education expenses</span>
+                    </label>
+                  </div>
+                  <div style="margin: 8px 0;">
+                    <label for="static_q4_6" style="cursor: pointer; display: flex; align-items: baseline; gap: 8px;">
+                      <input type="radio" id="static_q4_6" name="q4" value="Work extra hours or look for extra income" style="margin-top: 2px;" />
+                      <span>Work extra hours or look for extra income</span>
+                    </label>
+                  </div>
+                  <div style="margin: 8px 0;">
+                    <label for="static_q4_7" style="cursor: pointer; display: flex; align-items: baseline; gap: 8px;">
+                      <input type="radio" id="static_q4_7" name="q4" value="Nothing has changed for me" style="margin-top: 2px;" />
+                      <span>Nothing has changed for me</span>
+                    </label>
+                  </div>
+                  <div style="margin: 8px 0;">
+                    <label for="static_q4_8" style="cursor: pointer; display: flex; align-items: baseline; gap: 8px;">
+                      <input type="radio" id="static_q4_8" name="q4" value="Prefer not to say" style="margin-top: 2px;" />
+                      <span>Prefer not to say</span>
+                    </label>
+                  </div>
+                  <div style="margin: 8px 0;">
+                    <label for="static_q4_9" style="cursor: pointer; display: flex; align-items: baseline; gap: 8px;">
+                      <input type="radio" id="static_q4_9" name="q4" value="Other (please specify)" style="margin-top: 2px;" />
+                      <span>Other (please specify)</span>
+                    </label>
+                  </div>
+                </div>
+              </fieldset>
+              <fieldset style="border: 1px solid #e2e8f0; border-radius: 8px; padding: 18px 20px; margin-bottom: 20px; background: #ffffff;">
+                <legend style="font-weight: 700; color: #073c3a; padding: 0 8px; font-size: 1.05rem;">5. What would help your household the most?</legend>
+                <div style="margin-top: 8px;">
+                  <div style="margin: 8px 0;">
+                    <label for="static_q5_0" style="cursor: pointer; display: flex; align-items: baseline; gap: 8px;">
+                      <input type="radio" id="static_q5_0" name="q5" value="More affordable food" style="margin-top: 2px;" />
+                      <span>More affordable food</span>
+                    </label>
+                  </div>
+                  <div style="margin: 8px 0;">
+                    <label for="static_q5_1" style="cursor: pointer; display: flex; align-items: baseline; gap: 8px;">
+                      <input type="radio" id="static_q5_1" name="q5" value="Lower electricity and gas bills" style="margin-top: 2px;" />
+                      <span>Lower electricity and gas bills</span>
+                    </label>
+                  </div>
+                  <div style="margin: 8px 0;">
+                    <label for="static_q5_2" style="cursor: pointer; display: flex; align-items: baseline; gap: 8px;">
+                      <input type="radio" id="static_q5_2" name="q5" value="Better pay or more income" style="margin-top: 2px;" />
+                      <span>Better pay or more income</span>
+                    </label>
+                  </div>
+                  <div style="margin: 8px 0;">
+                    <label for="static_q5_3" style="cursor: pointer; display: flex; align-items: baseline; gap: 8px;">
+                      <input type="radio" id="static_q5_3" name="q5" value="Financial support for households that need it" style="margin-top: 2px;" />
+                      <span>Financial support for households that need it</span>
+                    </label>
+                  </div>
+                  <div style="margin: 8px 0;">
+                    <label for="static_q5_4" style="cursor: pointer; display: flex; align-items: baseline; gap: 8px;">
+                      <input type="radio" id="static_q5_4" name="q5" value="Lower transport costs" style="margin-top: 2px;" />
+                      <span>Lower transport costs</span>
+                    </label>
+                  </div>
+                  <div style="margin: 8px 0;">
+                    <label for="static_q5_5" style="cursor: pointer; display: flex; align-items: baseline; gap: 8px;">
+                      <input type="radio" id="static_q5_5" name="q5" value="More affordable housing" style="margin-top: 2px;" />
+                      <span>More affordable housing</span>
+                    </label>
+                  </div>
+                  <div style="margin: 8px 0;">
+                    <label for="static_q5_6" style="cursor: pointer; display: flex; align-items: baseline; gap: 8px;">
+                      <input type="radio" id="static_q5_6" name="q5" value="Lower health care or education costs" style="margin-top: 2px;" />
+                      <span>Lower health care or education costs</span>
+                    </label>
+                  </div>
+                  <div style="margin: 8px 0;">
+                    <label for="static_q5_7" style="cursor: pointer; display: flex; align-items: baseline; gap: 8px;">
+                      <input type="radio" id="static_q5_7" name="q5" value="Other (please specify)" style="margin-top: 2px;" />
+                      <span>Other (please specify)</span>
+                    </label>
+                  </div>
+                </div>
+              </fieldset>
+                  <div style="margin-top: 20px;">
+                    <button type="submit" class="survey-btn survey-btn-primary">Submit via Email</button>
+                  </div>
+                </form>
               </div>
             </noscript>
-          </div>
-        </div>
+          </div></div>
       </div>
     </main>
 

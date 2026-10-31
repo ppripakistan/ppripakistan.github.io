@@ -58,7 +58,7 @@ const PPRI_NAV = [
       ["Digital Access & Teledensity", "/data/digital-access/"],
       ["Provinces Comparator", "/data/compare/"],
       ["Open Data Downloads", "/data/downloads/"],
-      ["CSS Fast Facts Matrix", "/data/quick-facts/"],
+      ["CSS Fast Facts Matrix", "/knowledge-library/"],
     ],
   },
   {
@@ -109,14 +109,14 @@ const PPRI_NAV_UR = [
     href: "/ur/research/",
     items: [
       ["تحقیقاتی مرکز", "/ur/research/"],
-      ["پالیسی پیپرز", "/publications/#policy-papers"],
+      ["پالیسی پیپرز (انگریزی)", "/publications/#policy-papers"],
       ["تحقیقی رپورٹس (خلاصہ جات)", "/ur/research/reports/"],
       ["آمدن اور مہنگائی رپورٹ (REP-01)", "/ur/research/reports/income-went-up-why-does-life-feel-harder.html"],
       ["بیوروکریسی کا بوجھ (REP-02)", "/ur/research/reports/price-of-a-simple-task-pakistan-bureaucracy-cost.html"],
       ["اضلاعی تفریق (REP-03)", "/ur/research/reports/same-country-different-life-district-access.html"],
       ["کرپشن بطور نجی ٹیکس (REP-04)", "/ur/research/reports/bribe-you-cant-see-corruption-private-tax.html"],
       ["مالیاتی اختیارات کی تفویض (REP-05)", "/ur/research/reports/does-money-work-better-spent-closer-to-people.html"],
-      ["تمام تحقیقی مضامین", "/articles/"],
+      ["تمام تحقیقی مضامین (انگریزی)", "/articles/"],
     ],
   },
   {
@@ -124,11 +124,11 @@ const PPRI_NAV_UR = [
     href: "/ur/provinces/",
     items: [
       ["صوبائی تنظیم نو جائزہ", "/ur/provinces/"],
-      ["تجویز کردہ 13 انتظامی یونٹس", "/provinces/proposed-models.html"],
-      ["آرٹیکل 140 اے اور بلدیات", "/scenarios/#local-government"],
-      ["مالیاتی فریم ورک و این ایف سی", "/provinces/#fiscal-framework"],
-      ["آئینی طریقہ کار (آرٹیکل 239)", "/provinces/constitutional-framework.html"],
-      ["انتظامی ماڈل", "/provinces/#administrative-model"],
+      ["تجویز کردہ 13 انتظامی یونٹس (انگریزی)", "/provinces/proposed-models.html"],
+      ["آرٹیکل 140 اے اور بلدیات (انگریزی)", "/scenarios/#local-government"],
+      ["مالیاتی فریم ورک و این ایف سی (انگریزی)", "/provinces/#fiscal-framework"],
+      ["آئینی طریقہ کار (آرٹیکل 239) (انگریزی)", "/provinces/constitutional-framework.html"],
+      ["انتظامی ماڈل (انگریزی)", "/provinces/#administrative-model"],
     ],
   },
   {
@@ -136,12 +136,12 @@ const PPRI_NAV_UR = [
     href: "/ur/data/centre.html",
     items: [
       ["مرکزی ڈیٹا آبزرویٹری", "/ur/data/centre.html"],
-      ["آبادی اور شہر", "/data/population/"],
-      ["معیشت اور مہنگائی", "/data/economy/"],
-      ["پبلک فنانس اور این ایف سی", "/data/public-finance/"],
-      ["صوبائی موازنہ", "/data/compare/"],
-      ["اوپن ڈیٹا ڈاؤنلوڈز", "/data/downloads/"],
-      ["ڈیٹا ڈکشنری", "/data/master/DATA_DICTIONARY.md"],
+      ["آبادی اور شہر (انگریزی)", "/data/population/"],
+      ["معیشت اور مہنگائی (انگریزی)", "/data/economy/"],
+      ["پبلک فنانس اور این ایف سی (انگریزی)", "/data/public-finance/"],
+      ["صوبائی موازنہ (انگریزی)", "/data/compare/"],
+      ["اوپن ڈیٹا ڈاؤنلوڈز (انگریزی)", "/data/downloads/"],
+      ["ڈیٹا ڈکشنری (انگریزی)", "/data/master/DATA_DICTIONARY.md"],
     ],
   },
   {
@@ -150,8 +150,8 @@ const PPRI_NAV_UR = [
     items: [
       ["مشاورتی مرکز", "/ur/consultation/"],
       ["قومی حکمرانی سروے (آن لائن فارم)", "/ur/consultation/survey.html"],
-      ["پالیسی تجاویز جمع کرائیں", "/consultation/submissions.html"],
-      ["عام پوچھے جانے والے سوالات", "/consultation/frequently-asked-questions.html"],
+      ["پالیسی تجاویز جمع کرائیں (انگریزی)", "/consultation/submissions.html"],
+      ["عام پوچھے جانے والے سوالات (انگریزی)", "/consultation/frequently-asked-questions.html"],
     ],
   },
   {
@@ -159,11 +159,11 @@ const PPRI_NAV_UR = [
     href: "/ur/about.html",
     items: [
       ["ادارے کا تعارف", "/ur/about.html"],
-      ["اغراض و مقاصد و منشور", "/mission.html"],
-      ["محققین اور فیکلٹی", "/researchers/"],
-      ["شفافیت اور اخلاقیات", "/transparency.html"],
-      ["تحقیقی طریقہ کار", "/methodology/"],
-      ["رابطہ کریں", "/contact.html"],
+      ["اغراض و مقاصد و منشور (انگریزی)", "/mission.html"],
+      ["محققین اور فیکلٹی (انگریزی)", "/researchers/"],
+      ["شفافیت اور اخلاقیات (انگریزی)", "/transparency.html"],
+      ["تحقیقی طریقہ کار (انگریزی)", "/methodology/"],
+      ["رابطہ کریں (انگریزی)", "/contact.html"],
     ],
   },
 ];
@@ -209,7 +209,8 @@ function getLanguageCounterpartUrl() {
       "/research/reports/does-money-work-better-spent-closer-to-people.html": "/ur/research/reports/does-money-work-better-spent-closer-to-people.html",
     };
     const norm = currentPath.replace(/\/$/, "") || "/";
-    const targetUrl = exactUrduMatches[currentPath] || exactUrduMatches[norm] || "/ur/index.html";
+    const targetUrl = exactUrduMatches[currentPath] || exactUrduMatches[norm];
+    if (!targetUrl) return null;
     return { targetUrl, targetLabel: "اردو", targetLang: "ur" };
   }
 }
@@ -375,15 +376,17 @@ function buildEnhancedNavigation(nav) {
     fragment.appendChild(search);
   }
 
-  // Language Switcher Button
+  // Language Switcher Button (only shown when a direct translation exists)
   const counterpart = getLanguageCounterpartUrl();
-  const langSwitch = document.createElement("a");
-  langSwitch.href = counterpart.targetUrl;
-  langSwitch.className = "lang-switch-btn";
-  langSwitch.setAttribute("hreflang", counterpart.targetLang);
-  langSwitch.setAttribute("lang", counterpart.targetLang);
-  langSwitch.textContent = counterpart.targetLabel;
-  fragment.appendChild(langSwitch);
+  if (counterpart && counterpart.targetUrl) {
+    const langSwitch = document.createElement("a");
+    langSwitch.href = counterpart.targetUrl;
+    langSwitch.className = "lang-switch-btn";
+    langSwitch.setAttribute("hreflang", counterpart.targetLang);
+    langSwitch.setAttribute("lang", counterpart.targetLang);
+    langSwitch.textContent = counterpart.targetLabel;
+    fragment.appendChild(langSwitch);
+  }
 
   nav.addEventListener("mouseleave", () => {
     if (window.innerWidth > 900) {

@@ -53,7 +53,7 @@ PPRI combines rigorous quantitative datasets from official census bulletins, pro
 | **Analytical Articles** | **25 In-Depth Policy Inquiries** | Empirical investigations into Hazara, South Punjab, secondary cities, & scale |
 | **Thematic Data Hubs** | **8 Interactive Observatory Portals** | Dedicated statistical hubs: Population, Economy, Finance, Education, Health, Living Standards, Tech |
 | **Interactive Decision Engines** | **4 Client-Side Explorers** | Scenario Lab, Data Observatory, Interactive Map, Evidence Library |
-| **Master Observation Layer** | **129,000+ Structured Observations** | Machine-readable multi-dimensional dataset (`data/master/observations.csv`) |
+| **Master Observation Layer** | **275 Canonical Observations (v0.2.0)** | Machine-readable multi-dimensional dataset (`data/master/observations.csv`) |
 | **Curated CSV Repositories** | **12 Clean CSV Datasets** | Public interest time-series, quintile breakdowns, and fiscal transfers |
 | **Machine-Readable LLM Index** | **Full AI Grounding (`/llms.txt`)** | Standardized context indexing for LLMs, automated agents, and AI researchers |
 | **Platform Delivery** | **Zero-Dependency Static Web** | 100% client-side HTML5/CSS3/ES6 execution, sub-second load, GitHub Pages |
@@ -233,7 +233,7 @@ PPRI adheres strictly to open science and data reproducibility principles. All q
 
 ### 1. Master Data Layer (`data/master/`)
 For econometric modeling and national policy analysis:
-* [`data/master/observations.csv`](data/master/observations.csv): 129,000+ validated observation rows mapping district metrics across time.
+* [`data/master/observations.csv`](data/master/observations.csv): 275 canonical observation rows (v0.2.0) across verified indicators; full district micro-workbooks extraction in progress.
 * [`data/master/indicator_catalog.csv`](data/master/indicator_catalog.csv): Standardized definitions and metadata for every tracked public policy indicator.
 * [`data/master/geographies.csv`](data/master/geographies.csv): Machine-readable district, division, and province identifiers.
 * [`data/master/DATA_DICTIONARY.md`](data/master/DATA_DICTIONARY.md): Complete data dictionary, column types, and validation schemas.
