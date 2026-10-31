@@ -148,6 +148,9 @@ def sync_all():
         'provinces/**/*.html',
         'media/**/*.html',
         'ur/**/*.html',
+        'insights/*.html',
+        'surveys/**/*.html',
+        'knowledge-library/**/*.html',
     ]
 
     all_files = []

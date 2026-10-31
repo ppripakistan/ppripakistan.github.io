@@ -12,7 +12,7 @@ from PIL import Image
 ROOT_DIR = Path(__file__).resolve().parent.parent
 BRAND_DIR = ROOT_DIR / "assets" / "images" / "brand"
 RESEARCH_DIR = ROOT_DIR / "assets" / "images" / "research"
-IGNORED_DIRS = {'.git', '.vscode', 'node_modules', '.gemini', 'scratch_inspect', 'PPRI_Pakistan_GK_Knowledge_Library_Content_Pack'}
+IGNORED_DIRS = {'.git', '.vscode', 'node_modules', '.gemini', 'scratch_inspect', 'scratch', 'archive', 'PPRI_Pakistan_GK_Knowledge_Library_Content_Pack'}
 def verify_all():
     print("=" * 75)
     print("  PPRI FAVICON, SOCIAL SHARING & TECHNICAL SEO VERIFICATION")
@@ -206,13 +206,17 @@ def verify_all():
     print("\n[Check 6/6] Verifying Google Tag (gtag.js) & JSON-LD...")
     missing_gtag = []
     for p in html_files:
+        rel = str(p.relative_to(ROOT_DIR)).replace("\\", "/")
         text = p.read_text(encoding="utf-8")
+        is_stub = 'http-equiv="refresh"' in text or "http-equiv='refresh'" in text
+        if is_stub or rel == "404.html":
+            continue
         if "G-9C2NZV6BYF" not in text:
-            missing_gtag.append(str(p.relative_to(ROOT_DIR)).replace("\\", "/"))
+            missing_gtag.append(rel)
     if missing_gtag:
         errors.append(f"HTML pages missing Google tag: {missing_gtag}")
     else:
-        print("  [PASS] 100% of 120 HTML pages retain the Google tag (gtag.js) snippet.")
+        print("  [PASS] 100% of active content HTML pages retain the Google tag (gtag.js) snippet.")
     # Verify index.html WebSite JSON-LD
     index_html = ROOT_DIR / "index.html"
     if index_html.exists():
