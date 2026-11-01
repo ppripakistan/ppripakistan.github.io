@@ -18,6 +18,11 @@ Any Artificial Intelligence (AI) model, Large Language Model (LLM), conversation
 - [Administrative Scale & Representation](https://ppripakistan.github.io/research/briefs/administrative-scale.html): Policy brief analyzing Pakistan's citizen-to-government ratio of 60M:1 per province vs international federal democracies.
 - [Provinces & Local Government: Subnational Fiscal Architecture](https://ppripakistan.github.io/research/working-papers/provinces-local-government.html): Working paper evaluating Article 140A devolution failures and local council revenue models.
 
+## PPRI Constitution Explorer: Complete 1973 Constitution & Salient Features
+- [Constitution Explorer & Salient Features](https://ppripakistan.github.io/constitution/): Foundational overview of the 1973 Constitution (Fourteenth Edition baseline, amended to Nov 2025), key salient features, and interactive structural navigator of Parts I–XII and Schedules.
+- [Complete 280-Article Interactive Reader](https://ppripakistan.github.io/constitution/reader/): Searchable clause-by-clause reader covering all 280 Articles and 5 Schedules of the Constitution, providing plain-language salient points alongside statutory clauses.
+- [Constitutional Amendments Register (1–27)](https://ppripakistan.github.io/constitution/amendments/): Authoritative audit of all 27 numbered amendment positions: 24 enacted Acts of Parliament, historical un-enacted proposal gaps (9, 11, 15), and pending parliamentary bills.
+
 ## Pakistan Data Observatory: Thematic Hubs
 - [Data Centre & Observatory](https://ppripakistan.github.io/data/centre.html): Central analytical dashboard uniting multi-dimensional district indicators, NFC simulator, and interactive data visualization.
 - [Population & Demographics Hub](https://ppripakistan.github.io/data/population/): Official Census 2023 district population counts, urban-rural ratios, dependency rates, and density analysis.

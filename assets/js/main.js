@@ -1,5 +1,20 @@
 const PPRI_NAV = [
   {
+    label: "Constitution",
+    href: "/constitution/",
+    items: [
+      ["Constitution Explorer Hub", "/constitution/"],
+      ["Overview & Salient Features", "/constitution/#salient-features"],
+      ["Interactive 280-Article Reader", "/constitution/reader/"],
+      ["Constitutional Architecture Atlas", "/constitution/#architecture-atlas"],
+      ["Amendments Register (1–27)", "/constitution/amendments/"],
+      ["Fundamental Rights (Arts 8–28)", "/constitution/reader/?part=Part+II"],
+      ["Provincial Devolution (Art. 140A)", "/constitution/reader/?article=140A"],
+      ["Fiscal Federalism (Art. 160)", "/constitution/reader/?article=160"],
+      ["Amendment Threshold (Art. 239)", "/constitution/reader/?article=239"],
+    ],
+  },
+  {
     label: "Research",
     href: "/research/",
     items: [
@@ -104,6 +119,20 @@ const PPRI_NAV = [
 ];
 
 const PPRI_NAV_UR = [
+  {
+    label: "دستورِ پاکستان",
+    href: "/constitution/",
+    items: [
+      ["دستور پاکستان ایکسپلورر", "/constitution/"],
+      ["اہم خدوخال و تعارف", "/constitution/#salient-features"],
+      ["مکمل 280 آرٹیکلز ریڈر", "/constitution/reader/"],
+      ["آئینی ترامیم کا ریکارڈ (1–27)", "/constitution/amendments/"],
+      ["بنیادی حقوق (آرٹیکلز 8–28)", "/constitution/reader/?part=Part+II"],
+      ["مقامی حکومتیں (آرٹیکل 140A)", "/constitution/reader/?article=140A"],
+      ["این ایف سی و وسائل (آرٹیکل 160)", "/constitution/reader/?article=160"],
+      ["صوبائی حدود کی تبدیلی (آرٹیکل 239)", "/constitution/reader/?article=239"],
+    ],
+  },
   {
     label: "تحقیق",
     href: "/ur/research/",

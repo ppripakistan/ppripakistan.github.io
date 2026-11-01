@@ -1,0 +1,624 @@
+[
+  {
+    "position": 1,
+    "amendment_number": 1,
+    "official_title": "Constitution (First Amendment) Act, 1974",
+    "short_title": "First Amendment (Redefinition of Frontiers & Bangladesh Recognition)",
+    "assent_date": "1974-05-04",
+    "gazette_date": "1974-05-08",
+    "status": "enacted",
+    "key_changes": [
+      "Amended Article 1 to recognize the reality of the separation of East Pakistan (Bangladesh) and redefine the boundaries of Pakistan.",
+      "Amended Articles 8, 17, 61, 101, 127, 193, 199, 200, 209, 212, 250, 259, 260, 272, and the First Schedule."
+    ],
+    "substantive_impact": "Adjusted the constitutional boundaries of the federation following the 1971 war and provided powers to regulate political parties acting against sovereignty or integrity.",
+    "affected_articles": [
+      "1",
+      "8",
+      "17",
+      "61",
+      "101",
+      "127",
+      "193",
+      "199",
+      "200",
+      "209",
+      "212",
+      "250",
+      "259",
+      "260",
+      "272"
+    ]
+  },
+  {
+    "position": 2,
+    "amendment_number": 2,
+    "official_title": "Constitution (Second Amendment) Act, 1974",
+    "short_title": "Second Amendment (Definition of Non-Muslim)",
+    "assent_date": "1974-09-17",
+    "gazette_date": "1974-09-21",
+    "status": "enacted",
+    "key_changes": [
+      "Amended Article 106 to declare persons of the Ahmadi / Lahori group as non-Muslim minority for constitutional and electoral purposes.",
+      "Amended Article 260 to insert a formal definition of non-Muslim."
+    ],
+    "substantive_impact": "Defined theological minority status in constitutional law, establishing statutory parameters for representation in assemblies.",
+    "affected_articles": [
+      "106",
+      "260"
+    ]
+  },
+  {
+    "position": 3,
+    "amendment_number": 3,
+    "official_title": "Constitution (Third Amendment) Act, 1975",
+    "short_title": "Third Amendment (Preventive Detention Rules)",
+    "assent_date": "1975-02-13",
+    "gazette_date": "1975-02-18",
+    "status": "enacted",
+    "key_changes": [
+      "Amended Article 10 to extend the period for which preventive detention without review can be maintained from one month to three months.",
+      "Amended Article 232 regarding the proclamation of Emergency."
+    ],
+    "substantive_impact": "Strengthened executive powers of preventive detention and reduced procedural safeguards during state security operations.",
+    "affected_articles": [
+      "10",
+      "232"
+    ]
+  },
+  {
+    "position": 4,
+    "amendment_number": 4,
+    "official_title": "Constitution (Fourth Amendment) Act, 1975",
+    "short_title": "Fourth Amendment (Minority Seats & High Court Powers)",
+    "assent_date": "1975-11-21",
+    "gazette_date": "1975-11-25",
+    "status": "enacted",
+    "key_changes": [
+      "Amended Articles 8, 17, 19, 51, 54, 106, 199, and 271.",
+      "Curtailed the power of High Courts under Article 199 to grant bail or prohibit preventive detention.",
+      "Allocated 6 additional reserved seats for non-Muslim minorities in the National Assembly."
+    ],
+    "substantive_impact": "Curbed judicial writ jurisdiction over preventive detentions while formalizing reserved minority representation in the federal parliament.",
+    "affected_articles": [
+      "8",
+      "17",
+      "19",
+      "51",
+      "54",
+      "106",
+      "199",
+      "271"
+    ]
+  },
+  {
+    "position": 5,
+    "amendment_number": 5,
+    "official_title": "Constitution (Fifth Amendment) Act, 1976",
+    "short_title": "Fifth Amendment (Judicial Tenures & High Court Separation)",
+    "assent_date": "1976-09-13",
+    "gazette_date": "1976-09-16",
+    "status": "enacted",
+    "key_changes": [
+      "Amended Articles 101, 160, 175, 179, 180, 187, 192, 195, 196, 199, 200, 206, 212, 260, 280, and the First and Fifth Schedules.",
+      "Fixed fixed tenures for Chief Justice of Pakistan (5 years) and High Court Chief Justices (4 years).",
+      "Separated the Sindh & Balochistan High Court into two distinct High Courts."
+    ],
+    "substantive_impact": "Restructured high judicial tenures and established separate High Courts for Sindh and Balochistan.",
+    "affected_articles": [
+      "101",
+      "160",
+      "175",
+      "179",
+      "180",
+      "187",
+      "192",
+      "195",
+      "196",
+      "199",
+      "200",
+      "206",
+      "212",
+      "260",
+      "280"
+    ]
+  },
+  {
+    "position": 6,
+    "amendment_number": 6,
+    "official_title": "Constitution (Sixth Amendment) Act, 1976",
+    "short_title": "Sixth Amendment (Chief Justice Retirement Age Extension)",
+    "assent_date": "1976-12-31",
+    "gazette_date": "1977-01-04",
+    "status": "enacted",
+    "key_changes": [
+      "Amended Articles 179 and 195 to permit a Chief Justice of Pakistan or a High Court Chief Justice to serve out their 5-year or 4-year term even if reaching superannuation age (65 or 62)."
+    ],
+    "substantive_impact": "Allowed sitting Chief Justices to complete executive tenure appointments beyond normal constitutional retirement ages.",
+    "affected_articles": [
+      "179",
+      "195"
+    ]
+  },
+  {
+    "position": 7,
+    "amendment_number": 7,
+    "official_title": "Constitution (Seventh Amendment) Act, 1977",
+    "short_title": "Seventh Amendment (Prime Minister Referendum Mechanism)",
+    "assent_date": "1977-05-16",
+    "gazette_date": "1977-05-21",
+    "status": "enacted",
+    "key_changes": [
+      "Inserted Article 96A providing for a national referendum to obtain a vote of confidence in the Prime Minister.",
+      "Amended Article 245 to bar judicial review of Armed Forces actions called in aid of civil power."
+    ],
+    "substantive_impact": "Introduced a direct referendum mechanism during the 1977 political crisis and insulated military law-and-order actions from High Court writ jurisdiction.",
+    "affected_articles": [
+      "96A",
+      "101",
+      "245"
+    ]
+  },
+  {
+    "position": 8,
+    "amendment_number": 8,
+    "official_title": "Constitution (Eighth Amendment) Act, 1985",
+    "short_title": "Eighth Amendment (Restoration of Constitution & Article 58(2)(b))",
+    "assent_date": "1985-11-09",
+    "gazette_date": "1985-11-11",
+    "status": "enacted",
+    "key_changes": [
+      "Indemnified and validated martial law orders, President's Orders, and the Revival of the Constitution Order (RCO, 1985).",
+      "Inserted Article 58(2)(b) empowering the President to dissolve the National Assembly at discretion.",
+      "Converted the parliamentary system into a semi-presidential dyarchy; created Article 270A indemnity."
+    ],
+    "substantive_impact": "Fundamentally altered Pakistan's constitutional structure by creating presidential discretionary dissolution powers that dominated 1988–1997 governance.",
+    "affected_articles": [
+      "48",
+      "51",
+      "56",
+      "58",
+      "59",
+      "60",
+      "75",
+      "90",
+      "91",
+      "101",
+      "105",
+      "106",
+      "112",
+      "116",
+      "130",
+      "144",
+      "152A",
+      "270A"
+    ]
+  },
+  {
+    "position": 9,
+    "amendment_number": null,
+    "official_title": "Constitution (Ninth Amendment) Bill, 1985 (Un-enacted)",
+    "short_title": "Ninth Amendment Bill (Shariah as Supreme Law — Lapsed)",
+    "assent_date": null,
+    "gazette_date": null,
+    "status": "un_enacted_bill",
+    "key_changes": [
+      "Proposed amending Article 2 and Article 203B to establish Islamic injunctions and Shariah as the supreme law of the land.",
+      "Passed by the Senate in 1986 but lapsed when the National Assembly was dissolved in 1988."
+    ],
+    "substantive_impact": "Never enacted. Lapsed on dissolution of the National Assembly.",
+    "affected_articles": [
+      "2",
+      "203B",
+      "203D"
+    ]
+  },
+  {
+    "position": 10,
+    "amendment_number": 10,
+    "official_title": "Constitution (Tenth Amendment) Act, 1987",
+    "short_title": "Tenth Amendment (National Assembly & Senate Working Days)",
+    "assent_date": "1987-03-25",
+    "gazette_date": "1987-03-29",
+    "status": "enacted",
+    "key_changes": [
+      "Amended Articles 54 and 61 to reduce the minimum required working days of the National Assembly from 160 to 130 days per year."
+    ],
+    "substantive_impact": "Adjusted the parliamentary calendar and required annual sitting days for the federal legislature.",
+    "affected_articles": [
+      "54",
+      "61"
+    ]
+  },
+  {
+    "position": 11,
+    "amendment_number": null,
+    "official_title": "Constitution (Eleventh Amendment) Bill, 1989 (Un-enacted)",
+    "short_title": "Eleventh Amendment Bill (Restoration of Women's Reserved Seats — Lapsed)",
+    "assent_date": null,
+    "gazette_date": null,
+    "status": "un_enacted_bill",
+    "key_changes": [
+      "Introduced in the Senate in 1989 to restore reserved seats for women in the National Assembly following the expiration of the original 10-year / three-elections constitutional sunset.",
+      "Never enacted into law."
+    ],
+    "substantive_impact": "Never enacted. Women's reserved seats were later re-established by the Legal Framework Order, 2002 and 17th Amendment.",
+    "affected_articles": [
+      "51",
+      "106"
+    ]
+  },
+  {
+    "position": 12,
+    "amendment_number": 12,
+    "official_title": "Constitution (Twelfth Amendment) Act, 1991",
+    "short_title": "Twelfth Amendment (Special Courts for Speedy Trials)",
+    "assent_date": "1991-07-28",
+    "gazette_date": "1991-07-28",
+    "status": "enacted",
+    "key_changes": [
+      "Inserted Article 212B establishing Special Courts for Speedy Trials for heinous offences.",
+      "Contained an automatic 3-year sunset clause, after which Article 212B stood repealed."
+    ],
+    "substantive_impact": "Established temporary parallel judicial tribunals for trial of heinous crimes, which expired in 1994.",
+    "affected_articles": [
+      "212B"
+    ]
+  },
+  {
+    "position": 13,
+    "amendment_number": 13,
+    "official_title": "Constitution (Thirteenth Amendment) Act, 1997",
+    "short_title": "Thirteenth Amendment (Repeal of Article 58(2)(b))",
+    "assent_date": "1997-04-03",
+    "gazette_date": "1997-04-04",
+    "status": "enacted",
+    "key_changes": [
+      "Omitted Article 58(2)(b) and Article 112(2)(b), stripping the President and Provincial Governors of the power to dissolve assemblies at discretion.",
+      "Restored parliamentary supremacy by making the President act strictly on Prime Minister's advice in appointments of Governors and Service Chiefs."
+    ],
+    "substantive_impact": "Restored parliamentary primacy by eliminating discretionary dissolution powers of the President.",
+    "affected_articles": [
+      "58",
+      "101",
+      "112",
+      "130",
+      "243"
+    ]
+  },
+  {
+    "position": 14,
+    "amendment_number": 14,
+    "official_title": "Constitution (Fourteenth Amendment) Act, 1997",
+    "short_title": "Fourteenth Amendment (Anti-Defection Law — Article 63A)",
+    "assent_date": "1997-07-03",
+    "gazette_date": "1997-07-04",
+    "status": "enacted",
+    "key_changes": [
+      "Inserted Article 63A to disqualify parliamentarians from assembly membership if they defect, breach party discipline, or vote against party directions in prime ministerial election, confidence votes, or money bills."
+    ],
+    "substantive_impact": "Created stringent constitutional anti-defection prohibitions to eliminate floor-crossing and preserve party discipline.",
+    "affected_articles": [
+      "63A"
+    ]
+  },
+  {
+    "position": 15,
+    "amendment_number": null,
+    "official_title": "Constitution (Fifteenth Amendment) Bill, 1998 (Un-enacted)",
+    "short_title": "Fifteenth Amendment Bill (Shariah Supremacy — Lapsed)",
+    "assent_date": null,
+    "gazette_date": null,
+    "status": "un_enacted_bill",
+    "key_changes": [
+      "Proposed inserting Article 2B to declare the Holy Quran and Sunnah as the supreme law of Pakistan and empower the federal government to enforce Shariah directives.",
+      "Passed by the National Assembly in October 1998; never passed by the Senate prior to the 1999 military takeover."
+    ],
+    "substantive_impact": "Never enacted. Lapsed following the October 1999 military coup.",
+    "affected_articles": [
+      "2B"
+    ]
+  },
+  {
+    "position": 16,
+    "amendment_number": 16,
+    "official_title": "Constitution (Sixteenth Amendment) Act, 1999",
+    "short_title": "Sixteenth Amendment (Extension of Quota System to 2013)",
+    "assent_date": "1999-08-03",
+    "gazette_date": "1999-08-05",
+    "status": "enacted",
+    "key_changes": [
+      "Amended Article 27 to extend the affirmative action quota system for provincial and regional representation in federal civil services from 20 years to 40 years (until 2013)."
+    ],
+    "substantive_impact": "Preserved regional and provincial quotas in federal public service recruitment to ensure under-represented provinces retained representation.",
+    "affected_articles": [
+      "27"
+    ]
+  },
+  {
+    "position": 17,
+    "amendment_number": 17,
+    "official_title": "Constitution (Seventeenth Amendment) Act, 2003",
+    "short_title": "Seventeenth Amendment (Validation of LFO 2002 & Restoration of 58(2)(b))",
+    "assent_date": "2003-12-31",
+    "gazette_date": "2003-12-31",
+    "status": "enacted",
+    "key_changes": [
+      "Indemnified the Legal Framework Order, 2002 (LFO) issued under General Pervez Musharraf.",
+      "Re-inserted Article 58(2)(b) with a requirement for Supreme Court reference within 15 days of assembly dissolution.",
+      "Sanctioned presidential dual office (President & Chief of Army Staff) under special statutory exception."
+    ],
+    "substantive_impact": "Restored presidential dissolution powers, validated post-1999 legal framework, and formalized reserved seats expansion.",
+    "affected_articles": [
+      "41",
+      "58",
+      "112",
+      "152A",
+      "179",
+      "195",
+      "243",
+      "268",
+      "270AA"
+    ]
+  },
+  {
+    "position": 18,
+    "amendment_number": 18,
+    "official_title": "Constitution (Eighteenth Amendment) Act, 2010",
+    "short_title": "Eighteenth Amendment (Provincial Autonomy & Democratic Restoration)",
+    "assent_date": "2010-04-19",
+    "gazette_date": "2010-04-20",
+    "status": "enacted",
+    "key_changes": [
+      "Abolished Article 58(2)(b), permanently removing presidential assembly dissolution powers.",
+      "Abolished the Concurrent Legislative List, devolving 17 federal ministries to the four provinces.",
+      "Inserted Article 160(3A) establishing that a province's share in an NFC Award shall never be reduced below its share in the previous Award.",
+      "Inserted Article 140A requiring provinces to devolve political, administrative, and financial responsibility to elected local governments.",
+      "Amended Article 172(3) to grant provinces 50:50 equal joint ownership of mineral oil and natural gas with the federal government.",
+      "Introduced Article 10A (Fair Trial), Article 19A (Right to Information), and Article 25A (Free Compulsory Education).",
+      "Created Article 175A for judicial appointments via Judicial Commission of Pakistan (JCP) and Parliamentary Committee."
+    ],
+    "substantive_impact": "The most extensive structural reform in Pakistan's constitutional history; transformed Pakistan into a genuine federal parliamentary republic with unprecedented provincial autonomy.",
+    "affected_articles": [
+      "1",
+      "6",
+      "10A",
+      "17",
+      "19A",
+      "25A",
+      "48",
+      "51",
+      "58",
+      "59",
+      "62",
+      "63",
+      "63A",
+      "89",
+      "90",
+      "91",
+      "101",
+      "105",
+      "106",
+      "112",
+      "140A",
+      "142",
+      "144",
+      "149",
+      "153",
+      "154",
+      "156",
+      "160",
+      "172",
+      "175A",
+      "232",
+      "239",
+      "242",
+      "270AA",
+      "Fourth Schedule"
+    ]
+  },
+  {
+    "position": 19,
+    "amendment_number": 19,
+    "official_title": "Constitution (Nineteenth Amendment) Act, 2010",
+    "short_title": "Nineteenth Amendment (Judicial Commission Composition Refinement)",
+    "assent_date": "2011-01-01",
+    "gazette_date": "2011-01-04",
+    "status": "enacted",
+    "key_changes": [
+      "Amended Article 175A and Article 182 following Supreme Court observations in the 18th Amendment challenge.",
+      "Expanded the Judicial Commission of Pakistan to include 4 senior-most judges of the Supreme Court.",
+      "Regulated the appointment process for ad-hoc judges and High Court benches."
+    ],
+    "substantive_impact": "Fine-tuned judicial appointment machinery to protect judicial independence while preserving the parliamentary committee mechanism.",
+    "affected_articles": [
+      "175A",
+      "182"
+    ]
+  },
+  {
+    "position": 20,
+    "amendment_number": 20,
+    "official_title": "Constitution (Twentieth Amendment) Act, 2012",
+    "short_title": "Twentieth Amendment (Caretaker Government & Free Elections)",
+    "assent_date": "2012-02-28",
+    "gazette_date": "2012-02-29",
+    "status": "enacted",
+    "key_changes": [
+      "Amended Articles 48, 214, 215, 216, 218, 219, 224, 224A, and the Third Schedule.",
+      "Established a consensus mechanism between Prime Minister and Leader of the Opposition for appointing the Caretaker Prime Minister and Chief Ministers.",
+      "Created an 8-member bipartisan Parliamentary Committee and Election Commission arbitration mechanism in case of deadlock."
+    ],
+    "substantive_impact": "Institutionalized neutral caretaker administrations and strengthened the Election Commission to safeguard election neutrality.",
+    "affected_articles": [
+      "48",
+      "214",
+      "215",
+      "216",
+      "218",
+      "219",
+      "224",
+      "224A"
+    ]
+  },
+  {
+    "position": 21,
+    "amendment_number": 21,
+    "official_title": "Constitution (Twenty-first Amendment) Act, 2015",
+    "short_title": "Twenty-first Amendment (Military Courts for Terrorist Offences)",
+    "assent_date": "2015-01-07",
+    "gazette_date": "2015-01-07",
+    "status": "enacted",
+    "key_changes": [
+      "Amended Article 175 and the First Schedule to exempt trials of terrorist groups using religion or sect under the Pakistan Army Act, 1952 from constitutional fundamental rights challenge.",
+      "Included a strict 2-year sunset clause expiring on 7 January 2017."
+    ],
+    "substantive_impact": "Established temporary military court jurisdiction for rapid trial of terrorist perpetrators following the Army Public School Peshawar massacre.",
+    "affected_articles": [
+      "175",
+      "First Schedule"
+    ]
+  },
+  {
+    "position": 22,
+    "amendment_number": 22,
+    "official_title": "Constitution (Twenty-second Amendment) Act, 2016",
+    "short_title": "Twenty-second Amendment (Election Commission Eligibility Criteria)",
+    "assent_date": "2016-06-08",
+    "gazette_date": "2016-06-10",
+    "status": "enacted",
+    "key_changes": [
+      "Amended Articles 213, 215, 217, 218, 219, and 222.",
+      "Broadened eligibility criteria for the Chief Election Commissioner and ECP members to include retired senior civil servants and technocrats, ending the requirement that members must be retired High Court judges."
+    ],
+    "substantive_impact": "Diversified ECP qualifications and staggered the retirement of commission members to maintain institutional continuity.",
+    "affected_articles": [
+      "213",
+      "215",
+      "217",
+      "218",
+      "219",
+      "222"
+    ]
+  },
+  {
+    "position": 23,
+    "amendment_number": 23,
+    "official_title": "Constitution (Twenty-third Amendment) Act, 2017",
+    "short_title": "Twenty-third Amendment (Military Courts 2-Year Extension)",
+    "assent_date": "2017-03-30",
+    "gazette_date": "2017-03-31",
+    "status": "enacted",
+    "key_changes": [
+      "Extended the sunset clause of military courts under the Pakistan Army Act, 1952 for a further period of two years (until 6 January 2019).",
+      "Originally introduced in the National Assembly as the 'Twenty-eighth Amendment Bill, 2017', but enacted as the Twenty-third Amendment Act."
+    ],
+    "substantive_impact": "Maintained military tribunal jurisdiction over terrorist offences for an additional two years.",
+    "affected_articles": [
+      "175",
+      "First Schedule"
+    ]
+  },
+  {
+    "position": 24,
+    "amendment_number": 24,
+    "official_title": "Constitution (Twenty-fourth Amendment) Act, 2017",
+    "short_title": "Twenty-fourth Amendment (Delimitation on Provisional Census 2017)",
+    "assent_date": "2017-12-22",
+    "gazette_date": "2017-12-24",
+    "status": "enacted",
+    "key_changes": [
+      "Amended Article 51 to reallocate National Assembly seats among federating units on the basis of provisional results of the 6th Population & Housing Census, 2017.",
+      "Retained total National Assembly strength at 272 general seats while shifting seat quotas between provinces."
+    ],
+    "substantive_impact": "Enabled conduct of the 2018 General Elections by authorizing nationwide constituency delimitation based on provisional 2017 census data.",
+    "affected_articles": [
+      "51"
+    ]
+  },
+  {
+    "position": 25,
+    "amendment_number": 25,
+    "official_title": "Constitution (Twenty-fifth Amendment) Act, 2018",
+    "short_title": "Twenty-fifth Amendment (FATA Merger with Khyber Pakhtunkhwa)",
+    "assent_date": "2018-05-31",
+    "gazette_date": "2018-06-04",
+    "status": "enacted",
+    "key_changes": [
+      "Amended Articles 1, 51, 59, 106, 155, 246, and omitted Article 247.",
+      "Merged the Federally Administered Tribal Areas (FATA) and Provincially Administered Tribal Areas (PATA) into the Province of Khyber Pakhtunkhwa.",
+      "Extended the jurisdiction of the Supreme Court and Peshawar High Court to the merged tribal districts.",
+      "Abolished the Frontier Crimes Regulation (FCR) framework; phased out separate tribal Senate seats."
+    ],
+    "substantive_impact": "Historic integration of 5 million tribal citizens into the formal constitutional and judicial mainstream of Pakistan and Khyber Pakhtunkhwa.",
+    "affected_articles": [
+      "1",
+      "51",
+      "59",
+      "106",
+      "155",
+      "246",
+      "247"
+    ]
+  },
+  {
+    "position": 26,
+    "amendment_number": 26,
+    "official_title": "Constitution (Twenty-sixth Amendment) Act, 2024",
+    "short_title": "Twenty-sixth Amendment (Judicial Reforms & Clean Environment)",
+    "assent_date": "2024-10-21",
+    "gazette_date": "2024-10-21",
+    "status": "enacted",
+    "key_changes": [
+      "Inserted Article 9A establishing the Right to a Clean, Healthy and Sustainable Environment as a fundamental right.",
+      "Amended Article 175A to reconstruct the Judicial Commission of Pakistan (JCP) to evaluate judicial performance and form Constitutional Benches.",
+      "Created dedicated Constitutional Benches in the Supreme Court and High Courts under Articles 191A and 202A.",
+      "Amended Article 179 to fix the term of the Chief Justice of Pakistan at three years with superannuation age of 65 years.",
+      "Replaced seniority convention: CJP appointed by a Special Parliamentary Committee from among the three senior-most Supreme Court judges."
+    ],
+    "substantive_impact": "Major overhaul of superior court judicial appointments, introduction of constitutional benches, term limits for the Chief Justice, and formal recognition of environmental fundamental rights.",
+    "affected_articles": [
+      "9A",
+      "38",
+      "175A",
+      "177",
+      "179",
+      "184",
+      "185",
+      "186A",
+      "187",
+      "191A",
+      "193",
+      "199",
+      "202A",
+      "209"
+    ]
+  },
+  {
+    "position": 27,
+    "amendment_number": 27,
+    "official_title": "Constitution (Twenty-seventh Amendment) Act, 2025",
+    "short_title": "Twenty-seventh Amendment (Federal Constitutional Court Architecture)",
+    "assent_date": "2025-11-15",
+    "gazette_date": "2025-11-18",
+    "status": "enacted",
+    "key_changes": [
+      "Consolidated the constitutional jurisdiction of superior courts by formalizing the Federal Constitutional Court (FCC) alongside the Supreme Court of Pakistan.",
+      "Refined jurisdictional boundaries between constitutional interpretation matters (FCC) and ordinary appellate/civil litigation (Supreme Court).",
+      "Streamlined institutional procedures for judicial oversight and bicameral parliamentary review."
+    ],
+    "substantive_impact": "Completes the bifurcation of constitutional adjudication and ordinary appellate civil/criminal administration in Pakistan's high judicature.",
+    "affected_articles": [
+      "175",
+      "175A",
+      "176",
+      "177",
+      "179",
+      "184",
+      "185",
+      "186A",
+      "191A",
+      "209"
+    ]
+  }
+]

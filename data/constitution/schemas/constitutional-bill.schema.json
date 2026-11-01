@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ppripakistan.github.io/schemas/constitution/constitutional-bill.schema.json",
+  "title": "PPRI Constitutional Bill Proposal Record",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "bill_id",
+    "bill_title",
+    "introduced_in",
+    "introduction_date",
+    "status",
+    "proposer_type",
+    "target_articles",
+    "summary",
+    "status_note"
+  ],
+  "properties": {
+    "bill_id": { "type": "string" },
+    "bill_title": { "type": "string" },
+    "introduced_in": { "type": "string" },
+    "introduction_date": { "type": "string" },
+    "status": { "type": "string", "enum": ["un_enacted_proposal"] },
+    "proposer_type": { "type": "string" },
+    "target_articles": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "summary": { "type": "string" },
+    "status_note": { "type": "string" }
+  }
+}

@@ -1202,6 +1202,55 @@
     ]
   },
   {
+    "title": "PPRI Constitution Explorer: Understand the 1973 Constitution",
+    "type": "Constitution Hub",
+    "description": "Annotated portal for Pakistan's 1973 Constitution: Fourteenth Edition (2025) baseline, 24 enacted amendments, Fundamental Rights (8–28), and federalism.",
+    "url": "/constitution/",
+    "tags": [
+      "constitution",
+      "constitution of pakistan",
+      "1973 constitution",
+      "fundamental rights",
+      "amendments",
+      "federalism",
+      "law",
+      "statutory",
+      "legal"
+    ]
+  },
+  {
+    "title": "Interactive Constitution Reader: Clause-by-Clause Explorer",
+    "type": "Constitution Reader",
+    "description": "Interactive reader with verified official text, simple English explainers, and PPRI research analysis across all parts, chapters, and articles.",
+    "url": "/constitution/reader/",
+    "tags": [
+      "constitution reader",
+      "article reader",
+      "verbatim text",
+      "article 19",
+      "article 140a",
+      "article 160",
+      "article 239",
+      "clauses"
+    ]
+  },
+  {
+    "title": "Constitutional Amendments Register (1st through 27th Amendments)",
+    "type": "Constitution Amendments",
+    "description": "Comprehensive audit of all 27 numbered amendment positions: 24 enacted Acts, proposal gaps (9, 11, 15), 18th Amendment devolution, and 27th Amendment FCC.",
+    "url": "/constitution/amendments/",
+    "tags": [
+      "constitutional amendments",
+      "amendments",
+      "18th amendment",
+      "25th amendment",
+      "26th amendment",
+      "27th amendment",
+      "amendment act",
+      "gazette"
+    ]
+  },
+  {
     "title": "Data Observatory & Interactive Knowledge Map",
     "type": "Data Observatory",
     "description": "Central empirical observatory: Interactive Knowledge Map of Pakistan's public data, Census 2023 baseline, NFC Reform Simulator, and district explorer.",
