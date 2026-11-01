@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ppripakistan.github.io/schemas/constitution/article.schema.json",
+  "title": "PPRI Constitution Article Record",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["article_number", "title", "part", "part_title", "salient_points", "clauses", "status", "tags"],
+  "properties": {
+    "article_number": { "type": "string" },
+    "title": { "type": "string" },
+    "part": { "type": "string" },
+    "part_title": { "type": "string" },
+    "chapter": { "type": ["string", "null"] },
+    "chapter_title": { "type": ["string", "null"] },
+    "salient_points": { "type": "string" },
+    "clauses": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "status": {
+      "type": "string",
+      "enum": ["in_force", "omitted"]
+    },
+    "tags": {
+      "type": "array",
+      "items": { "type": "string" }
+    }
+  }
+}

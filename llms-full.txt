@@ -183,6 +183,10 @@ The PPRI Data Observatory structures empirical indicators across 8 dedicated the
 
 ## 5. Constitutional & Legal Architecture
 
+> **PPRI Constitution Explorer Portal:** https://ppripakistan.github.io/constitution/  
+> Includes the Fourteenth Edition baseline (amended to 21 Nov 2025), Fundamental Rights (Articles 8–28), 24 enacted amendments, and post-27th Amendment Federal Constitutional Court structures.
+
+
 1. **Article 1 of the Constitution (The Republic and its Territories)**:
    Defines the territories of Pakistan as the Provinces of Balochistan, Khyber Pakhtunkhwa, Punjab, and Sindh; the Islamabad Capital Territory; and such States and territories as are or may be included.
 2. **Article 239(4) (Amendment of Constitution)**:

@@ -26,13 +26,16 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pip install Pillow
+          pip install Pillow jsonschema
 
-      - name: Generate Social Preview Images & Synchronize Metadata
+      - name: Validate Constitution Data & Synchronize Metadata
         run: |
+          python scripts/validate_constitution_data.py
+          python scripts/update_sitemap_and_search_index.py
           python scripts/generate_social_previews.py
           python scripts/sync_preview_metadata.py
           python scripts/verify_seo_assets.py
+          python scripts/run_complete_seo_audit.py
 
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3

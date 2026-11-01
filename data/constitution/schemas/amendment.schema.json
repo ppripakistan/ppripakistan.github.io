@@ -1,0 +1,34 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ppripakistan.github.io/schemas/constitution/amendment.schema.json",
+  "title": "PPRI Constitutional Amendment Record",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "position",
+    "official_title",
+    "short_title",
+    "status",
+    "key_changes",
+    "substantive_impact",
+    "affected_articles"
+  ],
+  "properties": {
+    "position": { "type": "integer", "minimum": 1, "maximum": 100 },
+    "amendment_number": { "type": ["integer", "null"], "minimum": 1, "maximum": 100 },
+    "official_title": { "type": "string" },
+    "short_title": { "type": "string" },
+    "assent_date": { "type": ["string", "null"] },
+    "gazette_date": { "type": ["string", "null"] },
+    "status": { "type": "string", "enum": ["enacted", "un_enacted_bill"] },
+    "key_changes": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "substantive_impact": { "type": "string" },
+    "affected_articles": {
+      "type": "array",
+      "items": { "type": "string" }
+    }
+  }
+}

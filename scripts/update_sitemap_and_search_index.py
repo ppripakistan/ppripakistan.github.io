@@ -42,6 +42,12 @@ CANONICAL_OBSERVATORY_HUBS = [
     "https://ppripakistan.github.io/data/methodology/",
 ]
 
+CANONICAL_CONSTITUTION_PAGES = [
+    "https://ppripakistan.github.io/constitution/",
+    "https://ppripakistan.github.io/constitution/reader/",
+    "https://ppripakistan.github.io/constitution/amendments/",
+]
+
 CANONICAL_URDU_PAGES = [
     "https://ppripakistan.github.io/ur/",
     "https://ppripakistan.github.io/ur/about.html",
@@ -206,6 +212,15 @@ def clean_and_update_sitemap():
             valid_entries.append((loc, lastmod))
             seen_locs.add(loc)
 
+    # Add canonical Constitution Explorer pages
+    for loc in CANONICAL_CONSTITUTION_PAGES:
+        if loc not in seen_locs:
+            file_path, rel_str = resolve_file_for_loc(loc)
+            norm_rel = rel_str.replace("\\", "/")
+            lastmod = content_lastmod_map.get(norm_rel, TODAY_STR)
+            valid_entries.append((loc, lastmod))
+            seen_locs.add(loc)
+
     # Add canonical Urdu portal pages
     for loc in CANONICAL_URDU_PAGES:
         if loc not in seen_locs:
@@ -367,6 +382,36 @@ def clean_and_update_search_index():
         if item["url"] not in seen_urls:
             clean_items.append(item)
             seen_urls.add(item["url"])
+
+    constitution_search_records = [
+        {
+            "title": "Constitution of Pakistan 1973 (Complete 280 Articles & Salient Features)",
+            "type": "Constitution Hub",
+            "description": "Comprehensive explorer for Pakistan's 1973 Constitution: foundational salient features, interactive architecture of Parts I–XII and Schedules, and 24 enacted amendments.",
+            "url": "/constitution/",
+            "tags": ["constitution", "pakistan constitution", "salient features", "1973 constitution", "federalism", "fourteenth edition", "amendments", "law"]
+        },
+        {
+            "title": "Complete 280-Article Interactive Constitution Reader",
+            "type": "Constitution Reader",
+            "description": "Clause-by-clause searchable reader covering all 280 Articles and 5 Schedules of the 1973 Constitution with plain-language salient points and statutory text.",
+            "url": "/constitution/reader/",
+            "tags": ["constitution reader", "articles 1 to 280", "article 140a", "article 160", "article 172", "article 239", "fundamental rights", "schedules", "search constitution"]
+        },
+        {
+            "title": "Constitutional Amendments Register (1st through 27th Amendments)",
+            "type": "Constitution Amendments",
+            "description": "Comprehensive audit of all 27 numbered amendment positions: 24 enacted Acts, proposal gaps (9, 11, 15), 18th Amendment devolution, and 27th Amendment FCC.",
+            "url": "/constitution/amendments/",
+            "tags": ["constitutional amendments", "amendments", "18th amendment", "25th amendment", "26th amendment", "27th amendment", "amendment act", "gazette"]
+        }
+    ]
+
+    for item in constitution_search_records:
+        if item["url"] not in seen_urls:
+            clean_items.append(item)
+            seen_urls.add(item["url"])
+
 
     with open(SEARCH_INDEX_PATH, "w", encoding="utf-8") as f:
         json.dump(clean_items, f, indent=2, ensure_ascii=False)
