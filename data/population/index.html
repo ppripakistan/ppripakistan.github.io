@@ -12,14 +12,14 @@
     </script>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Pakistan Population, Demographics & Urbanization Data | PPRI Data Observatory</title>
-    <meta name="description" content="Verified Pakistan Bureau of Statistics 7th Census 2023 results: 241.49M national population, provincial breakdowns, urban-rural distributions, sex ratios, and top 22 city populations." />
+    <title>Pakistan Population by Province & City (Census 2023 Data)</title>
+    <meta name="description" content="Official PBS 7th Census 2023 dataset: Pakistan population (241.5M), Punjab, Sindh, KP & Balochistan shares, growth rates, and top 22 cities. Download CSV." />
     <link rel="canonical" href="https://ppripakistan.github.io/data/population/" />
     <meta property="og:site_name" content="Pakistan Provincial Reform Institute" />
     <meta property="og:locale" content="en_PK" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Pakistan Population, Demographics & Urbanization Data | PPRI Data Observatory" />
-    <meta property="og:description" content="Verified Pakistan Bureau of Statistics 7th Census 2023 results: 241.49M national population, provincial breakdowns, urban-rural distributions, sex ratios, and top 22 city populations." />
+    <meta property="og:title" content="Pakistan Population by Province & City (Census 2023 Data)" />
+    <meta property="og:description" content="Official PBS 7th Census 2023 dataset: Pakistan population (241.5M), Punjab, Sindh, KP & Balochistan shares, growth rates, and top 22 cities. Download CSV." />
     <meta property="og:url" content="https://ppripakistan.github.io/data/population/" />
     <meta property="og:image" content="https://ppripakistan.github.io/assets/images/previews/data-population.jpg" />
     <meta property="og:image:secure_url" content="https://ppripakistan.github.io/assets/images/previews/data-population.jpg" />
@@ -30,8 +30,8 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@PPRI_Pakistan" />
     <meta name="twitter:creator" content="@PPRI_Pakistan" />
-    <meta name="twitter:title" content="Pakistan Population, Demographics & Urbanization Data | PPRI Data Observatory" />
-    <meta name="twitter:description" content="Verified Pakistan Bureau of Statistics 7th Census 2023 results: 241.49M national population, provincial breakdowns, urban-rural distributions, sex ratios, and top 22 city populations." />
+    <meta name="twitter:title" content="Pakistan Population by Province & City (Census 2023 Data)" />
+    <meta name="twitter:description" content="Official PBS 7th Census 2023 dataset: Pakistan population (241.5M), Punjab, Sindh, KP & Balochistan shares, growth rates, and top 22 cities. Download CSV." />
     <meta name="twitter:image" content="https://ppripakistan.github.io/assets/images/previews/data-population.jpg" />
     <meta name="twitter:image:alt" content="Pakistan Population, Demographics & Urbanization Data | PPRI Data Observatory | Pakistan Provincial Reform Institute" />
     <link rel="icon" type="image/png" href="/favicon.png?v=2" />
@@ -45,78 +45,125 @@
     <link rel="stylesheet" href="/assets/css/style.css" />
     <link rel="stylesheet" href="/assets/css/responsive.css" />
     <link rel="stylesheet" href="/assets/css/observatory.css" />
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Dataset",
-      "name": "Pakistan Population, Demographics &amp; Urbanization",
-      "description": "Verified Pakistan Bureau of Statistics 7th Census 2023 results: 241.49M national population, provincial breakdowns, urban-rural distributions, sex ratios, and top 22 city populations.",
-      "url": "https://ppripakistan.github.io/data/population/",
-      "license": "https://creativecommons.org/licenses/by/4.0/",
-      "spatialCoverage": {
-        "@type": "Place",
-        "name": "Pakistan"
-      },
-      "creator": {
-        "@type": "Organization",
-        "name": "Pakistan Provincial Reform Institute",
-        "url": "https://ppripakistan.github.io/"
-      },
-      "distribution": [
-        {
-          "@type": "DataDownload",
-          "encodingFormat": "text/csv",
-          "contentUrl": "https://ppripakistan.github.io/data/downloads/pakistan-population-census-2023.csv"
-        }
-      ]
-    }
-    </script>
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "https://ppripakistan.github.io/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Data Observatory",
-          "item": "https://ppripakistan.github.io/data/centre.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Pakistan Population, Demographics &amp; Urbanization",
-          "item": "https://ppripakistan.github.io/data/population/"
-        }
-      ]
-    }
-    </script>
     <link rel="stylesheet" href="/assets/css/visual-insights.css" />
+      <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  "@id": "https://ppripakistan.github.io/data/population/#dataset",
+  "name": "Pakistan Population, Demographics & Urbanization Dataset (7th Census 2023)",
+  "alternateName": "PBS Census 2023 Provincial & City Population Data — PPRI Data Observatory",
+  "description": "Verified Pakistan Bureau of Statistics (PBS) 7th Population and Housing Census 2023 dataset covering national population (241,499,431), provincial distributions (Punjab, Sindh, Khyber Pakhtunkhwa, Balochistan, Islamabad), urban-rural shares, household size, and top 22 major urban localities.",
+  "url": "https://ppripakistan.github.io/data/population/",
+  "keywords": [
+    "Pakistan population 2023 census",
+    "Pakistan provinces population 2026",
+    "Punjab Sindh KP Balochistan population",
+    "Karachi Lahore population census 2023",
+    "Pakistan demographics urbanization"
+  ],
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "isAccessibleForFree": true,
+  "creator": {
+    "@type": "Organization",
+    "@id": "https://ppripakistan.github.io/#organization",
+    "name": "Pakistan Provincial Reform Institute (PPRI)",
+    "url": "https://ppripakistan.github.io"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "@id": "https://ppripakistan.github.io/#organization",
+    "name": "Pakistan Provincial Reform Institute (PPRI)"
+  },
+  "citation": "Pakistan Bureau of Statistics (PBS), 7th Population and Housing Census 2023, Tables 1, 2, 4 & Major Localities.",
+  "temporalCoverage": "2017/2026",
+  "spatialCoverage": {
+    "@type": "Place",
+    "name": "Pakistan",
+    "geo": {
+      "@type": "GeoShape",
+      "box": "23.6345 60.8729 37.0841 77.8375"
+    }
+  },
+  "variableMeasured": [
+    {
+      "@type": "PropertyValue",
+      "name": "Total Population",
+      "unitText": "persons"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Annual Population Growth Rate (2017-2023)",
+      "unitText": "percent"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Urbanization Share",
+      "unitText": "percent"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Average Household Size",
+      "unitText": "persons per household"
+    }
+  ],
+  "distribution": [
+    {
+      "@type": "DataDownload",
+      "encodingFormat": "text/csv",
+      "contentUrl": "https://ppripakistan.github.io/data/downloads/pakistan-population-census-2023.csv"
+    }
+  ],
+  "datePublished": "2026-09-15",
+  "dateModified": "2026-11-14"
+}
+    </script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://ppripakistan.github.io/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Data Observatory",
+      "item": "https://ppripakistan.github.io/data/centre.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Pakistan Population, Demographics & Urbanization",
+      "item": "https://ppripakistan.github.io/data/population/"
+    }
+  ]
+}
+    </script>
   </head>
   <body>
     <a class="skip-link" href="#main-content">Skip to content</a>
     <header class="site-header">
       <div class="container navbar">
-        <a class="brand" href="/index.html">
+        <a class="brand" href="/">
           <img src="/assets/images/brand/ppri-logo-header.jpg" alt="PPRI logo" width="38" height="38" loading="eager" decoding="async" />
           <span class="brand-text"><strong>PPRI</strong> <span class="brand-sub">Pakistan Provincial Reform Institute</span></span>
         </a>
         <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-navigation">Menu</button>
-        <nav id="site-navigation" class="nav-links" aria-label="Primary navigation">
-          <a href="/index.html">Home</a>
+                <nav id="site-navigation" class="nav-links" aria-label="Primary navigation">
+          <a href="/">Home</a>
           <a href="/constitution/">Constitution</a>
-          <a href="/research/index.html">Research</a>
-          <a href="/provinces/index.html">Reform</a>
+          <a href="/research/">Research</a>
+          <a href="/provinces/">Reform</a>
+          <a href="/scenarios/">Scenarios</a>
           <a href="/insights/">Insights</a>
           <a href="/data/centre.html" aria-current="page">Data</a>
-          <a href="/publications/index.html">Publications</a>
-          <a href="/consultation/index.html">Engage</a>
+          <a href="/publications/">Publications</a>
+          <a href="/consultation/">Engage</a>
           <a href="/about.html">About</a>
           <a class="nav-search" href="/search.html">Search</a>
         </nav>
@@ -127,7 +174,7 @@
       <div class="obs-header">
         <div class="container">
           <ul class="obs-breadcrumbs">
-            <li><a href="/index.html">Home</a></li>
+            <li><a href="/">Home</a></li>
             <li class="separator">/</li>
             <li><a href="/data/centre.html">Data Observatory</a></li>
             <li class="separator">/</li>
@@ -439,7 +486,7 @@
                 Empirical evidence is the foundation of institutional reform. Explore peer-reviewed PPRI policy papers, working papers, and empirical analyses addressing these findings.
               </p>
             </div>
-            <a href="/research/index.html" class="obs-btn obs-btn-outline">All Research Papers &rarr;</a>
+            <a href="/research/" class="obs-btn obs-btn-outline">All Research Papers &rarr;</a>
           </div>
           <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));gap:20px;">
                       <div class="obs-stat-card" style="padding:22px;">
@@ -528,14 +575,14 @@
             <li><a href="/research/reports/does-money-work-better-spent-closer-to-people.html">Fiscal Decentralization</a></li>
             <li><a href="/research/reports/same-country-different-life-district-access.html">Spatial Inequality</a></li>
             <li><a href="/articles/four-provinces-241-million-people-administrative-scale.html">Administrative Scale</a></li>
-            <li><a href="/articles/index.html">All Policy Articles</a></li>
+            <li><a href="/articles/">All Policy Articles</a></li>
           </ul>
         </div>
         <div>
           <h3>Connect</h3>
           <ul class="footer-links">
             <li><a href="https://x.com/PPRI_Pakistan" rel="me"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" style="vertical-align: -1px; margin-right: 5px;" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path></svg>X / @PPRI_Pakistan</a></li>
-            <li><a href="/consultation/index.html">Public Consultation</a></li>
+            <li><a href="/consultation/">Public Consultation</a></li>
             <li><a href="/contact.html">Contact Us</a></li>
           </ul>
         </div>
