@@ -1,7 +1,8 @@
 User-agent: *
 Allow: /
 
-User-agent: Bingbot
-Allow: /
+# Block duplicate index.html paths from crawl waste if linked anywhere
+Disallow: /*/index.html$
 
+# Sitemap location
 Sitemap: https://ppripakistan.github.io/sitemap.xml

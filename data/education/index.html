@@ -12,14 +12,14 @@
     </script>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Pakistan Education, Literacy & Human Capital Data | PPRI Data Observatory</title>
-    <meta name="description" content="PBS HIES 2024–25 education indicators: literacy by age, sex and province, plus out-of-school rates for children aged 5–16, with definitions and downloadable data." />
+    <title>Pakistan Education & Literacy Rate by Province (2025–26 Data) | PPRI</title>
+    <meta name="description" content="Official PBS HIES 2024–25 education data: Pakistan literacy rates, provincial comparisons (Punjab, Sindh, KP, Balochistan), gender parity, and school access. Download CSV." />
     <link rel="canonical" href="https://ppripakistan.github.io/data/education/" />
     <meta property="og:site_name" content="Pakistan Provincial Reform Institute" />
     <meta property="og:locale" content="en_PK" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Pakistan Education, Literacy & Human Capital Data | PPRI Data Observatory" />
-    <meta property="og:description" content="PBS HIES 2024–25 education indicators: literacy by age, sex and province, plus out-of-school rates for children aged 5–16, with definitions and downloadable data." />
+    <meta property="og:title" content="Pakistan Education & Literacy Rate by Province (2025–26 Data) | PPRI" />
+    <meta property="og:description" content="Official PBS HIES 2024–25 education data: Pakistan literacy rates, provincial comparisons (Punjab, Sindh, KP, Balochistan), gender parity, and school access. Download CSV." />
     <meta property="og:url" content="https://ppripakistan.github.io/data/education/" />
     <meta property="og:image" content="https://ppripakistan.github.io/assets/images/previews/data-education.jpg" />
     <meta property="og:image:secure_url" content="https://ppripakistan.github.io/assets/images/previews/data-education.jpg" />
@@ -30,8 +30,8 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@PPRI_Pakistan" />
     <meta name="twitter:creator" content="@PPRI_Pakistan" />
-    <meta name="twitter:title" content="Pakistan Education, Literacy & Human Capital Data | PPRI Data Observatory" />
-    <meta name="twitter:description" content="PBS HIES 2024–25 education indicators: literacy by age, sex and province, plus out-of-school rates for children aged 5–16, with definitions and downloadable data." />
+    <meta name="twitter:title" content="Pakistan Education & Literacy Rate by Province (2025–26 Data) | PPRI" />
+    <meta name="twitter:description" content="Official PBS HIES 2024–25 education data: Pakistan literacy rates, provincial comparisons (Punjab, Sindh, KP, Balochistan), gender parity, and school access. Download CSV." />
     <meta name="twitter:image" content="https://ppripakistan.github.io/assets/images/previews/data-education.jpg" />
     <meta name="twitter:image:alt" content="Pakistan Education, Literacy & Human Capital Data | PPRI Data Observatory | Pakistan Provincial Reform Institute" />
     <link rel="icon" type="image/png" href="/favicon.png?v=2" />
@@ -45,76 +45,124 @@
     <link rel="stylesheet" href="/assets/css/style.css" />
     <link rel="stylesheet" href="/assets/css/responsive.css" />
     <link rel="stylesheet" href="/assets/css/observatory.css" />
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Dataset",
-      "name": "Education, Literacy &amp; Human Capital",
-      "description": "PBS HIES 2024–25 education indicators: literacy by age, sex and province, plus out-of-school rates for children aged 5–16, with definitions and downloadable data.",
-      "url": "https://ppripakistan.github.io/data/education/",
-      "license": "https://creativecommons.org/licenses/by/4.0/",
-      "spatialCoverage": {
-        "@type": "Place",
-        "name": "Pakistan"
-      },
-      "creator": {
-        "@type": "Organization",
-        "name": "Pakistan Provincial Reform Institute",
-        "url": "https://ppripakistan.github.io/"
-      },
-      "distribution": [
-        {
-          "@type": "DataDownload",
-          "encodingFormat": "text/csv",
-          "contentUrl": "https://ppripakistan.github.io/data/downloads/pakistan-education-literacy-hies-2024-25.csv"
-        }
-      ]
+        <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  "@id": "https://ppripakistan.github.io/data/education/#dataset",
+  "name": "Pakistan Education, Literacy & Human Capital Dataset (HIES 2024–25)",
+  "alternateName": "PBS HIES & PSLM Education & Literacy Benchmarks — PPRI Data Observatory",
+  "description": "Comprehensive subnational education dataset covering adult and youth literacy rates, provincial gender parity gaps, school participation by wealth quintile, and out-of-school children distributions.",
+  "url": "https://ppripakistan.github.io/data/education/",
+  "keywords": [
+    "Pakistan literacy rate 2025 2026",
+    "province wise literacy rate pakistan",
+    "out of school children pakistan",
+    "gender parity education pakistan",
+    "HIES education statistics"
+  ],
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "isAccessibleForFree": true,
+  "creator": {
+    "@type": "Organization",
+    "@id": "https://ppripakistan.github.io/#organization",
+    "name": "Pakistan Provincial Reform Institute (PPRI)",
+    "url": "https://ppripakistan.github.io"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "@id": "https://ppripakistan.github.io/#organization",
+    "name": "Pakistan Provincial Reform Institute (PPRI)"
+  },
+  "citation": "Pakistan Bureau of Statistics, Household Integrated Economic Survey (HIES) 2024-25 & PSLM Education Modules.",
+  "temporalCoverage": "2020/2026",
+  "spatialCoverage": {
+    "@type": "Place",
+    "name": "Pakistan",
+    "geo": {
+      "@type": "GeoShape",
+      "box": "23.6345 60.8729 37.0841 77.8375"
     }
+  },
+  "variableMeasured": [
+    {
+      "@type": "PropertyValue",
+      "name": "Literacy Rate (10 Years and Above)",
+      "unitText": "percent"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Primary School Net Attendance Rate",
+      "unitText": "percent"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Out of School Children (OOSC)",
+      "unitText": "persons"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Gender Parity Index in Primary Education",
+      "unitText": "ratio"
+    }
+  ],
+  "distribution": [
+    {
+      "@type": "DataDownload",
+      "encodingFormat": "text/csv",
+      "contentUrl": "https://ppripakistan.github.io/data/downloads/pakistan-education-literacy-hies-2024-25.csv"
+    }
+  ],
+  "datePublished": "2026-09-15",
+  "dateModified": "2026-11-14"
+}
     </script>
     <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
     {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "https://ppripakistan.github.io/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Data Observatory",
-          "item": "https://ppripakistan.github.io/data/centre.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Education, Literacy &amp; Human Capital",
-          "item": "https://ppripakistan.github.io/data/education/"
-        }
-      ]
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://ppripakistan.github.io/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Data Observatory",
+      "item": "https://ppripakistan.github.io/data/centre.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Pakistan Education, Literacy & Human Capital",
+      "item": "https://ppripakistan.github.io/data/education/"
     }
+  ]
+}
     </script>
   </head>
   <body>
     <a class="skip-link" href="#main-content">Skip to content</a>
     <header class="site-header">
       <div class="container navbar">
-        <a class="brand" href="/index.html">
+        <a class="brand" href="/">
           <img src="/assets/images/brand/ppri-logo-header.jpg" alt="PPRI logo" width="38" height="38" loading="eager" decoding="async" />
           <span class="brand-text"><strong>PPRI</strong> <span class="brand-sub">Pakistan Provincial Reform Institute</span></span>
         </a>
         <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-navigation">Menu</button>
-        <nav id="site-navigation" class="nav-links" aria-label="Primary navigation">
-          <a href="/index.html">Home</a>
+                <nav id="site-navigation" class="nav-links" aria-label="Primary navigation">
+          <a href="/">Home</a>
           <a href="/constitution/">Constitution</a>
-          <a href="/research/index.html">Research</a>
-          <a href="/provinces/index.html">Reform</a>
+          <a href="/research/">Research</a>
+          <a href="/provinces/">Reform</a>
+          <a href="/scenarios/">Scenarios</a>
+          <a href="/insights/">Insights</a>
           <a href="/data/centre.html" aria-current="page">Data</a>
-          <a href="/publications/index.html">Publications</a>
-          <a href="/consultation/index.html">Engage</a>
+          <a href="/publications/">Publications</a>
+          <a href="/consultation/">Engage</a>
           <a href="/about.html">About</a>
           <a class="nav-search" href="/search.html">Search</a>
         </nav>
@@ -125,7 +173,7 @@
       <div class="obs-header">
         <div class="container">
           <ul class="obs-breadcrumbs">
-            <li><a href="/index.html">Home</a></li>
+            <li><a href="/">Home</a></li>
             <li class="separator">/</li>
             <li><a href="/data/centre.html">Data Observatory</a></li>
             <li class="separator">/</li>
@@ -261,7 +309,7 @@
                 Empirical evidence is the foundation of institutional reform. Explore peer-reviewed PPRI policy papers, working papers, and empirical analyses addressing these findings.
               </p>
             </div>
-            <a href="/research/index.html" class="obs-btn obs-btn-outline">All Research Papers &rarr;</a>
+            <a href="/research/" class="obs-btn obs-btn-outline">All Research Papers &rarr;</a>
           </div>
           <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));gap:20px;">
                       <div class="obs-stat-card" style="padding:22px;">
@@ -338,14 +386,14 @@
             <li><a href="/research/reports/does-money-work-better-spent-closer-to-people.html">Fiscal Decentralization</a></li>
             <li><a href="/research/reports/same-country-different-life-district-access.html">Spatial Inequality</a></li>
             <li><a href="/articles/four-provinces-241-million-people-administrative-scale.html">Administrative Scale</a></li>
-            <li><a href="/articles/index.html">All Policy Articles</a></li>
+            <li><a href="/articles/">All Policy Articles</a></li>
           </ul>
         </div>
         <div>
           <h3>Connect</h3>
           <ul class="footer-links">
             <li><a href="https://x.com/PPRI_Pakistan" rel="me"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" style="vertical-align: -1px; margin-right: 5px;" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path></svg>X / @PPRI_Pakistan</a></li>
-            <li><a href="/consultation/index.html">Public Consultation</a></li>
+            <li><a href="/consultation/">Public Consultation</a></li>
             <li><a href="/contact.html">Contact Us</a></li>
           </ul>
         </div>

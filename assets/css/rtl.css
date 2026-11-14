@@ -3,7 +3,7 @@
    assets/css/rtl.css
    ========================================================================== */
 
-@import url('https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;600;700&display=swap');
+/* Noto Nastaliq Urdu font is loaded via preconnect in page <head> to eliminate CSS @import waterfall */
 
 :root {
   --ur-font: 'Noto Nastaliq Urdu', 'Jameel Noori Nastaleeq', 'Urdu Typesetting', Tahoma, 'Segoe UI', sans-serif;

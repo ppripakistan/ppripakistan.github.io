@@ -12,14 +12,14 @@
     </script>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Punjab vs Sindh vs KP vs Balochistan: Population, GDP, Budget & Literacy Comparison | PPRI</title>
-    <meta name="description" content="Side-by-side comparative tables and benchmarks comparing Punjab, Sindh, Khyber Pakhtunkhwa, and Balochistan across 2023 Census population, provincial budget, literacy, and living standards." />
+    <title>Pakistan Provinces Comparator: Population, Area & Fiscal Metrics | PPRI</title>
+    <meta name="description" content="Side-by-side comparative data for Pakistan's provinces and territories: Census 2023 population, area, literacy, poverty, NA seats, and NFC shares. Download CSV." />
     <link rel="canonical" href="https://ppripakistan.github.io/data/compare/" />
     <meta property="og:site_name" content="Pakistan Provincial Reform Institute" />
     <meta property="og:locale" content="en_PK" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Punjab vs Sindh vs KP vs Balochistan: Population, GDP, Budget & Literacy Comparison | PPRI" />
-    <meta property="og:description" content="Side-by-side comparative tables and benchmarks comparing Punjab, Sindh, Khyber Pakhtunkhwa, and Balochistan across 2023 Census population, provincial budget, literacy, and living standards." />
+    <meta property="og:title" content="Pakistan Provinces Comparator: Population, Area & Fiscal Metrics | PPRI" />
+    <meta property="og:description" content="Side-by-side comparative data for Pakistan's provinces and territories: Census 2023 population, area, literacy, poverty, NA seats, and NFC shares. Download CSV." />
     <meta property="og:url" content="https://ppripakistan.github.io/data/compare/" />
     <meta property="og:image" content="https://ppripakistan.github.io/assets/images/previews/data-compare.jpg" />
     <meta property="og:image:secure_url" content="https://ppripakistan.github.io/assets/images/previews/data-compare.jpg" />
@@ -30,8 +30,8 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@PPRI_Pakistan" />
     <meta name="twitter:creator" content="@PPRI_Pakistan" />
-    <meta name="twitter:title" content="Punjab vs Sindh vs KP vs Balochistan: Population, GDP, Budget & Literacy Comparison | PPRI" />
-    <meta name="twitter:description" content="Side-by-side comparative tables and benchmarks comparing Punjab, Sindh, Khyber Pakhtunkhwa, and Balochistan across 2023 Census population, provincial budget, literacy, and living standards." />
+    <meta name="twitter:title" content="Pakistan Provinces Comparator: Population, Area & Fiscal Metrics | PPRI" />
+    <meta name="twitter:description" content="Side-by-side comparative data for Pakistan's provinces and territories: Census 2023 population, area, literacy, poverty, NA seats, and NFC shares. Download CSV." />
     <meta name="twitter:image" content="https://ppripakistan.github.io/assets/images/previews/data-compare.jpg" />
     <meta name="twitter:image:alt" content="Punjab vs Sindh vs KP vs Balochistan: Population, GDP, Budget & Literacy Comparison | Pakistan Provincial Reform Institute" />
     <link rel="icon" type="image/png" href="/favicon.png?v=2" />
@@ -45,57 +45,103 @@
     <link rel="stylesheet" href="/assets/css/style.css" />
     <link rel="stylesheet" href="/assets/css/responsive.css" />
     <link rel="stylesheet" href="/assets/css/observatory.css" />
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Dataset",
-      "name": "Pakistan Provinces & Subnational Units Comparator",
-      "description": "Comparative baseline dataset across Pakistan's 4 provinces and federal capital across population, land area, urbanization, literacy, and living standards.",
-      "url": "https://ppripakistan.github.io/data/compare/",
-      "license": "https://creativecommons.org/licenses/by/4.0/",
-      "spatialCoverage": {
-        "@type": "Place",
-        "name": "Pakistan"
-      },
-      "creator": {
-        "@type": "Organization",
-        "name": "Pakistan Provincial Reform Institute",
-        "url": "https://ppripakistan.github.io/"
-      },
-      "distribution": [
-        {
-          "@type": "DataDownload",
-          "encodingFormat": "text/csv",
-          "contentUrl": "https://ppripakistan.github.io/data/downloads/pakistan-provinces-census-2023.csv"
-        }
-      ]
+        <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  "@id": "https://ppripakistan.github.io/data/compare/#dataset",
+  "name": "Pakistan Provinces & Subnational Administrative Units Comparative Dataset",
+  "alternateName": "Pakistan Subnational Comparative Governance Matrix — PPRI Data Observatory",
+  "description": "Unified comparative matrix synthesizing Census 2023 populations, geographic land areas, literacy rates, poverty headcounts, NFC shares, and National Assembly seats across Punjab, Sindh, KP, Balochistan, ICT, GB, and AJK.",
+  "url": "https://ppripakistan.github.io/data/compare/",
+  "keywords": [
+    "pakistan provinces comparison data",
+    "punjab vs sindh vs kp vs balochistan",
+    "provinces of pakistan facts and figures",
+    "subnational administrative matrix pakistan",
+    "pakistan territory metrics"
+  ],
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "isAccessibleForFree": true,
+  "creator": {
+    "@type": "Organization",
+    "@id": "https://ppripakistan.github.io/#organization",
+    "name": "Pakistan Provincial Reform Institute (PPRI)",
+    "url": "https://ppripakistan.github.io"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "@id": "https://ppripakistan.github.io/#organization",
+    "name": "Pakistan Provincial Reform Institute (PPRI)"
+  },
+  "citation": "Pakistan Bureau of Statistics (PBS), Election Commission of Pakistan (ECP) & PPRI Subnational Matrix.",
+  "temporalCoverage": "2023/2026",
+  "spatialCoverage": {
+    "@type": "Place",
+    "name": "Pakistan",
+    "geo": {
+      "@type": "GeoShape",
+      "box": "23.6345 60.8729 37.0841 77.8375"
     }
+  },
+  "variableMeasured": [
+    {
+      "@type": "PropertyValue",
+      "name": "Census Population (2023)",
+      "unitText": "persons"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Total Land Area",
+      "unitText": "square kilometers"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Population Density",
+      "unitText": "persons per sq km"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "National Assembly General Seats",
+      "unitText": "seats"
+    }
+  ],
+  "distribution": [
+    {
+      "@type": "DataDownload",
+      "encodingFormat": "text/csv",
+      "contentUrl": "https://ppripakistan.github.io/data/downloads/pakistan-provinces-census-2023.csv"
+    }
+  ],
+  "datePublished": "2026-09-15",
+  "dateModified": "2026-11-14"
+}
     </script>
     <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
     {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "https://ppripakistan.github.io/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Data Observatory",
-          "item": "https://ppripakistan.github.io/data/centre.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Provinces Comparator",
-          "item": "https://ppripakistan.github.io/data/compare/"
-        }
-      ]
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://ppripakistan.github.io/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Data Observatory",
+      "item": "https://ppripakistan.github.io/data/centre.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Pakistan Provinces & Subnational Administrative Units Comparative",
+      "item": "https://ppripakistan.github.io/data/compare/"
     }
+  ]
+}
     </script>
   </head>
   <body>
@@ -107,13 +153,14 @@
           <span class="brand-text"><strong>PPRI</strong> <span class="brand-sub">Pakistan Provincial Reform Institute</span></span>
         </a>
         <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-navigation">Menu</button>
-        <nav id="site-navigation" class="nav-links" aria-label="Primary navigation">
+                <nav id="site-navigation" class="nav-links" aria-label="Primary navigation">
           <a href="/">Home</a>
           <a href="/constitution/">Constitution</a>
           <a href="/research/">Research</a>
           <a href="/provinces/">Reform</a>
           <a href="/scenarios/">Scenarios</a>
-          <a href="/data/centre.html">Data</a>
+          <a href="/insights/">Insights</a>
+          <a href="/data/centre.html" aria-current="page">Data</a>
           <a href="/publications/">Publications</a>
           <a href="/consultation/">Engage</a>
           <a href="/about.html">About</a>
@@ -165,10 +212,98 @@
         
       <!-- Phase 4: Crawlable Static HTML Executive Data Summary & Key Benchmarks -->
       <section class="seo-data-summary" id="executive-data-summary" aria-label="Executive Data Summary">
-        <h2>Pakistan Cross-Provincial Comparative Governance & Indicators: Executive Summary</h2>
-        <p class="summary-lead"><strong>Executive Overview:</strong> Comparative evaluation of Pakistan's four federating units demonstrates asymmetric governance scale: Punjab alone accounts for more citizens (127.69M) than the other three provinces combined (111.45M). This structural demographic imbalance gives Punjab an effective legislative and demographic majority in the National Assembly, generating recurring constitutional friction over water rights, NFC divisible pool shares, and federal civil service recruitment quotas.</p>
-        <p>Balochistan presents the inverse administrative challenge: its 14.89 million citizens are dispersed over 347,190 square kilometers, resulting in a population density of only 42.9 persons per square kilometer (compared to 621.8 in Punjab). Sindh features Pakistan's highest urban concentration at 53.7%, yet exhibits intense intra-provincial economic polarization between Karachi Division and its agricultural hinterland. Khyber Pakhtunkhwa faces integrated administrative restructuring following the merger of the former FATA tribal districts.</p>
-        <div class="table-wrap"><table class="data-summary-table"><thead><tr><th>Indicator / Metric</th><th>Punjab</th><th>Sindh</th><th>Khyber Pakhtunkhwa</th><th>Balochistan</th></tr></thead><tbody><tr><td>Population (Census 2023)</td><td>127,688,922 (52.88%)</td><td>55,696,147 (23.06%)</td><td>40,856,097 (16.92%)</td><td>14,894,402 (6.17%)</td></tr><tr><td>Land Area (km²)</td><td>205,344 (23.3%)</td><td>140,914 (16.0%)</td><td>101,741 (11.5%)</td><td>347,190 (39.4%)</td></tr><tr><td>Population Density (per km²)</td><td>621.8</td><td>395.2</td><td>401.6</td><td>42.9</td></tr><tr><td>NFC Pool Share (%)</td><td>51.74%</td><td>24.55%</td><td>14.62% (+1%)</td><td>9.09%</td></tr><tr><td>Number of Divisions / Districts</td><td>10 Div / 41 Dist</td><td>7 Div / 30 Dist</td><td>7 Div / 38 Dist</td><td>8 Div / 36 Dist</td></tr><tr><td>Average District Population</td><td>3,114,364</td><td>1,856,538</td><td>1,075,160</td><td>413,733</td></tr><tr><td>Literacy rate (age 10+, HIES 2024–25)</td><td>68%</td><td>58%</td><td>58%</td><td>49%</td></tr></tbody></table></div>
+        <h2>Pakistan Cross-Provincial Comparative Governance &amp; Indicators: Executive Summary</h2>
+        <p class="summary-lead"><strong>Executive Overview:</strong> Comparative evaluation of Pakistan's four federating units demonstrates asymmetric governance scale: Punjab alone accounts for more citizens (127.69M) than the other three provinces combined (111.45M). This structural demographic imbalance gives Punjab an effective legislative majority in the National Assembly (141 general seats of 266), generating recurring constitutional friction over water rights, NFC divisible pool shares, and civil service representation.</p>
+        <p>Balochistan presents the inverse administrative challenge: its 14.89 million citizens are dispersed over 347,190 square kilometers, resulting in a population density of only 42.9 persons per square kilometer (compared to 621.8 in Punjab). Sindh features Pakistan's highest urban concentration at 53.7%, yet exhibits intense intra-provincial economic polarization between Karachi Division and its agricultural hinterland. Khyber Pakhtunkhwa faces integrated administrative restructuring following the 25th Amendment merger of the former FATA tribal districts.</p>
+        
+        <div class="table-wrap">
+          <table class="data-summary-table">
+            <thead>
+              <tr>
+                <th>Indicator / Metric</th>
+                <th>Punjab</th>
+                <th>Sindh</th>
+                <th>Khyber Pakhtunkhwa</th>
+                <th>Balochistan</th>
+                <th>Islamabad (ICT)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Population (Census 2023)</strong></td>
+                <td>127,688,922 (52.88%)</td>
+                <td>55,696,147 (23.06%)</td>
+                <td>40,856,097 (16.92%)</td>
+                <td>14,894,402 (6.17%)</td>
+                <td>2,363,863 (0.98%)</td>
+              </tr>
+              <tr>
+                <td><strong>Projected Population (2026)</strong></td>
+                <td><strong>137,629,000</strong></td>
+                <td><strong>60,103,000</strong></td>
+                <td><strong>43,843,000</strong></td>
+                <td><strong>16,370,000</strong></td>
+                <td><strong>2,570,000</strong></td>
+              </tr>
+              <tr>
+                <td><strong>Land Area (km²)</strong></td>
+                <td>205,345 (23.3%)</td>
+                <td>140,914 (16.0%)</td>
+                <td>101,741 (11.5%)</td>
+                <td>347,190 (39.4%)</td>
+                <td>906 (0.1%)</td>
+              </tr>
+              <tr>
+                <td><strong>Population Density (per km²)</strong></td>
+                <td>621.8</td>
+                <td>395.2</td>
+                <td>401.6</td>
+                <td>42.9</td>
+                <td>2,609.1</td>
+              </tr>
+              <tr>
+                <td><strong>NFC Pool Share (%)</strong></td>
+                <td>51.74%</td>
+                <td>24.55%</td>
+                <td>14.62% (+1% WoT)</td>
+                <td>9.09%</td>
+                <td>Federal (Direct)</td>
+              </tr>
+              <tr>
+                <td><strong>National Assembly General Seats</strong></td>
+                <td>141 Seats</td>
+                <td>61 Seats</td>
+                <td>45 Seats</td>
+                <td>16 Seats</td>
+                <td>3 Seats</td>
+              </tr>
+              <tr>
+                <td><strong>Administrative Structure</strong></td>
+                <td>10 Div / 41 Dist</td>
+                <td>7 Div / 30 Dist</td>
+                <td>7 Div / 36 Dist</td>
+                <td>8 Div / 36 Dist</td>
+                <td>1 District</td>
+              </tr>
+              <tr>
+                <td><strong>Literacy Rate (10+ Years)</strong></td>
+                <td>66.3%</td>
+                <td>61.8%</td>
+                <td>55.1%</td>
+                <td>43.8%</td>
+                <td>84.0%</td>
+              </tr>
+              <tr>
+                <td><strong>Urbanization Ratio (%)</strong></td>
+                <td>36.8%</td>
+                <td>53.7%</td>
+                <td>15.0%</td>
+                <td>31.0%</td>
+                <td>46.9%</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
         <p class="summary-note"><em>Data Benchmark: Official verified public figures from PBS Census 2023, HIES 2024–25, PES 2025–26, and 7th NFC Award documents. Fully crawlable static reference data.</em></p>
       </section>
 
@@ -484,131 +619,21 @@
     
     </main>
     <footer class="site-footer">
-      <div data-nosnippet class="global-directory-nosnippet">
-<section class="site-directory" data-nosnippet aria-label="Complete PPRI Policy &amp; Data Index">
-      <div class="container">
-        <details class="directory-details">
-                    <summary class="directory-summary">
-            <div class="directory-summary-text">
-              <span class="directory-title">Complete PPRI Policy, Data &amp; Research Index</span>
-              <span class="directory-hint">Explore all 25 Policy Articles, 5 Research Reports, 10 Data Observatories, and Reform Frameworks</span>
+      <section class="directory-banner" aria-label="PPRI Research Directory">
+        <div class="container">
+          <div class="directory-banner-card">
+            <div class="directory-banner-content">
+              <span class="directory-banner-badge">Master Catalog</span>
+              <h3 class="directory-banner-title">Complete PPRI Policy, Research &amp; Data Directory</h3>
+              <p class="directory-banner-text">Explore the unified catalog of 25 policy articles, 5 research reports, and 10 subnational data observatories.</p>
             </div>
-            <div class="directory-toggle-badge" aria-live="polite">
-              <span class="dir-toggle-closed">Show Research Directory (60+ Pages)</span>
-              <span class="dir-toggle-open">Hide Directory</span>
-              <svg class="directory-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
-            </div>
-          </summary>
-                    <div class="directory-grid">
-            <div class="directory-col">
-              <h3><svg class="dir-col-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg> Policy Articles &amp; Analysis</h3>
-              <ul>
-                <li><a href="/articles/provinces-of-pakistan-names-capitals-population.html">How Many Provinces in Pakistan (2026)? Names &amp; Capitals</a></li>
-                <li><a href="/articles/four-provinces-241-million-people-administrative-scale.html">Pakistan Provinces Population: 4 Provinces vs. 241.5M Scale</a></li>
-                <li><a href="/articles/south-punjab-why-does-the-province-demand-keep-returning.html">South Punjab Province: Population, 11 Districts Map &amp; Budget</a></li>
-                <li><a href="/articles/hazara-province-why-has-the-demand-survived.html">Hazara Province Movement: History, 8 Districts Map &amp; KP Fiscal Share</a></li>
-                <details class="dir-more-articles dir-more-section">
-                  <summary class="dir-more-summary">View all 25 policy articles &darr;</summary>
-                  <ul class="dir-more-list">
-                    <li><a href="/articles/karachi-urban-sindh-representation-revenue-administration.html">Karachi Administrative Structure: 7 Districts &amp; 25 Towns</a></li>
-                    <li><a href="/articles/new-administrative-units-pakistan-2026.html">New Provinces in Pakistan: PPRI-01 Map &amp; 13 Units Model</a></li>
-                    <li><a href="/articles/south-punjab-saraiki-bahawalpur-difference.html">South Punjab vs. Bahawalpur vs. Saraiki Suba Differences</a></li>
-                    <li><a href="/articles/bahawalpur-province-restoration-2026.html">Bahawalpur Province Restoration: 1955 Merger &amp; History</a></li>
-                    <li><a href="/articles/what-would-a-new-province-actually-change.html">What Would a New Province Actually Change in Pakistan?</a></li>
-                    <li><a href="/articles/why-is-pakistan-debating-new-provinces-again.html">Why Is Pakistan Debating New Provinces Again? (2026 Analysis)</a></li>
-                    <li><a href="/articles/more-provinces-or-stronger-local-governments.html">More Provinces vs. Stronger Local Governments Dilemma</a></li>
-                    <li><a href="/articles/can-pakistan-grow-beyond-provincial-capitals-secondary-cities.html">Secondary Cities in Pakistan: Urbanization &amp; Decentralization</a></li>
-                    <li><a href="/articles/new-province-can-move-capital-can-it-move-power.html">New Provinces: Secretariat Scale vs. Municipal Devolution</a></li>
-                    <li><a href="/articles/where-did-development-money-go-district-government.html">Where Did Development Money Go? PFC Awards &amp; 2001 Devolution</a></li>
-                    <li><a href="/articles/where-does-pakistans-development-money-go.html">Where Does Pakistan's Development Money Go? NFC &amp; ADP Breakdown</a></li>
-                    <li><a href="/articles/18th-amendment-did-devolution-stop-at-provincial-capital.html">18th Amendment: Provincial Devolution vs. Article 140A</a></li>
-                    <li><a href="/articles/is-gilgit-baltistan-a-province-of-pakistan.html">Is Gilgit-Baltistan a Province of Pakistan? Legal Status</a></li>
-                    <li><a href="/articles/how-far-is-government-administrative-distance.html">Administrative Distance: Travel Times to Secretariats</a></li>
-                    <li><a href="/articles/how-should-pakistan-evaluate-a-new-province.html">PPRI 12-Point Empirical Rubric for New Sub-Units</a></li>
-                    <li><a href="/articles/before-local-government-faded-citizen-perceptions.html">Citizen Perceptions: 2004/05 National Social Audit</a></li>
-                    <li><a href="/articles/did-2001-devolution-improve-services-evidence.html">Did 2001 Devolution Improve Services? Empirical Evidence</a></li>
-                    <li><a href="/articles/one-province-many-needs-development-budget-priority.html">Provincial ADP Spending: Capital Bias &amp; Regional Inequity</a></li>
-                    <li><a href="/articles/pakistan-keeps-reinventing-local-government-history.html">History of Local Government in Pakistan (1959–2026)</a></li>
-                    <li><a href="/articles/when-development-follows-the-capital-people-follow.html">Capital City Migration &amp; Urban Congestion Cycles</a></li>
-                    <li><a href="/articles/why-is-local-government-always-the-last-tier-to-get-power.html">Why Local Government Fails to Get Power in Pakistan</a></li>
-                    <li><a href="/articles/"><strong>View All 25 Analytical Articles &rarr;</strong></a></li>
-                  </ul>
-                </details>
-              </ul>
-            </div>
-            <div class="directory-col">
-              <h3><svg class="dir-col-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg> Research Reports &amp; Papers</h3>
-              <ul>
-                <li><a href="/research/reports/income-went-up-why-does-life-feel-harder.html">Average Household Income in Pakistan (HIES 2024-25 vs Inflation)</a></li>
-                <li><a href="/research/reports/bribe-you-cant-see-corruption-private-tax.html">NCPS 2025 Corruption Data: Administrative Bribes as Private Tax</a></li>
-                <li><a href="/research/reports/price-of-a-simple-task-pakistan-bureaucracy-cost.html">Price of a Simple Task: Pakistan Bureaucracy Cost Index</a></li>
-                <li><a href="/research/reports/same-country-different-life-district-access.html">District Inequality in Pakistan: HIES 2024-25 Basic Services</a></li>
-                <details class="dir-more-section">
-                  <summary class="dir-more-summary">View all reports &amp; papers &darr;</summary>
-                  <ul class="dir-more-list">
-                    <li><a href="/research/reports/does-money-work-better-spent-closer-to-people.html">Fiscal Decentralization: Local Government vs Centralized ADP</a></li>
-                    <li><a href="/research/policy-papers/provincial-reorganization-of-pakistan.html">Flagship Paper: Provincial Reorganization of Pakistan</a></li>
-                    <li><a href="/research/working-papers/provinces-local-government.html">Working Paper: Provinces and Local Governments</a></li>
-                    <li><a href="/research/briefs/administrative-scale.html">Research Brief: Administrative Scale &amp; Governance Ratios</a></li>
-                    <li><a href="/research/comparative-governance.html">Comparative Subnational Governance: Global Federations</a></li>
-                    <li><a href="/research/legal-library.html">Constitutional Legal Library: Article 239 &amp; Article 140A</a></li>
-                    <li><a href="/research/reports/"><strong>View All Research Reports &rarr;</strong></a></li>
-                  </ul>
-                </details>
-              </ul>
-            </div>
-            <div class="directory-col">
-              <h3><svg class="dir-col-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path></svg> Data Observatories</h3>
-              <ul>
-                <li><a href="/data/centre.html">Central Data Observatory &amp; Knowledge Map</a></li>
-                <li><a href="/data/population/">Population &amp; Cities Observatory (Census 2023)</a></li>
-                <li><a href="/data/economy/">Economy, Inflation &amp; Markets Benchmarks</a></li>
-                <li><a href="/data/public-finance/">Public Finance &amp; 7th NFC Simulator</a></li>
-                <details class="dir-more-section">
-                  <summary class="dir-more-summary">View all data observatories &darr;</summary>
-                  <ul class="dir-more-list">
-                    <li><a href="/data/living-standards/">Living Standards &amp; HIES 2024–25 Income</a></li>
-                    <li><a href="/data/education/">Education &amp; Literacy Benchmarks</a></li>
-                    <li><a href="/data/health/">Public Health &amp; Medical Infrastructure</a></li>
-                    <li><a href="/data/digital-access/">Digital Access &amp; Teledensity Tracker</a></li>
-                    <li><a href="/data/compare/">Cross-Provincial Indicator Comparator</a></li>
-                    <li><a href="/knowledge-library/">Knowledge Library (CSS/PMS Reference)</a></li>
-                    <li><a href="/data/downloads/">Open Data Downloads (CSV / JSON)</a></li>
-                    <li><a href="/maps/scenarios/">Interactive Scenario Lab (PPRI-01 Map)</a></li>
-                    <li><a href="/maps/">Cartographic Map Gallery</a></li>
-                  </ul>
-                </details>
-              </ul>
-            </div>
-            <div class="directory-col">
-              <h3><svg class="dir-col-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg> Reform Models &amp; Engagement</h3>
-              <ul>
-                <li><a href="/scenarios/"><strong>Subnational Governance Scenarios Suite</strong></a></li>
-                <li><a href="/provinces/proposed-models.html">Proposed Reform Models: 13-Unit Structure</a></li>
-                <li><a href="/provinces/#fiscal-framework">Fiscal Framework: NFC Divisible Pool Sharing</a></li>
-                <li><a href="/provinces/constitutional-framework.html">Constitutional Path: Article 239(4) Bill Guide</a></li>
-                <li><a href="/scenarios/#local-government">Local Government Framework: Article 140A Devolution</a></li>
-                <details class="dir-more-section">
-                  <summary class="dir-more-summary">View all models &amp; engagement &darr;</summary>
-                  <ul class="dir-more-list">
-                    <li><a href="/provinces/#administrative-model">Administrative Secretariat &amp; Cadre Transition</a></li>
-                    <li><a href="/provinces/transition-framework.html">Transition Framework: 3-Year Implementation</a></li>
-                    <li><a href="/provinces/why-provinces.html">Why Sub-National Reform? Core Case Studies</a></li>
-                    <li><a href="/resources/constitution.html">Constitution Reader: Federal &amp; Provincial Lists</a></li>
-                    <li><a href="/resources/legislation.html">Provincial Local Government Acts &amp; Statutes</a></li>
-                    <li><a href="/consultation/">Public Consultation Portal</a></li>
-                    <li><a href="/surveys/">Participate in National Governance Survey</a></li>
-                    <li><a href="/consultation/submissions.html">Submit Policy Memoranda &amp; Feedback</a></li>
-                    <li><a href="/about.html">About Pakistan Provincial Reform Institute</a></li>
-                  </ul>
-                </details>
-              </ul>
-            </div>
+            <a href="/directory.html" class="directory-banner-btn">
+              <span>Browse 70+ Page Directory</span>
+              <span aria-hidden="true">&rarr;</span>
+            </a>
           </div>
-        </details>
-      </div>
-    </section>
-      </div>
+        </div>
+      </section>
       <div class="container footer-grid">
         <div>
           <img

@@ -12,6 +12,7 @@
     </script>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
     <title>Pakistan Provincial Reform Institute | PPRI</title>
     <meta
       name="description"
@@ -56,7 +57,9 @@
     <link
       rel="stylesheet"
       href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-      crossorigin=""
+      integrity="sha384-sHL9NAb7lN7rfvG5lfHpm643Xkcjzp4jFvuavGOndn6pjVqS6ny56CAt3nsEVT4H"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="/assets/css/hero-map.css" />
     <link rel="stylesheet" href="/assets/css/responsive.css" />
@@ -753,7 +756,7 @@
               <iframe
                 id="homeMapPreview"
                 title="Interactive preview of the PPRI-01 scenario map"
-                data-src="/maps/scenarios/index.html?embed=1"
+                data-src="/maps/scenarios/?embed=1"
                 loading="lazy"
               ></iframe>
               <div class="scenario-frame-note">
@@ -1809,7 +1812,7 @@
                   
                   <!-- Level 3: Curated Headings Under Subdivision -->
                   <div class="subdivision-leaves-wrap">
-                    <a href="/maps/scenarios/index.html" class="vi-tree-leaf-mini" data-summary="Decentralized Provincial Restructuring" data-pillar="maps">
+                    <a href="/maps/scenarios/" class="vi-tree-leaf-mini" data-summary="Decentralized Provincial Restructuring" data-pillar="maps">
                       <span class="leaf-dot" aria-hidden="true"></span>
                       <span class="leaf-name">13-Unit Model</span>
                     </a>
@@ -2064,7 +2067,9 @@
     ></nav>
     <script
       src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-      crossorigin=""
+      integrity="sha384-cxOPjt7s7Iz04uaHJceBmS+qpjv2JkIHNVcuOrM+YHwZOmJGBXI00mdUXEq65HTH"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
       defer
     ></script>
     <script src="/assets/js/main.js" defer></script>
