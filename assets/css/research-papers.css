@@ -3,6 +3,10 @@
    Institutional Think-Tank design system.
    ===== */
 
+:root {
+  interpolate-size: allow-keywords;
+}
+
 /* Ensure sticky elements function properly without overflow-x clipping context */
 html,
 body {
@@ -218,12 +222,20 @@ body {
 }
 .source-card-body {
   max-height: 0;
+  block-size: 0;
   overflow: hidden;
-  transition: max-height 0.3s ease, padding 0.3s ease;
+  transition: block-size 0.3s ease, max-height 0.3s ease, padding 0.3s ease;
 }
 .source-card.open .source-card-body {
   max-height: 200px;
+  block-size: auto;
   padding: 14px 18px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .source-card-body {
+    transition: none !important;
+  }
 }
 .source-tier {
   display: inline-block;
