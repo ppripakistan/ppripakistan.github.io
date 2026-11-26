@@ -1584,3 +1584,45 @@
   color: #0f766e !important;
   transform: translateY(-1px);
 }
+
+/* Shared Observatory Coverage, Dual-Answer & Source Strips */
+.ppri-coverage-note {
+  background: #f0fdfa;
+  border: 1px solid #99f6e4;
+  border-left: 4px solid #0f766e;
+  border-radius: 10px;
+  padding: 0.9rem 1.1rem;
+  margin: 1rem 0 1.35rem;
+  font-size: 0.92rem;
+}
+.ppri-table-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin: 0.5rem 0 0.75rem;
+  padding: 0.65rem 0.9rem;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 0.86rem;
+}
+.ppri-dual-answer-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  margin: 1rem 0 1.35rem;
+}
+.ppri-answer-card {
+  background: #ffffff;
+  border: 1px solid #cbd5e1;
+  border-top: 4px solid #073c3a;
+  border-radius: 10px;
+  padding: 1rem 1.1rem;
+}
+@media (max-width: 768px) {
+  .ppri-dual-answer-grid {
+    grid-template-columns: 1fr;
+  }
+}

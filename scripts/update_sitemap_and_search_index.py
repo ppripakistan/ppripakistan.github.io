@@ -62,6 +62,12 @@ CANONICAL_URDU_PAGES = [
     "https://ppripakistan.github.io/ur/research/reports/same-country-different-life-district-access.html",
     "https://ppripakistan.github.io/ur/research/reports/bribe-you-cant-see-corruption-private-tax.html",
     "https://ppripakistan.github.io/ur/research/reports/does-money-work-better-spent-closer-to-people.html",
+    "https://ppripakistan.github.io/ur/articles/",
+    "https://ppripakistan.github.io/ur/articles/provinces-of-pakistan-names-capitals-population.html",
+    "https://ppripakistan.github.io/ur/articles/new-administrative-units-pakistan-2026.html",
+    "https://ppripakistan.github.io/ur/articles/karachi-urban-sindh-representation-revenue-administration.html",
+    "https://ppripakistan.github.io/ur/articles/bahawalpur-province-restoration-2026.html",
+    "https://ppripakistan.github.io/ur/articles/is-gilgit-baltistan-a-province-of-pakistan.html",
 ]
 
 HREFLANG_PAIRS = [
@@ -77,6 +83,12 @@ HREFLANG_PAIRS = [
     ("https://ppripakistan.github.io/research/reports/same-country-different-life-district-access.html", "https://ppripakistan.github.io/ur/research/reports/same-country-different-life-district-access.html"),
     ("https://ppripakistan.github.io/research/reports/bribe-you-cant-see-corruption-private-tax.html", "https://ppripakistan.github.io/ur/research/reports/bribe-you-cant-see-corruption-private-tax.html"),
     ("https://ppripakistan.github.io/research/reports/does-money-work-better-spent-closer-to-people.html", "https://ppripakistan.github.io/ur/research/reports/does-money-work-better-spent-closer-to-people.html"),
+    ("https://ppripakistan.github.io/articles/", "https://ppripakistan.github.io/ur/articles/"),
+    ("https://ppripakistan.github.io/articles/provinces-of-pakistan-names-capitals-population.html", "https://ppripakistan.github.io/ur/articles/provinces-of-pakistan-names-capitals-population.html"),
+    ("https://ppripakistan.github.io/articles/new-administrative-units-pakistan-2026.html", "https://ppripakistan.github.io/ur/articles/new-administrative-units-pakistan-2026.html"),
+    ("https://ppripakistan.github.io/articles/karachi-urban-sindh-representation-revenue-administration.html", "https://ppripakistan.github.io/ur/articles/karachi-urban-sindh-representation-revenue-administration.html"),
+    ("https://ppripakistan.github.io/articles/bahawalpur-province-restoration-2026.html", "https://ppripakistan.github.io/ur/articles/bahawalpur-province-restoration-2026.html"),
+    ("https://ppripakistan.github.io/articles/is-gilgit-baltistan-a-province-of-pakistan.html", "https://ppripakistan.github.io/ur/articles/is-gilgit-baltistan-a-province-of-pakistan.html"),
     ("https://ppripakistan.github.io/surveys/", "https://ppripakistan.github.io/ur/consultation/survey.html"),
 ]
 
@@ -375,6 +387,20 @@ def clean_and_update_search_index():
             "description": "Verification policies, primary official authorities (PBS, Finance Division, SBP), definition hygiene, and search intent mapping standards.",
             "url": "/data/methodology/",
             "tags": ["methodology", "data sources", "pbs", "verification", "definitions", "citations", "academic authority"]
+        },
+        {
+            "title": "Pakistan Literacy Rate by Province — PBS HIES 2024–25",
+            "type": "Data Observatory: Literacy",
+            "description": "Official PBS HIES 2024–25 literacy rates (63% national age 10+, Punjab 68%, Sindh 58%, KP 58%, Balochistan 49%), adult literacy, school attendance & out-of-school rates.",
+            "url": "/data/literacy-rate-pakistan/",
+            "tags": ["literacy rate", "hies 2024-25", "province wise literacy", "adult literacy", "out of school children", "education"]
+        },
+        {
+            "title": "7th NFC Award Formula: Provincial Shares & Weights",
+            "type": "Fiscal Federalism Guide",
+            "description": "7th NFC Award vertical split (57.5% / 42.5%), 4-factor horizontal weights (82% population, 10.3% poverty, 5% revenue, 2.7% density), and 11th NFC updates.",
+            "url": "/reform/nfc-award-formula-pakistan/",
+            "tags": ["nfc award", "7th nfc", "11th nfc", "article 160", "provincial shares", "divisible pool"]
         }
     ]
 
@@ -511,6 +537,27 @@ def clean_and_update_search_index():
             "description": "مقامی حکومتوں کی مالیات، ترقیاتی اخراجات کی صوبائی مرکزیت بمقابلہ بلدیاتی اختیارات کی تفویض پر بین الاقوامی و ملکی شواہد۔",
             "url": "/ur/research/reports/does-money-work-better-spent-closer-to-people.html",
             "tags": ["بلدیاتی فنانس", "مقامی حکومتیں", "آرٹیکل 140 اے", "ترقیاتی بجٹ", "این ایف سی", "پی ایف سی"]
+        },
+        {
+            "title": "پاکستان کے چار صوبے: نام، دارالحکومت، آبادی اور نقشہ",
+            "type": "بنیادی رہنمائی",
+            "description": "پنجاب، سندھ، خیبر پختونخوا اور بلوچستان کے دارالحکومت، مردم شماری 2023 کی آبادی (241.50 ملین)، اور اسلام آباد، گلگت بلتستان و آزاد کشمیر کی حیثیت۔",
+            "url": "/ur/articles/provinces-of-pakistan-names-capitals-population.html",
+            "tags": ["پاکستان کے صوبے", "دارالحکومت", "مردم شماری 2023", "پنجاب", "سندھ", "خیبر پختونخوا", "بلوچستان"]
+        },
+        {
+            "title": "پاکستان میں نئے صوبے اور انتظامی یونٹس (2026): تجاویز، حیثیت اور آئینی طریقہ کار",
+            "type": "انتظامی اصلاحات",
+            "description": "نئے صوبوں کی مجوزہ تجاویز، نومبر 2026 کی آئینی حیثیت، 28ویں ترمیم کا سیاق و سباق، اور آرٹیکل 239(4) کی شرائط۔",
+            "url": "/ur/articles/new-administrative-units-pakistan-2026.html",
+            "tags": ["نئے صوبے", "28ویں ترمیم", "جنوبی پنجاب", "بہاولپور", "ہزارہ", "آرٹیکل 239"]
+        },
+        {
+            "title": "اردو پالیسی مضامین و تجزیات",
+            "type": "مضامین پورٹل",
+            "description": "پاکستان میں صوبائی تنظیمِ نو، کراچی، بہاولپور، گلگت بلتستان اور مردم شماری پر اردو مضامین۔",
+            "url": "/ur/articles/",
+            "tags": ["اردو مضامین", "پالیسی تجزیہ", "صوبائی اصلاحات"]
         }
     ]
 

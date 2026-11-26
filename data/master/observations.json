@@ -3029,7 +3029,7 @@
     "geography_type": "country",
     "reference_period": "HIES 2024–25",
     "dimension": "sex=female",
-    "value": "39",
+    "value": "31",
     "unit": "percent_of_population_age_10_plus",
     "source_id": "PBS_HIES_DASHBOARD",
     "source_url": "https://www.pbs.gov.pk/hies/",

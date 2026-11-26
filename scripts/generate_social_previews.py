@@ -99,10 +99,10 @@ OBSERVATORY_METRICS = {
     },
     'digital-access': {
         'tag': 'PBS HIES 2024-25',
-        'value': '95.0%',
+        'value': '96.0%',
         'label': 'Household Mobile & Smartphone Access',
-        'bars': [('Mobile Access', '95.0%', 0.95, COL_FOREST), ('Internet Users', '57.0%', 0.57, COL_EMERALD), ('Male Mobile', '69.0%', 0.69, (48, 136, 128)), ('Female Mobile', '39.0%', 0.39, COL_LIME)],
-        'source': 'PBS Household Integrated Economic Survey & PTA Records'
+        'bars': [('HH Mobile', '96%', 0.96, COL_FOREST), ('HH Internet', '70%', 0.70, COL_EMERALD), ('Male Mobile', '69%', 0.69, (48, 136, 128)), ('Female Mobile', '31%', 0.31, COL_LIME)],
+        'source': 'PBS Household Integrated Economic Survey (HIES 2024-25)'
     },
     'public-finance': {
         'tag': '7TH NFC AWARD',

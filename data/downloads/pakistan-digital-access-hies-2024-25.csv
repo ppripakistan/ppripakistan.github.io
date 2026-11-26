@@ -25,7 +25,20 @@ Rural,Households with mobile/smartphone access,HIES 2024–25,,95,percent_of_hou
 Urban,Households with mobile/smartphone access,HIES 2018–19,,98,percent_of_households,PBS_HIES_DASHBOARD,Use household access definition; not equivalent to individual use or telecom subscriptions.
 Urban,Households with mobile/smartphone access,HIES 2024–25,,98,percent_of_households,PBS_HIES_DASHBOARD,Use household access definition; not equivalent to individual use or telecom subscriptions.
 Pakistan,Mobile/smartphone ownership,HIES 2024–25,,50,percent,PBS_HIES_202425,Use the HIES social report for disaggregations and confidence/denominator details.
-Pakistan,Individuals with personal mobile/smartphone ownership,HIES 2024–25,sex=female,39,percent_of_population_age_10_plus,PBS_HIES_DASHBOARD,Do not confuse with household ownership/access.
-Pakistan,Individuals with personal mobile/smartphone ownership,HIES 2024–25,sex=male,69,percent_of_population_age_10_plus,PBS_HIES_DASHBOARD,Do not confuse with household ownership/access.
-Rural,Individuals with personal mobile/smartphone ownership,HIES 2024–25,,44,percent_of_population_age_10_plus,PBS_HIES_DASHBOARD,Do not confuse with household ownership/access.
-Urban,Individuals with personal mobile/smartphone ownership,HIES 2024–25,,58,percent_of_population_age_10_plus,PBS_HIES_DASHBOARD,Do not confuse with household ownership/access.
+Pakistan,Individuals with personal mobile/smartphone ownership,HIES 2024–25,sex=female,31,percent_of_population_age_10_plus,PBS_HIES_202425,Do not confuse with household ownership/access.
+Pakistan,Individuals with personal mobile/smartphone ownership,HIES 2024–25,sex=male,69,percent_of_population_age_10_plus,PBS_HIES_202425,Do not confuse with household ownership/access.
+Rural,Individuals with personal mobile/smartphone ownership,HIES 2024–25,,44,percent_of_population_age_10_plus,PBS_HIES_202425,Do not confuse with household ownership/access.
+Urban,Individuals with personal mobile/smartphone ownership,HIES 2024–25,,58,percent_of_population_age_10_plus,PBS_HIES_202425,Do not confuse with household ownership/access.
+Pakistan,Individuals using the internet,HIES 2024–25,,57,percent_of_population_age_10_plus,PBS_HIES_202425,Individual internet use in last 3 months (age 10+); distinct from household internet access.
+Pakistan,Individuals using the internet,HIES 2024–25,sex=female,57,percent_of_population_age_10_plus,PBS_HIES_202425,Individual internet use in last 3 months (age 10+).
+Pakistan,Individuals using the internet,HIES 2024–25,sex=male,57,percent_of_population_age_10_plus,PBS_HIES_202425,Individual internet use in last 3 months (age 10+).
+Urban,Individuals using the internet,HIES 2024–25,,69,percent_of_population_age_10_plus,PBS_HIES_202425,Individual internet use in last 3 months (age 10+).
+Rural,Individuals using the internet,HIES 2024–25,,49,percent_of_population_age_10_plus,PBS_HIES_202425,Individual internet use in last 3 months (age 10+).
+Punjab,Households with internet access,HIES 2024–25,,69,percent_of_households,PBS_HIES_202425,Provincial household internet access; distinct from individual internet usage.
+Sindh,Households with internet access,HIES 2024–25,,67,percent_of_households,PBS_HIES_202425,Provincial household internet access; distinct from individual internet usage.
+Khyber Pakhtunkhwa,Households with internet access,HIES 2024–25,,77,percent_of_households,PBS_HIES_202425,Provincial household internet access; distinct from individual internet usage.
+Balochistan,Households with internet access,HIES 2024–25,,68,percent_of_households,PBS_HIES_202425,Provincial household internet access; distinct from individual internet usage.
+Punjab,Individuals using the internet,HIES 2024–25,,59,percent_of_population_age_10_plus,PBS_HIES_202425,Provincial individual internet usage (age 10+).
+Sindh,Individuals using the internet,HIES 2024–25,,56,percent_of_population_age_10_plus,PBS_HIES_202425,Provincial individual internet usage (age 10+).
+Khyber Pakhtunkhwa,Individuals using the internet,HIES 2024–25,,56,percent_of_population_age_10_plus,PBS_HIES_202425,Provincial individual internet usage (age 10+).
+Balochistan,Individuals using the internet,HIES 2024–25,,43,percent_of_population_age_10_plus,PBS_HIES_202425,Provincial individual internet usage (age 10+).

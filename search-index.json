@@ -1455,5 +1455,33 @@
       "citations",
       "academic authority"
     ]
+  },
+  {
+    "title": "Pakistan Literacy Rate by Province — PBS HIES 2024–25",
+    "type": "Data Observatory: Literacy",
+    "description": "Official PBS HIES 2024–25 literacy rates (63% national age 10+, Punjab 68%, Sindh 58%, KP 58%, Balochistan 49%), adult literacy, school attendance & out-of-school rates.",
+    "url": "/data/literacy-rate-pakistan/",
+    "tags": [
+      "literacy rate",
+      "hies 2024-25",
+      "province wise literacy",
+      "adult literacy",
+      "out of school children",
+      "education"
+    ]
+  },
+  {
+    "title": "7th NFC Award Formula: Provincial Shares & Weights",
+    "type": "Fiscal Federalism Guide",
+    "description": "7th NFC Award vertical split (57.5% / 42.5%), 4-factor horizontal weights (82% population, 10.3% poverty, 5% revenue, 2.7% density), and 11th NFC updates.",
+    "url": "/reform/nfc-award-formula-pakistan/",
+    "tags": [
+      "nfc award",
+      "7th nfc",
+      "11th nfc",
+      "article 160",
+      "provincial shares",
+      "divisible pool"
+    ]
   }
 ]

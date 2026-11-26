@@ -304,3 +304,21 @@ body[lang="ur"],
   content: "‹";
   padding: 0 8px;
 }
+
+/* ── Shared RTL Utilities for Panels, Maps & Dual Answers ───────────────── */
+[dir="rtl"] .ppri-status-panel {
+  border-left: 1px solid #fcd34d;
+  border-right: 5px solid #b45309;
+  text-align: right;
+}
+[dir="rtl"] .ppri-coverage-note {
+  border-left: 1px solid #99f6e4;
+  border-right: 4px solid #0f766e;
+  text-align: right;
+}
+[dir="rtl"] .ppri-province-card,
+[dir="rtl"] .ppri-answer-card,
+[dir="rtl"] .ppri-status-item,
+[dir="rtl"] .ppri-projections-details {
+  text-align: right;
+}

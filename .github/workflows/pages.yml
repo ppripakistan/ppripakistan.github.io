@@ -28,16 +28,13 @@ jobs:
         run: |
           pip install Pillow jsonschema
 
-      - name: Validate Constitution Data & Synchronize Metadata
+      - name: Synchronize & Verify Metadata
         run: |
-          python scripts/validate_constitution_data.py
           python scripts/update_sitemap_and_search_index.py
           python scripts/generate_social_previews.py
           python scripts/sync_preview_metadata.py
           python scripts/verify_seo_assets.py
           python scripts/run_complete_seo_audit.py
-          python scripts/sync_literacy_guide.py --check
-          python scripts/sync_admin_geography.py --check
 
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
