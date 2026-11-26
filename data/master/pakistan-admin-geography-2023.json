@@ -1,0 +1,110 @@
+{
+  "version": "2023-census-v1",
+  "geography_date": "2023 Census (tables reviewed 2026-11)",
+  "source": "Pakistan Bureau of Statistics (PBS) — 7th Population & Housing Census 2023",
+  "source_url": "https://www.pbs.gov.pk/gis/",
+  "territorial_scope": "4 Constitutional Provinces + Islamabad Capital Territory (Census 2023); Gilgit-Baltistan and Azad Jammu & Kashmir listed separately",
+  "provinces": [
+    {
+      "id": "punjab",
+      "number": 1,
+      "name": "Punjab",
+      "population_2023": 127688922,
+      "area_km2": 205344,
+      "subtitle": "Headquartered in Lahore. Governed by the Chief Secretary and Inspector General of Police (IGP).",
+      "divisions": [
+        {"name": "Lahore", "districts": ["Lahore", "Kasur", "Nankana Sahib", "Sheikhupura"], "population_2023": 22772710, "centre": "Lahore"},
+        {"name": "Faisalabad", "districts": ["Faisalabad", "Chiniot", "Jhang", "Toba Tek Singh"], "population_2023": 15785152, "centre": "Faisalabad"},
+        {"name": "Rawalpindi", "districts": ["Rawalpindi", "Attock", "Chakwal", "Jhelum", "Murree"], "population_2023": 11406496, "centre": "Rawalpindi"},
+        {"name": "Gujranwala", "districts": ["Gujranwala", "Hafizabad", "Narowal", "Sialkot"], "population_2023": 13018242, "centre": "Gujranwala"},
+        {"name": "Gujrat", "districts": ["Gujrat", "Mandi Bahauddin", "Wazirabad"], "population_2023": 5618340, "centre": "Gujrat"},
+        {"name": "Multan", "districts": ["Multan", "Khanewal", "Lodhran", "Vehari"], "population_2023": 13546412, "centre": "Multan"},
+        {"name": "Bahawalpur", "districts": ["Bahawalpur", "Bahawalnagar", "Rahim Yar Khan"], "population_2023": 13011048, "centre": "Bahawalpur"},
+        {"name": "Dera Ghazi Khan", "districts": ["DG Khan", "Layyah", "Muzaffargarh", "Rajanpur", "Kot Addu", "Taunsa"], "population_2023": 13878416, "centre": "Dera Ghazi Khan"},
+        {"name": "Sargodha", "districts": ["Sargodha", "Bhakkar", "Khushab", "Mianwali"], "population_2023": 9128496, "centre": "Sargodha"},
+        {"name": "Sahiwal", "districts": ["Sahiwal", "Okara", "Pakpattan"], "population_2023": 8323610, "centre": "Sahiwal"}
+      ]
+    },
+    {
+      "id": "sindh",
+      "number": 2,
+      "name": "Sindh",
+      "population_2023": 55696147,
+      "area_km2": 140914,
+      "subtitle": "Headquartered in Karachi. Comprises major urban local economies and fertile agrarian canal colonies.",
+      "divisions": [
+        {"name": "Karachi", "districts": ["Karachi Central", "Karachi East", "Karachi South", "Karachi West", "Korangi", "Malir", "Keamari"], "population_2023": 20382881, "centre": "Karachi"},
+        {"name": "Hyderabad", "districts": ["Hyderabad", "Dadu", "Jamshoro", "Matiari", "Tando Allahyar", "Tando Muhammad Khan", "Thatta", "Sujawal", "Badin"], "population_2023": 11620121, "centre": "Hyderabad"},
+        {"name": "Sukkur", "districts": ["Sukkur", "Ghotki", "Khairpur"], "population_2023": 6234812, "centre": "Sukkur"},
+        {"name": "Larkana", "districts": ["Larkana", "Jacobabad", "Kashmore", "Qambar Shahdadkot", "Shikarpur"], "population_2023": 6192380, "centre": "Larkana"},
+        {"name": "Mirpur Khas", "districts": ["Mirpur Khas", "Tharparkar", "Umerkot"], "population_2023": 4785124, "centre": "Mirpur Khas"},
+        {"name": "Shaheed Benazirabad", "districts": ["Shaheed Benazirabad (Nawabshah)", "Sanghar", "Naushahro Feroze"], "population_2023": 5892109, "centre": "Nawabshah"},
+        {"name": "Banbhore", "districts": [], "districts_display": "Thatta, Sujawal, Badin (coastal grouping — counted under Hyderabad above)", "population_2023": null, "centre": "Thatta"}
+      ]
+    },
+    {
+      "id": "kp",
+      "number": 3,
+      "name": "Khyber Pakhtunkhwa",
+      "population_2023": 40856097,
+      "area_km2": 101741,
+      "subtitle": "Headquartered in Peshawar. Includes the integrated tribal districts from the former FATA merger (25th Amendment).",
+      "divisions": [
+        {"name": "Peshawar", "districts": ["Peshawar", "Charsadda", "Nowshera", "Khyber", "Mohmand"], "population_2023": 9124310, "centre": "Peshawar"},
+        {"name": "Mardan", "districts": ["Mardan", "Swabi"], "population_2023": 4582190, "centre": "Mardan"},
+        {"name": "Malakand", "districts": ["Swat", "Buner", "Dir Lower", "Dir Upper", "Malakand", "Shangla", "Chitral Lower", "Chitral Upper", "Bajaur"], "population_2023": 9871540, "centre": "Saidu Sharif"},
+        {"name": "Hazara", "districts": ["Abbottabad", "Haripur", "Mansehra", "Battagram", "Torghar", "Kohistan Lower", "Kohistan Upper", "Kolai-Palas"], "population_2023": 6102480, "centre": "Abbottabad"},
+        {"name": "Kohat", "districts": ["Kohat", "Hangu", "Karak", "Kurram", "Orakzai"], "population_2023": 3912450, "centre": "Kohat"},
+        {"name": "Bannu", "districts": ["Bannu", "Lakki Marwat", "North Waziristan"], "population_2023": 3421800, "centre": "Bannu"},
+        {"name": "Dera Ismail Khan", "districts": ["DI Khan", "Tank", "South Waziristan Upper", "South Waziristan Lower"], "population_2023": 3841327, "centre": "Dera Ismail Khan"}
+      ]
+    },
+    {
+      "id": "balochistan",
+      "number": 4,
+      "name": "Balochistan",
+      "population_2023": 14894402,
+      "area_km2": 347190,
+      "subtitle": "Headquartered in Quetta. Spans 44% of Pakistan's total land area, characterized by vast distances and low density.",
+      "divisions": [
+        {"name": "Quetta", "districts": ["Quetta", "Pishin", "Killa Abdullah", "Chaman"], "population_2023": 3914250, "centre": "Quetta"},
+        {"name": "Kalat", "districts": ["Kalat", "Khuzdar", "Mastung", "Surab (Shaheed Sikandarabad)", "Awaran", "Hub", "Lasbela"], "population_2023": 2891400, "centre": "Khuzdar"},
+        {"name": "Makran", "districts": ["Gwadar", "Kech (Turbat)", "Panjgur"], "population_2023": 1845920, "centre": "Turbat"},
+        {"name": "Nasirabad", "districts": ["Nasirabad", "Jaffarabad", "Jhal Magsi", "Kachhi (Bolan)", "Sohbatpur", "Usta Muhammad"], "population_2023": 2108350, "centre": "Dera Murad Jamali"},
+        {"name": "Zhob", "districts": ["Zhob", "Killa Saifullah", "Sherani"], "population_2023": 892100, "centre": "Zhob"},
+        {"name": "Sibi", "districts": ["Sibi", "Kohlu", "Dera Bugti", "Harnai", "Ziarat"], "population_2023": 1215640, "centre": "Sibi"},
+        {"name": "Loralai", "districts": ["Loralai", "Barkhan", "Musakhail", "Duki"], "population_2023": 984200, "centre": "Loralai"},
+        {"name": "Rakhshan", "districts": ["Chagai", "Nushki", "Kharan", "Washuk"], "population_2023": 1042542, "centre": "Kharan"}
+      ]
+    }
+  ],
+  "territories": [
+    {
+      "name": "Islamabad Capital Territory (ICT)",
+      "scope_group": "federal_capital",
+      "basis": "Article 1(2)(b) Federal Capital",
+      "population_2023_display": "2,363,863",
+      "divisions_count": 0,
+      "districts_count": 1,
+      "subdivisions_display": "1 District (Islamabad), 5 Zones"
+    },
+    {
+      "name": "Gilgit-Baltistan (GB)",
+      "scope_group": "autonomous_or_disputed",
+      "basis": "Empowerment & Self-Governance Order",
+      "population_2023_display": "~1,800,000",
+      "divisions_count": 3,
+      "districts_count": 14,
+      "subdivisions_display": "3 Divisions (Gilgit, Baltistan, Diamer), 14 Districts"
+    },
+    {
+      "name": "Azad Jammu & Kashmir (AJK)",
+      "scope_group": "autonomous_or_disputed",
+      "basis": "AJK Interim Constitution Act 1974",
+      "population_2023_display": "~4,100,000",
+      "divisions_count": 3,
+      "districts_count": 10,
+      "subdivisions_display": "3 Divisions (Muzaffarabad, Mirpur, Poonch), 10 Districts"
+    }
+  ]
+}

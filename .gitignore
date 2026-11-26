@@ -7,13 +7,16 @@ Build Library/
 *.rar
 *.7z
 
-# Scratch, Debug, and Test Scripts
-scripts/debug_*.py
-scripts/test_*.py
-scripts/inspect_*.py
-scripts/check_*.py
-scripts/verify_*.py
+# Scripts: ignore local/one-off scripts, allowlist CI & sync scripts only
+scripts/*
+!scripts/validate_constitution_data.py
+!scripts/update_sitemap_and_search_index.py
+!scripts/generate_social_previews.py
+!scripts/sync_preview_metadata.py
 !scripts/verify_seo_assets.py
+!scripts/run_complete_seo_audit.py
+!scripts/sync_literacy_guide.py
+!scripts/sync_admin_geography.py
 
 # Python
 __pycache__/

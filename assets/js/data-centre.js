@@ -34,19 +34,33 @@ document.addEventListener("DOMContentLoaded", function () {
   const valRev = document.getElementById("valRev");
   const valDen = document.getElementById("valDen");
   const totalWeightBadge = document.getElementById("nfcTotalWeight");
+  const modeBanner = document.getElementById("nfcModeBanner");
+  const validationError = document.getElementById("nfcValidationError");
+  const resultsTitle = document.getElementById("nfcResultsTitle");
 
-  // Provincial baseline metrics for NFC criteria (Standardized benchmarks)
-  // Population (Census 2023 relative provincial shares excluding ICT):
-  // Punjab: 53.39%, Sindh: 23.29%, KP: 17.08%, Balochistan: 6.23%
-  const provincialCriteria = {
-    punjab: { pop: 53.39, pov: 25.0, rev: 35.0, den: 12.0 },
-    sindh: { pop: 23.29, pov: 23.0, rev: 55.0, den: 18.0 },
-    kp: { pop: 17.08, pov: 28.0, rev: 8.0, den: 15.0 },
-    balochistan: { pop: 6.23, pov: 24.0, rev: 2.0, den: 55.0 }
+  // Official 7th NFC Award (2010) horizontal shares — Finance Division Fiscal Policy Statement 2010-11
+  const OFFICIAL_7TH_NFC_SHARES = {
+    punjab: 51.74,
+    sindh: 24.55,
+    kp: 14.62,
+    balochistan: 9.09
   };
 
-  function updateNfcCalculation() {
+  // Documented illustrative baseline metrics for reform modeling (each criterion sums to 100.00%):
+  // Population: Census 2023 relative provincial shares excluding ICT (normalized to 100.00%)
+  // Poverty, Revenue, Inverse Density: illustrative policy-modeling benchmarks summing to 100%
+  const provincialCriteria = {
+    punjab: { pop: 53.39534, pov: 25.0, rev: 35.0, den: 12.0 },
+    sindh: { pop: 23.29233, pov: 23.0, rev: 55.0, den: 18.0 },
+    kp: { pop: 17.08171, pov: 28.0, rev: 8.0, den: 15.0 },
+    balochistan: { pop: 6.23062, pov: 24.0, rev: 2.0, den: 55.0 }
+  };
+
+  let nfcMode = "official_7th"; // "official_7th" | "illustrative"
+
+  function updateNfcCalculation(modeOverride) {
     if (!sliderPop || !sliderPov || !sliderRev || !sliderDen) return;
+    if (modeOverride) nfcMode = modeOverride;
 
     const wPop = parseFloat(sliderPop.value) || 0;
     const wPov = parseFloat(sliderPov.value) || 0;
@@ -60,28 +74,80 @@ document.addEventListener("DOMContentLoaded", function () {
     if (valDen) valDen.textContent = wDen.toFixed(1) + "%";
 
     const totalWeight = wPop + wPov + wRev + wDen;
+    const provinces = ["punjab", "sindh", "kp", "balochistan"];
+
+    if (totalWeight <= 0) {
+      if (totalWeightBadge) {
+        totalWeightBadge.textContent = "Total Weight: 0.0% (Invalid — must exceed 0%)";
+        totalWeightBadge.className = "nfc-total-weight-badge warning";
+      }
+      if (validationError) {
+        validationError.style.display = "block";
+        validationError.textContent = "Total criteria weight cannot be 0%. Adjust at least one slider above 0% to calculate provincial allocations.";
+      }
+      provinces.forEach(function (p) {
+        const pctEl = document.getElementById("nfcShare_" + p);
+        const amtEl = document.getElementById("nfcAmt_" + p);
+        if (pctEl) pctEl.textContent = "—";
+        if (amtEl) amtEl.textContent = "—";
+      });
+      return;
+    }
+
+    if (validationError) {
+      validationError.style.display = "none";
+      validationError.textContent = "";
+    }
+
     if (totalWeightBadge) {
       totalWeightBadge.textContent = "Total Weight: " + totalWeight.toFixed(1) + "%";
-      if (Math.abs(totalWeight - 100) < 0.2) {
+      if (Math.abs(totalWeight - 100) < 0.05) {
         totalWeightBadge.className = "nfc-total-weight-badge valid";
       } else {
         totalWeightBadge.className = "nfc-total-weight-badge warning";
-        totalWeightBadge.textContent += " (Auto-normalized to 100%)";
+        totalWeightBadge.textContent += " (Normalized to 100%)";
       }
     }
 
-    // Normalized weights
-    const normFactor = totalWeight > 0 ? 100 / totalWeight : 1;
-    const nPop = (wPop * normFactor) / 100;
-    const nPov = (wPov * normFactor) / 100;
-    const nRev = (wRev * normFactor) / 100;
-    const nDen = (wDen * normFactor) / 100;
+    let rawShares = {};
+    if (nfcMode === "official_7th") {
+      rawShares = Object.assign({}, OFFICIAL_7TH_NFC_SHARES);
+      if (resultsTitle) resultsTitle.textContent = "Official 7th NFC Horizontal Allocation";
+      if (modeBanner) {
+        modeBanner.style.background = "#ecfdf5";
+        modeBanner.style.borderColor = "#a7f3d0";
+        modeBanner.style.color = "#065f46";
+        modeBanner.innerHTML =
+          '<strong>Reference Mode — Official 7th NFC Award (2010):</strong> Displaying statutory horizontal shares (Punjab 51.74%, Sindh 24.55%, KP 14.62%, Balochistan 9.09%) from <a href="https://finance.gov.pk/publications/FiscalPolicyStatement_2010_11.pdf" target="_blank" rel="noopener">Finance Division (2010–11)</a>. Adjusting sliders switches to the illustrative reform model.';
+      }
+    } else {
+      const nPop = wPop / totalWeight;
+      const nPov = wPov / totalWeight;
+      const nRev = wRev / totalWeight;
+      const nDen = wDen / totalWeight;
 
-    // Calculate provincial shares
-    const provinces = ["punjab", "sindh", "kp", "balochistan"];
+      provinces.forEach(function (p) {
+        const c = provincialCriteria[p];
+        rawShares[p] = (c.pop * nPop) + (c.pov * nPov) + (c.rev * nRev) + (c.den * nDen);
+      });
+
+      const rawSum = provinces.reduce((acc, p) => acc + rawShares[p], 0);
+      if (Math.abs(rawSum - 100) > 1e-6) {
+        throw new Error("NFC allocation shares must sum to 100% before rounding; got " + rawSum);
+      }
+
+      if (resultsTitle) resultsTitle.textContent = "Illustrative Reform Model Allocation";
+      if (modeBanner) {
+        modeBanner.style.background = "#eff6ff";
+        modeBanner.style.borderColor = "#bfdbfe";
+        modeBanner.style.color = "#1e3a8a";
+        modeBanner.innerHTML =
+          "<strong>Illustrative Reform Model:</strong> Modeled shares computed from Census 2023 provincial population shares (53.40% / 23.29% / 17.08% / 6.23%) and PPRI illustrative poverty, revenue, and inverse-density inputs. Click <em>7th NFC (Status Quo)</em> for the official 2010 statutory award.";
+      }
+    }
+
     provinces.forEach(function (p) {
-      const c = provincialCriteria[p];
-      const sharePct = (c.pop * nPop) + (c.pov * nPov) + (c.rev * nRev) + (c.den * nDen);
+      const sharePct = rawShares[p];
       const shareAmount = (sharePct / 100) * pool;
 
       const pctEl = document.getElementById("nfcShare_" + p);
@@ -92,9 +158,17 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   [sliderPop, sliderPov, sliderRev, sliderDen].forEach(function (slider) {
-    if (slider) slider.addEventListener("input", updateNfcCalculation);
+    if (slider) {
+      slider.addEventListener("input", function () {
+        updateNfcCalculation("illustrative");
+      });
+    }
   });
-  if (poolInput) poolInput.addEventListener("input", updateNfcCalculation);
+  if (poolInput) {
+    poolInput.addEventListener("input", function () {
+      updateNfcCalculation();
+    });
+  }
 
   // Preset Buttons
   const preset7th = document.getElementById("preset7th");
@@ -104,40 +178,43 @@ document.addEventListener("DOMContentLoaded", function () {
 
   if (preset7th) {
     preset7th.addEventListener("click", function () {
-      sliderPop.value = 82.0;
-      sliderPov.value = 10.3;
-      sliderRev.value = 5.0;
-      sliderDen.value = 2.7;
-      updateNfcCalculation();
+      sliderPop.value = "82.0";
+      sliderPov.value = "10.3";
+      sliderRev.value = "5.0";
+      sliderDen.value = "2.7";
+      updateNfcCalculation("official_7th");
     });
   }
   if (presetEqual) {
     presetEqual.addEventListener("click", function () {
-      sliderPop.value = 40.0;
-      sliderPov.value = 30.0;
-      sliderRev.value = 15.0;
-      sliderDen.value = 15.0;
-      updateNfcCalculation();
+      sliderPop.value = "40.0";
+      sliderPov.value = "30.0";
+      sliderRev.value = "15.0";
+      sliderDen.value = "15.0";
+      updateNfcCalculation("illustrative");
     });
   }
   if (presetPop) {
     presetPop.addEventListener("click", function () {
-      sliderPop.value = 100.0;
-      sliderPov.value = 0.0;
-      sliderRev.value = 0.0;
-      sliderDen.value = 0.0;
-      updateNfcCalculation();
+      sliderPop.value = "100.0";
+      sliderPov.value = "0.0";
+      sliderRev.value = "0.0";
+      sliderDen.value = "0.0";
+      updateNfcCalculation("illustrative");
     });
   }
   if (presetNeed) {
     presetNeed.addEventListener("click", function () {
-      sliderPop.value = 50.0;
-      sliderPov.value = 35.0;
-      sliderRev.value = 5.0;
-      sliderDen.value = 10.0;
-      updateNfcCalculation();
+      sliderPop.value = "50.0";
+      sliderPov.value = "35.0";
+      sliderRev.value = "5.0";
+      sliderDen.value = "10.0";
+      updateNfcCalculation("illustrative");
     });
   }
+
+  // Initialize official 7th NFC reference state on load
+  updateNfcCalculation("official_7th");
 
   // Run initial calculation
   updateNfcCalculation();

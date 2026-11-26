@@ -1,12 +1,13 @@
 (function () {
   "use strict";
 
+  const GISDATA_REF = "9fb0f09c52edc0ddc22eb8e44e386f0ae325cfca";
   const ADM0_URL =
-    "https://cdn.jsdelivr.net/gh/PakData/GISData@master/PAK-GeoJSON/PAK_adm0.json";
+    `https://cdn.jsdelivr.net/gh/PakData/GISData@${GISDATA_REF}/PAK-GeoJSON/PAK_adm0.json`;
   const ADM1_URL =
-    "https://cdn.jsdelivr.net/gh/PakData/GISData@master/PAK-GeoJSON/PAK_adm1.json";
+    `https://cdn.jsdelivr.net/gh/PakData/GISData@${GISDATA_REF}/PAK-GeoJSON/PAK_adm1.json`;
   const ADM3_URL =
-    "https://cdn.jsdelivr.net/gh/PakData/GISData@master/PAK-GeoJSON/PAK_adm3.json";
+    `https://cdn.jsdelivr.net/gh/PakData/GISData@${GISDATA_REF}/PAK-GeoJSON/PAK_adm3.json`;
   const SCENARIO_URL = "/data/scenarios/ppri-01.json";
 
   const COLORS = [
@@ -289,15 +290,25 @@
     return canonical(a) === canonical(b);
   }
 
-  function fetchJSON(url, label = url, timeoutMs = 12000) {
-    const controller = new AbortController();
-    const timer = setTimeout(() => controller.abort(), timeoutMs);
-    return fetch(url, { signal: controller.signal })
-      .then((r) => {
-        if (!r.ok) throw new Error(`${label}: HTTP ${r.status}`);
-        return r.json();
-      })
-      .finally(() => clearTimeout(timer));
+  function fetchJSON(url, label = url, timeoutMs = 12000, retries = 1) {
+    const attempt = (remaining) => {
+      const controller = new AbortController();
+      const timer = setTimeout(() => controller.abort(), timeoutMs);
+      return fetch(url, { signal: controller.signal })
+        .then((r) => {
+          if (!r.ok) throw new Error(`${label}: HTTP ${r.status}`);
+          return r.json();
+        })
+        .catch((err) => {
+          if (remaining > 0) {
+            return attempt(remaining - 1);
+          }
+          const reason = err && err.name === "AbortError" ? "request timed out" : (err?.message || "network error");
+          throw new Error(`${label}: ${reason}`);
+        })
+        .finally(() => clearTimeout(timer));
+    };
+    return attempt(retries);
   }
 
   function baseMap(map) {
@@ -759,9 +770,21 @@
     let selectedDistrict = null,
       editing = false,
       viewMode = "ppri",
-      showDistricts = true;
+      showDistricts = true,
+      isInitialized = false;
     let undoStack = [],
       redoStack = [];
+
+    function setControlsEnabled(enabled) {
+      [editToggle, resetBtn, saveBtn, exportBtn, shareBtn, unitSelect, search].forEach((ctrl) => {
+        if (ctrl) ctrl.disabled = !enabled;
+      });
+      if (!enabled) {
+        if (undoBtn) undoBtn.disabled = true;
+        if (redoBtn) redoBtn.disabled = true;
+      }
+    }
+    setControlsEnabled(false);
 
     const primaryUnits = () =>
       scenario.units.filter((u) => u.type !== "federal-overlay");
@@ -1120,6 +1143,7 @@
     }
 
     function resetScenario() {
+      if (!isInitialized || !scenario) return;
       assignments = new Map(originalAssignments);
       undoStack = [];
       redoStack = [];
@@ -1131,6 +1155,7 @@
     }
 
     function saveScenario() {
+      if (!isInitialized || !scenario) return;
       const saved = {};
       features.forEach((f) => {
         saved[f.properties.__ppriDistrictId] = assignments.get(f);
@@ -1140,6 +1165,10 @@
     }
 
     function exportScenario() {
+      if (!isInitialized || !scenario || !features.length) {
+        if (status) status.textContent = "Export is unavailable until district geometry finishes loading.";
+        return;
+      }
       const payload = {
         scenario: scenario.scenario_id,
         title: scenario.title,
@@ -1164,6 +1193,7 @@
     }
 
     function shareScenario() {
+      if (!isInitialized || !scenario || !features.length) return;
       const ids = features
         .map(
           (f) => `${f.properties.__ppriDistrictId}=${assignments.get(f) || ""}`,
@@ -1240,103 +1270,139 @@
     };
     setLoading("Loading Pakistan administrative geography…");
 
-    // Do not make the whole Scenario Lab depend on one optional geography request.
-    // ADM1 + ADM3 + scenario are the required inputs; ADM0 is optional because
-    // it is used only for the national mask/initial outline.
-    Promise.allSettled([
-      fetchJSON(ADM0_URL, "Pakistan outline"),
-      fetchJSON(ADM1_URL, "Current provincial boundaries"),
-      fetchJSON(ADM3_URL, "District boundaries"),
-      fetchJSON(SCENARIO_URL, "PPRI-01 scenario"),
-    ])
-      .then((results) => {
-        const [nationalResult, adm1Result, districtResult, scenarioResult] =
-          results;
-        const failure = (result) =>
-          result.status === "rejected" ? result.reason : null;
+    function loadScenarioData() {
+      setControlsEnabled(false);
+      isInitialized = false;
+      setLoading("Loading Pakistan administrative geography…");
 
-        if (scenarioResult.status !== "fulfilled")
-          throw failure(scenarioResult);
-        if (districtResult.status !== "fulfilled")
-          throw failure(districtResult);
+      // Do not make the whole Scenario Lab depend on one optional geography request.
+      // ADM1 + ADM3 + scenario are the required inputs; ADM0 is optional because
+      // it is used only for the national mask/initial outline.
+      Promise.allSettled([
+        fetchJSON(ADM0_URL, "Pakistan outline"),
+        fetchJSON(ADM1_URL, "Current provincial boundaries"),
+        fetchJSON(ADM3_URL, "District boundaries"),
+        fetchJSON(SCENARIO_URL, "PPRI-01 scenario"),
+      ])
+        .then((results) => {
+          const [nationalResult, adm1Result, districtResult, scenarioResult] =
+            results;
+          const failure = (result) =>
+            result.status === "rejected" ? result.reason : null;
 
-        scenario = scenarioResult.value;
-        adm1 =
-          adm1Result.status === "fulfilled"
-            ? adm1Result.value.features || []
-            : [];
-        features = (districtResult.value.features || []).map((f, i) => {
-          f.properties = Object.assign({}, f.properties, {
-            __ppriDistrictId: `${i}-${displayDistrict(f)}`,
+          if (scenarioResult.status === "fulfilled") {
+            scenario = scenarioResult.value;
+          }
+          if (scenarioResult.status !== "fulfilled")
+            throw failure(scenarioResult);
+          if (districtResult.status !== "fulfilled")
+            throw failure(districtResult);
+
+          adm1 =
+            adm1Result.status === "fulfilled"
+              ? adm1Result.value.features || []
+              : [];
+          features = (districtResult.value.features || []).map((f, i) => {
+            f.properties = Object.assign({}, f.properties, {
+              __ppriDistrictId: `${i}-${displayDistrict(f)}`,
+            });
+            return f;
           });
-          return f;
-        });
-        const national =
-          nationalResult.status === "fulfilled"
-            ? nationalResult.value
-            : { type: "FeatureCollection", features: adm1 };
-        assignments = makeDistrictAssignments(adm1, features, scenario);
-        originalAssignments = new Map(assignments);
+          const national =
+            nationalResult.status === "fulfilled"
+              ? nationalResult.value
+              : { type: "FeatureCollection", features: adm1 };
+          assignments = makeDistrictAssignments(adm1, features, scenario);
+          originalAssignments = new Map(assignments);
 
-        configurePakistanView(map, national, el);
-        addPakistanMaskPane(map, national);
-        renderUnitSelect();
-        renderCurrentLayer();
-        renderScenarioBoundaries();
-        renderDistrictLayer();
-        renderDistrictList();
-        setView("ppri");
-        changed();
-        status.textContent =
-          nationalResult.status === "fulfilled"
-            ? "PPRI-01 loaded. Scenario geometry and current administrative boundaries are ready."
-            : "PPRI-01 loaded. The optional national outline source was unavailable; administrative geometry is still available.";
+          isInitialized = true;
+          setControlsEnabled(true);
 
-        const overlayControls = {
-          "PPRI scenario": scenarioLayer,
-          "Current provinces": currentLayer,
-          "District boundaries": districtLayer,
-          "Federal overlays": overlayLayer,
-        };
-        L.control
-          .layers(
-            { OpenStreetMap: bases.street, "Light map": bases.light },
-            overlayControls,
-            { collapsed: true },
-          )
-          .addTo(map);
+          configurePakistanView(map, national, el);
+          addPakistanMaskPane(map, national);
+          renderUnitSelect();
+          renderCurrentLayer();
+          renderScenarioBoundaries();
+          renderDistrictLayer();
+          renderDistrictList();
+          setView("ppri");
+          changed();
+          status.textContent =
+            nationalResult.status === "fulfilled"
+              ? "PPRI-01 loaded. Scenario geometry and current administrative boundaries are ready."
+              : "PPRI-01 loaded. The optional national outline source was unavailable; administrative geometry is still available.";
 
-        map.on("overlayadd", (e) => {
-          if (e.layer === districtLayer && districtToggle)
-            districtToggle.checked = true;
-          if (e.layer === scenarioLayer && scenarioToggle)
-            scenarioToggle.checked = true;
-          if (e.layer === currentLayer && currentToggle)
-            currentToggle.checked = true;
-          if (e.layer === overlayLayer && overlayToggle)
-            overlayToggle.checked = true;
+          const overlayControls = {
+            "PPRI scenario": scenarioLayer,
+            "Current provinces": currentLayer,
+            "District boundaries": districtLayer,
+            "Federal overlays": overlayLayer,
+          };
+          L.control
+            .layers(
+              { OpenStreetMap: bases.street, "Light map": bases.light },
+              overlayControls,
+              { collapsed: true },
+            )
+            .addTo(map);
+
+          map.on("overlayadd", (e) => {
+            if (e.layer === districtLayer && districtToggle)
+              districtToggle.checked = true;
+            if (e.layer === scenarioLayer && scenarioToggle)
+              scenarioToggle.checked = true;
+            if (e.layer === currentLayer && currentToggle)
+              currentToggle.checked = true;
+            if (e.layer === overlayLayer && overlayToggle)
+              overlayToggle.checked = true;
+          });
+          map.on("overlayremove", (e) => {
+            if (e.layer === districtLayer && districtToggle)
+              districtToggle.checked = false;
+            if (e.layer === scenarioLayer && scenarioToggle)
+              scenarioToggle.checked = false;
+            if (e.layer === currentLayer && currentToggle)
+              currentToggle.checked = false;
+            if (e.layer === overlayLayer && overlayToggle)
+              overlayToggle.checked = false;
+          });
+        })
+        .catch((error) => {
+          console.error("PPRI scenario map load failed:", error);
+          isInitialized = false;
+          setControlsEnabled(false);
+          if (status)
+            status.textContent = `Map geometry unavailable: ${error.message || "unknown error"}. Interactive editing and export are disabled.`;
+          const coverage = document.getElementById("p6ScenarioCoverage");
+          if (coverage) {
+            coverage.className = "p6-coverage p6-coverage-error";
+            coverage.innerHTML = `<strong>District geometry unavailable</strong><span>${error.message || "Unknown loading error."}</span> <button type="button" id="p6RetryLoad" style="margin-left:8px;padding:4px 10px;border-radius:4px;border:1px solid #991b1b;background:#fff;color:#991b1b;font-weight:600;cursor:pointer;">Retry geometry</button>`;
+            const retryBtn = document.getElementById("p6RetryLoad");
+            if (retryBtn) retryBtn.addEventListener("click", loadScenarioData);
+          }
+          // Static fallback table from local PPRI-01 scenario JSON
+          const renderFallback = (sc) => {
+            if (!districtList || !sc || !Array.isArray(sc.units)) return;
+            const rows = sc.units
+              .map((u) => {
+                const rules = (sc.rules || []).filter((r) => r.unit === u.id);
+                const scope = rules.map((r) => r.note || r.division || (r.districts || []).join(", ")).filter(Boolean).join("; ") || u.basis || "Illustrative unit";
+                return `<li><strong>${u.name}</strong><span>${scope}</span></li>`;
+              })
+              .join("");
+            districtList.innerHTML = `<div style="padding:8px;font-size:0.84rem;color:#475569;"><strong>Static Scenario Fallback (${sc.scenario_id || "PPRI-01"}):</strong> Interactive map geometry failed to load; showing illustrative unit definitions below.</div><ul style="list-style:none;padding:0;margin:0;">${rows}</ul>`;
+          };
+          if (scenario) {
+            renderFallback(scenario);
+          } else {
+            fetchJSON(SCENARIO_URL, "PPRI-01 static fallback", 5000, 0)
+              .then(renderFallback)
+              .catch(() => {});
+          }
         });
-        map.on("overlayremove", (e) => {
-          if (e.layer === districtLayer && districtToggle)
-            districtToggle.checked = false;
-          if (e.layer === scenarioLayer && scenarioToggle)
-            scenarioToggle.checked = false;
-          if (e.layer === currentLayer && currentToggle)
-            currentToggle.checked = false;
-          if (e.layer === overlayLayer && overlayToggle)
-            overlayToggle.checked = false;
-        });
-      })
-      .catch((error) => {
-        console.error("PPRI scenario map load failed:", error);
-        if (status)
-          status.textContent = `Map data could not be loaded: ${error.message || "unknown error"}.`;
-        const coverage = document.getElementById("p6ScenarioCoverage");
-        if (coverage) {
-          coverage.className = "p6-coverage p6-coverage-error";
-          coverage.innerHTML = `<strong>Map data failed to load</strong><span>${error.message || "Unknown loading error."}</span><span>Open the browser console for the failed source.</span>`;
-        }
-      });
+    }
+
+    loadScenarioData();
   }
 
   document.addEventListener("DOMContentLoaded", () => {

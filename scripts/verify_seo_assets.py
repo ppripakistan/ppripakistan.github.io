@@ -7,6 +7,7 @@ Open Graph/Twitter Metadata, and Google Search JSON-LD Structured Data.
 import sys
 import json
 import re
+from html.parser import HTMLParser
 from pathlib import Path
 from PIL import Image
 ROOT_DIR = Path(__file__).resolve().parent.parent
@@ -225,6 +226,75 @@ def verify_all():
             errors.append("index.html WebSite structured data missing alternateName: 'PPRI'")
         else:
             print("  [PASS] index.html WebSite JSON-LD correctly includes alternateName: 'PPRI'.")
+
+    # 7. Parsed-HTML <head> Canonical Verification (catches HTML5 implicit </head> closes)
+    print("\n[Check 7/7] Verifying Parsed-HTML <head> Canonical Integrity...")
+    HEAD_RAW_TAGS = {"title", "script", "style", "noscript"}
+    HEAD_ALLOWED_TAGS = {"head", "meta", "link", "title", "script", "style", "noscript", "base"}
+
+    class HeadCanonicalParser(HTMLParser):
+        def __init__(self):
+            super().__init__(convert_charrefs=True)
+            self.in_head = False
+            self.head_closed = False
+            self.raw_tag = None
+            self.canonicals_in_head = []
+            self.canonicals_outside_head = []
+
+        def handle_starttag(self, tag, attrs):
+            t = tag.lower()
+            attr_dict = {k.lower(): (v or "") for k, v in attrs}
+            if t == "head" and not self.head_closed:
+                self.in_head = True
+                return
+            if self.in_head and t in HEAD_RAW_TAGS:
+                self.raw_tag = t
+            if self.in_head and t not in HEAD_ALLOWED_TAGS:
+                self.in_head = False
+                self.head_closed = True
+            if t == "link" and "canonical" in attr_dict.get("rel", "").lower().split():
+                href = attr_dict.get("href", "").strip()
+                if self.in_head:
+                    self.canonicals_in_head.append(href)
+                else:
+                    self.canonicals_outside_head.append(href)
+
+        def handle_endtag(self, tag):
+            t = tag.lower()
+            if self.raw_tag == t:
+                self.raw_tag = None
+            if t == "head" and self.in_head:
+                self.in_head = False
+                self.head_closed = True
+
+        def handle_data(self, data):
+            if self.in_head and not self.raw_tag and data.strip():
+                # HTML5 parser implicitly closes <head> on stray text
+                self.in_head = False
+                self.head_closed = True
+
+    canonical_failures = []
+    for p in content_pages:
+        rel = str(p.relative_to(ROOT_DIR)).replace("\\", "/")
+        if rel in {"404.html", "googlee00b649984839bc8.html"} or rel.startswith("google"):
+            continue
+        parser = HeadCanonicalParser()
+        parser.feed(p.read_text(encoding="utf-8"))
+        parser.close()
+        if parser.canonicals_outside_head:
+            canonical_failures.append(f"{rel}: canonical parsed outside <head> ({parser.canonicals_outside_head})")
+        elif len(parser.canonicals_in_head) != 1:
+            canonical_failures.append(f"{rel}: expected 1 canonical in <head>, found {len(parser.canonicals_in_head)}")
+        else:
+            href = parser.canonicals_in_head[0]
+            if not href.startswith("https://ppripakistan.github.io/"):
+                canonical_failures.append(f"{rel}: canonical href is not absolute site URL ({href})")
+
+    if canonical_failures:
+        for cf in canonical_failures:
+            errors.append(f"Parsed-HTML canonical error: {cf}")
+    else:
+        print(f"  [PASS] All {len(content_pages)} content pages have exactly one absolute canonical inside <head>.")
     # Summary
     print("\n" + "=" * 75)
     print(f"VERIFICATION SUMMARY: {len(errors)} Errors, {len(warnings)} Warnings")

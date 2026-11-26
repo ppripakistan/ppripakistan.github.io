@@ -505,7 +505,11 @@
               </div>
             </div>
 
-            <div id="nfcTotalWeight" class="nfc-total-weight-badge valid" style="margin-bottom: 14px;">Total Weight: 100.0%</div>
+            <div id="nfcTotalWeight" class="nfc-total-weight-badge valid" style="margin-bottom: 10px;">Total Weight: 100.0%</div>
+            <div id="nfcModeBanner" style="margin-bottom: 14px; padding: 10px 14px; border-radius: 6px; background: #ecfdf5; border: 1px solid #a7f3d0; font-size: 0.85rem; color: #065f46;">
+              <strong>Reference Mode — Official 7th NFC Award (2010):</strong> Displaying statutory horizontal shares (Punjab 51.74%, Sindh 24.55%, KP 14.62%, Balochistan 9.09%) from <a href="https://finance.gov.pk/publications/FiscalPolicyStatement_2010_11.pdf" target="_blank" rel="noopener">Finance Division (2010–11)</a>. Adjusting sliders switches to the illustrative reform model.
+            </div>
+            <div id="nfcValidationError" role="alert" style="display: none; margin-bottom: 14px; padding: 10px 14px; border-radius: 6px; background: #fef2f2; border: 1px solid #fecaca; font-size: 0.85rem; color: #991b1b; font-weight: 600;"></div>
 
             <div class="nfc-grid" style="margin-top: 12px; gap: 20px;">
               <!-- Sliders Column -->
@@ -515,7 +519,7 @@
                     <label for="nfcWeightPop">Population Weight:</label>
                     <span class="nfc-slider-val" id="valPop">82.0%</span>
                   </div>
-                  <input type="range" class="nfc-range" id="nfcWeightPop" aria-label="NFC Population Weight percentage" min="0" max="100" step="0.5" value="82.0" />
+                  <input type="range" class="nfc-range" id="nfcWeightPop" aria-label="NFC Population Weight percentage" min="0" max="100" step="0.1" value="82.0" />
                   <div class="nfc-slider-desc">Pro-rata population from Census 2023. Favors Punjab.</div>
                 </div>
 
@@ -524,7 +528,7 @@
                     <label for="nfcWeightPov">Poverty &amp; Backwardness Weight:</label>
                     <span class="nfc-slider-val" id="valPov">10.3%</span>
                   </div>
-                  <input type="range" class="nfc-range" id="nfcWeightPov" aria-label="NFC Poverty and Backwardness Weight percentage" min="0" max="50" step="0.5" value="10.3" />
+                  <input type="range" class="nfc-range" id="nfcWeightPov" aria-label="NFC Poverty and Backwardness Weight percentage" min="0" max="50" step="0.1" value="10.3" />
                   <div class="nfc-slider-desc">Deprivation index. Substantially boosts Balochistan and KP.</div>
                 </div>
 
@@ -533,7 +537,7 @@
                     <label for="nfcWeightRev">Revenue Generation Weight:</label>
                     <span class="nfc-slider-val" id="valRev">5.0%</span>
                   </div>
-                  <input type="range" class="nfc-range" id="nfcWeightRev" aria-label="NFC Revenue Generation Weight percentage" min="0" max="30" step="0.5" value="5.0" />
+                  <input type="range" class="nfc-range" id="nfcWeightRev" aria-label="NFC Revenue Generation Weight percentage" min="0" max="30" step="0.1" value="5.0" />
                   <div class="nfc-slider-desc">Commercial &amp; ports revenue. Significantly boosts Sindh.</div>
                 </div>
 
@@ -542,7 +546,7 @@
                     <label for="nfcWeightDen">Inverse Density Weight:</label>
                     <span class="nfc-slider-val" id="valDen">2.7%</span>
                   </div>
-                  <input type="range" class="nfc-range" id="nfcWeightDen" aria-label="NFC Inverse Population Density Weight percentage" min="0" max="30" step="0.5" value="2.7" />
+                  <input type="range" class="nfc-range" id="nfcWeightDen" aria-label="NFC Inverse Population Density Weight percentage" min="0" max="30" step="0.1" value="2.7" />
                   <div class="nfc-slider-desc">Equalizes delivery cost over sparse landmass. Benefits Balochistan.</div>
                 </div>
               </div>
@@ -550,7 +554,7 @@
               <!-- Results Column -->
               <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 16px; display: flex; flex-direction: column; justify-content: space-between;">
                 <div>
-                  <h3 style="margin: 0 0 12px; color: #073c3a; font-size: 1rem;">Simulated Provincial Allocation</h3>
+                  <h3 id="nfcResultsTitle" style="margin: 0 0 12px; color: #073c3a; font-size: 1rem;">Official 7th NFC Horizontal Allocation</h3>
                   <div class="table-wrap">
                     <table class="nfc-results-table">
                       <thead>
@@ -673,7 +677,7 @@
               <span class="dc-sec-eyebrow dc-eyebrow-amber">04 // DISTRICT DATABASE</span>
               <h2 class="dc-sec-title" style="margin-bottom: 4px;">District Administrative Explorer</h2>
               <p class="dc-sec-lead" style="margin-bottom: 0;">
-                Showing <strong>24 key districts</strong> (representative sample of 164 total).
+                Showing a <strong>24-district representative sample</strong> (subset of 143 listed districts in 4 Provinces + ICT; 167 w/ GB &amp; AJK — see <a href="/maps/current/administrative.html">Administrative Map</a>).
                 <span class="dc-sample-note">Full district dataset in preparation.</span>
               </p>
             </div>
@@ -697,7 +701,7 @@
               <option value="medium">1M – 3 Million</option>
               <option value="large">&gt; 3 Million</option>
             </select>
-            <span id="districtCount" style="font-size: 0.8rem; color: #64748b; font-weight: 600;">Showing 24 of 164 districts</span>
+            <span id="districtCount" style="font-size: 0.8rem; color: #64748b; font-weight: 600;">Showing 24 of 24 sample districts</span>
           </div>
 
           <!-- Scrollable District Explorer Table (All 7 Columns with Sticky Headers) -->

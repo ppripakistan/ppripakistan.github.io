@@ -565,6 +565,9 @@
         payload[`q${idx + 1}_${q.id}`] = `${q.text}: ${val}`;
       });
 
+      const controller = typeof AbortController !== "undefined" ? new AbortController() : null;
+      const timeoutId = controller ? setTimeout(() => controller.abort(), 15000) : null;
+
       try {
         const res = await fetch(FORM_ENDPOINT, {
           method: "POST",
@@ -572,21 +575,39 @@
             "Content-Type": "application/json",
             Accept: "application/json"
           },
-          body: JSON.stringify(payload)
+          body: JSON.stringify(payload),
+          signal: controller ? controller.signal : undefined
         });
 
-        if (res.ok) {
+        const resData = await res.json().catch(() => null);
+        const isConfirmedSuccess =
+          res.ok &&
+          resData !== null &&
+          (resData.success === true || resData.success === "true");
+
+        if (isConfirmedSuccess) {
           this.clearDraft();
           this.goToStep(8); // Success
         } else {
-          const errData = await res.json().catch(() => ({}));
-          this.errorMessage = errData.message || `Server responded with status ${res.status}.`;
-          this.goToStep(9); // Error
+          const providerMsg =
+            resData && typeof resData.message === "string" && resData.message.trim()
+              ? resData.message.trim()
+              : null;
+          this.errorMessage = providerMsg
+            ? `Submission was not accepted (${providerMsg}). Your answers have been saved—please retry or submit via email.`
+            : `Submission could not be confirmed (HTTP ${res.status}). Your answers have been saved—please retry or submit via email.`;
+          this.goToStep(9); // Error (draft retained)
         }
       } catch (err) {
         console.error("Submission fetch error:", err);
-        this.errorMessage = "Network connection failed or service was unreachable.";
-        this.goToStep(9); // Error
+        if (err && err.name === "AbortError") {
+          this.errorMessage = "The submission request timed out. Your answers have been kept safe—please try again or submit via email.";
+        } else {
+          this.errorMessage = "Network connection failed or service was unreachable. Your answers have been kept safe.";
+        }
+        this.goToStep(9); // Error (draft retained)
+      } finally {
+        if (timeoutId) clearTimeout(timeoutId);
       }
     }
   }

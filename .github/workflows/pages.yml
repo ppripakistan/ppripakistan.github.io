@@ -36,6 +36,8 @@ jobs:
           python scripts/sync_preview_metadata.py
           python scripts/verify_seo_assets.py
           python scripts/run_complete_seo_audit.py
+          python scripts/sync_literacy_guide.py --check
+          python scripts/sync_admin_geography.py --check
 
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
