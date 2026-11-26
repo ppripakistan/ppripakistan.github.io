@@ -48,269 +48,12 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/brand/favicon-16x16.png?v=2" />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=2" />
     <link rel="manifest" href="/site.webmanifest" />
-    <meta name="theme-color" content="#073c3a" />
+    <meta name="theme-color" content="#12392D" />
     <link rel="alternate" type="application/rss+xml" title="PPRI Policy Publications Feed" href="/feed.xml" />
     <link rel="stylesheet" href="/assets/css/style.css" />
     <link rel="stylesheet" href="/assets/css/responsive.css" />
     <link rel="stylesheet" href="/assets/css/research-papers.css" />
-    <style>
-      .article-hero {
-        background: linear-gradient(135deg, #073c3a 0%, #0c2b26 100%);
-        color: #ffffff;
-        padding: 56px 0 44px;
-        border-bottom: 3px solid #d4af37;
-      }
-      .article-hero .eyebrow {
-        color: #d4af37;
-        font-size: 0.82rem;
-        letter-spacing: 0.08em;
-        text-transform: uppercase;
-        font-weight: 700;
-        display: block;
-        margin-bottom: 12px;
-      }
-      .article-hero h1 {
-        font-size: 2.35rem;
-        line-height: 1.22;
-        color: #ffffff;
-        max-width: 940px;
-        margin: 0 0 16px;
-      }
-      .article-standfirst {
-        font-size: 1.15rem;
-        line-height: 1.62;
-        color: #e2e8f0;
-        max-width: 860px;
-        margin: 0 0 24px;
-        font-weight: 400;
-      }
-      .article-meta-bar {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 18px;
-        align-items: center;
-        font-size: 0.85rem;
-        color: #cbd5e1;
-        padding-top: 18px;
-        border-top: 1px solid rgba(255, 255, 255, 0.15);
-      }
-      .article-meta-item strong {
-        color: #ffffff;
-      }
-      .stat-ribbon {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        gap: 16px;
-        margin: 32px 0 40px;
-      }
-      .stat-card {
-        background: #f8fafc;
-        border: 1px solid #e2e8f0;
-        border-top: 4px solid #073c3a;
-        border-radius: 8px;
-        padding: 20px 16px;
-        text-align: center;
-      }
-      .stat-card strong {
-        display: block;
-        font-size: 1.95rem;
-        color: #073c3a;
-        font-weight: 800;
-        line-height: 1.1;
-      }
-      .stat-card span {
-        display: block;
-        font-size: 0.84rem;
-        color: #64748b;
-        margin-top: 6px;
-        line-height: 1.35;
-      }
-      .table-wrap {
-        overflow-x: auto;
-        margin: 28px 0 36px;
-        border: 1px solid #e2e8f0;
-        border-radius: 8px;
-      }
-      .data-table {
-        width: 100%;
-        border-collapse: collapse;
-        font-size: 0.9rem;
-        text-align: left;
-      }
-      .data-table th {
-        background: #f8fafc;
-        color: #073c3a;
-        padding: 12px 16px;
-        font-weight: 700;
-        border-bottom: 2px solid #e2e8f0;
-      }
-      .data-table td {
-        padding: 12px 16px;
-        border-bottom: 1px solid #e2e8f0;
-        color: #334155;
-        vertical-align: top;
-      }
-      .data-table tr:hover {
-        background: #f1f5f9;
-      }
-      /* Dual-Bar Demographic Visual Infographic */
-      .chart-container {
-        background: #ffffff;
-        border: 1px solid #e2e8f0;
-        border-radius: 8px;
-        padding: 24px;
-        margin: 32px 0 40px;
-        box-shadow: 0 4px 14px rgba(11, 29, 42, 0.03);
-      }
-      .chart-header {
-        margin-bottom: 20px;
-      }
-      .chart-header h3 {
-        margin: 0 0 6px;
-        color: #073c3a;
-        font-size: 1.15rem;
-      }
-      .chart-header p {
-        margin: 0;
-        color: #64748b;
-        font-size: 0.88rem;
-      }
-      .bar-group {
-        margin-bottom: 20px;
-      }
-      .bar-group:last-child {
-        margin-bottom: 0;
-      }
-      .bar-group-label {
-        display: flex;
-        justify-content: space-between;
-        font-size: 0.88rem;
-        font-weight: 700;
-        color: #1e293b;
-        margin-bottom: 6px;
-      }
-      .bar-row {
-        display: flex;
-        align-items: center;
-        gap: 12px;
-        margin-bottom: 6px;
-        font-size: 0.82rem;
-      }
-      .bar-track {
-        flex: 1;
-        height: 14px;
-        background: #f1f5f9;
-        border-radius: 999px;
-        overflow: hidden;
-      }
-      .bar-fill-pop {
-        height: 100%;
-        background: #073c3a;
-        border-radius: 999px;
-      }
-      .bar-fill-area {
-        height: 100%;
-        background: #d4af37;
-        border-radius: 999px;
-      }
-      .bar-legend {
-        display: flex;
-        gap: 20px;
-        margin-top: 18px;
-        padding-top: 14px;
-        border-top: 1px solid #e2e8f0;
-        font-size: 0.82rem;
-        color: #64748b;
-      }
-      .legend-item {
-        display: inline-flex;
-        align-items: center;
-        gap: 8px;
-      }
-      .legend-box {
-        width: 12px;
-        height: 12px;
-        border-radius: 3px;
-      }
-      .scorecard-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-        gap: 16px;
-        margin: 28px 0 36px;
-      }
-      .scorecard-card {
-        background: #ffffff;
-        border: 1px solid #cbd5e1;
-        border-radius: 8px;
-        padding: 18px 20px;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.03);
-      }
-      .scorecard-card h4 {
-        margin: 0 0 8px;
-        color: #073c3a;
-        font-size: 1rem;
-      }
-      .scorecard-card p {
-        margin: 0;
-        font-size: 0.88rem;
-        color: #475569;
-        line-height: 1.5;
-      }
-      .interactive-bridge {
-        background: linear-gradient(135deg, #f0f7f3 0%, #e2efe8 100%);
-        border: 1px solid #c2ded0;
-        border-radius: 8px;
-        padding: 24px;
-        margin: 36px 0;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        flex-wrap: wrap;
-        gap: 16px;
-      }
-      .interactive-bridge-text h4 {
-        margin: 0 0 6px;
-        color: #073c3a;
-        font-size: 1.1rem;
-      }
-      .interactive-bridge-text p {
-        margin: 0;
-        color: #2d5a4c;
-        font-size: 0.9rem;
-      }
-      .editorial-note {
-        margin: 28px 0;
-        padding: 16px 20px;
-        border-left: 4px solid #d4af37;
-        background: #f8fafc;
-        border-radius: 0 6px 6px 0;
-        color: #334155;
-        font-size: 0.9rem;
-      }
-      .article-references {
-        margin-top: 48px;
-        padding-top: 24px;
-        border-top: 1px solid #e2e8f0;
-      }
-      .article-references h3 {
-        font-size: 1.15rem;
-        color: #073c3a;
-        margin-bottom: 14px;
-      }
-      .source-list {
-        font-size: 0.88rem;
-        color: #475569;
-        line-height: 1.6;
-        padding-left: 20px;
-      }
-      .source-list li {
-        margin-bottom: 10px;
-      }
-      @media (max-width: 768px) {
-        .article-hero h1 { font-size: 1.85rem; }
-        .article-standfirst { font-size: 1rem; }
-      }
-    </style>
+    <link rel="stylesheet" href="/assets/css/articles.css" />
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -594,7 +337,8 @@
 }
 </script>
   </head>
-  <body>
+  <body data-article="provinces-of-pakistan-names-capitals-population">
+    <a class="skip-link" href="#main-content">Skip to main content</a>
     <div class="reading-progress" id="reading-progress" aria-hidden="true"></div>
     <header class="site-header">
       <div class="container navbar">
@@ -669,7 +413,7 @@
         </div>
 
         <figure class="ppri-map-figure" id="pakistan-provinces-map">
-          <div class="ppri-map-placeholder" role="img" aria-label="Map placeholder: 4 Provinces of Pakistan, Capitals, ICT, GB and AJK">
+          <div class="ppri-map-placeholder">
             <strong>Map Slot: 4 Provinces of Pakistan, Capitals &amp; Administered Territories</strong>
             <span>Includes Punjab (Lahore), Sindh (Karachi), Khyber Pakhtunkhwa (Peshawar), Balochistan (Quetta), plus distinct non-province styling for ICT (Islamabad), Gilgit-Baltistan (GB), and Azad Jammu &amp; Kashmir (AJK).</span>
             <a href="/maps/current/administrative.html" class="obs-btn-link">Open Interactive Administrative Map →</a>
@@ -682,11 +426,11 @@
 
         <!-- Featured Snippet Answer Box -->
         <div class="featured-snippet-box" style="background:#f0fdf4;border:1px solid #bbf7d0;border-left:5px solid #16a34a;padding:20px 24px;border-radius:8px;margin:0 0 28px;">
-          <h2 id="how-many-provinces-in-pakistan" style="margin:0 0 10px;font-size:1.3rem;color:#073c3a;font-weight:700;">How Many Provinces Are in Pakistan? (ICT, GB &amp; AJK Status Note)</h2>
-          <p style="margin:0 0 10px;font-size:1rem;line-height:1.65;color:#1e293b;">
+          <h2 id="how-many-provinces-in-pakistan" style="margin: 0 0 10px; font-size: 1.3rem; color: var(--brand-dark, #12392D); font-weight: 700;">How Many Provinces Are in Pakistan? (ICT, GB &amp; AJK Status Note)</h2>
+          <p style="margin: 0 0 10px; font-size: 1rem; line-height: 1.65; color: var(--text-main, #18302A);">
             <strong>Pakistan has 4 constitutional provinces under Article 1(2)(a) of the 1973 Constitution: Punjab, Sindh, Khyber Pakhtunkhwa, and Balochistan.</strong>
           </p>
-          <ul style="margin:0;padding-left:1.2rem;font-size:0.95rem;line-height:1.6;color:#1e293b;">
+          <ul style="margin: 0; padding-left: 1.2rem; font-size: 0.95rem; line-height: 1.6; color: var(--text-main, #18302A);">
             <li><strong>Islamabad Capital Territory (ICT):</strong> Federal capital territory under Article 1(2)(b) (2023 Census pop: 2,363,863).</li>
             <li><strong>Gilgit-Baltistan (GB):</strong> Federally administered territory governed under Presidential Governance Orders (2018), not an Article 1 province.</li>
             <li><strong>Azad Jammu &amp; Kashmir (AJK):</strong> Self-governing territory under the AJK Interim Constitution Act, 1974. <a href="/articles/is-gilgit-baltistan-a-province-of-pakistan.html">Read full ICT, GB &amp; AJK legal comparison →</a></li>
@@ -742,7 +486,7 @@
 
         <details class="ppri-projections-details" id="ppri-2026-population-projections">
           <summary>PPRI Modeled 2026 Population Projections (Compound Intercensal Growth — Not Official Census Counts)</summary>
-          <p style="margin:0.75rem 0;font-size:0.92rem;color:#334155;">
+          <p style="margin: 0.75rem 0; font-size: 0.92rem; color: var(--text-main, #18302A);">
             These figures are PPRI modeled extrapolations from the 2023 Census using PBS 2017–2023 intercensal annual growth rates (Punjab 2.53%, Sindh 2.57%, KP 2.38%, Balochistan 3.20%, ICT 2.83%). They are <strong>not</strong> official Census counts.
           </p>
           <div class="table-wrap">
@@ -854,7 +598,7 @@
           </div>
 
           <div class="bar-legend">
-            <div class="legend-item"><span class="legend-box" style="background: #073c3a;"></span> Population Share % (Census 2023)</div>
+            <div class="legend-item"><span class="legend-box" style="background: var(--action-primary, #145640);"></span> Population Share % (Census 2023)</div>
             <div class="legend-item"><span class="legend-box" style="background: #d4af37;"></span> Territorial Land Area Share %</div>
           </div>
         </div>
@@ -943,7 +687,7 @@
             <h3>Download Census 2023 Provincial Demographics Dataset</h3>
             <p>Access the reproducible province baseline dataset in CSV and JSON formats from the PPRI Data Observatory repository.</p>
           </div>
-          <a href="/data/centre.html" class="btn btn-primary" style="background: #073c3a; color: #ffffff; padding: 10px 18px; border-radius: 6px; text-decoration: none; font-weight: 700; font-size: 0.88rem;">Open Data Observatory &rarr;</a>
+          <a href="/data/centre.html" class="btn btn-primary" style="background: var(--action-primary, #145640); color: #ffffff; padding: 10px 18px; border-radius: 6px; text-decoration: none; font-weight: 700; font-size: 0.88rem;">Open Data Observatory &rarr;</a>
         </div>
 
         <div class="editorial-note">

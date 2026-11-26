@@ -87,7 +87,13 @@
     goToStep(step) {
       this.currentStep = step;
       this.render();
-      this.container.scrollIntoView({ behavior: "smooth", block: "start" });
+      const reduceMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      this.container.scrollIntoView({ behavior: reduceMotion ? "auto" : "smooth", block: "start" });
+      const focusTarget = this.container.querySelector(".survey-question-prompt h2, .survey-review-header h2, .survey-status-box h2, .survey-error-alert h2, h1");
+      if (focusTarget) {
+        if (!focusTarget.hasAttribute("tabindex")) focusTarget.setAttribute("tabindex", "-1");
+        focusTarget.focus({ preventScroll: true });
+      }
     }
 
     setAnswer(qId, option, otherText = "") {
@@ -214,12 +220,13 @@
       const nextBtnLabel = isLast ? "Review answers &rarr;" : "Next question &rarr;";
 
       this.container.innerHTML = `
+        <h1 class="survey-persistent-title">${this.survey.title}</h1>
         <div class="survey-flow-header">
           <div class="survey-flow-progress-meta">
             <span class="step-count">Question ${qIndex} of 5</span>
             <span class="progress-pct">${progressPercent}% completed</span>
           </div>
-          <div class="survey-progress-bar" role="progressbar" aria-valuenow="${progressPercent}" aria-valuemin="0" aria-valuemax="100">
+          <div class="survey-progress-bar" role="progressbar" aria-label="Survey completion progress" aria-valuenow="${progressPercent}" aria-valuemin="0" aria-valuemax="100" aria-valuetext="Question ${qIndex} of 5 (${progressPercent}%)">
             <div class="survey-progress-fill" style="width: ${progressPercent}%;"></div>
           </div>
         </div>
@@ -321,7 +328,7 @@
         const ans = this.getAnswer(q.id);
         let displayAns = ans ? ans.option : "<em>Not answered</em>";
         if (ans && ans.otherText) {
-          displayAns += ` <span style="color: #1b5e39; font-weight: 600;">("${ans.otherText}")</span>`;
+          displayAns += ` <span class="survey-other-detail">("${ans.otherText}")</span>`;
         }
 
         itemsHtml += `
@@ -344,6 +351,7 @@
       });
 
       this.container.innerHTML = `
+        <h1 class="survey-persistent-title">${this.survey.title}</h1>
         <div class="survey-step-card">
           <div class="survey-review-header">
             <h2>Review your answers</h2>
@@ -377,7 +385,7 @@
             </div>
           </div>
 
-          <div class="survey-nav-actions" style="margin-top: 28px;">
+          <div class="survey-nav-actions survey-nav-actions--review">
             <button type="button" class="survey-btn survey-btn-secondary" id="btnBackToQ5">
               &larr; Back to questions
             </button>
@@ -429,7 +437,8 @@
        ------------------------------------------------------------- */
     renderSubmitting() {
       this.container.innerHTML = `
-        <div class="survey-step-card survey-status-box">
+        <h1 class="survey-persistent-title">${this.survey.title}</h1>
+        <div class="survey-step-card survey-status-box" role="status" aria-live="polite">
           <div class="survey-spinner"></div>
           <h2>Submitting your response...</h2>
           <p>Please wait a moment while we send your answers to PPRI researchers.</p>
@@ -442,6 +451,7 @@
        ------------------------------------------------------------- */
     renderSuccess() {
       this.container.innerHTML = `
+        <h1 class="survey-persistent-title">${this.survey.title}</h1>
         <div class="survey-step-card survey-status-box">
           <div class="survey-success-icon">
             <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
@@ -466,9 +476,10 @@
       const mailtoUrl = `mailto:${encodeURIComponent(PPRI_EMAIL)}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(emailDraft)}`;
 
       this.container.innerHTML = `
+        <h1 class="survey-persistent-title">${this.survey.title}</h1>
         <div class="survey-step-card">
-          <div class="survey-error-alert">
-            <h4>Connection or submission issue</h4>
+          <div class="survey-error-alert" role="alert">
+            <h2>Connection or submission issue</h2>
             <p>${this.errorMessage || "Unable to reach the submission service. Your responses have been kept safe."}</p>
             <div class="survey-error-actions">
               <button type="button" class="survey-btn survey-btn-primary" id="btnRetrySubmit">
@@ -483,7 +494,7 @@
             </div>
           </div>
 
-          <div style="margin-top: 24px; text-align: center;">
+          <div class="survey-error-return">
             <button type="button" class="survey-btn survey-btn-secondary" id="btnBackToReview">
               &larr; Return to review answers
             </button>

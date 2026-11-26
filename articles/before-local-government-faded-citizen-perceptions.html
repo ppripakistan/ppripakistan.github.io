@@ -41,158 +41,12 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/brand/favicon-16x16.png?v=2" />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=2" />
     <link rel="manifest" href="/site.webmanifest" />
-    <meta name="theme-color" content="#073c3a" />
+    <meta name="theme-color" content="#12392D" />
     <link rel="alternate" type="application/rss+xml" title="PPRI Policy Publications Feed" href="/feed.xml" />
     <link rel="stylesheet" href="/assets/css/style.css" />
     <link rel="stylesheet" href="/assets/css/responsive.css" />
     <link rel="stylesheet" href="/assets/css/research-papers.css" />
-    <style>
-      .article-hero {
-        background: linear-gradient(135deg, #073c3a 0%, #0c2b26 100%);
-        color: #ffffff;
-        padding: 60px 0 45px;
-        border-bottom: 3px solid #d4af37;
-      }
-      .article-hero .eyebrow {
-        color: #d4af37;
-        font-size: 0.82rem;
-        letter-spacing: 0.08em;
-        text-transform: uppercase;
-        font-weight: 700;
-        display: block;
-        margin-bottom: 12px;
-      }
-      .article-hero h1 {
-        font-size: 2.35rem;
-        line-height: 1.24;
-        color: #ffffff;
-        max-width: 940px;
-        margin: 0 0 16px;
-      }
-      .article-standfirst {
-        font-size: 1.15rem;
-        line-height: 1.6;
-        color: #e2e8f0;
-        max-width: 840px;
-        margin: 0 0 24px;
-        font-weight: 400;
-      }
-      .article-meta-bar {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 20px;
-        align-items: center;
-        font-size: 0.85rem;
-        color: #cbd5e1;
-        padding-top: 18px;
-        border-top: 1px solid rgba(255, 255, 255, 0.15);
-      }
-      .article-meta-item strong {
-        color: #ffffff;
-      }
-      .stat-ribbon {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
-        gap: 16px;
-        margin: 32px 0 40px;
-      }
-      .stat-card {
-        background: #f8fafc;
-        border: 1px solid #e2e8f0;
-        border-top: 4px solid #073c3a;
-        border-radius: 8px;
-        padding: 20px;
-        text-align: center;
-      }
-      .stat-card strong {
-        display: block;
-        font-size: 2rem;
-        color: #073c3a;
-        font-weight: 800;
-        line-height: 1.1;
-      }
-      .stat-card span {
-        display: block;
-        font-size: 0.85rem;
-        color: #64748b;
-        margin-top: 6px;
-        line-height: 1.35;
-      }
-      .chart-container {
-        background: #ffffff;
-        border: 1px solid #cbd5e1;
-        border-radius: 8px;
-        padding: 24px;
-        margin: 32px 0;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.03);
-      }
-      .chart-container h3 {
-        margin-top: 0;
-        color: #073c3a;
-        font-size: 1.15rem;
-      }
-      .bar-group {
-        display: flex;
-        flex-direction: column;
-        gap: 14px;
-        margin-top: 20px;
-      }
-      .bar-item {
-        display: flex;
-        flex-direction: column;
-        gap: 6px;
-      }
-      .bar-label {
-        display: flex;
-        justify-content: space-between;
-        font-size: 0.88rem;
-        font-weight: 600;
-        color: #1e293b;
-      }
-      .bar-track {
-        height: 24px;
-        background: #e2e8f0;
-        border-radius: 4px;
-        overflow: hidden;
-      }
-      .bar-fill {
-        height: 100%;
-        background: #073c3a;
-        border-radius: 4px;
-        display: flex;
-        align-items: center;
-        justify-content: flex-end;
-        padding-right: 8px;
-        color: #ffffff;
-        font-size: 0.78rem;
-        font-weight: 700;
-      }
-      .bar-fill-secondary {
-        background: #0d9488;
-      }
-      .bar-fill-accent {
-        background: #d4af37;
-      }
-      .bar-fill-muted {
-        background: #94a3b8;
-      }
-      .policy-highlight {
-        background: #f0fdf4;
-        border-left: 4px solid #073c3a;
-        padding: 20px 24px;
-        border-radius: 0 8px 8px 0;
-        margin: 32px 0;
-      }
-      .citation-box {
-        background: #f8fafc;
-        border: 1px solid #cbd5e1;
-        border-radius: 8px;
-        padding: 20px;
-        margin-top: 40px;
-        font-size: 0.88rem;
-        color: #475569;
-      }
-    </style>
+    <link rel="stylesheet" href="/assets/css/articles.css" />
     <meta name="citation_title" content="Local Government in Pakistan: 2004/05 National Social Audit Survey Data & Citizen Perceptions" />
     <meta name="citation_author" content="Pakistan Provincial Reform Institute (PPRI)" />
     <meta name="citation_publication_date" content="2026/10" />
@@ -285,7 +139,7 @@
 }
     </script>
 </head>
-  <body>
+  <body data-article="before-local-government-faded-citizen-perceptions">
     <div class="reading-progress" id="reading-progress" aria-hidden="true"></div>
     <a class="skip-link" href="#main-content">Skip to content</a>
     <header class="site-header">
@@ -333,7 +187,7 @@
     <section class="section" style="padding-top: 40px; padding-bottom: 60px;">
       <div class="container paper-layout">
         <article class="prose-wide">
-<p class="lead" style="font-size: 1.18rem; color: #1e293b; line-height: 1.7; margin-bottom: 24px;">
+<p class="lead" style="font-size: 1.18rem; color: var(--text-main, #18302A); line-height: 1.7; margin-bottom: 24px;">
           Most debates over local government in Pakistan are conducted by a familiar circle of constitutional lawyers, provincial ministers, senior civil servants, and think-tank analysts. What is remarkably rare in policy archives is a rigorous, nationwide record of what ordinary citizens actually thought and did while an empowered local-government system was actively operating in their communities.
         </p>
 
@@ -388,7 +242,7 @@
 
         <div class="chart-container">
           <h3>Primary Point of Citizen Contact for Community Problem-Solving (2004/05 Audit)</h3>
-          <p style="font-size: 0.88rem; color: #64748b; margin-top: 4px;">
+          <p style="font-size: 0.88rem; color: var(--text-muted, #52645B); margin-top: 4px;">
             Open-ended responses from nationwide household sample. Source: CIET / National Reconstruction Bureau (NRB).
           </p>
           <div class="bar-group">
@@ -466,29 +320,29 @@
         <div class="table-wrap">
           <table class="data-table" style="width: 100%; border-collapse: collapse; margin: 24px 0; font-size: 0.92rem;">
             <thead>
-              <tr style="background: #073c3a; color: #ffffff;">
+              <tr style="background: var(--action-primary, #145640); color: #ffffff;">
                 <th style="padding: 12px 14px; text-align: left;">Governance Dimension</th>
                 <th style="padding: 12px 14px; text-align: left;">1990s Bureaucratic Tier (Pre-Devolution)</th>
                 <th style="padding: 12px 14px; text-align: left;">2001–2008 Elected Local Tier (Post-Devolution)</th>
               </tr>
             </thead>
             <tbody>
-              <tr style="border-bottom: 1px solid #e2e8f0;">
+              <tr style="border-bottom: 1px solid var(--border-subtle, #D5DED7);">
                 <td style="padding: 10px 14px; font-weight: 600;">Citizen Proximity</td>
                 <td style="padding: 10px 14px;">High barrier: required petitioning District Commissioner or Assistant Commissioner.</td>
                 <td style="padding: 10px 14px; color: #15803d; font-weight: 700;">Immediate: Union Nazim resident in the neighborhood or village.</td>
               </tr>
-              <tr style="border-bottom: 1px solid #e2e8f0; background: #f8fafc;">
+              <tr style="border-bottom: 1px solid var(--border-subtle, #D5DED7); background: var(--bg-canvas, #F7F8F4);">
                 <td style="padding: 10px 14px; font-weight: 600;">Dispute Resolution</td>
                 <td style="padding: 10px 14px;">Formal civil court litigation or informal patriarchal jirga/panchayat.</td>
                 <td style="padding: 10px 14px; color: #15803d; font-weight: 700;">Musalihat Anjuman (statutory conciliation committees) at Union Council.</td>
               </tr>
-              <tr style="border-bottom: 1px solid #e2e8f0;">
+              <tr style="border-bottom: 1px solid var(--border-subtle, #D5DED7);">
                 <td style="padding: 10px 14px; font-weight: 600;">Female Representation</td>
                 <td style="padding: 10px 14px;">Negligible (under 2% indirect nominations).</td>
                 <td style="padding: 10px 14px; color: #15803d; font-weight: 700;">33% mandatory reserved seats (over 36,000 elected female councillors).</td>
               </tr>
-              <tr style="border-bottom: 1px solid #e2e8f0; background: #f8fafc;">
+              <tr style="border-bottom: 1px solid var(--border-subtle, #D5DED7); background: var(--bg-canvas, #F7F8F4);">
                 <td style="padding: 10px 14px; font-weight: 600;">Community Projects</td>
                 <td style="padding: 10px 14px;">Discretionary MPA schemes executed by provincial line contractors.</td>
                 <td style="padding: 10px 14px;">Citizen Community Boards (CCBs) with 80% public matching grants.</td>
@@ -506,8 +360,8 @@
         </p>
 
         <div class="policy-highlight">
-          <h3 style="margin-top: 0; color: #073c3a; font-size: 1.15rem;">The Core Policy Takeaway for PPRI Scenarios</h3>
-          <p style="margin-bottom: 0; font-size: 0.95rem; color: #334155; line-height: 1.6;">
+          <h3 style="margin-top: 0; color: var(--brand-dark, #12392D); font-size: 1.15rem;">The Core Policy Takeaway for PPRI Scenarios</h3>
+          <p style="margin-bottom: 0; font-size: 0.95rem; color: var(--text-main, #18302A); line-height: 1.6;">
             The 2004/05 Social Audit delivers a decisive rebuke to the argument that ordinary citizens in Pakistan are indifferent to local government or prefer dealing solely with provincial legislators. When a visible, locally resident representative is endowed with formal legal responsibility, the public overwhelmingly uses that representative. Any future federal restructuring—whether through the creation of new provinces or municipal reforms—must place empowered, elected union councils at the center of institutional design.
           </p>
         </div>
@@ -555,9 +409,9 @@
           </div>
         </section>
 
-        <div class="article-references" style="margin-top: 50px; padding-top: 25px; border-top: 1px solid #e2e8f0;">
-          <h3 style="font-size: 1.15rem; color: #073c3a;">Primary Sources &amp; References</h3>
-          <ul style="font-size: 0.88rem; color: #475569; line-height: 1.6;">
+        <div class="article-references" style="margin-top: 50px; padding-top: 25px; border-top: 1px solid var(--border-subtle, #D5DED7);">
+          <h3 style="font-size: 1.15rem; color: var(--brand-dark, #12392D);">Primary Sources &amp; References</h3>
+          <ul style="font-size: 0.88rem; color: var(--text-muted, #52645B); line-height: 1.6;">
             <li><strong>CIET / National Reconstruction Bureau (NRB):</strong> <em>Social Audit of Governance and Delivery of Public Services: National Report 2004/05</em>. <a href="https://www.researchgate.net/publication/242587472_Social_audit_of_governance_and_delivery_of_public_services" target="_blank" rel="noopener">researchgate.net</a></li>
             <li><strong>Ansari, Z., et al.:</strong> <em>Public Experience of Health Services Under Local Government Devolution in Pakistan</em> (PMC, 2011). <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC3332563/" target="_blank" rel="noopener">pmc.ncbi.nlm.nih.gov</a></li>
             <li><strong>Dawn Research Archives:</strong> <em>The Rise and Fall of the Local Government System in Punjab</em>. <a href="https://www.dawn.com/news/1692356" target="_blank" rel="noopener">dawn.com</a></li>
@@ -621,16 +475,16 @@
         </section>
       
       <!-- Citizen Perceptions: Gallup Pakistan & Social Audit Baseline -->
-      <section class="section" id="gallup-pakistan-local-governance" style="margin: 40px 0; padding: 28px; background: #ffffff; border: 1px solid #d2e4db; border-radius: 8px;">
-        <h2 id="citizen-perceptions-of-local-government-in-pakistan-gallup-pakistan-amp-public-survey-baseline" style="color: #073c3a; margin-top: 0;">Citizen Perceptions of Local Government in Pakistan (Gallup Pakistan &amp; Public Survey Baseline)</h2>
-        <p style="color: #334155; line-height: 1.65; font-size: 0.98rem;">
+      <section class="section" id="gallup-pakistan-local-governance" style="margin: 40px 0; padding: 28px; background: #ffffff; border: 1px solid var(--border-subtle, #D5DED7); border-radius: 8px;">
+        <h2 id="citizen-perceptions-of-local-government-in-pakistan-gallup-pakistan-amp-public-survey-baseline" style="color: var(--brand-dark, #12392D); margin-top: 0;">Citizen Perceptions of Local Government in Pakistan (Gallup Pakistan &amp; Public Survey Baseline)</h2>
+        <p style="color: var(--text-main, #18302A); line-height: 1.65; font-size: 0.98rem;">
           Public opinion polling by <strong>Gallup Pakistan</strong> alongside historical field audits from the <strong>National Social Audit of Governance</strong> demonstrates consistent public demand for empowered municipal governance over distant centralized authorities. When surveyed regarding service delivery responsiveness, citizens consistently evaluate neighborhood Union Councils as far more accessible than provincial assembly legislators (MPAs).
         </p>
 
         <div class="table-wrap" style="margin: 20px 0;">
           <table class="legislation-table" style="width: 100%; border-collapse: collapse;">
             <thead>
-              <tr style="background: #f0f7f3; color: #073c3a;">
+              <tr style="background: var(--surface-soft, #EEF3EE); color: var(--brand-dark, #12392D);">
                 <th style="padding: 10px; text-align: left;">Survey Dimension &amp; Question</th>
                 <th style="padding: 10px; text-align: right;">Elected Local Govt Era</th>
                 <th style="padding: 10px; text-align: right;">Bureaucratic Administrator Era</th>
@@ -665,7 +519,7 @@
             </tbody>
           </table>
         </div>
-        <p style="font-size: 0.88rem; color: #64748b; margin-bottom: 0;">
+        <p style="font-size: 0.88rem; color: var(--text-muted, #52645B); margin-bottom: 0;">
           <em>Data synthesized from Gallup Pakistan public attitude polls (2008–2024) and CIET / DTCE National Social Audit surveys across 114 districts.</em>
         </p>
       </section>

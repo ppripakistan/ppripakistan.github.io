@@ -1,29 +1,29 @@
 :root {
-        --vi-navy: #073c3a;
-        --vi-teal: #0f766e;
-        --vi-teal-light: #e6f3f2;
-        --vi-teal-dark: #042f2e;
-        --vi-ink: #0f172a;
-        --vi-muted: #64748b;
-        --vi-line: #e2e8f0;
-        --vi-bg: #f8fafc;
-        --vi-paper: #ffffff;
-        --vi-amber: #d97706;
-        --vi-amber-light: #fef3c7;
-        --vi-green: #15803d;
-        --vi-green-light: #dcfce7;
-        --vi-blue: #0284c7;
-        --vi-blue-light: #e0f2fe;
-        --vi-rose: #e11d48;
+        --vi-navy: var(--brand-dark, #12392D);
+        --vi-teal: var(--action-primary, #145640);
+        --vi-teal-light: var(--surface-soft, #EEF3EE);
+        --vi-teal-dark: #0c2b21;
+        --vi-ink: var(--text-main, #18302A);
+        --vi-muted: var(--text-muted, #52645B);
+        --vi-line: var(--border-subtle, #D5DED7);
+        --vi-bg: var(--bg-canvas, #F7F8F4);
+        --vi-paper: var(--bg-surface, #ffffff);
+        --vi-amber: var(--accent-gold, #765819);
+        --vi-amber-light: #fbf3df;
+        --vi-green: var(--action-primary, #145640);
+        --vi-green-light: #e4f3e8;
+        --vi-blue: #0b5a8a;
+        --vi-blue-light: #e6f2fa;
+        --vi-rose: #be123c;
         --vi-rose-light: #ffe4e6;
-        --vi-purple: #7c3aed;
+        --vi-purple: #6d28d9;
         --vi-purple-light: #ede9fe;
       }
 
       body {
         background: var(--vi-bg);
         color: var(--vi-ink);
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        font-family: var(--font-sans, "Source Sans 3", system-ui, -apple-system, sans-serif);
         margin: 0;
         padding: 0;
         line-height: 1.5;
@@ -32,7 +32,7 @@
       /* Top Staging Banner */
       .vi-topbar {
         background: #0f172a;
-        color: #94a3b8;
+        color: #d6e2dc;
         padding: 8px 24px;
         font-size: 12px;
         display: flex;
@@ -992,7 +992,7 @@ html {
   font-size: 0.68rem;
   text-transform: uppercase;
   letter-spacing: 0.5px;
-  color: #94a3b8;
+  color: var(--text-muted, #52645B);
   font-weight: 700;
   margin-bottom: 2px;
 }
@@ -1000,13 +1000,13 @@ html {
 .vi-showcase-kpi .vi-kpi-val {
   font-size: 0.82rem;
   font-weight: 700;
-  color: #0f172a;
+  color: var(--text-main, #18302A);
 }
 
 .vi-showcase-link {
   font-size: 0.82rem;
   font-weight: 600;
-  color: #0f766e;
+  color: var(--action-primary, #145640);
   text-decoration: none;
   display: inline-flex;
   align-items: center;
@@ -1190,8 +1190,18 @@ html {
 }
 
 .vi-ctrl-btn:hover:not(.active) {
-  background: #f1f5f9;
-  color: #0f172a;
+  background: var(--surface-soft, #EEF3EE);
+  color: var(--text-main, #18302A);
+}
+
+.vi-search-input {
+  padding: 5px 10px;
+  border: 1px solid var(--vi-line);
+  border-radius: 6px;
+  font-size: 12px;
+  width: min(220px, 100%);
+  color: var(--vi-ink);
+  background: var(--vi-paper);
 }
 
 /* Clean Action Buttons */

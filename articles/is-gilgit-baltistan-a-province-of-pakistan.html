@@ -48,209 +48,12 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/brand/favicon-16x16.png?v=2" />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=2" />
     <link rel="manifest" href="/site.webmanifest" />
-    <meta name="theme-color" content="#073c3a" />
+    <meta name="theme-color" content="#12392D" />
     <link rel="alternate" type="application/rss+xml" title="PPRI Policy Publications Feed" href="/feed.xml" />
     <link rel="stylesheet" href="/assets/css/style.css" />
     <link rel="stylesheet" href="/assets/css/responsive.css" />
     <link rel="stylesheet" href="/assets/css/research-papers.css" />
-    <style>
-      .article-hero {
-        background: linear-gradient(135deg, #073c3a 0%, #0c2b26 100%);
-        color: #ffffff;
-        padding: 56px 0 44px;
-        border-bottom: 3px solid #d4af37;
-      }
-      .article-hero .eyebrow {
-        color: #d4af37;
-        font-size: 0.82rem;
-        letter-spacing: 0.08em;
-        text-transform: uppercase;
-        font-weight: 700;
-        display: block;
-        margin-bottom: 12px;
-      }
-      .article-hero h1 {
-        font-size: 2.35rem;
-        line-height: 1.22;
-        color: #ffffff;
-        max-width: 940px;
-        margin: 0 0 16px;
-      }
-      .article-standfirst {
-        font-size: 1.15rem;
-        line-height: 1.62;
-        color: #e2e8f0;
-        max-width: 860px;
-        margin: 0 0 24px;
-        font-weight: 400;
-      }
-      .article-meta-bar {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 18px;
-        align-items: center;
-        font-size: 0.85rem;
-        color: #cbd5e1;
-        padding-top: 18px;
-        border-top: 1px solid rgba(255, 255, 255, 0.15);
-      }
-      .article-meta-item strong {
-        color: #ffffff;
-      }
-      .stat-ribbon {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        gap: 16px;
-        margin: 32px 0 40px;
-      }
-      .stat-card {
-        background: #f8fafc;
-        border: 1px solid #e2e8f0;
-        border-top: 4px solid #073c3a;
-        border-radius: 8px;
-        padding: 20px 16px;
-        text-align: center;
-      }
-      .stat-card strong {
-        display: block;
-        font-size: 1.95rem;
-        color: #073c3a;
-        font-weight: 800;
-        line-height: 1.1;
-      }
-      .stat-card span {
-        display: block;
-        font-size: 0.84rem;
-        color: #64748b;
-        margin-top: 6px;
-        line-height: 1.35;
-      }
-      .table-wrap {
-        overflow-x: auto;
-        margin: 28px 0 36px;
-        border: 1px solid #e2e8f0;
-        border-radius: 8px;
-      }
-      .data-table {
-        width: 100%;
-        border-collapse: collapse;
-        font-size: 0.9rem;
-        text-align: left;
-      }
-      .data-table th {
-        background: #f8fafc;
-        color: #073c3a;
-        padding: 12px 16px;
-        font-weight: 700;
-        border-bottom: 2px solid #e2e8f0;
-      }
-      .data-table td {
-        padding: 12px 16px;
-        border-bottom: 1px solid #e2e8f0;
-        color: #334155;
-        vertical-align: top;
-      }
-      .data-table tr:hover {
-        background: #f1f5f9;
-      }
-      .scorecard-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 16px;
-        margin: 28px 0 36px;
-      }
-      .scorecard-card {
-        background: #ffffff;
-        border: 1px solid #cbd5e1;
-        border-radius: 8px;
-        padding: 18px 20px;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.03);
-      }
-      .scorecard-card h4 {
-        margin: 0 0 8px;
-        color: #073c3a;
-        font-size: 1rem;
-      }
-      .scorecard-card p {
-        margin: 0;
-        font-size: 0.88rem;
-        color: #475569;
-        line-height: 1.5;
-      }
-      .interactive-bridge {
-        background: linear-gradient(135deg, #f0f7f3 0%, #e2efe8 100%);
-        border: 1px solid #c2ded0;
-        border-radius: 8px;
-        padding: 24px;
-        margin: 36px 0;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        flex-wrap: wrap;
-        gap: 16px;
-      }
-      .interactive-bridge-text h4 {
-        margin: 0 0 6px;
-        color: #073c3a;
-        font-size: 1.1rem;
-      }
-      .interactive-bridge-text p {
-        margin: 0;
-        color: #2d5a4c;
-        font-size: 0.9rem;
-      }
-      .callout-box {
-        background: #f8fafc;
-        border: 1px solid #cbd5e1;
-        border-left: 4px solid #073c3a;
-        border-radius: 0 8px 8px 0;
-        padding: 20px 24px;
-        margin: 32px 0;
-      }
-      .callout-box h4 {
-        margin: 0 0 8px;
-        color: #073c3a;
-        font-size: 1.05rem;
-      }
-      .callout-box p {
-        margin: 0;
-        font-size: 0.92rem;
-        color: #334155;
-        line-height: 1.6;
-      }
-      .editorial-note {
-        margin: 28px 0;
-        padding: 16px 20px;
-        border-left: 4px solid #d4af37;
-        background: #f8fafc;
-        border-radius: 0 6px 6px 0;
-        color: #334155;
-        font-size: 0.9rem;
-      }
-      .article-references {
-        margin-top: 48px;
-        padding-top: 24px;
-        border-top: 1px solid #e2e8f0;
-      }
-      .article-references h3 {
-        font-size: 1.15rem;
-        color: #073c3a;
-        margin-bottom: 14px;
-      }
-      .source-list {
-        font-size: 0.88rem;
-        color: #475569;
-        line-height: 1.6;
-        padding-left: 20px;
-      }
-      .source-list li {
-        margin-bottom: 10px;
-      }
-      @media (max-width: 768px) {
-        .article-hero h1 { font-size: 1.85rem; }
-        .article-standfirst { font-size: 1rem; }
-      }
-    </style>
+    <link rel="stylesheet" href="/assets/css/articles.css" />
     <meta name="citation_title" content="Is Gilgit-Baltistan a Province of Pakistan? Constitutional Status, Governance Order 2018 & Map" />
     <meta name="citation_author" content="Pakistan Provincial Reform Institute (PPRI)" />
     <meta name="citation_publication_date" content="2026/10" />
@@ -343,7 +146,8 @@
 }
     </script>
 </head>
-  <body>
+  <body data-article="is-gilgit-baltistan-a-province-of-pakistan">
+    <a class="skip-link" href="#main-content">Skip to main content</a>
     <div class="reading-progress" id="reading-progress" aria-hidden="true"></div>
     <header class="site-header">
       <div class="container navbar">
@@ -391,8 +195,8 @@
       <div class="container paper-layout">
         <article class="prose-wide">
         <div class="featured-snippet-box" style="background:#f0fdf4;border:1px solid #bbf7d0;border-left:5px solid #16a34a;padding:20px 24px;border-radius:8px;margin:0 0 24px;">
-          <h2 style="margin:0 0 8px;font-size:1.25rem;color:#073c3a;">Direct Answer: Is Gilgit-Baltistan a Province of Pakistan?</h2>
-          <p style="margin:0;font-size:1.02rem;line-height:1.65;color:#1e293b;">
+          <h2 style="margin: 0 0 8px; font-size: 1.25rem; color: var(--brand-dark, #12392D);">Direct Answer: Is Gilgit-Baltistan a Province of Pakistan?</h2>
+          <p style="margin: 0; font-size: 1.02rem; line-height: 1.65; color: var(--text-main, #18302A);">
             <strong>No. Gilgit-Baltistan is not one of Pakistan’s four constitutional provinces listed under Article 1(2)(a) of the 1973 Constitution.</strong> It is a federally administered territory governed through the <em>Government of Gilgit-Baltistan Order 2018</em>, distinct from both Azad Jammu &amp; Kashmir (governed under its 1974 Interim Constitution) and Islamabad Capital Territory (a federal territory under Article 1(2)(b)).
           </p>
         </div>
@@ -466,8 +270,8 @@
           </table>
         </div>
 
-        <section id="gb-tax-and-fiscal-status" style="background:#f8fafc;border:1px solid #cbd5e1;border-left:5px solid #073c3a;border-radius:10px;padding:1.15rem 1.25rem;margin:1.5rem 0;">
-          <h2 style="margin:0 0 0.5rem;font-size:1.25rem;color:#073c3a;">Taxation, NFC Exclusion &amp; Fiscal Framework</h2>
+        <section id="gb-tax-and-fiscal-status" style="background: var(--bg-canvas, #F7F8F4); border: 1px solid var(--border-subtle, #D5DED7); border-left: 5px solid var(--action-primary, #145640); border-radius: 10px; padding: 1.15rem 1.25rem; margin: 1.5rem 0;">
+          <h2 style="margin: 0 0 0.5rem; font-size: 1.25rem; color: var(--brand-dark, #12392D);">Taxation, NFC Exclusion &amp; Fiscal Framework</h2>
           <p style="margin:0 0 0.6rem;line-height:1.65;">
             Because Gilgit-Baltistan is not listed in Article 1(2)(a), it sits <strong>outside the Article 160 National Finance Commission (NFC) divisible pool formula</strong>. Instead of receiving statutory NFC shares like the four provinces, GB is funded via annual federal grants-in-aid and federal Public Sector Development Programme (PSDP) allocations.
           </p>
@@ -544,7 +348,7 @@
             <h3>Inspect Pakistan’s Constitutional Architecture in Constitution Reader</h3>
             <p>Read Articles 1, 106, 140A, and 239 in PPRI’s interactive Constitution Reader to evaluate the exact legal boundaries of federating power.</p>
           </div>
-          <a href="/resources/constitution.html" class="btn btn-primary" style="background: #073c3a; color: #ffffff; padding: 10px 18px; border-radius: 6px; text-decoration: none; font-weight: 700; font-size: 0.88rem;">Open Constitution Reader &rarr;</a>
+          <a href="/resources/constitution.html" class="btn btn-primary" style="background: var(--action-primary, #145640); color: #ffffff; padding: 10px 18px; border-radius: 6px; text-decoration: none; font-weight: 700; font-size: 0.88rem;">Open Constitution Reader &rarr;</a>
         </div>
 
         <h2>Frequently Asked Questions</h2>

@@ -317,7 +317,20 @@
 
     var headers = table.querySelectorAll('th.sortable');
     headers.forEach(function (th, colIdx) {
-      th.addEventListener('click', function () {
+      th.setAttribute('aria-sort', 'none');
+      var existingBtn = th.querySelector('button.obs-sort-btn');
+      var trigger = existingBtn;
+      if (!trigger) {
+        trigger = document.createElement('button');
+        trigger.type = 'button';
+        trigger.className = 'obs-sort-btn';
+        while (th.firstChild) {
+          trigger.appendChild(th.firstChild);
+        }
+        th.appendChild(trigger);
+      }
+
+      trigger.addEventListener('click', function () {
         var tbody = table.querySelector('tbody');
         var rows = Array.prototype.slice.call(tbody.querySelectorAll('tr'));
         var isAsc = th.getAttribute('data-order') === 'asc';
@@ -325,11 +338,13 @@
 
         headers.forEach(function (h) {
           h.removeAttribute('data-order');
+          h.setAttribute('aria-sort', 'none');
           var arrow = h.querySelector('.sort-arrow');
           if (arrow) arrow.textContent = '⇅';
         });
 
         th.setAttribute('data-order', nextOrder);
+        th.setAttribute('aria-sort', nextOrder === 'asc' ? 'ascending' : 'descending');
         var curArrow = th.querySelector('.sort-arrow');
         if (curArrow) curArrow.textContent = nextOrder === 'asc' ? '▲' : '▼';
 

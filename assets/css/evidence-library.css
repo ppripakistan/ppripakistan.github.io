@@ -1,22 +1,22 @@
 /* PPRI Pakistan Evidence & Data Library Stylesheet */
 
 :root {
-  --el-navy: #073c3a;
-  --el-teal: #0f766e;
-  --el-teal-light: #e6f3f2;
-  --el-teal-dark: #094e4a;
-  --el-ink: #0f172a;
-  --el-muted: #64748b;
-  --el-line: #e2e8f0;
-  --el-surface: #ffffff;
-  --el-bg: #f8fafc;
-  --el-gold: #b45309;
-  --el-gold-light: #fef3c7;
+  --el-navy: var(--brand-dark, #12392D);
+  --el-teal: var(--action-primary, #145640);
+  --el-teal-light: var(--surface-soft, #EEF3EE);
+  --el-teal-dark: var(--brand-dark, #12392D);
+  --el-ink: var(--text-main, #18302A);
+  --el-muted: var(--text-muted, #52645B);
+  --el-line: var(--border-subtle, #D5DED7);
+  --el-surface: var(--bg-surface, #ffffff);
+  --el-bg: var(--bg-canvas, #F7F8F4);
+  --el-gold: var(--accent-gold, #765819);
+  --el-gold-light: #fbf3df;
   --el-blue: #1d4ed8;
   --el-blue-light: #eff6ff;
   --el-radius: 10px;
-  --el-shadow: 0 4px 14px rgba(7, 60, 58, 0.06);
-  --el-shadow-hover: 0 8px 24px rgba(7, 60, 58, 0.12);
+  --el-shadow: 0 4px 14px rgba(18, 57, 45, 0.06);
+  --el-shadow-hover: 0 8px 24px rgba(18, 57, 45, 0.12);
 }
 
 /* Hero Stats Banner */
@@ -310,7 +310,7 @@
 /* Catalog Card Grid */
 .el-catalog-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr));
   gap: 20px;
   margin-bottom: 40px;
 }

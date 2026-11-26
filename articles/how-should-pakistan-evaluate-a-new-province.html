@@ -41,213 +41,12 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/brand/favicon-16x16.png?v=2" />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=2" />
     <link rel="manifest" href="/site.webmanifest" />
-    <meta name="theme-color" content="#073c3a" />
+    <meta name="theme-color" content="#12392D" />
     <link rel="alternate" type="application/rss+xml" title="PPRI Policy Publications Feed" href="/feed.xml" />
     <link rel="stylesheet" href="/assets/css/style.css" />
     <link rel="stylesheet" href="/assets/css/responsive.css" />
     <link rel="stylesheet" href="/assets/css/research-papers.css" />
-    <style>
-      .article-hero {
-        background: linear-gradient(135deg, #073c3a 0%, #0c2b26 100%);
-        color: #ffffff;
-        padding: 60px 0 45px;
-        border-bottom: 3px solid #d4af37;
-      }
-      .article-hero .eyebrow {
-        color: #d4af37;
-        font-size: 0.82rem;
-        letter-spacing: 0.08em;
-        text-transform: uppercase;
-        font-weight: 700;
-        display: block;
-        margin-bottom: 12px;
-      }
-      .article-hero h1 {
-        font-size: 2.45rem;
-        line-height: 1.22;
-        color: #ffffff;
-        max-width: 920px;
-        margin: 0 0 16px;
-      }
-      .article-standfirst {
-        font-size: 1.15rem;
-        line-height: 1.6;
-        color: #e2e8f0;
-        max-width: 840px;
-        margin: 0 0 24px;
-        font-weight: 400;
-      }
-      .article-meta-bar {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 20px;
-        align-items: center;
-        font-size: 0.85rem;
-        color: #cbd5e1;
-        padding-top: 18px;
-        border-top: 1px solid rgba(255, 255, 255, 0.15);
-      }
-      .article-meta-item strong {
-        color: #ffffff;
-      }
-      .stat-ribbon {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
-        gap: 16px;
-        margin: 32px 0 40px;
-      }
-      .stat-card {
-        background: #f8fafc;
-        border: 1px solid #e2e8f0;
-        border-top: 4px solid #073c3a;
-        border-radius: 8px;
-        padding: 20px;
-        text-align: center;
-      }
-      .stat-card strong {
-        display: block;
-        font-size: 2rem;
-        color: #073c3a;
-        font-weight: 800;
-        line-height: 1.1;
-      }
-      .stat-card span {
-        display: block;
-        font-size: 0.85rem;
-        color: #64748b;
-        margin-top: 6px;
-        line-height: 1.35;
-      }
-      .rubric-grid-12 {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-        gap: 18px;
-        margin: 32px 0 44px;
-      }
-      .rubric-card {
-        background: #ffffff;
-        border: 1px solid #cbd5e1;
-        border-radius: 8px;
-        padding: 22px;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.03);
-      }
-      .rubric-card-header {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        margin-bottom: 10px;
-      }
-      .rubric-num {
-        width: 32px;
-        height: 32px;
-        background: #073c3a;
-        color: #ffffff;
-        border-radius: 50%;
-        display: grid;
-        place-items: center;
-        font-size: 0.82rem;
-        font-weight: 700;
-        flex-shrink: 0;
-      }
-      .rubric-card h4 {
-        margin: 0;
-        font-size: 1.05rem;
-        color: #073c3a;
-      }
-      .rubric-card p {
-        margin: 0;
-        font-size: 0.88rem;
-        color: #475569;
-        line-height: 1.5;
-      }
-      .scorer-shell {
-        background: #f8fafc;
-        border: 2px solid #073c3a;
-        border-radius: 12px;
-        padding: 28px;
-        margin: 40px 0;
-      }
-      .scorer-top {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        flex-wrap: wrap;
-        gap: 16px;
-        margin-bottom: 24px;
-        border-bottom: 1px solid #cbd5e1;
-        padding-bottom: 16px;
-      }
-      .scorer-top h3 {
-        margin: 0;
-        color: #073c3a;
-        font-size: 1.3rem;
-      }
-      .score-display {
-        background: #073c3a;
-        color: #ffffff;
-        padding: 8px 18px;
-        border-radius: 30px;
-        font-weight: 700;
-        font-size: 1.1rem;
-      }
-      .slider-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-        gap: 18px;
-      }
-      .slider-item {
-        background: #ffffff;
-        border: 1px solid #e2e8f0;
-        border-radius: 6px;
-        padding: 14px 16px;
-      }
-      .slider-item label {
-        display: flex;
-        justify-content: space-between;
-        font-size: 0.85rem;
-        font-weight: 700;
-        color: #334155;
-        margin-bottom: 8px;
-      }
-      .slider-item input[type="range"] {
-        width: 100%;
-        accent-color: #073c3a;
-      }
-      .score-verdict {
-        margin-top: 24px;
-        padding: 18px;
-        border-radius: 8px;
-        background: #e2efe8;
-        color: #073c3a;
-        font-size: 0.95rem;
-        font-weight: 600;
-      }
-      .interactive-bridge {
-        background: linear-gradient(135deg, #f0f7f3 0%, #e2efe8 100%);
-        border: 1px solid #c2ded0;
-        border-radius: 8px;
-        padding: 24px;
-        margin: 36px 0;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        flex-wrap: wrap;
-        gap: 16px;
-      }
-      .interactive-bridge-text h4 {
-        margin: 0 0 6px;
-        color: #073c3a;
-        font-size: 1.1rem;
-      }
-      .interactive-bridge-text p {
-        margin: 0;
-        color: #2d5a4c;
-        font-size: 0.9rem;
-      }
-      @media (max-width: 768px) {
-        .article-hero h1 { font-size: 1.85rem; }
-      }
-    </style>
+    <link rel="stylesheet" href="/assets/css/articles.css" />
     <meta name="citation_title" content="PPRI 12-Point Evaluation Criteria: How to Assess New Province Proposals in Pakistan" />
     <meta name="citation_author" content="Pakistan Provincial Reform Institute (PPRI)" />
     <meta name="citation_publication_date" content="2026/10" />
@@ -340,7 +139,8 @@
 }
     </script>
 </head>
-  <body>
+  <body data-article="how-should-pakistan-evaluate-a-new-province">
+    <a class="skip-link" href="#main-content">Skip to main content</a>
     <div class="reading-progress" id="reading-progress" aria-hidden="true"></div>
         <header class="site-header">
       <div class="container navbar">
@@ -406,7 +206,7 @@
           </div>
         </div>
 
-        <p class="lead" style="font-size: 1.18rem; line-height: 1.7; color: #1e293b;">
+        <p class="lead" style="font-size: 1.18rem; line-height: 1.7; color: var(--text-main, #18302A);">
           Pakistan does not suffer from a shortage of passionate arguments regarding new provinces. It suffers from an acute shortage of objective, standardized institutional tests.
         </p>
 
@@ -548,7 +348,7 @@
           <div class="scorer-top">
             <div>
               <h3>Interactive Proposal Evaluator</h3>
-              <span style="font-size: 0.88rem; color: #64748b;">Rate any proposed model from 0 (Weak/Unaddressed) to 10 (Fully Satisfied) on each criterion:</span>
+              <span style="font-size: 0.88rem; color: var(--text-muted, #52645B);">Rate any proposed model from 0 (Weak/Unaddressed) to 10 (Fully Satisfied) on each criterion:</span>
             </div>
             <div class="score-display">Composite Score: <span id="total-score">72</span> / 120</div>
           </div>
@@ -647,7 +447,7 @@
             <h3>Inspect Simulated Provincial Models</h3>
             <p>Test PPRI illustrative models against these 12 criteria using live boundary data and demographic metrics in the Scenario Lab.</p>
           </div>
-          <a href="/maps/scenarios/" class="btn btn-primary" style="background: #073c3a; color: #ffffff; padding: 10px 18px; border-radius: 6px; text-decoration: none; font-weight: 700; font-size: 0.88rem;">Open Scenario Lab &rarr;</a>
+          <a href="/maps/scenarios/" class="btn btn-primary" style="background: var(--action-primary, #145640); color: #ffffff; padding: 10px 18px; border-radius: 6px; text-decoration: none; font-weight: 700; font-size: 0.88rem;">Open Scenario Lab &rarr;</a>
         </div>
         </article>
 
@@ -685,9 +485,9 @@
           </div>
         </section>
 
-        <div class="article-references" style="margin-top: 50px; padding-top: 25px; border-top: 1px solid #e2e8f0;">
-          <h3 style="font-size: 1.15rem; color: #073c3a;">Primary Sources &amp; References</h3>
-          <ul style="font-size: 0.88rem; color: #475569; line-height: 1.6;">
+        <div class="article-references" style="margin-top: 50px; padding-top: 25px; border-top: 1px solid var(--border-subtle, #D5DED7);">
+          <h3 style="font-size: 1.15rem; color: var(--brand-dark, #12392D);">Primary Sources &amp; References</h3>
+          <ul style="font-size: 0.88rem; color: var(--text-muted, #52645B); line-height: 1.6;">
             <li><strong>Constitution of the Islamic Republic of Pakistan:</strong> Articles 1, 140A, 160, and 239. <a href="/resources/constitution.html">PPRI Constitution Reader</a></li>
             <li><strong>World Bank:</strong> <em>Strengthening Fiscal Federalism to Drive Development</em> (July 2026). <a href="https://www.worldbank.org/en/news/press-release/2026/07/01/pakistan-strengthening-fiscal-federalism-to-drive-development" target="_blank" rel="noopener">World Bank Document Portal</a></li>
             <li><strong>Pakistan Institute of Development Economics (PIDE):</strong> <em>A Critical Path to Fiscal Federalism: Policy Imperatives for the NFC Award Remake</em> (2025). <a href="https://pide.org.pk/research/a-critical-path-to-fiscal-federalism-policy-imperatives-for-the-nfc-award-remake/" target="_blank" rel="noopener">pide.org.pk</a></li>

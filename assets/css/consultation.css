@@ -1,6 +1,6 @@
 .ppri-submit-shell {
   display: grid;
-  grid-template-columns: minmax(0, 1.08fr) minmax(280px, .92fr);
+  grid-template-columns: minmax(0, 1.08fr) minmax(min(100%, 280px), .92fr);
   gap: 18px;
   align-items: start;
 }

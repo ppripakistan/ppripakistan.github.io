@@ -31,7 +31,7 @@
     <link rel="icon" href="/assets/images/brand/favicon.svg?v=2" type="image/svg+xml" />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=2" />
     <link rel="manifest" href="/site.webmanifest" />
-    <meta name="theme-color" content="#073c3a" />
+    <meta name="theme-color" content="#12392D" />
     <link rel="stylesheet" href="/assets/css/style.css" />
     <link rel="stylesheet" href="/assets/css/responsive.css" />
     <link rel="stylesheet" href="/assets/css/constitution.css" />
@@ -187,26 +187,26 @@
           </div>
 
           <div style="flex-grow: 1; max-width: 320px; min-width: 200px;">
-            <input id="amendments-search-input" class="const-finder-input" type="search" placeholder="Search amendment or keyword..." style="padding: 8px 14px; font-size: 0.88rem;" />
+            <input id="amendments-search-input" class="const-finder-input" type="search" aria-label="Search constitutional amendments or keyword" placeholder="Search amendment or keyword..." style="padding: 8px 14px; font-size: 0.88rem;" />
           </div>
         </div>
 
-        <div id="amendments-results-counter" style="font-size: 0.82rem; color: #64748b; margin-bottom: 20px; font-weight: 600;">
+        <div id="amendments-results-counter" style="font-size: 0.82rem; color: var(--text-muted, #52645B); margin-bottom: 20px; font-weight: 600;">
           Showing all 27 amendment positions
         </div>
 
         <!-- AMENDMENTS CARDS CONTAINER -->
         <div class="const-card-grid" id="amendments-cards-container" style="margin-bottom: 48px;">
           <!-- Dynamically populated by assets/js/constitution-amendments.js -->
-          <div style="padding: 32px; text-align: center; color: #64748b; grid-column: 1 / -1;">Loading Amendments Register...</div>
+          <div style="padding: 32px; text-align: center; color: var(--text-muted, #52645B); grid-column: 1 / -1;">Loading Amendments Register...</div>
         </div>
 
         <!-- UN-ENACTED PROPOSALS WARNING CALLOUT -->
         <div style="background: #fffbeb; border: 1px solid #fef08a; border-left: 5px solid #d97706; padding: 24px; border-radius: var(--const-radius-md); margin-bottom: 48px;">
-          <h3 style="margin-top: 0; color: #92400e; font-size: 1.15rem; display: flex; align-items: center; gap: 8px;">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="7.86 2 16.14 2 22 7.86 22 16.14 16.14 22 7.86 22 2 16.14 2 7.86 7.86 2"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          <h2 style="margin-top: 0; color: #765819; font-size: 1.15rem; display: flex; align-items: center; gap: 8px;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polygon points="7.86 2 16.14 2 22 7.86 22 16.14 16.14 22 7.86 22 2 16.14 2 7.86 7.86 2"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
             Pending / Un-enacted Proposals in Parliamentary Registers (2026)
-          </h3>
+          </h2>
           <p style="font-size: 0.95rem; color: #78350f; margin-bottom: 12px; line-height: 1.6;">
             The following legislative instruments have appeared on parliamentary agendas but have <strong>not been enacted into law</strong>:
           </p>

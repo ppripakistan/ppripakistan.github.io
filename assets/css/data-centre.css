@@ -56,15 +56,51 @@
 
 .nfc-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
   gap: 28px;
   margin-top: 20px;
 }
 
+.nfc-grid > * {
+  min-width: 0;
+}
+
 @media (max-width: 860px) {
   .nfc-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
+}
+
+.nfc-results-card {
+  background: var(--surface-soft, #EEF3EE);
+  border: 1px solid var(--border-subtle, #D5DED7);
+  border-radius: 8px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-width: 0;
+}
+
+.nfc-results-title {
+  margin: 0 0 12px;
+  color: var(--brand-dark, #12392D);
+  font-size: 1rem;
+}
+
+.nfc-key-finding {
+  margin-top: 14px;
+  padding: 10px 12px;
+  background: var(--surface, #FFFFFF);
+  border-radius: 6px;
+  border: 1px solid var(--border-subtle, #D5DED7);
+  font-size: 0.84rem;
+  color: var(--text-muted, #52645B);
+  line-height: 1.5;
+}
+
+.nfc-key-finding strong {
+  color: var(--brand-dark, #12392D);
 }
 
 .nfc-slider-group {
@@ -162,12 +198,13 @@
 
 .nfc-results-table {
   width: 100%;
+  min-width: 0;
   border-collapse: collapse;
   font-size: 0.88rem;
 }
 
 .nfc-results-table th {
-  background: #073c3a;
+  background: var(--brand-dark, #12392D);
   color: #ffffff;
   padding: 10px 12px;
   text-align: left;
@@ -175,11 +212,40 @@
 
 .nfc-results-table td {
   padding: 10px 12px;
-  border-bottom: 1px solid #e2e8f0;
+  border-bottom: 1px solid var(--border-subtle, #D5DED7);
 }
 
 .nfc-results-table tr:hover {
-  background: #f8fafc;
+  background: var(--surface-soft, #EEF3EE);
+}
+
+@media (max-width: 640px) {
+  .dc-hero .phase6-dashboard {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 10px;
+    margin-bottom: 16px !important;
+  }
+  .dc-hero .p6-stat {
+    padding: 12px 14px;
+  }
+  .dc-hero .p6-stat strong {
+    font-size: 1.28rem;
+  }
+  .dc-hero .p6-stat span {
+    font-size: 0.72rem;
+    line-height: 1.3;
+  }
+  .nfc-sim-container {
+    padding: 16px;
+  }
+  .nfc-results-card {
+    padding: 12px;
+  }
+  .nfc-results-table th,
+  .nfc-results-table td {
+    padding: 8px 8px;
+    font-size: 0.82rem;
+  }
 }
 
 /* District Explorer */
@@ -283,9 +349,9 @@
    HERO — LIGHT THEME (High Contrast Dark Headings, Cards & Buttons)
    ============================ */
 .dc-hero {
-  background: linear-gradient(160deg, #ffffff 0%, #f4f8f7 50%, #e8f3f1 100%);
-  background-color: #f4f8f7;
-  border-bottom: 2px solid #cbd5e1;
+  background: linear-gradient(160deg, var(--bg-surface, #ffffff) 0%, var(--bg-canvas, #F7F8F4) 55%, var(--surface-soft, #EEF3EE) 100%);
+  background-color: var(--bg-canvas, #F7F8F4);
+  border-bottom: 2px solid var(--border-subtle, #D5DED7);
   padding: 56px 0 48px;
 }
 
@@ -293,8 +359,8 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: #073c3a;
-  border: 1px solid #042423;
+  background: var(--brand-dark, #12392D);
+  border: 1px solid #0E2F25;
   color: #ffffff;
   font-size: 0.8rem;
   font-weight: 700;
@@ -303,11 +369,11 @@
   padding: 6px 16px;
   border-radius: 9999px;
   margin-bottom: 18px;
-  box-shadow: 0 2px 6px rgba(7, 60, 58, 0.15);
+  box-shadow: 0 2px 6px rgba(18, 57, 45, 0.14);
 }
 
 .dc-hero-title {
-  color: #073c3a;
+  color: var(--brand-dark, #12392D);
   font-size: clamp(2rem, 4vw, 3rem);
   font-weight: 800;
   line-height: 1.15;
@@ -316,13 +382,11 @@
 }
 
 .dc-hero-title span {
-  color: #0d5c59;
-  border-bottom: 3px solid #073c3a;
-  padding-bottom: 2px;
+  color: var(--action-primary, #145640);
 }
 
 .dc-hero-lead {
-  color: #1e293b;
+  color: var(--text-main, #18302A);
   font-size: 1.15rem;
   line-height: 1.65;
   font-weight: 500;
@@ -332,12 +396,12 @@
 
 /* KPI stat bar — Dark-colored Cards */
 .dc-hero .phase6-dashboard .p6-stat {
-  background: #073c3a;
-  border: 1px solid #042423;
+  background: var(--brand-dark, #12392D);
+  border: 1px solid #0E2F25;
   border-radius: 10px;
   padding: 18px 20px;
   color: #ffffff;
-  box-shadow: 0 4px 12px rgba(7, 60, 58, 0.18);
+  box-shadow: 0 4px 12px rgba(18, 57, 45, 0.16);
 }
 
 .dc-hero .phase6-dashboard .p6-stat strong {
@@ -348,7 +412,7 @@
 }
 
 .dc-hero .phase6-dashboard .p6-stat span {
-  color: #c7e8e5;
+  color: #D5E4DA;
   font-size: 0.8rem;
   font-weight: 600;
 }
@@ -356,7 +420,7 @@
 /* Command search */
 .dc-command-input {
   background: #ffffff;
-  border: 2px solid #073c3a;
+  border: 2px solid var(--action-primary, #145640);
   color: #0f172a;
   border-radius: 10px;
   padding: 14px 20px 14px 50px;
@@ -411,21 +475,21 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: #073c3a;
-  border: 1.5px solid #042423;
+  background: var(--action-primary, #145640);
+  border: 1.5px solid var(--brand-dark, #12392D);
   color: #ffffff;
   padding: 14px 32px;
   border-radius: 8px;
   font-weight: 700;
   font-size: 1rem;
   text-decoration: none;
-  transition: all 0.2s ease;
-  box-shadow: 0 4px 14px rgba(7, 60, 58, 0.25);
+  transition: background 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+  box-shadow: 0 4px 14px rgba(18, 57, 45, 0.2);
 }
 
 .dc-cta-primary:hover {
-  background: #0f766e;
-  box-shadow: 0 6px 20px rgba(7, 60, 58, 0.35);
+  background: var(--brand-dark, #12392D);
+  box-shadow: 0 6px 20px rgba(18, 57, 45, 0.28);
   transform: translateY(-1px);
 }
 
@@ -433,24 +497,24 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: #ffffff;
-  border: 1.5px solid #073c3a;
-  color: #073c3a;
+  background: var(--bg-surface, #ffffff);
+  border: 1.5px solid var(--action-primary, #145640);
+  color: var(--action-primary, #145640);
   padding: 13px 26px;
   border-radius: 8px;
   font-size: 0.95rem;
   font-weight: 700;
   text-decoration: none;
-  transition: all 0.2s ease;
-  box-shadow: 0 2px 8px rgba(7, 60, 58, 0.08);
+  transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+  box-shadow: 0 2px 8px rgba(18, 57, 45, 0.08);
 }
 
 .dc-hero-secondary-btn:hover {
-  background: #f0fdfa;
-  border-color: #0f766e;
-  color: #0f766e;
+  background: var(--surface-soft, #EEF3EE);
+  border-color: var(--brand-dark, #12392D);
+  color: var(--brand-dark, #12392D);
   transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(7, 60, 58, 0.15);
+  box-shadow: 0 4px 12px rgba(18, 57, 45, 0.14);
 }
 /* ============================
    PROGRESSIVE DISCLOSURE — Collapsible Sections

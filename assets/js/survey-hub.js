@@ -6,17 +6,43 @@ document.addEventListener("DOMContentLoaded", function () {
   "use strict";
 
   // --- TOPIC TAB SWITCHER ---
-  const topicBtns = document.querySelectorAll(".survey-topic-btn");
+  const topicBtns = Array.from(document.querySelectorAll(".survey-topic-btn"));
   const topicPanes = document.querySelectorAll(".survey-topic-pane");
 
-  topicBtns.forEach(function (btn) {
+  function activateTopic(targetBtn, moveFocus) {
+    const topicId = targetBtn.getAttribute("data-topic");
+    topicBtns.forEach((b) => {
+      const isSelected = b === targetBtn;
+      b.classList.toggle("active", isSelected);
+      b.setAttribute("aria-selected", isSelected ? "true" : "false");
+      b.setAttribute("tabindex", isSelected ? "0" : "-1");
+    });
+    topicPanes.forEach((p) => {
+      const isActive = p.id === topicId;
+      p.classList.toggle("active", isActive);
+      p.hidden = !isActive;
+    });
+    if (moveFocus) targetBtn.focus();
+  }
+
+  topicBtns.forEach(function (btn, idx) {
+    if (!btn.hasAttribute("tabindex")) {
+      btn.setAttribute("tabindex", btn.classList.contains("active") ? "0" : "-1");
+    }
     btn.addEventListener("click", function () {
-      const topicId = this.getAttribute("data-topic");
-      topicBtns.forEach((b) => b.classList.remove("active"));
-      topicPanes.forEach((p) => p.classList.remove("active"));
-      this.classList.add("active");
-      const activePane = document.getElementById(topicId);
-      if (activePane) activePane.classList.add("active");
+      activateTopic(this, false);
+    });
+    btn.addEventListener("keydown", function (e) {
+      const isRtl = getComputedStyle(this.parentElement || document.documentElement).direction === "rtl";
+      let nextIdx = null;
+      if (e.key === "ArrowRight") nextIdx = isRtl ? (idx - 1 + topicBtns.length) % topicBtns.length : (idx + 1) % topicBtns.length;
+      else if (e.key === "ArrowLeft") nextIdx = isRtl ? (idx + 1) % topicBtns.length : (idx - 1 + topicBtns.length) % topicBtns.length;
+      else if (e.key === "Home") nextIdx = 0;
+      else if (e.key === "End") nextIdx = topicBtns.length - 1;
+      if (nextIdx !== null) {
+        e.preventDefault();
+        activateTopic(topicBtns[nextIdx], true);
+      }
     });
   });
 
@@ -39,6 +65,47 @@ document.addEventListener("DOMContentLoaded", function () {
   const btnGmail = document.getElementById("btnSendGmail");
   const btnEmail = document.getElementById("btnSendEmail");
   const btnCopy = document.getElementById("btnCopySurvey");
+  const btnCloseModal = document.getElementById("btnCloseSubmissionModal");
+  let lastFocusedEl = null;
+
+  function setBackgroundInert(isInert) {
+    const header = document.querySelector(".site-header");
+    const footer = document.querySelector(".site-footer");
+    if (header) header.inert = isInert;
+    if (footer) footer.inert = isInert;
+    const main = document.getElementById("main-content");
+    if (main) {
+      Array.from(main.children).forEach(function (child) {
+        if (child !== modal) child.inert = isInert;
+      });
+    }
+  }
+
+  function closeSubmissionModal() {
+    if (!modal) return;
+    modal.classList.remove("active");
+    modal.hidden = true;
+    setBackgroundInert(false);
+    if (lastFocusedEl && typeof lastFocusedEl.focus === "function") {
+      lastFocusedEl.focus();
+      lastFocusedEl = null;
+    }
+  }
+
+  if (btnCloseModal) {
+    btnCloseModal.addEventListener("click", closeSubmissionModal);
+  }
+  if (modal) {
+    modal.addEventListener("click", function (e) {
+      if (e.target === modal) closeSubmissionModal();
+    });
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape" && !modal.hidden && modal.classList.contains("active")) {
+        e.preventDefault();
+        closeSubmissionModal();
+      }
+    });
+  }
 
   let currentSubmissionText = "";
   let currentTopicTitle = "";
@@ -47,6 +114,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const form = document.getElementById(formId);
     if (!form) return;
 
+    lastFocusedEl = document.activeElement;
     const formData = new FormData(form);
     const answers = [];
     currentTopicTitle = topicTitle;
@@ -72,7 +140,8 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     // Respondent Region
-    const regionVal = formData.get("respondent_region") || "General Citizen";
+    const regionSelect = form.querySelector("select[name^='respondent_region']");
+    const regionVal = (regionSelect && regionSelect.value) || formData.get("respondent_region") || "General Citizen";
     const commentsVal = formData.get("comments") || "None";
 
     // Build plain text for email
@@ -119,16 +188,22 @@ document.addEventListener("DOMContentLoaded", function () {
     const mailtoUrl = `mailto:${encodeURIComponent(emailTo)}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(emailBody)}`;
 
     if (btnGmail) {
-      btnGmail.href = gmailUrl;
-      btnGmail.target = "_blank";
+      btnGmail.setAttribute("href", gmailUrl);
+      btnGmail.setAttribute("target", "_blank");
+      btnGmail.setAttribute("rel", "noopener noreferrer");
     }
     if (btnEmail) {
-      btnEmail.href = mailtoUrl;
+      btnEmail.setAttribute("href", mailtoUrl);
     }
 
     if (modal) {
+      modal.hidden = false;
       modal.classList.add("active");
-      modal.scrollIntoView({ behavior: "smooth" });
+      setBackgroundInert(true);
+      const focusTarget = btnGmail || btnCloseModal || modal;
+      if (focusTarget && typeof focusTarget.focus === "function") {
+        focusTarget.focus();
+      }
     }
   };
 

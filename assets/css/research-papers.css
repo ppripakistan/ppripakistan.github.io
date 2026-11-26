@@ -61,7 +61,7 @@ body {
 .kpi-label {
   display: block;
   font-size: 0.82rem;
-  color: #64748b;
+  color: var(--text-muted, #52645B);
   margin-top: 6px;
   line-height: 1.4;
 }
@@ -145,10 +145,10 @@ body {
 }
 .chart-source {
   font-size: 0.75rem;
-  color: #94a3b8;
+  color: var(--text-muted, #52645B);
   margin-top: 14px;
   padding-top: 10px;
-  border-top: 1px solid #f1f5f9;
+  border-top: 1px solid var(--border-subtle, #D5DED7);
 }
 .data-download {
   display: inline-flex;
@@ -396,7 +396,7 @@ body {
 }
 .table-source {
   font-size: 0.75rem;
-  color: #94a3b8;
+  color: var(--text-muted, #52645B);
   margin-top: 8px;
   padding: 0 4px;
 }
@@ -584,7 +584,7 @@ body {
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
   font-size: 0.67rem;
   font-weight: 700;
-  color: #94a3b8;
+  color: var(--text-muted, #52645B);
   letter-spacing: -0.02em;
   flex-shrink: 0;
   min-width: 20px;
@@ -765,11 +765,11 @@ body {
 .showcase-treatise-code {
   font-family: monospace;
   font-size: 0.68rem;
-  color: #94a3b8;
+  color: var(--text-muted, #52645B);
 }
 .showcase-treatise-time {
   font-size: 0.72rem;
-  color: #64748b;
+  color: var(--text-muted, #52645B);
 }
 .showcase-treatise-card h5 {
   font-size: 0.94rem;
@@ -893,7 +893,7 @@ body {
   align-items: center;
   gap: 5px;
   font-size: 0.78rem;
-  color: #94a3b8;
+  color: #D5E4DA;
 }
 
 /* -- Blockquotes inside papers -- */
@@ -1377,7 +1377,7 @@ body {
 
 .ppri-party-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
   gap: 1rem;
   margin: 1.5rem 0 2rem;
 }
@@ -1718,5 +1718,32 @@ body {
   }
   .ppri-planner-boxes {
     grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .flowchart-wrap {
+    padding: 16px 12px !important;
+    margin: 20px 0 !important;
+  }
+  .flowchart-step {
+    padding: 12px 10px !important;
+    gap: 10px !important;
+  }
+  .matrix-wrap {
+    padding: 16px 12px !important;
+  }
+  .matrix-grid,
+  .models-grid {
+    grid-template-columns: 1fr !important;
+  }
+  .paper-kpi-ribbon {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 10px !important;
+  }
+}
+@media (max-width: 400px) {
+  .paper-kpi-ribbon {
+    grid-template-columns: 1fr !important;
   }
 }

@@ -22,30 +22,6 @@
     <link rel="stylesheet" href="/assets/css/responsive.css" />
     <link rel="stylesheet" href="/assets/css/phase6.css" />
     <script>document.documentElement.classList.toggle("map-embed", new URLSearchParams(window.location.search).has("embed"));</script>
-    <style id="ppri-map-embed-style">
-      html.map-embed, html.map-embed body { height: 100%; overflow: hidden; }
-      html.map-embed body { margin: 0; background: #e7efeb; }
-      html.map-embed .site-header,
-      html.map-embed .site-footer,
-      html.map-embed .page-hero,
-      html.map-embed .site-directory,
-      html.map-embed .seo-data-summary,
-      html.map-embed #executive-data-summary { display: none !important; }
-      html.map-embed #main-content { height: 100vh; }
-      html.map-embed #main-content > section { display: none; }
-      html.map-embed #main-content > section#p6ScenarioSection,
-      html.map-embed #main-content > section.p6-scenario-section { display: block !important; padding: 0; }
-      html.map-embed #main-content > section#p6ScenarioSection .container,
-      html.map-embed #main-content > section.p6-scenario-section .container { width: 100%; max-width: none; }
-      html.map-embed #p6ScenarioCoverage,
-      html.map-embed .p6-scenario-warning,
-      html.map-embed .p6-scenario-panel,
-      html.map-embed #main-content > section .p6-map-toolbar,
-      html.map-embed .p6-map-help { display: none !important; }
-      html.map-embed .p6-scenario-layout,
-      html.map-embed .p6-scenario-main { display: block; }
-      html.map-embed #p6ScenarioMap { height: 100vh; min-height: 420px; border: 0; border-radius: 0; }
-    </style>
     <link rel="preconnect" href="https://unpkg.com" crossorigin />
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
     <link
@@ -110,7 +86,7 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/brand/favicon-16x16.png?v=2" />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=2" />
     <link rel="manifest" href="/site.webmanifest" />
-    <meta name="theme-color" content="#073c3a" />
+    <meta name="theme-color" content="#12392D" />
   </head>
   <body>
     <a class="skip-link" href="#main-content">Skip to content</a>
@@ -281,6 +257,8 @@
                 <div
                   id="p6ScenarioDistrictList"
                   class="p6-district-list"
+                  role="region"
+                  tabindex="0"
                   aria-label="District assignment list"
                 ></div>
               </div>
@@ -383,62 +361,62 @@
           </div>
 
           <!-- Quick Navigation: 13 PPRI-01 Administrative Unit Profiles -->
-          <div class="scenario-unit-links" style="margin: 32px 0; padding: 24px; background: #ffffff; border: 1px solid #d2e4db; border-radius: 8px;">
-            <h3 style="color: #073c3a; margin-top: 0;">Explore Detailed Profiles for All 13 Subnational Units</h3>
-            <p style="color: #475569; font-size: 0.92rem; margin-bottom: 16px;">
+          <div class="scenario-unit-links" style="margin: 32px 0; padding: 24px; background: #ffffff; border: 1px solid var(--border-subtle, #D5DED7); border-radius: 8px;">
+            <h3 style="color: var(--brand-dark, #12392D); margin-top: 0;">Explore Detailed Profiles for All 13 Subnational Units</h3>
+            <p style="color: var(--text-muted, #52645B); font-size: 0.92rem; margin-bottom: 16px;">
               Jump directly to the constitutional, demographic, and economic baseline profile of each proposed administrative unit in the PPRI-01 model:
             </p>
             <div style="display: flex; flex-wrap: wrap; gap: 8px;">
     
-              <a href="/provinces/proposed-models.html#unit-west-punjab" class="btn btn-ghost" style="font-size: 0.82rem; padding: 6px 10px; border-color: #cbd5e1;">
+              <a href="/provinces/proposed-models.html#unit-west-punjab" class="btn btn-ghost" style="font-size: 0.82rem; padding: 6px 10px; border-color: var(--border-subtle, #D5DED7);">
                 West Punjab &rarr;
               </a>
         
-              <a href="/provinces/proposed-models.html#unit-south-punjab" class="btn btn-ghost" style="font-size: 0.82rem; padding: 6px 10px; border-color: #cbd5e1;">
+              <a href="/provinces/proposed-models.html#unit-south-punjab" class="btn btn-ghost" style="font-size: 0.82rem; padding: 6px 10px; border-color: var(--border-subtle, #D5DED7);">
                 South Punjab &rarr;
               </a>
         
-              <a href="/provinces/proposed-models.html#unit-bahawalpur" class="btn btn-ghost" style="font-size: 0.82rem; padding: 6px 10px; border-color: #cbd5e1;">
+              <a href="/provinces/proposed-models.html#unit-bahawalpur" class="btn btn-ghost" style="font-size: 0.82rem; padding: 6px 10px; border-color: var(--border-subtle, #D5DED7);">
                 Bahawalpur &rarr;
               </a>
         
-              <a href="/provinces/proposed-models.html#unit-potohar" class="btn btn-ghost" style="font-size: 0.82rem; padding: 6px 10px; border-color: #cbd5e1;">
+              <a href="/provinces/proposed-models.html#unit-potohar" class="btn btn-ghost" style="font-size: 0.82rem; padding: 6px 10px; border-color: var(--border-subtle, #D5DED7);">
                 Potohar &rarr;
               </a>
         
-              <a href="/provinces/proposed-models.html#unit-urban-sindh" class="btn btn-ghost" style="font-size: 0.82rem; padding: 6px 10px; border-color: #cbd5e1;">
+              <a href="/provinces/proposed-models.html#unit-urban-sindh" class="btn btn-ghost" style="font-size: 0.82rem; padding: 6px 10px; border-color: var(--border-subtle, #D5DED7);">
                 Urban Sindh / Karachi &rarr;
               </a>
         
-              <a href="/provinces/proposed-models.html#unit-rural-sindh" class="btn btn-ghost" style="font-size: 0.82rem; padding: 6px 10px; border-color: #cbd5e1;">
+              <a href="/provinces/proposed-models.html#unit-rural-sindh" class="btn btn-ghost" style="font-size: 0.82rem; padding: 6px 10px; border-color: var(--border-subtle, #D5DED7);">
                 Rural Sindh / Lower Sindh &rarr;
               </a>
         
-              <a href="/provinces/proposed-models.html#unit-mehran" class="btn btn-ghost" style="font-size: 0.82rem; padding: 6px 10px; border-color: #cbd5e1;">
+              <a href="/provinces/proposed-models.html#unit-mehran" class="btn btn-ghost" style="font-size: 0.82rem; padding: 6px 10px; border-color: var(--border-subtle, #D5DED7);">
                 Mehran / Upper Sindh &rarr;
               </a>
         
-              <a href="/provinces/proposed-models.html#unit-khyber" class="btn btn-ghost" style="font-size: 0.82rem; padding: 6px 10px; border-color: #cbd5e1;">
+              <a href="/provinces/proposed-models.html#unit-khyber" class="btn btn-ghost" style="font-size: 0.82rem; padding: 6px 10px; border-color: var(--border-subtle, #D5DED7);">
                 Khyber &rarr;
               </a>
         
-              <a href="/provinces/proposed-models.html#unit-south-kpk" class="btn btn-ghost" style="font-size: 0.82rem; padding: 6px 10px; border-color: #cbd5e1;">
+              <a href="/provinces/proposed-models.html#unit-south-kpk" class="btn btn-ghost" style="font-size: 0.82rem; padding: 6px 10px; border-color: var(--border-subtle, #D5DED7);">
                 South KPK &rarr;
               </a>
         
-              <a href="/provinces/proposed-models.html#unit-hazara" class="btn btn-ghost" style="font-size: 0.82rem; padding: 6px 10px; border-color: #cbd5e1;">
+              <a href="/provinces/proposed-models.html#unit-hazara" class="btn btn-ghost" style="font-size: 0.82rem; padding: 6px 10px; border-color: var(--border-subtle, #D5DED7);">
                 Hazara &rarr;
               </a>
         
-              <a href="/provinces/proposed-models.html#unit-kohistan" class="btn btn-ghost" style="font-size: 0.82rem; padding: 6px 10px; border-color: #cbd5e1;">
+              <a href="/provinces/proposed-models.html#unit-kohistan" class="btn btn-ghost" style="font-size: 0.82rem; padding: 6px 10px; border-color: var(--border-subtle, #D5DED7);">
                 Kohistan &rarr;
               </a>
         
-              <a href="/provinces/proposed-models.html#unit-balochistan" class="btn btn-ghost" style="font-size: 0.82rem; padding: 6px 10px; border-color: #cbd5e1;">
+              <a href="/provinces/proposed-models.html#unit-balochistan" class="btn btn-ghost" style="font-size: 0.82rem; padding: 6px 10px; border-color: var(--border-subtle, #D5DED7);">
                 Balochistan Plateau &rarr;
               </a>
         
-              <a href="/provinces/proposed-models.html#unit-makran" class="btn btn-ghost" style="font-size: 0.82rem; padding: 6px 10px; border-color: #cbd5e1;">
+              <a href="/provinces/proposed-models.html#unit-makran" class="btn btn-ghost" style="font-size: 0.82rem; padding: 6px 10px; border-color: var(--border-subtle, #D5DED7);">
                 Makran Coastal Unit &rarr;
               </a>
         

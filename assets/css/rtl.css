@@ -17,8 +17,8 @@ body[lang="ur"],
   direction: rtl;
   text-align: right;
   font-family: var(--ur-font);
-  font-size: 17px;
-  line-height: 2.25;
+  font-size: 1.125rem;
+  line-height: 2.2;
   letter-spacing: normal;
 }
 
@@ -127,20 +127,21 @@ body[lang="ur"],
   font-weight: 700;
   font-size: 0.86rem;
   text-decoration: none;
-  background: rgba(168, 224, 106, 0.18);
-  border: 1px solid rgba(168, 224, 106, 0.55);
-  color: #c8ff54;
-  transition: all 200ms ease;
+  background: rgba(185, 217, 147, 0.18);
+  border: 1px solid rgba(185, 217, 147, 0.55);
+  color: var(--accent-sage, #B9D993);
+  transition: background 180ms ease, border-color 180ms ease, color 180ms ease;
   white-space: nowrap;
   font-family: var(--ur-font);
   line-height: 1.6;
   margin-inline-start: 6px;
 }
 
-.lang-switch-btn:hover {
-  background: #a8e06a;
-  color: #052217;
-  border-color: #a8e06a;
+.lang-switch-btn:hover,
+.lang-switch-btn:focus-visible {
+  background: var(--accent-sage, #B9D993);
+  color: var(--brand-dark, #12392D);
+  border-color: var(--accent-sage, #B9D993);
 }
 
 /* ── Desktop & Mobile Dropdown Menus ─────────────────────────────────────── */
@@ -155,17 +156,21 @@ body[lang="ur"],
   line-height: 1.8;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1100px) {
   [dir="rtl"] .nav-links {
-    right: auto;
-    left: 0;
+    right: 16px;
+    left: 16px;
+  }
+  [dir="rtl"] .nav-trigger {
+    text-align: right !important;
   }
   [dir="rtl"] .nav-menu {
-    border-left: none;
-    border-right: 2px solid rgba(168, 224, 106, 0.45);
+    border-left: none !important;
+    border-right: 2px solid rgba(185, 217, 147, 0.45) !important;
+    padding: 4px 12px 6px 0 !important;
   }
   [dir="rtl"] .nav-menu a {
-    text-align: right;
+    text-align: right !important;
   }
 }
 
@@ -212,16 +217,25 @@ body[lang="ur"],
   text-align: right;
 }
 
-/* Numeric table columns: keep numbers legible with LTR layout in cell */
+/* Numeric table columns & mixed-direction figures: isolate LTR direction cleanly */
 [dir="rtl"] .data-table th.num,
 [dir="rtl"] .data-table td.num,
 [dir="rtl"] .scale-table th.num,
 [dir="rtl"] .scale-table td.num,
+[dir="rtl"] .ppri-table-wrap th.num,
+[dir="rtl"] .ppri-table-wrap td.num,
 [dir="rtl"] th[style*="text-align:right"],
 [dir="rtl"] td[style*="text-align:right"] {
   text-align: left !important;
   direction: ltr;
+  unicode-bidi: isolate;
   font-family: var(--ur-font-sans);
+}
+[dir="rtl"] .bidi-isolate,
+[dir="rtl"] .stat-card strong,
+[dir="rtl"] .number {
+  unicode-bidi: isolate;
+  direction: ltr;
 }
 
 /* ── Badges, Buttons & Interactive Links ────────────────────────────────── */

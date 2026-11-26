@@ -187,11 +187,52 @@ document.addEventListener("DOMContentLoaded", () => {
   const backdrop = document.querySelector(".mobile-toc-backdrop");
   const mobileLinks = document.querySelectorAll(".mobile-toc-sheet .toc-link");
 
+  const setDrawerSiblingsInert = (isInert) => {
+    if (!drawer) return;
+    const parent = drawer.parentElement;
+    if (!parent) return;
+    Array.from(parent.children).forEach((child) => {
+      if (child !== drawer && !child.contains(drawer)) {
+        child.inert = isInert;
+      }
+    });
+    const header = document.querySelector(".site-header");
+    const footer = document.querySelector(".site-footer");
+    if (header && !header.contains(drawer)) header.inert = isInert;
+    if (footer && !footer.contains(drawer)) footer.inert = isInert;
+  };
+
+  if (drawer) {
+    drawer.inert = true;
+    drawer.setAttribute("role", "dialog");
+    drawer.setAttribute("aria-modal", "true");
+    if (!drawer.hasAttribute("aria-label") && !drawer.hasAttribute("aria-labelledby")) {
+      const sheetTitle = drawer.querySelector(".mobile-sheet-title");
+      if (sheetTitle) {
+        if (!sheetTitle.id) sheetTitle.id = "mobile-toc-sheet-title";
+        drawer.setAttribute("aria-labelledby", sheetTitle.id);
+      } else {
+        drawer.setAttribute("aria-label", "Chapters");
+      }
+    }
+  }
+  if (fab) {
+    fab.setAttribute("aria-expanded", "false");
+  }
+
   const openDrawer = () => {
     if (!drawer) return;
+    drawer.inert = false;
     drawer.classList.add("is-open");
     drawer.setAttribute("aria-hidden", "false");
-    document.body.style.overflow = "hidden";
+    if (fab) fab.setAttribute("aria-expanded", "true");
+    setDrawerSiblingsInert(true);
+    if (closeBtn) {
+      closeBtn.focus({ preventScroll: true });
+    } else {
+      const firstLink = drawer.querySelector(".toc-link");
+      if (firstLink) firstLink.focus({ preventScroll: true });
+    }
     setTimeout(() => {
       const activeMobile = document.querySelector(".mobile-toc-sheet .toc-item.is-active");
       const sheetBody = document.querySelector(".mobile-sheet-body");
@@ -201,32 +242,39 @@ document.addEventListener("DOMContentLoaded", () => {
         const relTop = itemRect.top - sheetRect.top + sheetBody.scrollTop;
         sheetBody.scrollTo({
           top: Math.max(0, relTop - (sheetBody.clientHeight / 2) + (itemRect.height / 2)),
-          behavior: "smooth"
+          behavior: "auto"
         });
       }
     }, 120);
   };
 
-  const closeDrawer = () => {
+  const closeDrawer = (restoreFocus = true) => {
     if (!drawer) return;
+    const wasOpen = drawer.classList.contains("is-open");
     drawer.classList.remove("is-open");
     drawer.setAttribute("aria-hidden", "true");
-    document.body.style.overflow = "";
+    drawer.inert = true;
+    setDrawerSiblingsInert(false);
+    if (fab) fab.setAttribute("aria-expanded", "false");
+    if (wasOpen && restoreFocus && fab) {
+      fab.focus({ preventScroll: true });
+    }
   };
 
   if (fab) fab.addEventListener("click", openDrawer);
-  if (closeBtn) closeBtn.addEventListener("click", closeDrawer);
-  if (backdrop) backdrop.addEventListener("click", closeDrawer);
+  if (closeBtn) closeBtn.addEventListener("click", () => closeDrawer(true));
+  if (backdrop) backdrop.addEventListener("click", () => closeDrawer(true));
 
   mobileLinks.forEach((link) => {
     link.addEventListener("click", () => {
-      closeDrawer();
+      closeDrawer(false);
     });
   });
 
   window.addEventListener("keydown", (e) => {
     if (e.key === "Escape" && drawer && drawer.classList.contains("is-open")) {
-      closeDrawer();
+      e.preventDefault();
+      closeDrawer(true);
     }
   });
 

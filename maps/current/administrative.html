@@ -42,27 +42,11 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/brand/favicon-16x16.png?v=2" />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=2" />
     <link rel="manifest" href="/site.webmanifest" />
-    <meta name="theme-color" content="#073c3a" />
+    <meta name="theme-color" content="#12392D" />
     <link rel="stylesheet" href="/assets/css/style.css" />
     <link rel="stylesheet" href="/assets/css/responsive.css" />
     <link rel="stylesheet" href="/assets/css/phase6.css" />
     <script>document.documentElement.classList.toggle("map-embed", new URLSearchParams(window.location.search).has("embed"));</script>
-    <style id="ppri-map-embed-style">
-      html.map-embed, html.map-embed body { height: 100%; overflow: hidden; }
-      html.map-embed body { margin: 0; background: #e7efeb; }
-      html.map-embed .site-header,
-      html.map-embed .site-footer,
-      html.map-embed .page-hero { display: none !important; }
-      html.map-embed #main-content { height: 100vh; }
-      html.map-embed #main-content > section { display: none; }
-      html.map-embed #main-content > section:nth-of-type(2) { display: block !important; padding: 0; }
-      html.map-embed #main-content > section:nth-of-type(2) .container { width: 100%; max-width: none; }
-      html.map-embed .p6-map-toolbar,
-      html.map-embed #p6MapStatus,
-      html.map-embed .p6-source-grid,
-      html.map-embed .p6-callout { display: none !important; }
-      html.map-embed #p6CurrentMap { height: 100vh; min-height: 420px; border: 0; border-radius: 0; }
-    </style>
     <link rel="preconnect" href="https://unpkg.com" crossorigin />
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
     <link
@@ -231,7 +215,7 @@
       </section>
     
       <!-- Static Search-Intent Table: Single-Source Geography (2023-census-v1) -->
-      <section class="section" id="pakistan-administrative-hierarchy" style="background:#f8faf9; padding: 48px 0; border-top: 2px solid #e2e8f0;">
+      <section class="section" id="pakistan-administrative-hierarchy" style="background: var(--bg-canvas, #F7F8F4); padding: 48px 0; border-top: 2px solid var(--border-subtle, #D5DED7);">
         <div class="container">
           <div class="hub-section-title" style="margin-bottom: 24px;">
             <h2>Complete Administrative Hierarchy of Pakistan (Census 2023 Reference)</h2>
@@ -242,31 +226,31 @@
           </div>
 
           <div class="stat-ribbon" style="display:grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 16px; margin-bottom: 32px;">
-            <div class="stat-card" style="background:#fff; padding:18px; border:1px solid #d2e4db; border-radius:8px; text-align:center;">
-              <strong style="font-size:1.8rem; color:#073c3a; display:block;">4 + ICT</strong>
+            <div class="stat-card" style="background: #fff; padding: 18px; border: 1px solid var(--border-subtle, #D5DED7); border-radius: 8px; text-align: center;">
+              <strong style="font-size: 1.8rem; color: var(--brand-dark, #12392D); display: block;">4 + ICT</strong>
               <span style="font-size:0.85rem; color:#4a6b5d;">Provinces + Federal Capital (Census 2023)</span>
             </div>
-            <div class="stat-card" style="background:#fff; padding:18px; border:1px solid #d2e4db; border-radius:8px; text-align:center;">
-              <strong style="font-size:1.8rem; color:#073c3a; display:block;">32 (38 w/ GB &amp; AJK)</strong>
+            <div class="stat-card" style="background: #fff; padding: 18px; border: 1px solid var(--border-subtle, #D5DED7); border-radius: 8px; text-align: center;">
+              <strong style="font-size: 1.8rem; color: var(--brand-dark, #12392D); display: block;">32 (38 w/ GB &amp; AJK)</strong>
               <span style="font-size:0.85rem; color:#4a6b5d;">Administrative Divisions (Table Sum)</span>
             </div>
-            <div class="stat-card" style="background:#fff; padding:18px; border:1px solid #d2e4db; border-radius:8px; text-align:center;">
-              <strong style="font-size:1.8rem; color:#073c3a; display:block;">143 (167 w/ GB &amp; AJK)</strong>
+            <div class="stat-card" style="background: #fff; padding: 18px; border: 1px solid var(--border-subtle, #D5DED7); border-radius: 8px; text-align: center;">
+              <strong style="font-size: 1.8rem; color: var(--brand-dark, #12392D); display: block;">143 (167 w/ GB &amp; AJK)</strong>
               <span style="font-size:0.85rem; color:#4a6b5d;">Listed Districts (Table Sum)</span>
             </div>
-            <div class="stat-card" style="background:#fff; padding:18px; border:1px solid #d2e4db; border-radius:8px; text-align:center;">
-              <strong style="font-size:1.8rem; color:#073c3a; display:block;">241.5M</strong>
+            <div class="stat-card" style="background: #fff; padding: 18px; border: 1px solid var(--border-subtle, #D5DED7); border-radius: 8px; text-align: center;">
+              <strong style="font-size: 1.8rem; color: var(--brand-dark, #12392D); display: block;">241.5M</strong>
               <span style="font-size:0.85rem; color:#4a6b5d;">National Population (Census 2023)</span>
             </div>
           </div>
 
           <!-- PROVINCIAL TABS / SECTIONS -->
-          <div class="table-wrap" style="background:#fff; padding:24px; border-radius:10px; border:1px solid #d2e4db; box-shadow:0 2px 8px rgba(0,0,0,0.04); margin-bottom: 28px;">
-            <h3 style="color:#073c3a; margin-top:0;">1. Punjab (Population: 127,688,922 &middot; Land Area: 205,344 km² &middot; 10 Divisions, 40 Districts)</h3>
+          <div class="table-wrap" style="background: #fff; padding: 24px; border-radius: 10px; border: 1px solid var(--border-subtle, #D5DED7); box-shadow: 0 2px 8px rgba(0,0,0,0.04); margin-bottom: 28px;">
+            <h3 style="color: var(--brand-dark, #12392D); margin-top: 0;">1. Punjab (Population: 127,688,922 &middot; Land Area: 205,344 km² &middot; 10 Divisions, 40 Districts)</h3>
             <p style="font-size:0.9rem; color:#556b62;">Headquartered in Lahore. Governed by the Chief Secretary and Inspector General of Police (IGP).</p>
             <table class="legislation-table" style="width:100%; border-collapse:collapse; margin-top:12px;">
               <thead>
-                <tr style="background:#f0f7f3; color:#073c3a;">
+                <tr style="background: var(--surface-soft, #EEF3EE); color: var(--brand-dark, #12392D);">
                   <th style="padding:10px; text-align:left;">Division</th>
                   <th style="padding:10px; text-align:left;">Districts Included</th>
                   <th style="padding:10px; text-align:right;">Divisional Population (2023)</th>
@@ -288,12 +272,12 @@
             </table>
           </div>
 
-          <div class="table-wrap" style="background:#fff; padding:24px; border-radius:10px; border:1px solid #d2e4db; box-shadow:0 2px 8px rgba(0,0,0,0.04); margin-bottom: 28px;">
-            <h3 style="color:#073c3a; margin-top:0;">2. Sindh (Population: 55,696,147 &middot; Land Area: 140,914 km² &middot; 7 Divisions, 30 Districts)</h3>
+          <div class="table-wrap" style="background: #fff; padding: 24px; border-radius: 10px; border: 1px solid var(--border-subtle, #D5DED7); box-shadow: 0 2px 8px rgba(0,0,0,0.04); margin-bottom: 28px;">
+            <h3 style="color: var(--brand-dark, #12392D); margin-top: 0;">2. Sindh (Population: 55,696,147 &middot; Land Area: 140,914 km² &middot; 7 Divisions, 30 Districts)</h3>
             <p style="font-size:0.9rem; color:#556b62;">Headquartered in Karachi. Comprises major urban local economies and fertile agrarian canal colonies.</p>
             <table class="legislation-table" style="width:100%; border-collapse:collapse; margin-top:12px;">
               <thead>
-                <tr style="background:#f0f7f3; color:#073c3a;">
+                <tr style="background: var(--surface-soft, #EEF3EE); color: var(--brand-dark, #12392D);">
                   <th style="padding:10px; text-align:left;">Division</th>
                   <th style="padding:10px; text-align:left;">Districts Included</th>
                   <th style="padding:10px; text-align:right;">Divisional Population (2023)</th>
@@ -312,12 +296,12 @@
             </table>
           </div>
 
-          <div class="table-wrap" style="background:#fff; padding:24px; border-radius:10px; border:1px solid #d2e4db; box-shadow:0 2px 8px rgba(0,0,0,0.04); margin-bottom: 28px;">
-            <h3 style="color:#073c3a; margin-top:0;">3. Khyber Pakhtunkhwa (Population: 40,856,097 &middot; Land Area: 101,741 km² &middot; 7 Divisions, 36 Districts)</h3>
+          <div class="table-wrap" style="background: #fff; padding: 24px; border-radius: 10px; border: 1px solid var(--border-subtle, #D5DED7); box-shadow: 0 2px 8px rgba(0,0,0,0.04); margin-bottom: 28px;">
+            <h3 style="color: var(--brand-dark, #12392D); margin-top: 0;">3. Khyber Pakhtunkhwa (Population: 40,856,097 &middot; Land Area: 101,741 km² &middot; 7 Divisions, 36 Districts)</h3>
             <p style="font-size:0.9rem; color:#556b62;">Headquartered in Peshawar. Includes the integrated tribal districts from the former FATA merger (25th Amendment).</p>
             <table class="legislation-table" style="width:100%; border-collapse:collapse; margin-top:12px;">
               <thead>
-                <tr style="background:#f0f7f3; color:#073c3a;">
+                <tr style="background: var(--surface-soft, #EEF3EE); color: var(--brand-dark, #12392D);">
                   <th style="padding:10px; text-align:left;">Division</th>
                   <th style="padding:10px; text-align:left;">Districts Included</th>
                   <th style="padding:10px; text-align:right;">Divisional Population (2023)</th>
@@ -336,12 +320,12 @@
             </table>
           </div>
 
-          <div class="table-wrap" style="background:#fff; padding:24px; border-radius:10px; border:1px solid #d2e4db; box-shadow:0 2px 8px rgba(0,0,0,0.04); margin-bottom: 28px;">
-            <h3 style="color:#073c3a; margin-top:0;">4. Balochistan (Population: 14,894,402 &middot; Land Area: 347,190 km² &middot; 8 Divisions, 36 Districts)</h3>
+          <div class="table-wrap" style="background: #fff; padding: 24px; border-radius: 10px; border: 1px solid var(--border-subtle, #D5DED7); box-shadow: 0 2px 8px rgba(0,0,0,0.04); margin-bottom: 28px;">
+            <h3 style="color: var(--brand-dark, #12392D); margin-top: 0;">4. Balochistan (Population: 14,894,402 &middot; Land Area: 347,190 km² &middot; 8 Divisions, 36 Districts)</h3>
             <p style="font-size:0.9rem; color:#556b62;">Headquartered in Quetta. Spans 44% of Pakistan&#x27;s total land area, characterized by vast distances and low density.</p>
             <table class="legislation-table" style="width:100%; border-collapse:collapse; margin-top:12px;">
               <thead>
-                <tr style="background:#f0f7f3; color:#073c3a;">
+                <tr style="background: var(--surface-soft, #EEF3EE); color: var(--brand-dark, #12392D);">
                   <th style="padding:10px; text-align:left;">Division</th>
                   <th style="padding:10px; text-align:left;">Districts Included</th>
                   <th style="padding:10px; text-align:right;">Divisional Population (2023)</th>
@@ -361,11 +345,11 @@
             </table>
           </div>
 
-          <div class="table-wrap" style="background:#fff; padding:24px; border-radius:10px; border:1px solid #d2e4db; box-shadow:0 2px 8px rgba(0,0,0,0.04);">
-            <h3 style="color:#073c3a; margin-top:0;">5. Federal Capital Territory &amp; Autonomous / Disputed Administrative Regions</h3>
+          <div class="table-wrap" style="background: #fff; padding: 24px; border-radius: 10px; border: 1px solid var(--border-subtle, #D5DED7); box-shadow: 0 2px 8px rgba(0,0,0,0.04);">
+            <h3 style="color: var(--brand-dark, #12392D); margin-top: 0;">5. Federal Capital Territory &amp; Autonomous / Disputed Administrative Regions</h3>
             <table class="legislation-table" style="width:100%; border-collapse:collapse; margin-top:12px;">
               <thead>
-                <tr style="background:#f0f7f3; color:#073c3a;">
+                <tr style="background: var(--surface-soft, #EEF3EE); color: var(--brand-dark, #12392D);">
                   <th style="padding:10px; text-align:left;">Territory</th>
                   <th style="padding:10px; text-align:left;">Status &amp; Constitution Basis</th>
                   <th style="padding:10px; text-align:right;">2023 Population</th>

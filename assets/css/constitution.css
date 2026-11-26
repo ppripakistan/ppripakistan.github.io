@@ -4,37 +4,37 @@
    ========================================================================== */
 
 :root {
-  --const-navy: #073c3a;
-  --const-navy-dark: #042423;
-  --const-navy-deep: #0b1d2a;
-  --const-blue: #1e3a5f;
-  --const-teal: #12645d;
-  --const-gold: #b08a49;
-  --const-gold-light: #fef7ec;
-  --const-gold-dark: #8c6a2e;
-  --const-mint: #e8f5f3;
-  --const-mint-light: #f4faf9;
-  --const-paper: #ffffff;
-  --const-surface: #f8fafc;
-  --const-surface-hover: #f1f5f9;
-  --const-ink: #1e293b;
-  --const-ink-muted: #475569;
-  --const-ink-light: #64748b;
-  --const-line: #e2e8f0;
-  --const-line-dark: #cbd5e1;
+  --const-navy: var(--brand-dark, #12392D);
+  --const-navy-dark: #0B251D;
+  --const-navy-deep: var(--brand-dark, #12392D);
+  --const-blue: var(--action-primary, #145640);
+  --const-teal: var(--action-primary, #145640);
+  --const-gold: var(--accent-gold, #765819);
+  --const-gold-light: #FBF5E8;
+  --const-gold-dark: var(--accent-gold, #765819);
+  --const-mint: var(--surface-soft, #EEF3EE);
+  --const-mint-light: #F7F8F4;
+  --const-paper: var(--surface, #FFFFFF);
+  --const-surface: var(--bg-canvas, #F7F8F4);
+  --const-surface-hover: var(--surface-soft, #EEF3EE);
+  --const-ink: var(--text-main, #18302A);
+  --const-ink-muted: var(--text-muted, #52645B);
+  --const-ink-light: var(--text-muted, #52645B);
+  --const-line: var(--border-subtle, #D5DED7);
+  --const-line-dark: var(--border-control, #59776B);
   --const-success: #15803d;
   --const-success-bg: #dcfce7;
   --const-success-text: #166534;
-  --const-warning: #b45309;
+  --const-warning: #92400e;
   --const-warning-bg: #fef3c7;
-  --const-warning-text: #92400e;
-  --const-radius-sm: 6px;
+  --const-warning-text: #78350f;
+  --const-radius-sm: 8px;
   --const-radius-md: 10px;
-  --const-radius-lg: 16px;
-  --const-shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.05);
-  --const-shadow-md: 0 4px 14px rgba(7, 60, 58, 0.06);
-  --const-shadow-lg: 0 12px 28px rgba(7, 60, 58, 0.10);
-  --const-shadow-hover: 0 16px 36px rgba(7, 60, 58, 0.12);
+  --const-radius-lg: 14px;
+  --const-shadow-sm: 0 1px 3px rgba(18, 57, 45, 0.05);
+  --const-shadow-md: 0 4px 14px rgba(18, 57, 45, 0.07);
+  --const-shadow-lg: 0 12px 28px rgba(18, 57, 45, 0.12);
+  --const-shadow-hover: 0 16px 36px rgba(18, 57, 45, 0.14);
 }
 
 /* --- HERO SECTION: Clean White Background with Darker Headings --- */
@@ -257,6 +257,7 @@
   gap: 10px;
   font-size: 1.25rem;
   font-weight: 700;
+  margin: 0 0 8px;
   color: var(--const-navy);
   margin: 0 0 8px;
 }
@@ -931,16 +932,19 @@
     max-width: 360px;
     height: 100vh;
     max-height: 100vh;
-    z-index: 1000;
+    z-index: 1050;
     background: #ffffff;
+    visibility: hidden;
     transform: translateX(-105%);
-    transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), visibility 0s linear 0.25s;
     box-shadow: var(--const-shadow-lg);
     border-radius: 0;
   }
 
   .reader-toc-pane.drawer-open {
+    visibility: visible;
     transform: translateX(0);
+    transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), visibility 0s linear 0s;
   }
 
   .reader-drawer-close {

@@ -43,157 +43,11 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/brand/favicon-16x16.png?v=2" />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=2" />
     <link rel="manifest" href="/site.webmanifest" />
-    <meta name="theme-color" content="#073c3a" />
+    <meta name="theme-color" content="#12392D" />
     <meta name="description" content="In-depth analytical articles, empirical articles, and policy frameworks on provincial restructuring, fiscal federalism, and devolution in Pakistan." />
     <link rel="alternate" type="application/rss+xml" title="PPRI Policy Publications Feed" href="/feed.xml" />
     <link rel="stylesheet" href="/assets/css/style.css" />
     <link rel="stylesheet" href="/assets/css/responsive.css" />
-    <style>
-      .portal-search {
-        display: flex;
-        gap: 12px;
-        margin: 24px 0 32px;
-        flex-wrap: wrap;
-      }
-      .portal-search input {
-        flex: 1;
-        min-width: 260px;
-        padding: 12px 18px;
-        border: 2px solid #cbd5e1;
-        border-radius: 8px;
-        font-size: 1rem;
-        outline: none;
-        transition: border-color 0.2s;
-      }
-      .portal-search input:focus {
-        border-color: #073c3a;
-      }
-      .filter-tabs {
-        display: flex;
-        gap: 8px;
-        flex-wrap: wrap;
-        margin-bottom: 30px;
-      }
-      .filter-btn {
-        background: #f1f5f9;
-        border: 1px solid #cbd5e1;
-        color: #334155;
-        padding: 8px 16px;
-        border-radius: 20px;
-        font-size: 0.85rem;
-        font-weight: 600;
-        cursor: pointer;
-        transition: all 0.2s;
-      }
-      .filter-btn:hover,
-      .filter-btn.active {
-        background: #073c3a;
-        color: #ffffff;
-        border-color: #073c3a;
-      }
-      .articles-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
-        gap: 24px;
-      }
-      .article-card {
-        background: #ffffff;
-        border: 1px solid #e2e8f0;
-        border-radius: 10px;
-        padding: 24px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        text-decoration: none;
-        color: inherit;
-        transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.03);
-        height: 100%;
-        box-sizing: border-box;
-      }
-      .article-card:hover {
-        transform: translateY(-3px);
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.07);
-        border-color: #073c3a;
-      }
-      .article-card-header {
-        margin-bottom: 12px;
-        flex: 1 1 auto;
-      }
-      .article-badge {
-        display: inline-block;
-        padding: 3px 8px;
-        border-radius: 4px;
-        font-size: 0.72rem;
-        font-weight: 700;
-        text-transform: uppercase;
-        background: #e2efe8;
-        color: #073c3a;
-        margin-bottom: 8px;
-      }
-      .article-card h3 {
-        margin: 0 0 10px;
-        font-size: 1.22rem;
-        color: #0f172a;
-        line-height: 1.35;
-      }
-      .article-card p {
-        margin: 0;
-        font-size: 0.9rem;
-        color: #475569;
-        line-height: 1.55;
-      }
-      .article-card-footer {
-        margin-top: auto;
-        padding-top: 14px;
-        border-top: 1px solid #f1f5f9;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        font-size: 0.82rem;
-        color: #64748b;
-      }
-      .read-more-link {
-        color: #073c3a;
-        font-weight: 700;
-        display: flex;
-        align-items: center;
-        gap: 4px;
-      }
-      .stat-ribbon {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        gap: 16px;
-        margin: 32px 0 40px;
-      }
-      .stat-card {
-        background: #f8fafc;
-        border: 1px solid #e2e8f0;
-        border-top: 4px solid #073c3a;
-        border-radius: 8px;
-        padding: 20px;
-        text-align: center;
-      }
-      .stat-card strong {
-        display: block;
-        font-size: 2rem;
-        color: #073c3a;
-        font-weight: 800;
-        line-height: 1.1;
-      }
-      .stat-card span {
-        display: block;
-        font-size: 0.85rem;
-        color: #64748b;
-        margin-top: 6px;
-        line-height: 1.35;
-      }
-      @media (max-width: 768px) {
-        .articles-grid {
-          grid-template-columns: 1fr;
-        }
-      }
-    </style>
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -683,9 +537,9 @@
         </div>
       </section>
 
-      <section class="section section-soft" style="background: #f8fafc; border-top: 1px solid #e2e8f0; padding: 50px 0;">
+      <section class="section section-soft" style="background: var(--bg-canvas, #F7F8F4); border-top: 1px solid var(--border-subtle, #D5DED7); padding: 50px 0;">
         <div class="container">
-          <h2 style="font-size: 1.4rem; color: #073c3a; margin-bottom: 20px;">Connected Policy Briefs &amp; Explainers</h2>
+          <h2 style="font-size: 1.4rem; color: var(--brand-dark, #12392D); margin-bottom: 20px;">Connected Policy Briefs &amp; Explainers</h2>
           <div class="grid grid-3">
             <a class="card card-link" href="/research/briefs/administrative-scale.html">
               <span class="card-meta">Policy Brief</span>

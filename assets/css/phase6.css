@@ -471,6 +471,37 @@
 .p6-map .leaflet-tile, .p6-map .leaflet-tile-container img { max-width:none; }
 @media (max-width:720px) { .p6-quick-actions { grid-template-columns:1fr; } }
 
-.p6-coverage-loading,.p6-coverage-error{border-left:3px solid var(--accent);background:#f8fafc}.p6-coverage-error{border-left-color:#b91c1c}
+.p6-coverage-loading,.p6-coverage-error{border-left:3px solid var(--accent);background:var(--surface-soft, #EEF3EE)}.p6-coverage-error{border-left-color:#b91c1c}
 
 .p6-coverage-details{margin-top:.6rem}.p6-coverage-details summary{cursor:pointer;font-weight:600}.p6-coverage-details p{margin:.5rem 0 0;line-height:1.55}
+
+/* Embedded Map View Mode (maps/current/administrative.html & maps/scenarios/) */
+html.map-embed, html.map-embed body { height: 100%; overflow: hidden; }
+html.map-embed body { margin: 0; background: var(--surface-soft, #EEF3EE); }
+html.map-embed .site-header,
+html.map-embed .site-footer,
+html.map-embed .page-hero,
+html.map-embed .site-directory,
+html.map-embed .seo-data-summary,
+html.map-embed #executive-data-summary { display: none !important; }
+html.map-embed #main-content { height: 100vh; }
+html.map-embed #main-content > section { display: none; }
+html.map-embed #main-content > section:nth-of-type(2),
+html.map-embed #main-content > section#p6ScenarioSection,
+html.map-embed #main-content > section.p6-scenario-section { display: block !important; padding: 0; }
+html.map-embed #main-content > section:nth-of-type(2) .container,
+html.map-embed #main-content > section#p6ScenarioSection .container,
+html.map-embed #main-content > section.p6-scenario-section .container { width: 100%; max-width: none; }
+html.map-embed .p6-map-toolbar,
+html.map-embed #p6MapStatus,
+html.map-embed .p6-source-grid,
+html.map-embed .p6-callout,
+html.map-embed #p6ScenarioCoverage,
+html.map-embed .p6-scenario-warning,
+html.map-embed .p6-scenario-panel,
+html.map-embed #main-content > section .p6-map-toolbar,
+html.map-embed .p6-map-help { display: none !important; }
+html.map-embed .p6-scenario-layout,
+html.map-embed .p6-scenario-main { display: block; }
+html.map-embed #p6CurrentMap,
+html.map-embed #p6ScenarioMap { height: 100vh; min-height: 420px; border: 0; border-radius: 0; }

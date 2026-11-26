@@ -41,142 +41,12 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/brand/favicon-16x16.png?v=2" />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=2" />
     <link rel="manifest" href="/site.webmanifest" />
-    <meta name="theme-color" content="#073c3a" />
+    <meta name="theme-color" content="#12392D" />
     <link rel="alternate" type="application/rss+xml" title="PPRI Policy Publications Feed" href="/feed.xml" />
     <link rel="stylesheet" href="/assets/css/style.css" />
     <link rel="stylesheet" href="/assets/css/responsive.css" />
     <link rel="stylesheet" href="/assets/css/research-papers.css" />
-    <style>
-      .article-hero {
-        background: linear-gradient(135deg, #073c3a 0%, #0c2b26 100%);
-        color: #ffffff;
-        padding: 60px 0 45px;
-        border-bottom: 3px solid #d4af37;
-      }
-      .article-hero .eyebrow {
-        color: #d4af37;
-        font-size: 0.82rem;
-        letter-spacing: 0.08em;
-        text-transform: uppercase;
-        font-weight: 700;
-        display: block;
-        margin-bottom: 12px;
-      }
-      .article-hero h1 {
-        font-size: 2.35rem;
-        line-height: 1.24;
-        color: #ffffff;
-        max-width: 940px;
-        margin: 0 0 16px;
-      }
-      .article-standfirst {
-        font-size: 1.15rem;
-        line-height: 1.6;
-        color: #e2e8f0;
-        max-width: 840px;
-        margin: 0 0 24px;
-        font-weight: 400;
-      }
-      .article-meta-bar {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 20px;
-        align-items: center;
-        font-size: 0.85rem;
-        color: #cbd5e1;
-        padding-top: 18px;
-        border-top: 1px solid rgba(255, 255, 255, 0.15);
-      }
-      .article-meta-item strong {
-        color: #ffffff;
-      }
-      .stat-ribbon {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
-        gap: 16px;
-        margin: 32px 0 40px;
-      }
-      .stat-card {
-        background: #f8fafc;
-        border: 1px solid #e2e8f0;
-        border-top: 4px solid #073c3a;
-        border-radius: 8px;
-        padding: 20px;
-        text-align: center;
-      }
-      .stat-card strong {
-        display: block;
-        font-size: 2rem;
-        color: #073c3a;
-        font-weight: 800;
-        line-height: 1.1;
-      }
-      .stat-card span {
-        display: block;
-        font-size: 0.85rem;
-        color: #64748b;
-        margin-top: 6px;
-        line-height: 1.35;
-      }
-      .timeline-container {
-        position: relative;
-        margin: 40px 0;
-        padding-left: 28px;
-        border-left: 3px solid #073c3a;
-      }
-      .timeline-epoch {
-        position: relative;
-        margin-bottom: 32px;
-      }
-      .timeline-epoch::before {
-        content: "";
-        position: absolute;
-        left: -35px;
-        top: 4px;
-        width: 14px;
-        height: 14px;
-        border-radius: 50%;
-        background: #d4af37;
-        border: 3px solid #073c3a;
-      }
-      .timeline-epoch h3 {
-        margin: 0 0 6px;
-        font-size: 1.25rem;
-        color: #073c3a;
-      }
-      .timeline-epoch .epoch-year {
-        display: inline-block;
-        background: #e2e8f0;
-        color: #0f172a;
-        font-size: 0.8rem;
-        font-weight: 700;
-        padding: 2px 8px;
-        border-radius: 4px;
-        margin-bottom: 8px;
-      }
-      .timeline-epoch p {
-        margin: 0;
-        font-size: 0.95rem;
-        color: #475569;
-        line-height: 1.6;
-      }
-      .policy-highlight {
-        background: #f0fdf4;
-        border-left: 4px solid #073c3a;
-        padding: 20px 24px;
-        border-radius: 0 8px 8px 0;
-        margin: 32px 0;
-      }
-      .citation-box {
-        background: #f8fafc;
-        border: 1px solid #cbd5e1;
-        border-radius: 8px;
-        padding: 20px;
-        margin-top: 40px;
-        font-size: 0.88rem;
-        color: #475569;
-      }
-    </style>
+    <link rel="stylesheet" href="/assets/css/articles.css" />
     <meta name="citation_title" content="History of Local Government in Pakistan (1959–2026): BD System, LGO 1979, 2001 & Article 140A" />
     <meta name="citation_author" content="Pakistan Provincial Reform Institute (PPRI)" />
     <meta name="citation_publication_date" content="2026/10" />
@@ -269,7 +139,7 @@
 }
     </script>
 </head>
-  <body>
+  <body data-article="pakistan-keeps-reinventing-local-government-history">
     <div class="reading-progress" id="reading-progress" aria-hidden="true"></div>
     <a class="skip-link" href="#main-content">Skip to content</a>
     <header class="site-header">
@@ -317,7 +187,7 @@
     <section class="section" style="padding-top: 40px; padding-bottom: 60px;">
       <div class="container paper-layout">
         <article class="prose-wide">
-<p class="lead" style="font-size: 1.18rem; color: #1e293b; line-height: 1.7; margin-bottom: 24px;">
+<p class="lead" style="font-size: 1.18rem; color: var(--text-main, #18302A); line-height: 1.7; margin-bottom: 24px;">
           There is a curious and recurring rhythm in Pakistan’s political history. Local government never truly dies, but it never truly settles. A new regime arrives in power, denounces the centralized paralysis of the previous era, passes an ambitious local-body statute, and promises to bring the state to the citizen’s doorstep. For a brief few years, municipal halls buzz with activity, district nazims command bureaucratic respect, and resources flow to union councils. Then, inexorably, the framework is watered down, starved of cash, suspended, or legislatively repealed.
         </p>
 
@@ -420,7 +290,7 @@
         <div class="table-wrap">
           <table class="data-table" style="width: 100%; border-collapse: collapse; margin: 24px 0; font-size: 0.92rem;">
             <thead>
-              <tr style="background: #073c3a; color: #ffffff;">
+              <tr style="background: var(--action-primary, #145640); color: #ffffff;">
                 <th style="padding: 12px 14px; text-align: left;">Epoch / Law</th>
                 <th style="padding: 12px 14px; text-align: center;">Electoral Basis</th>
                 <th style="padding: 12px 14px; text-align: center;">Executive Superiority</th>
@@ -429,28 +299,28 @@
               </tr>
             </thead>
             <tbody>
-              <tr style="border-bottom: 1px solid #e2e8f0;">
+              <tr style="border-bottom: 1px solid var(--border-subtle, #D5DED7);">
                 <td style="padding: 10px 14px; font-weight: 600;">1959 Basic Democracies</td>
                 <td style="padding: 10px 14px; text-align: center;">Non-party / Indirect</td>
                 <td style="padding: 10px 14px; text-align: center;">Bureaucracy (DC / Commissioner)</td>
                 <td style="padding: 10px 14px;">Direct state development grants &amp; local cess</td>
                 <td style="padding: 10px 14px;">Minimal formal gender quotas</td>
               </tr>
-              <tr style="border-bottom: 1px solid #e2e8f0; background: #f8fafc;">
+              <tr style="border-bottom: 1px solid var(--border-subtle, #D5DED7); background: var(--bg-canvas, #F7F8F4);">
                 <td style="padding: 10px 14px; font-weight: 600;">1979 Local Bodies</td>
                 <td style="padding: 10px 14px; text-align: center;">Non-party</td>
                 <td style="padding: 10px 14px; text-align: center;">Shared / Bureaucratic oversight</td>
                 <td style="padding: 10px 14px;">Octroi, property tax, provincial subventions</td>
                 <td style="padding: 10px 14px;">Limited peasant, worker, minority quotas</td>
               </tr>
-              <tr style="border-bottom: 1px solid #e2e8f0;">
+              <tr style="border-bottom: 1px solid var(--border-subtle, #D5DED7);">
                 <td style="padding: 10px 14px; font-weight: 600;">2001 Devolution Plan</td>
                 <td style="padding: 10px 14px; text-align: center;">Non-party (de facto party)</td>
                 <td style="padding: 10px 14px; text-align: center; color: #15803d; font-weight: 700;">Elected Nazim (DC subordinated)</td>
                 <td style="padding: 10px 14px;">PFC Awards (population + backwardness formula)</td>
                 <td style="padding: 10px 14px; color: #15803d; font-weight: 700;">33% Women, 5% Peasants/Workers</td>
               </tr>
-              <tr style="border-bottom: 1px solid #e2e8f0; background: #f8fafc;">
+              <tr style="border-bottom: 1px solid var(--border-subtle, #D5DED7); background: var(--bg-canvas, #F7F8F4);">
                 <td style="padding: 10px 14px; font-weight: 600;">Post-2010 Provincial Laws</td>
                 <td style="padding: 10px 14px; text-align: center;">Party-based (varying)</td>
                 <td style="padding: 10px 14px; text-align: center; color: #b91c1c; font-weight: 700;">Restored DC / Provincial Departments</td>
@@ -471,7 +341,7 @@
         <p>
           The persistent collapse of local government is not a failure of the local concept. It is the direct consequence of <strong>institutional instability</strong>:
         </p>
-        <blockquote style="border-left: 4px solid #073c3a; padding: 16px 20px; background: #f8fafc; font-style: italic; color: #334155; margin: 24px 0;">
+        <blockquote style="border-left: 4px solid var(--action-primary, #145640); padding: 16px 20px; background: var(--bg-canvas, #F7F8F4); font-style: italic; color: var(--text-main, #18302A); margin: 24px 0;">
           “A municipal council requires multiple consecutive election cycles for citizens to learn who is responsible for what. A mayor requires five years of predictable revenue before a multi-year drainage or water master plan can be constructed. Bureaucrats need clear long-term tenure rules before they cease waiting for the next political regime to restore their executive dominance. Pakistan has repeatedly interrupted that learning process.”
         </blockquote>
 
@@ -484,8 +354,8 @@
         </p>
 
         <div class="policy-highlight">
-          <h3 style="margin-top: 0; color: #073c3a; font-size: 1.15rem;">Institutional Permanence: What Would it Take?</h3>
-          <p style="margin-bottom: 0; font-size: 0.95rem; color: #334155; line-height: 1.6;">
+          <h3 style="margin-top: 0; color: var(--brand-dark, #12392D); font-size: 1.15rem;">Institutional Permanence: What Would it Take?</h3>
+          <p style="margin-bottom: 0; font-size: 0.95rem; color: var(--text-main, #18302A); line-height: 1.6;">
             A durable local governance architecture cannot survive on goodwill alone. It requires constitutional fortification equivalent to the National Finance Commission (NFC) Award under <a href="/resources/constitution.html#article-160">Article 160 (NFC)</a>: an explicit constitutional clause mandating that Provincial Finance Commissions must announce non-reducible awards, coupled with automatic ECP election scheduling upon the expiration of council tenures. Without structural constitutional insulation, Pakistan’s third tier will remain permanently vulnerable to the political whims of the provincial secretariats.
           </p>
         </div>
@@ -532,9 +402,9 @@
           </div>
         </section>
 
-        <div class="article-references" style="margin-top: 50px; padding-top: 25px; border-top: 1px solid #e2e8f0;">
-          <h3 style="font-size: 1.15rem; color: #073c3a;">Primary Sources &amp; References</h3>
-          <ul style="font-size: 0.88rem; color: #475569; line-height: 1.6;">
+        <div class="article-references" style="margin-top: 50px; padding-top: 25px; border-top: 1px solid var(--border-subtle, #D5DED7);">
+          <h3 style="font-size: 1.15rem; color: var(--brand-dark, #12392D);">Primary Sources &amp; References</h3>
+          <ul style="font-size: 0.88rem; color: var(--text-muted, #52645B); line-height: 1.6;">
             <li><strong>Dawn Newspaper:</strong> <em>A History of Devolution in Pakistan (1959–2008)</em>. <a href="https://www.dawn.com/news/amp/467156" target="_blank" rel="noopener">dawn.com/news/467156</a></li>
             <li><strong>Dawn Special Report:</strong> <em>Punjab Local Government: Rewriting the Rules Across Decades</em>. <a href="https://www.dawn.com/news/1692356" target="_blank" rel="noopener">dawn.com/news/1692356</a></li>
             <li><strong>The News International:</strong> <em>Governance for Local Government: Institutional Mechanics and Finance</em>. <a href="https://www.thenews.com.pk/print/1048439-governance-for-local-government-part-ii" target="_blank" rel="noopener">thenews.com.pk</a></li>

@@ -41,202 +41,12 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/brand/favicon-16x16.png?v=2" />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=2" />
     <link rel="manifest" href="/site.webmanifest" />
-    <meta name="theme-color" content="#073c3a" />
+    <meta name="theme-color" content="#12392D" />
     <link rel="alternate" type="application/rss+xml" title="PPRI Policy Publications Feed" href="/feed.xml" />
     <link rel="stylesheet" href="/assets/css/style.css" />
     <link rel="stylesheet" href="/assets/css/responsive.css" />
     <link rel="stylesheet" href="/assets/css/research-papers.css" />
-    <style>
-      .article-hero {
-        background: linear-gradient(135deg, #073c3a 0%, #0c2b26 100%);
-        color: #ffffff;
-        padding: 60px 0 45px;
-        border-bottom: 3px solid #d4af37;
-      }
-      .article-hero .eyebrow {
-        color: #d4af37;
-        font-size: 0.82rem;
-        letter-spacing: 0.08em;
-        text-transform: uppercase;
-        font-weight: 700;
-        display: block;
-        margin-bottom: 12px;
-      }
-      .article-hero h1 {
-        font-size: 2.35rem;
-        line-height: 1.24;
-        color: #ffffff;
-        max-width: 940px;
-        margin: 0 0 16px;
-      }
-      .article-standfirst {
-        font-size: 1.15rem;
-        line-height: 1.6;
-        color: #e2e8f0;
-        max-width: 840px;
-        margin: 0 0 24px;
-        font-weight: 400;
-      }
-      .article-meta-bar {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 20px;
-        align-items: center;
-        font-size: 0.85rem;
-        color: #cbd5e1;
-        padding-top: 18px;
-        border-top: 1px solid rgba(255, 255, 255, 0.15);
-      }
-      .article-meta-item strong {
-        color: #ffffff;
-      }
-      .stat-ribbon {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
-        gap: 16px;
-        margin: 32px 0 40px;
-      }
-      .stat-card {
-        background: #f8fafc;
-        border: 1px solid #e2e8f0;
-        border-top: 4px solid #073c3a;
-        border-radius: 8px;
-        padding: 20px;
-        text-align: center;
-      }
-      .stat-card strong {
-        display: block;
-        font-size: 2rem;
-        color: #073c3a;
-        font-weight: 800;
-        line-height: 1.1;
-      }
-      .stat-card span {
-        display: block;
-        font-size: 0.85rem;
-        color: #64748b;
-        margin-top: 6px;
-        line-height: 1.35;
-      }
-      .table-wrap {
-        overflow-x: auto;
-        margin: 28px 0 36px;
-        border: 1px solid #e2e8f0;
-        border-radius: 8px;
-      }
-      .data-table {
-        width: 100%;
-        border-collapse: collapse;
-        font-size: 0.9rem;
-        text-align: left;
-      }
-      .data-table th {
-        background: #f8fafc;
-        color: #073c3a;
-        padding: 12px 16px;
-        font-weight: 700;
-        border-bottom: 2px solid #e2e8f0;
-      }
-      .data-table td {
-        padding: 12px 16px;
-        border-bottom: 1px solid #e2e8f0;
-        color: #334155;
-      }
-      .data-table tr:hover {
-        background: #f1f5f9;
-      }
-      .simulator-box {
-        background: #f8fafc;
-        border: 2px solid #073c3a;
-        border-radius: 10px;
-        padding: 24px;
-        margin: 36px 0;
-      }
-      .simulator-header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        flex-wrap: wrap;
-        border-bottom: 1px solid #cbd5e1;
-        padding-bottom: 14px;
-        margin-bottom: 20px;
-      }
-      .simulator-header h3 {
-        margin: 0;
-        font-size: 1.25rem;
-        color: #073c3a;
-      }
-      .simulator-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-        gap: 16px;
-        margin-bottom: 20px;
-      }
-      .sim-control {
-        background: #ffffff;
-        border: 1px solid #cbd5e1;
-        border-radius: 6px;
-        padding: 12px 14px;
-      }
-      .sim-control label {
-        display: flex;
-        justify-content: space-between;
-        font-size: 0.85rem;
-        font-weight: 700;
-        color: #334155;
-        margin-bottom: 6px;
-      }
-      .sim-control input[type="range"] {
-        width: 100%;
-        accent-color: #073c3a;
-      }
-      .sim-results {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        gap: 14px;
-        background: #ffffff;
-        border: 1px solid #cbd5e1;
-        border-radius: 8px;
-        padding: 18px;
-      }
-      .sim-result-card strong {
-        display: block;
-        font-size: 0.82rem;
-        text-transform: uppercase;
-        color: #64748b;
-        margin-bottom: 4px;
-      }
-      .sim-result-card .value {
-        font-size: 1.35rem;
-        font-weight: 800;
-        color: #073c3a;
-      }
-      .interactive-bridge {
-        background: linear-gradient(135deg, #f0f7f3 0%, #e2efe8 100%);
-        border: 1px solid #c2ded0;
-        border-radius: 8px;
-        padding: 24px;
-        margin: 36px 0;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        flex-wrap: wrap;
-        gap: 16px;
-      }
-      .interactive-bridge-text h4 {
-        margin: 0 0 6px;
-        color: #073c3a;
-        font-size: 1.1rem;
-      }
-      .interactive-bridge-text p {
-        margin: 0;
-        color: #2d5a4c;
-        font-size: 0.9rem;
-      }
-      @media (max-width: 768px) {
-        .article-hero h1 { font-size: 1.85rem; }
-      }
-    </style>
+    <link rel="stylesheet" href="/assets/css/articles.css" />
     <meta name="citation_title" content="Provincial ADP Budget Allocations: Intra-Provincial Spending Inequity & Capital Bias" />
     <meta name="citation_author" content="Pakistan Provincial Reform Institute (PPRI)" />
     <meta name="citation_publication_date" content="2026/10" />
@@ -396,7 +206,7 @@
           </div>
         </div>
 
-        <p class="lead" style="font-size: 1.18rem; line-height: 1.7; color: #1e293b;">
+        <p class="lead" style="font-size: 1.18rem; line-height: 1.7; color: var(--text-main, #18302A);">
           A provincial budget white paper can look astronomical on television and yet feel completely invisible in the communities it is supposed to develop.
         </p>
 
@@ -507,7 +317,7 @@
           <div class="simulator-header">
             <div>
               <h3>Provincial District Allocation Formula Simulator</h3>
-              <span style="font-size: 0.85rem; color: #64748b;">Simulate how adjusting formula weights shifts capital between a metropolitan hub and an underdeveloped rural district:</span>
+              <span style="font-size: 0.85rem; color: var(--text-muted, #52645B);">Simulate how adjusting formula weights shifts capital between a metropolitan hub and an underdeveloped rural district:</span>
             </div>
             <button type="button" class="btn" onclick="resetSim()" style="background: #cbd5e1; border: none; padding: 6px 12px; border-radius: 4px; font-size: 0.8rem; cursor: pointer;">Reset Formula</button>
           </div>
@@ -535,12 +345,12 @@
             <div class="sim-result-card">
               <strong>Metropolitan Hub Share (Lahore/Karachi)</strong>
               <div class="value" id="metro-share">38.4%</div>
-              <span style="font-size: 0.78rem; color: #64748b;">Dense pop &amp; high tax collection</span>
+              <span style="font-size: 0.78rem; color: var(--text-muted, #52645B);">Dense pop &amp; high tax collection</span>
             </div>
             <div class="sim-result-card">
               <strong>Secondary City Share (Multan/Hyderabad)</strong>
               <div class="value" id="secondary-share">22.8%</div>
-              <span style="font-size: 0.78rem; color: #64748b;">Moderate density &amp; poverty</span>
+              <span style="font-size: 0.78rem; color: var(--text-muted, #52645B);">Moderate density &amp; poverty</span>
             </div>
             <div class="sim-result-card">
               <strong>Peripheral District Share (Rajanpur/Thar)</strong>
@@ -604,7 +414,7 @@
             <h3>Inspect Comparative Fiscal Indicators</h3>
             <p>Compare provincial own-source tax collection, federal transfer shares, and development spending in our Fiscal Data Hub.</p>
           </div>
-          <a href="/data/public-finance/" class="btn btn-primary" style="background: #073c3a; color: #ffffff; padding: 10px 18px; border-radius: 6px; text-decoration: none; font-weight: 700; font-size: 0.88rem;">Open Fiscal Data &rarr;</a>
+          <a href="/data/public-finance/" class="btn btn-primary" style="background: var(--action-primary, #145640); color: #ffffff; padding: 10px 18px; border-radius: 6px; text-decoration: none; font-weight: 700; font-size: 0.88rem;">Open Fiscal Data &rarr;</a>
         </div>
         </article>
 
@@ -644,9 +454,9 @@
           </div>
         </section>
 
-        <div class="article-references" style="margin-top: 50px; padding-top: 25px; border-top: 1px solid #e2e8f0;">
-          <h3 style="font-size: 1.15rem; color: #073c3a;">Primary Sources &amp; References</h3>
-          <ul style="font-size: 0.88rem; color: #475569; line-height: 1.6;">
+        <div class="article-references" style="margin-top: 50px; padding-top: 25px; border-top: 1px solid var(--border-subtle, #D5DED7);">
+          <h3 style="font-size: 1.15rem; color: var(--brand-dark, #12392D);">Primary Sources &amp; References</h3>
+          <ul style="font-size: 0.88rem; color: var(--text-muted, #52645B); line-height: 1.6;">
             <li><strong>World Bank:</strong> <em>Strengthening Fiscal Federalism to Drive Development: District Allocations and Service Delivery Gaps</em> (July 2026). <a href="https://www.worldbank.org/en/news/press-release/2026/07/01/pakistan-strengthening-fiscal-federalism-to-drive-development" target="_blank" rel="noopener">World Bank Document Portal</a></li>
             <li><strong>Pakistan Institute of Development Economics (PIDE):</strong> <em>Beyond the NFC Award: Pakistan's Unfinished Devolution to Local Governments</em> (2025). <a href="https://pide.org.pk/research/beyond-the-nfc-award-pakistans-unfinished-devolution-to-local-governments/" target="_blank" rel="noopener">pide.org.pk</a></li>
             <li><strong>Pakistan Institute of Development Economics (PIDE):</strong> <em>A Critical Path to Fiscal Federalism: Policy Imperatives for the NFC Award Remake</em> (2025).</li>
@@ -757,7 +567,7 @@
                   <h4 class="curated-tool-title">NFC Divisible Pool & Fiscal Simulator</h4>
                   <p class="curated-tool-desc">Simulate provincial revenue shares, horizontal distribution formulas, and local transfers.</p>
                 </div>
-                <a href="/reform/nfc-award-formula-pakistan/" style="color:#073c3a;font-weight:700;">7th NFC Award Formula &amp; Weights</a> &middot; <a href="/data/centre.html#nfc-section" class="curated-tool-btn">
+                <a href="/reform/nfc-award-formula-pakistan/" style="color: var(--brand-dark, #12392D); font-weight: 700;">7th NFC Award Formula &amp; Weights</a> &middot; <a href="/data/centre.html#nfc-section" class="curated-tool-btn">
                   <span>Access Fiscal Observatory</span>
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
                 </a>

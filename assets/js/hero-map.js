@@ -258,11 +258,12 @@
       ttMeta.innerHTML = `
         <div class="tt-meta-item"><strong>${unit.pop     || "—"}</strong>Population</div>
         <div class="tt-meta-item"><strong>${unit.capital || "—"}</strong>Capital</div>
-        <div class="tt-meta-item" style="grid-column:1/-1"><strong>${unit.area || "—"}</strong>Area</div>
+        <div class="tt-meta-item tt-meta-item--full"><strong>${unit.area || "—"}</strong>Area</div>
       `;
     }
 
     tooltip.classList.add("is-visible");
+    tooltip.setAttribute("aria-hidden", "false");
     tooltipVisible = true;
     updateTooltipPosition();
   }
@@ -270,6 +271,7 @@
   function hideTooltip() {
     if (!tooltip) return;
     tooltip.classList.remove("is-visible");
+    tooltip.setAttribute("aria-hidden", "true");
     tooltipVisible = false;
   }
 

@@ -41,220 +41,12 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/brand/favicon-16x16.png?v=2" />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=2" />
     <link rel="manifest" href="/site.webmanifest" />
-    <meta name="theme-color" content="#073c3a" />
+    <meta name="theme-color" content="#12392D" />
     <link rel="alternate" type="application/rss+xml" title="PPRI Policy Publications Feed" href="/feed.xml" />
     <link rel="stylesheet" href="/assets/css/style.css" />
     <link rel="stylesheet" href="/assets/css/responsive.css" />
     <link rel="stylesheet" href="/assets/css/research-papers.css" />
-    <style>
-      .article-hero {
-        background: linear-gradient(135deg, #073c3a 0%, #0c2b26 100%);
-        color: #ffffff;
-        padding: 60px 0 45px;
-        border-bottom: 3px solid #d4af37;
-      }
-      .article-hero .eyebrow {
-        color: #d4af37;
-        font-size: 0.82rem;
-        letter-spacing: 0.08em;
-        text-transform: uppercase;
-        font-weight: 700;
-        display: block;
-        margin-bottom: 12px;
-      }
-      .article-hero h1 {
-        font-size: 2.45rem;
-        line-height: 1.22;
-        color: #ffffff;
-        max-width: 940px;
-        margin: 0 0 16px;
-      }
-      .article-standfirst {
-        font-size: 1.15rem;
-        line-height: 1.6;
-        color: #e2e8f0;
-        max-width: 840px;
-        margin: 0 0 24px;
-        font-weight: 400;
-      }
-      .article-meta-bar {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 20px;
-        align-items: center;
-        font-size: 0.85rem;
-        color: #cbd5e1;
-        padding-top: 18px;
-        border-top: 1px solid rgba(255, 255, 255, 0.15);
-      }
-      .article-meta-item strong {
-        color: #ffffff;
-      }
-      .stat-ribbon {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
-        gap: 16px;
-        margin: 32px 0 40px;
-      }
-      .stat-card {
-        background: #f8fafc;
-        border: 1px solid #e2e8f0;
-        border-top: 4px solid #073c3a;
-        border-radius: 8px;
-        padding: 20px;
-        text-align: center;
-      }
-      .stat-card strong {
-        display: block;
-        font-size: 2rem;
-        color: #073c3a;
-        font-weight: 800;
-        line-height: 1.1;
-      }
-      .stat-card span {
-        display: block;
-        font-size: 0.85rem;
-        color: #64748b;
-        margin-top: 6px;
-        line-height: 1.35;
-      }
-      .sankey-flow {
-        display: flex;
-        flex-direction: column;
-        gap: 16px;
-        margin: 32px 0 40px;
-      }
-      .flow-tier {
-        background: #ffffff;
-        border: 1px solid #cbd5e1;
-        border-left: 6px solid #073c3a;
-        border-radius: 8px;
-        padding: 20px;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.04);
-      }
-      .flow-tier-header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        flex-wrap: wrap;
-        margin-bottom: 10px;
-      }
-      .flow-tier-header h4 {
-        margin: 0;
-        font-size: 1.1rem;
-        color: #073c3a;
-      }
-      .flow-tag {
-        background: #e2efe8;
-        color: #073c3a;
-        font-size: 0.75rem;
-        font-weight: 700;
-        padding: 3px 8px;
-        border-radius: 4px;
-        text-transform: uppercase;
-      }
-      .flow-tier p {
-        margin: 0;
-        font-size: 0.92rem;
-        color: #475569;
-        line-height: 1.55;
-      }
-      .flow-branches {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-        gap: 12px;
-        margin-top: 14px;
-      }
-      .flow-branch {
-        background: #f8fafc;
-        border: 1px solid #e2e8f0;
-        border-radius: 6px;
-        padding: 12px;
-        font-size: 0.85rem;
-      }
-      .flow-branch strong {
-        display: block;
-        color: #0f172a;
-        margin-bottom: 4px;
-      }
-      .table-wrap {
-        overflow-x: auto;
-        margin: 28px 0 36px;
-        border: 1px solid #e2e8f0;
-        border-radius: 8px;
-      }
-      .data-table {
-        width: 100%;
-        border-collapse: collapse;
-        font-size: 0.9rem;
-        text-align: left;
-      }
-      .data-table th {
-        background: #f8fafc;
-        color: #073c3a;
-        padding: 12px 16px;
-        font-weight: 700;
-        border-bottom: 2px solid #e2e8f0;
-      }
-      .data-table td {
-        padding: 12px 16px;
-        border-bottom: 1px solid #e2e8f0;
-        color: #334155;
-      }
-      .data-table tr:hover {
-        background: #f1f5f9;
-      }
-      .principles-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 18px;
-        margin: 28px 0 36px;
-      }
-      .principle-card {
-        background: #ffffff;
-        border: 1px solid #cbd5e1;
-        border-top: 4px solid #b45309;
-        border-radius: 8px;
-        padding: 20px;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.03);
-      }
-      .principle-card h4 {
-        margin: 0 0 8px;
-        color: #78350f;
-        font-size: 1.05rem;
-      }
-      .principle-card p {
-        margin: 0;
-        font-size: 0.88rem;
-        color: #475569;
-        line-height: 1.5;
-      }
-      .interactive-bridge {
-        background: linear-gradient(135deg, #f0f7f3 0%, #e2efe8 100%);
-        border: 1px solid #c2ded0;
-        border-radius: 8px;
-        padding: 24px;
-        margin: 36px 0;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        flex-wrap: wrap;
-        gap: 16px;
-      }
-      .interactive-bridge-text h4 {
-        margin: 0 0 6px;
-        color: #073c3a;
-        font-size: 1.1rem;
-      }
-      .interactive-bridge-text p {
-        margin: 0;
-        color: #2d5a4c;
-        font-size: 0.9rem;
-      }
-      @media (max-width: 768px) {
-        .article-hero h1 { font-size: 1.85rem; }
-      }
-    </style>
+    <link rel="stylesheet" href="/assets/css/articles.css" />
     <meta name="citation_title" content="Where Does Pakistan's Development Money Go? NFC Award, PSDP & Provincial ADP Breakdown" />
     <meta name="citation_author" content="Pakistan Provincial Reform Institute (PPRI)" />
     <meta name="citation_publication_date" content="2026/10" />
@@ -348,6 +140,7 @@
     </script>
 </head>
   <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
     <div class="reading-progress" id="reading-progress" aria-hidden="true"></div>
         <header class="site-header">
       <div class="container navbar">
@@ -413,7 +206,7 @@
           </div>
         </div>
 
-        <p class="lead" style="font-size: 1.18rem; line-height: 1.7; color: #1e293b;">
+        <p class="lead" style="font-size: 1.18rem; line-height: 1.7; color: var(--text-main, #18302A);">
           &ldquo;Why didn't our area get the money?&rdquo; is one of the oldest and most emotive questions in Pakistani politics. The trouble is that the answer is rarely contained in a single budget announcement or assembly speech.
         </p>
 
@@ -514,9 +307,9 @@
 
         
             <!-- Phase 3: Provincial Finance Commission (PFC) Awards vs. NFC Award Section -->
-            <section class="pfc-vs-nfc-section" id="pfc-vs-nfc-comparison" style="margin:36px 0 40px; padding:28px; background:#f8fafc; border:1px solid #cbd5e1; border-left:5px solid #073c3a; border-radius:8px;">
-              <h2 id="provincial-finance-commission-pfc-awards-vs-nfc-award-in-pakistan" style="color:#073c3a; margin-top:0; font-size:1.6rem;">Provincial Finance Commission (PFC) Awards vs. NFC Award in Pakistan</h2>
-              <p style="font-size:1.02rem; line-height:1.7; color:#334155;">
+            <section class="pfc-vs-nfc-section" id="pfc-vs-nfc-comparison" style="margin: 36px 0 40px; padding: 28px; background: var(--bg-canvas, #F7F8F4); border: 1px solid var(--border-subtle, #D5DED7); border-left: 5px solid var(--action-primary, #145640); border-radius: 8px;">
+              <h2 id="provincial-finance-commission-pfc-awards-vs-nfc-award-in-pakistan" style="color: var(--brand-dark, #12392D); margin-top: 0; font-size: 1.6rem;">Provincial Finance Commission (PFC) Awards vs. NFC Award in Pakistan</h2>
+              <p style="font-size: 1.02rem; line-height: 1.7; color: var(--text-main, #18302A);">
                 In Pakistan's fiscal architecture, public financial transfers operate across two distinct constitutional and statutory tiers: the <strong>National Finance Commission (NFC) Award</strong> and the <strong>Provincial Finance Commission (PFC) Award</strong>. While the NFC Award (governed by <a href="/resources/constitution.html#article-160">Article 160 (NFC)</a> of the Constitution) determines the vertical transfer of federal divisible pool taxes from Islamabad to the four provincial governments, the PFC Award is the statutory mechanism designed under <strong><a href="/resources/constitution.html#article-140a">Article 140A</a></strong> to transfer provincial revenues downward to Pakistan's <a href="/knowledge-library/#district-explorer">164 districts</a>, tehsils, and local councils.
               </p>
               
@@ -564,7 +357,7 @@
                 </table>
               </div>
 
-              <p style="font-size:0.95rem; line-height:1.65; color:#334155;">
+              <p style="font-size: 0.95rem; line-height: 1.65; color: var(--text-main, #18302A);">
                 The critical governance failure in Pakistan is not merely inter-provincial distribution, but intra-provincial centralization. Without regular, statutory Provincial Finance Commission awards guaranteed by constitutional amendment, provincial governments routinely retain over 88% of NFC receipts at the provincial capital secretariat level, starving district healthcare, primary education, and municipal water infrastructure of predictable statutory funding.
               </p>
             </section>
@@ -697,7 +490,7 @@
             <h3>Inspect Provincial Development Indicators</h3>
             <p>Explore comparative provincial baseline statistics, literacy rates, and health infrastructure indicators in our Data Centre.</p>
           </div>
-          <a href="/data/compare/" class="btn btn-primary" style="background: #073c3a; color: #ffffff; padding: 10px 18px; border-radius: 6px; text-decoration: none; font-weight: 700; font-size: 0.88rem;">Open Provincial Data &rarr;</a>
+          <a href="/data/compare/" class="btn btn-primary" style="background: var(--action-primary, #145640); color: #ffffff; padding: 10px 18px; border-radius: 6px; text-decoration: none; font-weight: 700; font-size: 0.88rem;">Open Provincial Data &rarr;</a>
         </div>
         </article>
 
@@ -741,9 +534,9 @@
           </div>
         </section>
 
-        <div class="article-references" style="margin-top: 50px; padding-top: 25px; border-top: 1px solid #e2e8f0;">
-          <h3 style="font-size: 1.15rem; color: #073c3a;">Primary Sources &amp; References</h3>
-          <ul style="font-size: 0.88rem; color: #475569; line-height: 1.6;">
+        <div class="article-references" style="margin-top: 50px; padding-top: 25px; border-top: 1px solid var(--border-subtle, #D5DED7);">
+          <h3 style="font-size: 1.15rem; color: var(--brand-dark, #12392D);">Primary Sources &amp; References</h3>
+          <ul style="font-size: 0.88rem; color: var(--text-muted, #52645B); line-height: 1.6;">
             <li><strong>World Bank:</strong> <em>Strengthening Fiscal Federalism to Drive Development</em> (July 2026). <a href="https://www.worldbank.org/en/news/press-release/2026/07/01/pakistan-strengthening-fiscal-federalism-to-drive-development" target="_blank" rel="noopener">World Bank Document Portal</a></li>
             <li><strong>Pakistan Institute of Development Economics (PIDE):</strong> <em>Beyond the NFC Award: Pakistan's Unfinished Devolution to Local Governments</em> (2025). <a href="https://pide.org.pk/research/beyond-the-nfc-award-pakistans-unfinished-devolution-to-local-governments/" target="_blank" rel="noopener">PIDE Research Series</a></li>
             <li><strong>Pakistan Institute of Development Economics (PIDE):</strong> <em>A Critical Path to Fiscal Federalism: Policy Imperatives for the NFC Award Remake</em> (2025).</li>

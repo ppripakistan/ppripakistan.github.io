@@ -118,14 +118,68 @@
     } catch (_) {}
   }
 
-  function openMobileDrawer() {
-    if (el.tocPane) el.tocPane.classList.add('drawer-open');
-    if (el.drawerOverlay) el.drawerOverlay.classList.add('is-visible');
+  const mobileDrawerMedia = window.matchMedia('(max-width: 960px)');
+  let drawerTriggerEl = null;
+
+  function setSiblingInert(isInert) {
+    const header = document.querySelector('.site-header');
+    const subnav = document.querySelector('.const-subnav');
+    const footer = document.querySelector('.site-footer');
+    const banner = document.querySelector('main > section:first-of-type');
+    const mobileBar = document.querySelector('.reader-mobile-toc-bar');
+    [header, subnav, footer, banner, mobileBar, el.articlePane].forEach(node => {
+      if (node) node.inert = isInert;
+    });
   }
 
-  function closeMobileDrawer() {
-    if (el.tocPane) el.tocPane.classList.remove('drawer-open');
+  function syncMobileDrawerState() {
+    if (!el.tocPane) return;
+    if (!mobileDrawerMedia.matches) {
+      el.tocPane.inert = false;
+      el.tocPane.removeAttribute('role');
+      el.tocPane.removeAttribute('aria-modal');
+      el.tocPane.removeAttribute('aria-label');
+      el.tocPane.classList.remove('drawer-open');
+      if (el.drawerOverlay) el.drawerOverlay.classList.remove('is-visible');
+      setSiblingInert(false);
+      if (el.mobileTocToggle) el.mobileTocToggle.setAttribute('aria-expanded', 'false');
+    } else if (!el.tocPane.classList.contains('drawer-open')) {
+      el.tocPane.inert = true;
+      el.tocPane.removeAttribute('role');
+      el.tocPane.removeAttribute('aria-modal');
+      setSiblingInert(false);
+      if (el.mobileTocToggle) el.mobileTocToggle.setAttribute('aria-expanded', 'false');
+    }
+  }
+
+  function openMobileDrawer() {
+    if (!el.tocPane) return;
+    drawerTriggerEl = document.activeElement || el.mobileTocToggle;
+    el.tocPane.inert = false;
+    el.tocPane.setAttribute('role', 'dialog');
+    el.tocPane.setAttribute('aria-modal', 'true');
+    el.tocPane.setAttribute('aria-label', 'Articles Directory');
+    el.tocPane.classList.add('drawer-open');
+    if (el.drawerOverlay) el.drawerOverlay.classList.add('is-visible');
+    if (el.mobileTocToggle) el.mobileTocToggle.setAttribute('aria-expanded', 'true');
+    setSiblingInert(true);
+    void el.tocPane.offsetWidth;
+    const firstFocus = el.drawerCloseBtn || el.partFilter || el.searchInput;
+    if (firstFocus) firstFocus.focus();
+  }
+
+  function closeMobileDrawer(restoreFocus = true) {
+    if (!el.tocPane) return;
+    const wasOpen = el.tocPane.classList.contains('drawer-open');
+    el.tocPane.classList.remove('drawer-open');
     if (el.drawerOverlay) el.drawerOverlay.classList.remove('is-visible');
+    if (el.mobileTocToggle) el.mobileTocToggle.setAttribute('aria-expanded', 'false');
+    setSiblingInert(false);
+    syncMobileDrawerState();
+    if (wasOpen && restoreFocus) {
+      const target = drawerTriggerEl && document.contains(drawerTriggerEl) ? drawerTriggerEl : el.mobileTocToggle;
+      if (target) target.focus();
+    }
   }
 
   function applyFilters() {
@@ -409,9 +463,21 @@
     }
 
     // Mobile Drawer events
+    syncMobileDrawerState();
+    if (mobileDrawerMedia.addEventListener) {
+      mobileDrawerMedia.addEventListener('change', syncMobileDrawerState);
+    } else if (mobileDrawerMedia.addListener) {
+      mobileDrawerMedia.addListener(syncMobileDrawerState);
+    }
     if (el.mobileTocToggle) el.mobileTocToggle.addEventListener('click', openMobileDrawer);
-    if (el.drawerCloseBtn) el.drawerCloseBtn.addEventListener('click', closeMobileDrawer);
-    if (el.drawerOverlay) el.drawerOverlay.addEventListener('click', closeMobileDrawer);
+    if (el.drawerCloseBtn) el.drawerCloseBtn.addEventListener('click', () => closeMobileDrawer(true));
+    if (el.drawerOverlay) el.drawerOverlay.addEventListener('click', () => closeMobileDrawer(true));
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && el.tocPane && el.tocPane.classList.contains('drawer-open')) {
+        e.preventDefault();
+        closeMobileDrawer(true);
+      }
+    });
 
     // Font size adjustments
     if (el.fontSm) el.fontSm.addEventListener('click', () => setFontSize('sm'));

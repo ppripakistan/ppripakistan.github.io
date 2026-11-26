@@ -389,7 +389,7 @@
     html += '  <span class="el-card-id">' + item.id + '</span>';
     html += '</div>';
 
-    html += '<h2 class="el-modal-title">' + escapeHtml(item.title) + '</h2>';
+    html += '<h2 class="el-modal-title" id="el-modal-title">' + escapeHtml(item.title) + '</h2>';
     html += '<div class="el-modal-meta-grid">';
     html += '  <div><strong>Publisher / Owner:</strong> ' + escapeHtml(item.publisher || 'Official') + '</div>';
     html += '  <div><strong>Period / Coverage:</strong> ' + escapeHtml(item.period_coverage || 'Current') + '</div>';
@@ -437,9 +437,29 @@
     html += '  <pre id="el-citation-text">' + escapeHtml(citationText) + '</pre>';
     html += '</div>';
 
+    let lastFocusedEl = null;
+    function setElBackgroundInert(isInert) {
+      const header = document.querySelector('.site-header');
+      const footer = document.querySelector('.site-footer');
+      if (header) header.inert = isInert;
+      if (footer) footer.inert = isInert;
+      const main = document.getElementById('main-content');
+      if (main) {
+        Array.from(main.children).forEach(function (child) {
+          if (child !== el.modal) child.inert = isInert;
+        });
+      }
+    }
+
+    lastFocusedEl = document.activeElement;
     el.modalBody.innerHTML = html;
     el.modal.hidden = false;
     document.body.classList.add('modal-open');
+    setElBackgroundInert(true);
+
+    if (el.modalClose) {
+      el.modalClose.focus();
+    }
 
     const copyBtn = document.getElementById('el-copy-citation');
     if (copyBtn) {
@@ -451,6 +471,8 @@
       });
     }
 
+    el._restoreFocusEl = lastFocusedEl;
+    el._setBackgroundInert = setElBackgroundInert;
     history.replaceState(null, '', '#' + item.id);
   }
 
@@ -458,6 +480,13 @@
     if (!el.modal) return;
     el.modal.hidden = true;
     document.body.classList.remove('modal-open');
+    if (typeof el._setBackgroundInert === 'function') {
+      el._setBackgroundInert(false);
+    }
+    if (el._restoreFocusEl && typeof el._restoreFocusEl.focus === 'function') {
+      el._restoreFocusEl.focus();
+      el._restoreFocusEl = null;
+    }
     history.replaceState(null, '', window.location.pathname + window.location.search);
   }
 

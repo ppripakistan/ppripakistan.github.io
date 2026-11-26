@@ -48,7 +48,7 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/brand/favicon-16x16.png?v=2" />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=2" />
     <link rel="manifest" href="/site.webmanifest" />
-    <meta name="theme-color" content="#073c3a" />
+    <meta name="theme-color" content="#12392D" />
     <link rel="stylesheet" href="/assets/css/style.css" />
     <link rel="stylesheet" href="/assets/css/responsive.css" />
     <link rel="stylesheet" href="/assets/css/survey-hub.css" />
@@ -127,30 +127,30 @@
     </header>
 
     <main id="main-content">
-      <section class="page-hero" style="background: linear-gradient(135deg, #072a24 0%, #0e3d34 100%); color: #ffffff; padding: 60px 0;">
+      <section class="page-hero">
         <div class="container">
-          <span class="eyebrow" style="color: #c8ff54;">عوامی مشاورت و رائے شماری 2026</span>
-          <h1 style="color: #ffffff; margin: 12px 0 16px;">قومی حکمرانی و صوبائی اصلاحات سروے</h1>
-          <p style="color: #d7f0e1; max-width: 820px; font-size: 1.15rem; margin: 0;">
+          <span class="eyebrow">عوامی مشاورت و رائے شماری 2026</span>
+          <h1>قومی حکمرانی و صوبائی اصلاحات سروے</h1>
+          <p>
             کسی ایک موضوع کا انتخاب کریں اور اپنی قیمتی رائے پالیسی سازوں تک پہنچائیں۔ آپ کے جوابات براہِ راست PPRI کے ورکنگ پیپرز اور پارلیمانی بریفنگز میں شامل کیے جائیں گے۔ سروے انتہائی آسان ہے اور جوابات فوری طور پر ای میل یا جی میل کے ذریعے جمع کرائے جا سکتے ہیں۔
           </p>
         </div>
       </section>
 
-      <section class="section" style="padding: 50px 0;">
-        <div class="container" style="max-width: 880px;">
+      <section class="section">
+        <div class="container content-container">
           <!-- Topic Navigation Tabs -->
-          <div class="survey-topic-nav" role="tablist" style="direction: rtl;">
-            <button class="survey-topic-btn active" data-topic="topic-boundaries" role="tab" aria-selected="true">
+          <div class="survey-topic-nav" role="tablist" aria-label="سروے کے موضوعات">
+            <button type="button" class="survey-topic-btn active" data-topic="topic-boundaries" role="tab" aria-selected="true" aria-controls="topic-boundaries">
               1. نئے صوبے اور علاقائی حدود
             </button>
-            <button class="survey-topic-btn" data-topic="topic-fiscal" role="tab" aria-selected="false">
+            <button type="button" class="survey-topic-btn" data-topic="topic-fiscal" role="tab" aria-selected="false" aria-controls="topic-fiscal" tabindex="-1">
               2. این ایف سی اور مالیاتی وسائل
             </button>
-            <button class="survey-topic-btn" data-topic="topic-localgov" role="tab" aria-selected="false">
+            <button type="button" class="survey-topic-btn" data-topic="topic-localgov" role="tab" aria-selected="false" aria-controls="topic-localgov" tabindex="-1">
               3. بااختیار بلدیات (آرٹیکل 140 اے)
             </button>
-            <button class="survey-topic-btn" data-topic="topic-distance" role="tab" aria-selected="false">
+            <button type="button" class="survey-topic-btn" data-topic="topic-distance" role="tab" aria-selected="false" aria-controls="topic-distance" tabindex="-1">
               4. دفتری رکاوٹیں و فاصلہ
             </button>
           </div>
@@ -158,9 +158,10 @@
           <!-- TOPIC 1: TERRITORIAL BOUNDARIES -->
           <div class="survey-topic-pane active" id="topic-boundaries" role="tabpanel">
             <form id="formBoundaries" class="survey-card" onsubmit="event.preventDefault(); handleSurveySubmit('formBoundaries', 'نئے صوبے اور علاقائی حدود');">
-              <div class="survey-step-indicator" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px;">
-                <span class="survey-badge" style="background: #e0f2fe; color: #0369a1; padding: 4px 10px; border-radius: 4px; font-weight: 700;">موضوع 01: صوبائی تنظیمِ نو</span>
-                <span style="font-size: 0.88rem; color: #64748b;">4 مختصر سوالات</span>
+              <div class="survey-step-indicator">
+                <h2 class="survey-pane-heading">نئے صوبے اور علاقائی حدود</h2>
+                <span class="survey-badge survey-badge--blue">موضوع 01: صوبائی تنظیمِ نو</span>
+                <span class="survey-question-count">4 مختصر سوالات</span>
               </div>
 
               <div class="survey-question">
@@ -206,17 +207,17 @@
               <div class="survey-question">
                 <h3>3. آئین کے آرٹیکل 239 کے تحت حدود کی ترمیم (قومی اسمبلی، سینیٹ اور صوبائی اسمبلی میں 2/3 اکثریت) کس حد تک ممکن ہے؟</h3>
                 <div class="survey-scale">
-                  <label class="scale-btn"><input type="radio" name="art239_feasibility" value="1 - Very Low" />1<div style="font-size: 0.75rem;">انتہائی مشکل</div></label>
-                  <label class="scale-btn"><input type="radio" name="art239_feasibility" value="2 - Low" />2<div style="font-size: 0.75rem;">مشکل</div></label>
-                  <label class="scale-btn"><input type="radio" name="art239_feasibility" value="3 - Moderate" checked />3<div style="font-size: 0.75rem;">درمیانہ</div></label>
-                  <label class="scale-btn"><input type="radio" name="art239_feasibility" value="4 - High" />4<div style="font-size: 0.75rem;">ممکن</div></label>
-                  <label class="scale-btn"><input type="radio" name="art239_feasibility" value="5 - Very High" />5<div style="font-size: 0.75rem;">بہت آسان</div></label>
+                  <label class="scale-btn"><input type="radio" name="art239_feasibility" value="1 - Very Low" />1<span class="scale-sublabel">انتہائی مشکل</span></label>
+                  <label class="scale-btn"><input type="radio" name="art239_feasibility" value="2 - Low" />2<span class="scale-sublabel">مشکل</span></label>
+                  <label class="scale-btn"><input type="radio" name="art239_feasibility" value="3 - Moderate" checked />3<span class="scale-sublabel">درمیانہ</span></label>
+                  <label class="scale-btn"><input type="radio" name="art239_feasibility" value="4 - High" />4<span class="scale-sublabel">ممکن</span></label>
+                  <label class="scale-btn"><input type="radio" name="art239_feasibility" value="5 - Very High" />5<span class="scale-sublabel">بہت آسان</span></label>
                 </div>
               </div>
 
               <div class="survey-question">
-                <h3>4. آپ کا آبائی صوبہ / خطہ:</h3>
-                <select name="respondent_region" class="field-text" style="width: 100%; padding: 12px; border-radius: 6px; border: 1px solid #cbd5e1; font-family: var(--ur-font);" required>
+                <h3><label for="regionBoundaries">4. آپ کا آبائی صوبہ / خطہ:</label></h3>
+                <select id="regionBoundaries" name="respondent_region" class="field-text survey-field-select" required>
                   <option value="">اپنا صوبہ یا خطہ منتخب کریں...</option>
                   <option value="Punjab">پنجاب</option>
                   <option value="Sindh">سندھ</option>
@@ -228,18 +229,19 @@
                 </select>
               </div>
 
-              <button type="submit" class="btn btn-primary" style="width: 100%; padding: 14px; font-weight: 700; font-size: 1.05rem; background: #073c3a; color: #ffffff; border: none; border-radius: 6px; cursor: pointer;">
+              <button type="submit" class="btn btn-primary survey-submit-btn">
                 جوابات کا جائزہ لیں اور جمع کرائیں ←
               </button>
             </form>
           </div>
 
           <!-- TOPIC 2: FISCAL FEDERALISM -->
-          <div class="survey-topic-pane" id="topic-fiscal" role="tabpanel">
+          <div class="survey-topic-pane" id="topic-fiscal" role="tabpanel" hidden>
             <form id="formFiscal" class="survey-card" onsubmit="event.preventDefault(); handleSurveySubmit('formFiscal', 'این ایف سی اور مالیاتی وسائل کی تقسیم');">
-              <div class="survey-step-indicator" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px;">
-                <span class="survey-badge" style="background: #fef3c7; color: #92400e; padding: 4px 10px; border-radius: 4px; font-weight: 700;">موضوع 02: این ایف سی اور مالیات</span>
-                <span style="font-size: 0.88rem; color: #64748b;">4 مختصر سوالات</span>
+              <div class="survey-step-indicator">
+                <h2 class="survey-pane-heading">این ایف سی اور مالیاتی وسائل کی تقسیم</h2>
+                <span class="survey-badge survey-badge--amber">موضوع 02: این ایف سی اور مالیات</span>
+                <span class="survey-question-count">4 مختصر سوالات</span>
               </div>
 
               <div class="survey-question">
@@ -277,17 +279,17 @@
               <div class="survey-question">
                 <h3>3. آپ کے ضلع کو صوبائی ترقیاتی بجٹ سے کتنے فیصد منصفانہ حصہ ملتا ہے؟</h3>
                 <div class="survey-scale">
-                  <label class="scale-btn"><input type="radio" name="district_fund_fairness" value="1 - Extremely Unfair" />1<div style="font-size: 0.75rem;">نہ ہونے کے برابر</div></label>
-                  <label class="scale-btn"><input type="radio" name="district_fund_fairness" value="2 - Unfair" />2<div style="font-size: 0.75rem;">کم</div></label>
-                  <label class="scale-btn"><input type="radio" name="district_fund_fairness" value="3 - Neutral" checked />3<div style="font-size: 0.75rem;">مناسب</div></label>
-                  <label class="scale-btn"><input type="radio" name="district_fund_fairness" value="4 - Fair" />4<div style="font-size: 0.75rem;">بہتر</div></label>
-                  <label class="scale-btn"><input type="radio" name="district_fund_fairness" value="5 - Highly Favored" />5<div style="font-size: 0.75rem;">بہت زیادہ</div></label>
+                  <label class="scale-btn"><input type="radio" name="district_fund_fairness" value="1 - Extremely Unfair" />1<span class="scale-sublabel">نہ ہونے کے برابر</span></label>
+                  <label class="scale-btn"><input type="radio" name="district_fund_fairness" value="2 - Unfair" />2<span class="scale-sublabel">کم</span></label>
+                  <label class="scale-btn"><input type="radio" name="district_fund_fairness" value="3 - Neutral" checked />3<span class="scale-sublabel">مناسب</span></label>
+                  <label class="scale-btn"><input type="radio" name="district_fund_fairness" value="4 - Fair" />4<span class="scale-sublabel">بہتر</span></label>
+                  <label class="scale-btn"><input type="radio" name="district_fund_fairness" value="5 - Highly Favored" />5<span class="scale-sublabel">بہت زیادہ</span></label>
                 </div>
               </div>
 
               <div class="survey-question">
-                <h3>4. آپ کا تعلق کس صوبے / خطے سے ہے؟</h3>
-                <select name="respondent_region_fiscal" class="field-text" style="width: 100%; padding: 12px; border-radius: 6px; border: 1px solid #cbd5e1; font-family: var(--ur-font);" required>
+                <h3><label for="regionFiscal">4. آپ کا تعلق کس صوبے / خطے سے ہے؟</label></h3>
+                <select id="regionFiscal" name="respondent_region_fiscal" class="field-text survey-field-select" required>
                   <option value="">اپنا صوبہ یا خطہ منتخب کریں...</option>
                   <option value="Punjab">پنجاب</option>
                   <option value="Sindh">سندھ</option>
@@ -299,18 +301,19 @@
                 </select>
               </div>
 
-              <button type="submit" class="btn btn-primary" style="width: 100%; padding: 14px; font-weight: 700; font-size: 1.05rem; background: #073c3a; color: #ffffff; border: none; border-radius: 6px; cursor: pointer;">
+              <button type="submit" class="btn btn-primary survey-submit-btn">
                 جوابات کا جائزہ لیں اور جمع کرائیں ←
               </button>
             </form>
           </div>
 
           <!-- TOPIC 3: LOCAL GOVERNMENT (ART. 140A) -->
-          <div class="survey-topic-pane" id="topic-localgov" role="tabpanel">
+          <div class="survey-topic-pane" id="topic-localgov" role="tabpanel" hidden>
             <form id="formLocalGov" class="survey-card" onsubmit="event.preventDefault(); handleSurveySubmit('formLocalGov', 'بااختیار بلدیات اور آئین کا آرٹیکل 140 اے');">
-              <div class="survey-step-indicator" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px;">
-                <span class="survey-badge" style="background: #dcfce7; color: #166534; padding: 4px 10px; border-radius: 4px; font-weight: 700;">موضوع 03: بلدیاتی خودمختاری</span>
-                <span style="font-size: 0.88rem; color: #64748b;">4 مختصر سوالات</span>
+              <div class="survey-step-indicator">
+                <h2 class="survey-pane-heading">بااختیار بلدیات اور آئین کا آرٹیکل 140 اے</h2>
+                <span class="survey-badge survey-badge--green">موضوع 03: بلدیاتی خودمختاری</span>
+                <span class="survey-question-count">4 مختصر سوالات</span>
               </div>
 
               <div class="survey-question">
@@ -348,17 +351,17 @@
               <div class="survey-question">
                 <h3>3. اپنے علاقے میں پچھلے 5 سالوں میں بلدیاتی خدمات کی کارکردگی کو نمبر دیں:</h3>
                 <div class="survey-scale">
-                  <label class="scale-btn"><input type="radio" name="local_service_rating" value="1 - Very Poor" />1<div style="font-size: 0.75rem;">انتہائی ناقص</div></label>
-                  <label class="scale-btn"><input type="radio" name="local_service_rating" value="2 - Poor" />2<div style="font-size: 0.75rem;">خراب</div></label>
-                  <label class="scale-btn"><input type="radio" name="local_service_rating" value="3 - Average" checked />3<div style="font-size: 0.75rem;">گزارا</div></label>
-                  <label class="scale-btn"><input type="radio" name="local_service_rating" value="4 - Good" />4<div style="font-size: 0.75rem;">اچھی</div></label>
-                  <label class="scale-btn"><input type="radio" name="local_service_rating" value="5 - Excellent" />5<div style="font-size: 0.75rem;">بہترین</div></label>
+                  <label class="scale-btn"><input type="radio" name="local_service_rating" value="1 - Very Poor" />1<span class="scale-sublabel">انتہائی ناقص</span></label>
+                  <label class="scale-btn"><input type="radio" name="local_service_rating" value="2 - Poor" />2<span class="scale-sublabel">خراب</span></label>
+                  <label class="scale-btn"><input type="radio" name="local_service_rating" value="3 - Average" checked />3<span class="scale-sublabel">گزارا</span></label>
+                  <label class="scale-btn"><input type="radio" name="local_service_rating" value="4 - Good" />4<span class="scale-sublabel">اچھی</span></label>
+                  <label class="scale-btn"><input type="radio" name="local_service_rating" value="5 - Excellent" />5<span class="scale-sublabel">بہترین</span></label>
                 </div>
               </div>
 
               <div class="survey-question">
-                <h3>4. آپ کا صوبہ / خطہ:</h3>
-                <select name="respondent_region_local" class="field-text" style="width: 100%; padding: 12px; border-radius: 6px; border: 1px solid #cbd5e1; font-family: var(--ur-font);" required>
+                <h3><label for="regionLocal">4. آپ کا صوبہ / خطہ:</label></h3>
+                <select id="regionLocal" name="respondent_region_local" class="field-text survey-field-select" required>
                   <option value="">اپنا صوبہ یا خطہ منتخب کریں...</option>
                   <option value="Punjab">پنجاب</option>
                   <option value="Sindh">سندھ</option>
@@ -370,18 +373,19 @@
                 </select>
               </div>
 
-              <button type="submit" class="btn btn-primary" style="width: 100%; padding: 14px; font-weight: 700; font-size: 1.05rem; background: #073c3a; color: #ffffff; border: none; border-radius: 6px; cursor: pointer;">
+              <button type="submit" class="btn btn-primary survey-submit-btn">
                 جوابات کا جائزہ لیں اور جمع کرائیں ←
               </button>
             </form>
           </div>
 
           <!-- TOPIC 4: ADMINISTRATIVE DISTANCE & FRICTION -->
-          <div class="survey-topic-pane" id="topic-distance" role="tabpanel">
+          <div class="survey-topic-pane" id="topic-distance" role="tabpanel" hidden>
             <form id="formDistance" class="survey-card" onsubmit="event.preventDefault(); handleSurveySubmit('formDistance', 'انتظامی فاصلہ اور دفتری رکاوٹیں');">
-              <div class="survey-step-indicator" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px;">
-                <span class="survey-badge" style="background: #fee2e2; color: #991b1b; padding: 4px 10px; border-radius: 4px; font-weight: 700;">موضوع 04: دفتری رگڑ اور بوجھ</span>
-                <span style="font-size: 0.88rem; color: #64748b;">4 مختصر سوالات</span>
+              <div class="survey-step-indicator">
+                <h2 class="survey-pane-heading">انتظامی فاصلہ اور دفتری رکاوٹیں</h2>
+                <span class="survey-badge survey-badge--red">موضوع 04: دفتری رگڑ اور بوجھ</span>
+                <span class="survey-question-count">4 مختصر سوالات</span>
               </div>
 
               <div class="survey-question">
@@ -423,17 +427,17 @@
               <div class="survey-question">
                 <h3>3. کیا تمام بنیادی دستاویزات کا نادرا کی طرز پر 100% ڈیجیٹل ون ونڈو ہونا ممکن ہے؟</h3>
                 <div class="survey-scale">
-                  <label class="scale-btn"><input type="radio" name="digital_readiness" value="1 - Not Ready" />1<div style="font-size: 0.75rem;">ناممکن</div></label>
-                  <label class="scale-btn"><input type="radio" name="digital_readiness" value="2 - Difficult" />2<div style="font-size: 0.75rem;">مشکل</div></label>
-                  <label class="scale-btn"><input type="radio" name="digital_readiness" value="3 - Moderate" checked />3<div style="font-size: 0.75rem;">ممکن</div></label>
-                  <label class="scale-btn"><input type="radio" name="digital_readiness" value="4 - High" />4<div style="font-size: 0.75rem;">بہت ممکن</div></label>
-                  <label class="scale-btn"><input type="radio" name="digital_readiness" value="5 - Ready Now" />5<div style="font-size: 0.75rem;">فوری عمل درآمد</div></label>
+                  <label class="scale-btn"><input type="radio" name="digital_readiness" value="1 - Not Ready" />1<span class="scale-sublabel">ناممکن</span></label>
+                  <label class="scale-btn"><input type="radio" name="digital_readiness" value="2 - Difficult" />2<span class="scale-sublabel">مشکل</span></label>
+                  <label class="scale-btn"><input type="radio" name="digital_readiness" value="3 - Moderate" checked />3<span class="scale-sublabel">ممکن</span></label>
+                  <label class="scale-btn"><input type="radio" name="digital_readiness" value="4 - High" />4<span class="scale-sublabel">بہت ممکن</span></label>
+                  <label class="scale-btn"><input type="radio" name="digital_readiness" value="5 - Ready Now" />5<span class="scale-sublabel">فوری عمل درآمد</span></label>
                 </div>
               </div>
 
               <div class="survey-question">
-                <h3>4. آپ کا صوبہ / خطہ:</h3>
-                <select name="respondent_region_distance" class="field-text" style="width: 100%; padding: 12px; border-radius: 6px; border: 1px solid #cbd5e1; font-family: var(--ur-font);" required>
+                <h3><label for="regionDistance">4. آپ کا صوبہ / خطہ:</label></h3>
+                <select id="regionDistance" name="respondent_region_distance" class="field-text survey-field-select" required>
                   <option value="">اپنا صوبہ یا خطہ منتخب کریں...</option>
                   <option value="Punjab">پنجاب</option>
                   <option value="Sindh">سندھ</option>
@@ -445,7 +449,7 @@
                 </select>
               </div>
 
-              <button type="submit" class="btn btn-primary" style="width: 100%; padding: 14px; font-weight: 700; font-size: 1.05rem; background: #073c3a; color: #ffffff; border: none; border-radius: 6px; cursor: pointer;">
+              <button type="submit" class="btn btn-primary survey-submit-btn">
                 جوابات کا جائزہ لیں اور جمع کرائیں ←
               </button>
             </form>
@@ -454,18 +458,18 @@
       </section>
 
       <!-- SUBMISSION MODAL -->
-      <div id="submissionModal" class="survey-modal" style="display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.6); z-index: 9999; align-items: center; justify-content: center;">
-        <div class="modal-content" style="background: #ffffff; padding: 30px; border-radius: 10px; max-width: 600px; width: 90%; max-height: 85vh; overflow-y: auto; text-align: right;">
-          <h2 id="modalTopicTitle" style="color: #073c3a; margin-top: 0; font-size: 1.4rem;">آپ کے جوابات</h2>
-          <p style="color: #64748b; font-size: 0.95rem;">
+      <div id="submissionModal" class="survey-modal" role="dialog" aria-modal="true" aria-labelledby="modalTopicTitle" hidden>
+        <div class="modal-content">
+          <h2 id="modalTopicTitle" class="survey-modal-title">آپ کے جوابات</h2>
+          <p class="survey-modal-lead">
             آپ کے جوابات کامیابی سے تیار ہو چکے ہیں۔ برائے مہربانی نیچے دیے گئے کسی ایک بٹن پر کلک کر کے انہیں PPRI کو بھیجیں:
           </p>
-          <pre id="modalSummaryText" style="background: #f1f5f9; padding: 14px; border-radius: 6px; font-size: 0.88rem; white-space: pre-wrap; font-family: var(--ur-font); max-height: 200px; overflow-y: auto; text-align: right;"></pre>
-          <div style="display: flex; gap: 12px; margin-top: 20px; flex-wrap: wrap;">
-            <button id="btnSendGmail" style="flex: 1; min-width: 140px; padding: 10px 16px; background: #ea4335; color: #fff; border: none; border-radius: 6px; font-weight: 700; cursor: pointer; font-family: var(--ur-font);">جی میل کے ذریعے بھیجیں</button>
-            <button id="btnSendEmail" style="flex: 1; min-width: 140px; padding: 10px 16px; background: #073c3a; color: #fff; border: none; border-radius: 6px; font-weight: 700; cursor: pointer; font-family: var(--ur-font);">ڈیفالٹ ای میل ایپ</button>
-            <button id="btnCopySurvey" style="padding: 10px 16px; background: #f1f5f9; color: #334155; border: 1px solid #cbd5e1; border-radius: 6px; font-weight: 700; cursor: pointer; font-family: var(--ur-font);">کاپی کریں</button>
-            <button onclick="document.getElementById('submissionModal').style.display='none';" style="padding: 10px 16px; background: transparent; color: #64748b; border: 1px solid #cbd5e1; border-radius: 6px; cursor: pointer; font-family: var(--ur-font);">بند کریں</button>
+          <pre id="modalSummaryText" class="survey-modal-summary"></pre>
+          <div class="survey-modal-actions">
+            <a id="btnSendGmail" href="mailto:ppripakistan@gmail.com" class="survey-btn-gmail">جی میل کے ذریعے بھیجیں</a>
+            <a id="btnSendEmail" href="mailto:ppripakistan@gmail.com" class="survey-btn-email">ڈیفالٹ ای میل ایپ</a>
+            <button type="button" id="btnCopySurvey" class="survey-btn-copy">کاپی کریں</button>
+            <button type="button" id="btnCloseSubmissionModal" class="survey-modal-close">بند کریں</button>
           </div>
         </div>
       </div>

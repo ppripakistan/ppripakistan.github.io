@@ -41,196 +41,12 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/brand/favicon-16x16.png?v=2" />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=2" />
     <link rel="manifest" href="/site.webmanifest" />
-    <meta name="theme-color" content="#073c3a" />
+    <meta name="theme-color" content="#12392D" />
     <link rel="alternate" type="application/rss+xml" title="PPRI Policy Publications Feed" href="/feed.xml" />
     <link rel="stylesheet" href="/assets/css/style.css" />
     <link rel="stylesheet" href="/assets/css/responsive.css" />
     <link rel="stylesheet" href="/assets/css/research-papers.css" />
-    <style>
-      .article-hero {
-        background: linear-gradient(135deg, #073c3a 0%, #0c2b26 100%);
-        color: #ffffff;
-        padding: 60px 0 45px;
-        border-bottom: 3px solid #d4af37;
-      }
-      .article-hero .eyebrow {
-        color: #d4af37;
-        font-size: 0.82rem;
-        letter-spacing: 0.08em;
-        text-transform: uppercase;
-        font-weight: 700;
-        display: block;
-        margin-bottom: 12px;
-      }
-      .article-hero h1 {
-        font-size: 2.45rem;
-        line-height: 1.22;
-        color: #ffffff;
-        max-width: 920px;
-        margin: 0 0 16px;
-      }
-      .article-standfirst {
-        font-size: 1.15rem;
-        line-height: 1.6;
-        color: #e2e8f0;
-        max-width: 840px;
-        margin: 0 0 24px;
-        font-weight: 400;
-      }
-      .article-meta-bar {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 20px;
-        align-items: center;
-        font-size: 0.85rem;
-        color: #cbd5e1;
-        padding-top: 18px;
-        border-top: 1px solid rgba(255, 255, 255, 0.15);
-      }
-      .article-meta-item strong {
-        color: #ffffff;
-      }
-      .stat-ribbon {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
-        gap: 16px;
-        margin: 32px 0 40px;
-      }
-      .stat-card {
-        background: #f8fafc;
-        border: 1px solid #e2e8f0;
-        border-top: 4px solid #073c3a;
-        border-radius: 8px;
-        padding: 20px;
-        text-align: center;
-      }
-      .stat-card strong {
-        display: block;
-        font-size: 2rem;
-        color: #073c3a;
-        font-weight: 800;
-        line-height: 1.1;
-      }
-      .stat-card span {
-        display: block;
-        font-size: 0.85rem;
-        color: #64748b;
-        margin-top: 6px;
-        line-height: 1.35;
-      }
-      .timeline-flow {
-        position: relative;
-        padding-left: 28px;
-        margin: 32px 0 40px;
-        border-left: 3px solid #073c3a;
-      }
-      .timeline-node {
-        position: relative;
-        margin-bottom: 24px;
-      }
-      .timeline-node:last-child {
-        margin-bottom: 0;
-      }
-      .timeline-node::before {
-        content: "";
-        position: absolute;
-        left: -35px;
-        top: 4px;
-        width: 12px;
-        height: 12px;
-        border-radius: 50%;
-        background: #b45309;
-        border: 2px solid #ffffff;
-      }
-      .timeline-node strong {
-        display: block;
-        font-size: 1rem;
-        color: #073c3a;
-        margin-bottom: 4px;
-      }
-      .timeline-node p {
-        margin: 0;
-        font-size: 0.9rem;
-        color: #475569;
-        line-height: 1.5;
-      }
-      .table-wrap {
-        overflow-x: auto;
-        margin: 28px 0 36px;
-        border: 1px solid #e2e8f0;
-        border-radius: 8px;
-      }
-      .data-table {
-        width: 100%;
-        border-collapse: collapse;
-        font-size: 0.9rem;
-        text-align: left;
-      }
-      .data-table th {
-        background: #f8fafc;
-        color: #073c3a;
-        padding: 12px 16px;
-        font-weight: 700;
-        border-bottom: 2px solid #e2e8f0;
-      }
-      .data-table td {
-        padding: 12px 16px;
-        border-bottom: 1px solid #e2e8f0;
-        color: #334155;
-      }
-      .data-table tr:hover {
-        background: #f1f5f9;
-      }
-      .scorecard-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-        gap: 16px;
-        margin: 28px 0 36px;
-      }
-      .scorecard-card {
-        background: #ffffff;
-        border: 1px solid #cbd5e1;
-        border-radius: 8px;
-        padding: 18px 20px;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.03);
-      }
-      .scorecard-card h4 {
-        margin: 0 0 8px;
-        color: #073c3a;
-        font-size: 1rem;
-      }
-      .scorecard-card p {
-        margin: 0;
-        font-size: 0.88rem;
-        color: #475569;
-        line-height: 1.5;
-      }
-      .interactive-bridge {
-        background: linear-gradient(135deg, #f0f7f3 0%, #e2efe8 100%);
-        border: 1px solid #c2ded0;
-        border-radius: 8px;
-        padding: 24px;
-        margin: 36px 0;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        flex-wrap: wrap;
-        gap: 16px;
-      }
-      .interactive-bridge-text h4 {
-        margin: 0 0 6px;
-        color: #073c3a;
-        font-size: 1.1rem;
-      }
-      .interactive-bridge-text p {
-        margin: 0;
-        color: #2d5a4c;
-        font-size: 0.9rem;
-      }
-      @media (max-width: 768px) {
-        .article-hero h1 { font-size: 1.85rem; }
-      }
-    </style>
+    <link rel="stylesheet" href="/assets/css/articles.css" />
     <meta name="citation_title" content="South Punjab Province: Population (2023), 11 Districts Map & Fiscal Share" />
     <meta name="citation_author" content="Pakistan Provincial Reform Institute (PPRI)" />
     <meta name="citation_publication_date" content="2026/10" />
@@ -297,7 +113,8 @@
 }
     </script>
 </head>
-  <body>
+  <body data-article="south-punjab-why-does-the-province-demand-keep-returning">
+    <a class="skip-link" href="#main-content">Skip to main content</a>
     <div class="reading-progress" id="reading-progress" aria-hidden="true"></div>
         <header class="site-header">
       <div class="container navbar">
@@ -363,7 +180,7 @@
           </div>
         </div>
 
-        <p class="lead" style="font-size: 1.18rem; line-height: 1.7; color: #1e293b;">
+        <p class="lead" style="font-size: 1.18rem; line-height: 1.7; color: var(--text-main, #18302A);">
           South Punjab is the clearest and most durable example of why Pakistan&rsquo;s provincial restructuring debate refuses to disappear.
         </p>
 
@@ -436,7 +253,7 @@
                       <td>14,112,658</td>
                       <td>11.05%</td>
                     </tr>
-                    <tr style="background:#073c3a; color:#ffffff; font-weight:700;">
+                    <tr style="background: var(--action-primary, #145640); color: #ffffff; font-weight: 700;">
                       <td>South Punjab (3-Division Total)</td>
                       <td>Multan / Bahawalpur</td>
                       <td>11 Core Districts (12 with Kot Addu / Taunsa)</td>
@@ -446,7 +263,7 @@
                   </tbody>
                 </table>
               </div>
-              <p style="font-size:0.86rem; color:#475569;">
+              <p style="font-size: 0.86rem; color: var(--text-muted, #52645B);">
                 With 40.4 million residents, a standalone South Punjab province would rank as Pakistan's third-largest province—substantially larger than Khyber Pakhtunkhwa (40.86M) and nearly triple the population of Balochistan (14.89M).
               </p>
             </section>
@@ -655,7 +472,7 @@
             <h3>Simulate South Punjab Administrative Boundaries</h3>
             <p>Inspect population distributions, district configurations, and fiscal projections for South Punjab in our interactive Scenario Lab.</p>
           </div>
-          <a href="/maps/scenarios/" class="btn btn-primary" style="background: #073c3a; color: #ffffff; padding: 10px 18px; border-radius: 6px; text-decoration: none; font-weight: 700; font-size: 0.88rem;">Open Scenario Lab &rarr;</a>
+          <a href="/maps/scenarios/" class="btn btn-primary" style="background: var(--action-primary, #145640); color: #ffffff; padding: 10px 18px; border-radius: 6px; text-decoration: none; font-weight: 700; font-size: 0.88rem;">Open Scenario Lab &rarr;</a>
         </div>
         </article>
 
@@ -678,7 +495,7 @@
 
     <!-- Full-Width Content Below Conclusion -->
     <div class="container paper-post-fullwidth">
-      <div class="article-references" style="margin-top: 50px; padding-top: 25px; border-top: 1px solid #e2e8f0;">
+      <div class="article-references" style="margin-top: 50px; padding-top: 25px; border-top: 1px solid var(--border-subtle, #D5DED7);">
           
             <!-- Phase 6: Visible Semantic FAQ Accordion Section -->
             <section class="faq-section" id="frequently-asked-questions" aria-label="Frequently Asked Questions">
@@ -720,8 +537,8 @@
               </div>
             </section>
 
-            <h3 style="font-size: 1.15rem; color: #073c3a;">Primary Sources &amp; References</h3>
-          <ul style="font-size: 0.88rem; color: #475569; line-height: 1.6;">
+            <h3 style="font-size: 1.15rem; color: var(--brand-dark, #12392D);">Primary Sources &amp; References</h3>
+          <ul style="font-size: 0.88rem; color: var(--text-muted, #52645B); line-height: 1.6;">
             <li><strong>National Assembly of Pakistan:</strong> <em>Resolution No. 62 in favour of Janoobi Punjab Province</em> (Passed 3 May 2012). <a href="https://na.gov.pk/en/resolution_detail.php?id=62" target="_blank" rel="noopener">na.gov.pk</a></li>
             <li><strong>United Nations Development Programme (UNDP):</strong> <em>South Punjab Regional Development Plan &amp; Spatial Strategy</em> (Case Study Series). <a href="https://www.undp.org/pakistan/DAP-Vol-12-3-Case-Study-1" target="_blank" rel="noopener">undp.org/pakistan</a></li>
             <li><strong>Pakistan Bureau of Statistics (PBS):</strong> <em>7th Population &amp; Housing Census 2023: Division and District Baselines for Punjab</em>. <a href="https://www.pbs.gov.pk/census/" target="_blank" rel="noopener">pbs.gov.pk</a></li>

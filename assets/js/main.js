@@ -211,6 +211,23 @@ function getLanguageCounterpartUrl() {
   const isUrdu = document.documentElement.lang === "ur" || currentPath.startsWith("/ur/");
 
   if (isUrdu) {
+    const exactEnglishMatches = {
+      "/ur/consultation/survey.html": "/surveys/",
+      "/ur/data/literacy-rate-pakistan": "/data/literacy-rate-pakistan/",
+      "/ur/data/literacy-rate-pakistan/": "/data/literacy-rate-pakistan/",
+      "/ur/data/literacy-rate-pakistan/index.html": "/data/literacy-rate-pakistan/",
+      "/ur/articles": "/articles/",
+      "/ur/articles/": "/articles/",
+      "/ur/articles/index.html": "/articles/",
+    };
+    const norm = currentPath.replace(/\/$/, "") || "/ur";
+    if (exactEnglishMatches[currentPath] || exactEnglishMatches[norm]) {
+      return {
+        targetUrl: exactEnglishMatches[currentPath] || exactEnglishMatches[norm],
+        targetLabel: "English",
+        targetLang: "en",
+      };
+    }
     let enPath = currentPath.replace(/^\/ur(\/|$)/, "/") || "/";
     if (enPath !== "/" && !enPath.endsWith(".html") && !enPath.endsWith("/")) {
       enPath += "/";
@@ -221,12 +238,25 @@ function getLanguageCounterpartUrl() {
       "/": "/ur/index.html",
       "/index.html": "/ur/index.html",
       "/about.html": "/ur/about.html",
+      "/articles": "/ur/articles/index.html",
+      "/articles/": "/ur/articles/index.html",
+      "/articles/index.html": "/ur/articles/index.html",
+      "/articles/provinces-of-pakistan-names-capitals-population.html": "/ur/articles/provinces-of-pakistan-names-capitals-population.html",
+      "/articles/new-administrative-units-pakistan-2026.html": "/ur/articles/new-administrative-units-pakistan-2026.html",
+      "/articles/karachi-urban-sindh-representation-revenue-administration.html": "/ur/articles/karachi-urban-sindh-representation-revenue-administration.html",
+      "/articles/bahawalpur-province-restoration-2026.html": "/ur/articles/bahawalpur-province-restoration-2026.html",
+      "/articles/is-gilgit-baltistan-a-province-of-pakistan.html": "/ur/articles/is-gilgit-baltistan-a-province-of-pakistan.html",
       "/consultation/": "/ur/consultation/index.html",
       "/consultation/index.html": "/ur/consultation/index.html",
-      "/consultation/survey.html": "/ur/consultation/survey.html",
+      "/surveys": "/ur/consultation/survey.html",
+      "/surveys/": "/ur/consultation/survey.html",
+      "/surveys/index.html": "/ur/consultation/survey.html",
       "/provinces/": "/ur/provinces/index.html",
       "/provinces/index.html": "/ur/provinces/index.html",
       "/data/centre.html": "/ur/data/centre.html",
+      "/data/literacy-rate-pakistan": "/ur/data/literacy-rate-pakistan/index.html",
+      "/data/literacy-rate-pakistan/": "/ur/data/literacy-rate-pakistan/index.html",
+      "/data/literacy-rate-pakistan/index.html": "/ur/data/literacy-rate-pakistan/index.html",
       "/research/": "/ur/research/index.html",
       "/research/index.html": "/ur/research/index.html",
       "/research/reports/": "/ur/research/reports/index.html",
@@ -243,6 +273,8 @@ function getLanguageCounterpartUrl() {
     return { targetUrl, targetLabel: "اردو", targetLang: "ur" };
   }
 }
+
+const isDesktopNav = () => window.matchMedia("(min-width: 1101px)").matches;
 
 function buildEnhancedNavigation(nav) {
   if (!nav || nav.dataset.enhanced === "true") return;
@@ -284,7 +316,7 @@ function buildEnhancedNavigation(nav) {
       if (mb) mb.setAttribute("aria-expanded", "false");
     });
     home.addEventListener("mouseenter", () => {
-      if (window.innerWidth > 900) closeAllNavGroups();
+      if (isDesktopNav()) closeAllNavGroups();
     });
     fragment.appendChild(home);
   }
@@ -323,7 +355,7 @@ function buildEnhancedNavigation(nav) {
     if (groupIsCurrent) wrapper.classList.add("is-current");
 
     wrapper.addEventListener("mouseenter", () => {
-      if (window.innerWidth > 900) {
+      if (isDesktopNav()) {
         if (navCloseTimer) {
           clearTimeout(navCloseTimer);
           navCloseTimer = null;
@@ -340,7 +372,7 @@ function buildEnhancedNavigation(nav) {
     });
 
     wrapper.addEventListener("mouseleave", () => {
-      if (window.innerWidth > 900) {
+      if (isDesktopNav()) {
         if (navCloseTimer) clearTimeout(navCloseTimer);
         navCloseTimer = setTimeout(() => {
           wrapper.classList.remove("is-open");
@@ -400,7 +432,7 @@ function buildEnhancedNavigation(nav) {
       if (mb) mb.setAttribute("aria-expanded", "false");
     });
     search.addEventListener("mouseenter", () => {
-      if (window.innerWidth > 900) closeAllNavGroups();
+      if (isDesktopNav()) closeAllNavGroups();
     });
     fragment.appendChild(search);
   }
@@ -418,7 +450,7 @@ function buildEnhancedNavigation(nav) {
   }
 
   nav.addEventListener("mouseleave", () => {
-    if (window.innerWidth > 900) {
+    if (isDesktopNav()) {
       if (navCloseTimer) clearTimeout(navCloseTimer);
       navCloseTimer = setTimeout(closeAllNavGroups, 180);
     }
@@ -435,7 +467,12 @@ function buildEnhancedNavigation(nav) {
 
   document.addEventListener("keydown", (event) => {
     if (event.key === "Escape") {
+      const openGroup = nav.querySelector(".nav-group.is-open");
+      const activeInsideMenu = openGroup && openGroup.querySelector(".nav-menu")?.contains(document.activeElement);
       closeAllNavGroups();
+      if (activeInsideMenu) {
+        openGroup.querySelector(".nav-trigger")?.focus();
+      }
     }
   });
 }
@@ -466,20 +503,49 @@ document.addEventListener("DOMContentLoaded", () => {
 
     document.addEventListener("keydown", (event) => {
       if (event.key === "Escape" && nav.classList.contains("is-open")) {
+        const wasInsideNav = nav.contains(document.activeElement);
         nav.classList.remove("is-open");
         menuButton.setAttribute("aria-expanded", "false");
+        if (wasInsideNav) menuButton.focus();
       }
     });
   }
 
-  // Defensive table containment: ensure every data table is wrapped in a touch-scrollable container
+  // Defensive table containment: avoid double-wrapping and make every scroll region keyboard-accessible
+  const existingTableContainerSelector = ".table-wrap, .table-container, .table-responsive, .data-table-wrap, .comparison-table-wrap, .ppri-table-wrap, .district-table-container, .obs-table-container, .el-table-wrap";
+  const deriveTableLabel = (table, wrap) => {
+    const caption = table.querySelector("caption");
+    if (caption && caption.textContent.trim()) return caption.textContent.trim();
+    let prev = wrap.previousElementSibling;
+    while (prev && !/^H[1-6]$/.test(prev.tagName)) {
+      const innerH = prev.querySelector("h2, h3, h4");
+      if (innerH && innerH.textContent.trim()) return innerH.textContent.trim();
+      prev = prev.previousElementSibling;
+    }
+    if (prev && prev.textContent.trim()) return prev.textContent.trim();
+    const firstHeader = table.querySelector("thead th");
+    return firstHeader ? `Data table (${firstHeader.textContent.trim()})` : "Scrollable data table";
+  };
+
   document.querySelectorAll("table").forEach((table) => {
-    if (!table.closest(".table-wrap")) {
-      const wrap = document.createElement("div");
+    let wrap = table.closest(existingTableContainerSelector);
+    if (!wrap) {
+      wrap = document.createElement("div");
       wrap.className = "table-wrap";
       table.parentNode.insertBefore(wrap, table);
       wrap.appendChild(table);
     }
+    if (!wrap.hasAttribute("tabindex")) wrap.setAttribute("tabindex", "0");
+    if (!wrap.hasAttribute("role")) wrap.setAttribute("role", "region");
+    if (!wrap.hasAttribute("aria-label") && !wrap.hasAttribute("aria-labelledby")) {
+      wrap.setAttribute("aria-label", deriveTableLabel(table, wrap));
+    }
+  });
+
+  // Ensure horizontal scroll flow strips on homepage are keyboard-focusable and named
+  document.querySelectorAll(".research-flow, .scenario-path").forEach((flow) => {
+    if (!flow.hasAttribute("tabindex")) flow.setAttribute("tabindex", "0");
+    if (!flow.hasAttribute("role")) flow.setAttribute("role", "region");
   });
 
   document.querySelectorAll("[data-current-year]").forEach((element) => {
