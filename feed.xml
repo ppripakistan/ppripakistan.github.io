@@ -5,7 +5,7 @@
     <link>https://ppripakistan.github.io/</link>
     <description>Peer-reviewed policy papers, empirical reports, datasets, and constitutional legal analysis on provincial reform, federalism, and municipal devolution in Pakistan.</description>
     <language>en-pk</language>
-    <lastBuildDate>Sun, 18 Oct 2026 12:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 26 Nov 2026 15:30:00 GMT</lastBuildDate>
     <atom:link href="https://ppripakistan.github.io/feed.xml" rel="self" type="application/rss+xml" />
     <image>
       <url>https://ppripakistan.github.io/assets/images/brand/ppri-logo.png</url>
@@ -14,11 +14,51 @@
     </image>
 
     <item>
-      <title>PPRI Expands Policy Archive to 25 Articles &amp; Completes Subnational Governance Series</title>
+      <title>28th Amendment in Pakistan — Have New Provinces Been Approved? (Dated 26 Nov 2026 Tracker)</title>
+      <link>https://ppripakistan.github.io/articles/28th-amendment-pakistan-status.html</link>
+      <guid isPermaLink="true">https://ppripakistan.github.io/articles/28th-amendment-pakistan-status.html</guid>
+      <pubDate>Thu, 26 Nov 2026 15:00:00 GMT</pubDate>
+      <description>What is known about Pakistan’s proposed 28th Amendment, where parties stand, and what Article 239 requires before provincial boundaries can change.</description>
+      <category>Constitutional Tracker</category>
+    </item>
+    <item>
+      <title>CSS Pakistan Affairs — The 18th Amendment, Devolution and a 20-Mark Model Answer</title>
+      <link>https://ppripakistan.github.io/articles/css-pakistan-affairs-18th-amendment-devolution.html</link>
+      <guid isPermaLink="true">https://ppripakistan.github.io/articles/css-pakistan-affairs-18th-amendment-devolution.html</guid>
+      <pubDate>Thu, 26 Nov 2026 14:45:00 GMT</pubDate>
+      <description>Prepare for CSS Pakistan Affairs with the 18th Amendment, Articles 140A and 160, a model answer on health and education, and a printable A4 answer planner.</description>
+      <category>CSS Exam Guide</category>
+    </item>
+    <item>
+      <title>Hazara Division — Eight Districts, 6.19 Million People, and the Province Debate</title>
+      <link>https://ppripakistan.github.io/data/hazara-division/</link>
+      <guid isPermaLink="true">https://ppripakistan.github.io/data/hazara-division/</guid>
+      <pubDate>Thu, 26 Nov 2026 14:30:00 GMT</pubDate>
+      <description>Eight districts of Hazara Division totaling 6,188,736 residents in Census 2023, with reference map, ranked population chart, and downloadable CSV.</description>
+      <category>Data Observatory</category>
+    </item>
+    <item>
+      <title>Pakistan’s Literacy Rate — Why the Census Says 60.65% and HIES Says 63%</title>
+      <link>https://ppripakistan.github.io/articles/pakistan-literacy-census-vs-hies.html</link>
+      <guid isPermaLink="true">https://ppripakistan.github.io/articles/pakistan-literacy-census-vs-hies.html</guid>
+      <pubDate>Thu, 26 Nov 2026 14:15:00 GMT</pubDate>
+      <description>Methods comparison contrasting Census 2023 Table 4.20 (60.65%) with PBS HIES 2024–25 Section 2.4.1 (63%), with shared-scale charts and Urdu summary.</description>
+      <category>Statistical Methods</category>
+    </item>
+    <item>
+      <title>How Much Did Each Province Receive Under the NFC? Q1 FY2026–27 Figures</title>
+      <link>https://ppripakistan.github.io/articles/pakistan-nfc-transfers-q1-fy2026-27.html</link>
+      <guid isPermaLink="true">https://ppripakistan.github.io/articles/pakistan-nfc-transfers-q1-fy2026-27.html</guid>
+      <pubDate>Thu, 26 Nov 2026 14:00:00 GMT</pubDate>
+      <description>Provisional July–September 2026 NFC transfers (Rs 1.895T) and overall fiscal balances including Balochistan’s −Rs 16.20B deficit, plus PKR million CSV.</description>
+      <category>Public Finance</category>
+    </item>
+    <item>
+      <title>PPRI Expands Policy Archive to 29 Articles &amp; Completes Subnational Governance Series</title>
       <link>https://ppripakistan.github.io/articles/</link>
       <guid isPermaLink="true">https://ppripakistan.github.io/articles/</guid>
       <pubDate>Sun, 18 Oct 2026 12:00:00 GMT</pubDate>
-      <description>Major institutional milestone completing 25 empirical policy papers spanning administrative scale, fiscal federalism, Article 140A devolution, and regional case studies.</description>
+      <description>Empirical policy series now spanning 29 articles across constitutional amendments, CSS devolution guides, literacy methods, and Q1 FY2026–27 NFC transfers.</description>
       <category>Policy Analysis</category>
     </item>
     <item>
@@ -251,7 +291,7 @@
       <link>https://ppripakistan.github.io/articles/hazara-province-why-has-the-demand-survived.html</link>
       <guid isPermaLink="true">https://ppripakistan.github.io/articles/hazara-province-why-has-the-demand-survived.html</guid>
       <pubDate>Fri, 02 Oct 2026 12:30:00 +0500</pubDate>
-      <description>Analyzing 16 years of post-18th Amendment mobilization, 5.7M population, Article 239 supermajority barriers, and hydropower fiscal viability.</description>
+      <description>Analyzing 16 years of post-18th Amendment mobilization, 6.19M population (6,188,736), Article 239 supermajority barriers, and hydropower fiscal viability.</description>
       <category>Articles</category>
     </item>
 

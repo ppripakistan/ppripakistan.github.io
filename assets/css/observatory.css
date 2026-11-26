@@ -1626,3 +1626,80 @@
     grid-template-columns: 1fr;
   }
 }
+
+/* Hazara Division Reference Map & Graphic Metadata */
+.hazara-map-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.45fr) minmax(240px, 1fr);
+  gap: 1.25rem;
+  align-items: start;
+}
+.hazara-map-frame {
+  background: #f8fafc;
+  border: 1px solid #cbd5e1;
+  border-radius: 10px;
+  padding: 0.9rem;
+}
+.hazara-map-frame svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.hazara-legend-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #ffffff;
+}
+.hazara-legend-item {
+  display: grid;
+  grid-template-columns: 28px 1fr auto;
+  gap: 0.55rem;
+  align-items: center;
+  padding: 0.55rem 0.75rem;
+  border-bottom: 1px solid #e2e8f0;
+  font-size: 0.86rem;
+  color: #1e293b;
+}
+.hazara-legend-item:last-child {
+  border-bottom: none;
+}
+.hazara-legend-num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 999px;
+  background: #073c3a;
+  color: #ffffff;
+  font-size: 0.76rem;
+  font-weight: 800;
+}
+.hazara-legend-item.is-top3 .hazara-legend-num {
+  background: #0f766e;
+}
+.hazara-legend-pop {
+  font-variant-numeric: tabular-nums;
+  font-weight: 700;
+  color: #073c3a;
+}
+.obs-graphic-meta {
+  margin-top: 0.85rem;
+  padding-top: 0.65rem;
+  border-top: 1px solid #e2e8f0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.4rem 1rem;
+  font-size: 0.8rem;
+  color: #475569;
+}
+@media (max-width: 860px) {
+  .hazara-map-layout {
+    grid-template-columns: 1fr;
+  }
+}

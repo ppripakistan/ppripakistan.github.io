@@ -320,7 +320,7 @@
   {
     "title": "Hazara Province: Why Has the Demand Survived for So Long?",
     "type": "Article",
-    "description": "An empirical analysis of the Hazara province movement in Khyber Pakhtunkhwa: 5.7M population, Article 239 barriers, assembly resolutions, and fiscal viability.",
+    "description": "An empirical analysis of the Hazara province movement in Khyber Pakhtunkhwa: 6.19M population (6,188,736), Article 239 barriers, assembly resolutions, and fiscal viability.",
     "url": "/articles/hazara-province-why-has-the-demand-survived.html",
     "tags": [
       "article",
@@ -726,6 +726,76 @@
       "PPRI",
       "Pakistan",
       "provinces"
+    ]
+  },
+  {
+    "title": "28th Amendment in Pakistan — Have New Provinces Been Approved?",
+    "type": "Article",
+    "description": "What is known about Pakistan’s proposed 28th Amendment, where parties stand, and what Article 239 requires before provincial boundaries can change.",
+    "url": "/articles/28th-amendment-pakistan-status.html",
+    "tags": [
+      "28th amendment",
+      "new provinces",
+      "article 239",
+      "article 48(6)",
+      "referendum",
+      "ppp",
+      "pml-n",
+      "pti",
+      "mqm-p",
+      "sindh assembly",
+      "PPRI-ART-2026-026"
+    ]
+  },
+  {
+    "title": "CSS Pakistan Affairs — The 18th Amendment, Devolution and a 20-Mark Model Answer",
+    "type": "Article",
+    "description": "Prepare for CSS Pakistan Affairs with the 18th Amendment, Articles 140A and 160, a model answer on health and education, and practice questions.",
+    "url": "/articles/css-pakistan-affairs-18th-amendment-devolution.html",
+    "tags": [
+      "css pakistan affairs",
+      "18th amendment",
+      "20 mark model answer",
+      "article 140a",
+      "article 160",
+      "article 25a",
+      "cci",
+      "health and education",
+      "PPRI-ART-2026-027"
+    ]
+  },
+  {
+    "title": "Pakistan’s Literacy Rate — Why the Census Says 60.65% and HIES Says 63%",
+    "type": "Article",
+    "description": "Pakistan’s Census 2023 reported 60.65% literacy and HIES 2024–25 reported 63%. See what each figure measures and which to use.",
+    "url": "/articles/pakistan-literacy-census-vs-hies.html",
+    "tags": [
+      "literacy rate",
+      "census 2023",
+      "hies 2024-25",
+      "60.65%",
+      "63%",
+      "urban rural literacy",
+      "gender gap",
+      "methods",
+      "PPRI-ART-2026-028"
+    ]
+  },
+  {
+    "title": "How Much Did Each Province Receive Under the NFC? Q1 FY2026–27 Figures",
+    "type": "Article",
+    "description": "See how much Punjab, Sindh, KP and Balochistan received in NFC transfers in July–September 2026, alongside their reported fiscal balances.",
+    "url": "/articles/pakistan-nfc-transfers-q1-fy2026-27.html",
+    "tags": [
+      "nfc transfers",
+      "q1 fy2026-27",
+      "july september 2026",
+      "punjab",
+      "sindh",
+      "kp",
+      "balochistan",
+      "fiscal balance",
+      "PPRI-ART-2026-029"
     ]
   },
   {
@@ -1251,6 +1321,20 @@
     ]
   },
   {
+    "title": "7th NFC Award Formula: Provincial Shares & Weights",
+    "type": "Fiscal Federalism Guide",
+    "description": "7th NFC Award vertical split (57.5% / 42.5%), 4-factor horizontal weights (82% population, 10.3% poverty, 5% revenue, 2.7% density), and 11th NFC updates.",
+    "url": "/reform/nfc-award-formula-pakistan/",
+    "tags": [
+      "nfc award",
+      "7th nfc",
+      "11th nfc",
+      "article 160",
+      "provincial shares",
+      "divisible pool"
+    ]
+  },
+  {
     "title": "Data Observatory & Interactive Knowledge Map",
     "type": "Data Observatory",
     "description": "Central empirical observatory: Interactive Knowledge Map of Pakistan's public data, Census 2023 baseline, NFC Reform Simulator, and district explorer.",
@@ -1471,17 +1555,32 @@
     ]
   },
   {
-    "title": "7th NFC Award Formula: Provincial Shares & Weights",
-    "type": "Fiscal Federalism Guide",
-    "description": "7th NFC Award vertical split (57.5% / 42.5%), 4-factor horizontal weights (82% population, 10.3% poverty, 5% revenue, 2.7% density), and 11th NFC updates.",
-    "url": "/reform/nfc-award-formula-pakistan/",
+    "title": "Hazara Division — Eight Districts, Census 2023 Populations & Province Debate",
+    "type": "Data Observatory: Hazara",
+    "description": "Eight Census 2023 districts of Hazara Division totaling 6,188,736 residents (Mansehra, Abbottabad, Haripur, Battagram, Upper Kohistan, Lower Kohistan, Kolai Palas Kohistan, Torghar), with map, ranked chart and CSV.",
+    "url": "/data/hazara-division/",
     "tags": [
-      "nfc award",
-      "7th nfc",
-      "11th nfc",
-      "article 160",
-      "provincial shares",
-      "divisible pool"
+      "hazara division",
+      "hazara census 2023",
+      "mansehra",
+      "abbottabad",
+      "haripur",
+      "battagram",
+      "kohistan",
+      "torghar"
+    ]
+  },
+  {
+    "title": "CSS Fast Facts Matrix — Constitutional Articles, NFC Weights & Devolution Data",
+    "type": "CSS Exam Reference",
+    "description": "Quick-reference CSS/PMS Pakistan Affairs data matrix linking key constitutional amendments, NFC shares, and demographic indicators.",
+    "url": "/data/css-fast-facts-pakistan/",
+    "tags": [
+      "css pakistan affairs",
+      "css fast facts",
+      "18th amendment",
+      "25th amendment",
+      "nfc formula"
     ]
   }
 ]

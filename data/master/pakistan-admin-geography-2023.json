@@ -53,7 +53,7 @@
         {"name": "Peshawar", "districts": ["Peshawar", "Charsadda", "Nowshera", "Khyber", "Mohmand"], "population_2023": 9124310, "centre": "Peshawar"},
         {"name": "Mardan", "districts": ["Mardan", "Swabi"], "population_2023": 4582190, "centre": "Mardan"},
         {"name": "Malakand", "districts": ["Swat", "Buner", "Dir Lower", "Dir Upper", "Malakand", "Shangla", "Chitral Lower", "Chitral Upper", "Bajaur"], "population_2023": 9871540, "centre": "Saidu Sharif"},
-        {"name": "Hazara", "districts": ["Abbottabad", "Haripur", "Mansehra", "Battagram", "Torghar", "Kohistan Lower", "Kohistan Upper", "Kolai-Palas"], "population_2023": 6102480, "centre": "Abbottabad"},
+        {"name": "Hazara", "districts": ["Abbottabad", "Haripur", "Mansehra", "Battagram", "Torghar", "Kohistan Lower", "Kohistan Upper", "Kolai-Palas"], "population_2023": 6188736, "centre": "Abbottabad"},
         {"name": "Kohat", "districts": ["Kohat", "Hangu", "Karak", "Kurram", "Orakzai"], "population_2023": 3912450, "centre": "Kohat"},
         {"name": "Bannu", "districts": ["Bannu", "Lakki Marwat", "North Waziristan"], "population_2023": 3421800, "centre": "Bannu"},
         {"name": "Dera Ismail Khan", "districts": ["DI Khan", "Tank", "South Waziristan Upper", "South Waziristan Lower"], "population_2023": 3841327, "centre": "Dera Ismail Khan"}

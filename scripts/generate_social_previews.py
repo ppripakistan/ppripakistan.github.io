@@ -169,10 +169,17 @@ OBSERVATORY_METRICS = {
     },
     'centre': {
         'tag': 'DATA OBSERVATORY',
-        'value': '10 Hubs',
+        'value': '11 Hubs',
         'label': 'Interactive Subnational Policy Atlas',
         'bars': [('Population', 'Census 2023', 0.95, COL_FOREST), ('Public Finance', 'NFC Models', 0.88, COL_EMERALD), ('Digital Access', 'HIES 2024-25', 0.82, (48, 136, 128)), ('Living Standards', '5 Quintiles', 0.78, COL_LIME)],
         'source': 'Pakistan Provincial Reform Institute Policy Observatory'
+    },
+    'hazara-division': {
+        'tag': 'CENSUS 2023 DATA',
+        'value': '6.19M',
+        'label': 'Eight Districts of Hazara Division (KP Table 1)',
+        'bars': [('Mansehra', '1.80M', 0.95, COL_FOREST), ('Abbottabad', '1.42M', 0.75, COL_EMERALD), ('Haripur', '1.17M', 0.62, (48, 136, 128)), ('Battagram', '0.55M', 0.29, COL_LIME)],
+        'source': 'Pakistan Bureau of Statistics — 7th Census 2023 (Total: 6,188,736)'
     }
 }
 
@@ -238,7 +245,15 @@ RESEARCH_METRICS = {
 # ---------------------------------------------------------------------------
 def classify_article_kicker(slug, title, content):
     s = (slug + " " + title + " " + content[:2000]).lower()
-    if '18th amendment' in s or 'devolution' in s or 'article 140a' in s:
+    if '28th-amendment' in slug or '28th amendment' in s:
+        return '28TH AMENDMENT & ARTICLE 239 TRACKER'
+    elif 'css-pakistan-affairs' in slug:
+        return 'CSS PAKISTAN AFFAIRS · 18TH AMENDMENT'
+    elif 'census-vs-hies' in slug or '60.65%' in s:
+        return 'STATISTICAL METHODS · CENSUS VS HIES'
+    elif 'nfc-transfers-q1' in slug or 'q1 fy2026' in s:
+        return 'QUARTERLY PUBLIC FINANCE · Q1 FY2026–27'
+    elif '18th amendment' in s or 'devolution' in s or 'article 140a' in s:
         return 'CONSTITUTIONAL DEVOLUTION & ARTICLE 140A'
     elif 'bahawalpur' in s or 'saraiki' in s or 'south punjab' in s:
         return 'HISTORICAL PROVINCIAL REORGANIZATION'

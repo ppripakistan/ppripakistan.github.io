@@ -281,4 +281,23 @@ document.addEventListener("DOMContentLoaded", () => {
     window.addEventListener("resize", checkTocVisibility, { passive: true });
     checkTocVisibility();
   }
+
+  // 8. Unobtrusive citation & print triggers (avoid inline onclick)
+  document.querySelectorAll(".btn-copy-citation[data-art-code]").forEach((btn) => {
+    if (!btn.hasAttribute("onclick")) {
+      btn.addEventListener("click", () => {
+        if (typeof window.copyArticleCitation === "function") {
+          window.copyArticleCitation(
+            btn.dataset.artCode,
+            btn.dataset.artTitle,
+            btn.dataset.pubYear
+          );
+        }
+      });
+    }
+  });
+
+  document.querySelectorAll("[data-print-planner]").forEach((btn) => {
+    btn.addEventListener("click", () => window.print());
+  });
 });

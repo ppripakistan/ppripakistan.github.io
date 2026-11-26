@@ -72,7 +72,10 @@
   border-radius: 9999px;
   font-size: 0.82rem;
   font-weight: 600;
+  line-height: 1.2;
   letter-spacing: 0.01em;
+  white-space: nowrap;
+  flex-shrink: 0;
   transition: all 0.2s ease;
 }
 
@@ -801,6 +804,14 @@
   align-items: flex-start;
   gap: 12px;
   margin-bottom: 12px;
+}
+.const-amendment-header > div {
+  min-width: 0;
+}
+@media (max-width: 520px) {
+  .const-amendment-header {
+    flex-wrap: wrap;
+  }
 }
 
 .const-amendment-title {

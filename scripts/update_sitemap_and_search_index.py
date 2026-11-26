@@ -40,6 +40,9 @@ CANONICAL_OBSERVATORY_HUBS = [
     "https://ppripakistan.github.io/knowledge-library/",
     "https://ppripakistan.github.io/data/downloads/",
     "https://ppripakistan.github.io/data/methodology/",
+    "https://ppripakistan.github.io/data/hazara-division/",
+    "https://ppripakistan.github.io/data/literacy-rate-pakistan/",
+    "https://ppripakistan.github.io/data/css-fast-facts-pakistan/",
 ]
 
 CANONICAL_CONSTITUTION_PAGES = [
@@ -55,6 +58,7 @@ CANONICAL_URDU_PAGES = [
     "https://ppripakistan.github.io/ur/consultation/survey.html",
     "https://ppripakistan.github.io/ur/provinces/",
     "https://ppripakistan.github.io/ur/data/centre.html",
+    "https://ppripakistan.github.io/ur/data/literacy-rate-pakistan/",
     "https://ppripakistan.github.io/ur/research/",
     "https://ppripakistan.github.io/ur/research/reports/",
     "https://ppripakistan.github.io/ur/research/reports/income-went-up-why-does-life-feel-harder.html",
@@ -89,6 +93,7 @@ HREFLANG_PAIRS = [
     ("https://ppripakistan.github.io/articles/karachi-urban-sindh-representation-revenue-administration.html", "https://ppripakistan.github.io/ur/articles/karachi-urban-sindh-representation-revenue-administration.html"),
     ("https://ppripakistan.github.io/articles/bahawalpur-province-restoration-2026.html", "https://ppripakistan.github.io/ur/articles/bahawalpur-province-restoration-2026.html"),
     ("https://ppripakistan.github.io/articles/is-gilgit-baltistan-a-province-of-pakistan.html", "https://ppripakistan.github.io/ur/articles/is-gilgit-baltistan-a-province-of-pakistan.html"),
+    ("https://ppripakistan.github.io/data/literacy-rate-pakistan/", "https://ppripakistan.github.io/ur/data/literacy-rate-pakistan/"),
     ("https://ppripakistan.github.io/surveys/", "https://ppripakistan.github.io/ur/consultation/survey.html"),
 ]
 
@@ -401,6 +406,20 @@ def clean_and_update_search_index():
             "description": "7th NFC Award vertical split (57.5% / 42.5%), 4-factor horizontal weights (82% population, 10.3% poverty, 5% revenue, 2.7% density), and 11th NFC updates.",
             "url": "/reform/nfc-award-formula-pakistan/",
             "tags": ["nfc award", "7th nfc", "11th nfc", "article 160", "provincial shares", "divisible pool"]
+        },
+        {
+            "title": "Hazara Division — Eight Districts, Census 2023 Populations & Province Debate",
+            "type": "Data Observatory: Hazara",
+            "description": "Eight Census 2023 districts of Hazara Division totaling 6,188,736 residents (Mansehra, Abbottabad, Haripur, Battagram, Upper Kohistan, Lower Kohistan, Kolai Palas Kohistan, Torghar), with map, ranked chart and CSV.",
+            "url": "/data/hazara-division/",
+            "tags": ["hazara division", "hazara census 2023", "mansehra", "abbottabad", "haripur", "battagram", "kohistan", "torghar"]
+        },
+        {
+            "title": "CSS Fast Facts Matrix — Constitutional Articles, NFC Weights & Devolution Data",
+            "type": "CSS Exam Reference",
+            "description": "Quick-reference CSS/PMS Pakistan Affairs data matrix linking key constitutional amendments, NFC shares, and demographic indicators.",
+            "url": "/data/css-fast-facts-pakistan/",
+            "tags": ["css pakistan affairs", "css fast facts", "18th amendment", "25th amendment", "nfc formula"]
         }
     ]
 
@@ -558,6 +577,13 @@ def clean_and_update_search_index():
             "description": "پاکستان میں صوبائی تنظیمِ نو، کراچی، بہاولپور، گلگت بلتستان اور مردم شماری پر اردو مضامین۔",
             "url": "/ur/articles/",
             "tags": ["اردو مضامین", "پالیسی تجزیہ", "صوبائی اصلاحات"]
+        },
+        {
+            "title": "پاکستان میں شرحِ خواندگی — HIES 2024–25 اور مردم شماری 2023",
+            "type": "تعلیمی ڈیٹا",
+            "description": "عمر 10+ آبادی میں قومی شرحِ خواندگی 63% (HIES 2024–25) بمقابلہ 60.65% (مردم شماری 2023)، صوبائی تفصیل اور شہری–دیہی فرق۔",
+            "url": "/ur/data/literacy-rate-pakistan/",
+            "tags": ["شرح خواندگی", "تعلیم", "مردم شماری 2023", "HIES 2024-25"]
         }
     ]
 
