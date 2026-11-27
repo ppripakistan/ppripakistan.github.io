@@ -53,6 +53,7 @@
             this.answers = data.answers || {};
             this.optionalRegion = data.optionalRegion || "";
             this.optionalComments = data.optionalComments || "";
+            this.savedStep = Number.isInteger(data.savedStep) ? Math.max(0, Math.min(6, data.savedStep)) : 0;
           }
         }
       } catch (e) {
@@ -62,12 +63,15 @@
 
     saveDraft() {
       try {
+        const stepToSave = this.currentStep >= 1 && this.currentStep <= 6 ? this.currentStep : (this.savedStep || 0);
+        this.savedStep = stepToSave;
         sessionStorage.setItem(
           this.storageKey,
           JSON.stringify({
             answers: this.answers,
             optionalRegion: this.optionalRegion,
             optionalComments: this.optionalComments,
+            savedStep: stepToSave,
             timestamp: new Date().toISOString()
           })
         );
@@ -78,6 +82,7 @@
 
     clearDraft() {
       try {
+        this.savedStep = 0;
         sessionStorage.removeItem(this.storageKey);
       } catch (e) {
         console.warn("Could not clear survey draft", e);
@@ -86,6 +91,9 @@
 
     goToStep(step) {
       this.currentStep = step;
+      if (step >= 1 && step <= 6) {
+        this.saveDraft();
+      }
       this.render();
       const reduceMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
       this.container.scrollIntoView({ behavior: reduceMotion ? "auto" : "smooth", block: "start" });
@@ -128,6 +136,10 @@
        STEP 0: INTRO SCREEN
        ------------------------------------------------------------- */
     renderIntro() {
+      const answeredCount = Object.keys(this.answers || {}).length;
+      const resumeStep = this.savedStep >= 1 && this.savedStep <= 6 ? this.savedStep : (answeredCount >= 5 ? 6 : answeredCount + 1);
+      const hasSavedProgress = answeredCount > 0;
+
       this.container.innerHTML = `
         <div class="survey-step-card survey-intro-box">
           <div class="survey-intro-icon">
@@ -135,6 +147,11 @@
           </div>
           <h1>${this.survey.title}</h1>
           <p class="desc">${this.survey.detailedDescription || this.survey.shortDescription}</p>
+          ${
+            hasSavedProgress
+              ? `<div class="callout" role="status" style="margin: 16px auto; text-align: left; max-width: 540px; padding: 12px 16px; border-radius: 8px; background: #EEF3EE; border: 1px solid #99f6e4; color: #12392D;"><strong>Saved progress detected:</strong> You answered ${answeredCount} of 5 questions in this session. You can resume right where you left off or clear your draft.</div>`
+              : ""
+          }
           
           <div class="survey-intro-badges">
             <span class="survey-intro-badge">
@@ -151,17 +168,32 @@
             </span>
           </div>
 
-          <div>
-            <button type="button" class="survey-intro-btn" id="btnStartSurvey">
-              Start survey &rarr;
-            </button>
+          <div style="display: flex; gap: 10px; justify-content: center; flex-wrap: wrap;">
+            ${
+              hasSavedProgress
+                ? `<button type="button" class="survey-intro-btn" id="btnResumeSurvey">Resume draft (${answeredCount}/5) &rarr;</button>
+                   <button type="button" class="survey-btn survey-btn-secondary" id="btnStartSurvey">Start fresh</button>`
+                : `<button type="button" class="survey-intro-btn" id="btnStartSurvey">Start survey &rarr;</button>`
+            }
           </div>
         </div>
       `;
 
+      const resumeBtn = this.container.querySelector("#btnResumeSurvey");
+      if (resumeBtn) {
+        resumeBtn.addEventListener("click", () => this.goToStep(Math.min(6, Math.max(1, resumeStep))));
+      }
       const startBtn = this.container.querySelector("#btnStartSurvey");
       if (startBtn) {
-        startBtn.addEventListener("click", () => this.goToStep(1));
+        startBtn.addEventListener("click", () => {
+          if (hasSavedProgress) {
+            this.answers = {};
+            this.optionalRegion = "";
+            this.optionalComments = "";
+            this.clearDraft();
+          }
+          this.goToStep(1);
+        });
       }
     }
 

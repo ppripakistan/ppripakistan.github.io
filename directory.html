@@ -69,14 +69,63 @@
         <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-navigation">Menu</button>
         <nav id="site-navigation" class="nav-links" aria-label="Primary navigation">
           <a href="/">Home</a>
-          <a href="/constitution/">Constitution</a>
-          <a href="/research/">Research</a>
-          <a href="/provinces/">Reform</a>
-          <a href="/scenarios/">Scenarios</a>
-          <a href="/data/centre.html">Data</a>
-          <a href="/publications/">Publications</a>
-          <a href="/surveys/">Surveys</a>
-          <a href="/about.html">About</a>
+          <details class="nav-group">
+            <summary class="nav-trigger">Constitution</summary>
+            <div class="nav-menu">
+              <a href="/constitution/">Constitution overview</a>
+              <a href="/constitution/reader/">Article reader</a>
+              <a href="/constitution/amendments/">Amendments</a>
+            </div>
+          </details>
+          <details class="nav-group">
+            <summary class="nav-trigger">Research</summary>
+            <div class="nav-menu">
+              <a href="/research/">Research programme</a>
+              <a href="/publications/">Publications</a>
+              <a href="/research/reports/">Reports</a>
+              <a href="/articles/">Articles</a>
+              <a href="/research/agenda.html">Research agenda</a>
+            </div>
+          </details>
+          <details class="nav-group">
+            <summary class="nav-trigger">Reform &amp; scenarios</summary>
+            <div class="nav-menu">
+              <a href="/provinces/">Provincial reform</a>
+              <a href="/provinces/proposed-models.html">Reform models</a>
+              <a href="/resources/constitution.html">Constitutional basis</a>
+              <a href="/scenarios/">Governance scenarios</a>
+              <a href="/maps/scenarios/">Interactive map lab</a>
+            </div>
+          </details>
+          <details class="nav-group">
+            <summary class="nav-trigger">Data &amp; tools</summary>
+            <div class="nav-menu">
+              <a href="/data/centre.html">Data Centre</a>
+              <a href="/data/compare/">Compare provinces</a>
+              <a href="/data/downloads/">Download datasets</a>
+              <a href="/insights/">Charts &amp; infographics</a>
+              <a href="/knowledge-library/">Knowledge Library</a>
+              <a href="/data/css-fast-facts-pakistan/">Fast facts</a>
+            </div>
+          </details>
+          <details class="nav-group">
+            <summary class="nav-trigger">Participate</summary>
+            <div class="nav-menu">
+              <a href="/surveys/">Community surveys</a>
+              <a href="/consultation/">Public consultation</a>
+              <a href="/consultation/submissions.html">Submit a policy proposal</a>
+            </div>
+          </details>
+          <details class="nav-group">
+            <summary class="nav-trigger">About</summary>
+            <div class="nav-menu">
+              <a href="/about.html">About PPRI</a>
+              <a href="/researchers/">Researchers</a>
+              <a href="/methodology/">Methods &amp; standards</a>
+              <a href="/transparency.html">Transparency</a>
+              <a href="/contact.html">Contact</a>
+            </div>
+          </details>
           <a class="nav-search" href="/search.html">Search</a>
         </nav>
       </div>
@@ -100,34 +149,6 @@
           <div class="dir-section">
             <h2>1. Policy Articles &amp; Analytical Series (29 Articles)</h2>
             <ul class="dir-list">
-              <li class="dir-item">
-                <a href="/surveys/">Have Your Say: Pakistan Community Surveys Portal</a>
-                <p>Public survey hub featuring 6 short (3–5 min) citizen surveys on provinces, local government, bureaucracy, living costs, youth jobs, and overseas work.</p>
-              </li>
-              <li class="dir-item">
-                <a href="/surveys/new-provinces/">Community Survey 1: New Provinces &amp; Local Representation</a>
-                <p>Citizen opinions on administrative boundaries, regional representation, and provincial restructuring.</p>
-              </li>
-              <li class="dir-item">
-                <a href="/surveys/local-government/">Community Survey 2: Stronger Local Government</a>
-                <p>Feedback on municipal service delivery, local elections, and municipal devolution under Article 140A.</p>
-              </li>
-              <li class="dir-item">
-                <a href="/surveys/government-delays/">Community Survey 3: Government Delays &amp; Paperwork</a>
-                <p>Citizen experiences with waiting times, forms, office visits, and public service barriers.</p>
-              </li>
-              <li class="dir-item">
-                <a href="/surveys/household-costs-inflation/">Community Survey 4: Household Costs &amp; Inflation</a>
-                <p>Household views on rising food, utility, and fuel prices, budget coping mechanisms, and policy relief.</p>
-              </li>
-              <li class="dir-item">
-                <a href="/surveys/youth-jobs/">Community Survey 5: Youth Jobs &amp; Career Opportunities</a>
-                <p>Challenges facing young job seekers, training needs, relocation preferences, and employment priorities.</p>
-              </li>
-              <li class="dir-item">
-                <a href="/surveys/jobs-abroad/">Community Survey 6: Jobs Abroad &amp; Moving for Work</a>
-                <p>Perspectives on overseas migration, recruitment barriers, worker protection, and staying in Pakistan.</p>
-              </li>
               <li class="dir-item">
                 <a href="/articles/provinces-of-pakistan-names-capitals-population.html">How Many Provinces in Pakistan (2026)? Names, Capitals &amp; Population</a>
                 <p>Official 2026 reference guide to Pakistan's 4 provinces, ICT, GB, and AJK with 2023 Census data and capitals.</p>
@@ -307,8 +328,8 @@
                 <p>8-district population table (6,188,736 total), KP inset reference map, ranked chart, and open CSV.</p>
               </li>
               <li class="dir-item">
-                <a href="/knowledge-library/#district-explorer">164 Districts of Pakistan Database (Census 2023)</a>
-                <p>Searchable reference database and rankings of all gazetted districts with population and area.</p>
+                <a href="/knowledge-library/#district-explorer">168 Districts of Pakistan Database (144 Prov+ICT &middot; Admin Geo. 2023)</a>
+                <p>Searchable reference database and rankings of Pakistan's districts with population and area.</p>
               </li>
               <li class="dir-item">
                 <a href="/knowledge-library/">PPRI Pakistan Knowledge Library (CSS/PMS Question Bank)</a>
@@ -363,7 +384,7 @@
               </li>
               <li class="dir-item">
                 <a href="/maps/current/administrative.html">Current Administrative Map of Pakistan (Reference Layer)</a>
-                <p>Interactive Leaflet GIS map and complete static hierarchy of 4 provinces, 38 divisions, and 164 districts.</p>
+                <p>Interactive Leaflet GIS map and complete static hierarchy of 4 provinces + ICT (144 districts) and 38 divisions (168 districts incl. GB &amp; AJK).</p>
               </li>
               <li class="dir-item">
                 <a href="/maps/scenarios/">Interactive Scenario Lab (PPRI-01 Model)</a>
@@ -382,7 +403,7 @@
 
           <!-- PILLAR 5: REFORM FRAMEWORKS -->
           <div class="dir-section">
-            <h2>5. Reform Frameworks &amp; Statutory Resources (8 Pages)</h2>
+            <h2>5. Reform Frameworks &amp; Statutory Resources (10 Pages)</h2>
             <ul class="dir-list">
               <li class="dir-item">
                 <a href="/provinces/">Provincial Reform Overview</a>
@@ -417,8 +438,8 @@
                 <p>3-year phased implementation plan, secretariat construction cost estimates, and High Court benches.</p>
               </li>
               <li class="dir-item">
-                <a href="/resources/constitution.html">Constitution of Pakistan 1973 Reader</a>
-                <p>Annotated reader with full text and commentary on Articles 1, 140A, 160, 172, and 239(4).</p>
+                <a href="/resources/constitution.html">Constitutional Basis for Reform (Primer)</a>
+                <p>Annotated primer with commentary on Articles 1, 140A, 160, 172, and 239(4); use <a href="/constitution/reader/">Article Reader</a> for the complete 280-article text.</p>
               </li>
               <li class="dir-item">
                 <a href="/resources/legislation.html">Provincial Local Government Acts Compared</a>
@@ -429,7 +450,7 @@
 
           <!-- PILLAR 6: ENGAGEMENT & ABOUT -->
           <div class="dir-section">
-            <h2>6. Public Consultation, Ethics &amp; Institutional Governance (10 Pages)</h2>
+            <h2>6. Public Consultation, Ethics &amp; Institutional Governance (16 Pages)</h2>
             <ul class="dir-list">
               <li class="dir-item">
                 <a href="/consultation/">Public Consultation Portal</a>
@@ -440,8 +461,32 @@
                 <p>22 comprehensive answers to common questions regarding new provinces, Article 239, and NFC awards.</p>
               </li>
               <li class="dir-item">
-                <a href="/surveys/">National Governance Survey</a>
-                <p>Interactive public survey capturing citizen attitudes toward administrative decentralization.</p>
+                <a href="/surveys/">Have Your Say: Pakistan Community Surveys Portal</a>
+                <p>Public survey hub featuring 6 short (3–5 min) citizen surveys on provinces, local government, bureaucracy, living costs, youth jobs, and overseas work.</p>
+              </li>
+              <li class="dir-item">
+                <a href="/surveys/new-provinces/">Community Survey 1: New Provinces &amp; Local Representation</a>
+                <p>Citizen opinions on administrative boundaries, regional representation, and provincial restructuring.</p>
+              </li>
+              <li class="dir-item">
+                <a href="/surveys/local-government/">Community Survey 2: Stronger Local Government</a>
+                <p>Feedback on municipal service delivery, local elections, and municipal devolution under Article 140A.</p>
+              </li>
+              <li class="dir-item">
+                <a href="/surveys/government-delays/">Community Survey 3: Government Delays &amp; Paperwork</a>
+                <p>Citizen experiences with waiting times, forms, office visits, and public service barriers.</p>
+              </li>
+              <li class="dir-item">
+                <a href="/surveys/household-costs-inflation/">Community Survey 4: Household Costs &amp; Inflation</a>
+                <p>Household views on rising food, utility, and fuel prices, budget coping mechanisms, and policy relief.</p>
+              </li>
+              <li class="dir-item">
+                <a href="/surveys/youth-jobs/">Community Survey 5: Youth Jobs &amp; Career Opportunities</a>
+                <p>Challenges facing young job seekers, training needs, relocation preferences, and employment priorities.</p>
+              </li>
+              <li class="dir-item">
+                <a href="/surveys/jobs-abroad/">Community Survey 6: Jobs Abroad &amp; Moving for Work</a>
+                <p>Perspectives on overseas migration, recruitment barriers, worker protection, and staying in Pakistan.</p>
               </li>
               <li class="dir-item">
                 <a href="/consultation/submissions.html">Submit Policy Memoranda &amp; Feedback</a>

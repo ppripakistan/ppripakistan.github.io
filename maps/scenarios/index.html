@@ -107,14 +107,63 @@
         </button>
         <nav id="site-navigation" class="nav-links" aria-label="Primary navigation">
           <a href="/">Home</a>
-          <a href="/constitution/">Constitution</a>
-          <a href="/research/">Research</a>
-          <a href="/provinces/">Reform</a>
-          <a href="/scenarios/">Scenarios</a>
-          <a href="/data/centre.html">Data</a>
-          <a href="/publications/">Publications</a>
-          <a href="/consultation/">Engage</a>
-          <a href="/about.html">About</a>
+          <details class="nav-group">
+            <summary class="nav-trigger">Constitution</summary>
+            <div class="nav-menu">
+              <a href="/constitution/">Constitution overview</a>
+              <a href="/constitution/reader/">Article reader</a>
+              <a href="/constitution/amendments/">Amendments</a>
+            </div>
+          </details>
+          <details class="nav-group">
+            <summary class="nav-trigger">Research</summary>
+            <div class="nav-menu">
+              <a href="/research/">Research programme</a>
+              <a href="/publications/">Publications</a>
+              <a href="/research/reports/">Reports</a>
+              <a href="/articles/">Articles</a>
+              <a href="/research/agenda.html">Research agenda</a>
+            </div>
+          </details>
+          <details class="nav-group">
+            <summary class="nav-trigger">Reform &amp; scenarios</summary>
+            <div class="nav-menu">
+              <a href="/provinces/">Provincial reform</a>
+              <a href="/provinces/proposed-models.html">Reform models</a>
+              <a href="/resources/constitution.html">Constitutional basis</a>
+              <a href="/scenarios/">Governance scenarios</a>
+              <a href="/maps/scenarios/" aria-current="page">Interactive map lab</a>
+            </div>
+          </details>
+          <details class="nav-group">
+            <summary class="nav-trigger">Data &amp; tools</summary>
+            <div class="nav-menu">
+              <a href="/data/centre.html">Data Centre</a>
+              <a href="/data/compare/">Compare provinces</a>
+              <a href="/data/downloads/">Download datasets</a>
+              <a href="/insights/">Charts &amp; infographics</a>
+              <a href="/knowledge-library/">Knowledge Library</a>
+              <a href="/data/css-fast-facts-pakistan/">Fast facts</a>
+            </div>
+          </details>
+          <details class="nav-group">
+            <summary class="nav-trigger">Participate</summary>
+            <div class="nav-menu">
+              <a href="/surveys/">Community surveys</a>
+              <a href="/consultation/">Public consultation</a>
+              <a href="/consultation/submissions.html">Submit a policy proposal</a>
+            </div>
+          </details>
+          <details class="nav-group">
+            <summary class="nav-trigger">About</summary>
+            <div class="nav-menu">
+              <a href="/about.html">About PPRI</a>
+              <a href="/researchers/">Researchers</a>
+              <a href="/methodology/">Methods &amp; standards</a>
+              <a href="/transparency.html">Transparency</a>
+              <a href="/contact.html">Contact</a>
+            </div>
+          </details>
           <a class="nav-search" href="/search.html">Search</a>
         </nav>
       </div>
@@ -462,30 +511,15 @@
         <div class="container">
           <div class="seo-data-summary" id="executive-data-summary" aria-label="Executive Data Summary">
             <h2>Cartographic Scenario Modeling: Pakistan Administrative Scale &amp; Reorganization</h2>
-            <p class="summary-lead"><strong>Executive Overview:</strong> The PPRI Cartographic Scenario Lab provides interactive spatial modeling tools to examine sub-national administrative restructuring in Pakistan. Based on 2023 Census micro-data across Pakistan's 146 districts and 574 tehsils, the primary illustrative scenario (PPRI-01) evaluates a polycentric 13-unit administrative model designed to optimize citizen proximity, equalize demographic weight, and streamline public expenditure.</p>
+            <p class="summary-lead"><strong>Executive Overview:</strong> The PPRI Cartographic Scenario Lab provides interactive spatial modeling tools to examine sub-national administrative restructuring in Pakistan. Based on 2023 Census micro-data across Pakistan's 144 provincial/ICT districts (141 editable ADM3 GIS polygons; 168 national districts incl. GB &amp; AJK) and 574 tehsils, the primary illustrative scenario (PPRI-01) evaluates a polycentric 13-unit administrative model designed to optimize citizen proximity, equalize demographic weight, and streamline public expenditure.</p>
             <p>Under the baseline 4-province model, average provincial population exceeds 60.3 million citizens—an extreme global outlier compared to India (average 36M), Nigeria (5.8M), the United States (6.7M), or Germany (5.2M). Reorganizing Pakistan into 13 autonomous provincial units reduces average provincial population to 18.5 million citizens, eliminates multi-day travel distances to provincial secretariats, and establishes a balanced Senate and NFC divisible pool distribution without altering external federal borders.</p>
-            <div class="table-wrap"><table class="data-summary-table"><thead><tr><th>Administrative Model</th><th>Number of Provincial Units</th><th>Average Population / Unit</th><th>Largest Unit Population</th><th>Smallest Unit Population</th><th>NFC Divisible Pool Impact</th></tr></thead><tbody><tr><td>Current Constitutional Baseline</td><td>4 Provinces (+ICT)</td><td>60,374,857</td><td>Punjab (127.69M)</td><td>Balochistan (14.89M)</td><td>Single province holds 51.7% share</td></tr><tr><td>PPRI-01 13-Unit Model</td><td>13 Autonomous Units</td><td>18,576,879</td><td>Central Punjab (26.8M)</td><td>Makran &amp; Kalat (4.2M)</td><td>No unit holds &gt;15% of pool</td></tr><tr><td>Divisional Baseline Model</td><td>33 Divisional Units</td><td>7,318,164</td><td>Lahore Div (13.0M)</td><td>Zhob Division (1.8M)</td><td>Direct district-cluster funding</td></tr></tbody></table></div>
+            <div class="table-wrap"><table class="data-summary-table"><thead><tr><th>Administrative Model</th><th>Number of Provincial Units</th><th>Average Population / Unit</th><th>Largest Unit Population</th><th>Smallest Unit Population</th><th>NFC Divisible Pool Impact</th></tr></thead><tbody><tr><td>Current Constitutional Baseline</td><td>4 Provinces (+ICT)</td><td>60,374,857</td><td>Punjab (127.69M)</td><td>Balochistan (14.89M)</td><td>Single province holds 51.7% share</td></tr><tr><td>PPRI-01 13-Unit Model</td><td>13 Autonomous Units</td><td>18,576,879</td><td>Central Punjab (26.8M)</td><td>Makran &amp; Kalat (4.2M)</td><td>No unit holds &gt;15% of pool</td></tr><tr><td>Divisional Baseline Model</td><td>32 Provincial Divisions (38 incl. GB &amp; AJK)</td><td>7,472,986 (4-Prov mean)</td><td>Lahore Div (22.77M)</td><td>Zhob Division (0.89M)</td><td>Direct district-cluster funding</td></tr></tbody></table></div>
             <p class="summary-note"><em>Data Benchmark: Official verified public figures from PBS Census 2023, HIES 2024–25, PES 2025–26, and 7th NFC Award documents. Fully crawlable static reference data.</em></p>
           </div>
         </div>
       </section>
     </main>
     <footer class="site-footer">
-      <section class="directory-banner" aria-label="PPRI Research Directory">
-        <div class="container">
-          <div class="directory-banner-card">
-            <div class="directory-banner-content">
-              <span class="directory-banner-badge">Master Catalog</span>
-              <h3 class="directory-banner-title">Complete PPRI Policy, Research &amp; Data Directory</h3>
-              <p class="directory-banner-text">Explore the unified catalog of 25 policy articles, 5 research reports, and 10 subnational data observatories.</p>
-            </div>
-            <a href="/directory.html" class="directory-banner-btn">
-              <span>Browse 70+ Page Directory</span>
-              <span aria-hidden="true">&rarr;</span>
-            </a>
-          </div>
-        </div>
-      </section>
       <div data-nosnippet class="global-directory-nosnippet">
 
       </div>

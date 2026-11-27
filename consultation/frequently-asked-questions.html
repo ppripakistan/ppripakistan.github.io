@@ -107,7 +107,7 @@
       "name": "How many administrative divisions and districts are in Pakistan?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "As of 2026, Pakistan is divided into 38 administrative divisions and approximately 164 gazetted and listed districts across the 4 provinces and federal territories (Punjab: 11 divisions, 41 districts; Sindh: 7 divisions, 30 districts; Khyber Pakhtunkhwa: 7 divisions, 37 districts; Balochistan: 8 divisions, 37 districts; ICT: 1 district; Gilgit-Baltistan: 3 divisions, 14 districts; Azad Jammu & Kashmir: 3 divisions, 10 districts)."
+        "text": "Per PPRI Admin Geography 2023, Pakistan has 38 administrative divisions and 144 districts across the 4 provinces + ICT (168 total including 14 in Gilgit-Baltistan and 10 in Azad Jammu & Kashmir): Punjab: 10 divisions, 41 districts; Sindh: 7 divisions, 30 districts; Khyber Pakhtunkhwa: 7 divisions, 36 districts; Balochistan: 8 divisions, 36 districts; ICT: 1 district; Gilgit-Baltistan: 3 divisions, 14 districts; Azad Jammu & Kashmir: 3 divisions, 10 districts. (PBS Census 2023 Table 1 separately tabulates 135 provincial districts.)"
       }
     },
     {
@@ -273,14 +273,63 @@
         </button>
         <nav id="site-navigation" class="nav-links" aria-label="Primary navigation">
           <a href="/">Home</a>
-          <a href="/constitution/">Constitution</a>
-          <a href="/research/">Research</a>
-          <a href="/provinces/">Reform</a>
-          <a href="/scenarios/">Scenarios</a>
-          <a href="/data/centre.html">Data</a>
-          <a href="/publications/">Publications</a>
-          <a href="/consultation/">Engage</a>
-          <a href="/about.html">About</a>
+          <details class="nav-group">
+            <summary class="nav-trigger">Constitution</summary>
+            <div class="nav-menu">
+              <a href="/constitution/">Constitution overview</a>
+              <a href="/constitution/reader/">Article reader</a>
+              <a href="/constitution/amendments/">Amendments</a>
+            </div>
+          </details>
+          <details class="nav-group">
+            <summary class="nav-trigger">Research</summary>
+            <div class="nav-menu">
+              <a href="/research/">Research programme</a>
+              <a href="/publications/">Publications</a>
+              <a href="/research/reports/">Reports</a>
+              <a href="/articles/">Articles</a>
+              <a href="/research/agenda.html">Research agenda</a>
+            </div>
+          </details>
+          <details class="nav-group">
+            <summary class="nav-trigger">Reform &amp; scenarios</summary>
+            <div class="nav-menu">
+              <a href="/provinces/">Provincial reform</a>
+              <a href="/provinces/proposed-models.html">Reform models</a>
+              <a href="/resources/constitution.html">Constitutional basis</a>
+              <a href="/scenarios/">Governance scenarios</a>
+              <a href="/maps/scenarios/">Interactive map lab</a>
+            </div>
+          </details>
+          <details class="nav-group">
+            <summary class="nav-trigger">Data &amp; tools</summary>
+            <div class="nav-menu">
+              <a href="/data/centre.html">Data Centre</a>
+              <a href="/data/compare/">Compare provinces</a>
+              <a href="/data/downloads/">Download datasets</a>
+              <a href="/insights/">Charts &amp; infographics</a>
+              <a href="/knowledge-library/">Knowledge Library</a>
+              <a href="/data/css-fast-facts-pakistan/">Fast facts</a>
+            </div>
+          </details>
+          <details class="nav-group">
+            <summary class="nav-trigger">Participate</summary>
+            <div class="nav-menu">
+              <a href="/surveys/">Community surveys</a>
+              <a href="/consultation/">Public consultation</a>
+              <a href="/consultation/submissions.html">Submit a policy proposal</a>
+            </div>
+          </details>
+          <details class="nav-group">
+            <summary class="nav-trigger">About</summary>
+            <div class="nav-menu">
+              <a href="/about.html">About PPRI</a>
+              <a href="/researchers/">Researchers</a>
+              <a href="/methodology/">Methods &amp; standards</a>
+              <a href="/transparency.html">Transparency</a>
+              <a href="/contact.html">Contact</a>
+            </div>
+          </details>
           <a class="nav-search" href="/search.html">Search</a>
         </nav>
       </div>
@@ -373,7 +422,7 @@
             <details class="faq-card-modern" data-topic="scale">
               <summary>11. How many administrative divisions and districts are in Pakistan?</summary>
               <div class="faq-body">
-                <p>As of 2026, Pakistan is divided into 38 administrative divisions and approximately 164 gazetted and listed districts across the 4 provinces and federal territories (Punjab: 11 divisions, 41 districts; Sindh: 7 divisions, 30 districts; Khyber Pakhtunkhwa: 7 divisions, 37 districts; Balochistan: 8 divisions, 37 districts; ICT: 1 district; Gilgit-Baltistan: 3 divisions, 14 districts; Azad Jammu & Kashmir: 3 divisions, 10 districts).</p>
+                <p>Per PPRI Admin Geography 2023, Pakistan has 38 administrative divisions and 144 districts across the 4 provinces + ICT (168 total including 14 in Gilgit-Baltistan and 10 in Azad Jammu &amp; Kashmir): Punjab: 10 divisions, 41 districts; Sindh: 7 divisions, 30 districts; Khyber Pakhtunkhwa: 7 divisions, 36 districts; Balochistan: 8 divisions, 36 districts; ICT: 1 district; Gilgit-Baltistan: 3 divisions, 14 districts; Azad Jammu &amp; Kashmir: 3 divisions, 10 districts. (PBS Census 2023 Table 1 separately tabulates 135 provincial districts.)</p>
               </div>
             </details>
             <details class="faq-card-modern" data-topic="scale">
@@ -536,21 +585,6 @@
       }
     </script>
     <footer class="site-footer">
-      <section class="directory-banner" aria-label="PPRI Research Directory">
-        <div class="container">
-          <div class="directory-banner-card">
-            <div class="directory-banner-content">
-              <span class="directory-banner-badge">Master Catalog</span>
-              <h3 class="directory-banner-title">Complete PPRI Policy, Research &amp; Data Directory</h3>
-              <p class="directory-banner-text">Explore the unified catalog of 25 policy articles, 5 research reports, and 10 subnational data observatories.</p>
-            </div>
-            <a href="/directory.html" class="directory-banner-btn">
-              <span>Browse 70+ Page Directory</span>
-              <span aria-hidden="true">&rarr;</span>
-            </a>
-          </div>
-        </div>
-      </section>
       <div class="container footer-grid">
         <div>
           <img

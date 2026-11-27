@@ -30,6 +30,7 @@ jobs:
 
       - name: Synchronize & Verify Metadata
         run: |
+          python scripts/check_all_navs.py --require-no-directory-banner
           python scripts/update_sitemap_and_search_index.py
           python scripts/generate_social_previews.py
           python scripts/sync_preview_metadata.py

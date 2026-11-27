@@ -2,118 +2,70 @@ const PPRI_NAV = [
   {
     label: "Constitution",
     href: "/constitution/",
+    prefixes: ["/constitution/", "/resources/constitution.html"],
     items: [
-      ["Constitution Explorer Hub", "/constitution/"],
-      ["Overview & Salient Features", "/constitution/#salient-features"],
-      ["Interactive 280-Article Reader", "/constitution/reader/"],
-      ["Constitutional Architecture Atlas", "/constitution/#architecture-atlas"],
-      ["Amendments Register (1–27)", "/constitution/amendments/"],
-      ["Fundamental Rights (Arts 8–28)", "/constitution/reader/?part=Part+II"],
-      ["Provincial Devolution (Art. 140A)", "/constitution/reader/?article=140A"],
-      ["Fiscal Federalism (Art. 160)", "/constitution/reader/?article=160"],
-      ["Amendment Threshold (Art. 239)", "/constitution/reader/?article=239"],
+      ["Constitution overview", "/constitution/"],
+      ["Article reader", "/constitution/reader/"],
+      ["Amendments", "/constitution/amendments/"],
     ],
   },
   {
     label: "Research",
     href: "/research/",
+    prefixes: ["/research/", "/publications/", "/articles/", "/archive/"],
     items: [
-      ["Research Programme", "/research/"],
-      ["Policy Papers", "/publications/#policy-papers"],
-      ["Research Reports", "/research/reports/"],
-      ["Policy Briefs", "/publications/#briefs"],
-      ["Working Papers", "/publications/#working-papers"],
-      ["Articles & Analysis", "/articles/"],
-      ["Faculty & Working Groups", "/researchers/"],
-      ["Research Agenda", "/research/agenda.html"],
-      ["Research FAQ", "/research/faq.html"],
+      ["Research programme", "/research/"],
+      ["Publications", "/publications/"],
+      ["Reports", "/research/reports/"],
+      ["Articles", "/articles/"],
+      ["Research agenda", "/research/agenda.html"],
     ],
   },
   {
-    label: "Reform",
+    label: "Reform & scenarios",
     href: "/provinces/",
+    prefixes: ["/provinces/", "/scenarios/", "/maps/", "/resources/"],
     items: [
-      ["Provincial Reform Overview", "/provinces/"],
-      ["Proposed 13-Unit Model", "/provinces/proposed-models.html"],
-      ["Article 140A Municipal Devolution", "/scenarios/#local-government"],
-      ["Fiscal Framework & NFC", "/provinces/#fiscal-framework"],
-      ["Constitutional Path (Art. 239)", "/provinces/constitutional-framework.html"],
-      ["Administrative Model", "/provinces/#administrative-model"],
-      ["Transition Framework", "/provinces/transition-framework.html"],
-      ["Why Subnational Reform?", "/provinces/why-provinces.html"],
-      ["Constitution Reader", "/resources/constitution.html"],
-      ["Local Govt Legislation", "/resources/legislation.html"],
+      ["Provincial reform", "/provinces/"],
+      ["Reform models", "/provinces/proposed-models.html"],
+      ["Constitutional basis", "/resources/constitution.html"],
+      ["Governance scenarios", "/scenarios/"],
+      ["Interactive map lab", "/maps/scenarios/"],
     ],
   },
   {
-    label: "Scenarios",
-    href: "/scenarios/",
-    items: [
-      ["Governance Scenarios Suite", "/scenarios/"],
-      ["1. Four-Province Baseline", "/scenarios/#current-structure"],
-      ["2. Territorial Restructuring", "/scenarios/#new-provinces"],
-      ["3. Municipal Devolution (140A)", "/scenarios/#local-government"],
-      ["4. Comparative Decision Matrix", "/scenarios/#comparative-analysis"],
-      ["5. Global Federal Benchmarks", "/scenarios/#international-models"],
-      ["6. AI & Governance Delivery", "/scenarios/#technology-ai"],
-      ["Interactive GIS Scenario Lab", "/maps/scenarios/"],
-    ],
-  },
-  {
-    label: "Data",
+    label: "Data & tools",
     href: "/data/centre.html",
+    prefixes: ["/data/", "/insights/", "/knowledge-library/", "/sources/", "/reform/"],
     items: [
-      ["Central Data Observatory", "/data/centre.html"],
-      ["Population & Demographics", "/data/population/"],
-      ["Economy & Inflation", "/data/economy/"],
-      ["Public Finance & 7th NFC", "/data/public-finance/"],
-      ["Living Standards & Income", "/data/living-standards/"],
-      ["Education & Literacy", "/data/education/"],
-      ["Public Health Infrastructure", "/data/health/"],
-      ["Digital Access & Teledensity", "/data/digital-access/"],
-      ["Provinces Comparator", "/data/compare/"],
-      ["Open Data Downloads", "/data/downloads/"],
-      ["CSS Fast Facts Matrix", "/knowledge-library/"],
+      ["Data Centre", "/data/centre.html"],
+      ["Compare provinces", "/data/compare/"],
+      ["Download datasets", "/data/downloads/"],
+      ["Charts & infographics", "/insights/"],
+      ["Knowledge Library", "/knowledge-library/"],
+      ["Fast facts", "/data/css-fast-facts-pakistan/"],
     ],
   },
   {
-    label: "Publications",
-    href: "/publications/",
-    items: [
-      ["All Policy Publications", "/publications/"],
-      ["Policy Papers Series", "/publications/#policy-papers"],
-      ["Analytical Reports", "/research/reports/"],
-      ["Policy Briefs", "/publications/#briefs"],
-      ["Working Papers", "/publications/#working-papers"],
-      ["Historical Research Archive", "/archive/"],
-    ],
-  },
-  {
-    label: "Surveys",
+    label: "Participate",
     href: "/surveys/",
+    prefixes: ["/surveys/", "/consultation/"],
     items: [
-      ["Have Your Say: Surveys Hub", "/surveys/"],
-      ["1. New Provinces & Representation", "/surveys/new-provinces/"],
-      ["2. Stronger Local Government", "/surveys/local-government/"],
-      ["3. Delays & Paperwork", "/surveys/government-delays/"],
-      ["4. Household Costs & Inflation", "/surveys/household-costs-inflation/"],
-      ["5. Youth Jobs & Opportunities", "/surveys/youth-jobs/"],
-      ["6. Jobs Abroad & Moving", "/surveys/jobs-abroad/"],
-      ["Academic Consultation Hub", "/consultation/"],
-      ["Submit Policy Memoranda", "/consultation/submissions.html"],
+      ["Community surveys", "/surveys/"],
+      ["Public consultation", "/consultation/"],
+      ["Submit a policy proposal", "/consultation/submissions.html"],
     ],
   },
   {
     label: "About",
     href: "/about.html",
+    prefixes: ["/about.html", "/mission.html", "/researchers/", "/methodology/", "/transparency.html", "/contact.html", "/media/", "/directory.html"],
     items: [
       ["About PPRI", "/about.html"],
-      ["Mission & Charter", "/mission.html"],
-      ["Research Faculty & Fellows", "/researchers/"],
-      ["Press & Media Centre", "/media/press.html"],
-      ["Transparency & Ethics", "/transparency.html"],
-      ["Methodology & Standards", "/methodology/"],
-      ["Contact & Institutional Desk", "/contact.html"],
+      ["Researchers", "/researchers/"],
+      ["Methods & standards", "/methodology/"],
+      ["Transparency", "/transparency.html"],
+      ["Contact", "/contact.html"],
     ],
   },
 ];
@@ -122,76 +74,69 @@ const PPRI_NAV_UR = [
   {
     label: "دستورِ پاکستان",
     href: "/constitution/",
+    prefixes: ["/constitution/", "/resources/constitution.html"],
     items: [
-      ["دستور پاکستان ایکسپلورر", "/constitution/"],
-      ["اہم خدوخال و تعارف", "/constitution/#salient-features"],
-      ["مکمل 280 آرٹیکلز ریڈر", "/constitution/reader/"],
-      ["آئینی ترامیم کا ریکارڈ (1–27)", "/constitution/amendments/"],
-      ["بنیادی حقوق (آرٹیکلز 8–28)", "/constitution/reader/?part=Part+II"],
-      ["مقامی حکومتیں (آرٹیکل 140A)", "/constitution/reader/?article=140A"],
-      ["این ایف سی و وسائل (آرٹیکل 160)", "/constitution/reader/?article=160"],
-      ["صوبائی حدود کی تبدیلی (آرٹیکل 239)", "/constitution/reader/?article=239"],
+      ["دستور کا جائزہ (انگریزی)", "/constitution/"],
+      ["آرٹیکل ریڈر (انگریزی)", "/constitution/reader/"],
+      ["آئینی ترامیم (انگریزی)", "/constitution/amendments/"],
     ],
   },
   {
     label: "تحقیق",
     href: "/ur/research/",
+    prefixes: ["/ur/research/", "/ur/articles/", "/publications/", "/research/", "/articles/"],
     items: [
       ["تحقیقاتی مرکز", "/ur/research/"],
-      ["پالیسی پیپرز (انگریزی)", "/publications/#policy-papers"],
-      ["تحقیقی رپورٹس (خلاصہ جات)", "/ur/research/reports/"],
-      ["آمدن اور مہنگائی رپورٹ (REP-01)", "/ur/research/reports/income-went-up-why-does-life-feel-harder.html"],
-      ["بیوروکریسی کا بوجھ (REP-02)", "/ur/research/reports/price-of-a-simple-task-pakistan-bureaucracy-cost.html"],
-      ["اضلاعی تفریق (REP-03)", "/ur/research/reports/same-country-different-life-district-access.html"],
-      ["کرپشن بطور نجی ٹیکس (REP-04)", "/ur/research/reports/bribe-you-cant-see-corruption-private-tax.html"],
-      ["مالیاتی اختیارات کی تفویض (REP-05)", "/ur/research/reports/does-money-work-better-spent-closer-to-people.html"],
-      ["تمام تحقیقی مضامین (انگریزی)", "/articles/"],
+      ["مطبوعات (انگریزی)", "/publications/"],
+      ["تحقیقی رپورٹس", "/ur/research/reports/"],
+      ["تحقیقی مضامین", "/ur/articles/"],
+      ["تحقیقی ایجنڈا (انگریزی)", "/research/agenda.html"],
     ],
   },
   {
-    label: "اصلاحات",
+    label: "اصلاحات و منظرنامے",
     href: "/ur/provinces/",
+    prefixes: ["/ur/provinces/", "/provinces/", "/scenarios/", "/maps/", "/resources/"],
     items: [
-      ["صوبائی تنظیم نو جائزہ", "/ur/provinces/"],
-      ["تجویز کردہ 13 انتظامی یونٹس (انگریزی)", "/provinces/proposed-models.html"],
-      ["آرٹیکل 140 اے اور بلدیات (انگریزی)", "/scenarios/#local-government"],
-      ["مالیاتی فریم ورک و این ایف سی (انگریزی)", "/provinces/#fiscal-framework"],
-      ["آئینی طریقہ کار (آرٹیکل 239) (انگریزی)", "/provinces/constitutional-framework.html"],
-      ["انتظامی ماڈل (انگریزی)", "/provinces/#administrative-model"],
+      ["صوبائی اصلاحات", "/ur/provinces/"],
+      ["مجوزہ ماڈلز (انگریزی)", "/provinces/proposed-models.html"],
+      ["اصلاحات کی آئینی بنیاد (انگریزی)", "/resources/constitution.html"],
+      ["حکمرانی منظرنامے (انگریزی)", "/scenarios/"],
+      ["انٹرایکٹو نقشہ لیب (انگریزی)", "/maps/scenarios/"],
     ],
   },
   {
     label: "اعداد و شمار",
     href: "/ur/data/centre.html",
+    prefixes: ["/ur/data/", "/data/", "/insights/", "/knowledge-library/"],
     items: [
       ["مرکزی ڈیٹا آبزرویٹری", "/ur/data/centre.html"],
-      ["آبادی اور شہر (انگریزی)", "/data/population/"],
-      ["معیشت اور مہنگائی (انگریزی)", "/data/economy/"],
-      ["پبلک فنانس اور این ایف سی (انگریزی)", "/data/public-finance/"],
       ["صوبائی موازنہ (انگریزی)", "/data/compare/"],
       ["اوپن ڈیٹا ڈاؤنلوڈز (انگریزی)", "/data/downloads/"],
-      ["ڈیٹا ڈکشنری (انگریزی)", "/data/master/DATA_DICTIONARY.md"],
+      ["چارٹس و انفوگرافکس (انگریزی)", "/insights/"],
+      ["نالج لائبریری (انگریزی)", "/knowledge-library/"],
+      ["تیز حقائق (انگریزی)", "/data/css-fast-facts-pakistan/"],
     ],
   },
   {
-    label: "عوامی مشاورت",
+    label: "عوامی شرکت",
     href: "/ur/consultation/",
+    prefixes: ["/ur/consultation/", "/surveys/", "/consultation/"],
     items: [
-      ["مشاورتی مرکز", "/ur/consultation/"],
-      ["قومی حکمرانی سروے (آن لائن فارم)", "/ur/consultation/survey.html"],
+      ["قومی حکمرانی سروے", "/ur/consultation/survey.html"],
+      ["عوامی مشاورت", "/ur/consultation/"],
       ["پالیسی تجاویز جمع کرائیں (انگریزی)", "/consultation/submissions.html"],
-      ["عام پوچھے جانے والے سوالات (انگریزی)", "/consultation/frequently-asked-questions.html"],
     ],
   },
   {
     label: "ادارہ",
     href: "/ur/about.html",
+    prefixes: ["/ur/about.html", "/about.html", "/researchers/", "/methodology/", "/transparency.html", "/contact.html"],
     items: [
       ["ادارے کا تعارف", "/ur/about.html"],
-      ["اغراض و مقاصد و منشور (انگریزی)", "/mission.html"],
       ["محققین اور فیکلٹی (انگریزی)", "/researchers/"],
+      ["طریقہ کار و معیارات (انگریزی)", "/methodology/"],
       ["شفافیت اور اخلاقیات (انگریزی)", "/transparency.html"],
-      ["تحقیقی طریقہ کار (انگریزی)", "/methodology/"],
       ["رابطہ کریں (انگریزی)", "/contact.html"],
     ],
   },
@@ -202,8 +147,33 @@ function normalizePath(path) {
   return value || "/";
 }
 
+function normalizeUrlParts(href) {
+  const url = new URL(href, window.location.origin);
+  return {
+    pathname: normalizePath(url.pathname),
+    search: url.search || "",
+    hash: url.hash || "",
+  };
+}
+
 function linkIsCurrent(href) {
-  return normalizePath(new URL(href, window.location.origin).pathname) === normalizePath(window.location.pathname);
+  const target = normalizeUrlParts(href);
+  const current = normalizeUrlParts(window.location.href);
+  return (
+    target.pathname === current.pathname &&
+    target.search === current.search &&
+    target.hash === current.hash
+  );
+}
+
+function groupMatchesCurrentSection(group) {
+  const curPath = normalizePath(window.location.pathname);
+  const prefixes = group.prefixes || [group.href];
+  return prefixes.some((pref) => {
+    const normPref = normalizePath(pref);
+    if (normPref === "/" || normPref === "/ur") return curPath === normPref;
+    return curPath === normPref || curPath.startsWith(normPref + "/");
+  });
 }
 
 function getLanguageCounterpartUrl() {
@@ -276,6 +246,31 @@ function getLanguageCounterpartUrl() {
 
 const isDesktopNav = () => window.matchMedia("(min-width: 1101px)").matches;
 
+function syncCurrentNavState(nav) {
+  if (!nav) return;
+  let assignedCurrent = false;
+  nav.querySelectorAll("a[href]").forEach((link) => {
+    const isMatch = !assignedCurrent && linkIsCurrent(link.getAttribute("href"));
+    if (isMatch) {
+      link.setAttribute("aria-current", "page");
+      link.classList.add("is-current");
+      assignedCurrent = true;
+    } else {
+      link.removeAttribute("aria-current");
+      link.classList.remove("is-current");
+    }
+  });
+  const isUrdu = document.documentElement.lang === "ur" || window.location.pathname.startsWith("/ur/");
+  const activeNavData = isUrdu ? PPRI_NAV_UR : PPRI_NAV;
+  nav.querySelectorAll(".nav-group").forEach((wrapper, idx) => {
+    const group = activeNavData[idx];
+    const hasExactChild = Boolean(wrapper.querySelector(".nav-menu a[aria-current='page']"));
+    const matchesSection = hasExactChild || (group ? groupMatchesCurrentSection(group) : false);
+    wrapper.classList.toggle("is-parent-current", matchesSection);
+    wrapper.classList.remove("is-current");
+  });
+}
+
 function buildEnhancedNavigation(nav) {
   if (!nav || nav.dataset.enhanced === "true") return;
 
@@ -290,14 +285,21 @@ function buildEnhancedNavigation(nav) {
   const search = currentLinks.find((link) => link.classList.contains("nav-search"));
 
   let navCloseTimer = null;
-  const closeAllNavGroups = () => {
+  const closeGroup = (groupEl) => {
+    if (!groupEl) return;
+    groupEl.classList.remove("is-open");
+    groupEl.dataset.openSource = "";
+    groupEl.querySelector(".nav-trigger")?.setAttribute("aria-expanded", "false");
+  };
+  const closeAllNavGroups = (sourceFilter) => {
     if (navCloseTimer) {
       clearTimeout(navCloseTimer);
       navCloseTimer = null;
     }
     nav.querySelectorAll(".nav-group.is-open").forEach((other) => {
-      other.classList.remove("is-open");
-      other.querySelector(".nav-trigger")?.setAttribute("aria-expanded", "false");
+      if (!sourceFilter || other.dataset.openSource === sourceFilter) {
+        closeGroup(other);
+      }
     });
   };
 
@@ -306,11 +308,12 @@ function buildEnhancedNavigation(nav) {
     if (isUrdu) {
       home.textContent = "مرکزی صفحہ";
       home.href = "/ur/index.html";
+    } else {
+      home.textContent = "Home";
+      home.href = "/";
     }
-    home.removeAttribute("aria-current");
-    home.classList.toggle("is-current", linkIsCurrent(home.href));
-    if (linkIsCurrent(home.href)) home.setAttribute("aria-current", "page");
     home.addEventListener("click", () => {
+      closeAllNavGroups();
       nav.classList.remove("is-open");
       const mb = document.querySelector(".menu-toggle");
       if (mb) mb.setAttribute("aria-expanded", "false");
@@ -324,35 +327,28 @@ function buildEnhancedNavigation(nav) {
   activeNavData.forEach((group, groupIndex) => {
     const wrapper = document.createElement("div");
     wrapper.className = "nav-group";
+    wrapper.dataset.openSource = "";
 
     const trigger = document.createElement("button");
     trigger.type = "button";
     trigger.className = "nav-trigger";
     trigger.setAttribute("aria-expanded", "false");
-    trigger.setAttribute("aria-haspopup", "true");
     trigger.setAttribute("aria-controls", `nav-menu-${groupIndex}`);
     trigger.textContent = group.label;
 
     const menu = document.createElement("div");
     menu.id = `nav-menu-${groupIndex}`;
     menu.className = "nav-menu";
-    menu.setAttribute("role", "menu");
 
-    let groupIsCurrent = false;
     group.items.forEach(([label, href]) => {
       const item = document.createElement("a");
       item.href = href;
       item.textContent = label;
-      item.setAttribute("role", "menuitem");
-      if (linkIsCurrent(href)) {
-        item.setAttribute("aria-current", "page");
-        item.classList.add("is-current");
-        groupIsCurrent = true;
+      if (isUrdu && label.includes("(انگریزی)")) {
+        item.dataset.langHandoff = "en";
       }
       menu.appendChild(item);
     });
-
-    if (groupIsCurrent) wrapper.classList.add("is-current");
 
     wrapper.addEventListener("mouseenter", () => {
       if (isDesktopNav()) {
@@ -361,39 +357,50 @@ function buildEnhancedNavigation(nav) {
           navCloseTimer = null;
         }
         nav.querySelectorAll(".nav-group.is-open").forEach((other) => {
-          if (other !== wrapper) {
-            other.classList.remove("is-open");
-            other.querySelector(".nav-trigger")?.setAttribute("aria-expanded", "false");
-          }
+          if (other !== wrapper) closeGroup(other);
         });
-        wrapper.classList.add("is-open");
-        trigger.setAttribute("aria-expanded", "true");
+        if (!wrapper.classList.contains("is-open")) {
+          wrapper.dataset.openSource = "hover";
+          wrapper.classList.add("is-open");
+          trigger.setAttribute("aria-expanded", "true");
+        }
       }
     });
 
     wrapper.addEventListener("mouseleave", () => {
-      if (isDesktopNav()) {
+      if (isDesktopNav() && wrapper.dataset.openSource !== "click") {
         if (navCloseTimer) clearTimeout(navCloseTimer);
         navCloseTimer = setTimeout(() => {
-          wrapper.classList.remove("is-open");
-          trigger.setAttribute("aria-expanded", "false");
+          if (wrapper.dataset.openSource !== "click") closeGroup(wrapper);
           navCloseTimer = null;
         }, 180);
       }
     });
 
-    trigger.addEventListener("click", () => {
+    trigger.addEventListener("click", (event) => {
+      event.stopPropagation();
       if (navCloseTimer) {
         clearTimeout(navCloseTimer);
         navCloseTimer = null;
       }
-      const willOpen = !wrapper.classList.contains("is-open");
+      const isOpen = wrapper.classList.contains("is-open");
+      const src = wrapper.dataset.openSource;
+      if (isOpen && src === "hover" && isDesktopNav()) {
+        wrapper.dataset.openSource = "click";
+        trigger.setAttribute("aria-expanded", "true");
+        return;
+      }
+      const willOpen = !isOpen;
       nav.querySelectorAll(".nav-group.is-open").forEach((other) => {
-        other.classList.remove("is-open");
-        other.querySelector(".nav-trigger")?.setAttribute("aria-expanded", "false");
+        if (other !== wrapper) closeGroup(other);
       });
-      wrapper.classList.toggle("is-open", willOpen);
-      trigger.setAttribute("aria-expanded", String(willOpen));
+      if (willOpen) {
+        wrapper.dataset.openSource = "click";
+        wrapper.classList.add("is-open");
+        trigger.setAttribute("aria-expanded", "true");
+      } else {
+        closeGroup(wrapper);
+      }
     });
 
     menu.querySelectorAll("a").forEach((item) => {
@@ -427,6 +434,7 @@ function buildEnhancedNavigation(nav) {
       search.prepend(searchSvg);
     }
     search.addEventListener("click", () => {
+      closeAllNavGroups();
       nav.classList.remove("is-open");
       const mb = document.querySelector(".menu-toggle");
       if (mb) mb.setAttribute("aria-expanded", "false");
@@ -452,12 +460,26 @@ function buildEnhancedNavigation(nav) {
   nav.addEventListener("mouseleave", () => {
     if (isDesktopNav()) {
       if (navCloseTimer) clearTimeout(navCloseTimer);
-      navCloseTimer = setTimeout(closeAllNavGroups, 180);
+      navCloseTimer = setTimeout(() => closeAllNavGroups("hover"), 180);
     }
   });
 
   nav.replaceChildren(fragment);
   nav.dataset.enhanced = "true";
+  syncCurrentNavState(nav);
+
+  window.addEventListener("hashchange", () => syncCurrentNavState(nav));
+  window.addEventListener("popstate", () => syncCurrentNavState(nav));
+
+  const mqDesktop = window.matchMedia("(min-width: 1101px)");
+  if (mqDesktop.addEventListener) {
+    mqDesktop.addEventListener("change", () => {
+      closeAllNavGroups();
+      nav.classList.remove("is-open");
+      const mb = document.querySelector(".menu-toggle");
+      if (mb) mb.setAttribute("aria-expanded", "false");
+    });
+  }
 
   document.addEventListener("click", (event) => {
     if (!nav.contains(event.target)) {
@@ -468,7 +490,7 @@ function buildEnhancedNavigation(nav) {
   document.addEventListener("keydown", (event) => {
     if (event.key === "Escape") {
       const openGroup = nav.querySelector(".nav-group.is-open");
-      const activeInsideMenu = openGroup && openGroup.querySelector(".nav-menu")?.contains(document.activeElement);
+      const activeInsideMenu = openGroup && openGroup.contains(document.activeElement);
       closeAllNavGroups();
       if (activeInsideMenu) {
         openGroup.querySelector(".nav-trigger")?.focus();

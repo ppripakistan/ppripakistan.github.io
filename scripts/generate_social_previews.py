@@ -148,9 +148,9 @@ OBSERVATORY_METRICS = {
     },
     'quick-facts': {
         'tag': 'STATISTICAL COMPENDIUM',
-        'value': '164 Districts',
+        'value': '144 / 168 Districts',
         'label': 'Verified Subnational Indicator Reference',
-        'bars': [('Districts', '164 Units', 1.00, COL_FOREST), ('Divisions', '38 Units', 0.38, COL_EMERALD), ('Provinces', '4 Units', 0.15, (48, 136, 128)), ('Territories', '3 Units', 0.10, COL_LIME)],
+        'bars': [('Prov + ICT', '144 Units', 0.86, COL_FOREST), ('All Pakistan', '168 Units', 1.00, COL_EMERALD), ('Divisions', '38 Units', 0.38, (48, 136, 128)), ('Census 2023', '135 Units', 0.80, COL_LIME)],
         'source': 'Pakistan Bureau of Statistics & PPRI Research Archive'
     },
     'downloads': {
@@ -543,8 +543,8 @@ def parse_html_page(file_path):
         visual = {
             'tag': 'TERRITORIAL GEOGRAPHY',
             'value': '38 Divisions',
-            'label': '164 Districts | 4 Constitutional Provinces',
-            'bars': [('Punjab Districts', '41 Districts', 0.82, COL_FOREST), ('Sindh Districts', '30 Districts', 0.60, COL_EMERALD), ('KP Districts', '38 Districts', 0.76, (48, 136, 128)), ('Balochistan', '36 Districts', 0.72, COL_LIME)],
+            'label': '144 Prov+ICT Districts | 168 National',
+            'bars': [('Punjab Districts', '41 Districts', 0.82, COL_FOREST), ('Sindh Districts', '30 Districts', 0.60, COL_EMERALD), ('KP Districts', '36 Districts', 0.72, (48, 136, 128)), ('Balochistan', '36 Districts', 0.72, COL_LIME)],
             'source': 'PPRI Geo-Spatial Mapping Archive'
         }
     elif rel.startswith('scenarios/'):

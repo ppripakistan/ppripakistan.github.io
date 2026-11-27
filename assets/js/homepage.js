@@ -78,15 +78,13 @@ document.addEventListener("DOMContentLoaded", () => {
     if (!nav) return;
 
     const sectionData = [
-      { id: "section-hero",          label: "Hero" },
-      { id: "section-treatises",     label: "Articles" },
-      { id: "section-latest",        label: "Latest Work" },
-      { id: "section-scenario",      label: "Scenario Lab" },
-      { id: "section-questions",     label: "Questions" },
-      { id: "section-research",      label: "Research" },
-      { id: "section-platform",      label: "Platform" },
-      { id: "section-evidence",      label: "Evidence" },
-      { id: "section-participation", label: "Participation" },
+      { id: "section-hero",             label: "Hero" },
+      { id: "section-latest",           label: "Latest Research" },
+      { id: "section-scenario",         label: "Scenario Lab" },
+      { id: "section-questions",        label: "Questions" },
+      { id: "section-research",         label: "Research" },
+      { id: "section-visual-analytics", label: "Analytics" },
+      { id: "section-participation",    label: "Participation" },
     ];
 
     const sections = sectionData
@@ -351,7 +349,7 @@ document.addEventListener("DOMContentLoaded", () => {
         return response.json();
       })
       .then((data) => {
-        const latest = Array.isArray(data.latest) ? data.latest.slice(0, 8) : [];
+        const latest = Array.isArray(data.latest) ? data.latest.slice(0, 12) : [];
         if (latest.length) {
           feed.innerHTML = latest.map(formatCard).join("");
           const countEl = document.querySelector("[data-feed-count]");

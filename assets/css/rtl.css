@@ -97,8 +97,23 @@ body[lang="ur"],
 
 [dir="rtl"] .nav-links a,
 [dir="rtl"] .nav-trigger {
-  font-size: 0.98rem;
+  font-size: 0.96rem;
   font-family: var(--ur-font);
+}
+
+@media (max-width: 1280px) {
+  [dir="rtl"] .nav-links {
+    gap: 10px;
+  }
+  [dir="rtl"] .nav-links a,
+  [dir="rtl"] .nav-trigger {
+    font-size: 0.88rem;
+  }
+}
+
+[dir="rtl"] .nav-menu a[data-lang-handoff="en"] {
+  border-inline-start: 2px solid rgba(18, 57, 45, 0.2);
+  padding-inline-start: 10px;
 }
 
 /* Active indicator underline originates from right */

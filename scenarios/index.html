@@ -85,15 +85,63 @@
         </button>
         <nav id="site-navigation" class="nav-links" aria-label="Primary navigation">
           <a href="/">Home</a>
-          <a href="/constitution/">Constitution</a>
-          <a href="/research/">Research</a>
-          <a href="/provinces/">Reform</a>
-          <a href="/scenarios/" aria-current="page">Scenarios</a>
-          <a href="/insights/">Insights</a>
-          <a href="/data/centre.html">Data</a>
-          <a href="/publications/">Publications</a>
-          <a href="/consultation/">Engage</a>
-          <a href="/about.html">About</a>
+          <details class="nav-group">
+            <summary class="nav-trigger">Constitution</summary>
+            <div class="nav-menu">
+              <a href="/constitution/">Constitution overview</a>
+              <a href="/constitution/reader/">Article reader</a>
+              <a href="/constitution/amendments/">Amendments</a>
+            </div>
+          </details>
+          <details class="nav-group">
+            <summary class="nav-trigger">Research</summary>
+            <div class="nav-menu">
+              <a href="/research/">Research programme</a>
+              <a href="/publications/">Publications</a>
+              <a href="/research/reports/">Reports</a>
+              <a href="/articles/">Articles</a>
+              <a href="/research/agenda.html">Research agenda</a>
+            </div>
+          </details>
+          <details class="nav-group">
+            <summary class="nav-trigger">Reform &amp; scenarios</summary>
+            <div class="nav-menu">
+              <a href="/provinces/">Provincial reform</a>
+              <a href="/provinces/proposed-models.html">Reform models</a>
+              <a href="/resources/constitution.html">Constitutional basis</a>
+              <a href="/scenarios/" aria-current="page">Governance scenarios</a>
+              <a href="/maps/scenarios/">Interactive map lab</a>
+            </div>
+          </details>
+          <details class="nav-group">
+            <summary class="nav-trigger">Data &amp; tools</summary>
+            <div class="nav-menu">
+              <a href="/data/centre.html">Data Centre</a>
+              <a href="/data/compare/">Compare provinces</a>
+              <a href="/data/downloads/">Download datasets</a>
+              <a href="/insights/">Charts &amp; infographics</a>
+              <a href="/knowledge-library/">Knowledge Library</a>
+              <a href="/data/css-fast-facts-pakistan/">Fast facts</a>
+            </div>
+          </details>
+          <details class="nav-group">
+            <summary class="nav-trigger">Participate</summary>
+            <div class="nav-menu">
+              <a href="/surveys/">Community surveys</a>
+              <a href="/consultation/">Public consultation</a>
+              <a href="/consultation/submissions.html">Submit a policy proposal</a>
+            </div>
+          </details>
+          <details class="nav-group">
+            <summary class="nav-trigger">About</summary>
+            <div class="nav-menu">
+              <a href="/about.html">About PPRI</a>
+              <a href="/researchers/">Researchers</a>
+              <a href="/methodology/">Methods &amp; standards</a>
+              <a href="/transparency.html">Transparency</a>
+              <a href="/contact.html">Contact</a>
+            </div>
+          </details>
           <a class="nav-search" href="/search.html">Search</a>
         </nav>
       </div>
@@ -200,8 +248,8 @@
                     <td><strong>Punjab</strong></td>
                     <td>127,688,922</td>
                     <td>52.87%</td>
-                    <td>11</td>
-                    <td>42</td>
+                    <td>10</td>
+                    <td>41</td>
                     <td>371</td>
                     <td>344,175 : 1</td>
                   </tr>
@@ -233,11 +281,11 @@
                     <td>229,144 : 1</td>
                   </tr>
                   <tr style="background: var(--bg-canvas, #F7F8F4); font-weight: 700;">
-                    <td>Four Provinces Total</td>
+                    <td>Four Provinces Total (excl. ICT)</td>
                     <td>239,135,568</td>
                     <td>99.02%</td>
-                    <td>33</td>
-                    <td>144</td>
+                    <td>32</td>
+                    <td>143 (+1 ICT = 144; 168 w/ GB &amp; AJK)</td>
                     <td>749</td>
                     <td>319,273 : 1</td>
                   </tr>
@@ -381,7 +429,7 @@
               <div class="card">
                 <h3>Empirical Benefits vs New Provinces</h3>
                 <ul>
-                  <li><strong>Near-Zero Capital Setup Cost</strong>: Utilizes existing 164 District Council buildings, Tehsil headquarters, and municipal corporation infrastructure. Zero new civil secretariats or High Courts needed.</li>
+                  <li><strong>Near-Zero Capital Setup Cost</strong>: Utilizes existing 144 Provincial/ICT (168 national) District Council buildings, Tehsil headquarters, and municipal corporation infrastructure. Zero new civil secretariats or High Courts needed.</li>
                   <li><strong>Immediate Proximity</strong>: Decisions made within 15 to 30 km of ordinary citizens rather than moving the capital from Lahore to Multan (still 150 km from outlying citizens).</li>
                   <li><strong>No Senate Disruption</strong>: Leaves the 4-province constitutional federation, Senate quotas, and national legislative balance entirely intact.</li>
                   <li><strong>Political Feasibility</strong>: Requires provincial legislative compliance and Supreme Court enforcement under Article 140A rather than contentious two-thirds constitutional amendments.</li>
@@ -647,21 +695,6 @@
 
         <!-- FOOTER -->
     <footer class="site-footer">
-      <section class="directory-banner" aria-label="PPRI Research Directory">
-        <div class="container">
-          <div class="directory-banner-card">
-            <div class="directory-banner-content">
-              <span class="directory-banner-badge">Master Catalog</span>
-              <h3 class="directory-banner-title">Complete PPRI Policy, Research &amp; Data Directory</h3>
-              <p class="directory-banner-text">Explore the unified catalog of 25 policy articles, 5 research reports, and 10 subnational data observatories.</p>
-            </div>
-            <a href="/directory.html" class="directory-banner-btn">
-              <span>Browse 70+ Page Directory</span>
-              <span aria-hidden="true">&rarr;</span>
-            </a>
-          </div>
-        </div>
-      </section>
       <div class="container footer-grid">
         <div>
           <img

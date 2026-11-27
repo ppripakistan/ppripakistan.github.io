@@ -10,10 +10,22 @@
   },
   "latest": [
     {
+      "type": "Policy Update · PPRI-ART-2026-021",
+      "title": "New Administrative Units in Pakistan 2026",
+      "summary": "Evaluating proposals for new provinces, empowered local governments under Article 140A, and constitutional requirements.",
+      "url": "/articles/new-administrative-units-pakistan-2026.html"
+    },
+    {
       "type": "Research Report · PPRI-REP-2026-01",
       "title": "Income Went Up. So Why Does Life Feel Harder?",
       "summary": "Pakistan's household squeeze: income nearly doubled but food insecurity and poverty rose.",
       "url": "/research/reports/income-went-up-why-does-life-feel-harder.html"
+    },
+    {
+      "type": "Spatial Metrics · PPRI-ART-2026-020",
+      "title": "How Far Is Government? Administrative Distance in Pakistan",
+      "summary": "Quantifying travel time isochrones, economic friction, and public service deserts beyond nominal territorial boundaries.",
+      "url": "/articles/how-far-is-government-administrative-distance.html"
     },
     {
       "type": "Research Report · PPRI-REP-2026-02",
@@ -22,10 +34,22 @@
       "url": "/research/reports/price-of-a-simple-task-pakistan-bureaucracy-cost.html"
     },
     {
+      "type": "Spatial Economics · PPRI-ART-2026-019",
+      "title": "Can Pakistan Grow Beyond Its Provincial Capitals? Secondary Cities",
+      "summary": "A spatial economic blueprint for polycentric urban development, municipal bond finance, and intermediate industrial clustering.",
+      "url": "/articles/can-pakistan-grow-beyond-provincial-capitals-secondary-cities.html"
+    },
+    {
       "type": "Research Report · PPRI-REP-2026-03",
       "title": "Same Country, Different Life",
       "summary": "District-level disparities in education, water, internet and food security across Pakistan.",
       "url": "/research/reports/same-country-different-life-district-access.html"
+    },
+    {
+      "type": "Institutional Design · PPRI-ART-2026-018",
+      "title": "A New Province Can Move a Capital. Can It Move Power?",
+      "summary": "Evaluating the capital-city centralization paradox, administrative inertia, and multi-tiered polycentric institutional dispersion.",
+      "url": "/articles/new-province-can-move-capital-can-it-move-power.html"
     },
     {
       "type": "Research Report · PPRI-REP-2026-04",
@@ -55,7 +79,7 @@
       "type": "Research Programme",
       "title": "Follow the wider research agenda",
       "summary": "Move from individual publications into the connected questions PPRI is studying across institutions, geography and public finance.",
-      "url": "/research/index.html"
+      "url": "/research/"
     }
   ]
 }

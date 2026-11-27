@@ -80,7 +80,33 @@
 
 /* High-Contrast Navigation Links & Triggers (No Dark Blue, No Brown Hover) */
 .home-page .home-header .nav-links {
-  gap: 22px;
+  gap: 18px;
+}
+
+@media (max-width: 1280px) {
+  .home-page .home-header .nav-links {
+    gap: 12px;
+  }
+  .home-page .home-header .nav-links a,
+  .home-page .home-header .nav-trigger {
+    font-size: 0.82rem;
+  }
+  .home-page .home-header .brand-text span {
+    font-size: 0.68rem;
+  }
+}
+
+@media (max-width: 1180px) {
+  .home-page .home-header .nav-links {
+    gap: 9px;
+  }
+  .home-page .home-header .brand-text span {
+    display: none;
+  }
+  .home-page .home-header .nav-links a,
+  .home-page .home-header .nav-trigger {
+    font-size: 0.79rem;
+  }
 }
 
 .home-page .home-header .nav-group,
@@ -162,6 +188,14 @@
 .home-page .home-header .nav-links a[aria-current="page"]::after {
   transform: scaleX(1);
   background: #c8ff54;
+}
+.home-page .home-header .nav-group.is-parent-current .nav-trigger {
+  color: #ffffff !important;
+  font-weight: 700;
+}
+.home-page .home-header .nav-group.is-parent-current::after {
+  transform: scaleX(1);
+  background: rgba(185, 217, 147, 0.52);
 }
 
 /* Search Shortcut Badge */
@@ -282,13 +316,15 @@
     background: var(--brand-dark, #12392D);
     border: 1px solid rgba(185, 217, 147, 0.25);
     border-radius: 14px;
-    padding: 16px;
+    padding: 16px 16px 24px;
     gap: 8px;
     flex-direction: column;
     align-items: stretch;
     box-shadow: 0 24px 55px rgba(0, 0, 0, 0.45);
-    max-height: calc(100vh - 90px);
+    max-height: calc(100vh - 84px);
+    max-height: calc(100dvh - 84px);
     overflow-y: auto;
+    overscroll-behavior: contain;
     -webkit-overflow-scrolling: touch;
     z-index: 1000;
   }
@@ -348,7 +384,8 @@
     margin: 2px 0 6px 0 !important;
     box-sizing: border-box !important;
   }
-  .home-page .home-header .nav-group.is-open .nav-menu {
+  .home-page .home-header .nav-group.is-open .nav-menu,
+  .home-page .home-header details.nav-group[open] .nav-menu {
     display: flex !important;
   }
   .home-page .home-header .nav-menu::before,
@@ -891,16 +928,30 @@
 }
 
 .treatises-banner {
-  margin-top: 36px;
-  padding: 24px 28px;
+  margin-top: 24px;
+  padding: 20px 24px;
   background: #ffffff;
   border: 1px solid #cbd5e1;
-  border-radius: 12px;
+  border-radius: 14px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 18px;
+}
+
+.home-latest-head-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+}
+
+.home-latest-routes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
 }
 
 .treatises-kpi-ribbon {

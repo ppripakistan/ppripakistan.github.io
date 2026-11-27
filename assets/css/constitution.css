@@ -360,6 +360,12 @@
   flex-wrap: wrap;
   gap: 10px;
   margin-bottom: 10px;
+  min-width: 0;
+}
+
+.const-preview-header > div {
+  min-width: 0;
+  flex: 1 1 200px;
 }
 
 .const-preview-title {
@@ -367,6 +373,19 @@
   font-weight: 700;
   color: var(--const-navy);
   margin: 0;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+@media (max-width: 640px) {
+  .const-preview-header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .const-preview-header .btn {
+    width: 100%;
+    text-align: center;
+  }
 }
 
 .const-preview-text {
@@ -536,14 +555,19 @@
 /* --- READER WORKSPACE LAYOUT --- */
 .reader-workspace {
   display: grid;
-  grid-template-columns: 340px 1fr;
+  grid-template-columns: 340px minmax(0, 1fr);
   gap: 28px;
   align-items: start;
 }
 
+.reader-workspace > * {
+  min-width: 0;
+  max-width: 100%;
+}
+
 @media (max-width: 960px) {
   .reader-workspace {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
 }
 
@@ -600,11 +624,14 @@
   border-radius: var(--const-radius-lg);
   box-shadow: var(--const-shadow-sm);
   padding: 32px;
+  min-width: 0;
+  max-width: 100%;
+  overflow-wrap: break-word;
 }
 
 @media (max-width: 640px) {
   .reader-content-pane {
-    padding: 20px;
+    padding: 16px;
   }
 }
 
@@ -615,14 +642,17 @@
   text-transform: uppercase;
   letter-spacing: 0.04em;
   margin-bottom: 8px;
+  overflow-wrap: anywhere;
 }
 
 .reader-article-title {
-  font-size: clamp(1.5rem, 2.8vw, 2.1rem);
+  font-size: clamp(1.35rem, 2.8vw, 2.1rem);
   font-weight: 800;
   color: var(--const-navy);
   margin: 0;
   line-height: 1.25;
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 
 /* --- KEY TAKEAWAYS VISUAL CALLOUT --- */
@@ -660,11 +690,13 @@
 
 /* --- VIEW MODE TABS --- */
 .reader-tab-bar {
-  display: inline-flex;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 100%;
   padding: 4px;
   background: var(--const-surface);
   border: 1px solid var(--const-line);
-  border-radius: 9999px;
+  border-radius: 14px;
   gap: 4px;
   margin-bottom: 24px;
 }
@@ -673,8 +705,8 @@
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  padding: 6px 16px;
-  border-radius: 9999px;
+  padding: 6px 14px;
+  border-radius: 10px;
   border: none;
   background: transparent;
   font-size: 0.85rem;
@@ -682,6 +714,9 @@
   color: var(--const-ink-muted);
   cursor: pointer;
   transition: all 0.15s ease;
+  max-width: 100%;
+  white-space: normal;
+  text-align: left;
 }
 
 .reader-tab-btn:hover {

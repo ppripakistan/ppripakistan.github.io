@@ -1,0 +1,201 @@
+[
+  {
+    "id": "literacy_rate",
+    "label": "Literacy Rate by Province (Age 10+)",
+    "domain": "Education & Human Capital",
+    "stat": "63% National",
+    "unit": "% of population age 10+",
+    "source": "PBS HIES 2024–25 Social Indicators",
+    "summary": "National 63% (Male 73%, Female 54%; Urban 74%, Rural 55%); Punjab 68%, Sindh 58%, KP 58%, Balochistan 49%.",
+    "keywords": "literacy school education punjab sindh kp balochistan female male urban rural hies 10+",
+    "url": "/data/literacy-rate-pakistan/"
+  },
+  {
+    "id": "out_of_school_rate",
+    "label": "Out-of-School Children & Enrollment (Age 5–16)",
+    "domain": "Education & Human Capital",
+    "stat": "28% Out of School",
+    "unit": "% children age 5–16",
+    "source": "PBS HIES 2024–25 / PES 2025–26",
+    "summary": "Provincial out-of-school rates (Punjab 21%, Balochistan 45%), gender parity, and public education expenditure benchmarks.",
+    "keywords": "education out of school oosc attendance completion parity enrollment spending",
+    "url": "/data/education/"
+  },
+  {
+    "id": "education_expenditure",
+    "label": "Education Expenditure & School Benchmarks",
+    "domain": "Education & Human Capital",
+    "stat": "0.8%–1.5% GDP",
+    "unit": "PKR Billion / % GDP",
+    "source": "Pakistan Economic Survey 2025–26",
+    "summary": "Federal and provincial education spending trends alongside literacy and gender parity benchmarks.",
+    "keywords": "education budget expenditure gdp literacy parity",
+    "url": "/data/education/#table_education"
+  },
+  {
+    "id": "agri_cultivated_land",
+    "label": "Cultivated Land, Crops & Farm Fragmentation",
+    "domain": "Agriculture & Land",
+    "stat": "44.7M Ha Cultivated",
+    "unit": "Million Hectares / Farms",
+    "source": "Agriculture Census 2024",
+    "summary": "Agricultural census land use, smallholder fragmentation shifts, wheat/cotton/rice trends, and provincial farm holdings.",
+    "keywords": "agriculture cultivated land farm fragmentation crop wheat cotton rice irrigation rural output",
+    "url": "/data/economy/#card-agri-shifts"
+  },
+  {
+    "id": "agri_sector_csv",
+    "label": "Agri Census 2024 Baseline Dataset (CSV Download)",
+    "domain": "Agriculture & Land",
+    "stat": "CSV Download",
+    "unit": "Provincial farm & land table",
+    "source": "Agriculture Census 2024 (PPRI Published CSV)",
+    "summary": "Direct machine-readable CSV of provincial farm counts, cultivated area, and holding structure.",
+    "keywords": "agriculture agri csv farm dataset download census 2024",
+    "url": "/data/published/agri_census_2024_summary.csv",
+    "isDownload": true
+  },
+  {
+    "id": "population_total",
+    "label": "National & Provincial Population (7th Census 2023)",
+    "domain": "People & Demographics",
+    "stat": "241.50M Citizens",
+    "unit": "People / % share",
+    "source": "PBS 7th Population & Housing Census 2023",
+    "summary": "Punjab 127.69M (52.9%), Sindh 55.70M (23.1%), KP 40.86M (16.9%), Balochistan 14.89M (6.2%), ICT 2.36M (1.0%).",
+    "keywords": "population census 2023 demographics growth rate urban cities households sex ratio punjab sindh kp balochistan ict",
+    "url": "/data/population/"
+  },
+  {
+    "id": "districts_urbanization",
+    "label": "District Urbanization & Density Quadrant (135 Census Units)",
+    "domain": "People & Demographics",
+    "stat": "135 Census Units",
+    "unit": "Density / Urban %",
+    "source": "PBS Census 2023 Table 1",
+    "summary": "Cross-district urban share, density per km², and intercensal demographic shifts across 1981–2023.",
+    "keywords": "urbanization urban rural density districts scatter quadrant census 2023",
+    "url": "/data/population/#card-districts-scatter"
+  },
+  {
+    "id": "hazara_division",
+    "label": "Hazara Division Population & District Table (8 Districts)",
+    "domain": "People & Demographics",
+    "stat": "6.19M Citizens",
+    "unit": "People (2023 Census)",
+    "source": "PBS Census 2023 KP Table 1",
+    "summary": "Abbottabad, Haripur, Mansehra, Battagram, Torghar, and Kohistan districts with ranked chart and open CSV.",
+    "keywords": "hazara abbottabad mansehra haripur battagram torghar kohistan kp",
+    "url": "/data/hazara-division/"
+  },
+  {
+    "id": "hies_household_income",
+    "label": "Mean Household Monthly Income & Quintiles",
+    "domain": "Living Standards",
+    "stat": "PKR 82,179/mo",
+    "unit": "PKR / Household / Month",
+    "source": "PBS HIES 2024–25 Economic Report",
+    "summary": "Mean monthly income PKR 96,767 urban / PKR 72,157 rural; consumption shares, utilities, and household size 5.98.",
+    "keywords": "income wage consumption quintile poverty living standards hies household expenditure",
+    "url": "/data/living-standards/#card-hies"
+  },
+  {
+    "id": "hies_basic_services",
+    "label": "Drinking Water, Gas, Electricity & Transport Access",
+    "domain": "Living Standards",
+    "stat": "HIES 2024–25",
+    "unit": "% of households / population",
+    "source": "PBS HIES 2024–25 Social Indicators",
+    "summary": "Within-premises drinking water, sanitation, clean cooking fuel, grid/solar lighting, and urban public transport access.",
+    "keywords": "water drinking sanitation gas cooking electricity lighting transport road",
+    "url": "/data/living-standards/#card-services"
+  },
+  {
+    "id": "cpi_inflation",
+    "label": "CPI & SPI Inflation, Wages & Macroeconomic Growth",
+    "domain": "Economy & Markets",
+    "stat": "10.26% CPI · 3.70% GDP",
+    "unit": "% YoY / % Real Growth",
+    "source": "PBS Price Indices & PES 2025–26",
+    "summary": "Consumer Price Index (CPI), Weekly Sensitive Price Indicator (SPI), Wholesale Price Index (WPI), wages, and real GDP.",
+    "keywords": "inflation cpi spi wpi prices wages gdp macroeconomy growth exchange rate remittances exports imports",
+    "url": "/data/economy/#card-wage-infl"
+  },
+  {
+    "id": "nfc_formula",
+    "label": "7th NFC Award Weights & Divisible Pool Transfers",
+    "domain": "Public Finance",
+    "stat": "57.5% Provincial",
+    "unit": "% Pool Weight / PKR Billion",
+    "source": "Finance Division (7th NFC Award 2010)",
+    "summary": "Population 82%, Poverty 10.3%, Revenue 5.0%, Inverse Density 2.7%; interactive policy weight simulator on this page.",
+    "keywords": "nfc national finance commission divisible pool budget transfers fiscal award weight",
+    "url": "/data/centre.html#nfc-section"
+  },
+  {
+    "id": "public_debt_tax",
+    "label": "Public Debt, Interest Expense & Tax-to-GDP Ratio",
+    "domain": "Public Finance",
+    "stat": "PKR 83.3T Debt",
+    "unit": "PKR Billion / % GDP",
+    "source": "Pakistan Economic Survey 2025–26 / FBR",
+    "summary": "Federal fiscal deficit, interest servicing, domestic debt maturity, FBR tax revenue, and tax expenditures.",
+    "keywords": "public finance debt interest tax fbr budget fiscal deficit spending expenditure",
+    "url": "/data/public-finance/#card-debt"
+  },
+  {
+    "id": "health_immunization",
+    "label": "Child Immunization, Fertility & Maternal Health",
+    "domain": "Public Health",
+    "stat": "73.0% Immunized",
+    "unit": "% Children 12–23 mo / TFR",
+    "source": "PBS HIES 2024–25 Social Indicators",
+    "summary": "Fully immunized child rates, total fertility rate (3.6), prenatal consultation, and maternal/reproductive health access.",
+    "keywords": "health vaccine immunization fertility prenatal maternal clinic hospital bhu",
+    "url": "/data/health/"
+  },
+  {
+    "id": "digital_access",
+    "label": "Internet, Mobile Ownership & Broadband Teledensity",
+    "domain": "Digital Access",
+    "stat": "95% Mobile · 58.4% Broadband",
+    "unit": "% households / % population",
+    "source": "PBS HIES 2024–25 & PTA",
+    "summary": "Household computer access, internet usage, smartphone ownership, digital skills, and IT export trends.",
+    "keywords": "digital internet mobile broadband smartphone computer teledensity technology it",
+    "url": "/data/digital-access/"
+  },
+  {
+    "id": "provinces_comparator",
+    "label": "Side-by-Side Provincial Indicator Comparator",
+    "domain": "Governance & Federation",
+    "stat": "Punjab / Sindh / KP / BA",
+    "unit": "Cross-provincial matrix",
+    "source": "PBS Census 2023 & HIES 2024–25",
+    "summary": "Compare population, area, density, urbanization, 7th NFC shares, literacy, and divisions across provinces.",
+    "keywords": "compare provinces comparator punjab sindh kp balochistan ict federalism",
+    "url": "/data/compare/"
+  },
+  {
+    "id": "district_explorer",
+    "label": "District Administrative Explorer (24-District Sample Table & CSV)",
+    "domain": "Governance & Federation",
+    "stat": "24 Sample / 144 Prov+ICT",
+    "unit": "District population, area, distance",
+    "source": "PBS Census 2023 & PPRI Admin Geo. 2023",
+    "summary": "Filter 24 representative districts (out of 144 Prov+ICT / 168 national) by province and population tier with CSV export.",
+    "keywords": "district explorer csv gwadar lahore karachi peshawar quetta distances secretariat",
+    "url": "/data/centre.html#districts-section"
+  },
+  {
+    "id": "open_downloads",
+    "label": "Open Data Downloads (Verified CSV & JSON Files)",
+    "domain": "Data & Tools",
+    "stat": "Open CSV & JSON",
+    "unit": "Bulk machine-readable files",
+    "source": "PPRI Published Data Repository",
+    "summary": "Download clean CSV and JSON datasets covering provinces, districts, HIES benchmarks, fiscal awards, and macro trends.",
+    "keywords": "download csv json dataset open data export microdata",
+    "url": "/data/downloads/"
+  }
+]

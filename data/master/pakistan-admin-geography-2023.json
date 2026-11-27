@@ -15,7 +15,7 @@
       "divisions": [
         {"name": "Lahore", "districts": ["Lahore", "Kasur", "Nankana Sahib", "Sheikhupura"], "population_2023": 22772710, "centre": "Lahore"},
         {"name": "Faisalabad", "districts": ["Faisalabad", "Chiniot", "Jhang", "Toba Tek Singh"], "population_2023": 15785152, "centre": "Faisalabad"},
-        {"name": "Rawalpindi", "districts": ["Rawalpindi", "Attock", "Chakwal", "Jhelum", "Murree"], "population_2023": 11406496, "centre": "Rawalpindi"},
+        {"name": "Rawalpindi", "districts": ["Rawalpindi", "Attock", "Chakwal", "Jhelum", "Murree", "Talagang"], "population_2023": 11406496, "centre": "Rawalpindi"},
         {"name": "Gujranwala", "districts": ["Gujranwala", "Hafizabad", "Narowal", "Sialkot"], "population_2023": 13018242, "centre": "Gujranwala"},
         {"name": "Gujrat", "districts": ["Gujrat", "Mandi Bahauddin", "Wazirabad"], "population_2023": 5618340, "centre": "Gujrat"},
         {"name": "Multan", "districts": ["Multan", "Khanewal", "Lodhran", "Vehari"], "population_2023": 13546412, "centre": "Multan"},

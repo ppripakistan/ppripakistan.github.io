@@ -49,8 +49,24 @@
       .replace(/'/g, "&#39;");
   }
 
-  function render(q) {
+  function syncQueryToUrl(rawQ) {
+    try {
+      const nextUrl = new URL(window.location.href);
+      if (rawQ) nextUrl.searchParams.set("q", rawQ);
+      else nextUrl.searchParams.delete("q");
+      const nextRelative = nextUrl.pathname + nextUrl.search + nextUrl.hash;
+      const curRelative = window.location.pathname + window.location.search + window.location.hash;
+      if (nextRelative !== curRelative) {
+        history.replaceState({ q: rawQ }, "", nextRelative);
+      }
+    } catch (e) {
+      // Ignore history API restrictions in unsupported contexts
+    }
+  }
+
+  function render(q, skipHistory) {
     const rawQ = q.trim();
+    if (!skipHistory) syncQueryToUrl(rawQ);
     const hasUrdu = /[\u0600-\u06FF]/.test(rawQ);
 
     let rows = [];
@@ -127,4 +143,9 @@
   }
 
   i.addEventListener("input", () => render(i.value));
+  window.addEventListener("popstate", () => {
+    const p = new URLSearchParams(window.location.search);
+    i.value = p.get("q") || "";
+    render(i.value, true);
+  });
 })();

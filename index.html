@@ -147,15 +147,63 @@
         </button>
         <nav id="site-navigation" class="nav-links" aria-label="Primary navigation">
           <a href="/" aria-current="page">Home</a>
-          <a href="/constitution/">Constitution</a>
-          <a href="/research/">Research</a>
-          <a href="/provinces/">Reform</a>
-          <a href="/scenarios/">Scenarios</a>
-          <a href="/insights/">Insights</a>
-          <a href="/data/centre.html">Data</a>
-          <a href="/publications/">Publications</a>
-          <a href="/consultation/">Engage</a>
-          <a href="/about.html">About</a>
+          <details class="nav-group">
+            <summary class="nav-trigger">Constitution</summary>
+            <div class="nav-menu">
+              <a href="/constitution/">Constitution overview</a>
+              <a href="/constitution/reader/">Article reader</a>
+              <a href="/constitution/amendments/">Amendments</a>
+            </div>
+          </details>
+          <details class="nav-group">
+            <summary class="nav-trigger">Research</summary>
+            <div class="nav-menu">
+              <a href="/research/">Research programme</a>
+              <a href="/publications/">Publications</a>
+              <a href="/research/reports/">Reports</a>
+              <a href="/articles/">Articles</a>
+              <a href="/research/agenda.html">Research agenda</a>
+            </div>
+          </details>
+          <details class="nav-group">
+            <summary class="nav-trigger">Reform &amp; scenarios</summary>
+            <div class="nav-menu">
+              <a href="/provinces/">Provincial reform</a>
+              <a href="/provinces/proposed-models.html">Reform models</a>
+              <a href="/resources/constitution.html">Constitutional basis</a>
+              <a href="/scenarios/">Governance scenarios</a>
+              <a href="/maps/scenarios/">Interactive map lab</a>
+            </div>
+          </details>
+          <details class="nav-group">
+            <summary class="nav-trigger">Data &amp; tools</summary>
+            <div class="nav-menu">
+              <a href="/data/centre.html">Data Centre</a>
+              <a href="/data/compare/">Compare provinces</a>
+              <a href="/data/downloads/">Download datasets</a>
+              <a href="/insights/">Charts &amp; infographics</a>
+              <a href="/knowledge-library/">Knowledge Library</a>
+              <a href="/data/css-fast-facts-pakistan/">Fast facts</a>
+            </div>
+          </details>
+          <details class="nav-group">
+            <summary class="nav-trigger">Participate</summary>
+            <div class="nav-menu">
+              <a href="/surveys/">Community surveys</a>
+              <a href="/consultation/">Public consultation</a>
+              <a href="/consultation/submissions.html">Submit a policy proposal</a>
+            </div>
+          </details>
+          <details class="nav-group">
+            <summary class="nav-trigger">About</summary>
+            <div class="nav-menu">
+              <a href="/about.html">About PPRI</a>
+              <a href="/researchers/">Researchers</a>
+              <a href="/methodology/">Methods &amp; standards</a>
+              <a href="/transparency.html">Transparency</a>
+              <a href="/contact.html">Contact</a>
+            </div>
+          </details>
           <a class="nav-search" href="/search.html">Search</a>
         </nav>
       </div>
@@ -253,210 +301,6 @@
       </section>
 
       <section
-        class="home-section home-treatises-section"
-        id="section-treatises"
-        aria-labelledby="treatises-title"
-      >
-        <div class="container">
-          <div class="home-section-head" data-reveal>
-            <div>
-              <span class="home-section-label">Analytical Research Series</span>
-              <h2 id="treatises-title">
-                Featured Articles &amp; Policy Inquiries
-              </h2>
-              <p>
-                In-depth, data-grounded investigations into Pakistan's
-                federalism, municipal devolution, administrative distance, and
-                public finance.
-              </p>
-            </div>
-            <a class="btn btn-ghost" href="/articles/"
-              >View All 25 Articles →</a
-            >
-          </div>
-
-          <div class="treatises-grid" data-reveal>
-            <article class="treatise-card">
-              <div class="treatise-card-top">
-                <span class="treatise-pill">Spatial Metrics</span>
-                <span class="treatise-time">11 min read</span>
-              </div>
-              <span class="treatise-code">PPRI-ART-2026-020</span>
-              <h3 class="treatise-title">
-                <a
-                  href="/articles/how-far-is-government-administrative-distance.html"
-                  >How Far Is Government? The Hidden Cost of Administrative
-                  Distance in Pakistan</a
-                >
-              </h3>
-              <p class="treatise-excerpt">
-                Quantifying travel time isochrones, economic friction, and
-                public service deserts beyond nominal territorial boundaries.
-              </p>
-              <div class="treatise-footer">
-                <a
-                  class="treatise-link"
-                  href="/articles/how-far-is-government-administrative-distance.html"
-                  >Read article <span aria-hidden="true">→</span></a
-                >
-              </div>
-            </article>
-
-            <article class="treatise-card">
-              <div class="treatise-card-top">
-                <span class="treatise-pill">Spatial Economics</span>
-                <span class="treatise-time">12 min read</span>
-              </div>
-              <span class="treatise-code">PPRI-ART-2026-019</span>
-              <h3 class="treatise-title">
-                <a
-                  href="/articles/can-pakistan-grow-beyond-provincial-capitals-secondary-cities.html"
-                  >Can Pakistan Grow Beyond Its Provincial Capitals? Secondary
-                  Cities</a
-                >
-              </h3>
-              <p class="treatise-excerpt">
-                A spatial economic blueprint for polycentric urban development,
-                municipal bond finance, and intermediate industrial clustering.
-              </p>
-              <div class="treatise-footer">
-                <a
-                  class="treatise-link"
-                  href="/articles/can-pakistan-grow-beyond-provincial-capitals-secondary-cities.html"
-                  >Read article <span aria-hidden="true">→</span></a
-                >
-              </div>
-            </article>
-
-            <article class="treatise-card">
-              <div class="treatise-card-top">
-                <span class="treatise-pill">Institutional Design</span>
-                <span class="treatise-time">10 min read</span>
-              </div>
-              <span class="treatise-code">PPRI-ART-2026-018</span>
-              <h3 class="treatise-title">
-                <a
-                  href="/articles/new-province-can-move-capital-can-it-move-power.html"
-                  >A New Province Can Move a Capital. Can It Move Power?</a
-                >
-              </h3>
-              <p class="treatise-excerpt">
-                Evaluating the capital-city centralization paradox,
-                administrative inertia, and multi-tiered polycentric
-                institutional dispersion.
-              </p>
-              <div class="treatise-footer">
-                <a
-                  class="treatise-link"
-                  href="/articles/new-province-can-move-capital-can-it-move-power.html"
-                  >Read article <span aria-hidden="true">→</span></a
-                >
-              </div>
-            </article>
-
-            <article class="treatise-card">
-              <div class="treatise-card-top">
-                <span class="treatise-pill">Subnational Finance</span>
-                <span class="treatise-time">11 min read</span>
-              </div>
-              <span class="treatise-code">PPRI-ART-2026-017</span>
-              <h3 class="treatise-title">
-                <a
-                  href="/articles/where-did-development-money-go-district-government.html"
-                  >Where Did Development Money Go? Local Government Under 2001
-                  Devolution</a
-                >
-              </h3>
-              <p class="treatise-excerpt">
-                Empirical subnational financial flows, Provincial Allocable
-                Shares (39.8%), CCB matching grants, and municipal fiscal
-                autonomy.
-              </p>
-              <div class="treatise-footer">
-                <a
-                  class="treatise-link"
-                  href="/articles/where-did-development-money-go-district-government.html"
-                  >Read article <span aria-hidden="true">→</span></a
-                >
-              </div>
-            </article>
-
-            <article class="treatise-card">
-              <div class="treatise-card-top">
-                <span class="treatise-pill">Public Service Delivery</span>
-                <span class="treatise-time">12 min read</span>
-              </div>
-              <span class="treatise-code">PPRI-ART-2026-015</span>
-              <h3 class="treatise-title">
-                <a
-                  href="/articles/did-2001-devolution-improve-services-evidence.html"
-                  >Did 2001 Devolution Improve Basic Services? The Empirical
-                  Evidence</a
-                >
-              </h3>
-              <p class="treatise-excerpt">
-                An exhaustive review of primary schooling, BHU healthcare, and
-                water supply metrics during Pakistan's district government
-                experiment.
-              </p>
-              <div class="treatise-footer">
-                <a
-                  class="treatise-link"
-                  href="/articles/did-2001-devolution-improve-services-evidence.html"
-                  >Read article <span aria-hidden="true">→</span></a
-                >
-              </div>
-            </article>
-
-            <article class="treatise-card">
-              <div class="treatise-card-top">
-                <span class="treatise-pill">Regional Case Studies</span>
-                <span class="treatise-time">10 min read</span>
-              </div>
-              <span class="treatise-code">PPRI-ART-2026-007</span>
-              <h3 class="treatise-title">
-                <a
-                  href="/articles/south-punjab-why-does-the-province-demand-keep-returning.html"
-                  >South Punjab: Why Does the Province Demand Keep Returning?</a
-                >
-              </h3>
-              <p class="treatise-excerpt">
-                Analyzing administrative distance to Lahore, development budget
-                allocations, and civil service quota grievances.
-              </p>
-              <div class="treatise-footer">
-                <a
-                  class="treatise-link"
-                  href="/articles/south-punjab-why-does-the-province-demand-keep-returning.html"
-                  >Read article <span aria-hidden="true">→</span></a
-                >
-              </div>
-            </article>
-          </div>
-
-          <div class="treatises-banner" data-reveal>
-            <div class="treatises-kpi-ribbon">
-              <div class="treatise-kpi-item">
-                <strong>25</strong>
-                <span>Published Articles</span>
-              </div>
-              <div class="treatise-kpi-item">
-                <strong>164</strong>
-                <span>Districts Analyzed</span>
-              </div>
-              <div class="treatise-kpi-item">
-                <strong>100%</strong>
-                <span>Open Access &amp; Data-Linked</span>
-              </div>
-            </div>
-            <a class="btn btn-primary" href="/articles/"
-              >Explore Complete Research Archive (25 Articles) →</a
-            >
-          </div>
-        </div>
-      </section>
-
-      <section
         class="home-section home-latest-section"
         id="section-latest"
         aria-labelledby="latest-title"
@@ -464,12 +308,17 @@
         <div class="container">
           <div class="home-section-head" data-reveal>
             <div>
-              <span class="home-section-label">Latest work</span>
+              <span class="home-section-label">Latest research &amp; analytical series</span>
               <h2 id="latest-title">What PPRI is publishing and building.</h2>
             </div>
-            <a class="btn btn-ghost" href="/publications/"
-              >View the publication library →</a
-            >
+            <div class="home-latest-head-links">
+              <a class="btn btn-ghost" href="/publications/"
+                >Publication library →</a
+              >
+              <a class="btn btn-ghost" href="/articles/"
+                >All 25 articles →</a
+              >
+            </div>
           </div>
 
           <div class="home-feature-layout" data-reveal>
@@ -513,15 +362,15 @@
             <div class="latest-feed-wrapper">
               <div class="latest-feed-header">
                 <div class="latest-feed-title-wrap">
-                  <span class="latest-feed-title">Recent Publications</span>
-                  <span class="latest-feed-count" data-feed-count>9 items</span>
+                  <span class="latest-feed-title">Recent Reports &amp; Featured Articles</span>
+                  <span class="latest-feed-count" data-feed-count>12 items</span>
                 </div>
                 <span class="latest-feed-scroll-hint" aria-hidden="true">Scroll to explore ↓</span>
               </div>
               <div
                 class="latest-stack"
                 data-homefeed
-                aria-label="Latest secondary research"
+                aria-label="Latest research reports and featured articles"
               >
               <a
                 class="latest-card"
@@ -532,8 +381,8 @@
                 >
                 <h3>New Administrative Units in Pakistan 2026</h3>
                 <p>
-                  Evaluating the renewed debate: proposals for 12–15 provinces,
-                  160 empowered local governments, and constitutional requirements.
+                  Evaluating proposals for new provinces, empowered local
+                  governments under Article 140A, and constitutional requirements.
                 </p>
                 <span class="home-card-link"
                   >Read article <span aria-hidden="true">→</span></span
@@ -557,6 +406,22 @@
               </a>
               <a
                 class="latest-card"
+                href="/articles/how-far-is-government-administrative-distance.html"
+              >
+                <span class="card-meta"
+                  >Spatial Metrics · PPRI-ART-2026-020</span
+                >
+                <h3>How Far Is Government? Administrative Distance in Pakistan</h3>
+                <p>
+                  Quantifying travel time isochrones, economic friction, and
+                  public service deserts beyond nominal territorial boundaries.
+                </p>
+                <span class="home-card-link"
+                  >Read article <span aria-hidden="true">→</span></span
+                >
+              </a>
+              <a
+                class="latest-card"
                 href="/research/reports/price-of-a-simple-task-pakistan-bureaucracy-cost.html"
               >
                 <span class="card-meta"
@@ -573,6 +438,22 @@
               </a>
               <a
                 class="latest-card"
+                href="/articles/can-pakistan-grow-beyond-provincial-capitals-secondary-cities.html"
+              >
+                <span class="card-meta"
+                  >Spatial Economics · PPRI-ART-2026-019</span
+                >
+                <h3>Can Pakistan Grow Beyond Its Provincial Capitals? Secondary Cities</h3>
+                <p>
+                  A spatial economic blueprint for polycentric urban development,
+                  municipal bond finance, and intermediate industrial clustering.
+                </p>
+                <span class="home-card-link"
+                  >Read article <span aria-hidden="true">→</span></span
+                >
+              </a>
+              <a
+                class="latest-card"
                 href="/research/reports/same-country-different-life-district-access.html"
               >
                 <span class="card-meta"
@@ -585,6 +466,23 @@
                 </p>
                 <span class="home-card-link"
                   >Open publication <span aria-hidden="true">→</span></span
+                >
+              </a>
+              <a
+                class="latest-card"
+                href="/articles/new-province-can-move-capital-can-it-move-power.html"
+              >
+                <span class="card-meta"
+                  >Institutional Design · PPRI-ART-2026-018</span
+                >
+                <h3>A New Province Can Move a Capital. Can It Move Power?</h3>
+                <p>
+                  Evaluating the capital-city centralization paradox,
+                  administrative inertia, and multi-tiered polycentric
+                  institutional dispersion.
+                </p>
+                <span class="home-card-link"
+                  >Read article <span aria-hidden="true">→</span></span
                 >
               </a>
               <a
@@ -624,7 +522,7 @@
                 class="latest-card"
                 href="/research/briefs/administrative-scale.html"
               >
-                <span class="card-meta">Policy Brief</span>
+                <span class="card-meta">Policy Brief · PPRI-PB-001</span>
                 <h3>Administrative Scale &amp; Representation</h3>
                 <p>
                   A framework for studying scale, geographic access and
@@ -639,7 +537,7 @@
                 class="latest-card"
                 href="/research/working-papers/provinces-local-government.html"
               >
-                <span class="card-meta">Working Paper</span>
+                <span class="card-meta">Working Paper · PPRI-WP-001</span>
                 <h3>Provinces &amp; Local Government</h3>
                 <p>
                   A comparative framework for examining territorial
@@ -667,6 +565,29 @@
               </a>
               </div>
               <div class="feed-fade-bottom" aria-hidden="true"></div>
+            </div>
+          </div>
+
+          <div class="treatises-banner" data-reveal>
+            <div class="treatises-kpi-ribbon">
+              <div class="treatise-kpi-item">
+                <strong>25</strong>
+                <span>Published Articles</span>
+              </div>
+              <div class="treatise-kpi-item">
+                <strong>168</strong>
+                <span>Districts (144 Prov+ICT + GB/AJK)</span>
+              </div>
+              <div class="treatise-kpi-item">
+                <strong>100%</strong>
+                <span>Open Access &amp; Data-Linked</span>
+              </div>
+            </div>
+            <div class="home-latest-routes">
+              <a class="btn btn-primary" href="/articles/">Explore 25 Articles →</a>
+              <a class="btn btn-ghost" href="/data/centre.html">Data Observatory →</a>
+              <a class="btn btn-ghost" href="/maps/scenarios/">Scenario Lab →</a>
+              <a class="btn btn-ghost" href="/surveys/">Public Surveys →</a>
             </div>
           </div>
           <p class="home-note">Editorial highlights are curated from verified empirical datasets and subnational policy evaluations across all four provinces.</p>

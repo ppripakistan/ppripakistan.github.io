@@ -37,6 +37,8 @@ document.addEventListener("DOMContentLoaded", function () {
   const modeBanner = document.getElementById("nfcModeBanner");
   const validationError = document.getElementById("nfcValidationError");
   const resultsTitle = document.getElementById("nfcResultsTitle");
+  const shareColHeader = document.getElementById("nfcShareColHeader");
+  const keyFindingEl = document.getElementById("nfcKeyFinding");
 
   // Official 7th NFC Award (2010) horizontal shares — Finance Division Fiscal Policy Statement 2010-11
   const OFFICIAL_7TH_NFC_SHARES = {
@@ -58,6 +60,20 @@ document.addEventListener("DOMContentLoaded", function () {
 
   let nfcMode = "official_7th"; // "official_7th" | "illustrative"
 
+  function clearNfcOutputs(message) {
+    ["punjab", "sindh", "kp", "balochistan"].forEach(function (p) {
+      const pctEl = document.getElementById("nfcShare_" + p);
+      const amtEl = document.getElementById("nfcAmt_" + p);
+      if (pctEl) pctEl.textContent = "—";
+      if (amtEl) amtEl.textContent = "—";
+    });
+    if (keyFindingEl) {
+      keyFindingEl.innerHTML =
+        "<strong>Input Required:</strong> " +
+        (message || "Enter a valid divisible pool (Rs 500 B to Rs 25,000 B) and positive criteria weights to compute provincial allocations.");
+    }
+  }
+
   function updateNfcCalculation(modeOverride) {
     if (!sliderPop || !sliderPov || !sliderRev || !sliderDen) return;
     if (modeOverride) nfcMode = modeOverride;
@@ -66,14 +82,27 @@ document.addEventListener("DOMContentLoaded", function () {
     const wPov = parseFloat(sliderPov.value) || 0;
     const wRev = parseFloat(sliderRev.value) || 0;
     const wDen = parseFloat(sliderDen.value) || 0;
-    const pool = parseFloat(poolInput ? poolInput.value : 5500) || 5500;
+    const totalWeight = wPop + wPov + wRev + wDen;
 
     if (valPop) valPop.textContent = wPop.toFixed(1) + "%";
     if (valPov) valPov.textContent = wPov.toFixed(1) + "%";
     if (valRev) valRev.textContent = wRev.toFixed(1) + "%";
     if (valDen) valDen.textContent = wDen.toFixed(1) + "%";
 
-    const totalWeight = wPop + wPov + wRev + wDen;
+    const rawPool = poolInput ? poolInput.value.trim() : "5500";
+    const pool = rawPool === "" ? NaN : Number(rawPool);
+
+    if (!Number.isFinite(pool) || pool < 500 || pool > 25000) {
+      if (validationError) {
+        validationError.classList.add("is-visible");
+        validationError.textContent = "Enter a divisible pool size between Rs 500 B and Rs 25,000 B.";
+      }
+      if (poolInput) poolInput.setAttribute("aria-invalid", "true");
+      clearNfcOutputs("Divisible pool must be between Rs 500 B and Rs 25,000 B.");
+      return;
+    }
+    if (poolInput) poolInput.setAttribute("aria-invalid", "false");
+
     const provinces = ["punjab", "sindh", "kp", "balochistan"];
 
     if (totalWeight <= 0) {
@@ -82,20 +111,15 @@ document.addEventListener("DOMContentLoaded", function () {
         totalWeightBadge.className = "nfc-total-weight-badge warning";
       }
       if (validationError) {
-        validationError.style.display = "block";
+        validationError.classList.add("is-visible");
         validationError.textContent = "Total criteria weight cannot be 0%. Adjust at least one slider above 0% to calculate provincial allocations.";
       }
-      provinces.forEach(function (p) {
-        const pctEl = document.getElementById("nfcShare_" + p);
-        const amtEl = document.getElementById("nfcAmt_" + p);
-        if (pctEl) pctEl.textContent = "—";
-        if (amtEl) amtEl.textContent = "—";
-      });
+      clearNfcOutputs("Adjust at least one criteria slider above 0% to compute provincial shares.");
       return;
     }
 
     if (validationError) {
-      validationError.style.display = "none";
+      validationError.classList.remove("is-visible");
       validationError.textContent = "";
     }
 
@@ -112,11 +136,10 @@ document.addEventListener("DOMContentLoaded", function () {
     let rawShares = {};
     if (nfcMode === "official_7th") {
       rawShares = Object.assign({}, OFFICIAL_7TH_NFC_SHARES);
-      if (resultsTitle) resultsTitle.textContent = "Official 7th NFC Horizontal Allocation";
+      if (resultsTitle) resultsTitle.textContent = "Official 7th NFC Horizontal Allocation (Statutory 2010 Baseline)";
+      if (shareColHeader) shareColHeader.textContent = "Official 7th NFC Share %";
       if (modeBanner) {
-        modeBanner.style.background = "#ecfdf5";
-        modeBanner.style.borderColor = "#a7f3d0";
-        modeBanner.style.color = "#065f46";
+        modeBanner.classList.remove("is-illustrative");
         modeBanner.innerHTML =
           '<strong>Reference Mode — Official 7th NFC Award (2010):</strong> Displaying statutory horizontal shares (Punjab 51.74%, Sindh 24.55%, KP 14.62%, Balochistan 9.09%) from <a href="https://finance.gov.pk/publications/FiscalPolicyStatement_2010_11.pdf" target="_blank" rel="noopener">Finance Division (2010–11)</a>. Adjusting sliders switches to the illustrative reform model.';
       }
@@ -136,13 +159,12 @@ document.addEventListener("DOMContentLoaded", function () {
         throw new Error("NFC allocation shares must sum to 100% before rounding; got " + rawSum);
       }
 
-      if (resultsTitle) resultsTitle.textContent = "Illustrative Reform Model Allocation";
+      if (resultsTitle) resultsTitle.textContent = "Illustrative Reform Model Allocation (Modelled)";
+      if (shareColHeader) shareColHeader.textContent = "Modelled Share %";
       if (modeBanner) {
-        modeBanner.style.background = "#eff6ff";
-        modeBanner.style.borderColor = "#bfdbfe";
-        modeBanner.style.color = "#1e3a8a";
+        modeBanner.classList.add("is-illustrative");
         modeBanner.innerHTML =
-          "<strong>Illustrative Reform Model:</strong> Modeled shares computed from Census 2023 provincial population shares (53.40% / 23.29% / 17.08% / 6.23%) and PPRI illustrative poverty, revenue, and inverse-density inputs. Click <em>7th NFC (Status Quo)</em> for the official 2010 statutory award.";
+          "<strong>Illustrative Reform Model:</strong> Modelled shares computed from Census 2023 provincial population shares (53.40% / 23.29% / 17.08% / 6.23%) and PPRI illustrative poverty, revenue, and inverse-density inputs. Click <em>7th NFC (Status Quo)</em> or <em>Reset Default</em> for the official 2010 statutory award.";
       }
     }
 
@@ -155,6 +177,50 @@ document.addEventListener("DOMContentLoaded", function () {
       if (pctEl) pctEl.textContent = sharePct.toFixed(2) + "%";
       if (amtEl) amtEl.textContent = "Rs " + Math.round(shareAmount).toLocaleString("en-US") + " B";
     });
+
+    if (keyFindingEl) {
+      const poolFormatted = pool.toLocaleString("en-US");
+      const balAmt = Math.round((rawShares.balochistan / 100) * pool).toLocaleString("en-US");
+      if (nfcMode === "official_7th") {
+        // Illustrative 10-point shift benchmark: 72% Pop, 15.3% Pov, 5% Rev, 7.7% Den
+        const shiftedBalShare =
+          provincialCriteria.balochistan.pop * 0.72 +
+          provincialCriteria.balochistan.pov * 0.153 +
+          provincialCriteria.balochistan.rev * 0.05 +
+          provincialCriteria.balochistan.den * 0.077;
+        const deltaAmt = Math.round(((shiftedBalShare - OFFICIAL_7TH_NFC_SHARES.balochistan) / 100) * pool);
+        const shiftGain = (shiftedBalShare - OFFICIAL_7TH_NFC_SHARES.balochistan).toFixed(2);
+        keyFindingEl.innerHTML =
+          "<strong>Baseline Reference (Official 7th NFC):</strong> At a Rs " +
+          poolFormatted +
+          " B divisible pool, Balochistan receives <strong>Rs " +
+          balAmt +
+          " B (9.09%)</strong>. In an illustrative model shifting 10 percentage points from population to inverse density (+5%) and poverty (+5%), Balochistan rises by <strong>+" +
+          shiftGain +
+          " pp</strong> (~Rs " +
+          deltaAmt.toLocaleString("en-US") +
+          " B).";
+      } else {
+        const deltaPct = rawShares.balochistan - OFFICIAL_7TH_NFC_SHARES.balochistan;
+        const deltaAmt = Math.round((deltaPct / 100) * pool);
+        const sign = deltaPct >= 0 ? "+" : "-";
+        keyFindingEl.innerHTML =
+          "<strong>Live Model Comparison:</strong> At Rs " +
+          poolFormatted +
+          " B pool, Balochistan's modelled transfer is <strong>Rs " +
+          balAmt +
+          " B (" +
+          rawShares.balochistan.toFixed(2) +
+          "%)</strong> &mdash; <strong>" +
+          sign +
+          Math.abs(deltaPct).toFixed(2) +
+          " pp (" +
+          sign +
+          "Rs " +
+          Math.abs(deltaAmt).toLocaleString("en-US") +
+          " B)</strong> vs. the Official 7th NFC statutory baseline (9.09%).";
+      }
+    }
   }
 
   [sliderPop, sliderPov, sliderRev, sliderDen].forEach(function (slider) {
@@ -170,19 +236,33 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // Preset Buttons
+  // Preset & Reset Buttons
   const preset7th = document.getElementById("preset7th");
   const presetEqual = document.getElementById("presetEqual");
   const presetPop = document.getElementById("presetPop");
   const presetNeed = document.getElementById("presetNeed");
+  const resetNfcBtn = document.getElementById("btnResetNfc");
+
+  function resetToOfficial7th(resetPool) {
+    if (!sliderPop || !sliderPov || !sliderRev || !sliderDen) return;
+    sliderPop.value = "82.0";
+    sliderPov.value = "10.3";
+    sliderRev.value = "5.0";
+    sliderDen.value = "2.7";
+    if (poolInput && (resetPool || !Number.isFinite(Number(poolInput.value)) || Number(poolInput.value) < 500 || Number(poolInput.value) > 25000)) {
+      poolInput.value = "5500";
+    }
+    updateNfcCalculation("official_7th");
+  }
 
   if (preset7th) {
     preset7th.addEventListener("click", function () {
-      sliderPop.value = "82.0";
-      sliderPov.value = "10.3";
-      sliderRev.value = "5.0";
-      sliderDen.value = "2.7";
-      updateNfcCalculation("official_7th");
+      resetToOfficial7th(false);
+    });
+  }
+  if (resetNfcBtn) {
+    resetNfcBtn.addEventListener("click", function () {
+      resetToOfficial7th(true);
     });
   }
   if (presetEqual) {
@@ -216,9 +296,6 @@ document.addEventListener("DOMContentLoaded", function () {
   // Initialize official 7th NFC reference state on load
   updateNfcCalculation("official_7th");
 
-  // Run initial calculation
-  updateNfcCalculation();
-
   // --- DISTRICT EXPLORER ---
   const districtData = [
     { district: "Lahore", province: "Punjab", division: "Lahore", pop: 13004135, area: 1772, density: 7338.7, capitalDist: "0 km (Provincial Seat)" },
@@ -251,9 +328,11 @@ document.addEventListener("DOMContentLoaded", function () {
   const provinceFilter = document.getElementById("districtProvinceFilter");
   const popFilter = document.getElementById("districtPopFilter");
   const districtTbody = document.getElementById("districtTbody");
+  const districtMobileList = document.getElementById("districtMobileList");
   const districtCountEl = document.getElementById("districtCount");
   const exportCsvBtn = document.getElementById("btnExportDistrictCsv");
   const exportJsonBtn = document.getElementById("btnExportDistrictJson");
+  const exportHintEl = document.getElementById("districtExportHint");
 
   let currentFilteredDistricts = districtData;
 
@@ -277,38 +356,78 @@ document.addEventListener("DOMContentLoaded", function () {
       return matchesSearch && matchesProv && matchesPop;
     });
 
+    const matchCount = currentFilteredDistricts.length;
     if (districtCountEl) {
-      districtCountEl.textContent = `Showing ${currentFilteredDistricts.length} of ${districtData.length} districts (key sample)`;
+      districtCountEl.textContent = `Showing ${matchCount} of ${districtData.length} sample districts (of 144 Prov+ICT / 168 national)`;
     }
 
-    if (currentFilteredDistricts.length === 0) {
-      districtTbody.innerHTML = `<tr><td colspan="7" style="text-align:center; padding: 24px; color: #64748b;">No administrative units found matching your search.</td></tr>`;
+    if (exportCsvBtn) {
+      exportCsvBtn.disabled = matchCount === 0;
+      exportCsvBtn.setAttribute("aria-disabled", String(matchCount === 0));
+    }
+    if (exportJsonBtn) {
+      exportJsonBtn.disabled = matchCount === 0;
+      exportJsonBtn.setAttribute("aria-disabled", String(matchCount === 0));
+    }
+    if (exportHintEl) {
+      exportHintEl.textContent =
+        matchCount === 0 ? "No matching rows to download. Adjust or clear filters to enable CSV export." : "";
+    }
+
+    if (matchCount === 0) {
+      districtTbody.innerHTML =
+        '<tr><td colspan="7" class="dc-empty-cell">No sample districts found matching your filter.</td></tr>';
+      if (districtMobileList) {
+        districtMobileList.innerHTML =
+          '<div class="dc-search-empty"><p>No matching sample districts found. Try clearing filters.</p></div>';
+      }
       return;
     }
 
     districtTbody.innerHTML = currentFilteredDistricts
       .map(function (d) {
         return `<tr>
-          <td style="font-weight: 700; color: #073c3a;">${d.district}</td>
-          <td><span class="badge" style="background: #e2e8f0; font-size: 0.78rem; padding: 3px 8px; border-radius: 4px;">${d.province}</span></td>
+          <td><strong>${d.district}</strong></td>
+          <td><span class="dc-prov-badge">${d.province}</span></td>
           <td>${d.division}</td>
-          <td style="text-align: right; font-variant-numeric: tabular-nums;">${d.pop.toLocaleString("en-US")}</td>
-          <td style="text-align: right; font-variant-numeric: tabular-nums;">${d.area.toLocaleString("en-US")}</td>
-          <td style="text-align: right; font-variant-numeric: tabular-nums;">${d.density.toFixed(1)}</td>
-          <td style="color: #64748b; font-size: 0.82rem;">${d.capitalDist}</td>
+          <td class="dc-num-col">${d.pop.toLocaleString("en-US")}</td>
+          <td class="dc-num-col">${d.area.toLocaleString("en-US")}</td>
+          <td class="dc-num-col">${d.density.toFixed(1)}</td>
+          <td>${d.capitalDist}</td>
         </tr>`;
       })
       .join("");
+
+    if (districtMobileList) {
+      districtMobileList.innerHTML = currentFilteredDistricts
+        .map(function (d) {
+          return `<details class="district-mobile-card">
+            <summary>
+              <span><span class="dm-name">${d.district}</span><span class="dm-prov">${d.province}</span></span>
+              <span class="dm-pop">${d.pop.toLocaleString("en-US")}</span>
+              <span class="dm-chevron" aria-hidden="true">&#8250;</span>
+            </summary>
+            <div class="district-mobile-details">
+              <div><strong>Division:</strong> ${d.division}</div>
+              <div><strong>Area:</strong> ${d.area.toLocaleString("en-US")} km&sup2;</div>
+              <div><strong>Density:</strong> ${d.density.toFixed(1)}/km&sup2;</div>
+              <div><strong>To Capital:</strong> ${d.capitalDist}</div>
+            </div>
+          </details>`;
+        })
+        .join("");
+    }
   }
 
   if (searchInput) searchInput.addEventListener("input", renderDistricts);
   if (provinceFilter) provinceFilter.addEventListener("change", renderDistricts);
   if (popFilter) popFilter.addEventListener("change", renderDistricts);
 
-  // CSV Export
+  // CSV Export (strictly filtered rows only; never falls back to all rows)
   if (exportCsvBtn) {
     exportCsvBtn.addEventListener("click", function () {
-      const exportList = currentFilteredDistricts.length > 0 ? currentFilteredDistricts : districtData;
+      if (currentFilteredDistricts.length === 0) return;
+      const exportList = currentFilteredDistricts;
       const headers = ["District", "Province", "Division", "Population_2023", "Area_km2", "Density_per_km2", "Distance_to_Capital"];
       const rows = exportList.map((d) => [
         `"${d.district}"`,
@@ -324,7 +443,7 @@ document.addEventListener("DOMContentLoaded", function () {
       const url = URL.createObjectURL(blob);
       const a = document.createElement("a");
       a.href = url;
-      a.download = "ppri_district_baseline_2023.csv";
+      a.download = "ppri_district_filtered_sample_2023.csv";
       document.body.appendChild(a);
       a.click();
       document.body.removeChild(a);
@@ -335,13 +454,23 @@ document.addEventListener("DOMContentLoaded", function () {
   // JSON Export
   if (exportJsonBtn) {
     exportJsonBtn.addEventListener("click", function () {
-      const exportList = currentFilteredDistricts.length > 0 ? currentFilteredDistricts : districtData;
-      const jsonContent = JSON.stringify({ dataset: "PPRI District & Administrative Baseline", source: "PBS Census 2023", count: exportList.length, data: exportList }, null, 2);
+      if (currentFilteredDistricts.length === 0) return;
+      const exportList = currentFilteredDistricts;
+      const jsonContent = JSON.stringify(
+        {
+          dataset: "PPRI District & Administrative Filtered Sample",
+          source: "PBS Census 2023 / Admin Geography 2023",
+          count: exportList.length,
+          data: exportList
+        },
+        null,
+        2
+      );
       const blob = new Blob([jsonContent], { type: "application/json" });
       const url = URL.createObjectURL(blob);
       const a = document.createElement("a");
       a.href = url;
-      a.download = "ppri_district_baseline_2023.json";
+      a.download = "ppri_district_filtered_sample_2023.json";
       document.body.appendChild(a);
       a.click();
       document.body.removeChild(a);
@@ -349,49 +478,134 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // --- THEMATIC DOMAIN SEARCH & FILTER ---
+  // --- VERIFIED INDICATOR & TOPIC SEARCH ---
   function initThematicSearch() {
+    const searchForm = document.getElementById("dcSearchForm");
     const heroInput = document.getElementById("heroCommandInput");
-    const heroChips = document.querySelectorAll(".dc-command-chip");
-    const domainCards = document.querySelectorAll(".domain-group-card");
+    const clearBtn = document.getElementById("dcSearchClear");
+    const resultsWrap = document.getElementById("dcSearchResults");
+    const statusText = document.getElementById("dcSearchStatusText");
+    const resetInlineBtn = document.getElementById("dcResetSearch");
+    const resultsGrid = document.getElementById("dcIndicatorGrid");
+    const emptyBox = document.getElementById("dcSearchEmpty");
+    const emptyQuerySpan = document.getElementById("dcSearchEmptyQuery");
+    const emptyResetBtn = document.getElementById("dcEmptyClear");
+    const heroChips = document.querySelectorAll(".dc-command-chip[data-query]");
+    const topicGroups = document.querySelectorAll(".dc-topic-group");
 
-    function executeSearch(query) {
-      query = (query || "").toLowerCase().trim();
-
-      domainCards.forEach(card => {
-        const text = card.textContent.toLowerCase();
-        const keywords = (card.getAttribute("data-keywords") || "").toLowerCase();
-        const isMatch = !query || text.includes(query) || keywords.includes(query);
-
-        if (isMatch) {
-          card.style.display = "";
-          if (query) {
-            card.style.boxShadow = "0 0 0 2px #073c3a, 0 8px 24px rgba(7, 60, 58, 0.12)";
-          } else {
-            card.style.boxShadow = "";
-          }
-        } else {
-          card.style.display = "none";
-          card.style.boxShadow = "";
-        }
+    let indicators = [];
+    fetch("/assets/data/data-centre-indicators.json")
+      .then((r) => (r.ok ? r.json() : []))
+      .then((data) => {
+        indicators = Array.isArray(data) ? data : [];
+        if (heroInput && heroInput.value.trim()) executeSearch(heroInput.value);
+      })
+      .catch(() => {
+        indicators = [];
       });
+
+    function escapeHTML(str) {
+      return String(str || "")
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;");
     }
 
+    function executeSearch(rawQuery) {
+      const query = (rawQuery || "").toLowerCase().trim();
+      if (clearBtn) clearBtn.hidden = !query;
+
+      if (!query) {
+        if (resultsWrap) resultsWrap.hidden = true;
+        if (resultsGrid) resultsGrid.innerHTML = "";
+        if (emptyBox) emptyBox.hidden = true;
+        topicGroups.forEach((g) => {
+          g.hidden = false;
+        });
+        return;
+      }
+
+      const terms = query.split(/\s+/).filter(Boolean);
+      const matchedIndicators = indicators.filter((ind) => {
+        const hay = `${ind.label} ${ind.domain} ${ind.summary} ${ind.keywords} ${ind.source}`.toLowerCase();
+        return terms.every((t) => hay.includes(t));
+      });
+
+      let visibleGroups = 0;
+      topicGroups.forEach((group) => {
+        const gText = `${group.textContent} ${group.getAttribute("data-keywords") || ""}`.toLowerCase();
+        const groupMatch = terms.some((t) => gText.includes(t));
+        group.hidden = !groupMatch && matchedIndicators.length > 0;
+        if (!group.hidden) visibleGroups++;
+      });
+
+      if (resultsWrap) resultsWrap.hidden = false;
+      if (matchedIndicators.length > 0) {
+        if (statusText) {
+          statusText.textContent = `${matchedIndicators.length} verified indicator${matchedIndicators.length === 1 ? "" : "s"} matched "${rawQuery.trim()}"`;
+        }
+        if (emptyBox) emptyBox.hidden = true;
+        if (resultsGrid) {
+          resultsGrid.hidden = false;
+          resultsGrid.innerHTML = matchedIndicators
+            .map(
+              (ind) => `<a class="dc-indicator-card" href="${escapeHTML(ind.url)}"${ind.isDownload ? " download" : ""}>
+                <div class="dc-indicator-top">
+                  <span class="dc-indicator-title">${escapeHTML(ind.label)}</span>
+                  <span class="dc-indicator-stat">${escapeHTML(ind.stat)}</span>
+                </div>
+                <p class="dc-indicator-desc">${escapeHTML(ind.summary)}</p>
+                <div class="dc-indicator-meta">
+                  <span>${escapeHTML(ind.domain)}</span>
+                  <span>Source: ${escapeHTML(ind.source)}</span>
+                </div>
+              </a>`
+            )
+            .join("");
+        }
+      } else {
+        if (statusText) statusText.textContent = `0 verified indicators matched "${rawQuery.trim()}"`;
+        if (resultsGrid) {
+          resultsGrid.hidden = true;
+          resultsGrid.innerHTML = "";
+        }
+        if (emptyBox) emptyBox.hidden = false;
+        if (emptyQuerySpan) emptyQuerySpan.textContent = rawQuery.trim();
+        topicGroups.forEach((g) => {
+          g.hidden = false;
+        });
+      }
+    }
+
+    function clearSearch() {
+      if (heroInput) {
+        heroInput.value = "";
+        heroInput.focus();
+      }
+      executeSearch("");
+    }
+
+    if (searchForm) {
+      searchForm.addEventListener("submit", function (e) {
+        e.preventDefault();
+        executeSearch(heroInput ? heroInput.value : "");
+      });
+    }
     if (heroInput) {
       heroInput.addEventListener("input", function () {
         executeSearch(this.value);
       });
     }
+    if (clearBtn) clearBtn.addEventListener("click", clearSearch);
+    if (resetInlineBtn) resetInlineBtn.addEventListener("click", clearSearch);
+    if (emptyResetBtn) emptyResetBtn.addEventListener("click", clearSearch);
 
-    heroChips.forEach(chip => {
+    heroChips.forEach((chip) => {
       chip.addEventListener("click", function () {
         const q = this.getAttribute("data-query");
         if (heroInput) heroInput.value = q;
         executeSearch(q);
-        const atlasSection = document.getElementById("atlas-section");
-        if (atlasSection) {
-          atlasSection.scrollIntoView({ behavior: "smooth" });
-        }
       });
     });
   }

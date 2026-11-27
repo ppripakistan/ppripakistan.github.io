@@ -12,7 +12,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>Pakistan Fast Facts Matrix: CSS/PMS Affairs, Districts &amp; Demographics</title>
-    <meta name="description" content="Authoritative Pakistan affairs fast-facts matrix for CSS/PMS competitive exams: districts of Pakistan list (164), 2023 Census data, constitution articles &amp; NFC metrics." />
+    <meta name="description" content="Authoritative Pakistan affairs fast-facts matrix for CSS/PMS competitive exams: 144 districts in 4 provinces + ICT (168 w/ GB &amp; AJK), 2023 Census data, constitution articles &amp; NFC metrics." />
     <meta name="keywords" content="pakistan general knowledge mcqs, css pakistan affairs facts, districts of pakistan list, pms general knowledge pakistan, pakistan constitution articles css" />
     <link rel="canonical" href="https://ppripakistan.github.io/data/css-fast-facts-pakistan/" />
     <link rel="alternate" hreflang="en" href="https://ppripakistan.github.io/data/css-fast-facts-pakistan/" />
@@ -21,14 +21,14 @@
     <meta property="og:locale" content="en_PK" />
     <meta property="og:type" content="article" />
     <meta property="og:title" content="Pakistan Fast Facts Matrix: CSS/PMS Affairs, Districts &amp; Demographics" />
-    <meta property="og:description" content="High-yield facts for CSS/PMS: 164 districts, 2023 Census populations, constitutional articles, and economic benchmarks." />
+    <meta property="og:description" content="High-yield facts for CSS/PMS: 144 districts (168 incl. GB &amp; AJK), 2023 Census populations, constitutional articles, and economic benchmarks." />
     <meta property="og:url" content="https://ppripakistan.github.io/data/css-fast-facts-pakistan/" />
     <meta property="og:image" content="https://ppripakistan.github.io/assets/images/previews/index.jpg" />
     <meta property="og:image:secure_url" content="https://ppripakistan.github.io/assets/images/previews/index.jpg" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@PPRI_Pakistan" />
     <meta name="twitter:title" content="Pakistan Fast Facts Matrix: CSS/PMS Affairs, Districts &amp; Demographics" />
-    <meta name="twitter:description" content="High-yield facts for CSS/PMS: 164 districts, 2023 Census populations, constitutional articles, and economic benchmarks." />
+    <meta name="twitter:description" content="High-yield facts for CSS/PMS: 144 districts (168 incl. GB &amp; AJK), 2023 Census populations, constitutional articles, and economic benchmarks." />
     <meta name="twitter:image" content="https://ppripakistan.github.io/assets/images/previews/index.jpg" />
     <link rel="icon" type="image/png" href="/favicon.png?v=2" />
     <link rel="icon" href="/favicon.ico?v=2" sizes="48x48" />
@@ -46,7 +46,7 @@
           "@type": "Article",
           "@id": "https://ppripakistan.github.io/data/css-fast-facts-pakistan/#article",
           "headline": "Pakistan Affairs Fast Facts Matrix: Districts, Demographics & Constitutional Articles for CSS/PMS",
-          "description": "High-yield factual matrix covering 164 districts of Pakistan, PBS Census 2023 populations, landmark constitutional articles, and NFC fiscal awards for civil service aspirants.",
+          "description": "High-yield factual matrix covering 144 districts across 4 provinces + ICT (168 total incl. 14 GB & 10 AJK), PBS Census 2023 populations, landmark constitutional articles, and NFC fiscal awards for civil service aspirants.",
           "author": {
             "@type": "Organization",
             "name": "Pakistan Provincial Reform Institute",
@@ -92,7 +92,7 @@
               "name": "How many administrative districts are there in Pakistan in 2026?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Pakistan has 164 administrative districts across all territories: 41 in Punjab, 30 in Sindh, 36 in Khyber Pakhtunkhwa, 36 in Balochistan, 1 in ICT (Islamabad), 10 in Azad Jammu & Kashmir (AJK), and 10 in Gilgit-Baltistan (GB). For census mapping, PBS aggregated these into 141 mapped census district polygons."
+                "text": "Pakistan has 144 districts across the 4 constitutional provinces + ICT (41 in Punjab, 30 in Sindh, 36 in Khyber Pakhtunkhwa, 36 in Balochistan, 1 in ICT) and 168 administrative districts in total when including Gilgit-Baltistan (14) and Azad Jammu & Kashmir (10) per PPRI Admin Geography 2023. For GIS mapping and Census 2023 publication, datasets separately list 141 ADM3 GIS polygons and 135 PBS Census-tabulated provincial units."
               }
             },
             {
@@ -128,15 +128,63 @@
         <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-navigation">Menu</button>
         <nav id="site-navigation" class="nav-links" aria-label="Primary navigation">
           <a href="/">Home</a>
-          <a href="/constitution/">Constitution</a>
-          <a href="/research/">Research</a>
-          <a href="/provinces/">Reform</a>
-          <a href="/scenarios/">Scenarios</a>
-          <a href="/insights/">Insights</a>
-          <a href="/data/centre.html" aria-current="page">Data</a>
-          <a href="/publications/">Publications</a>
-          <a href="/consultation/">Engage</a>
-          <a href="/about.html">About</a>
+          <details class="nav-group">
+            <summary class="nav-trigger">Constitution</summary>
+            <div class="nav-menu">
+              <a href="/constitution/">Constitution overview</a>
+              <a href="/constitution/reader/">Article reader</a>
+              <a href="/constitution/amendments/">Amendments</a>
+            </div>
+          </details>
+          <details class="nav-group">
+            <summary class="nav-trigger">Research</summary>
+            <div class="nav-menu">
+              <a href="/research/">Research programme</a>
+              <a href="/publications/">Publications</a>
+              <a href="/research/reports/">Reports</a>
+              <a href="/articles/">Articles</a>
+              <a href="/research/agenda.html">Research agenda</a>
+            </div>
+          </details>
+          <details class="nav-group">
+            <summary class="nav-trigger">Reform &amp; scenarios</summary>
+            <div class="nav-menu">
+              <a href="/provinces/">Provincial reform</a>
+              <a href="/provinces/proposed-models.html">Reform models</a>
+              <a href="/resources/constitution.html">Constitutional basis</a>
+              <a href="/scenarios/">Governance scenarios</a>
+              <a href="/maps/scenarios/">Interactive map lab</a>
+            </div>
+          </details>
+          <details class="nav-group">
+            <summary class="nav-trigger">Data &amp; tools</summary>
+            <div class="nav-menu">
+              <a href="/data/centre.html">Data Centre</a>
+              <a href="/data/compare/">Compare provinces</a>
+              <a href="/data/downloads/">Download datasets</a>
+              <a href="/insights/">Charts &amp; infographics</a>
+              <a href="/knowledge-library/">Knowledge Library</a>
+              <a href="/data/css-fast-facts-pakistan/" aria-current="page">Fast facts</a>
+            </div>
+          </details>
+          <details class="nav-group">
+            <summary class="nav-trigger">Participate</summary>
+            <div class="nav-menu">
+              <a href="/surveys/">Community surveys</a>
+              <a href="/consultation/">Public consultation</a>
+              <a href="/consultation/submissions.html">Submit a policy proposal</a>
+            </div>
+          </details>
+          <details class="nav-group">
+            <summary class="nav-trigger">About</summary>
+            <div class="nav-menu">
+              <a href="/about.html">About PPRI</a>
+              <a href="/researchers/">Researchers</a>
+              <a href="/methodology/">Methods &amp; standards</a>
+              <a href="/transparency.html">Transparency</a>
+              <a href="/contact.html">Contact</a>
+            </div>
+          </details>
           <a class="nav-search" href="/search.html">Search</a>
         </nav>
       </div>
@@ -152,7 +200,7 @@
           </div>
           <span class="eyebrow">Civil Service Reference · CSS / PMS Exam Matrix</span>
           <h1>Pakistan Affairs Fast Facts Matrix: Districts, Demographics &amp; Constitution</h1>
-          <p class="article-standfirst">A high-yield factual reference matrix compiled from verified primary sources: the 164 administrative districts breakdown, 2023 Census benchmarks, key constitutional articles, and fiscal federalism formulas.</p>
+          <p class="article-standfirst">A high-yield factual reference matrix compiled from verified primary sources: 144 districts across 4 provinces + ICT (168 total incl. 14 GB &amp; 10 AJK, Admin Geography 2023), 2023 Census benchmarks, key constitutional articles, and fiscal federalism formulas.</p>
         </div>
       </section>
 
@@ -161,8 +209,8 @@
           <!-- Metric Ribbon -->
           <div class="stat-ribbon">
             <div class="stat-card">
-              <strong>164</strong>
-              <span>Administrative Districts across Pakistan</span>
+              <strong>144 / 168</strong>
+              <span>Districts (4 Prov+ICT / incl. GB &amp; AJK, 2023 Geo.)</span>
             </div>
             <div class="stat-card">
               <strong>241.50 M</strong>
@@ -180,9 +228,9 @@
 
           <!-- Featured Snippet Answer Block -->
           <div class="featured-snippet-box" style="background:#f0fdf4;border:1px solid #bbf7d0;border-left:5px solid #16a34a;padding:22px 24px;border-radius:8px;margin:28px 0 32px;">
-            <h2 id="districts-of-pakistan-summary" style="margin: 0 0 10px; font-size: 1.35rem; color: var(--brand-dark, #12392D); font-weight: 700;">How Many Districts Are in Pakistan? (164 Administrative Districts)</h2>
+            <h2 id="districts-of-pakistan-summary" style="margin: 0 0 10px; font-size: 1.35rem; color: var(--brand-dark, #12392D); font-weight: 700;">How Many Districts Are in Pakistan? (144 Prov+ICT &middot; 168 National)</h2>
             <p style="margin: 0; font-size: 1.02rem; line-height: 1.65; color: var(--text-main, #18302A);">
-              <strong>Pakistan has 164 administrative districts in total.</strong> By province and territory: <strong>Punjab: 41 districts</strong>, <strong>Sindh: 30 districts</strong>, <strong>Khyber Pakhtunkhwa: 36 districts</strong>, <strong>Balochistan: 36 districts</strong>, <strong>Islamabad (ICT): 1 district</strong>, <strong>Azad Jammu &amp; Kashmir (AJK): 10 districts</strong>, and <strong>Gilgit-Baltistan (GB): 10 districts</strong>. Note: For GIS mapping and census publication, the Pakistan Bureau of Statistics (PBS) groups these into 141 mapped census district units.
+              <strong>Pakistan has 144 districts across the four provinces and Islamabad Capital Territory (168 administrative districts in total across all 38 divisions, Admin Geography 2023).</strong> By province and territory: <strong>Punjab: 41 districts</strong>, <strong>Sindh: 30 districts</strong>, <strong>Khyber Pakhtunkhwa: 36 districts</strong>, <strong>Balochistan: 36 districts</strong>, <strong>Islamabad (ICT): 1 district</strong>, <strong>Gilgit-Baltistan (GB): 14 districts</strong>, and <strong>Azad Jammu &amp; Kashmir (AJK): 10 districts</strong>. Methodology note: GIS Scenario Lab layers use <strong>141 editable ADM3 polygons</strong>, and PBS Census-2023 Table 1 reports <strong>135 Census-tabulated provincial units</strong>.
             </p>
           </div>
 
@@ -250,7 +298,7 @@
                   <td><strong>Gilgit-Baltistan (GB)</strong></td>
                   <td>Autonomous Territory</td>
                   <td>Gilgit</td>
-                  <td>10</td>
+                  <td>14</td>
                   <td>~1,800,000</td>
                   <td>72,971</td>
                   <td>~60.0%</td>
@@ -341,8 +389,9 @@
           <h3>Study Library</h3>
           <ul class="footer-links">
             <li><a href="/knowledge-library/">Knowledge Library</a></li>
-            <li><a href="/data/css-fast-facts-pakistan/">CSS Fast Facts Matrix</a></li>
-            <li><a href="/resources/constitution.html">Constitution Reader</a></li>
+            <li><a href="/data/css-fast-facts-pakistan/">Fast Facts</a></li>
+            <li><a href="/resources/constitution.html">Constitutional Basis for Reform</a></li>
+            <li><a href="/constitution/reader/">Article Reader</a></li>
             <li><a href="/articles/">Policy Articles</a></li>
           </ul>
         </div>

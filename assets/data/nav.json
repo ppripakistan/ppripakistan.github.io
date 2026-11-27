@@ -1,0 +1,157 @@
+{
+  "version": "stage2-6group-v1",
+  "en": [
+    {
+      "id": "constitution",
+      "label": "Constitution",
+      "href": "/constitution/",
+      "prefixes": ["/constitution/", "/resources/constitution.html"],
+      "items": [
+        { "label": "Constitution overview", "href": "/constitution/" },
+        { "label": "Article reader", "href": "/constitution/reader/" },
+        { "label": "Amendments", "href": "/constitution/amendments/" }
+      ]
+    },
+    {
+      "id": "research",
+      "label": "Research",
+      "href": "/research/",
+      "prefixes": ["/research/", "/publications/", "/articles/", "/archive/"],
+      "items": [
+        { "label": "Research programme", "href": "/research/" },
+        { "label": "Publications", "href": "/publications/" },
+        { "label": "Reports", "href": "/research/reports/" },
+        { "label": "Articles", "href": "/articles/" },
+        { "label": "Research agenda", "href": "/research/agenda.html" }
+      ]
+    },
+    {
+      "id": "reform",
+      "label": "Reform & scenarios",
+      "href": "/provinces/",
+      "prefixes": ["/provinces/", "/scenarios/", "/maps/", "/resources/"],
+      "items": [
+        { "label": "Provincial reform", "href": "/provinces/" },
+        { "label": "Reform models", "href": "/provinces/proposed-models.html" },
+        { "label": "Constitutional basis", "href": "/resources/constitution.html" },
+        { "label": "Governance scenarios", "href": "/scenarios/" },
+        { "label": "Interactive map lab", "href": "/maps/scenarios/" }
+      ]
+    },
+    {
+      "id": "data",
+      "label": "Data & tools",
+      "href": "/data/centre.html",
+      "prefixes": ["/data/", "/insights/", "/knowledge-library/", "/sources/", "/reform/"],
+      "items": [
+        { "label": "Data Centre", "href": "/data/centre.html" },
+        { "label": "Compare provinces", "href": "/data/compare/" },
+        { "label": "Download datasets", "href": "/data/downloads/" },
+        { "label": "Charts & infographics", "href": "/insights/" },
+        { "label": "Knowledge Library", "href": "/knowledge-library/" },
+        { "label": "Fast facts", "href": "/data/css-fast-facts-pakistan/" }
+      ]
+    },
+    {
+      "id": "participate",
+      "label": "Participate",
+      "href": "/surveys/",
+      "prefixes": ["/surveys/", "/consultation/"],
+      "items": [
+        { "label": "Community surveys", "href": "/surveys/" },
+        { "label": "Public consultation", "href": "/consultation/" },
+        { "label": "Submit a policy proposal", "href": "/consultation/submissions.html" }
+      ]
+    },
+    {
+      "id": "about",
+      "label": "About",
+      "href": "/about.html",
+      "prefixes": ["/about.html", "/mission.html", "/researchers/", "/methodology/", "/transparency.html", "/contact.html", "/media/", "/directory.html"],
+      "items": [
+        { "label": "About PPRI", "href": "/about.html" },
+        { "label": "Researchers", "href": "/researchers/" },
+        { "label": "Methods & standards", "href": "/methodology/" },
+        { "label": "Transparency", "href": "/transparency.html" },
+        { "label": "Contact", "href": "/contact.html" }
+      ]
+    }
+  ],
+  "ur": [
+    {
+      "id": "constitution",
+      "label": "دستورِ پاکستان",
+      "href": "/constitution/",
+      "prefixes": ["/constitution/", "/resources/constitution.html"],
+      "items": [
+        { "label": "دستور کا جائزہ (انگریزی)", "href": "/constitution/", "handoff": "en" },
+        { "label": "آرٹیکل ریڈر (انگریزی)", "href": "/constitution/reader/", "handoff": "en" },
+        { "label": "آئینی ترامیم (انگریزی)", "href": "/constitution/amendments/", "handoff": "en" }
+      ]
+    },
+    {
+      "id": "research",
+      "label": "تحقیق",
+      "href": "/ur/research/",
+      "prefixes": ["/ur/research/", "/ur/articles/", "/publications/", "/research/", "/articles/"],
+      "items": [
+        { "label": "تحقیقاتی مرکز", "href": "/ur/research/" },
+        { "label": "مطبوعات (انگریزی)", "href": "/publications/", "handoff": "en" },
+        { "label": "تحقیقی رپورٹس", "href": "/ur/research/reports/" },
+        { "label": "تحقیقی مضامین", "href": "/ur/articles/" },
+        { "label": "تحقیقی ایجنڈا (انگریزی)", "href": "/research/agenda.html", "handoff": "en" }
+      ]
+    },
+    {
+      "id": "reform",
+      "label": "اصلاحات و منظرنامے",
+      "href": "/ur/provinces/",
+      "prefixes": ["/ur/provinces/", "/provinces/", "/scenarios/", "/maps/", "/resources/"],
+      "items": [
+        { "label": "صوبائی اصلاحات", "href": "/ur/provinces/" },
+        { "label": "مجوزہ ماڈلز (انگریزی)", "href": "/provinces/proposed-models.html", "handoff": "en" },
+        { "label": "اصلاحات کی آئینی بنیاد (انگریزی)", "href": "/resources/constitution.html", "handoff": "en" },
+        { "label": "حکمرانی منظرنامے (انگریزی)", "href": "/scenarios/", "handoff": "en" },
+        { "label": "انٹرایکٹو نقشہ لیب (انگریزی)", "href": "/maps/scenarios/", "handoff": "en" }
+      ]
+    },
+    {
+      "id": "data",
+      "label": "اعداد و شمار",
+      "href": "/ur/data/centre.html",
+      "prefixes": ["/ur/data/", "/data/", "/insights/", "/knowledge-library/"],
+      "items": [
+        { "label": "مرکزی ڈیٹا آبزرویٹری", "href": "/ur/data/centre.html" },
+        { "label": "صوبائی موازنہ (انگریزی)", "href": "/data/compare/", "handoff": "en" },
+        { "label": "اوپن ڈیٹا ڈاؤنلوڈز (انگریزی)", "href": "/data/downloads/", "handoff": "en" },
+        { "label": "چارٹس و انفوگرافکس (انگریزی)", "href": "/insights/", "handoff": "en" },
+        { "label": "نالج لائبریری (انگریزی)", "href": "/knowledge-library/", "handoff": "en" },
+        { "label": "تیز حقائق (انگریزی)", "href": "/data/css-fast-facts-pakistan/", "handoff": "en" }
+      ]
+    },
+    {
+      "id": "participate",
+      "label": "عوامی شرکت",
+      "href": "/ur/consultation/",
+      "prefixes": ["/ur/consultation/", "/surveys/", "/consultation/"],
+      "items": [
+        { "label": "قومی حکمرانی سروے", "href": "/ur/consultation/survey.html" },
+        { "label": "عوامی مشاورت", "href": "/ur/consultation/" },
+        { "label": "پالیسی تجاویز جمع کرائیں (انگریزی)", "href": "/consultation/submissions.html", "handoff": "en" }
+      ]
+    },
+    {
+      "id": "about",
+      "label": "ادارہ",
+      "href": "/ur/about.html",
+      "prefixes": ["/ur/about.html", "/about.html", "/researchers/", "/methodology/", "/transparency.html", "/contact.html"],
+      "items": [
+        { "label": "ادارے کا تعارف", "href": "/ur/about.html" },
+        { "label": "محققین اور فیکلٹی (انگریزی)", "href": "/researchers/", "handoff": "en" },
+        { "label": "طریقہ کار و معیارات (انگریزی)", "href": "/methodology/", "handoff": "en" },
+        { "label": "شفافیت اور اخلاقیات (انگریزی)", "href": "/transparency.html", "handoff": "en" },
+        { "label": "رابطہ کریں (انگریزی)", "href": "/contact.html", "handoff": "en" }
+      ]
+    }
+  ]
+}
